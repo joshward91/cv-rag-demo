@@ -5,7 +5,7 @@ A grounded retrieval-augmented help-desk assistant, built around a small CRM tha
 - **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 single-task articles. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every article describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
 - **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
-- **The evaluation suite** has 155 realistic phrasings across four sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
+- **The evaluation suite** has 167 realistic phrasings across four sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
 
@@ -20,7 +20,7 @@ Requires Node 20 or later. There is no backend.
 ```bash
 npm install
 npm test                 # unit tests: retrieval, guardrail, generator contract, grading
-npm run eval             # runs all 155 cases offline, writes eval/results.json
+npm run eval             # runs all 167 cases offline, writes eval/results.json
 npm run check:docs       # browser check: docs labels exist in the UI, plus five walkthroughs
 npm run build            # self-contained pages in dist/, plus the GitHub Pages site in docs/
 npm run serve            # then open http://localhost:8080 to run from source
@@ -76,11 +76,23 @@ All generators share one contract and are interchangeable:
 
 ### Verify
 
-The citation guardrail in `validateReply` runs on every model reply. An answer that cites nothing, or cites only articles that weren't in the prompt, is withheld and the user is offered support. Invented citations alongside a valid one are dropped. With the schema enum in place this should never fire on the API path; it exists for the runtime path, which has no schema, and as defence in depth.
+The output guardrail in `validateReply` runs on every model reply. An answer that cites nothing, cites only articles that weren't in the prompt, or contains a link is withheld and the user is offered support. Invented citations alongside a valid one are dropped. With the schema enum in place this should never fire on the API path; it exists for the runtime path, which has no schema, and as defence in depth.
+
+### Grounding and prompt injection
+
+The assistant is a SaaS help bot, so it must only ever explain Harbour CRM from its own help centre. Several independent layers enforce that:
+
+1. **Input guard** (`src/rag/guard.js`). Before anything else, the raw question is screened for obvious injection: "ignore previous instructions", role changes ("you are now", "act as"), requests for the system prompt, known jailbreak phrases, the prompt's own tags, and questions over 500 characters. A blocked question never reaches a model.
+2. **Retrieval gate.** Off-topic requests ("find me a recipe for cake") don't cover enough of any article, so they are escalated before generation.
+3. **No external access.** The model call sends no tools, tool choice or MCP servers, so the model cannot browse or fetch anything. It sees only the articles retrieval chose. A unit test asserts this.
+4. **Hardened prompt.** The system prompt marks the question as untrusted and says to escalate anything other than Harbour CRM help. The question is escaped, so it can't close its `<question>` tag or inject new ones.
+5. **Output guardrail.** The reply must match a JSON schema whose citations can only be the articles provided. An answer that cites none of them, or contains a link, is withheld.
+
+The guard is pattern-based and only catches the obvious cases. The later layers make an injection that slips past it harmless.
 
 ## Evaluation
 
-`eval/cases.js` holds 155 questions with an expected outcome: answer from a given article, clarify between given articles, or escalate. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss) and split four ways:
+`eval/cases.js` holds 167 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split four ways:
 
 | Set | Cases | Role |
 |---|---|---|
@@ -98,8 +110,9 @@ The citation guardrail in `validateReply` runs on every model reply. An answer t
 | Round 4 | 100% | 95.9% | 84.2% (not tuned on) | 83.3% |
 | Round 5 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 | Round 6 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
+| Round 7 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 
-Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes.
+Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes. Round 7 added the prompt-injection defences above, with twelve cases, two of which check that ordinary questions are not blocked.
 
 The hold-out figure is the honest estimate. Five of its six failures are questions escalated to support that the help centre could have answered; none got a wrong article. The core client/contact example passed 11 of 12 phrasings, and the forbidden article was never ranked first, offered, put in a prompt or cited. `npm run eval` exits non-zero if that ever changes, so it can gate CI.
 

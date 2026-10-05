@@ -1,6 +1,7 @@
 import { buildPrompt } from './prompt.js';
 import { costUsd, MODELS } from './pricing.js';
 import { stem } from './text.js';
+import { screenQuestion, LINK_PATTERN } from './guard.js';
 
 /**
  * Words that point at the assistant itself rather than at Harbour CRM. The
@@ -19,7 +20,7 @@ export function isAboutAssistant(terms) {
 /**
  * End-to-end question answering:
  *
- *   rewrite + retrieve  ->  decide (answer / clarify / escalate)
+ *   screen input  ->  rewrite + retrieve  ->  decide (answer / clarify / escalate)
  *     (an escalation about the assistant itself explains its settings instead)
  *     -> generate (answer path only)  ->  validate citations
  *
@@ -43,6 +44,13 @@ export class HelpDesk {
   async ask(question, { chosenArticleId } = {}) {
     const retrieval = this.retriever.retrieve(question);
     let decision = retrieval.decision;
+
+    // Input guard: obvious prompt injection never reaches retrieval's decision or a model.
+    const screen = screenQuestion(question);
+    if (screen.blocked) {
+      decision = { type: 'blocked', rule: screen.rule, reason: `Blocked by the input guard: the question ${screen.reason}${screen.match ? ` ("${screen.match}")` : ''}.` };
+      return { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'blocked', citations: [] } };
+    }
 
     if (chosenArticleId) {
       decision = {
@@ -93,13 +101,17 @@ export class HelpDesk {
 }
 
 /**
- * Citation guardrail. An answer must cite at least one article, and every
- * citation must be an article that was actually in the prompt. Otherwise the
- * answer is withheld and the user is offered support instead.
+ * Output guardrail. An answer must cite at least one article, every citation
+ * must be an article that was actually in the prompt, and it must not contain
+ * a link. Otherwise the answer is withheld and the user is offered support.
  */
 export function validateReply(reply, contextIds, articlesById) {
   if (reply.type !== 'answer') {
     return { outcome: { type: 'escalate', citations: [], note: reply.note }, guardrail: null };
+  }
+  // The help centre contains no links, so a link in an answer came from outside it.
+  if (LINK_PATTERN.test(reply.answer)) {
+    return { outcome: { type: 'escalate', citations: [] }, guardrail: { action: 'withheld', reason: 'The answer contained a link, which no help article has.' } };
   }
   const valid = reply.citations.filter((id) => contextIds.includes(id) && articlesById.has(id));
   const invalid = reply.citations.filter((id) => !valid.includes(id));

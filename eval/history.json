@@ -174,13 +174,44 @@
           "blind": false
         }
       ]
+    },
+    {
+      "round": "Round 7",
+      "change": "Grounding and prompt-injection defences. An input guard blocks obvious injection before retrieval or any model call; the system prompt treats the question as untrusted and forbids anything but Harbour CRM help; the question is escaped so it can't close its tag; the model gets no tools or web access; answers containing links are withheld. Added twelve dev cases, two of them ordinary questions that must not be blocked. No hold-out or perspective result changed.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 68,
+          "cases": 68,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false
+        }
+      ]
     }
   ],
   "knownIssues": [
     "Unknown but harmless words ('typo', 'wrong', 'keep', 'paying') lower coverage and cause false refusals. This is the main source of hold-out failures. It fails safe: the user is offered support rather than a wrong answer.",
     "Lexical retrieval can't tell 'send an invoice to a contact' (unsupported) from 'where invoices are sent' (billing email). In Claude mode the model is told to escalate when the article doesn't answer the question, which is the intended second line of defence.",
     "'Change an address' is ambiguous between a company's postal address and an email address, but the policy answers with the company article.",
-    "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own."
+    "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own.",
+    "The input guard is pattern-based, so a determined attacker can phrase an injection it doesn't recognise. Such a question still has to pass retrieval's coverage threshold, and then faces a model with no tools, a prompt that treats the question as untrusted, a reply schema that only allows citations of the articles provided, and an output check that withholds uncited or linked answers."
   ],
   "afterHoldout": "After the hold-out run, articles declared as look-alikes stopped being passed to the model as extra context, and the core-example check got stricter: the forbidden article must not be ranked first, offered, put in the prompt or cited. Pass rates didn't change.",
   "knowledgeBaseFingerprint": "33cb57b59ece"

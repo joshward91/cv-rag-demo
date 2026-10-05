@@ -150,6 +150,8 @@ export class ChatWidget {
     } else if (outcome.type === 'clarify') {
       body = html`<p>${outcome.question}</p>
         <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>`;
+    } else if (outcome.type === 'blocked') {
+      body = html`<p>I can only help with using Harbour CRM, so I can’t follow instructions that change how I work. Ask me how to do something in Harbour CRM.</p>`;
     } else if (outcome.type === 'assistant') {
       body = html`<p>I answer questions about Harbour CRM using its help centre, so I can’t change my own settings from a message. You can change how I write answers in <strong>Answer mode</strong>:</p>
         <ul><li><strong>Offline</strong> answers with the help article’s own steps. It’s free and needs no key.</li><li><strong>Claude</strong> writes the answer with a model, from the same articles.</li></ul>
@@ -179,7 +181,10 @@ export class ChatWidget {
     } else if (prompt) {
       promptBlock = html`<p class="panel-note">Sent to ${reply?.model ?? 'Claude'}.</p><pre>${promptAsText(prompt)}</pre>`;
     } else {
-      promptBlock = html`<p class="panel-note">No model call. The retrieval policy decided to ${decision.type === 'clarify' ? 'ask a clarifying question' : 'escalate'} before generation, which costs nothing.</p>`;
+      promptBlock =
+        decision.type === 'blocked'
+          ? html`<p class="panel-note">No model call. The input guard blocked the question before retrieval decided anything, which costs nothing.</p>`
+          : html`<p class="panel-note">No model call. The retrieval policy decided to ${decision.type === 'clarify' ? 'ask a clarifying question' : 'escalate'} before generation, which costs nothing.</p>`;
     }
 
     return html`<details class="retrieval" data-panel-for="${index}" ${this.openPanels.has(String(index)) ? raw('open') : ''}>

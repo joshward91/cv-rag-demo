@@ -58,6 +58,8 @@ export class AnthropicGenerator {
 
   async generate({ prompt }) {
     const isHaiku = this.model.startsWith('claude-haiku');
+    // Deliberately no `tools`, `tool_choice` or `mcp_servers`: the model can't
+    // fetch anything, browse the web or call out. It sees only the articles.
     const request = {
       model: this.model,
       max_tokens: 4000,
