@@ -1,0 +1,158 @@
+{
+  "note": "Pass rates recorded from eval runs while the retrieval pipeline was tuned. Blind means the set had never been scored against the code being measured.",
+  "rounds": [
+    {
+      "round": "Baseline",
+      "change": "First version of the lexicon and decision policy, before looking at any results.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 42,
+          "cases": 52,
+          "blind": true
+        }
+      ]
+    },
+    {
+      "round": "Round 1",
+      "change": "Tuned on dev failures: field-weighted coverage, a clarification rule that requires the rival's title to cover the same query terms, capped weight for unknown words, action-only questions trigger clarification, two help-article fixes.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 51,
+          "cases": 52,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 36,
+          "cases": 49,
+          "blind": true
+        }
+      ]
+    },
+    {
+      "round": "Round 2",
+      "change": "Wrote the second hold-out set, then tuned on test failures: 'number' means a phone number, stricter spelling correction (it turned 'connect' into 'contact'), definition questions route to the glossary, more filler words, four new article aliases, one reworded alias and one clearer article title.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 52,
+          "cases": 52,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        }
+      ]
+    },
+    {
+      "round": "Round 3",
+      "change": "Perspective-aware rewriting. The help centre is written by the vendor, so 'client' in an article means the user's own account; in a question it means one of the user's customers (a contact), unless it is plainly about their own account ('our client profile'). Before this, a help centre written in the vendor's voice failed 13 of 24 client/contact questions, with the forbidden article offered or ranked first 9 times. Then wrote the perspective hold-out set and scored it once.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 52,
+          "cases": 52,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 9,
+          "cases": 12,
+          "blind": true
+        }
+      ]
+    },
+    {
+      "round": "Round 4",
+      "change": "Tuned on one perspective hold-out failure: 'the phone number on our client profile' ranked the contact article first. A number on the user's own account or profile now means the client contact number.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 52,
+          "cases": 52,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 10,
+          "cases": 12,
+          "blind": false
+        }
+      ]
+    },
+    {
+      "round": "Round 5",
+      "change": "The shipped help centre now uses the vendor's voice throughout: 'client' means the user's own business ('Settings > Client profile', 'your client name'), and article lines that only existed to steer users from one article to another were removed. The prompt now carries an <interpretation> block saying which 'client' the user meant, and the eval checks it. No retrieval rule changed. From here the articles are frozen; the eval flags any change to them.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 52,
+          "cases": 52,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false
+        }
+      ]
+    }
+  ],
+  "knownIssues": [
+    "Unknown but harmless words ('typo', 'wrong', 'keep', 'paying') lower coverage and cause false refusals. This is the main source of hold-out failures. It fails safe: the user is offered support rather than a wrong answer.",
+    "Spelling correction still applies to four-letter words, so 'dead' became 'lead' in 'the deal is dead'. Found by the hold-out set and deliberately left unfixed so the hold-out score stays blind.",
+    "Lexical retrieval can't tell 'send an invoice to a contact' (unsupported) from 'where invoices are sent' (billing email). In Claude mode the model is told to escalate when the article doesn't answer the question, which is the intended second line of defence.",
+    "'Change an address' is ambiguous between a company's postal address and an email address, but the policy answers with the company article.",
+    "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own."
+  ],
+  "afterHoldout": "After the hold-out run, articles declared as look-alikes stopped being passed to the model as extra context, and the core-example check got stricter: the forbidden article must not be ranked first, offered, put in the prompt or cited. Pass rates didn't change.",
+  "knowledgeBaseFingerprint": "33cb57b59ece"
+}

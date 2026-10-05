@@ -1,0 +1,319 @@
+<meta charset="utf-8" />
+<title>Harbour Help Evaluation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<style>
+  /* Layout: single reading column; summary tiles first, then method, history, breakdowns and every case. */
+  :root {
+    --bg: #f3f6f8; --surface: #ffffff; --ink: #15212b; --ink-soft: #4a5a68; --ink-faint: #75848f;
+    --line: #dde4ea; --accent: #0b6f73; --accent-soft: #e2f1f1; --bar-track: #e7edf1;
+    --good: #237a46; --good-soft: #e3f3e8; --bad: #b0412e; --bad-soft: #f9e7e3; --warn: #9a6408; --warn-soft: #fbf0d9;
+    --code-bg: #eef2f5;
+    --font-ui: 'Hanken Grotesk', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #0e171e; --surface: #15212a; --ink: #e4ebf0; --ink-soft: #a9b7c2; --ink-faint: #82929e; --line: #26343f;
+      --accent: #4fb8b5; --accent-soft: #143436; --bar-track: #22313b; --good: #6cc58e; --good-soft: #15301f;
+      --bad: #ef8a76; --bad-soft: #3a1d17; --warn: #e7b35a; --warn-soft: #362a12; --code-bg: #1d2b35; color-scheme: dark;
+    }
+  }
+  :root[data-theme='dark'] {
+    --bg: #0e171e; --surface: #15212a; --ink: #e4ebf0; --ink-soft: #a9b7c2; --ink-faint: #82929e; --line: #26343f;
+    --accent: #4fb8b5; --accent-soft: #143436; --bar-track: #22313b; --good: #6cc58e; --good-soft: #15301f;
+    --bad: #ef8a76; --bad-soft: #3a1d17; --warn: #e7b35a; --warn-soft: #362a12; --code-bg: #1d2b35; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-ui); }
+  .page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 80px; display: flex; flex-direction: column; gap: 36px; }
+  h1, h2, h3 { margin: 0; line-height: 1.2; text-wrap: balance; }
+  h1 { font-size: 2.1rem; letter-spacing: -0.015em; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-faint); }
+  p { margin: 0; }
+  a { color: var(--accent); }
+  code { font-family: var(--font-mono); font-size: 0.85em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+  section { display: flex; flex-direction: column; gap: 14px; }
+  .prose { max-width: 70ch; color: var(--ink-soft); display: flex; flex-direction: column; gap: 10px; }
+  .prose strong { color: var(--ink); }
+  .eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+  .meta { font-size: 0.85rem; color: var(--ink-faint); }
+  .links { display: flex; gap: 16px; flex-wrap: wrap; font-weight: 600; }
+  header.intro { display: flex; flex-direction: column; gap: 12px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+  .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .tile .label { font-size: 0.82rem; color: var(--ink-soft); font-weight: 600; }
+  .tile .value { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .tile .sub { font-size: 0.82rem; color: var(--ink-faint); }
+
+  .callout { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; }
+  .callout .big { font-size: 2.6rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .callout.core .big { color: var(--good); }
+
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 600; white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .metric-name { font-weight: 600; }
+  .metric-def { display: block; font-size: 0.8rem; color: var(--ink-faint); font-weight: 400; }
+
+  .bars { display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .bar-group { display: flex; flex-direction: column; gap: 6px; }
+  .bar-group + .bar-group { border-top: 1px solid var(--line); padding-top: 12px; }
+  .bar-group-title { font-weight: 700; font-size: 0.92rem; }
+  .bar-group-note { font-size: 0.82rem; color: var(--ink-soft); }
+  .bar-row { display: grid; grid-template-columns: 150px minmax(0, 1fr) 110px; gap: 10px; align-items: center; font-size: 0.85rem; }
+  .bar-label { color: var(--ink-soft); }
+  .bar-track { height: 14px; background: var(--bar-track); border-radius: 4px; position: relative; }
+  .bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 4px; }
+  .bar-fill.tuned { background: repeating-linear-gradient(135deg, var(--accent) 0 5px, var(--accent-soft) 5px 8px); }
+  .bar-value { font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.8rem; color: var(--ink-soft); }
+  .swatch { display: inline-block; width: 14px; height: 10px; border-radius: 2px; background: var(--accent); vertical-align: middle; margin-right: 6px; }
+  .swatch.tuned { background: repeating-linear-gradient(135deg, var(--accent) 0 5px, var(--accent-soft) 5px 8px); }
+
+  .pill { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+  .pill.pass { background: var(--good-soft); color: var(--good); }
+  .pill.fail { background: var(--bad-soft); color: var(--bad); }
+  .pill.split { background: var(--code-bg); color: var(--ink-soft); font-weight: 600; }
+  .outcome { font-family: var(--font-mono); font-size: 0.78rem; }
+  .terms { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); display: block; margin-top: 2px; }
+
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .filters input, .filters select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; min-width: 0; }
+  .filters input { flex: 1 1 220px; }
+  .count { font-size: 0.85rem; color: var(--ink-faint); }
+  ul.issues { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); max-width: 75ch; }
+  .pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; font-size: 0.86rem; color: var(--ink-soft); }
+  .step strong { color: var(--ink); font-size: 0.95rem; }
+  .step strong::before { counter-increment: step; content: counter(step) '. '; color: var(--accent); }
+  @media (max-width: 640px) {
+    .page { padding-block: 24px 60px; padding-inline: 16px; }
+    h1 { font-size: 1.7rem; }
+    .bar-row { grid-template-columns: 1fr 90px; }
+    .bar-row .bar-track { grid-column: 1 / -1; grid-row: 2; }
+    .callout { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="page">
+  <header class="intro">
+    <p class="eyebrow">Harbour CRM · help assistant</p>
+    <h1>Harbour Help evaluation</h1>
+    <div class="prose">
+      <p>Harbour Help answers questions about a small demo CRM using only its help centre: 29 single-task articles that match the app screen for screen. This report measures how often it finds the right article, cites it, asks when two articles are equally likely, and hands over to support when the help centre doesn't cover the question.</p>
+      <p>The assistant is designed to fail safe. When retrieval isn't confident it asks or escalates rather than answering, and an answer that can't be traced to an article it was given is withheld.</p>
+    </div>
+    <p class="meta" id="meta"></p>
+    <p class="links"><a id="demo-link" href="#">Open the CRM demo</a></p>
+  </header>
+
+  <section aria-labelledby="headline">
+    <h2 id="headline">Results across all <span data-fill="cases"></span> questions</h2>
+    <div class="tiles" id="tiles"></div>
+    <div class="callout core">
+      <div class="big" id="core-big"></div>
+      <div class="prose" id="core-text"></div>
+    </div>
+    <div class="callout core">
+      <div class="big" id="stress-big"></div>
+      <div class="prose" id="stress-text"></div>
+    </div>
+    <div class="callout">
+      <div class="big" id="holdout-big"></div>
+      <div class="prose" id="holdout-text"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="pipeline-h">
+    <h2 id="pipeline-h">How an answer is produced</h2>
+    <div class="pipeline">
+      <div class="step"><strong>Rewrite</strong>Normalise, apply domain phrase rules ("a client's phone" becomes a contact's phone), map synonyms, fix typos.</div>
+      <div class="step"><strong>Retrieve</strong>Field-weighted BM25 over title, aliases and body. Coverage measures how much of the question each article explains.</div>
+      <div class="step"><strong>Decide</strong>Escalate below 55% coverage. Clarify when a look-alike scores close and covers the same terms. Otherwise answer.</div>
+      <div class="step"><strong>Generate</strong>Offline: the article's own steps. Claude: a schema-constrained reply that may cite only the articles in the prompt.</div>
+      <div class="step"><strong>Verify</strong>The citation guardrail withholds any answer that cites nothing, or only articles it wasn't given.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="splits-h">
+    <h2 id="splits-h">Metrics by question set</h2>
+    <div class="prose"><p>The <strong>dev</strong> set was used to tune the retriever. The <strong>test</strong> set was scored blind once, then used for a second round of tuning. The <strong>hold-out</strong> set was written before that second round and never tuned on, so it is the honest estimate for questions the system hasn't seen. The <strong>perspective</strong> set tests "client" from both sides and was scored blind once before a final one-rule fix.</p></div>
+    <div class="table-wrap"><table id="split-table"></table></div>
+  </section>
+
+  <section aria-labelledby="history-h">
+    <h2 id="history-h">Pass rate through tuning</h2>
+    <div class="legend"><span><span class="swatch"></span>Blind: first time this set met this code</span><span><span class="swatch tuned"></span>Tuned on: failures from this set informed the change</span></div>
+    <div class="bars" id="history"></div>
+  </section>
+
+  <section aria-labelledby="tags-h">
+    <h2 id="tags-h">Pass rate by question type</h2>
+    <div class="bars" id="tags"></div>
+  </section>
+
+  <section aria-labelledby="cost-h">
+    <h2 id="cost-h">Cost per question</h2>
+    <div class="prose" id="cost-text"></div>
+    <div class="table-wrap"><table id="cost-table"></table></div>
+  </section>
+
+  <section aria-labelledby="issues-h">
+    <h2 id="issues-h">Known issues</h2>
+    <ul class="issues" id="issues"></ul>
+  </section>
+
+  <section aria-labelledby="cases-h">
+    <h2 id="cases-h">Every question</h2>
+    <div class="filters">
+      <label for="case-search" class="count">Search</label>
+      <input id="case-search" type="search" placeholder="Filter by question or article id" />
+      <select id="case-split" aria-label="Question set"><option value="">All sets</option><option value="dev">Dev</option><option value="test">Test</option><option value="holdout">Hold-out</option><option value="perspective">Perspective hold-out</option></select>
+      <select id="case-result" aria-label="Result"><option value="">Passed and failed</option><option value="fail">Failed only</option><option value="pass">Passed only</option></select>
+      <span class="count" id="case-count"></span>
+    </div>
+    <div class="table-wrap"><table id="case-table">
+      <thead><tr><th>Result</th><th>Question</th><th>Expected</th><th>Got</th><th>Set</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+</div>
+
+<script type="application/json" id="results-data">__RESULTS__</script>
+<script type="application/json" id="history-data">__HISTORY__</script>
+<script>
+  const data = JSON.parse(document.getElementById('results-data').textContent);
+  const history = JSON.parse(document.getElementById('history-data').textContent);
+  const DEMO_URL = '__DEMO_URL__';
+  const all = data.summary.all;
+  const pct = (x) => (x === null || x === undefined ? 'n/a' : `${(x * 100).toFixed(x === 1 || x === 0 ? 0 : 1)}%`);
+  const usd = (x) => (x === 0 ? '$0' : x < 0.01 ? `$${x.toFixed(4)}` : `$${x.toFixed(3)}`);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+  const fill = (name, value) => document.querySelectorAll(`[data-fill="${name}"]`).forEach((el) => (el.textContent = value));
+
+  const demoLink = document.getElementById('demo-link');
+  if (DEMO_URL && !DEMO_URL.startsWith('__')) demoLink.href = DEMO_URL;
+  else demoLink.hidden = true;
+
+  const generated = new Date(data.generatedAt).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+  document.getElementById('meta').textContent = `Generated ${generated} · ${data.knowledgeBase.articles} articles (frozen, fingerprint ${data.knowledgeBase.fingerprint}) · ${all.cases} questions · ${
+    data.mode.generator === 'extractive' ? 'offline extractive generation, so the run is deterministic and free' : `generation with ${data.mode.model}`
+  }`;
+  fill('cases', all.cases);
+
+  // Headline tiles ----------------------------------------------------------
+  const opus = data.summary.all.cost['claude-opus-5-5'];
+  const tiles = [
+    ['Retrieval hit rate', pct(all.retrieval.hitAt1), `Expected article ranked first on ${all.retrieval.cases} answerable questions. Top 3: ${pct(all.retrieval.hitAt3)}.`],
+    ['Citation validity', pct(all.citations.validity), `Answers whose citations all exist and were in the prompt. Correct article cited: ${pct(all.citations.correctness)}.`],
+    ['Refusal correctness', pct(all.refusal.recall), `Out-of-scope questions escalated (${all.refusal.cases}). Answerable questions wrongly escalated: ${pct(all.refusal.falseRefusalRate)}.`],
+    ['Cost per question', usd(opus.perQuestion), `Estimated on Claude Opus 5.5. Clarifications and escalations make no model call, so they cost $0.`],
+  ];
+  document.getElementById('tiles').innerHTML = tiles
+    .map(([label, value, sub]) => `<div class="tile"><span class="label">${label}</span><span class="value">${value}</span><span class="sub">${esc(sub)}</span></div>`)
+    .join('');
+
+  const core = all.core;
+  document.getElementById('core-big').textContent = `${core.passed}/${core.total}`;
+  const coreRows = data.rows.filter((r) => r.tags.includes('core'));
+  const coreFail = coreRows.filter((r) => !r.pass);
+  document.getElementById('core-text').innerHTML = `<p><strong>The client/contact trap.</strong> In Harbour CRM the client is the business using the product and a contact is the client's customer. So "how do I update a client's phone number" must retrieve <code>contact-edit-phone</code>, never <code>account-client-contact-number</code>. ${core.passed} of ${core.total} phrasings passed, and the forbidden article was never ranked first, offered, put in the prompt or cited (${core.neverViolations} violations).</p>${
+    coreFail.length
+      ? `<p>Failures: ${coreFail
+          .map((r) => `"${esc(r.query)}" was ${r.outcome === 'escalate' ? 'escalated to support instead of answered (fails safe)' : r.outcome === 'answer' ? `answered from <code>${r.citations.join(', ')}</code> instead of <code>${r.expect.article}</code> (a wrong article, though not the forbidden one)` : 'clarified instead of answered'}`)
+          .join('; ')}.</p>`
+      : ''
+  }`;
+
+  document.getElementById('stress-big').textContent = `${core.promptChecked - core.promptMissed}/${core.promptChecked}`;
+  document.getElementById('stress-text').innerHTML = `<p><strong>Same word, two perspectives.</strong> The help centre is written by the vendor, so its articles say "client" for the user's own business: <strong>Settings &gt; Client profile</strong>, "your client contact number". The user's own customers are their clients too, so a contact is the client's client. The articles are not reworded to help retrieval. The query rewriter reads "client" in a question as a contact unless it is plainly about the user's own profile, and the prompt tells the model which one was meant. In ${core.promptChecked - core.promptMissed} of the ${core.promptChecked} client/contact questions that reached the model, that note was in the prompt and correct.</p>`;
+
+  const hold = data.summary.holdout;
+  document.getElementById('holdout-big').textContent = pct(hold.passRate);
+  const holdFails = data.rows.filter((r) => r.split === 'holdout' && !r.pass);
+  const holdEscalated = holdFails.filter((r) => r.outcome === 'escalate' && r.expect.type !== 'escalate').length;
+  const holdWrong = holdFails.filter((r) => r.outcome === 'answer' && r.expect.type === 'answer').length;
+  document.getElementById('holdout-text').innerHTML = `<p><strong>Blind hold-out pass rate</strong> (${hold.passed} of ${hold.cases}), against ${pct(data.summary.dev.passRate)} on the tuning set. The gap is the honest cost of tuning a lexical retriever. ${holdEscalated} of the ${holdFails.length} hold-out failures are questions escalated to support that the help centre could have answered, and ${holdWrong === 0 ? 'none' : holdWrong} answered with the wrong article.</p>`;
+
+  // Split table --------------------------------------------------------------
+  const splits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['perspective', 'Perspective'], ['all', 'All']];
+  const metrics = [
+    ['Questions', (s) => s.cases, ''],
+    ['Pass rate', (s) => pct(s.passRate), 'Outcome and cited article both as expected'],
+    ['Retrieval hit@1', (s) => pct(s.retrieval.hitAt1), 'Expected article ranked first'],
+    ['Retrieval hit@3', (s) => pct(s.retrieval.hitAt3), 'Expected article in the top three'],
+    ['Citation validity', (s) => pct(s.citations.validity), 'Citations exist and were in the prompt'],
+    ['Correct article cited', (s) => pct(s.citations.correctness), 'Of answers to answerable questions'],
+    ['Refusal recall', (s) => pct(s.refusal.recall), 'Out-of-scope questions escalated'],
+    ['Refusal precision', (s) => pct(s.refusal.precision), 'Escalations that were out of scope'],
+    ['False refusals', (s) => pct(s.refusal.falseRefusalRate), 'Answerable questions escalated'],
+    ['Clarification accuracy', (s) => pct(s.clarify.accuracy), 'Ambiguous questions asked about'],
+    ['Unnecessary clarifications', (s) => pct(s.clarify.unnecessaryRate), 'Answerable questions asked about'],
+  ];
+  document.getElementById('split-table').innerHTML = `<thead><tr><th>Metric</th>${splits.map(([, l]) => `<th class="num">${l}</th>`).join('')}</tr></thead><tbody>${metrics
+    .map(([name, fn, def]) => `<tr><td><span class="metric-name">${name}</span>${def ? `<span class="metric-def">${def}</span>` : ''}</td>${splits.map(([k]) => `<td class="num">${fn(data.summary[k])}</td>`).join('')}</tr>`)
+    .join('')}</tbody>`;
+
+  // Bars -------------------------------------------------------------------
+  const bar = (label, ratio, value, tuned = false, title = '') =>
+    `<div class="bar-row" title="${esc(title || `${label}: ${value}`)}"><span class="bar-label">${esc(label)}</span><span class="bar-track"><span class="bar-fill${tuned ? ' tuned' : ''}" style="width:${(ratio * 100).toFixed(1)}%"></span></span><span class="bar-value">${value}</span></div>`;
+  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective' };
+  document.getElementById('history').innerHTML = history.rounds
+    .map(
+      (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores
+        .map((s) => bar(`${splitName[s.split]}${s.blind ? ' (blind)' : ''}`, s.passed / s.cases, `${s.passed}/${s.cases} · ${pct(s.passed / s.cases)}`, !s.blind))
+        .join('')}</div>`,
+    )
+    .join('');
+
+  const tagNames = { perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
+  document.getElementById('tags').innerHTML = Object.entries(all.byTag)
+    .sort((a, b) => b[1].passed / b[1].cases - a[1].passed / a[1].cases)
+    .map(([tag, t]) => bar(tagNames[tag] ?? tag, t.passed / t.cases, `${t.passed}/${t.cases} · ${pct(t.passed / t.cases)}`))
+    .join('');
+
+  // Cost --------------------------------------------------------------------
+  const calls = data.rows.filter((r) => r.tokens.inputTokens > 0);
+  const avgIn = Math.round(calls.reduce((s, r) => s + r.tokens.inputTokens, 0) / calls.length);
+  const avgOut = Math.round(calls.reduce((s, r) => s + r.tokens.outputTokens, 0) / calls.length);
+  document.getElementById('cost-text').innerHTML = data.mode.measuredUsage
+    ? `<p>Measured from API usage on every call.</p>`
+    : `<p>This run used offline generation, so cost is <strong>estimated</strong> from the exact prompt each question would send: about ${avgIn} input tokens (system prompt, up to three articles, the question and the response schema) and ${avgOut} output tokens for a typical answer, at four characters per token. ${calls.length} of ${all.cases} questions would reach the model; the rest are clarified or escalated first, for free.</p><p>Claude Opus 5.5 always uses some adaptive thinking, billed as output tokens, which this estimate leaves out. <code>npm run eval -- --live</code> with an API key replaces the estimate with measured usage.</p>`;
+  document.getElementById('cost-table').innerHTML = `<thead><tr><th>Model</th><th class="num">Price per MTok (in / out)</th><th class="num">Per question</th><th class="num">Per model call</th><th class="num">All ${all.cases} questions</th></tr></thead><tbody>${Object.entries(all.cost)
+    .map(([id, c]) => `<tr><td><span class="metric-name">${esc(data.pricing[id].label)}</span>${id === 'claude-opus-5-5' ? '<span class="metric-def">Default model</span>' : ''}</td><td class="num">$${data.pricing[id].input} / $${data.pricing[id].output}</td><td class="num">${usd(c.perQuestion)}</td><td class="num">${usd(c.perModelCall)}</td><td class="num">${usd(c.total)}</td></tr>`)
+    .join('')}</tbody>`;
+
+  // Issues ------------------------------------------------------------------
+  document.getElementById('issues').innerHTML = [...history.knownIssues, history.afterHoldout].filter(Boolean).map((i) => `<li>${esc(i)}</li>`).join('');
+
+  // Cases -------------------------------------------------------------------
+  const describeExpect = (e) => (e.type === 'answer' ? `answer <code>${e.article}</code>` : e.type === 'clarify' ? `clarify${e.mustInclude.length ? ` incl. ${e.mustInclude.map((i) => `<code>${i}</code>`).join(' ')}` : ''}` : 'escalate');
+  const describeGot = (r) => (r.outcome === 'answer' ? `answer ${r.citations.map((i) => `<code>${i}</code>`).join(' ')}` : r.outcome === 'clarify' ? `clarify ${r.options.map((i) => `<code>${i}</code>`).join(' ')}` : 'escalate');
+  const tbody = document.querySelector('#case-table tbody');
+  const search = document.getElementById('case-search');
+  const splitSel = document.getElementById('case-split');
+  const resultSel = document.getElementById('case-result');
+  function renderCases() {
+    const q = search.value.trim().toLowerCase();
+    const rows = data.rows.filter(
+      (r) =>
+        (!splitSel.value || r.split === splitSel.value) &&
+        (!resultSel.value || (resultSel.value === 'pass') === r.pass) &&
+        (!q || `${r.query} ${JSON.stringify(r.expect)} ${r.citations.join(' ')} ${r.options.join(' ')}`.toLowerCase().includes(q)),
+    );
+    tbody.innerHTML = rows
+      .map(
+        (r) => `<tr><td><span class="pill ${r.pass ? 'pass' : 'fail'}">${r.pass ? '✓ Pass' : '✗ Fail'}</span></td><td>${esc(r.query)}<span class="terms">${esc(r.rewritten || '(no terms)')}</span></td><td class="outcome">${describeExpect(r.expect)}</td><td class="outcome">${describeGot(r)}</td><td><span class="pill split">${splitName[r.split]}</span></td></tr>`,
+      )
+      .join('');
+    document.getElementById('case-count').textContent = `${rows.length} shown`;
+  }
+  [search, splitSel, resultSel].forEach((el) => el.addEventListener('input', renderCases));
+  renderCases();
+</script>

@@ -1,0 +1,21 @@
+{
+  "name": "harbour-crm-rag-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small CRM with a grounded, evaluated help-desk chatbot.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "eval": "node eval/run.js",
+    "check:docs": "node scripts/check-docs.mjs",
+    "build": "node scripts/build.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright": "1.56.1"
+  }
+}

@@ -1,0 +1,3864 @@
+{
+  "generatedAt": "2026-10-03T09:33:19.379Z",
+  "mode": {
+    "generator": "extractive",
+    "model": null,
+    "measuredUsage": false
+  },
+  "knowledgeBase": {
+    "articles": 29
+  },
+  "policy": {
+    "k1": 1.2,
+    "b": 0.75,
+    "minCoverage": 0.55,
+    "clarifyRatioLinked": 0.6,
+    "clarifyRatioAny": 0.95,
+    "bodyOnlyCredit": 0.5,
+    "maxClarifyOptions": 3,
+    "topK": 5,
+    "contextK": 3
+  },
+  "pricing": {
+    "claude-opus-5-5": {
+      "label": "Claude Opus 5.5",
+      "input": 4,
+      "output": 20
+    },
+    "claude-sonnet-5-5": {
+      "label": "Claude Sonnet 5.5",
+      "input": 2,
+      "output": 10
+    },
+    "claude-haiku-4-5": {
+      "label": "Claude Haiku 4.5",
+      "input": 1,
+      "output": 5
+    }
+  },
+  "summary": {
+    "all": {
+      "cases": 52,
+      "passed": 51,
+      "passRate": 0.9807692307692307,
+      "retrieval": {
+        "cases": 37,
+        "hitAt1": 1,
+        "hitAt3": 1
+      },
+      "citations": {
+        "answers": 36,
+        "validity": 1,
+        "correctness": 1,
+        "guardrailInterventions": 0
+      },
+      "refusal": {
+        "cases": 10,
+        "recall": 1,
+        "precision": 1,
+        "falseRefusalRate": 0
+      },
+      "clarify": {
+        "cases": 5,
+        "accuracy": 1,
+        "unnecessaryRate": 0.02702702702702703
+      },
+      "answers": {
+        "cases": 37,
+        "accuracy": 0.972972972972973
+      },
+      "core": {
+        "total": 4,
+        "passed": 4,
+        "neverViolations": 0,
+        "forbiddenInTop3": 1
+      },
+      "cost": {
+        "claude-opus-5-5": {
+          "perQuestion": 0.002716846153846154,
+          "perModelCall": 0.0039243333333333335,
+          "total": 0.141276
+        },
+        "claude-sonnet-5-5": {
+          "perQuestion": 0.001358423076923077,
+          "perModelCall": 0.0019621666666666667,
+          "total": 0.070638
+        },
+        "claude-haiku-4-5": {
+          "perQuestion": 0.0006792115384615385,
+          "perModelCall": 0.0009810833333333334,
+          "total": 0.035319
+        }
+      },
+      "latencyMs": {
+        "p50": 0.17127400000001103,
+        "p95": 1.3545179999999846
+      },
+      "byTag": {
+        "ambiguity": {
+          "cases": 5,
+          "passed": 5
+        },
+        "core": {
+          "cases": 4,
+          "passed": 4
+        },
+        "near-miss": {
+          "cases": 5,
+          "passed": 5
+        },
+        "out-of-scope": {
+          "cases": 10,
+          "passed": 10
+        },
+        "paraphrase": {
+          "cases": 17,
+          "passed": 17
+        },
+        "synonym": {
+          "cases": 15,
+          "passed": 14
+        },
+        "terminology": {
+          "cases": 7,
+          "passed": 7
+        },
+        "typo": {
+          "cases": 1,
+          "passed": 1
+        }
+      }
+    },
+    "dev": {
+      "cases": 52,
+      "passed": 51,
+      "passRate": 0.9807692307692307,
+      "retrieval": {
+        "cases": 37,
+        "hitAt1": 1,
+        "hitAt3": 1
+      },
+      "citations": {
+        "answers": 36,
+        "validity": 1,
+        "correctness": 1,
+        "guardrailInterventions": 0
+      },
+      "refusal": {
+        "cases": 10,
+        "recall": 1,
+        "precision": 1,
+        "falseRefusalRate": 0
+      },
+      "clarify": {
+        "cases": 5,
+        "accuracy": 1,
+        "unnecessaryRate": 0.02702702702702703
+      },
+      "answers": {
+        "cases": 37,
+        "accuracy": 0.972972972972973
+      },
+      "core": {
+        "total": 4,
+        "passed": 4,
+        "neverViolations": 0,
+        "forbiddenInTop3": 1
+      },
+      "cost": {
+        "claude-opus-5-5": {
+          "perQuestion": 0.002716846153846154,
+          "perModelCall": 0.0039243333333333335,
+          "total": 0.141276
+        },
+        "claude-sonnet-5-5": {
+          "perQuestion": 0.001358423076923077,
+          "perModelCall": 0.0019621666666666667,
+          "total": 0.070638
+        },
+        "claude-haiku-4-5": {
+          "perQuestion": 0.0006792115384615385,
+          "perModelCall": 0.0009810833333333334,
+          "total": 0.035319
+        }
+      },
+      "latencyMs": {
+        "p50": 0.17127400000001103,
+        "p95": 1.3545179999999846
+      },
+      "byTag": {
+        "ambiguity": {
+          "cases": 5,
+          "passed": 5
+        },
+        "core": {
+          "cases": 4,
+          "passed": 4
+        },
+        "near-miss": {
+          "cases": 5,
+          "passed": 5
+        },
+        "out-of-scope": {
+          "cases": 10,
+          "passed": 10
+        },
+        "paraphrase": {
+          "cases": 17,
+          "passed": 17
+        },
+        "synonym": {
+          "cases": 15,
+          "passed": 14
+        },
+        "terminology": {
+          "cases": 7,
+          "passed": 7
+        },
+        "typo": {
+          "cases": 1,
+          "passed": 1
+        }
+      }
+    },
+    "test": {
+      "cases": 0,
+      "passed": 0,
+      "passRate": null,
+      "retrieval": {
+        "cases": 0,
+        "hitAt1": null,
+        "hitAt3": null
+      },
+      "citations": {
+        "answers": 0,
+        "validity": null,
+        "correctness": null,
+        "guardrailInterventions": 0
+      },
+      "refusal": {
+        "cases": 0,
+        "recall": null,
+        "precision": null,
+        "falseRefusalRate": null
+      },
+      "clarify": {
+        "cases": 0,
+        "accuracy": null,
+        "unnecessaryRate": null
+      },
+      "answers": {
+        "cases": 0,
+        "accuracy": null
+      },
+      "core": {
+        "total": 0,
+        "passed": 0,
+        "neverViolations": 0,
+        "forbiddenInTop3": 0
+      },
+      "cost": {},
+      "latencyMs": {
+        "p50": null,
+        "p95": null
+      },
+      "byTag": {}
+    },
+    "holdout": {
+      "cases": 0,
+      "passed": 0,
+      "passRate": null,
+      "retrieval": {
+        "cases": 0,
+        "hitAt1": null,
+        "hitAt3": null
+      },
+      "citations": {
+        "answers": 0,
+        "validity": null,
+        "correctness": null,
+        "guardrailInterventions": 0
+      },
+      "refusal": {
+        "cases": 0,
+        "recall": null,
+        "precision": null,
+        "falseRefusalRate": null
+      },
+      "clarify": {
+        "cases": 0,
+        "accuracy": null,
+        "unnecessaryRate": null
+      },
+      "answers": {
+        "cases": 0,
+        "accuracy": null
+      },
+      "core": {
+        "total": 0,
+        "passed": 0,
+        "neverViolations": 0,
+        "forbiddenInTop3": 0
+      },
+      "cost": {},
+      "latencyMs": {
+        "p50": null,
+        "p95": null
+      },
+      "byTag": {}
+    }
+  },
+  "rows": [
+    {
+      "id": "core-01",
+      "split": "dev",
+      "tags": [
+        "core",
+        "terminology"
+      ],
+      "query": "How do I update a client's phone number?",
+      "expect": {
+        "type": "answer",
+        "article": "contact-edit-phone",
+        "never": [
+          "account-client-contact-number"
+        ]
+      },
+      "rewritten": "edit contact phone",
+      "trace": [
+        "client → contact",
+        "phone number → phone",
+        "update → edit",
+        "phone → phone"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-phone",
+          "score": 17.757,
+          "coverage": 1
+        },
+        {
+          "id": "company-edit-details",
+          "score": 12.355,
+          "coverage": 0.909
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 7.274,
+          "coverage": 0.412
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 6.288,
+          "coverage": 0.614
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.898,
+          "coverage": 0.412
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-edit-phone\" covers 100% of the query and leads the next article by 30%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-edit-phone"
+      ],
+      "citations": [
+        "contact-edit-phone"
+      ],
+      "contextIds": [
+        "contact-edit-phone",
+        "company-edit-details"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.7429589999999848,
+      "tokens": {
+        "inputTokens": 547,
+        "outputTokens": 100,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004188,
+        "claude-sonnet-5-5": 0.002094,
+        "claude-haiku-4-5": 0.001047
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "core-02",
+      "split": "dev",
+      "tags": [
+        "core",
+        "terminology"
+      ],
+      "query": "change client mobile number",
+      "expect": {
+        "type": "answer",
+        "article": "contact-edit-phone",
+        "never": [
+          "account-client-contact-number"
+        ]
+      },
+      "rewritten": "edit contact phone",
+      "trace": [
+        "client → contact",
+        "mobile number → phone",
+        "change → edit",
+        "phone → phone"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-phone",
+          "score": 17.757,
+          "coverage": 1
+        },
+        {
+          "id": "company-edit-details",
+          "score": 12.355,
+          "coverage": 0.909
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 7.274,
+          "coverage": 0.412
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 6.288,
+          "coverage": 0.614
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.898,
+          "coverage": 0.412
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-edit-phone\" covers 100% of the query and leads the next article by 30%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-edit-phone"
+      ],
+      "citations": [
+        "contact-edit-phone"
+      ],
+      "contextIds": [
+        "contact-edit-phone",
+        "company-edit-details"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.185545999999988,
+      "tokens": {
+        "inputTokens": 544,
+        "outputTokens": 100,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004176,
+        "claude-sonnet-5-5": 0.002088,
+        "claude-haiku-4-5": 0.001044
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "core-03",
+      "split": "dev",
+      "tags": [
+        "core",
+        "terminology"
+      ],
+      "query": "my client's contact number is wrong, how do I fix it",
+      "expect": {
+        "type": "answer",
+        "article": "contact-edit-phone",
+        "never": [
+          "account-client-contact-number"
+        ]
+      },
+      "rewritten": "contact phone wrong edit",
+      "trace": [
+        "client → contact",
+        "contact number → phone",
+        "phone → phone",
+        "fix → edit"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-phone",
+          "score": 17.757,
+          "coverage": 0.63
+        },
+        {
+          "id": "company-edit-details",
+          "score": 12.355,
+          "coverage": 0.572
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 7.274,
+          "coverage": 0.259
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 6.288,
+          "coverage": 0.387
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.898,
+          "coverage": 0.259
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-edit-phone\" covers 63% of the query and leads the next article by 30%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-edit-phone"
+      ],
+      "citations": [
+        "contact-edit-phone"
+      ],
+      "contextIds": [
+        "contact-edit-phone",
+        "company-edit-details"
+      ],
+      "guardrail": null,
+      "retrievalMs": 2.020313999999985,
+      "tokens": {
+        "inputTokens": 550,
+        "outputTokens": 100,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.0042,
+        "claude-sonnet-5-5": 0.0021,
+        "claude-haiku-4-5": 0.00105
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "core-04",
+      "split": "dev",
+      "tags": [
+        "core",
+        "terminology"
+      ],
+      "query": "How do I change our client contact number?",
+      "expect": {
+        "type": "answer",
+        "article": "account-client-contact-number",
+        "never": [
+          "contact-edit-phone"
+        ]
+      },
+      "rewritten": "edit clientcontactnumber number",
+      "trace": [
+        "client contact number → clientcontactnumber number",
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "account-client-contact-number",
+          "score": 33.413,
+          "coverage": 1
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 8.483,
+          "coverage": 0.454
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 5.76,
+          "coverage": 0.286
+        },
+        {
+          "id": "account-billing-email",
+          "score": 4.229,
+          "coverage": 0.118
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 4.089,
+          "coverage": 0.118
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"account-client-contact-number\" covers 100% of the query and leads the next article by 75%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "account-client-contact-number"
+      ],
+      "citations": [
+        "account-client-contact-number"
+      ],
+      "contextIds": [
+        "account-client-contact-number"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.19663600000001225,
+      "tokens": {
+        "inputTokens": 465,
+        "outputTokens": 123,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.00432,
+        "claude-sonnet-5-5": 0.00216,
+        "claude-haiku-4-5": 0.00108
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-01",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "how do I add a new contact",
+      "expect": {
+        "type": "answer",
+        "article": "contact-create"
+      },
+      "rewritten": "create contact",
+      "trace": [
+        "add → create",
+        "new → create"
+      ],
+      "ranked": [
+        {
+          "id": "contact-create",
+          "score": 12.037,
+          "coverage": 1
+        },
+        {
+          "id": "company-create",
+          "score": 8.864,
+          "coverage": 0.845
+        },
+        {
+          "id": "deal-create",
+          "score": 8.357,
+          "coverage": 0.845
+        },
+        {
+          "id": "custom-field-create",
+          "score": 7.547,
+          "coverage": 1
+        },
+        {
+          "id": "contact-add-note",
+          "score": 7.545,
+          "coverage": 1
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-create\" covers 100% of the query and leads the next article by 26%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-create"
+      ],
+      "citations": [
+        "contact-create"
+      ],
+      "contextIds": [
+        "contact-create",
+        "company-create",
+        "deal-create"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.17127400000001103,
+      "tokens": {
+        "inputTokens": 623,
+        "outputTokens": 105,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004592,
+        "claude-sonnet-5-5": 0.002296,
+        "claude-haiku-4-5": 0.001148
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-02",
+      "split": "dev",
+      "tags": [
+        "synonym",
+        "terminology"
+      ],
+      "query": "add a new client",
+      "expect": {
+        "type": "answer",
+        "article": "contact-create"
+      },
+      "rewritten": "create contact",
+      "trace": [
+        "client → contact",
+        "add → create",
+        "new → create"
+      ],
+      "ranked": [
+        {
+          "id": "contact-create",
+          "score": 12.037,
+          "coverage": 1
+        },
+        {
+          "id": "company-create",
+          "score": 8.864,
+          "coverage": 0.845
+        },
+        {
+          "id": "deal-create",
+          "score": 8.357,
+          "coverage": 0.845
+        },
+        {
+          "id": "custom-field-create",
+          "score": 7.547,
+          "coverage": 1
+        },
+        {
+          "id": "contact-add-note",
+          "score": 7.545,
+          "coverage": 1
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-create\" covers 100% of the query and leads the next article by 26%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-create"
+      ],
+      "citations": [
+        "contact-create"
+      ],
+      "contextIds": [
+        "contact-create",
+        "company-create",
+        "deal-create"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.10620500000001698,
+      "tokens": {
+        "inputTokens": 620,
+        "outputTokens": 105,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.00458,
+        "claude-sonnet-5-5": 0.00229,
+        "claude-haiku-4-5": 0.001145
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-03",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "change a customer's email",
+      "expect": {
+        "type": "answer",
+        "article": "contact-edit-email"
+      },
+      "rewritten": "edit contact email",
+      "trace": [
+        "customer → contact",
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-email",
+          "score": 20.478,
+          "coverage": 1
+        },
+        {
+          "id": "account-billing-email",
+          "score": 17.5,
+          "coverage": 0.919
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 7.443,
+          "coverage": 0.364
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.898,
+          "coverage": 0.364
+        },
+        {
+          "id": "contact-search",
+          "score": 5.506,
+          "coverage": 0.48
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-edit-email\" covers 100% of the query and leads the next article by 15%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-edit-email"
+      ],
+      "citations": [
+        "contact-edit-email"
+      ],
+      "contextIds": [
+        "contact-edit-email",
+        "account-billing-email"
+      ],
+      "guardrail": null,
+      "retrievalMs": 1.1425490000000025,
+      "tokens": {
+        "inputTokens": 524,
+        "outputTokens": 93,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003956,
+        "claude-sonnet-5-5": 0.001978,
+        "claude-haiku-4-5": 0.000989
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-04",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "convert a lead into a customer",
+      "expect": {
+        "type": "answer",
+        "article": "contact-change-status"
+      },
+      "rewritten": "convert lead contact",
+      "trace": [
+        "customer → contact"
+      ],
+      "ranked": [
+        {
+          "id": "contact-change-status",
+          "score": 12.946,
+          "coverage": 1
+        },
+        {
+          "id": "contact-create",
+          "score": 7.02,
+          "coverage": 0.461
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 5.051,
+          "coverage": 0.277
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 5.04,
+          "coverage": 0.277
+        },
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.093
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-change-status\" covers 100% of the query and leads the next article by 46%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-change-status"
+      ],
+      "citations": [
+        "contact-change-status"
+      ],
+      "contextIds": [
+        "contact-change-status"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.12886000000000308,
+      "tokens": {
+        "inputTokens": 432,
+        "outputTokens": 97,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003668,
+        "claude-sonnet-5-5": 0.001834,
+        "claude-haiku-4-5": 0.000917
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-05",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "which company does a contact belong to and how do I change it",
+      "expect": {
+        "type": "answer",
+        "article": "contact-link-company"
+      },
+      "rewritten": "company contact belong edit",
+      "trace": [
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "contact-link-company",
+          "score": 12.864,
+          "coverage": 0.721
+        },
+        {
+          "id": "company-edit-details",
+          "score": 9.977,
+          "coverage": 0.385
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 8.426,
+          "coverage": 0.58
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 7.443,
+          "coverage": 0.252
+        },
+        {
+          "id": "company-delete",
+          "score": 7.386,
+          "coverage": 0.315
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-link-company\" covers 72% of the query and leads the next article by 22%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-link-company"
+      ],
+      "citations": [
+        "contact-link-company"
+      ],
+      "contextIds": [
+        "contact-link-company",
+        "glossary-clients-contacts"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.2071730000000116,
+      "tokens": {
+        "inputTokens": 611,
+        "outputTokens": 113,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004704,
+        "claude-sonnet-5-5": 0.002352,
+        "claude-haiku-4-5": 0.001176
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-06",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "remove a client from the system",
+      "expect": {
+        "type": "answer",
+        "article": "contact-delete"
+      },
+      "rewritten": "delete contact system",
+      "trace": [
+        "client → contact",
+        "remove → delete"
+      ],
+      "ranked": [
+        {
+          "id": "contact-delete",
+          "score": 18.637,
+          "coverage": 0.556
+        },
+        {
+          "id": "company-delete",
+          "score": 14.813,
+          "coverage": 0.5
+        },
+        {
+          "id": "deal-delete",
+          "score": 14.361,
+          "coverage": 0.444
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 13.397,
+          "coverage": 0.444
+        },
+        {
+          "id": "contact-create",
+          "score": 3.727,
+          "coverage": 0.113
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-delete\" covers 56% of the query and leads the next article by 21%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-delete"
+      ],
+      "citations": [
+        "contact-delete"
+      ],
+      "contextIds": [
+        "contact-delete"
+      ],
+      "guardrail": null,
+      "retrievalMs": 1.3545179999999846,
+      "tokens": {
+        "inputTokens": 411,
+        "outputTokens": 80,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003244,
+        "claude-sonnet-5-5": 0.001622,
+        "claude-haiku-4-5": 0.000811
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-07",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "look up a customer by email",
+      "expect": {
+        "type": "answer",
+        "article": "contact-search"
+      },
+      "rewritten": "search contact email",
+      "trace": [
+        "customer → contact",
+        "look up → search"
+      ],
+      "ranked": [
+        {
+          "id": "contact-search",
+          "score": 26.915,
+          "coverage": 0.816
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 16.389,
+          "coverage": 0.461
+        },
+        {
+          "id": "account-billing-email",
+          "score": 13.271,
+          "coverage": 0.415
+        },
+        {
+          "id": "contact-export",
+          "score": 8.247,
+          "coverage": 0.547
+        },
+        {
+          "id": "contact-create",
+          "score": 5.29,
+          "coverage": 0.277
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-search\" covers 82% of the query and leads the next article by 39%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-search"
+      ],
+      "citations": [
+        "contact-search"
+      ],
+      "contextIds": [
+        "contact-search"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.21965500000001725,
+      "tokens": {
+        "inputTokens": 412,
+        "outputTokens": 82,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003288,
+        "claude-sonnet-5-5": 0.001644,
+        "claude-haiku-4-5": 0.000822
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-08",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "download my contact list as a spreadsheet",
+      "expect": {
+        "type": "answer",
+        "article": "contact-export"
+      },
+      "rewritten": "export contact list csv",
+      "trace": [
+        "download → export",
+        "spreadsheet → csv"
+      ],
+      "ranked": [
+        {
+          "id": "contact-export",
+          "score": 48.696,
+          "coverage": 1
+        },
+        {
+          "id": "contact-link-company",
+          "score": 5.699,
+          "coverage": 0.158
+        },
+        {
+          "id": "contact-search",
+          "score": 5.506,
+          "coverage": 0.158
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.161,
+          "coverage": 0.158
+        },
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.053
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-export\" covers 100% of the query and leads the next article by 88%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-export"
+      ],
+      "citations": [
+        "contact-export"
+      ],
+      "contextIds": [
+        "contact-export"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.17870999999999526,
+      "tokens": {
+        "inputTokens": 426,
+        "outputTokens": 89,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003484,
+        "claude-sonnet-5-5": 0.001742,
+        "claude-haiku-4-5": 0.000871
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-09",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "log a phone call with a client",
+      "expect": {
+        "type": "answer",
+        "article": "contact-add-note"
+      },
+      "rewritten": "note phone call contact",
+      "trace": [
+        "client → contact",
+        "log → note",
+        "phone → phone"
+      ],
+      "ranked": [
+        {
+          "id": "contact-add-note",
+          "score": 25.144,
+          "coverage": 0.785
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 13.747,
+          "coverage": 0.282
+        },
+        {
+          "id": "company-edit-details",
+          "score": 8.46,
+          "coverage": 0.248
+        },
+        {
+          "id": "contact-create",
+          "score": 6.984,
+          "coverage": 0.341
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 6.647,
+          "coverage": 0.526
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-add-note\" covers 79% of the query and leads the next article by 45%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-add-note"
+      ],
+      "citations": [
+        "contact-add-note"
+      ],
+      "contextIds": [
+        "contact-add-note"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.16748800000002007,
+      "tokens": {
+        "inputTokens": 406,
+        "outputTokens": 73,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003084,
+        "claude-sonnet-5-5": 0.001542,
+        "claude-haiku-4-5": 0.000771
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-10",
+      "split": "dev",
+      "tags": [
+        "typo"
+      ],
+      "query": "how do i delte a contcat",
+      "expect": {
+        "type": "answer",
+        "article": "contact-delete"
+      },
+      "rewritten": "delete contact",
+      "trace": [
+        "delte → delet",
+        "delte → delete",
+        "contcat → contact"
+      ],
+      "ranked": [
+        {
+          "id": "contact-delete",
+          "score": 18.637,
+          "coverage": 1
+        },
+        {
+          "id": "company-delete",
+          "score": 14.813,
+          "coverage": 0.899
+        },
+        {
+          "id": "deal-delete",
+          "score": 14.361,
+          "coverage": 0.797
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 13.397,
+          "coverage": 0.797
+        },
+        {
+          "id": "contact-create",
+          "score": 3.727,
+          "coverage": 0.203
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-delete\" covers 100% of the query and leads the next article by 21%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-delete"
+      ],
+      "citations": [
+        "contact-delete"
+      ],
+      "contextIds": [
+        "contact-delete",
+        "company-delete",
+        "deal-delete"
+      ],
+      "guardrail": null,
+      "retrievalMs": 1.5031799999999862,
+      "tokens": {
+        "inputTokens": 569,
+        "outputTokens": 80,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003876,
+        "claude-sonnet-5-5": 0.001938,
+        "claude-haiku-4-5": 0.000969
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-11",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "mark a contact as inactive",
+      "expect": {
+        "type": "answer",
+        "article": "contact-change-status"
+      },
+      "rewritten": "mark contact inactiv",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "contact-change-status",
+          "score": 14.835,
+          "coverage": 1
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 6.481,
+          "coverage": 0.309
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 6.186,
+          "coverage": 0.309
+        },
+        {
+          "id": "deal-reopen",
+          "score": 4.246,
+          "coverage": 0.309
+        },
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.087
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"contact-change-status\" covers 100% of the query and leads the next article by 56%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "contact-change-status"
+      ],
+      "citations": [
+        "contact-change-status"
+      ],
+      "contextIds": [
+        "contact-change-status"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.11821800000001303,
+      "tokens": {
+        "inputTokens": 431,
+        "outputTokens": 97,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003664,
+        "claude-sonnet-5-5": 0.001832,
+        "claude-haiku-4-5": 0.000916
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-12",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "create a new organisation",
+      "expect": {
+        "type": "answer",
+        "article": "company-create"
+      },
+      "rewritten": "create company",
+      "trace": [
+        "create → create",
+        "new → create",
+        "organisation → company"
+      ],
+      "ranked": [
+        {
+          "id": "company-create",
+          "score": 14.647,
+          "coverage": 1
+        },
+        {
+          "id": "contact-create",
+          "score": 9.254,
+          "coverage": 0.784
+        },
+        {
+          "id": "deal-create",
+          "score": 8.638,
+          "coverage": 0.784
+        },
+        {
+          "id": "custom-field-create",
+          "score": 7.04,
+          "coverage": 0.784
+        },
+        {
+          "id": "contact-link-company",
+          "score": 6.811,
+          "coverage": 0.716
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"company-create\" covers 100% of the query and leads the next article by 37%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "company-create"
+      ],
+      "citations": [
+        "company-create"
+      ],
+      "contextIds": [
+        "company-create",
+        "contact-create",
+        "deal-create"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.0917440000000056,
+      "tokens": {
+        "inputTokens": 622,
+        "outputTokens": 85,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004188,
+        "claude-sonnet-5-5": 0.002094,
+        "claude-haiku-4-5": 0.001047
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-13",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "update a company's website",
+      "expect": {
+        "type": "answer",
+        "article": "company-edit-details"
+      },
+      "rewritten": "edit company websit",
+      "trace": [
+        "update → edit"
+      ],
+      "ranked": [
+        {
+          "id": "company-edit-details",
+          "score": 17.91,
+          "coverage": 1
+        },
+        {
+          "id": "company-create",
+          "score": 9.011,
+          "coverage": 0.525
+        },
+        {
+          "id": "contact-link-company",
+          "score": 7.389,
+          "coverage": 0.338
+        },
+        {
+          "id": "company-delete",
+          "score": 6.91,
+          "coverage": 0.266
+        },
+        {
+          "id": "account-business-name",
+          "score": 5.012,
+          "coverage": 0.241
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"company-edit-details\" covers 100% of the query and leads the next article by 50%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "company-edit-details"
+      ],
+      "citations": [
+        "company-edit-details"
+      ],
+      "contextIds": [
+        "company-edit-details"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.09823300000002178,
+      "tokens": {
+        "inputTokens": 434,
+        "outputTokens": 94,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003616,
+        "claude-sonnet-5-5": 0.001808,
+        "claude-haiku-4-5": 0.000904
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-14",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "delete a company",
+      "expect": {
+        "type": "answer",
+        "article": "company-delete"
+      },
+      "rewritten": "delete company",
+      "trace": [
+        "delete → delete"
+      ],
+      "ranked": [
+        {
+          "id": "company-delete",
+          "score": 20.652,
+          "coverage": 1
+        },
+        {
+          "id": "contact-delete",
+          "score": 14.845,
+          "coverage": 0.7
+        },
+        {
+          "id": "deal-delete",
+          "score": 14.361,
+          "coverage": 0.7
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 13.397,
+          "coverage": 0.7
+        },
+        {
+          "id": "company-create",
+          "score": 6.396,
+          "coverage": 0.3
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"company-delete\" covers 100% of the query and leads the next article by 28%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "company-delete"
+      ],
+      "citations": [
+        "company-delete"
+      ],
+      "contextIds": [
+        "company-delete",
+        "contact-delete",
+        "deal-delete"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.09404000000000678,
+      "tokens": {
+        "inputTokens": 567,
+        "outputTokens": 77,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003808,
+        "claude-sonnet-5-5": 0.001904,
+        "claude-haiku-4-5": 0.000952
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-15",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "change the address of an organisation",
+      "expect": {
+        "type": "answer",
+        "article": "company-edit-details"
+      },
+      "rewritten": "edit address company",
+      "trace": [
+        "change → edit",
+        "organisation → company"
+      ],
+      "ranked": [
+        {
+          "id": "company-edit-details",
+          "score": 19.423,
+          "coverage": 1
+        },
+        {
+          "id": "company-create",
+          "score": 8.392,
+          "coverage": 0.53
+        },
+        {
+          "id": "contact-link-company",
+          "score": 7.389,
+          "coverage": 0.4
+        },
+        {
+          "id": "company-delete",
+          "score": 6.91,
+          "coverage": 0.315
+        },
+        {
+          "id": "account-billing-email",
+          "score": 6.257,
+          "coverage": 0.47
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"company-edit-details\" covers 100% of the query and leads the next article by 57%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "company-edit-details"
+      ],
+      "citations": [
+        "company-edit-details"
+      ],
+      "contextIds": [
+        "company-edit-details"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.18599899999998115,
+      "tokens": {
+        "inputTokens": 437,
+        "outputTokens": 94,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003628,
+        "claude-sonnet-5-5": 0.001814,
+        "claude-haiku-4-5": 0.000907
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-16",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "add a new opportunity",
+      "expect": {
+        "type": "answer",
+        "article": "deal-create"
+      },
+      "rewritten": "create deal",
+      "trace": [
+        "add → create",
+        "new → create",
+        "opportunity → deal"
+      ],
+      "ranked": [
+        {
+          "id": "deal-create",
+          "score": 13.169,
+          "coverage": 1
+        },
+        {
+          "id": "contact-create",
+          "score": 8.861,
+          "coverage": 0.808
+        },
+        {
+          "id": "company-create",
+          "score": 8.251,
+          "coverage": 0.616
+        },
+        {
+          "id": "custom-field-create",
+          "score": 6.937,
+          "coverage": 0.808
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 5.929,
+          "coverage": 0.692
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-create\" covers 100% of the query and leads the next article by 33%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-create"
+      ],
+      "citations": [
+        "deal-create"
+      ],
+      "contextIds": [
+        "deal-create",
+        "contact-create",
+        "company-create"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.13665399999999295,
+      "tokens": {
+        "inputTokens": 621,
+        "outputTokens": 98,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004444,
+        "claude-sonnet-5-5": 0.002222,
+        "claude-haiku-4-5": 0.001111
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-17",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "how do I mark a deal as lost",
+      "expect": {
+        "type": "answer",
+        "article": "deal-mark-lost"
+      },
+      "rewritten": "mark deal lost",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "deal-mark-lost",
+          "score": 23.952,
+          "coverage": 1
+        },
+        {
+          "id": "deal-reopen",
+          "score": 18.777,
+          "coverage": 1
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 11.327,
+          "coverage": 0.556
+        },
+        {
+          "id": "deal-delete",
+          "score": 9.365,
+          "coverage": 0.578
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 8.073,
+          "coverage": 0.578
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-mark-lost\" covers 100% of the query and leads the next article by 22%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-mark-lost"
+      ],
+      "citations": [
+        "deal-mark-lost"
+      ],
+      "contextIds": [
+        "deal-mark-lost",
+        "deal-reopen",
+        "deal-mark-won"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.17400499999999397,
+      "tokens": {
+        "inputTokens": 553,
+        "outputTokens": 93,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004072,
+        "claude-sonnet-5-5": 0.002036,
+        "claude-haiku-4-5": 0.001018
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-18",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "close an opportunity as won",
+      "expect": {
+        "type": "answer",
+        "article": "deal-mark-won"
+      },
+      "rewritten": "clos deal won",
+      "trace": [
+        "opportunity → deal"
+      ],
+      "ranked": [
+        {
+          "id": "deal-mark-won",
+          "score": 25.856,
+          "coverage": 1
+        },
+        {
+          "id": "deal-reopen",
+          "score": 20.56,
+          "coverage": 1
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 7.976,
+          "coverage": 0.547
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 7.81,
+          "coverage": 0.571
+        },
+        {
+          "id": "deal-create",
+          "score": 6.828,
+          "coverage": 0.345
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-mark-won\" covers 100% of the query and leads the next article by 20%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-mark-won"
+      ],
+      "citations": [
+        "deal-mark-won"
+      ],
+      "contextIds": [
+        "deal-mark-won",
+        "deal-reopen"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.15489499999998202,
+      "tokens": {
+        "inputTokens": 455,
+        "outputTokens": 59,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003,
+        "claude-sonnet-5-5": 0.0015,
+        "claude-haiku-4-5": 0.00075
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-19",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "move a deal to the next stage of the pipeline",
+      "expect": {
+        "type": "answer",
+        "article": "deal-change-stage"
+      },
+      "rewritten": "move deal next stage",
+      "trace": [
+        "stage → stage",
+        "pipeline → stage"
+      ],
+      "ranked": [
+        {
+          "id": "deal-change-stage",
+          "score": 26.791,
+          "coverage": 0.644
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 8.729,
+          "coverage": 0.371
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 7.933,
+          "coverage": 0.371
+        },
+        {
+          "id": "deal-create",
+          "score": 7.057,
+          "coverage": 0.214
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 6.162,
+          "coverage": 0.214
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-change-stage\" covers 64% of the query and leads the next article by 67%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-change-stage"
+      ],
+      "citations": [
+        "deal-change-stage"
+      ],
+      "contextIds": [
+        "deal-change-stage"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.17559300000002054,
+      "tokens": {
+        "inputTokens": 450,
+        "outputTokens": 111,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.00402,
+        "claude-sonnet-5-5": 0.00201,
+        "claude-haiku-4-5": 0.001005
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-20",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "I marked a deal as won by mistake",
+      "expect": {
+        "type": "answer",
+        "article": "deal-reopen"
+      },
+      "rewritten": "mark deal won reopen",
+      "trace": [
+        "by mistake → undo",
+        "undo → reopen"
+      ],
+      "ranked": [
+        {
+          "id": "deal-reopen",
+          "score": 34.495,
+          "coverage": 1
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 28.778,
+          "coverage": 0.826
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 13.802,
+          "coverage": 0.519
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 8.243,
+          "coverage": 0.374
+        },
+        {
+          "id": "deal-delete",
+          "score": 6.842,
+          "coverage": 0.221
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-reopen\" covers 100% of the query and leads the next article by 17%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-reopen"
+      ],
+      "citations": [
+        "deal-reopen"
+      ],
+      "contextIds": [
+        "deal-reopen",
+        "deal-mark-won"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.20047299999998813,
+      "tokens": {
+        "inputTokens": 457,
+        "outputTokens": 58,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.002988,
+        "claude-sonnet-5-5": 0.001494,
+        "claude-haiku-4-5": 0.000747
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-21",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "change the amount on a deal",
+      "expect": {
+        "type": "answer",
+        "article": "deal-edit-value"
+      },
+      "rewritten": "edit value deal",
+      "trace": [
+        "change → edit",
+        "amount → value"
+      ],
+      "ranked": [
+        {
+          "id": "deal-edit-value",
+          "score": 19.638,
+          "coverage": 1
+        },
+        {
+          "id": "account-currency",
+          "score": 13.156,
+          "coverage": 1
+        },
+        {
+          "id": "deal-create",
+          "score": 7.057,
+          "coverage": 0.512
+        },
+        {
+          "id": "custom-field-fill",
+          "score": 7.037,
+          "coverage": 0.882
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 6.576,
+          "coverage": 0.512
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "\"account-currency\" scores 67% of \"deal-edit-value\", and the two are marked as easy to confuse.",
+      "outcome": "clarify",
+      "options": [
+        "deal-edit-value",
+        "account-currency"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.5192940000000021,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": false,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-22",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "can I drag deals between columns",
+      "expect": {
+        "type": "answer",
+        "article": "deal-change-stage"
+      },
+      "rewritten": "drag deal between stage",
+      "trace": [
+        "columns → stage"
+      ],
+      "ranked": [
+        {
+          "id": "deal-change-stage",
+          "score": 24.309,
+          "coverage": 0.624
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 7.501,
+          "coverage": 0.413
+        },
+        {
+          "id": "deal-create",
+          "score": 7.057,
+          "coverage": 0.162
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 6.486,
+          "coverage": 0.162
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 6.162,
+          "coverage": 0.162
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-change-stage\" covers 62% of the query and leads the next article by 69%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-change-stage"
+      ],
+      "citations": [
+        "deal-change-stage"
+      ],
+      "contextIds": [
+        "deal-change-stage"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.12075999999998999,
+      "tokens": {
+        "inputTokens": 447,
+        "outputTokens": 111,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004008,
+        "claude-sonnet-5-5": 0.002004,
+        "claude-haiku-4-5": 0.001002
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-23",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "get rid of a deal",
+      "expect": {
+        "type": "answer",
+        "article": "deal-delete"
+      },
+      "rewritten": "delete deal",
+      "trace": [
+        "get rid of → delete",
+        "delete → delete"
+      ],
+      "ranked": [
+        {
+          "id": "deal-delete",
+          "score": 19.486,
+          "coverage": 1
+        },
+        {
+          "id": "contact-delete",
+          "score": 15.494,
+          "coverage": 0.87
+        },
+        {
+          "id": "company-delete",
+          "score": 14.997,
+          "coverage": 0.87
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 13.397,
+          "coverage": 0.739
+        },
+        {
+          "id": "deal-create",
+          "score": 5.22,
+          "coverage": 0.261
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-delete\" covers 100% of the query and leads the next article by 20%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-delete"
+      ],
+      "citations": [
+        "deal-delete"
+      ],
+      "contextIds": [
+        "deal-delete",
+        "contact-delete",
+        "company-delete"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.06820099999998774,
+      "tokens": {
+        "inputTokens": 567,
+        "outputTokens": 74,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003748,
+        "claude-sonnet-5-5": 0.001874,
+        "claude-haiku-4-5": 0.000937
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-24",
+      "split": "dev",
+      "tags": [
+        "synonym"
+      ],
+      "query": "add an extra field to contacts",
+      "expect": {
+        "type": "answer",
+        "article": "custom-field-create"
+      },
+      "rewritten": "create customfield field contact",
+      "trace": [
+        "extra field → customfield field",
+        "add → create"
+      ],
+      "ranked": [
+        {
+          "id": "custom-field-create",
+          "score": 25.74,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-edit",
+          "score": 19.281,
+          "coverage": 0.887
+        },
+        {
+          "id": "custom-field-fill",
+          "score": 18.966,
+          "coverage": 0.749
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 18.345,
+          "coverage": 0.637
+        },
+        {
+          "id": "contact-create",
+          "score": 13.004,
+          "coverage": 0.5
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"custom-field-create\" covers 100% of the query and leads the next article by 25%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "custom-field-create"
+      ],
+      "citations": [
+        "custom-field-create"
+      ],
+      "contextIds": [
+        "custom-field-create",
+        "custom-field-edit",
+        "custom-field-fill"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.148539999999997,
+      "tokens": {
+        "inputTokens": 722,
+        "outputTokens": 146,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.005808,
+        "claude-sonnet-5-5": 0.002904,
+        "claude-haiku-4-5": 0.001452
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-25",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "add another option to a dropdown field",
+      "expect": {
+        "type": "answer",
+        "article": "custom-field-edit"
+      },
+      "rewritten": "create option dropdown field",
+      "trace": [
+        "add → create"
+      ],
+      "ranked": [
+        {
+          "id": "custom-field-edit",
+          "score": 31.214,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-create",
+          "score": 20.274,
+          "coverage": 0.644
+        },
+        {
+          "id": "company-create",
+          "score": 9.356,
+          "coverage": 0.213
+        },
+        {
+          "id": "contact-create",
+          "score": 9.277,
+          "coverage": 0.213
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 8.29,
+          "coverage": 0.15
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"custom-field-edit\" covers 100% of the query and leads the next article by 35%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "custom-field-edit"
+      ],
+      "citations": [
+        "custom-field-edit"
+      ],
+      "contextIds": [
+        "custom-field-edit",
+        "custom-field-create"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.10259700000000294,
+      "tokens": {
+        "inputTokens": 589,
+        "outputTokens": 97,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004296,
+        "claude-sonnet-5-5": 0.002148,
+        "claude-haiku-4-5": 0.001074
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-26",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "delete a custom field",
+      "expect": {
+        "type": "answer",
+        "article": "custom-field-delete"
+      },
+      "rewritten": "delete customfield field",
+      "trace": [
+        "custom field → customfield field",
+        "delete → delete"
+      ],
+      "ranked": [
+        {
+          "id": "custom-field-delete",
+          "score": 31.741,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-create",
+          "score": 18.193,
+          "coverage": 0.589
+        },
+        {
+          "id": "custom-field-edit",
+          "score": 17.704,
+          "coverage": 0.795
+        },
+        {
+          "id": "custom-field-fill",
+          "score": 17.58,
+          "coverage": 0.589
+        },
+        {
+          "id": "contact-delete",
+          "score": 14.845,
+          "coverage": 0.411
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"custom-field-delete\" covers 100% of the query and leads the next article by 43%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "custom-field-delete"
+      ],
+      "citations": [
+        "custom-field-delete"
+      ],
+      "contextIds": [
+        "custom-field-delete",
+        "custom-field-create",
+        "custom-field-edit"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.08105500000002053,
+      "tokens": {
+        "inputTokens": 662,
+        "outputTokens": 71,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004068,
+        "claude-sonnet-5-5": 0.002034,
+        "claude-haiku-4-5": 0.001017
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-27",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "where do I enter the lead source on a deal",
+      "expect": {
+        "type": "answer",
+        "article": "custom-field-fill"
+      },
+      "rewritten": "enter lead sourc deal",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "custom-field-fill",
+          "score": 7.985,
+          "coverage": 0.596
+        },
+        {
+          "id": "deal-create",
+          "score": 6.415,
+          "coverage": 0.188
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 6.026,
+          "coverage": 0.188
+        },
+        {
+          "id": "contact-change-status",
+          "score": 5.589,
+          "coverage": 0.305
+        },
+        {
+          "id": "deal-delete",
+          "score": 5.125,
+          "coverage": 0.091
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"custom-field-fill\" covers 60% of the query and leads the next article by 20%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "custom-field-fill"
+      ],
+      "citations": [
+        "custom-field-fill"
+      ],
+      "contextIds": [
+        "custom-field-fill"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.10641999999998575,
+      "tokens": {
+        "inputTokens": 465,
+        "outputTokens": 125,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.00436,
+        "claude-sonnet-5-5": 0.00218,
+        "claude-haiku-4-5": 0.00109
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-28",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "change our business name",
+      "expect": {
+        "type": "answer",
+        "article": "account-business-name"
+      },
+      "rewritten": "edit businessname name",
+      "trace": [
+        "our business name → businessname name",
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "account-business-name",
+          "score": 36.205,
+          "coverage": 1
+        },
+        {
+          "id": "company-edit-details",
+          "score": 5.309,
+          "coverage": 0.25
+        },
+        {
+          "id": "account-billing-email",
+          "score": 4.229,
+          "coverage": 0.11
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.098,
+          "coverage": 0.11
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 4.089,
+          "coverage": 0.11
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"account-business-name\" covers 100% of the query and leads the next article by 85%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "account-business-name"
+      ],
+      "citations": [
+        "account-business-name"
+      ],
+      "contextIds": [
+        "account-business-name"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.08504399999998213,
+      "tokens": {
+        "inputTokens": 412,
+        "outputTokens": 78,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003208,
+        "claude-sonnet-5-5": 0.001604,
+        "claude-haiku-4-5": 0.000802
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-29",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "switch the currency to US dollars",
+      "expect": {
+        "type": "answer",
+        "article": "account-currency"
+      },
+      "rewritten": "switch currency",
+      "trace": [
+        "dollars → currency"
+      ],
+      "ranked": [
+        {
+          "id": "account-currency",
+          "score": 22.595,
+          "coverage": 1
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 2.334,
+          "coverage": 0.209
+        },
+        {
+          "id": "deal-create",
+          "score": 2.036,
+          "coverage": 0.209
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"account-currency\" covers 100% of the query and leads the next article by 90%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "account-currency"
+      ],
+      "citations": [
+        "account-currency"
+      ],
+      "contextIds": [
+        "account-currency"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.06884399999998436,
+      "tokens": {
+        "inputTokens": 417,
+        "outputTokens": 78,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003228,
+        "claude-sonnet-5-5": 0.001614,
+        "claude-haiku-4-5": 0.000807
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-30",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "update the billing email address",
+      "expect": {
+        "type": "answer",
+        "article": "account-billing-email"
+      },
+      "rewritten": "edit billingemail email",
+      "trace": [
+        "billing email address → billingemail email",
+        "update → edit"
+      ],
+      "ranked": [
+        {
+          "id": "account-billing-email",
+          "score": 36.417,
+          "coverage": 1
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 17.293,
+          "coverage": 0.427
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.098,
+          "coverage": 0.103
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 4.01,
+          "coverage": 0.103
+        },
+        {
+          "id": "account-business-name",
+          "score": 3.965,
+          "coverage": 0.103
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"account-billing-email\" covers 100% of the query and leads the next article by 53%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "account-billing-email"
+      ],
+      "citations": [
+        "account-billing-email"
+      ],
+      "contextIds": [
+        "account-billing-email"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.0861900000000162,
+      "tokens": {
+        "inputTokens": 423,
+        "outputTokens": 88,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003452,
+        "claude-sonnet-5-5": 0.001726,
+        "claude-haiku-4-5": 0.000863
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-31",
+      "split": "dev",
+      "tags": [
+        "paraphrase",
+        "terminology"
+      ],
+      "query": "what number does support use to call us",
+      "expect": {
+        "type": "answer",
+        "article": "account-client-contact-number"
+      },
+      "rewritten": "number support call",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-client-contact-number",
+          "score": 22.315,
+          "coverage": 1
+        },
+        {
+          "id": "contact-add-note",
+          "score": 5.273,
+          "coverage": 0.382
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 4.473,
+          "coverage": 0.235
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 2.115,
+          "coverage": 0.191
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 1.662,
+          "coverage": 0.118
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"account-client-contact-number\" covers 100% of the query and leads the next article by 76%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "account-client-contact-number"
+      ],
+      "citations": [
+        "account-client-contact-number"
+      ],
+      "contextIds": [
+        "account-client-contact-number"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.07684500000002004,
+      "tokens": {
+        "inputTokens": 464,
+        "outputTokens": 123,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004316,
+        "claude-sonnet-5-5": 0.002158,
+        "claude-haiku-4-5": 0.001079
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-32",
+      "split": "dev",
+      "tags": [
+        "paraphrase",
+        "terminology"
+      ],
+      "query": "what's the difference between a client and a contact",
+      "expect": {
+        "type": "answer",
+        "article": "glossary-clients-contacts"
+      },
+      "rewritten": "differenc between contact",
+      "trace": [
+        "client → contact"
+      ],
+      "ranked": [
+        {
+          "id": "glossary-clients-contacts",
+          "score": 17.684,
+          "coverage": 1
+        },
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.067
+        },
+        {
+          "id": "contact-create",
+          "score": 3.727,
+          "coverage": 0.067
+        },
+        {
+          "id": "contact-search",
+          "score": 3.663,
+          "coverage": 0.067
+        },
+        {
+          "id": "contact-change-status",
+          "score": 3.53,
+          "coverage": 0.067
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"glossary-clients-contacts\" covers 100% of the query and leads the next article by 79%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "glossary-clients-contacts"
+      ],
+      "citations": [
+        "glossary-clients-contacts"
+      ],
+      "contextIds": [
+        "glossary-clients-contacts"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.08443400000001589,
+      "tokens": {
+        "inputTokens": 488,
+        "outputTokens": 140,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.004752,
+        "claude-sonnet-5-5": 0.002376,
+        "claude-haiku-4-5": 0.001188
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "dev-33",
+      "split": "dev",
+      "tags": [
+        "paraphrase"
+      ],
+      "query": "my changes disappeared after I refreshed the page",
+      "expect": {
+        "type": "answer",
+        "article": "demo-data-reset"
+      },
+      "rewritten": "edit disappear reload page",
+      "trace": [
+        "changes → edit",
+        "refreshed → reload"
+      ],
+      "ranked": [
+        {
+          "id": "demo-data-reset",
+          "score": 35.62,
+          "coverage": 0.887
+        },
+        {
+          "id": "account-business-name",
+          "score": 5.994,
+          "coverage": 0.177
+        },
+        {
+          "id": "account-billing-email",
+          "score": 4.229,
+          "coverage": 0.064
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.098,
+          "coverage": 0.064
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 4.089,
+          "coverage": 0.064
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"demo-data-reset\" covers 89% of the query and leads the next article by 83%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "demo-data-reset"
+      ],
+      "citations": [
+        "demo-data-reset"
+      ],
+      "contextIds": [
+        "demo-data-reset"
+      ],
+      "guardrail": null,
+      "retrievalMs": 0.13885799999999904,
+      "tokens": {
+        "inputTokens": 421,
+        "outputTokens": 78,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.003244,
+        "claude-sonnet-5-5": 0.001622,
+        "claude-haiku-4-5": 0.000811
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "amb-01",
+      "split": "dev",
+      "tags": [
+        "ambiguity"
+      ],
+      "query": "How do I change the phone number?",
+      "expect": {
+        "type": "clarify",
+        "mustInclude": [
+          "contact-edit-phone",
+          "company-edit-details"
+        ]
+      },
+      "rewritten": "edit phone",
+      "trace": [
+        "phone number → phone",
+        "change → edit",
+        "phone → phone"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-phone",
+          "score": 14.325,
+          "coverage": 1
+        },
+        {
+          "id": "company-edit-details",
+          "score": 11.754,
+          "coverage": 1
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 5.58,
+          "coverage": 0.64
+        },
+        {
+          "id": "account-billing-email",
+          "score": 4.229,
+          "coverage": 0.28
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.098,
+          "coverage": 0.28
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "\"company-edit-details\" scores 82% of \"contact-edit-phone\", and the two are marked as easy to confuse.",
+      "outcome": "clarify",
+      "options": [
+        "contact-edit-phone",
+        "company-edit-details"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.09520800000001373,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "amb-02",
+      "split": "dev",
+      "tags": [
+        "ambiguity"
+      ],
+      "query": "change email address",
+      "expect": {
+        "type": "clarify",
+        "mustInclude": [
+          "contact-edit-email",
+          "account-billing-email"
+        ]
+      },
+      "rewritten": "edit email",
+      "trace": [
+        "email address → email",
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "contact-edit-email",
+          "score": 17.293,
+          "coverage": 1
+        },
+        {
+          "id": "account-billing-email",
+          "score": 16.881,
+          "coverage": 1
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.098,
+          "coverage": 0.241
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 4.01,
+          "coverage": 0.241
+        },
+        {
+          "id": "account-business-name",
+          "score": 3.965,
+          "coverage": 0.241
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "\"account-billing-email\" scores 98% of \"contact-edit-email\", and the two are marked as easy to confuse.",
+      "outcome": "clarify",
+      "options": [
+        "contact-edit-email",
+        "account-billing-email"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.07662600000000452,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "amb-03",
+      "split": "dev",
+      "tags": [
+        "ambiguity"
+      ],
+      "query": "how do I close a deal",
+      "expect": {
+        "type": "clarify",
+        "mustInclude": [
+          "deal-mark-won",
+          "deal-mark-lost"
+        ]
+      },
+      "rewritten": "clos deal",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "deal-mark-won",
+          "score": 11.71,
+          "coverage": 1
+        },
+        {
+          "id": "deal-reopen",
+          "score": 9.353,
+          "coverage": 1
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 7.976,
+          "coverage": 1
+        },
+        {
+          "id": "deal-create",
+          "score": 6.828,
+          "coverage": 0.63
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 6.196,
+          "coverage": 0.63
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "\"deal-mark-lost\" scores 68% of \"deal-mark-won\", and the two are marked as easy to confuse.",
+      "outcome": "clarify",
+      "options": [
+        "deal-mark-won",
+        "deal-mark-lost"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.3971670000000245,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "amb-04",
+      "split": "dev",
+      "tags": [
+        "ambiguity"
+      ],
+      "query": "delete",
+      "expect": {
+        "type": "clarify",
+        "mustInclude": [],
+        "allowed": [
+          "contact-delete",
+          "company-delete",
+          "deal-delete",
+          "custom-field-delete"
+        ]
+      },
+      "rewritten": "delete",
+      "trace": [
+        "delete → delete"
+      ],
+      "ranked": [
+        {
+          "id": "contact-delete",
+          "score": 14.845,
+          "coverage": 1
+        },
+        {
+          "id": "deal-delete",
+          "score": 14.361,
+          "coverage": 1
+        },
+        {
+          "id": "company-delete",
+          "score": 14.337,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-delete",
+          "score": 13.397,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-edit",
+          "score": 1.73,
+          "coverage": 0.5
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "The question names an action (\"delete\") but not what it applies to.",
+      "outcome": "clarify",
+      "options": [
+        "contact-delete",
+        "deal-delete",
+        "company-delete"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.11125299999997651,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "amb-05",
+      "split": "dev",
+      "tags": [
+        "ambiguity"
+      ],
+      "query": "rename",
+      "expect": {
+        "type": "clarify",
+        "mustInclude": [],
+        "allowed": [
+          "company-edit-details",
+          "account-business-name",
+          "custom-field-edit"
+        ]
+      },
+      "rewritten": "renam",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-business-name",
+          "score": 6.856,
+          "coverage": 1
+        },
+        {
+          "id": "custom-field-edit",
+          "score": 5.186,
+          "coverage": 1
+        },
+        {
+          "id": "company-edit-details",
+          "score": 4,
+          "coverage": 1
+        }
+      ],
+      "decision": "clarify",
+      "decisionReason": "The question names an action (\"renam\") but not what it applies to.",
+      "outcome": "clarify",
+      "options": [
+        "account-business-name",
+        "custom-field-edit",
+        "company-edit-details"
+      ],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.03716500000001588,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-01",
+      "split": "dev",
+      "tags": [
+        "out-of-scope",
+        "near-miss"
+      ],
+      "query": "Can I import contacts from a spreadsheet?",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "import contact csv",
+      "trace": [
+        "spreadsheet → csv"
+      ],
+      "ranked": [
+        {
+          "id": "contact-export",
+          "score": 22.055,
+          "coverage": 0.534
+        },
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.067
+        },
+        {
+          "id": "contact-create",
+          "score": 3.727,
+          "coverage": 0.067
+        },
+        {
+          "id": "contact-search",
+          "score": 3.663,
+          "coverage": 0.067
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 3.661,
+          "coverage": 0.067
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"contact-export\" covers 53% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.3472769999999912,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-02",
+      "split": "dev",
+      "tags": [
+        "out-of-scope"
+      ],
+      "query": "reset my password",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "reload password",
+      "trace": [
+        "reset → reload"
+      ],
+      "ranked": [
+        {
+          "id": "demo-data-reset",
+          "score": 21.733,
+          "coverage": 0.5
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"demo-data-reset\" covers 50% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.25795400000001223,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-03",
+      "split": "dev",
+      "tags": [
+        "out-of-scope"
+      ],
+      "query": "does Harbour CRM integrate with Xero?",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "harbour crm integrat xero",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-client-contact-number",
+          "score": 7.93,
+          "coverage": 0.5
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 4.31,
+          "coverage": 0.25
+        },
+        {
+          "id": "account-business-name",
+          "score": 3.836,
+          "coverage": 0.25
+        },
+        {
+          "id": "account-billing-email",
+          "score": 3.27,
+          "coverage": 0.25
+        },
+        {
+          "id": "demo-data-reset",
+          "score": 3.218,
+          "coverage": 0.25
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"account-client-contact-number\" covers 50% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.5593609999999956,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-04",
+      "split": "dev",
+      "tags": [
+        "out-of-scope",
+        "near-miss"
+      ],
+      "query": "send a bulk email campaign to all my contacts",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "send bulk email campaign contact",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-billing-email",
+          "score": 16.473,
+          "coverage": 0.307
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 16.389,
+          "coverage": 0.191
+        },
+        {
+          "id": "contact-search",
+          "score": 5.506,
+          "coverage": 0.115
+        },
+        {
+          "id": "contact-create",
+          "score": 5.29,
+          "coverage": 0.115
+        },
+        {
+          "id": "contact-export",
+          "score": 4.922,
+          "coverage": 0.115
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"account-billing-email\" covers 31% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.8148949999999786,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-05",
+      "split": "dev",
+      "tags": [
+        "out-of-scope"
+      ],
+      "query": "what's the weather in Sydney",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "weather sydney",
+      "trace": [],
+      "ranked": [],
+      "decision": "escalate",
+      "decisionReason": "No article contains any of the query terms.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.56727699999999,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-06",
+      "split": "dev",
+      "tags": [
+        "out-of-scope",
+        "near-miss"
+      ],
+      "query": "merge two duplicate contacts",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "merg two duplicat contact",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "contact-delete",
+          "score": 3.792,
+          "coverage": 0.25
+        },
+        {
+          "id": "contact-create",
+          "score": 3.727,
+          "coverage": 0.25
+        },
+        {
+          "id": "contact-search",
+          "score": 3.663,
+          "coverage": 0.25
+        },
+        {
+          "id": "glossary-clients-contacts",
+          "score": 3.661,
+          "coverage": 0.25
+        },
+        {
+          "id": "contact-change-status",
+          "score": 3.53,
+          "coverage": 0.25
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"contact-delete\" covers 25% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.7620359999999948,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-07",
+      "split": "dev",
+      "tags": [
+        "out-of-scope"
+      ],
+      "query": "how much does the pro plan cost",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "value pro plan lost",
+      "trace": [
+        "how much → value",
+        "value → value",
+        "cost → lost"
+      ],
+      "ranked": [
+        {
+          "id": "deal-mark-lost",
+          "score": 14.975,
+          "coverage": 0.369
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 10.884,
+          "coverage": 0.214
+        },
+        {
+          "id": "deal-reopen",
+          "score": 10.625,
+          "coverage": 0.262
+        },
+        {
+          "id": "account-currency",
+          "score": 7.747,
+          "coverage": 0.214
+        },
+        {
+          "id": "custom-field-fill",
+          "score": 4.691,
+          "coverage": 0.214
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"deal-mark-lost\" covers 37% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.5141859999999951,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-08",
+      "split": "dev",
+      "tags": [
+        "out-of-scope",
+        "near-miss"
+      ],
+      "query": "set up two-factor authentication",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "create two factor authentication",
+      "trace": [
+        "set up → create",
+        "create → create"
+      ],
+      "ranked": [
+        {
+          "id": "contact-create",
+          "score": 8.31,
+          "coverage": 0.25
+        },
+        {
+          "id": "company-create",
+          "score": 8.251,
+          "coverage": 0.25
+        },
+        {
+          "id": "deal-create",
+          "score": 7.949,
+          "coverage": 0.25
+        },
+        {
+          "id": "custom-field-create",
+          "score": 6.465,
+          "coverage": 0.25
+        },
+        {
+          "id": "contact-add-note",
+          "score": 4.355,
+          "coverage": 0.25
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"contact-create\" covers 25% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.3389750000000049,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-09",
+      "split": "dev",
+      "tags": [
+        "out-of-scope",
+        "near-miss"
+      ],
+      "query": "invite a colleague to our account",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "invit colleagu account",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-business-name",
+          "score": 4.937,
+          "coverage": 0.333
+        },
+        {
+          "id": "account-billing-email",
+          "score": 4.806,
+          "coverage": 0.333
+        },
+        {
+          "id": "account-client-contact-number",
+          "score": 2.101,
+          "coverage": 0.167
+        },
+        {
+          "id": "account-currency",
+          "score": 1.973,
+          "coverage": 0.167
+        },
+        {
+          "id": "deal-create",
+          "score": 1.314,
+          "coverage": 0.167
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"account-business-name\" covers 33% of the query, below the 55% threshold.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.767959999999988,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    },
+    {
+      "id": "oos-10",
+      "split": "dev",
+      "tags": [
+        "out-of-scope"
+      ],
+      "query": "hello",
+      "expect": {
+        "type": "escalate"
+      },
+      "rewritten": "",
+      "trace": [],
+      "ranked": [],
+      "decision": "escalate",
+      "decisionReason": "The question has no searchable terms.",
+      "outcome": "escalate",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "guardrail": null,
+      "retrievalMs": 0.020931000000018685,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false
+    }
+  ]
+}
