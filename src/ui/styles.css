@@ -155,6 +155,9 @@ td.num:not(:last-child) { text-align: left; }
 .field .static { margin: 0; color: var(--ink-soft); }
 .req { color: var(--lost); }
 .hint { font-size: 0.8rem; color: var(--ink-faint); }
+.key-warning { border: 1px solid var(--clarify); border-left-width: 4px; background: var(--clarify-soft); border-radius: 8px; padding: 10px 12px; font-size: 0.8rem; line-height: 1.45; }
+.key-warning p { margin: 0 0 4px; }
+.key-warning ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 .error { font-size: 0.82rem; color: var(--lost); font-weight: 600; }
 .error:empty { display: none; }
 .field.invalid input, .field.invalid select { border-color: var(--lost); }

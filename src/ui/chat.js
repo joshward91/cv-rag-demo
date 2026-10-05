@@ -119,7 +119,15 @@ export class ChatWidget {
         )}
       </fieldset>
       ${this.mode === 'api'
-        ? html`<div class="field"><label for="api-key">Anthropic API key</label><input id="api-key" type="password" autocomplete="off" value="${this.apiKey}" placeholder="sk-ant-..." /></div>
+        ? html`<div class="field"><label for="api-key">Anthropic API key</label><input id="api-key" type="password" autocomplete="off" value="${this.apiKey}" placeholder="sk-ant-..." aria-describedby="api-key-warning" /></div>
+          <div class="key-warning" id="api-key-warning" role="note">
+            <p><strong>Before you paste a key</strong></p>
+            <ul>
+              <li><strong>Never stored.</strong> The key is kept only in this tab’s memory. It isn’t saved to browser storage, cookies or the URL, and reloading or closing the tab erases it.</li>
+              <li><strong>Sent only to Anthropic.</strong> Your browser sends it straight to api.anthropic.com over HTTPS. This site has no server, and the key never appears in the prompt panel.</li>
+              <li><strong>Your own device can still see it.</strong> Browser extensions and developer tools on this computer can read anything typed into a page. Use a key with a spending limit, and delete it when you’re done.</li>
+            </ul>
+          </div>
           <div class="field"><label for="api-model">Model</label><select id="api-model">${Object.entries(MODELS).map(([id, m]) => html`<option value="${id}" ${id === this.model ? raw('selected') : ''}>${m.label} ($${m.input} / $${m.output} per MTok)</option>`)}</select></div>`
         : ''}
       ${this.inArtifact && !this.sample ? html`<p class="hint">Claude modes need the demo to be opened from claude.ai, or run locally with an API key.</p>` : ''}
