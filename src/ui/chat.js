@@ -90,7 +90,7 @@ export class ChatWidget {
             <input id="chat-question" name="q" autocomplete="off" placeholder="Ask how to do something in Harbour CRM" ${this.busy ? raw('disabled') : ''} />
             <button type="submit" class="btn primary" ${this.busy ? raw('disabled') : ''}>Ask</button>
           </form>
-          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''}</p>
+          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''} · <button type="button" class="link-button" data-chat="settings">Change</button></p>
           ${this.drawerArticle ? this.#drawer() : ''}
         </section>
       `,
@@ -142,6 +142,10 @@ export class ChatWidget {
     } else if (outcome.type === 'clarify') {
       body = html`<p>${outcome.question}</p>
         <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>`;
+    } else if (outcome.type === 'assistant') {
+      body = html`<p>I answer questions about Harbour CRM using its help centre, so I can’t change my own settings from a message. You can change how I write answers in <strong>Answer mode</strong>:</p>
+        <ul><li><strong>Offline</strong> answers with the help article’s own steps. It’s free and needs no key.</li><li><strong>Claude</strong> writes the answer with a model, from the same articles.</li></ul>
+        <button type="button" class="btn small" data-chat="settings">Open answer mode</button>`;
     } else {
       body = html`<p>I couldn’t find a help article that answers this, so I won’t guess.${m.result.guardrail?.action === 'withheld' ? ' I drafted an answer but couldn’t match it to a source, so I held it back.' : ''}</p>
         <button type="button" class="btn small" data-support="${index}">Contact support</button>`;

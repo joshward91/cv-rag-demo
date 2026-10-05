@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T22:56:17.724Z",
+  "generatedAt": "2026-10-05T23:03:07.902Z",
   "mode": {
     "generator": "extractive",
     "model": null,
@@ -39,25 +39,25 @@
   },
   "summary": {
     "all": {
-      "cases": 151,
-      "passed": 142,
-      "passRate": 0.9403973509933775,
+      "cases": 155,
+      "passed": 146,
+      "passRate": 0.9419354838709677,
       "retrieval": {
-        "cases": 113,
-        "hitAt1": 0.9823008849557522,
-        "hitAt3": 0.9823008849557522
+        "cases": 114,
+        "hitAt1": 0.9824561403508771,
+        "hitAt3": 0.9824561403508771
       },
       "citations": {
-        "answers": 111,
+        "answers": 112,
         "validity": 1,
-        "correctness": 0.9907407407407407,
+        "correctness": 0.9908256880733946,
         "guardrailInterventions": 0
       },
       "refusal": {
         "cases": 26,
         "recall": 0.9615384615384616,
         "precision": 0.8333333333333334,
-        "falseRefusalRate": 0.04424778761061947
+        "falseRefusalRate": 0.043859649122807015
       },
       "clarify": {
         "cases": 12,
@@ -65,8 +65,8 @@
         "unnecessaryRate": 0
       },
       "answers": {
-        "cases": 113,
-        "accuracy": 0.9469026548672567
+        "cases": 114,
+        "accuracy": 0.9473684210526315
       },
       "core": {
         "total": 17,
@@ -78,37 +78,41 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.0027654039735099333,
-          "perModelCall": 0.0037619459459459453,
-          "total": 0.41757599999999995
+          "perQuestion": 0.0027285935483870975,
+          "perModelCall": 0.0037761785714285723,
+          "total": 0.4229320000000001
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0013827019867549667,
-          "perModelCall": 0.0018809729729729727,
-          "total": 0.20878799999999997
+          "perQuestion": 0.0013642967741935488,
+          "perModelCall": 0.0018880892857142861,
+          "total": 0.21146600000000004
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0006913509933774833,
-          "perModelCall": 0.0009404864864864863,
-          "total": 0.10439399999999999
+          "perQuestion": 0.0006821483870967744,
+          "perModelCall": 0.0009440446428571431,
+          "total": 0.10573300000000002
         }
       },
       "latencyMs": {
-        "p50": 0.09807100000000446,
-        "p95": 0.8388530000000003
+        "p50": 0.109209000000007,
+        "p95": 0.8129009999999965
       },
       "byTag": {
         "ambiguity": {
           "cases": 12,
           "passed": 10
         },
+        "assistant": {
+          "cases": 4,
+          "passed": 4
+        },
         "core": {
           "cases": 17,
           "passed": 15
         },
         "near-miss": {
-          "cases": 13,
-          "passed": 12
+          "cases": 14,
+          "passed": 13
         },
         "out-of-scope": {
           "cases": 26,
@@ -137,16 +141,16 @@
       }
     },
     "dev": {
-      "cases": 52,
-      "passed": 52,
+      "cases": 56,
+      "passed": 56,
       "passRate": 1,
       "retrieval": {
-        "cases": 37,
+        "cases": 38,
         "hitAt1": 1,
         "hitAt3": 1
       },
       "citations": {
-        "answers": 37,
+        "answers": 38,
         "validity": 1,
         "correctness": 1,
         "guardrailInterventions": 0
@@ -163,7 +167,7 @@
         "unnecessaryRate": 0
       },
       "answers": {
-        "cases": 37,
+        "cases": 38,
         "accuracy": 1
       },
       "core": {
@@ -176,37 +180,41 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.0026778461538461535,
-          "perModelCall": 0.003763459459459459,
-          "total": 0.13924799999999998
+          "perQuestion": 0.0025651428571428565,
+          "perModelCall": 0.0037802105263157887,
+          "total": 0.14364799999999997
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0013389230769230767,
-          "perModelCall": 0.0018817297297297295,
-          "total": 0.06962399999999999
+          "perQuestion": 0.0012825714285714283,
+          "perModelCall": 0.0018901052631578943,
+          "total": 0.07182399999999999
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0006694615384615384,
-          "perModelCall": 0.0009408648648648648,
-          "total": 0.034811999999999996
+          "perQuestion": 0.0006412857142857141,
+          "perModelCall": 0.0009450526315789472,
+          "total": 0.03591199999999999
         }
       },
       "latencyMs": {
-        "p50": 0.1474759999999975,
-        "p95": 2.2899519999999995
+        "p50": 0.18003699999999867,
+        "p95": 2.207599000000002
       },
       "byTag": {
         "ambiguity": {
           "cases": 5,
           "passed": 5
         },
+        "assistant": {
+          "cases": 4,
+          "passed": 4
+        },
         "core": {
           "cases": 4,
           "passed": 4
         },
         "near-miss": {
-          "cases": 5,
-          "passed": 5
+          "cases": 6,
+          "passed": 6
         },
         "out-of-scope": {
           "cases": 10,
@@ -270,24 +278,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.0029302857142857143,
-          "perModelCall": 0.0037785263157894735,
-          "total": 0.143584
+          "perQuestion": 0.00294,
+          "perModelCall": 0.003791052631578947,
+          "total": 0.14406
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0014651428571428571,
-          "perModelCall": 0.0018892631578947367,
-          "total": 0.071792
+          "perQuestion": 0.00147,
+          "perModelCall": 0.0018955263157894736,
+          "total": 0.07203
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0007325714285714286,
-          "perModelCall": 0.0009446315789473684,
-          "total": 0.035896
+          "perQuestion": 0.000735,
+          "perModelCall": 0.0009477631578947368,
+          "total": 0.036015
         }
       },
       "latencyMs": {
-        "p50": 0.06418000000000745,
-        "p95": 0.8388530000000003
+        "p50": 0.07130300000000034,
+        "p95": 0.8045879999999954
       },
       "byTag": {
         "ambiguity": {
@@ -380,8 +388,8 @@
         }
       },
       "latencyMs": {
-        "p50": 0.06167899999999804,
-        "p95": 0.8352879999999914
+        "p50": 0.06085199999999702,
+        "p95": 0.7568409999999943
       },
       "byTag": {
         "ambiguity": {
@@ -458,24 +466,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.003665,
-          "perModelCall": 0.003665,
-          "total": 0.04398
+          "perQuestion": 0.003705,
+          "perModelCall": 0.003705,
+          "total": 0.04446
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0018325,
-          "perModelCall": 0.0018325,
-          "total": 0.02199
+          "perQuestion": 0.0018525,
+          "perModelCall": 0.0018525,
+          "total": 0.02223
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.00091625,
-          "perModelCall": 0.00091625,
-          "total": 0.010995
+          "perQuestion": 0.00092625,
+          "perModelCall": 0.00092625,
+          "total": 0.011115
         }
       },
       "latencyMs": {
-        "p50": 0.05769300000000044,
-        "p95": 0.5681199999999933
+        "p50": 0.06697900000000345,
+        "p95": 0.2899280000000033
       },
       "byTag": {
         "core": {
@@ -561,7 +569,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 7.967787000000001,
+      "retrievalMs": 8.667099000000007,
       "tokens": {
         "inputTokens": 493,
         "outputTokens": 99,
@@ -643,7 +651,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.7164379999999966,
+      "retrievalMs": 0.7975160000000017,
       "tokens": {
         "inputTokens": 490,
         "outputTokens": 99,
@@ -725,7 +733,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 2.2899519999999995,
+      "retrievalMs": 2.207599000000002,
       "tokens": {
         "inputTokens": 496,
         "outputTokens": 99,
@@ -805,7 +813,7 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.23016799999999193,
+      "retrievalMs": 0.21601100000000883,
       "tokens": {
         "inputTokens": 475,
         "outputTokens": 77,
@@ -890,7 +898,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.2358909999999952,
+      "retrievalMs": 0.23868799999999624,
       "tokens": {
         "inputTokens": 695,
         "outputTokens": 99,
@@ -971,7 +979,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.19591299999999023,
+      "retrievalMs": 0.20305700000000115,
       "tokens": {
         "inputTokens": 490,
         "outputTokens": 99,
@@ -1052,7 +1060,7 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.18580599999999947,
+      "retrievalMs": 0.24057599999999013,
       "tokens": {
         "inputTokens": 618,
         "outputTokens": 77,
@@ -1132,7 +1140,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.3319110000000052,
+      "retrievalMs": 0.20938599999999497,
       "tokens": {
         "inputTokens": 488,
         "outputTokens": 99,
@@ -1206,7 +1214,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.24484200000000556,
+      "retrievalMs": 0.23474400000000628,
       "tokens": {
         "inputTokens": 536,
         "outputTokens": 105,
@@ -1284,7 +1292,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.23306300000000135,
+      "retrievalMs": 0.21725299999999947,
       "tokens": {
         "inputTokens": 566,
         "outputTokens": 105,
@@ -1359,7 +1367,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.7048070000000024,
+      "retrievalMs": 0.942931999999999,
       "tokens": {
         "inputTokens": 484,
         "outputTokens": 93,
@@ -1433,7 +1441,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.1276990000000069,
+      "retrievalMs": 0.13278299999998922,
       "tokens": {
         "inputTokens": 488,
         "outputTokens": 97,
@@ -1505,7 +1513,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1474759999999975,
+      "retrievalMs": 0.1485100000000017,
       "tokens": {
         "inputTokens": 478,
         "outputTokens": 113,
@@ -1580,7 +1588,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.0966020000000043,
+      "retrievalMs": 0.09717200000000048,
       "tokens": {
         "inputTokens": 467,
         "outputTokens": 80,
@@ -1655,7 +1663,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.2028799999999933,
+      "retrievalMs": 0.22948000000000945,
       "tokens": {
         "inputTokens": 468,
         "outputTokens": 82,
@@ -1728,7 +1736,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.14572699999999372,
+      "retrievalMs": 0.1851740000000035,
       "tokens": {
         "inputTokens": 449,
         "outputTokens": 89,
@@ -1803,7 +1811,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.1737940000000009,
+      "retrievalMs": 0.1437699999999893,
       "tokens": {
         "inputTokens": 461,
         "outputTokens": 73,
@@ -1877,7 +1885,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.4900990000000007,
+      "retrievalMs": 3.3574550000000016,
       "tokens": {
         "inputTokens": 433,
         "outputTokens": 80,
@@ -1947,7 +1955,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1221000000000032,
+      "retrievalMs": 0.21416599999999164,
       "tokens": {
         "inputTokens": 454,
         "outputTokens": 97,
@@ -2022,7 +2030,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.09085499999999058,
+      "retrievalMs": 0.19484699999999577,
       "tokens": {
         "inputTokens": 525,
         "outputTokens": 85,
@@ -2094,7 +2102,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.16472100000000012,
+      "retrievalMs": 0.12919699999999068,
       "tokens": {
         "inputTokens": 437,
         "outputTokens": 74,
@@ -2167,7 +2175,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.08607800000000054,
+      "retrievalMs": 0.08722399999999197,
       "tokens": {
         "inputTokens": 506,
         "outputTokens": 77,
@@ -2241,7 +2249,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.11322200000000748,
+      "retrievalMs": 0.11565300000000889,
       "tokens": {
         "inputTokens": 528,
         "outputTokens": 74,
@@ -2317,7 +2325,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.08666599999999391,
+      "retrievalMs": 0.09051399999999887,
       "tokens": {
         "inputTokens": 646,
         "outputTokens": 100,
@@ -2388,7 +2396,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.11077500000000384,
+      "retrievalMs": 0.11071299999998985,
       "tokens": {
         "inputTokens": 512,
         "outputTokens": 93,
@@ -2461,7 +2469,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.10022499999999468,
+      "retrievalMs": 0.11385899999999083,
       "tokens": {
         "inputTokens": 478,
         "outputTokens": 59,
@@ -2534,7 +2542,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.12956299999999032,
+      "retrievalMs": 0.1950259999999986,
       "tokens": {
         "inputTokens": 473,
         "outputTokens": 111,
@@ -2608,7 +2616,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1300499999999971,
+      "retrievalMs": 0.14489799999999775,
       "tokens": {
         "inputTokens": 480,
         "outputTokens": 58,
@@ -2682,7 +2690,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1307249999999982,
+      "retrievalMs": 0.13065699999999936,
       "tokens": {
         "inputTokens": 562,
         "outputTokens": 72,
@@ -2754,7 +2762,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.5977219999999903,
+      "retrievalMs": 0.8129009999999965,
       "tokens": {
         "inputTokens": 470,
         "outputTokens": 111,
@@ -2828,7 +2836,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.09807100000000446,
+      "retrievalMs": 0.16316900000001056,
       "tokens": {
         "inputTokens": 506,
         "outputTokens": 74,
@@ -2902,7 +2910,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.18361300000000824,
+      "retrievalMs": 0.15917900000000884,
       "tokens": {
         "inputTokens": 580,
         "outputTokens": 146,
@@ -2974,7 +2982,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.13259399999999744,
+      "retrievalMs": 0.1294149999999945,
       "tokens": {
         "inputTokens": 460,
         "outputTokens": 97,
@@ -3049,7 +3057,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.11037600000000225,
+      "retrievalMs": 0.11108699999999772,
       "tokens": {
         "inputTokens": 713,
         "outputTokens": 71,
@@ -3119,7 +3127,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.12831500000000062,
+      "retrievalMs": 0.18003699999999867,
       "tokens": {
         "inputTokens": 488,
         "outputTokens": 125,
@@ -3192,7 +3200,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.14144500000000448,
+      "retrievalMs": 0.12220399999999643,
       "tokens": {
         "inputTokens": 420,
         "outputTokens": 63,
@@ -3254,7 +3262,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.07937900000000297,
+      "retrievalMs": 0.0743930000000006,
       "tokens": {
         "inputTokens": 436,
         "outputTokens": 79,
@@ -3327,7 +3335,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1008989999999983,
+      "retrievalMs": 0.10390499999999747,
       "tokens": {
         "inputTokens": 428,
         "outputTokens": 69,
@@ -3400,7 +3408,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.14091899999999669,
+      "retrievalMs": 0.10125700000000393,
       "tokens": {
         "inputTokens": 441,
         "outputTokens": 77,
@@ -3476,7 +3484,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.09350399999999581,
+      "retrievalMs": 0.0844860000000125,
       "tokens": {
         "inputTokens": 526,
         "outputTokens": 122,
@@ -3549,7 +3557,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1770530000000008,
+      "retrievalMs": 0.12886100000000056,
       "tokens": {
         "inputTokens": 444,
         "outputTokens": 78,
@@ -3623,7 +3631,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1726060000000018,
+      "retrievalMs": 0.252239000000003,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -3696,7 +3704,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.1041969999999992,
+      "retrievalMs": 0.109209000000007,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -3766,7 +3774,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.09045700000000068,
+      "retrievalMs": 0.10139599999999405,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -3842,7 +3850,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.07010299999998892,
+      "retrievalMs": 0.07606700000000899,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -3905,7 +3913,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.3891439999999875,
+      "retrievalMs": 0.5066690000000023,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -3971,7 +3979,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.4217220000000026,
+      "retrievalMs": 0.4216789999999975,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4016,7 +4024,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.2911070000000109,
+      "retrievalMs": 0.26281000000000176,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4053,7 +4061,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.49859200000000214,
+      "retrievalMs": 0.3714609999999965,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4117,7 +4125,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.613277999999994,
+      "retrievalMs": 0.5261449999999996,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4154,7 +4162,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9836150000000004,
+      "retrievalMs": 1.0865869999999944,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4218,7 +4226,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.6363659999999953,
+      "retrievalMs": 0.5887649999999951,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4243,41 +4251,40 @@
       "expect": {
         "type": "escalate"
       },
-      "rewritten": "value pro plan lost",
+      "rewritten": "value pro plan cost",
       "trace": [
         "how much → value",
-        "value → value",
-        "cost → lost"
+        "value → value"
       ],
       "ranked": [
         {
-          "id": "deal-mark-lost",
-          "score": 14.659,
-          "coverage": 0.369
-        },
-        {
           "id": "deal-edit-value",
           "score": 10.725,
-          "coverage": 0.214
-        },
-        {
-          "id": "deal-reopen",
-          "score": 10.422,
-          "coverage": 0.262
+          "coverage": 0.25
         },
         {
           "id": "custom-field-fill",
           "score": 4.64,
-          "coverage": 0.214
+          "coverage": 0.25
         },
         {
           "id": "account-currency",
           "score": 4.447,
-          "coverage": 0.214
+          "coverage": 0.25
+        },
+        {
+          "id": "deal-mark-lost",
+          "score": 1.871,
+          "coverage": 0.125
+        },
+        {
+          "id": "deal-create",
+          "score": 1.774,
+          "coverage": 0.125
         }
       ],
       "decision": "escalate",
-      "decisionReason": "Best match \"deal-mark-lost\" covers 37% of the query, below the 55% threshold.",
+      "decisionReason": "Best match \"deal-edit-value\" covers 25% of the query, below the 55% threshold.",
       "outcome": "escalate",
       "options": [],
       "rawCitations": [],
@@ -4285,7 +4292,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.6010069999999956,
+      "retrievalMs": 0.11988200000000404,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4352,7 +4359,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7211500000000086,
+      "retrievalMs": 0.552347999999995,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4416,7 +4423,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.47386799999999596,
+      "retrievalMs": 0.7595740000000006,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4453,7 +4460,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.019068999999987568,
+      "retrievalMs": 0.02407999999999788,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -4526,7 +4533,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.059816999999995346,
+      "retrievalMs": 0.5529729999999944,
       "tokens": {
         "inputTokens": 541,
         "outputTokens": 105,
@@ -4603,7 +4610,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.06320399999999893,
+      "retrievalMs": 0.08115800000000206,
       "tokens": {
         "inputTokens": 489,
         "outputTokens": 93,
@@ -4678,7 +4685,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.09472900000000095,
+      "retrievalMs": 0.060786000000007334,
       "tokens": {
         "inputTokens": 595,
         "outputTokens": 97,
@@ -4751,7 +4758,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.10143600000000674,
+      "retrievalMs": 0.1118979999999965,
       "tokens": {
         "inputTokens": 472,
         "outputTokens": 113,
@@ -4827,7 +4834,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.051374999999993065,
+      "retrievalMs": 0.05784400000000289,
       "tokens": {
         "inputTokens": 465,
         "outputTokens": 80,
@@ -4899,7 +4906,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05024500000000387,
+      "retrievalMs": 0.14014199999999732,
       "tokens": {
         "inputTokens": 436,
         "outputTokens": 82,
@@ -4974,7 +4981,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.04400300000000357,
+      "retrievalMs": 0.05387100000000089,
       "tokens": {
         "inputTokens": 478,
         "outputTokens": 89,
@@ -5044,7 +5051,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05338299999999663,
+      "retrievalMs": 0.08616200000000163,
       "tokens": {
         "inputTokens": 433,
         "outputTokens": 73,
@@ -5118,7 +5125,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0758380000000045,
+      "retrievalMs": 0.8045879999999954,
       "tokens": {
         "inputTokens": 451,
         "outputTokens": 93,
@@ -5144,37 +5151,39 @@
         "type": "answer",
         "article": "contact-link-company"
       },
-      "rewritten": "contact mov company",
-      "trace": [],
+      "rewritten": "contact move company",
+      "trace": [
+        "moved → move"
+      ],
       "ranked": [
         {
           "id": "contact-link-company",
-          "score": 11.841,
-          "coverage": 0.627
+          "score": 15.186,
+          "coverage": 1
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 11.274,
+          "coverage": 0.563
         },
         {
           "id": "company-create",
           "score": 8.452,
-          "coverage": 0.5
+          "coverage": 0.348
         },
         {
           "id": "company-delete",
           "score": 8.187,
-          "coverage": 0.5
+          "coverage": 0.348
         },
         {
           "id": "contact-search",
           "score": 7.625,
-          "coverage": 0.627
-        },
-        {
-          "id": "glossary-clients-contacts",
-          "score": 7.516,
-          "coverage": 0.627
+          "coverage": 0.437
         }
       ],
       "decision": "answer",
-      "decisionReason": "\"contact-link-company\" covers 63% of the query and leads the next article by 29%.",
+      "decisionReason": "\"contact-link-company\" covers 100% of the query and leads the next article by 26%.",
       "outcome": "answer",
       "options": [],
       "rawCitations": [
@@ -5184,20 +5193,21 @@
         "contact-link-company"
       ],
       "contextIds": [
-        "contact-link-company"
+        "contact-link-company",
+        "deal-change-stage"
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06076900000000762,
+      "retrievalMs": 0.2171510000000012,
       "tokens": {
-        "inputTokens": 473,
+        "inputTokens": 592,
         "outputTokens": 113,
         "measured": false
       },
       "costByModel": {
-        "claude-opus-5-5": 0.004152,
-        "claude-sonnet-5-5": 0.002076,
-        "claude-haiku-4-5": 0.001038
+        "claude-opus-5-5": 0.004628,
+        "claude-sonnet-5-5": 0.002314,
+        "claude-haiku-4-5": 0.001157
       },
       "pass": true,
       "neverViolated": false,
@@ -5262,7 +5272,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.0930230000000023,
+      "retrievalMs": 0.04845499999998992,
       "tokens": {
         "inputTokens": 522,
         "outputTokens": 85,
@@ -5288,39 +5298,40 @@
         "type": "answer",
         "article": "company-edit-details"
       },
-      "rewritten": "company mov offic edit address",
+      "rewritten": "company move offic edit address",
       "trace": [
+        "moved → move",
         "update → edit"
       ],
       "ranked": [
         {
           "id": "company-edit-details",
           "score": 25.813,
-          "coverage": 0.678
+          "coverage": 0.769
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 12.665,
+          "coverage": 0.297
+        },
+        {
+          "id": "contact-link-company",
+          "score": 11.832,
+          "coverage": 0.404
         },
         {
           "id": "company-create",
           "score": 9.556,
-          "coverage": 0.196
-        },
-        {
-          "id": "contact-link-company",
-          "score": 8.487,
-          "coverage": 0.152
+          "coverage": 0.222
         },
         {
           "id": "company-delete",
           "score": 8.123,
-          "coverage": 0.123
-        },
-        {
-          "id": "contact-edit-email",
-          "score": 5.842,
-          "coverage": 0.16
+          "coverage": 0.14
         }
       ],
       "decision": "answer",
-      "decisionReason": "\"company-edit-details\" covers 68% of the query and leads the next article by 63%.",
+      "decisionReason": "\"company-edit-details\" covers 77% of the query and leads the next article by 51%.",
       "outcome": "answer",
       "options": [],
       "rawCitations": [
@@ -5334,7 +5345,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.07007000000000119,
+      "retrievalMs": 0.3197100000000006,
       "tokens": {
         "inputTokens": 442,
         "outputTokens": 74,
@@ -5408,7 +5419,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.041410999999996534,
+      "retrievalMs": 0.09369700000000591,
       "tokens": {
         "inputTokens": 507,
         "outputTokens": 77,
@@ -5480,7 +5491,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.39679999999999893,
+      "retrievalMs": 0.6876409999999993,
       "tokens": {
         "inputTokens": 437,
         "outputTokens": 77,
@@ -5554,7 +5565,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.054845000000000255,
+      "retrievalMs": 0.06909000000000276,
       "tokens": {
         "inputTokens": 528,
         "outputTokens": 100,
@@ -5628,7 +5639,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.0531999999999897,
+      "retrievalMs": 0.06093900000000474,
       "tokens": {
         "inputTokens": 486,
         "outputTokens": 93,
@@ -5699,7 +5710,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.043654000000003634,
+      "retrievalMs": 0.046662999999995236,
       "tokens": {
         "inputTokens": 476,
         "outputTokens": 59,
@@ -5774,7 +5785,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05213799999999935,
+      "retrievalMs": 0.054655999999994265,
       "tokens": {
         "inputTokens": 548,
         "outputTokens": 111,
@@ -5845,7 +5856,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04355999999999938,
+      "retrievalMs": 0.05666399999999783,
       "tokens": {
         "inputTokens": 509,
         "outputTokens": 58,
@@ -5921,7 +5932,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.053668000000001825,
+      "retrievalMs": 0.059826000000001045,
       "tokens": {
         "inputTokens": 563,
         "outputTokens": 72,
@@ -5996,7 +6007,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.4605640000000051,
+      "retrievalMs": 0.26360300000000336,
       "tokens": {
         "inputTokens": 506,
         "outputTokens": 74,
@@ -6070,7 +6081,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.07376400000001127,
+      "retrievalMs": 0.07966900000000976,
       "tokens": {
         "inputTokens": 580,
         "outputTokens": 146,
@@ -6142,7 +6153,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04562400000000366,
+      "retrievalMs": 0.04795000000000016,
       "tokens": {
         "inputTokens": 456,
         "outputTokens": 97,
@@ -6217,7 +6228,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05287699999999518,
+      "retrievalMs": 0.08968099999999879,
       "tokens": {
         "inputTokens": 718,
         "outputTokens": 71,
@@ -6290,7 +6301,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06971400000000472,
+      "retrievalMs": 0.07006199999999296,
       "tokens": {
         "inputTokens": 464,
         "outputTokens": 97,
@@ -6360,7 +6371,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.051662000000007424,
+      "retrievalMs": 0.055644000000000915,
       "tokens": {
         "inputTokens": 485,
         "outputTokens": 125,
@@ -6433,7 +6444,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06545200000000762,
+      "retrievalMs": 0.07130300000000034,
       "tokens": {
         "inputTokens": 419,
         "outputTokens": 63,
@@ -6507,7 +6518,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.053605000000004566,
+      "retrievalMs": 0.05694499999999891,
       "tokens": {
         "inputTokens": 537,
         "outputTokens": 79,
@@ -6579,7 +6590,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05244499999999164,
+      "retrievalMs": 0.055717999999998824,
       "tokens": {
         "inputTokens": 431,
         "outputTokens": 69,
@@ -6660,7 +6671,7 @@
         "\"number you have on file for us\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.4528179999999935,
+      "retrievalMs": 0.054808000000008406,
       "tokens": {
         "inputTokens": 479,
         "outputTokens": 77,
@@ -6736,7 +6747,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.06418000000000745,
+      "retrievalMs": 0.06206399999999235,
       "tokens": {
         "inputTokens": 522,
         "outputTokens": 122,
@@ -6788,7 +6799,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04469500000000437,
+      "retrievalMs": 0.043226000000004206,
       "tokens": {
         "inputTokens": 441,
         "outputTokens": 78,
@@ -6862,7 +6873,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.09906200000000354,
+      "retrievalMs": 0.054689000000010424,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6937,7 +6948,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.09459400000000073,
+      "retrievalMs": 0.1288239999999945,
       "tokens": {
         "inputTokens": 574,
         "outputTokens": 58,
@@ -7007,7 +7018,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.051940000000001874,
+      "retrievalMs": 0.06471499999999253,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7080,7 +7091,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.031745999999998276,
+      "retrievalMs": 0.03509099999999421,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7144,7 +7155,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.44384900000000016,
+      "retrievalMs": 0.7053439999999966,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7181,7 +7192,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8131949999999932,
+      "retrievalMs": 0.7643139999999988,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7246,7 +7257,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.928867000000011,
+      "retrievalMs": 0.8100959999999873,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7316,7 +7327,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.054602000000002704,
+      "retrievalMs": 0.057748000000003685,
       "tokens": {
         "inputTokens": 427,
         "outputTokens": 69,
@@ -7381,7 +7392,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.03640299999999286,
+      "retrievalMs": 0.04267799999999511,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7445,7 +7456,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8130749999999978,
+      "retrievalMs": 1.1080329999999918,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7488,7 +7499,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.30454199999999787,
+      "retrievalMs": 0.379998999999998,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7556,7 +7567,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8388530000000003,
+      "retrievalMs": 0.5511889999999937,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7621,7 +7632,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.3103800000000092,
+      "retrievalMs": 0.05207500000000209,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7703,7 +7714,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.07038800000000833,
+      "retrievalMs": 0.06463500000000977,
       "tokens": {
         "inputTokens": 494,
         "outputTokens": 99,
@@ -7786,7 +7797,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.05796600000000751,
+      "retrievalMs": 0.063248999999999,
       "tokens": {
         "inputTokens": 685,
         "outputTokens": 99,
@@ -7866,7 +7877,7 @@
         "\"our own contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.13098599999999294,
+      "retrievalMs": 0.22624600000000328,
       "tokens": {
         "inputTokens": 478,
         "outputTokens": 77,
@@ -7939,7 +7950,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05938199999999938,
+      "retrievalMs": 0.07550799999999924,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -8013,7 +8024,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.08647299999999802,
+      "retrievalMs": 0.057165999999995165,
       "tokens": {
         "inputTokens": 539,
         "outputTokens": 105,
@@ -8079,7 +8090,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.32445199999999375,
+      "retrievalMs": 0.8121090000000066,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -8145,7 +8156,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.3264349999999894,
+      "retrievalMs": 0.701691000000011,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -8215,7 +8226,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.0491659999999996,
+      "retrievalMs": 0.05944499999999664,
       "tokens": {
         "inputTokens": 472,
         "outputTokens": 113,
@@ -8291,7 +8302,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.04488399999999615,
+      "retrievalMs": 0.05134999999999934,
       "tokens": {
         "inputTokens": 464,
         "outputTokens": 80,
@@ -8365,7 +8376,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.03857200000000205,
+      "retrievalMs": 0.04293200000000752,
       "tokens": {
         "inputTokens": 437,
         "outputTokens": 82,
@@ -8435,7 +8446,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04743299999999806,
+      "retrievalMs": 0.04009099999998966,
       "tokens": {
         "inputTokens": 445,
         "outputTokens": 89,
@@ -8501,7 +8512,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05066899999999919,
+      "retrievalMs": 0.04839099999999519,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -8574,7 +8585,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04653400000000829,
+      "retrievalMs": 0.08266500000000576,
       "tokens": {
         "inputTokens": 525,
         "outputTokens": 85,
@@ -8647,7 +8658,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05616200000000049,
+      "retrievalMs": 0.05865399999998999,
       "tokens": {
         "inputTokens": 441,
         "outputTokens": 74,
@@ -8721,7 +8732,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.5361230000000035,
+      "retrievalMs": 0.2781609999999972,
       "tokens": {
         "inputTokens": 506,
         "outputTokens": 77,
@@ -8793,7 +8804,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05987300000001028,
+      "retrievalMs": 0.06324399999999741,
       "tokens": {
         "inputTokens": 451,
         "outputTokens": 100,
@@ -8819,39 +8830,37 @@
         "type": "answer",
         "article": "deal-mark-lost"
       },
-      "rewritten": "prospect quiet deal lead",
-      "trace": [
-        "dead → lead"
-      ],
+      "rewritten": "prospect quiet deal dead",
+      "trace": [],
       "ranked": [
-        {
-          "id": "contact-change-status",
-          "score": 5.474,
-          "coverage": 0.351
-        },
         {
           "id": "deal-create",
           "score": 5.18,
-          "coverage": 0.105
+          "coverage": 0.25
         },
         {
           "id": "deal-delete",
           "score": 5.069,
-          "coverage": 0.105
+          "coverage": 0.25
         },
         {
           "id": "deal-mark-won",
           "score": 4.832,
-          "coverage": 0.105
+          "coverage": 0.25
         },
         {
           "id": "deal-change-stage",
           "score": 4.683,
-          "coverage": 0.105
+          "coverage": 0.25
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 4.588,
+          "coverage": 0.25
         }
       ],
       "decision": "escalate",
-      "decisionReason": "Best match \"contact-change-status\" covers 35% of the query, below the 55% threshold.",
+      "decisionReason": "Best match \"deal-create\" covers 25% of the query, below the 55% threshold.",
       "outcome": "escalate",
       "options": [],
       "rawCitations": [],
@@ -8859,7 +8868,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8352879999999914,
+      "retrievalMs": 0.7568409999999943,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -8932,7 +8941,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.047980999999992946,
+      "retrievalMs": 0.049776999999991745,
       "tokens": {
         "inputTokens": 478,
         "outputTokens": 59,
@@ -9002,7 +9011,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05931200000000558,
+      "retrievalMs": 0.06103500000000395,
       "tokens": {
         "inputTokens": 473,
         "outputTokens": 111,
@@ -9075,7 +9084,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.040871999999993136,
+      "retrievalMs": 0.04322100000000262,
       "tokens": {
         "inputTokens": 509,
         "outputTokens": 58,
@@ -9149,7 +9158,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.15074500000000057,
+      "retrievalMs": 0.08376900000000376,
       "tokens": {
         "inputTokens": 561,
         "outputTokens": 72,
@@ -9221,7 +9230,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.27109900000000664,
+      "retrievalMs": 0.06085199999999702,
       "tokens": {
         "inputTokens": 503,
         "outputTokens": 146,
@@ -9291,7 +9300,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06192199999999559,
+      "retrievalMs": 0.050879999999992265,
       "tokens": {
         "inputTokens": 489,
         "outputTokens": 125,
@@ -9364,7 +9373,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06167899999999804,
+      "retrievalMs": 0.05558800000000019,
       "tokens": {
         "inputTokens": 459,
         "outputTokens": 97,
@@ -9426,7 +9435,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.035510999999999626,
+      "retrievalMs": 0.03210800000000802,
       "tokens": {
         "inputTokens": 433,
         "outputTokens": 79,
@@ -9499,7 +9508,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.052625999999989403,
+      "retrievalMs": 0.05005599999999788,
       "tokens": {
         "inputTokens": 509,
         "outputTokens": 63,
@@ -9569,7 +9578,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.03894099999999412,
+      "retrievalMs": 0.038933000000000106,
       "tokens": {
         "inputTokens": 428,
         "outputTokens": 69,
@@ -9644,7 +9653,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.03892799999999852,
+      "retrievalMs": 0.03904900000000566,
       "tokens": {
         "inputTokens": 522,
         "outputTokens": 122,
@@ -9716,7 +9725,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.14412000000000091,
+      "retrievalMs": 0.03987300000000005,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -9784,7 +9793,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.03915299999999888,
+      "retrievalMs": 0.028001000000003273,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -9861,7 +9870,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.08219700000000785,
+      "retrievalMs": 0.03771600000000319,
       "tokens": {
         "inputTokens": 615,
         "outputTokens": 74,
@@ -9927,7 +9936,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8715520000000083,
+      "retrievalMs": 0.33704600000000084,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -9992,7 +10001,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.24414200000001074,
+      "retrievalMs": 0.2852579999999989,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10056,7 +10065,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.4955850000000055,
+      "retrievalMs": 0.3949179999999899,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10122,7 +10131,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.05471800000000826,
+      "retrievalMs": 0.05144599999999855,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10172,7 +10181,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.3236999999999881,
+      "retrievalMs": 0.5745319999999907,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10236,7 +10245,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.5807520000000039,
+      "retrievalMs": 0.32853400000000477,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10273,7 +10282,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7947280000000063,
+      "retrievalMs": 0.47866500000000656,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10283,6 +10292,229 @@
         "claude-opus-5-5": 0,
         "claude-sonnet-5-5": 0,
         "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false,
+      "promptMissed": false
+    },
+    {
+      "id": "dev-asst-01",
+      "split": "dev",
+      "tags": [
+        "assistant"
+      ],
+      "query": "change mode to online",
+      "expect": {
+        "type": "assistant",
+        "never": [
+          "deal-change-stage"
+        ]
+      },
+      "rewritten": "edit mode onlin",
+      "trace": [
+        "change → edit"
+      ],
+      "ranked": [
+        {
+          "id": "deal-edit-value",
+          "score": 4.035,
+          "coverage": 0.333
+        },
+        {
+          "id": "contact-edit-email",
+          "score": 4.024,
+          "coverage": 0.333
+        },
+        {
+          "id": "contact-edit-phone",
+          "score": 3.944,
+          "coverage": 0.333
+        },
+        {
+          "id": "custom-field-edit",
+          "score": 3.654,
+          "coverage": 0.333
+        },
+        {
+          "id": "company-edit-details",
+          "score": 3.641,
+          "coverage": 0.333
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"deal-edit-value\" covers 33% of the query, below the 55% threshold.",
+      "outcome": "assistant",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "interpretation": [],
+      "guardrail": null,
+      "retrievalMs": 0.3319800000000015,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false,
+      "promptMissed": false
+    },
+    {
+      "id": "dev-asst-02",
+      "split": "dev",
+      "tags": [
+        "assistant"
+      ],
+      "query": "can you use Claude to answer",
+      "expect": {
+        "type": "assistant"
+      },
+      "rewritten": "claud answer",
+      "trace": [],
+      "ranked": [],
+      "decision": "escalate",
+      "decisionReason": "No article contains any of the query terms.",
+      "outcome": "assistant",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "interpretation": [],
+      "guardrail": null,
+      "retrievalMs": 0.8253109999999992,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false,
+      "promptMissed": false
+    },
+    {
+      "id": "dev-asst-03",
+      "split": "dev",
+      "tags": [
+        "assistant"
+      ],
+      "query": "switch the chatbot to offline",
+      "expect": {
+        "type": "assistant"
+      },
+      "rewritten": "switch chatbot offlin",
+      "trace": [],
+      "ranked": [
+        {
+          "id": "account-currency",
+          "score": 6.599,
+          "coverage": 0.333
+        }
+      ],
+      "decision": "escalate",
+      "decisionReason": "Best match \"account-currency\" covers 33% of the query, below the 55% threshold.",
+      "outcome": "assistant",
+      "options": [],
+      "rawCitations": [],
+      "citations": [],
+      "contextIds": [],
+      "interpretation": [],
+      "guardrail": null,
+      "retrievalMs": 0.5166399999999953,
+      "tokens": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0,
+        "claude-sonnet-5-5": 0,
+        "claude-haiku-4-5": 0
+      },
+      "pass": true,
+      "neverViolated": false,
+      "promptMissed": false
+    },
+    {
+      "id": "dev-asst-04",
+      "split": "dev",
+      "tags": [
+        "assistant",
+        "near-miss"
+      ],
+      "query": "change the deal stage",
+      "expect": {
+        "type": "answer",
+        "article": "deal-change-stage"
+      },
+      "rewritten": "edit deal stage",
+      "trace": [
+        "change → edit",
+        "stage → stage"
+      ],
+      "ranked": [
+        {
+          "id": "deal-change-stage",
+          "score": 16.43,
+          "coverage": 1
+        },
+        {
+          "id": "deal-edit-value",
+          "score": 10.088,
+          "coverage": 0.725
+        },
+        {
+          "id": "deal-create",
+          "score": 6.954,
+          "coverage": 0.512
+        },
+        {
+          "id": "contact-change-status",
+          "score": 6.93,
+          "coverage": 0.882
+        },
+        {
+          "id": "deal-mark-won",
+          "score": 6.433,
+          "coverage": 0.512
+        }
+      ],
+      "decision": "answer",
+      "decisionReason": "\"deal-change-stage\" covers 100% of the query and leads the next article by 39%.",
+      "outcome": "answer",
+      "options": [],
+      "rawCitations": [
+        "deal-change-stage"
+      ],
+      "citations": [
+        "deal-change-stage"
+      ],
+      "contextIds": [
+        "deal-change-stage",
+        "deal-edit-value"
+      ],
+      "interpretation": [],
+      "guardrail": null,
+      "retrievalMs": 0.06497099999999989,
+      "tokens": {
+        "inputTokens": 545,
+        "outputTokens": 111,
+        "measured": false
+      },
+      "costByModel": {
+        "claude-opus-5-5": 0.0044,
+        "claude-sonnet-5-5": 0.0022,
+        "claude-haiku-4-5": 0.0011
       },
       "pass": true,
       "neverViolated": false,
@@ -10353,7 +10585,7 @@
         "\"phone number on our client profile\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.05769300000000044,
+      "retrievalMs": 0.0863470000000035,
       "tokens": {
         "inputTokens": 482,
         "outputTokens": 77,
@@ -10435,7 +10667,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.06134399999999118,
+      "retrievalMs": 0.0661710000000113,
       "tokens": {
         "inputTokens": 494,
         "outputTokens": 99,
@@ -10466,10 +10698,11 @@
         ],
         "promptSays": "means a contact"
       },
-      "rewritten": "contact mov create phone edit",
+      "rewritten": "contact move create phone edit",
       "trace": [
         "customer → contact",
         "mobile number → phone",
+        "moved → move",
         "new → create",
         "phone → phone",
         "update → edit"
@@ -10478,31 +10711,31 @@
         {
           "id": "contact-edit-phone",
           "score": 19.848,
-          "coverage": 0.733
+          "coverage": 0.625
+        },
+        {
+          "id": "deal-change-stage",
+          "score": 13.71,
+          "coverage": 0.568
         },
         {
           "id": "contact-create",
           "score": 13.631,
-          "coverage": 0.475
+          "coverage": 0.405
         },
         {
           "id": "company-edit-details",
           "score": 10.805,
-          "coverage": 0.595
+          "coverage": 0.507
         },
         {
-          "id": "company-create",
-          "score": 9.453,
-          "coverage": 0.406
-        },
-        {
-          "id": "contact-add-note",
-          "score": 8.738,
-          "coverage": 0.404
+          "id": "contact-link-company",
+          "score": 10.363,
+          "coverage": 0.686
         }
       ],
       "decision": "answer",
-      "decisionReason": "\"contact-edit-phone\" covers 73% of the query and leads the next article by 31%.",
+      "decisionReason": "\"contact-edit-phone\" covers 63% of the query and leads the next article by 31%.",
       "outcome": "answer",
       "options": [],
       "rawCitations": [
@@ -10512,22 +10745,23 @@
         "contact-edit-phone"
       ],
       "contextIds": [
-        "contact-edit-phone"
+        "contact-edit-phone",
+        "deal-change-stage"
       ],
       "interpretation": [
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.06749499999999387,
+      "retrievalMs": 0.2781400000000076,
       "tokens": {
-        "inputTokens": 498,
+        "inputTokens": 618,
         "outputTokens": 99,
         "measured": false
       },
       "costByModel": {
-        "claude-opus-5-5": 0.003972,
-        "claude-sonnet-5-5": 0.001986,
-        "claude-haiku-4-5": 0.000993
+        "claude-opus-5-5": 0.004452,
+        "claude-sonnet-5-5": 0.002226,
+        "claude-haiku-4-5": 0.001113
       },
       "pass": true,
       "neverViolated": false,
@@ -10599,7 +10833,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.3622840000000025,
+      "retrievalMs": 0.2899280000000033,
       "tokens": {
         "inputTokens": 491,
         "outputTokens": 99,
@@ -10678,7 +10912,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.06654500000000496,
+      "retrievalMs": 0.06697900000000345,
       "tokens": {
         "inputTokens": 447,
         "outputTokens": 74,
@@ -10756,7 +10990,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.05293700000000001,
+      "retrievalMs": 0.05967099999999448,
       "tokens": {
         "inputTokens": 487,
         "outputTokens": 93,
@@ -10835,7 +11069,7 @@
         "\"our client account\" is about the user's own client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.05553399999999442,
+      "retrievalMs": 0.0893299999999897,
       "tokens": {
         "inputTokens": 456,
         "outputTokens": 69,
@@ -10911,7 +11145,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.04622999999999422,
+      "retrievalMs": 0.051979000000002884,
       "tokens": {
         "inputTokens": 422,
         "outputTokens": 63,
@@ -10987,7 +11221,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.04021999999999082,
+      "retrievalMs": 0.04041499999999587,
       "tokens": {
         "inputTokens": 521,
         "outputTokens": 122,
@@ -11062,7 +11296,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.5681199999999933,
+      "retrievalMs": 0.044174999999995634,
       "tokens": {
         "inputTokens": 466,
         "outputTokens": 80,
@@ -11138,7 +11372,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.055114000000003216,
+      "retrievalMs": 0.25532100000000924,
       "tokens": {
         "inputTokens": 567,
         "outputTokens": 73,
@@ -11212,7 +11446,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.044468000000009056,
+      "retrievalMs": 0.05760399999999777,
       "tokens": {
         "inputTokens": 479,
         "outputTokens": 89,

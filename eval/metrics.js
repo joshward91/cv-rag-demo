@@ -21,6 +21,8 @@ export function grade(row) {
       row.outcome === 'clarify' &&
       expect.mustInclude.every((id) => row.options.includes(id)) &&
       (!expect.allowed || row.options.every((id) => expect.allowed.includes(id)));
+  } else if (expect.type === 'assistant') {
+    pass = row.outcome === 'assistant';
   } else {
     pass = row.outcome === 'escalate';
   }

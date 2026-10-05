@@ -52,6 +52,14 @@ test('the prompt tells the model which "client" the user meant', async () => {
   assert.match(contact.prompt.system, /in them "client" always means the user's own business/);
 });
 
+test('questions about the assistant explain its modes instead of matching a CRM article', async () => {
+  const desk = new HelpDesk({ retriever, generator: new ExtractiveGenerator() });
+  const result = await desk.ask('change mode to online');
+  assert.equal(result.outcome.type, 'assistant');
+  assert.ok(!result.retrieval.analysis.trace.some((t) => t.to === 'move'), '"mode" must not be spell-corrected to "move"');
+  assert.equal((await desk.ask('how do I change my password')).outcome.type, 'escalate');
+});
+
 test('core example retrieves the contact phone article and keeps the account one out of the prompt', () => {
   const result = retriever.retrieve("How do I update a client's phone number?");
   assert.equal(result.decision.type, 'answer');

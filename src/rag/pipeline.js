@@ -1,10 +1,26 @@
 import { buildPrompt } from './prompt.js';
 import { costUsd, MODELS } from './pricing.js';
+import { stem } from './text.js';
+
+/**
+ * Words that point at the assistant itself rather than at Harbour CRM. The
+ * help centre documents the CRM, not this chat panel, so when such a question
+ * would otherwise be escalated the assistant explains its own settings instead
+ * of sending the user to support.
+ */
+const ASSISTANT_TERMS = new Set(
+  ['mode', 'online', 'offline', 'claude', 'api', 'chatbot', 'bot', 'assistant', 'model', 'ai', 'llm', 'gpt'].map(stem),
+);
+
+export function isAboutAssistant(terms) {
+  return terms.some((t) => ASSISTANT_TERMS.has(t));
+}
 
 /**
  * End-to-end question answering:
  *
  *   rewrite + retrieve  ->  decide (answer / clarify / escalate)
+ *     (an escalation about the assistant itself explains its settings instead)
  *     -> generate (answer path only)  ->  validate citations
  *
  * Clarification and escalation are decided before any model call, so they are
@@ -38,6 +54,10 @@ export class HelpDesk {
     }
 
     const base = { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0 };
+
+    if (decision.type === 'escalate' && !chosenArticleId && isAboutAssistant(retrieval.analysis.terms)) {
+      return { ...base, outcome: { type: 'assistant', citations: [] } };
+    }
 
     if (decision.type === 'escalate') {
       return { ...base, outcome: { type: 'escalate', citations: [] } };

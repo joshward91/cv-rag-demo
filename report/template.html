@@ -272,7 +272,7 @@
     )
     .join('');
 
-  const tagNames = { perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
+  const tagNames = { assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
   document.getElementById('tags').innerHTML = Object.entries(all.byTag)
     .sort((a, b) => b[1].passed / b[1].cases - a[1].passed / a[1].cases)
     .map(([tag, t]) => bar(tagNames[tag] ?? tag, t.passed / t.cases, `${t.passed}/${t.cases} · ${pct(t.passed / t.cases)}`))
@@ -293,8 +293,8 @@
   document.getElementById('issues').innerHTML = [...history.knownIssues, history.afterHoldout].filter(Boolean).map((i) => `<li>${esc(i)}</li>`).join('');
 
   // Cases -------------------------------------------------------------------
-  const describeExpect = (e) => (e.type === 'answer' ? `answer <code>${e.article}</code>` : e.type === 'clarify' ? `clarify${e.mustInclude.length ? ` incl. ${e.mustInclude.map((i) => `<code>${i}</code>`).join(' ')}` : ''}` : 'escalate');
-  const describeGot = (r) => (r.outcome === 'answer' ? `answer ${r.citations.map((i) => `<code>${i}</code>`).join(' ')}` : r.outcome === 'clarify' ? `clarify ${r.options.map((i) => `<code>${i}</code>`).join(' ')}` : 'escalate');
+  const describeExpect = (e) => (e.type === 'assistant' ? 'explain answer modes' : e.type === 'answer' ? `answer <code>${e.article}</code>` : e.type === 'clarify' ? `clarify${e.mustInclude.length ? ` incl. ${e.mustInclude.map((i) => `<code>${i}</code>`).join(' ')}` : ''}` : 'escalate');
+  const describeGot = (r) => (r.outcome === 'assistant' ? 'explain answer modes' : r.outcome === 'answer' ? `answer ${r.citations.map((i) => `<code>${i}</code>`).join(' ')}` : r.outcome === 'clarify' ? `clarify ${r.options.map((i) => `<code>${i}</code>`).join(' ')}` : 'escalate');
   const tbody = document.querySelector('#case-table tbody');
   const search = document.getElementById('case-search');
   const splitSel = document.getElementById('case-split');

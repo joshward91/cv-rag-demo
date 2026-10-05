@@ -5,7 +5,7 @@ A grounded retrieval-augmented help-desk assistant, built around a small CRM tha
 - **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 single-task articles. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every article describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
 - **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
-- **The evaluation suite** has 151 realistic phrasings across four sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
+- **The evaluation suite** has 155 realistic phrasings across four sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
 
@@ -20,7 +20,7 @@ Requires Node 20 or later. There is no backend.
 ```bash
 npm install
 npm test                 # unit tests: retrieval, guardrail, generator contract, grading
-npm run eval             # runs all 151 cases offline, writes eval/results.json
+npm run eval             # runs all 155 cases offline, writes eval/results.json
 npm run check:docs       # browser check: docs labels exist in the UI, plus five walkthroughs
 npm run build            # self-contained pages in dist/, plus the GitHub Pages site in docs/
 npm run serve            # then open http://localhost:8080 to run from source
@@ -80,7 +80,7 @@ The citation guardrail in `validateReply` runs on every model reply. An answer t
 
 ## Evaluation
 
-`eval/cases.js` holds 151 questions with an expected outcome: answer from a given article, clarify between given articles, or escalate. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss) and split four ways:
+`eval/cases.js` holds 155 questions with an expected outcome: answer from a given article, clarify between given articles, or escalate. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss) and split four ways:
 
 | Set | Cases | Role |
 |---|---|---|
@@ -97,8 +97,9 @@ The citation guardrail in `validateReply` runs on every model reply. An answer t
 | Round 3 | 100% | 95.9% | 84.2% (not tuned on) | **75.0% (blind)** |
 | Round 4 | 100% | 95.9% | 84.2% (not tuned on) | 83.3% |
 | Round 5 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
+| Round 6 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 
-Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule.
+Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes.
 
 The hold-out figure is the honest estimate. Five of its six failures are questions escalated to support that the help centre could have answered; none got a wrong article. The core client/contact example passed 11 of 12 phrasings, and the forbidden article was never ranked first, offered, put in a prompt or cited. `npm run eval` exits non-zero if that ever changes, so it can gate CI.
 
@@ -118,7 +119,6 @@ The history and known issues are in `eval/history.json`, and the report page ren
 ## Known limitations
 
 - Unknown but harmless words ("typo", "keep", "paying") lower coverage and cause false refusals. This is the main hold-out failure mode, and it fails safe.
-- Spelling correction still applies to four-letter words, so "dead" became "lead". It was found by the hold-out set and left unfixed to keep that score blind.
 - Lexical retrieval can't tell "send an invoice to a contact" (unsupported) from "where invoices are sent" (billing email). In Claude mode the model is instructed to escalate when the article doesn't answer the question.
 - "We have a new office number" gets the company article. Without "our" or "account", nothing marks the number as the user's own.
 - Retrieval is lexical only. The next step would be hybrid retrieval with embeddings fused by reciprocal rank, measured against the same hold-out set, followed by a fresh hold-out set.

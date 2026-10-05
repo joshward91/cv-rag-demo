@@ -58,7 +58,7 @@ export function analyse(text, { vocabulary = null, spellCheck = false, perspecti
     }
     let stemmed = stem(word);
 
-    if (spellCheck && vocabulary && !vocabulary.has(stemmed) && !CONCEPT_OF.has(stemmed) && stemmed.length >= 4) {
+    if (spellCheck && vocabulary && !vocabulary.has(stemmed) && !CONCEPT_OF.has(stemmed) && word.length >= 5) {
       const corrected = closestTerm(stemmed, vocabulary);
       if (corrected) {
         trace.push({ kind: 'spelling', rule: 'spelling:edit-distance', from: word, to: corrected.term, note: `${corrected.distance} edit${corrected.distance === 1 ? '' : 's'} away` });
@@ -81,7 +81,9 @@ export function analyse(text, { vocabulary = null, spellCheck = false, perspecti
 /**
  * Allowed typos: one edit, or two for words of nine letters or more. Seven or
  * eight letters with two edits turned real words into wrong ones
- * ("connect" -> "contact").
+ * ("connect" -> "contact"). Words under five letters are never corrected: too
+ * many real words sit one edit from the vocabulary ("mode" -> "move",
+ * "dead" -> "lead").
  */
 function closestTerm(word, vocabulary) {
   const allowed = word.length >= 9 ? 2 : 1;

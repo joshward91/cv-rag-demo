@@ -144,11 +144,40 @@
           "blind": false
         }
       ]
+    },
+    {
+      "round": "Round 6",
+      "change": "From a user report: 'change mode to online' was answered with the deal stage article, because spelling correction turned 'mode' into 'move'. Words under five letters are no longer spell-corrected, which also stops 'dead' becoming 'lead'. Questions about the assistant itself that would be escalated now explain the answer modes instead. Added four dev cases. No hold-out or perspective result changed.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 56,
+          "cases": 56,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false
+        }
+      ]
     }
   ],
   "knownIssues": [
     "Unknown but harmless words ('typo', 'wrong', 'keep', 'paying') lower coverage and cause false refusals. This is the main source of hold-out failures. It fails safe: the user is offered support rather than a wrong answer.",
-    "Spelling correction still applies to four-letter words, so 'dead' became 'lead' in 'the deal is dead'. Found by the hold-out set and deliberately left unfixed so the hold-out score stays blind.",
     "Lexical retrieval can't tell 'send an invoice to a contact' (unsupported) from 'where invoices are sent' (billing email). In Claude mode the model is told to escalate when the article doesn't answer the question, which is the intended second line of defence.",
     "'Change an address' is ambiguous between a company's postal address and an email address, but the policy answers with the company article.",
     "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own."
