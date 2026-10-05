@@ -58,8 +58,21 @@ function reportPage(demoUrl) {
 }
 
 // Page content -> complete document, for hosts that serve files as-is.
+// The content security policy is the browser-enforced version of "grounded,
+// no external fetch": the page can only call the Anthropic API (and only when
+// a visitor supplies their own key), and loads no third-party scripts.
+const CSP = [
+  "default-src 'none'",
+  "script-src 'unsafe-inline'",
+  "style-src 'unsafe-inline' https://fonts.googleapis.com",
+  'font-src https://fonts.gstatic.com',
+  "img-src 'self' data:",
+  'connect-src https://api.anthropic.com',
+  "base-uri 'none'",
+  "form-action 'none'",
+].join('; ');
 const asDocument = (content) =>
-  `<!doctype html>\n<html lang="en">\n<head>\n<meta name="viewport" content="width=device-width, initial-scale=1" />\n${content.replace(/(<style>)/, '</head>\n<body>\n$1')}</body>\n</html>\n`;
+  `<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8" />\n<meta http-equiv="Content-Security-Policy" content="${CSP}" />\n<meta name="referrer" content="no-referrer" />\n<meta name="viewport" content="width=device-width, initial-scale=1" />\n${content.replace('<meta charset="utf-8" />\n', '').replace(/(<style>)/, '</head>\n<body>\n$1')}</body>\n</html>\n`;
 
 const demo = await demoPage(process.env.REPORT_URL ?? '');
 const report = reportPage(process.env.DEMO_URL ?? '');

@@ -175,7 +175,7 @@
     <div class="filters">
       <label for="case-search" class="count">Search</label>
       <input id="case-search" type="search" placeholder="Filter by question or article id" />
-      <select id="case-split" aria-label="Question set"><option value="">All sets</option><option value="dev">Dev</option><option value="test">Test</option><option value="holdout">Hold-out</option><option value="perspective">Perspective hold-out</option></select>
+      <select id="case-split" aria-label="Question set"><option value="">All sets</option><option value="dev">Dev</option><option value="test">Test</option><option value="holdout">Hold-out</option><option value="perspective">Perspective hold-out</option><option value="redteam">Pen test</option></select>
       <select id="case-result" aria-label="Result"><option value="">Passed and failed</option><option value="fail">Failed only</option><option value="pass">Passed only</option></select>
       <span class="count" id="case-count"></span>
     </div>
@@ -243,7 +243,7 @@
   document.getElementById('holdout-text').innerHTML = `<p><strong>Blind hold-out pass rate</strong> (${hold.passed} of ${hold.cases}), against ${pct(data.summary.dev.passRate)} on the tuning set. The gap is the honest cost of tuning a lexical retriever. ${holdEscalated} of the ${holdFails.length} hold-out failures are questions escalated to support that the help centre could have answered, and ${holdWrong === 0 ? 'none' : holdWrong} answered with the wrong article.</p>`;
 
   // Split table --------------------------------------------------------------
-  const splits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['perspective', 'Perspective'], ['all', 'All']];
+  const splits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['perspective', 'Perspective'], ['redteam', 'Pen test'], ['all', 'All']];
   const metrics = [
     ['Questions', (s) => s.cases, ''],
     ['Pass rate', (s) => pct(s.passRate), 'Outcome and cited article both as expected'],
@@ -264,7 +264,7 @@
   // Bars -------------------------------------------------------------------
   const bar = (label, ratio, value, tuned = false, title = '') =>
     `<div class="bar-row" title="${esc(title || `${label}: ${value}`)}"><span class="bar-label">${esc(label)}</span><span class="bar-track"><span class="bar-fill${tuned ? ' tuned' : ''}" style="width:${(ratio * 100).toFixed(1)}%"></span></span><span class="bar-value">${value}</span></div>`;
-  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective' };
+  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test' };
   document.getElementById('history').innerHTML = history.rounds
     .map(
       (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores
@@ -273,7 +273,7 @@
     )
     .join('');
 
-  const tagNames = { injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
+  const tagNames = { redteam: 'Pen test probes', injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
   document.getElementById('tags').innerHTML = Object.entries(all.byTag)
     .sort((a, b) => b[1].passed / b[1].cases - a[1].passed / a[1].cases)
     .map(([tag, t]) => bar(tagNames[tag] ?? tag, t.passed / t.cases, `${t.passed}/${t.cases} · ${pct(t.passed / t.cases)}`))

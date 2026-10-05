@@ -124,6 +124,7 @@ const report = {
     test: summarise(rows.filter((r) => r.split === 'test'), kbIds),
     holdout: summarise(rows.filter((r) => r.split === 'holdout'), kbIds),
     perspective: summarise(rows.filter((r) => r.split === 'perspective'), kbIds),
+    redteam: summarise(rows.filter((r) => r.split === 'redteam'), kbIds),
   },
   rows: rows.map(({ rank, ...rest }) => rest),
 };

@@ -204,6 +204,42 @@
           "blind": false
         }
       ]
+    },
+    {
+      "round": "Round 8",
+      "change": "Cursory pen test: 38 probes covering instruction overrides, fake system messages, prompt extraction, role play, jailbreak phrases, spaced, leetspeak, accented, French, Spanish and base64 obfuscation, harmful and off-topic asks, and XSS payloads. On the first run 7 of the 27 injections were blocked, 19 were escalated by retrieval, 1 got the assistant-settings reply, and none was answered. The guard now normalises obfuscation and covers those shapes, and blocks all 27. The built site also gained a content security policy that only allows calls to the Anthropic API, and the SDK is bundled instead of loaded from a CDN. No other result changed.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 68,
+          "cases": 68,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": true
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false
+        },
+        {
+          "split": "redteam",
+          "passed": 38,
+          "cases": 38,
+          "blind": false
+        }
+      ]
     }
   ],
   "knownIssues": [

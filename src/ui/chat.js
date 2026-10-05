@@ -5,7 +5,6 @@ import { ExtractiveGenerator, AnthropicGenerator, ClaudeAiGenerator } from '../r
 import { promptAsText } from '../rag/prompt.js';
 import { MODELS, DEFAULT_MODEL, formatUsd } from '../rag/pricing.js';
 
-const SDK_URL = 'https://cdn.jsdelivr.net/npm/@anthropic-ai/sdk@0.131.0/+esm';
 
 const SUGGESTIONS = [
   "How do I update a client's phone number?",
@@ -263,7 +262,8 @@ export class ChatWidget {
       $('#api-key', this.root)?.focus();
       return null;
     }
-    const { default: Anthropic } = await import(/* @vite-ignore */ SDK_URL);
+    // Bundled into the built pages, so no third-party script is loaded at runtime.
+    const { default: Anthropic } = await import('@anthropic-ai/sdk');
     const client = new Anthropic({ apiKey: this.apiKey, dangerouslyAllowBrowser: true });
     return new AnthropicGenerator({ client, model: this.model });
   }
