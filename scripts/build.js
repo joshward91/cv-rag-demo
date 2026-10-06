@@ -67,6 +67,7 @@ function reportPage(demoUrl) {
   return read('report/template.html')
     .replace('__RESULTS__', () => inlineJson(JSON.parse(read('eval/results.json'))))
     .replace('__HISTORY__', () => inlineJson(JSON.parse(read('eval/history.json'))))
+    .replace('__TIERS__', () => (existsSync(`${root}eval/compare/tiers.json`) ? inlineJson(JSON.parse(read('eval/compare/tiers.json'))) : 'null'))
     .replace('__COMPARISON__', () => (existsSync(`${root}eval/compare/results.json`) ? inlineJson(JSON.parse(read('eval/compare/results.json'))) : 'null'))
     .replace('__DEMO_URL__', () => demoUrl);
 }

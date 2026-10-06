@@ -1,4 +1,5 @@
-import { buildPrompt } from './prompt.js';
+import { buildPrompt, buildRoutingPrompt } from './prompt.js';
+import { ExtractiveGenerator } from './generators.js';
 import { costUsd, MODELS } from './pricing.js';
 import { stem } from './text.js';
 import { screenQuestion, LINK_PATTERN } from './guard.js';
@@ -19,6 +20,28 @@ export function isAboutAssistant(terms) {
 }
 
 /**
+ * When a model is available, how much of the work it does. Confidence is the
+ * keyword coverage of search's top article (the share of the question's
+ * weighted terms it matches), not a calibrated probability.
+ *   'decides' (full model, the default): the model gets up to five candidates
+ *       and decides whether to answer, ask which one or hand off, for every
+ *       question. Fewest wrong answers.
+ *   'prose': when search is at least skipModelAtCoverage confident, search's
+ *       decision stands and the model only writes the answer from the article
+ *       search chose. Below that, the model decides.
+ *   'offline': when search is that confident, the offline answer (the
+ *       article's own steps) is returned with no model call. Below that, the
+ *       model decides.
+ * The reverse (skip the model when search is NOT confident) was measured and
+ * rejected: nearly every question the model rescues is a low-confidence one.
+ * eval/compare/tiers.mjs has the numbers.
+ */
+export const MODEL_TIERS = { skipModelAtCoverage: 0.7 };
+
+export const MODEL_USE = ['decides', 'prose', 'offline'];
+export const DEFAULT_MODEL_USE = 'decides';
+
+/**
  * End-to-end question answering:
  *
  *   screen input  ->  rewrite + retrieve  ->  decide (answer / clarify / escalate)
@@ -34,10 +57,12 @@ export class HelpDesk {
    * @param {{ retriever: import('./retriever.js').Retriever, generator: object, embedder?: (texts: string[]) => Promise<number[][]> }} deps
    *        With an embedder and a retriever that has a semantic index, retrieval is hybrid.
    */
-  constructor({ retriever, generator, embedder = null }) {
+  constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS }) {
     this.retriever = retriever;
     this.generator = generator;
     this.embedder = embedder;
+    this.modelUse = modelUse;
+    this.tiers = tiers;
   }
 
   /**
@@ -78,6 +103,27 @@ export class HelpDesk {
       return { ...base, outcome: { type: 'assistant', citations: [] } };
     }
 
+    // With a model available, decide which tier this question gets.
+    const usesModel = this.generator.name !== 'extractive' && !chosenArticleId;
+    if (usesModel) {
+      const confidence = retrieval.results[0]?.coverage ?? 0;
+      const threshold = this.tiers.skipModelAtCoverage;
+      const pctOf = (x) => `${Math.round(x * 100)}%`;
+      if (this.modelUse === 'decides') {
+        return this.#modelDecides(question, retrieval, base, 'Full model: the model makes every decision.');
+      }
+      if (confidence < threshold) {
+        return this.#modelDecides(question, retrieval, base, `Search is ${pctOf(confidence)} confident, below ${pctOf(threshold)}, so the model decides.`);
+      }
+      if (decision.type === 'answer' && this.modelUse === 'prose') {
+        base.tier = { name: 'prose', reason: `Search is ${pctOf(confidence)} confident (at least ${pctOf(threshold)}), so its decision stands and the model only writes the answer.` };
+      } else {
+        const tier = { name: 'no-model', reason: `Search is ${pctOf(confidence)} confident (at least ${pctOf(threshold)}), so the offline result is returned without a model call.` };
+        if (decision.type === 'answer') return this.#answer(question, retrieval, decision, { ...base, tier }, new ExtractiveGenerator());
+        base.tier = tier;
+      }
+    }
+
     if (decision.type === 'escalate') {
       return { ...base, outcome: { type: 'escalate', citations: [] } };
     }
@@ -106,16 +152,34 @@ export class HelpDesk {
       };
     }
 
-    // Answer path. The decided article always comes first in the context.
+    return this.#answer(question, retrieval, decision, base, this.generator);
+  }
+
+  /** Answer path. The decided article always comes first in the context. */
+  async #answer(question, retrieval, decision, base, generator) {
     const contextIds = [decision.articleId, ...decision.contextIds.filter((id) => id !== decision.articleId)];
     const articles = contextIds.map((id) => this.retriever.byId.get(id));
     const prompt = buildPrompt(question, articles, retrieval.analysis);
+    return this.#generate(prompt, articles, retrieval, base, generator);
+  }
+
+  /** The model gets the candidates and decides: answer, ask which one, or hand off. */
+  async #modelDecides(question, retrieval, base, reason) {
+    const articles = this.retriever.candidatesFor(retrieval).map((id) => this.retriever.byId.get(id));
+    if (!articles.length) {
+      return { ...base, tier: { name: 'no-model', reason: 'Search found no candidates, so there is nothing for a model to read.' }, outcome: { type: 'escalate', citations: [] } };
+    }
+    const prompt = buildRoutingPrompt(question, articles, retrieval.analysis);
+    return this.#generate(prompt, articles, retrieval, { ...base, tier: { name: 'model-decides', reason } }, this.generator);
+  }
+
+  async #generate(prompt, articles, retrieval, base, generator) {
     const started = now();
-    const reply = await this.generator.generate({ prompt, articles, analysis: retrieval.analysis });
+    const reply = await generator.generate({ prompt, articles, analysis: retrieval.analysis });
     const generationMs = now() - started;
 
     const { outcome, guardrail } = validateReply(reply, prompt.contextIds, this.retriever.byId);
-    const pricedModel = MODELS[reply.model] ? reply.model : this.generator.model;
+    const pricedModel = MODELS[reply.model] ? reply.model : generator.model;
     const cost = reply.usage && pricedModel ? costUsd(pricedModel, reply.usage) : 0;
 
     return { ...base, prompt, reply, guardrail, outcome, costUsd: cost ?? 0, generationMs };
@@ -128,7 +192,7 @@ export class HelpDesk {
  * a link. Otherwise the answer is withheld and the user is offered support.
  */
 export function validateReply(reply, contextIds, articlesById) {
-  if (reply.type !== 'answer') {
+  if (reply.type !== 'answer' && reply.type !== 'clarify') {
     return { outcome: { type: 'escalate', citations: [], note: reply.note }, guardrail: null };
   }
   // The help centre contains no links, so a link in an answer came from outside it.
@@ -137,6 +201,23 @@ export function validateReply(reply, contextIds, articlesById) {
   }
   const valid = reply.citations.filter((id) => contextIds.includes(id) && articlesById.has(id));
   const invalid = reply.citations.filter((id) => !valid.includes(id));
+
+  // A clarifying question from the model: the options are the articles it named.
+  if (reply.type === 'clarify') {
+    const options = [...new Set(valid)];
+    if (options.length < 2) {
+      return { outcome: { type: 'escalate', citations: [] }, guardrail: { action: 'withheld', reason: 'The model asked a clarifying question but named fewer than two articles that were provided.' } };
+    }
+    return {
+      outcome: {
+        type: 'clarify',
+        question: reply.answer || 'I found more than one article that could help. Which of these do you mean?',
+        options: options.map((id) => ({ id, title: articlesById.get(id).title })),
+        citations: [],
+      },
+      guardrail: invalid.length ? { action: 'dropped', reason: `Removed options that were not provided: ${invalid.join(', ')}` } : null,
+    };
+  }
 
   if (valid.length === 0) {
     return {

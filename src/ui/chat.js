@@ -1,6 +1,6 @@
 import { html, raw, markdown, mount, $ } from './dom.js';
 import { articleView } from './app.js';
-import { HelpDesk } from '../rag/pipeline.js';
+import { HelpDesk, DEFAULT_MODEL_USE, MODEL_TIERS } from '../rag/pipeline.js';
 import { ExtractiveGenerator, AnthropicGenerator, ClaudeAiGenerator } from '../rag/generators.js';
 import { promptAsText } from '../rag/prompt.js';
 import { MODELS, DEFAULT_MODEL, formatUsd } from '../rag/pricing.js';
@@ -12,6 +12,8 @@ const SUGGESTIONS = [
   'Can I import contacts from a spreadsheet?',
   'mark a deal as lost',
 ];
+
+const MODEL_USE_LABELS = { decides: 'Full model', prose: 'Prose only when confident', offline: 'Offline when confident' };
 
 const SUPPORT_EMAIL = 'support@harbourcrm.example';
 
@@ -44,6 +46,7 @@ export class ChatWidget {
     this.mode = 'extractive';
     this.apiKey = '';
     this.model = DEFAULT_MODEL;
+    this.modelUse = DEFAULT_MODEL_USE;
     this.drawerArticle = null;
     this.settingsOpen = false;
     this.busy = false;
@@ -102,7 +105,7 @@ export class ChatWidget {
             <input id="chat-question" name="q" autocomplete="off" placeholder="Ask how to do something in Harbour CRM" ${this.busy ? raw('disabled') : ''} />
             <button type="submit" class="btn primary" ${this.busy ? raw('disabled') : ''}>Ask</button>
           </form>
-          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''} · <button type="button" class="link-button" data-chat="settings">Change</button>${SEARCH_STATE[this.semanticState] ? ` · ${SEARCH_STATE[this.semanticState]}` : ''}</p>
+          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''}${this.mode !== 'extractive' ? ` · ${MODEL_USE_LABELS[this.modelUse]}` : ''} · <button type="button" class="link-button" data-chat="settings">Change</button>${SEARCH_STATE[this.semanticState] ? ` · ${SEARCH_STATE[this.semanticState]}` : ''}</p>
           ${this.drawerArticle ? this.#drawer() : ''}
         </section>
       `,
@@ -130,6 +133,21 @@ export class ChatWidget {
           </label>`,
         )}
       </fieldset>
+      ${this.mode !== 'extractive'
+        ? html`<fieldset>
+          <legend>Model use</legend>
+          ${[
+            ['decides', MODEL_USE_LABELS.decides, 'Fewest wrong answers. For every question the model reads the closest articles and answers, asks which one you mean, or hands off.'],
+            ['prose', MODEL_USE_LABELS.prose, `When keyword search is at least ${Math.round(MODEL_TIERS.skipModelAtCoverage * 100)}% confident, its decision stands and the model only writes the answer. Below that, the model decides.`],
+            ['offline', MODEL_USE_LABELS.offline, `When keyword search is at least ${Math.round(MODEL_TIERS.skipModelAtCoverage * 100)}% confident, the article's own steps are shown with no model call. Below that, the model decides.`],
+          ].map(
+            ([id, label, detail]) => html`<label class="mode-option">
+              <input type="radio" name="model-use" value="${id}" ${this.modelUse === id ? raw('checked') : ''} />
+              <span><strong>${label}</strong><span class="hint">${detail}</span></span>
+            </label>`,
+          )}
+        </fieldset>`
+        : ''}
       ${this.mode === 'api'
         ? html`<div class="field"><label for="api-key">Anthropic API key</label><input id="api-key" type="password" autocomplete="off" value="${this.apiKey}" placeholder="sk-ant-..." aria-describedby="api-key-warning" /></div>
           <div class="key-warning" id="api-key-warning" role="note">
@@ -193,7 +211,9 @@ export class ChatWidget {
     };
 
     let promptBlock;
-    if (prompt && reply?.model === null) {
+    if (prompt && result.tier?.name === 'no-model') {
+      promptBlock = html`<p class="panel-note">Not sent: search was confident enough, so the article’s own steps were returned without a model call. This is the prompt a model would have received.</p><pre>${promptAsText(prompt)}</pre>`;
+    } else if (prompt && reply?.model === null) {
       promptBlock = html`<p class="panel-note">Not sent: offline mode answers with the article text. This is the prompt the Claude modes send for this question.</p><pre>${promptAsText(prompt)}</pre>`;
     } else if (prompt) {
       promptBlock = html`<p class="panel-note">Sent to ${reply?.model ?? 'Claude'}.</p><pre>${promptAsText(prompt)}</pre>`;
@@ -216,6 +236,7 @@ export class ChatWidget {
 
         <h3>Decision: ${decision.type}</h3>
         <p class="panel-note">${decision.reason}</p>
+        ${result.tier ? html`<p class="panel-note"><strong>Model tier: ${{ 'no-model': 'no model', prose: 'prose only', 'model-decides': 'model decides' }[result.tier.name]}.</strong> ${result.tier.reason}${result.tier.name === 'model-decides' ? ' The decision above is what search alone would have done.' : ''}</p>` : ''}
 
         ${decision.type === 'blocked'
           ? html`<p class="muted">Search didn't run: the input guard stopped the question first.</p>`
@@ -271,7 +292,7 @@ export class ChatWidget {
     this.messages.push(pending);
     this.render();
 
-    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder });
+    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse });
     let message;
     try {
       const result = await desk.ask(question, { chosenArticleId });
@@ -370,6 +391,10 @@ export class ChatWidget {
     }
     if (e.target.id === 'api-key') this.apiKey = e.target.value.trim();
     if (e.target.id === 'api-model') this.model = e.target.value;
+    if (e.target.name === 'model-use') {
+      this.modelUse = e.target.value;
+      this.render();
+    }
   }
 
   #supportDialog(question) {

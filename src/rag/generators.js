@@ -128,7 +128,7 @@ export function parseReply(text) {
 
 function normaliseReply(reply) {
   return {
-    type: reply?.type === 'answer' ? 'answer' : 'escalate',
+    type: ['answer', 'clarify'].includes(reply?.type) ? reply.type : 'escalate',
     answer: typeof reply?.answer === 'string' ? reply.answer : '',
     citations: Array.isArray(reply?.citations) ? reply.citations.filter((c) => typeof c === 'string') : [],
   };

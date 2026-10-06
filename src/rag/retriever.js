@@ -182,6 +182,20 @@ export class Retriever {
     };
   }
 
+  /**
+   * Candidates for a model that makes the decision itself: the top three from
+   * keyword search and the top three from semantic search, merged, up to
+   * five. Look-alikes stay in, because telling them apart is the model's job.
+   */
+  candidatesFor(retrieval, max = 5) {
+    const ids = [];
+    const pools = retrieval.semantic ? [retrieval.results.slice(0, 3), retrieval.semantic.slice(0, 3)] : [retrieval.results.slice(0, max)];
+    for (const id of pools.flat().map((x) => x.id)) {
+      if (!ids.includes(id) && ids.length < max) ids.push(id);
+    }
+    return ids;
+  }
+
   /** True when either article declares the other easy to confuse with it. */
   linked(a, b) {
     const x = this.byId.get(a);

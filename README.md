@@ -94,6 +94,8 @@ All generators share one contract and are interchangeable:
 | `AnthropicGenerator` | local, `--live` eval | Claude API via the official SDK, with the client injected. Defaults to Claude Sonnet 5.5, the model the comparison below favours. Low effort is a separate cost choice that the comparison didn't measure. The response is constrained by a JSON schema whose `citations` enum lists only the article ids in the prompt. Server-side refusal fallback is enabled. |
 | `ClaudeAiGenerator` | published artifact | Claude through the claude.ai page runtime, which is used when direct API calls are blocked. |
 
+With a model available, it is used in one of three ways (`MODEL_USE` in `src/rag/pipeline.js`, the "Model use" setting in the chat). The default, **full model**, sends every question to the model with up to five candidate articles (`buildRoutingPrompt`), and the model decides whether to answer, ask which one, or hand off. **Prose only** and **offline** let keyword search's decision stand when its top article covers at least 70% of the question, and have the model only write the answer or skip it altogether. They exist for evaluation; [the tiers comparison](#model-use-tiers) explains why full model is recommended. Every prompt ends with the user's question verbatim, after the articles and the interpretation, so the model can recover any meaning the rewriter lost. It is escaped, and it only arrives after the input guard has passed it.
+
 ### Verify
 
 The output guardrail in `validateReply` runs on every model reply. An answer that cites nothing, cites only articles that weren't in the prompt, or contains a link is withheld and the user is offered support. Invented citations alongside a valid one are dropped. With the schema enum in place, the invented-citation check should never fire on the API path. The empty-citation and link checks still can, because the schema doesn't enforce them, and the runtime path has no schema at all.
@@ -105,7 +107,7 @@ The assistant is a SaaS help bot, so it must only ever explain Harbour CRM from 
 1. **Input guard** (`src/rag/guard.js`). Before retrieval or any model call, the raw question is screened for obvious injection: instruction overrides ("ignore previous instructions", including French and Spanish), fake system messages, role changes ("you are now", "act as"), requests for the prompt, jailbreak phrases, attempts to dictate the reply format, the prompt's own tags, long encoded strings, and questions over 500 characters. Spaced letters, leetspeak and accents are normalised first. A blocked question never reaches a model.
 2. **Retrieval gate.** Off-topic requests ("find me a recipe for cake") don't cover enough of any article, so they are escalated before generation.
 3. **No external access.** The model call sends no tools, tool choice or MCP servers, so the model cannot browse or fetch anything. It sees only the articles retrieval chose. A unit test asserts this.
-4. **Hardened prompt.** The system prompt marks the question as untrusted and says to escalate anything other than Harbour CRM help. The question is escaped, so it can't close its `<question>` tag or inject new ones.
+4. **Hardened prompt.** The system prompt marks the question as untrusted and says to escalate anything other than Harbour CRM help. The verbatim question comes last, below the articles, and is escaped, so it can't close its `<question>` tag or inject new ones.
 5. **Output guardrail.** The reply must match a JSON schema whose citations can only be the articles provided. An answer that cites none of them, or contains a link, is withheld.
 
 6. **Browser policy.** The built site sets a content security policy. Apart from the site itself and Google Fonts, its only allowed network calls are to `api.anthropic.com`, and it loads no third-party scripts. The Anthropic SDK is bundled into the page rather than fetched from a CDN. All rendered text, including model answers and CRM data, is HTML-escaped.
@@ -197,7 +199,24 @@ node eval/compare/prepare.mjs          # build prompts and batches
 node eval/compare/judging.mjs prepare  # anonymise answers for the judge
 node eval/compare/judging.mjs merge    # after grading
 node eval/compare/score.mjs            # writes eval/compare/results.json for the report
+node eval/compare/tiers.mjs            # replays the replies under each model-use tier
 ```
+
+### Model use tiers
+
+Can the model be skipped when keyword search is already confident? `eval/compare/tiers.mjs` replays the same 131 questions under each tier with Sonnet's recorded replies, so no new model calls are needed. Confidence is the coverage of search's top article. The 70% threshold was fixed before measuring.
+
+| Policy (Sonnet 5.5) | Pass rate | Wrong answers | Calls a model | Cost per 1,000 |
+|---|---|---|---|---|
+| No model (offline mode) | 49.6% | 6 | 0% | $0.00 |
+| 1. Full model (default) | 91.6% | 4 | 99% | $2.66 |
+| 2. Prose only when search is ≥70%, else the model decides | 89.3% | 6 | 96% | $2.45 |
+| 3. Offline when search is ≥70%, else the model decides | 89.3% | 6 | 73% | $1.96 |
+| 3 reversed: offline when search is below 70% | 51.9% | 4 | 26% | $0.70 |
+
+**Full model is recommended; tiers 2 and 3 are included for evaluation.** Tier 3 is 26% cheaper per question, but it resolves 2.3 points fewer questions, about 23 more per 1,000 that end in a wrong answer or a hand-off, so it will likely raise the number of support tickets. That saves $0.70 per 1,000 questions, less than handling one ticket. Tier 2 saves only 8%, because writing prose costs nearly as much as deciding. Skipping the model when search is *unsure* is the wrong way round: 52 of the 56 questions Sonnet rescues sit below the 55% hand-off line.
+
+The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a calibrated probability, and the questions are bimodal: 78 sit below 55%, 29 at exactly 100%, and only 5 between 70% and 100%. Any threshold from 55% to 100% gives the same 89.3% pass rate and only changes cost ($1.60 to $2.07). The extra wrong answers are short, ambiguous questions such as "how do I change the status", which search covers 100%. Catching them would need an ambiguity signal, such as the gap to the second article, tested on fresh questions.
 
 ## Known limitations
 

@@ -30,10 +30,7 @@ for (const c of selected) {
   const analysis = retriever.analyse(c.query);
   const [queryVector] = await embed([queryText(analysis)]);
   const r = retriever.retrieve(c.query, { queryVector });
-  const ids = [];
-  for (const id of [...r.results.slice(0, 3).map((x) => x.id), ...r.semantic.slice(0, 3).map((x) => x.id)]) {
-    if (!ids.includes(id) && ids.length < MAX_CANDIDATES) ids.push(id);
-  }
+  const ids = retriever.candidatesFor(r, MAX_CANDIDATES);
   const prompt = buildRoutingPrompt(c.query, ids.map((id) => retriever.byId.get(id)), r.analysis);
   prompts.push({ id: c.id, split: c.split, candidates: ids, system: prompt.system, user: prompt.user, schema: prompt.schema });
 }
