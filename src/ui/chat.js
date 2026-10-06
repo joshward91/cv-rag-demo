@@ -200,7 +200,7 @@ export class ChatWidget {
     } else {
       promptBlock =
         decision.type === 'blocked'
-          ? html`<p class="panel-note">No model call. The input guard blocked the question before retrieval decided anything, which costs nothing.</p>`
+          ? html`<p class="panel-note">No model call. The input guard blocked the question before retrieval or any model call, which costs nothing.</p>`
           : html`<p class="panel-note">No model call. The retrieval policy decided to ${decision.type === 'clarify' ? 'ask a clarifying question' : decision.type === 'suggest' ? 'suggest articles' : 'escalate'} before generation, which costs nothing.</p>`;
     }
 
@@ -217,6 +217,9 @@ export class ChatWidget {
         <h3>Decision: ${decision.type}</h3>
         <p class="panel-note">${decision.reason}</p>
 
+        ${decision.type === 'blocked'
+          ? html`<p class="muted">Search didn't run: the input guard stopped the question first.</p>`
+          : html`
         <h3>Keyword search (BM25)</h3>
         <div class="table-wrap"><table class="scores">
           <thead><tr><th>#</th><th>Article</th><th class="num">BM25</th><th class="num">Coverage</th><th>Use</th></tr></thead>
@@ -225,11 +228,11 @@ export class ChatWidget {
             return html`<tr class="${cls}"><td class="num">${i + 1}</td><td><button type="button" class="link-button" data-open-article="${r.id}">${r.id}</button><span class="matched">${r.matched.join(' ')}</span></td><td class="num">${r.score.toFixed(2)}</td><td class="num">${Math.round(r.coverage * 100)}%</td><td>${label}</td></tr>`;
           })}</tbody>
         </table></div>
-        ${retrieval.results.length ? '' : html`<p class="muted">No article matched.</p>`}
+        ${retrieval.results.length || decision.type === 'blocked' ? '' : html`<p class="muted">No article matched.</p>`}
 
         <h3>Semantic search</h3>
         ${retrieval.semantic
-          ? html`<p class="panel-note">Cosine similarity between the rewritten question and each article’s closest title, alias or sentence (all-MiniLM-L6-v2, running in this browser). Only used when keyword search would escalate.</p>
+          ? html`<p class="panel-note">Cosine similarity between the rewritten question and each article’s closest title, alias or sentence (body sentences weighted ×0.9; all-MiniLM-L6-v2, running in this browser). Only used when keyword search would escalate.</p>
             <div class="table-wrap"><table class="scores">
               <thead><tr><th>#</th><th>Article</th><th class="num">Similarity</th><th>Use</th></tr></thead>
               <tbody>${retrieval.semantic.map((r, i) => {
@@ -238,6 +241,7 @@ export class ChatWidget {
               })}</tbody>
             </table></div>`
           : html`<p class="muted">${this.semanticState === 'loading' ? 'The semantic model was still loading, so this question used keyword search only.' : 'Not used in this build: keyword search only.'}</p>`}
+`}
 
         <h3>Prompt</h3>
         ${promptBlock}

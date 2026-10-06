@@ -45,7 +45,7 @@ export class ExtractiveGenerator {
 
 /**
  * Claude API via the official SDK. The client is injected so the browser can
- * pass an SDK instance loaded from a CDN and Node can pass the npm package.
+ * pass the bundled SDK and Node can pass the npm package, and tests can pass a fake.
  */
 export class AnthropicGenerator {
   name = 'anthropic';

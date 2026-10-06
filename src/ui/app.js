@@ -558,7 +558,7 @@ export class CrmApp {
     const categories = [...new Set(this.articles.map((a) => a.category))];
     return html`
       <h1>Help centre</h1>
-      <p class="lede">Every article describes a screen in this demo, so you can check each answer the help assistant gives against the app itself.</p>
+      <p class="lede">Every how-to article describes a screen in this demo, so you can check each answer the help assistant gives against the app itself.</p>
       <div class="help-grid">
         ${categories.map(
           (cat) => html`<section class="panel">

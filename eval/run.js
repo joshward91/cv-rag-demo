@@ -5,7 +5,7 @@
  *   node eval/run.js                 offline, extractive generator (deterministic, free)
  *   node eval/run.js --split dev     only the tuning set (also: test, holdout)
  *   node eval/run.js --live          Claude API generation; needs ANTHROPIC_API_KEY
- *   node eval/run.js --live --model claude-sonnet-5-5
+ *   node eval/run.js --live --model claude-opus-5-5
  *   node eval/run.js --lexical       BM25 only, without the semantic side of hybrid retrieval
  *
  * Every run also scores lexical-only retrieval and stores it under
@@ -134,6 +134,7 @@ const report = {
   knowledgeBase: { articles: articles.length, fingerprint },
   policy: DEFAULT_POLICY,
   pricing: MODELS,
+  defaultModel: DEFAULT_MODEL,
   summary: {
     all: summarise(rows, kbIds),
     dev: summarise(rows.filter((r) => r.split === 'dev'), kbIds),

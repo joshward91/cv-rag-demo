@@ -9,7 +9,7 @@
  *   escalate  The help centre doesn't cover this. The bot should offer
  *             "Contact support" and cite nothing.
  *   blocked   Prompt injection. The input guard should refuse it before
- *             retrieval decides anything or a model is called.
+ *             retrieval or any model call.
  *   assistant The question is about the chat assistant itself. The bot should
  *             explain its answer modes instead of escalating.
  *

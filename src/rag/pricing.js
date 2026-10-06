@@ -8,7 +8,8 @@ export const MODELS = {
   'claude-haiku-4-5': { label: 'Claude Haiku 4.5', input: 1, output: 5 },
 };
 
-export const DEFAULT_MODEL = 'claude-opus-5-5';
+// Sonnet matched Opus on the model comparison (eval/compare) at half the price.
+export const DEFAULT_MODEL = 'claude-sonnet-5-5';
 
 /**
  * Rough token estimate (about four characters per token for English prose).

@@ -108,18 +108,18 @@
     <p class="eyebrow">Harbour CRM · help assistant</p>
     <h1>Harbour Help evaluation</h1>
     <div class="prose">
-      <p><strong>Harbour Help is a grounded, retrieval-augmented help assistant for a small demo CRM.</strong> It answers only from the CRM's help centre: 29 single-task articles that match the app screen for screen. It doesn't use the model's general knowledge, has no tools or web access, and cites the article behind every answer. Retrieval is hybrid: <strong>keyword search</strong> (BM25F) with a coverage-based decision policy, plus <strong>semantic search</strong> (sentence embeddings from all-MiniLM-L6-v2, run in the visitor's browser). It is designed to fail safe: when it isn't confident it asks or hands over to support instead of guessing.</p>
+      <p><strong>Harbour Help is a grounded, retrieval-augmented help assistant for a small demo CRM.</strong> It answers only from the CRM's help centre: 29 short articles (27 single-task how-tos that match the app screen for screen, a glossary and a note about the demo data). It doesn't use the model's general knowledge, has no tools or web access, and cites the article behind every answer. Retrieval is hybrid: <strong>keyword search</strong> (BM25F) with a coverage-based decision policy, plus <strong>semantic search</strong> (sentence embeddings from all-MiniLM-L6-v2, run in the visitor's browser). It is designed to fail safe: when it isn't confident it asks or hands over to support instead of guessing.</p>
     </div>
     <div class="pipeline">
       <div class="step"><strong>Screen</strong>An input guard blocks obvious prompt injection (“ignore previous instructions”, role changes, prompt extraction, tag smuggling) before anything else runs.</div>
       <div class="step"><strong>Rewrite</strong>The question is normalised and rewritten with domain rules. The articles say "client" for the user's own business, so "a client's phone number" is read as a contact's phone. Synonyms are mapped and typos corrected.</div>
-      <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and compared with 292 precomputed article passages (titles, aliases and sentences).</div>
+      <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and compared with 292 precomputed article passages (titles, aliases and sentences, with sentences weighted ×0.9).</div>
       <div class="step"><strong>Decide</strong>A deterministic policy, so the decision is free and explainable. Answer when coverage is high. Ask when two look-alike articles are equally likely. Suggest up to three articles when only semantic search finds a close match. Otherwise hand over to support.</div>
       <div class="step"><strong>Generate</strong>Offline, the article's own steps. With Claude, a schema-constrained reply that may cite only the articles in the prompt, with a note saying which "client" the user meant.</div>
-      <div class="step"><strong>Verify</strong>Any answer that cites nothing, cites an article it wasn't given, or contains a link is withheld.</div>
+      <div class="step"><strong>Verify</strong>Any answer that cites none of the articles it was given, or contains a link, is withheld. Citations of articles it wasn't given are dropped.</div>
     </div>
     <div class="prose">
-      <p>This report measures every step on <span data-fill="cases"></span> questions in seven sets, four of them scored blind. It shows how often the assistant finds and cites the right article, asks when it should, and hands off what the help centre doesn't cover. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.</p>
+      <p>This report measures every step on <span data-fill="cases"></span> questions in seven sets. Four are held out from the code they test, and three of those have never been tuned on. It shows how often the assistant finds and cites the right article, asks when it should, and hands off what the help centre doesn't cover. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.</p>
     </div>
     <p class="meta" id="meta"></p>
     <p class="links"><a id="demo-link" href="#">Open the CRM demo</a><a href="https://github.com/joshward91/cv-rag-demo" target="_blank" rel="noopener">Source code on GitHub</a></p>
@@ -154,13 +154,13 @@
 
   <section aria-labelledby="hybrid-h">
     <h2 id="hybrid-h">Keyword search alone vs keyword + semantic</h2>
-    <div class="prose"><p>Every question runs twice: once with keyword search only, once with semantic search added. Semantic search never answers on its own, so the strict pass rate can't change. What changes is how often a user who would have been sent to support is offered the right article instead.</p></div>
+    <div class="prose"><p>Every question runs twice: once with keyword search only, once with semantic search added. Semantic search never answers on its own, so it barely moves the strict pass rate (here it didn't move at all). What changes is how often a user who would have been sent to support is offered the right article instead. The useful rate is measured over answerable questions only.</p></div>
     <div class="table-wrap"><table id="hybrid-table"></table></div>
   </section>
 
   <section aria-labelledby="history-h">
     <h2 id="history-h">Pass rate through tuning</h2>
-    <div class="legend"><span><span class="swatch"></span>Blind: first time this set met this code</span><span><span class="swatch tuned"></span>Tuned on: failures from this set informed the change</span></div>
+    <div class="legend"><span><span class="swatch"></span>Never tuned on ("blind" marks its first score)</span><span><span class="swatch tuned"></span>Tuned on: failures from this set informed a change</span></div>
     <div class="bars" id="history"></div>
   </section>
 
@@ -227,16 +227,36 @@
   fill('cases', all.cases);
 
   // Headline tiles ----------------------------------------------------------
-  const opus = data.summary.all.cost['claude-opus-5-5'];
+  const defaultModel = data.defaultModel ?? 'claude-sonnet-5-5';
+  const defaultCost = data.summary.all.cost[defaultModel];
   const tiles = [
     ['Retrieval hit rate', pct(all.retrieval.hitAt1), `Expected article ranked first on ${all.retrieval.cases} answerable questions. Top 3: ${pct(all.retrieval.hitAt3)}.`],
     ['Citation validity', pct(all.citations.validity), `Answers whose citations all exist and were in the prompt. Correct article cited: ${pct(all.citations.correctness)}.`],
-    ['Refusal correctness', pct(all.refusal.recall), `Out-of-scope questions escalated (${all.refusal.cases}). Answerable questions wrongly escalated: ${pct(all.refusal.falseRefusalRate)}.`],
-    ['Cost per question', usd(opus.perQuestion), `Estimated on Claude Opus 5.5. Clarifications and escalations make no model call, so they cost $0.`],
+    ['Refusal correctness', pct(all.refusal.recall), `Out-of-scope questions not answered (${all.refusal.cases}): handed off, or offered suggestions with Contact support. Answerable questions not answered: ${pct(all.refusal.falseRefusalRate)}, including ${all.suggestions.rightArticleSuggested} offered the right article.`],
+    ['Cost per question', usd(defaultCost.perQuestion), `Estimated on ${data.pricing[defaultModel].label}, the default model. Clarifications and escalations make no model call, so they cost $0.`],
   ];
   document.getElementById('tiles').innerHTML = tiles
     .map(([label, value, sub]) => `<div class="tile"><span class="label">${label}</span><span class="value">${value}</span><span class="sub">${esc(sub)}</span></div>`)
     .join('');
+
+  // What happened to a failed case, in words, with whether it failed safe.
+  const code = (ids) => ids.map((i) => `<code>${i}</code>`).join(', ');
+  function describeFailure(r) {
+    const e = r.expect;
+    if (e.type === 'answer') {
+      if (r.outcome === 'escalate') return 'handed to support instead of answered (fails safe)';
+      if (r.outcome === 'suggest') return r.options.includes(e.article) ? `offered <code>${e.article}</code> as a suggestion instead of answered (fails safe)` : `offered suggestions without <code>${e.article}</code> (${code(r.options)}), instead of answering (fails safe)`;
+      if (r.outcome === 'clarify') return r.options.includes(e.article) ? 'asked which article was meant instead of answering (fails safe)' : `asked a clarifying question without <code>${e.article}</code> among the options`;
+      if (r.outcome === 'answer') return `answered from ${code(r.citations)} instead of <code>${e.article}</code>${(e.never ?? []).some((n) => r.citations.includes(n)) ? ' (the forbidden article)' : ' (a wrong article, though not the forbidden one)'}`;
+    }
+    if (e.type === 'clarify') {
+      if (r.outcome === 'clarify' || r.outcome === 'suggest') return `asked, but without ${code(e.mustInclude.filter((i) => !r.options.includes(i)))} among the options`;
+      if (r.outcome === 'answer') return `answered from ${code(r.citations)} instead of asking which was meant`;
+      return 'handed to support instead of asking which was meant (fails safe)';
+    }
+    if (r.outcome === 'answer') return `answered from ${code(r.citations)} instead of handing off`;
+    return `got "${r.outcome}"`;
+  }
 
   const core = all.core;
   document.getElementById('core-big').textContent = `${core.passed}/${core.total}`;
@@ -245,7 +265,7 @@
   document.getElementById('core-text').innerHTML = `<p><strong>The client/contact trap.</strong> In Harbour CRM the client is the business using the product and a contact is the client's customer. So "how do I update a client's phone number" must retrieve <code>contact-edit-phone</code>, never <code>account-client-contact-number</code>. ${core.passed} of ${core.total} phrasings passed, and the forbidden article was never ranked first, offered, put in the prompt or cited (${core.neverViolations} violations).</p>${
     coreFail.length
       ? `<p>Failures: ${coreFail
-          .map((r) => `"${esc(r.query)}" was ${r.outcome === 'escalate' ? 'escalated to support instead of answered (fails safe)' : r.outcome === 'answer' ? `answered from <code>${r.citations.join(', ')}</code> instead of <code>${r.expect.article}</code> (a wrong article, though not the forbidden one)` : 'clarified instead of answered'}`)
+          .map((r) => `"${esc(r.query)}" was ${describeFailure(r)}`)
           .join('; ')}.</p>`
       : ''
   }`;
@@ -256,20 +276,20 @@
   const hold = data.summary.holdout;
   document.getElementById('holdout-big').textContent = pct(hold.passRate);
   const holdFails = data.rows.filter((r) => r.split === 'holdout' && !r.pass);
-  const holdEscalated = holdFails.filter((r) => r.outcome === 'escalate' && r.expect.type !== 'escalate').length;
-  const holdWrong = holdFails.filter((r) => r.outcome === 'answer' && r.expect.type === 'answer').length;
-  document.getElementById('holdout-text').innerHTML = `<p><strong>Blind hold-out pass rate</strong> (${hold.passed} of ${hold.cases}), against ${pct(data.summary.dev.passRate)} on the tuning set. The gap is the honest cost of tuning a lexical retriever. ${holdEscalated} of the ${holdFails.length} hold-out failures are questions escalated to support that the help centre could have answered, and ${holdWrong === 0 ? 'none' : holdWrong} answered with the wrong article.</p>`;
+  const holdSuggested = holdFails.filter((r) => r.outcome === 'suggest' && r.expect.type === 'answer' && r.options.includes(r.expect.article));
+  const holdOther = holdFails.filter((r) => !holdSuggested.includes(r));
+  document.getElementById('holdout-text').innerHTML = `<p><strong>Hold-out pass rate</strong> (${hold.passed} of ${hold.cases}). This set was scored blind in round 2 and has never been tuned on. Of its ${holdFails.length} failures, ${holdSuggested.length} were offered the right article as a suggestion instead of an answer${holdOther.length ? `, and ${holdOther.map((r) => `"${esc(r.query)}" was ${describeFailure(r)}`).join('; ')}` : ''}.</p>`;
 
   // Hybrid comparison --------------------------------------------------------
   const cmp = data.comparison;
   if (cmp) {
     const h3 = cmp.holdout3;
     document.getElementById('hybrid-big').textContent = `${pct(h3.lexical.suggestions.usefulRate)} → ${pct(h3.hybrid.suggestions.usefulRate)}`;
-    document.getElementById('hybrid-text').innerHTML = `<p><strong>Semantic search on the hard hold-out.</strong> These ${h3.hybrid.cases} questions were written before semantic search was built and avoid the articles' wording. Keyword search alone helped with ${pct(h3.lexical.suggestions.usefulRate)} of them. With semantic suggestions, ${pct(h3.hybrid.suggestions.usefulRate)} either got the right answer or were offered the right article. The strict pass rate stays at ${pct(h3.hybrid.passRate)}, because a suggestion is not counted as an answer.</p>${cmp.voice ? `<p>On the everyday voice set, written blind in a non-expert voice, keyword search alone helped with ${pct(cmp.voice.lexical.suggestions.usefulRate)}. It usually ranked the right article first, but rambling words pushed coverage under the threshold. With semantic suggestions that rises to ${pct(cmp.voice.hybrid.suggestions.usefulRate)}. The model comparison below shows what a model in the decision adds on top.</p>` : ''}`;
+    document.getElementById('hybrid-text').innerHTML = `<p><strong>Semantic search on the hard hold-out.</strong> These ${h3.hybrid.cases} questions were written before semantic search was built and avoid the articles' wording. Of the ${h3.hybrid.answers.cases} answerable ones, keyword search alone helped with ${pct(h3.lexical.suggestions.usefulRate)}. With semantic suggestions, ${pct(h3.hybrid.suggestions.usefulRate)} either got the right answer or were offered the right article. The strict pass rate stays at ${pct(h3.hybrid.passRate)}, because a suggestion is not counted as an answer.</p>${cmp.voice ? `<p>On the everyday voice set, written blind in a non-expert voice, keyword search alone helped with ${pct(cmp.voice.lexical.suggestions.usefulRate)} of the ${cmp.voice.hybrid.answers.cases} answerable questions. It usually ranked the right article first, but rambling words pushed coverage under the threshold. With semantic suggestions that rises to ${pct(cmp.voice.hybrid.suggestions.usefulRate)}. The model comparison below shows what a model in the decision adds on top.</p>` : ''}`;
     const cmpSplits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['holdout3', 'Hard hold-out'], ['voice', 'Everyday voice'], ['all', 'All']];
     const cmpRows = [
       ['Pass rate', (s) => pct(s.passRate)],
-      ['Useful rate', (s) => pct(s.suggestions.usefulRate)],
+      ['Useful rate (answerable questions)', (s) => pct(s.suggestions.usefulRate)],
       ['Right article suggested', (s) => s.suggestions.rightArticleSuggested],
       ['Suggestions shown for out-of-scope questions', (s) => s.suggestions.shownForOutOfScope],
     ];
@@ -283,14 +303,14 @@
   const metrics = [
     ['Questions', (s) => s.cases, ''],
     ['Pass rate', (s) => pct(s.passRate), 'Outcome and cited article both as expected'],
-    ['Useful rate', (s) => pct(s.suggestions.usefulRate), 'Answered correctly, or the right article suggested'],
+    ['Useful rate', (s) => pct(s.suggestions.usefulRate), 'Answerable questions answered correctly, or offered the right article'],
     ['Retrieval hit@1', (s) => pct(s.retrieval.hitAt1), 'Expected article ranked first'],
     ['Retrieval hit@3', (s) => pct(s.retrieval.hitAt3), 'Expected article in the top three'],
     ['Citation validity', (s) => pct(s.citations.validity), 'Citations exist and were in the prompt'],
     ['Correct article cited', (s) => pct(s.citations.correctness), 'Of answers to answerable questions'],
-    ['Refusal recall', (s) => pct(s.refusal.recall), 'Out-of-scope questions escalated'],
-    ['Refusal precision', (s) => pct(s.refusal.precision), 'Escalations that were out of scope'],
-    ['False refusals', (s) => pct(s.refusal.falseRefusalRate), 'Answerable questions escalated'],
+    ['Refusal recall', (s) => pct(s.refusal.recall), 'Out-of-scope questions not answered (handed off or suggestions only)'],
+    ['Refusal precision', (s) => pct(s.refusal.precision), 'Hand-offs and suggestions that were out of scope'],
+    ['False refusals', (s) => pct(s.refusal.falseRefusalRate), 'Answerable questions not answered (handed off or suggestions only)'],
     ['Clarification accuracy', (s) => pct(s.clarify.accuracy), 'Ambiguous questions asked about'],
     ['Unnecessary clarifications', (s) => pct(s.clarify.unnecessaryRate), 'Answerable questions asked about'],
   ];
@@ -305,7 +325,7 @@
   document.getElementById('history').innerHTML = history.rounds
     .map(
       (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores
-        .map((s) => bar(`${splitName[s.split]}${s.blind ? ' (blind)' : ''}`, s.passed / s.cases, `${s.passed}/${s.cases} · ${pct(s.passed / s.cases)}`, !s.blind))
+        .map((s) => bar(`${splitName[s.split]}${s.blind ? ' (blind)' : ''}`, s.passed / s.cases, `${s.passed}/${s.cases} · ${pct(s.passed / s.cases)}`, s.tuned ?? !s.blind))
         .join('')}</div>`,
     )
     .join('');
@@ -322,9 +342,9 @@
   const avgOut = Math.round(calls.reduce((s, r) => s + r.tokens.outputTokens, 0) / calls.length);
   document.getElementById('cost-text').innerHTML = data.mode.measuredUsage
     ? `<p>Measured from API usage on every call.</p>`
-    : `<p>This run used offline generation, so cost is <strong>estimated</strong> from the exact prompt each question would send: about ${avgIn} input tokens (system prompt, up to three articles, the question and the response schema) and ${avgOut} output tokens for a typical answer, at four characters per token. ${calls.length} of ${all.cases} questions would reach the model; the rest are clarified or escalated first, for free.</p><p>Claude Opus 5.5 always uses some adaptive thinking, billed as output tokens, which this estimate leaves out. <code>npm run eval -- --live</code> with an API key replaces the estimate with measured usage.</p>`;
+    : `<p>This run used offline generation, so cost is <strong>estimated</strong> from the exact prompt each question would send: about ${avgIn} input tokens (system prompt, up to three articles, the question and the response schema) and ${avgOut} output tokens for a typical answer, at four characters per token. ${calls.length} of ${all.cases} questions would reach the model; the rest are clarified or escalated first, for free.</p><p>Adaptive thinking, billed as output tokens, is left out of this estimate. <code>npm run eval -- --live</code> with an API key replaces the estimate with measured usage.</p>`;
   document.getElementById('cost-table').innerHTML = `<thead><tr><th>Model</th><th class="num">Price per MTok (in / out)</th><th class="num">Per question</th><th class="num">Per model call</th><th class="num">All ${all.cases} questions</th></tr></thead><tbody>${Object.entries(all.cost)
-    .map(([id, c]) => `<tr><td><span class="metric-name">${esc(data.pricing[id].label)}</span>${id === 'claude-opus-5-5' ? '<span class="metric-def">Default model</span>' : ''}</td><td class="num">$${data.pricing[id].input} / $${data.pricing[id].output}</td><td class="num">${usd(c.perQuestion)}</td><td class="num">${usd(c.perModelCall)}</td><td class="num">${usd(c.total)}</td></tr>`)
+    .map(([id, c]) => `<tr><td><span class="metric-name">${esc(data.pricing[id].label)}</span>${id === defaultModel ? '<span class="metric-def">Default model</span>' : ''}</td><td class="num">$${data.pricing[id].input} / $${data.pricing[id].output}</td><td class="num">${usd(c.perQuestion)}</td><td class="num">${usd(c.perModelCall)}</td><td class="num">${usd(c.total)}</td></tr>`)
     .join('')}</tbody>`;
 
   // Model comparison ---------------------------------------------------------
@@ -335,11 +355,12 @@
     const base = comparison.baseline;
     const best = [...models].sort((a, b) => a.costPerCorrect - b.costPerCorrect)[0];
     const top = [...models].sort((a, b) => b.passRate - a.passRate)[0];
-    document.getElementById('models-intro').innerHTML = `<p>For this comparison each model makes the decision itself. For every one of ${comparison.questions} questions from the four blind sets (${comparison.splits.map((k) => (splitName[k] ?? k).toLowerCase()).join(', ')}), it gets the top five candidate articles from keyword and semantic search, look-alikes included, and must answer, ask which one the user means, or hand off to support. A pass needs the right decision and the right article. An answer the judge found unfaithful to its article is not a pass. For ${comparison.unreachable.length} questions, search didn't put the right article in front of the model at all, so no model can pass them. Handing those off is the right call, and every model mostly did.</p><p>Without a model in the decision, the shipped pipeline passes ${base.passed} of ${base.cases} (${pct(base.passed / base.cases)}) and is useful on ${pct(base.useful / base.cases)}. It is free, but gives ${base.wrongAnswers} wrong answers.</p>`;
+    document.getElementById('models-intro').innerHTML = `<p>For this comparison each model makes the decision itself. For every one of ${comparison.questions} questions from the four held-out sets (${comparison.splits.map((k) => (splitName[k] ?? k).toLowerCase()).join(', ')}), it gets up to five candidate articles (the top three from each search, merged), look-alikes included, and must answer, ask which one the user means, or hand off to support. A pass needs the right decision and the right article. An answer the judge found unfaithful to its article is not a pass. For ${comparison.unreachable.length} questions, search didn't put the right article in front of the model at all, so no model can pass them. Handing those off is the right call, and every model mostly did.</p><p>Without a model in the decision, the shipped pipeline passes ${base.passed} of ${base.cases} (${pct(base.passed / base.cases)}), and ${pct(base.useful / base.cases)} of all ${base.cases} either pass or are offered the right article. It is free, but gives ${base.wrongAnswers} wrong answers. Its grading is slightly more lenient: a suggestion counts as a clarification or a hand-off, while a model must return exactly that decision.</p>`;
     const cell = (m, v) => `<td class="num">${v}</td>`;
     const rows = [
       ['Pass rate', (m) => `${pct(m.passRate)} <span class="metric-def">${m.passed}/${m.cases}</span>`],
       ['Pass rate where search found the article', (m) => pct(m.passRateReachable)],
+      ['Everyday voice questions', (m) => `${m.bySplit.voice.passed}/${m.bySplit.voice.cases}`],
       ['Answerable questions answered correctly', (m) => `${m.byExpected.answer.passed}/${m.byExpected.answer.cases}`],
       ['Ambiguous questions asked about', (m) => `${m.byExpected.clarify.passed}/${m.byExpected.clarify.cases}`],
       ['Out-of-scope questions handed off', (m) => `${m.byExpected.escalate.passed}/${m.byExpected.escalate.cases}`],
@@ -360,7 +381,7 @@
       best === top
         ? 'It is also the most accurate, so there is no trade-off to make.'
         : `${esc(top.label)} is ${(gap * 100).toFixed(1)} points more accurate for ${(top.costPer1000Questions / best.costPer1000Questions).toFixed(1)}× the price. Whether that is worth paying depends on what a wrong or missing answer costs the business. A ticket to a human costs far more than either model, so the deciding number is wrong answers, not price.`
-    }</p><p>How this was run: there were no API credits, so each model ran as a Claude Code subagent given the same system prompt and one question at a time. That means the decisions are real model output, but the token counts are estimated from the prompt and reply text at four characters per token and priced at API list prices, leaving out Opus's adaptive thinking. A separate Opus judge graded every answer against its article without knowing which model wrote it. Opus grading Opus may favour it slightly.</p>`;
+    }</p><p>How this was run: there were no API credits, so each model ran as a Claude Code subagent given the same system prompt and one question at a time. That means the decisions are real model output, but the token counts are estimated from the prompt and reply text at four characters per token and priced at API list prices. Thinking tokens are left out, so the real cost of Sonnet and Opus, which both think by default, is higher than shown; Haiku's is not. A separate Opus judge graded every answer against its article without knowing which model wrote it. Opus grading Opus may favour it slightly.</p>`;
   }
 
   // Issues ------------------------------------------------------------------

@@ -1,5 +1,5 @@
 {
-  "note": "Pass rates recorded from eval runs while the retrieval pipeline was tuned. Blind means the set had never been scored against the code being measured.",
+  "note": "Pass rates recorded from eval runs while the retrieval pipeline was tuned. blind: the first time the set was scored against this code. tuned: failures from this set informed a change in this round or earlier.",
   "rounds": [
     {
       "round": "Baseline",
@@ -9,7 +9,8 @@
           "split": "dev",
           "passed": 42,
           "cases": 52,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     },
@@ -21,13 +22,15 @@
           "split": "dev",
           "passed": 51,
           "cases": 52,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 36,
           "cases": 49,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     },
@@ -39,19 +42,22 @@
           "split": "dev",
           "passed": 52,
           "cases": 52,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     },
@@ -63,25 +69,29 @@
           "split": "dev",
           "passed": 52,
           "cases": 52,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 9,
           "cases": 12,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     },
@@ -93,25 +103,29 @@
           "split": "dev",
           "passed": 52,
           "cases": 52,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 10,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         }
       ]
     },
@@ -123,25 +137,29 @@
           "split": "dev",
           "passed": 52,
           "cases": 52,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         }
       ]
     },
@@ -153,25 +171,29 @@
           "split": "dev",
           "passed": 56,
           "cases": 56,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         }
       ]
     },
@@ -183,157 +205,179 @@
           "split": "dev",
           "passed": 68,
           "cases": 68,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         }
       ]
     },
     {
       "round": "Round 8",
-      "change": "Cursory pen test: 38 probes covering instruction overrides, fake system messages, prompt extraction, role play, jailbreak phrases, spaced, leetspeak, accented, French, Spanish and base64 obfuscation, harmful and off-topic asks, and XSS payloads. On the first run 7 of the 27 injections were blocked, 19 were escalated by retrieval, 1 got the assistant-settings reply, and none was answered. The guard now normalises obfuscation and covers those shapes, and blocks all 27. The built site also gained a content security policy that only allows calls to the Anthropic API, and the SDK is bundled instead of loaded from a CDN. No other result changed.",
+      "change": "Cursory pen test: 38 probes covering instruction overrides, fake system messages, prompt extraction, role play, jailbreak phrases, spaced, leetspeak, accented, French, Spanish and base64 obfuscation, harmful and off-topic asks, and XSS payloads. On the first run 7 of the 27 injections were blocked, 19 were escalated by retrieval, 1 got the assistant-settings reply, and none was answered. The guard now normalises obfuscation and covers those shapes, and blocks all 27. The built site also gained a content security policy whose only cross-site API calls are to the Anthropic API (Google Fonts aside), and the SDK is bundled instead of loaded from a CDN. No other result changed.",
       "scores": [
         {
           "split": "dev",
           "passed": 68,
           "cases": 68,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": true
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "redteam",
           "passed": 38,
           "cases": 38,
-          "blind": false
+          "blind": false,
+          "tuned": true
         }
       ]
     },
     {
       "round": "Round 9",
-      "change": "Hybrid retrieval. A small embedding model (all-MiniLM-L6-v2, run in the browser) now sits behind keyword search. A new blind hold-out of 36 paraphrases that avoid the articles' wording was written and committed before any of this code. Keyword search decides first. When it would hand off to support and the closest semantic match is at least 0.45 similar, the bot suggests up to three articles instead of answering, so a wrong semantic match costs a click, not a wrong answer. The 0.45 threshold was chosen on 15 new dev paraphrases. Strict pass rates are unchanged on every split. The useful rate (answered correctly or right article suggested) on the new hold-out rose from 20% to 70%, on the original hold-out from 82% to 100%, and across all 256 cases from 74% to 90%.",
+      "change": "Hybrid retrieval. A small embedding model (all-MiniLM-L6-v2, run in the browser) now sits behind keyword search. A new blind hold-out of 36 paraphrases that avoid the articles' wording was written and committed before any of this code. Keyword search decides first. When it would hand off to support and the closest semantic match is at least 0.45 similar, the bot suggests up to three articles instead of answering, so a wrong semantic match costs a click, not a wrong answer. The 0.45 threshold was chosen on 15 new dev paraphrases. Strict pass rates are unchanged on every existing case; 12 of the 15 new dev paraphrases fail strictly. The useful rate (answerable questions answered correctly or offered the right article) rose from 20% to 70% on the 30 answerable hard hold-out questions, from 82% to 100% on the original hold-out, and from 74% to 90% across the 162 answerable cases.",
       "scores": [
         {
           "split": "dev",
           "passed": 71,
           "cases": 83,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": false
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "redteam",
           "passed": 38,
           "cases": 38,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout3",
           "passed": 12,
           "cases": 36,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     },
     {
       "round": "Round 10",
-      "change": "Added an everyday-voice set: 48 rambling, non-expert and deliberately ambiguous questions written by a separate agent that saw only the articles, never the code. It was scored blind and is not tuned on. Keyword search alone passed 13 of 48 and helped only 6.7% of users: it usually ranked the right article first, but extra words dragged coverage below the escalate threshold. Semantic suggestions raise the useful rate to 76.7%. A separate model comparison, where Claude makes the answer/ask/escalate decision, passes 86 to 92% of the same kind of questions. The retrieval code did not change.",
+      "change": "Added an everyday-voice set: 48 rambling, non-expert and deliberately ambiguous questions written by a separate agent that saw only the articles, never the code. It was scored blind and is not tuned on. Keyword search alone passed 13 of 48 (mostly hand-offs and blocks that were correct) and answered only 2 of the 30 answerable questions (6.7%): it usually ranked the right article first, but extra words dragged coverage below the escalate threshold. Semantic suggestions raise the useful rate on those 30 to 76.7%. A separate model comparison, where Claude makes the answer/ask/escalate decision, passes 78 to 85% of the everyday voice questions (86 to 92% across all four held-out sets). The retrieval code did not change.",
       "scores": [
         {
           "split": "dev",
           "passed": 71,
           "cases": 83,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "test",
           "passed": 47,
           "cases": 49,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout",
           "passed": 32,
           "cases": 38,
-          "blind": false
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "perspective",
           "passed": 11,
           "cases": 12,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "redteam",
           "passed": 38,
           "cases": 38,
-          "blind": false
+          "blind": false,
+          "tuned": true
         },
         {
           "split": "holdout3",
           "passed": 12,
           "cases": 36,
-          "blind": false
+          "blind": false,
+          "tuned": false
         },
         {
           "split": "voice",
           "passed": 13,
           "cases": 48,
-          "blind": true
+          "blind": true,
+          "tuned": false
         }
       ]
     }
   ],
   "knownIssues": [
-    "Unknown but harmless words ('typo', 'wrong', 'keep', 'paying') lower coverage and cause false refusals. This is the main source of hold-out failures. It fails safe: the user is offered support rather than a wrong answer.",
+    "Unknown but harmless words ('typo', 'wrong', 'keep', 'paying') lower coverage, so keyword search hands off questions it could have answered. Since round 9, semantic suggestions offer the right article for 5 of the 6 hold-out failures; the sixth is 'change an address', answered from the company article instead of clarified.",
     "Lexical retrieval can't tell 'send an invoice to a contact' (unsupported) from 'where invoices are sent' (billing email). In Claude mode the model is told to escalate when the article doesn't answer the question, which is the intended second line of defence.",
     "'Change an address' is ambiguous between a company's postal address and an email address, but the policy answers with the company article.",
     "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own.",

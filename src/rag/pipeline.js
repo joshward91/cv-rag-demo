@@ -45,19 +45,23 @@ export class HelpDesk {
    * @param {{ chosenArticleId?: string }} [options] Set when the user picks a clarification option.
    */
   async ask(question, { chosenArticleId } = {}) {
+    // Input guard first: obvious prompt injection is never retrieved for,
+    // embedded or sent to a model. Only the rewrite runs, for the panel.
+    const screen = screenQuestion(question);
+    if (screen.blocked) {
+      const decision = { type: 'blocked', rule: screen.rule, reason: `Blocked by the input guard: the question ${screen.reason}${screen.match ? ` ("${screen.match}")` : ''}.` };
+      const analysis = this.retriever.analyse(question);
+      const unknownTerms = analysis.terms.filter((t) => !this.retriever.df.has(t));
+      const retrieval = { query: question, analysis: { ...analysis, unknownTerms }, results: [], semantic: null, decision, elapsedMs: 0 };
+      return { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'blocked', citations: [] } };
+    }
+
     let queryVector = null;
     if (this.embedder && this.retriever.semantic) {
       [queryVector] = await this.embedder([queryText(this.retriever.analyse(question))]);
     }
     const retrieval = this.retriever.retrieve(question, { queryVector });
     let decision = retrieval.decision;
-
-    // Input guard: obvious prompt injection never reaches retrieval's decision or a model.
-    const screen = screenQuestion(question);
-    if (screen.blocked) {
-      decision = { type: 'blocked', rule: screen.rule, reason: `Blocked by the input guard: the question ${screen.reason}${screen.match ? ` ("${screen.match}")` : ''}.` };
-      return { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'blocked', citations: [] } };
-    }
 
     if (chosenArticleId) {
       decision = {
