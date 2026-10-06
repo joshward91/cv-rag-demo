@@ -1,0 +1,1 @@
+{"type":"answer","answer":"To unlink a contact from their company:\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. In the **Company** list, choose **No company**.\n4. Select **Save contact**.\n\nThe contact will no longer appear under **Contacts at this company** on the company's page.","citations":["contact-link-company"],"model":"claude-opus-5-5"}

@@ -1,0 +1,1 @@
+{"type":"answer","answer":"To fix a misspelled dropdown option:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the dropdown field.\n3. In **Options** (one per line), correct the misspelled option.\n4. Select **Save field**.","citations":["custom-field-edit"],"model":"claude-sonnet-5-5"}

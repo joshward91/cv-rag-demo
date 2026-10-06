@@ -1,0 +1,1 @@
+{"type":"answer","answer":"The board doesn't support drag and drop, so dragging won't move the deal. Change its stage from the deal instead:\n\n1. Go to **Deals** and open the deal.\n2. In the **Stage** list, choose **Proposal sent**.\n\nThe change saves straight away and the deal moves to that column on the board.","citations":["deal-change-stage"],"model":"claude-opus-5-5"}

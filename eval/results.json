@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-10-06T05:33:55.039Z",
+  "generatedAt": "2026-10-06T05:53:29.938Z",
   "mode": {
     "generator": "extractive",
     "model": null,
     "measuredUsage": false,
     "countedTokens": true,
     "countedAt": "2026-10-06T05:02:36.944Z",
-    "measuredTokens": false,
-    "measuredModels": [],
-    "measuredAt": null
+    "measuredTokens": true,
+    "measuredModels": [
+      "claude-opus-5-5",
+      "claude-sonnet-5-5",
+      "claude-haiku-4-5"
+    ],
+    "measuredAt": "2026-10-06T05:51:10.586Z"
   },
   "knowledgeBase": {
     "articles": 29,
@@ -100,24 +104,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.002957828947368423,
-          "perModelCall": 0.006916769230769235,
-          "total": 0.8991800000000005
+          "perQuestion": 0.0031488815789473697,
+          "perModelCall": 0.007363538461538465,
+          "total": 0.9572600000000004
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0014789144736842114,
-          "perModelCall": 0.0034583846153846175,
-          "total": 0.44959000000000027
+          "perQuestion": 0.0015256907894736842,
+          "perModelCall": 0.0035677692307692307,
+          "total": 0.46381
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.000553105263157895,
-          "perModelCall": 0.0012934153846153853,
-          "total": 0.1681440000000001
+          "perQuestion": 0.0005591907894736841,
+          "perModelCall": 0.0013076461538461537,
+          "total": 0.16999399999999998
         }
       },
       "latencyMs": {
-        "p50": 1.2252619999999297,
-        "p95": 3.476235000000088
+        "p50": 1.1388600000000224,
+        "p95": 4.825454000000036
       },
       "byTag": {
         "ambiguity": {
@@ -229,24 +233,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.003596626506024097,
-          "perModelCall": 0.00694232558139535,
-          "total": 0.29852000000000006
+          "perQuestion": 0.00390867469879518,
+          "perModelCall": 0.007544651162790696,
+          "total": 0.32441999999999993
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0017983132530120485,
-          "perModelCall": 0.003471162790697675,
-          "total": 0.14926000000000003
+          "perQuestion": 0.001883734939759036,
+          "perModelCall": 0.0036360465116279067,
+          "total": 0.15635
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0006719759036144577,
-          "perModelCall": 0.0012970697674418601,
-          "total": 0.05577399999999999
+          "perQuestion": 0.0006766746987951808,
+          "perModelCall": 0.0013061395348837213,
+          "total": 0.05616400000000001
         }
       },
       "latencyMs": {
-        "p50": 1.2169750000000477,
-        "p95": 3.0971680000000106
+        "p50": 1.2607029999999213,
+        "p95": 6.688944999999876
       },
       "byTag": {
         "ambiguity": {
@@ -342,24 +346,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.005367510204081631,
-          "perModelCall": 0.006921263157894734,
-          "total": 0.2630079999999999
+          "perQuestion": 0.005695673469387755,
+          "perModelCall": 0.007344421052631579,
+          "total": 0.279088
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0026837551020408154,
-          "perModelCall": 0.003460631578947367,
-          "total": 0.13150399999999995
+          "perQuestion": 0.00276069387755102,
+          "perModelCall": 0.0035598421052631573,
+          "total": 0.13527399999999998
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0010054285714285716,
-          "perModelCall": 0.0012964736842105264,
-          "total": 0.049266000000000004
+          "perQuestion": 0.001020938775510204,
+          "perModelCall": 0.001316473684210526,
+          "total": 0.05002599999999999
         }
       },
       "latencyMs": {
-        "p50": 1.2660940000000664,
-        "p95": 2.4836629999999786
+        "p50": 1.0620930000000044,
+        "p95": 5.4392039999997905
       },
       "byTag": {
         "ambiguity": {
@@ -447,24 +451,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.004361578947368421,
-          "perModelCall": 0.006905833333333333,
-          "total": 0.16574
+          "perQuestion": 0.004602105263157895,
+          "perModelCall": 0.007286666666666667,
+          "total": 0.17488
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0021807894736842106,
-          "perModelCall": 0.0034529166666666666,
-          "total": 0.08287
+          "perQuestion": 0.002193157894736842,
+          "perModelCall": 0.0034725,
+          "total": 0.08334
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0008162105263157895,
-          "perModelCall": 0.0012923333333333335,
-          "total": 0.031016000000000002
+          "perQuestion": 0.0008192368421052629,
+          "perModelCall": 0.0012971249999999997,
+          "total": 0.031130999999999992
         }
       },
       "latencyMs": {
-        "p50": 1.0108370000000377,
-        "p95": 5.244854000000032
+        "p50": 1.043503000000328,
+        "p95": 5.3211019999998825
       },
       "byTag": {
         "ambiguity": {
@@ -552,24 +556,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.006690666666666668,
-          "perModelCall": 0.006690666666666668,
-          "total": 0.08028800000000001
+          "perQuestion": 0.007057333333333333,
+          "perModelCall": 0.007057333333333333,
+          "total": 0.084688
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.003345333333333334,
-          "perModelCall": 0.003345333333333334,
-          "total": 0.040144000000000006
+          "perQuestion": 0.0035811666666666665,
+          "perModelCall": 0.0035811666666666665,
+          "total": 0.042974
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.0012584166666666666,
-          "perModelCall": 0.0012584166666666666,
-          "total": 0.015101
+          "perQuestion": 0.0013246666666666667,
+          "perModelCall": 0.0013246666666666667,
+          "total": 0.015896
         }
       },
       "latencyMs": {
-        "p50": 1.1127920000001268,
-        "p95": 4.53503099999989
+        "p50": 0.9090360000000146,
+        "p95": 1.3375620000001618
       },
       "byTag": {
         "core": {
@@ -637,24 +641,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.000206,
-          "perModelCall": 0.007828,
-          "total": 0.007828
+          "perQuestion": 0.00020284210526315787,
+          "perModelCall": 0.007708,
+          "total": 0.007708
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.000103,
-          "perModelCall": 0.003914,
-          "total": 0.003914
+          "perQuestion": 0.00010194736842105262,
+          "perModelCall": 0.003874,
+          "total": 0.003874
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.000038605263157894734,
-          "perModelCall": 0.001467,
-          "total": 0.001467
+          "perQuestion": 0.000037552631578947374,
+          "perModelCall": 0.001427,
+          "total": 0.001427
         }
       },
       "latencyMs": {
         "p50": 0,
-        "p95": 2.257571999999982
+        "p95": 2.0754939999997077
       },
       "byTag": {
         "assistant": {
@@ -730,24 +734,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.0011717777777777777,
-          "perModelCall": 0.007030666666666667,
-          "total": 0.042184
+          "perQuestion": 0.0012345555555555556,
+          "perModelCall": 0.007407333333333333,
+          "total": 0.044444
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0005858888888888888,
-          "perModelCall": 0.0035153333333333334,
-          "total": 0.021092
+          "perQuestion": 0.0005945,
+          "perModelCall": 0.0035670000000000003,
+          "total": 0.021402
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.000216,
-          "perModelCall": 0.001296,
-          "total": 0.007776
+          "perQuestion": 0.00022155555555555557,
+          "perModelCall": 0.0013293333333333334,
+          "total": 0.007976
         }
       },
       "latencyMs": {
-        "p50": 1.2883640000000014,
-        "p95": 2.903731999999991
+        "p50": 1.2147310000000289,
+        "p95": 2.395155000000159
       },
       "byTag": {
         "core": {
@@ -827,24 +831,24 @@
       },
       "cost": {
         "claude-opus-5-5": {
-          "perQuestion": 0.0008669166666666668,
-          "perModelCall": 0.006935333333333334,
-          "total": 0.041612
+          "perQuestion": 0.0008756666666666666,
+          "perModelCall": 0.007005333333333333,
+          "total": 0.042032
         },
         "claude-sonnet-5-5": {
-          "perQuestion": 0.0004334583333333334,
-          "perModelCall": 0.003467666666666667,
-          "total": 0.020806
+          "perQuestion": 0.00042908333333333335,
+          "perModelCall": 0.0034326666666666668,
+          "total": 0.020596
         },
         "claude-haiku-4-5": {
-          "perQuestion": 0.00016133333333333334,
-          "perModelCall": 0.0012906666666666667,
-          "total": 0.007744
+          "perQuestion": 0.00015362499999999998,
+          "perModelCall": 0.0012289999999999998,
+          "total": 0.0073739999999999995
         }
       },
       "latencyMs": {
-        "p50": 2.289780999999948,
-        "p95": 3.968258999999989
+        "p50": 1.5235349999998107,
+        "p95": 2.3182220000003326
       },
       "byTag": {
         "ambiguity": {
@@ -944,24 +948,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.003596626506024097,
-            "perModelCall": 0.00694232558139535,
-            "total": 0.29852000000000006
+            "perQuestion": 0.00390867469879518,
+            "perModelCall": 0.007544651162790696,
+            "total": 0.32441999999999993
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0017983132530120485,
-            "perModelCall": 0.003471162790697675,
-            "total": 0.14926000000000003
+            "perQuestion": 0.001883734939759036,
+            "perModelCall": 0.0036360465116279067,
+            "total": 0.15635
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0006719759036144577,
-            "perModelCall": 0.0012970697674418601,
-            "total": 0.05577399999999999
+            "perQuestion": 0.0006766746987951808,
+            "perModelCall": 0.0013061395348837213,
+            "total": 0.05616400000000001
           }
         },
         "latencyMs": {
-          "p50": 0.07498100000020713,
-          "p95": 0.8012699999999313
+          "p50": 0.0757170000001679,
+          "p95": 0.6439420000001519
         },
         "byTag": {
           "ambiguity": {
@@ -1057,24 +1061,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.003596626506024097,
-            "perModelCall": 0.00694232558139535,
-            "total": 0.29852000000000006
+            "perQuestion": 0.00390867469879518,
+            "perModelCall": 0.007544651162790696,
+            "total": 0.32441999999999993
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0017983132530120485,
-            "perModelCall": 0.003471162790697675,
-            "total": 0.14926000000000003
+            "perQuestion": 0.001883734939759036,
+            "perModelCall": 0.0036360465116279067,
+            "total": 0.15635
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0006719759036144577,
-            "perModelCall": 0.0012970697674418601,
-            "total": 0.05577399999999999
+            "perQuestion": 0.0006766746987951808,
+            "perModelCall": 0.0013061395348837213,
+            "total": 0.05616400000000001
           }
         },
         "latencyMs": {
-          "p50": 0.8448000000003049,
-          "p95": 2.173986000000241
+          "p50": 0.4585019999999531,
+          "p95": 2.06590099999994
         },
         "byTag": {
           "ambiguity": {
@@ -1170,24 +1174,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.003596626506024097,
-            "perModelCall": 0.00694232558139535,
-            "total": 0.29852000000000006
+            "perQuestion": 0.00390867469879518,
+            "perModelCall": 0.007544651162790696,
+            "total": 0.32441999999999993
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0017983132530120485,
-            "perModelCall": 0.003471162790697675,
-            "total": 0.14926000000000003
+            "perQuestion": 0.001883734939759036,
+            "perModelCall": 0.0036360465116279067,
+            "total": 0.15635
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0006719759036144577,
-            "perModelCall": 0.0012970697674418601,
-            "total": 0.05577399999999999
+            "perQuestion": 0.0006766746987951808,
+            "perModelCall": 0.0013061395348837213,
+            "total": 0.05616400000000001
           }
         },
         "latencyMs": {
-          "p50": 1.2169750000000477,
-          "p95": 3.0971680000000106
+          "p50": 1.2607029999999213,
+          "p95": 6.688944999999876
         },
         "byTag": {
           "ambiguity": {
@@ -1285,24 +1289,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.005367510204081631,
-            "perModelCall": 0.006921263157894734,
-            "total": 0.2630079999999999
+            "perQuestion": 0.005695673469387755,
+            "perModelCall": 0.007344421052631579,
+            "total": 0.279088
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0026837551020408154,
-            "perModelCall": 0.003460631578947367,
-            "total": 0.13150399999999995
+            "perQuestion": 0.00276069387755102,
+            "perModelCall": 0.0035598421052631573,
+            "total": 0.13527399999999998
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0010054285714285716,
-            "perModelCall": 0.0012964736842105264,
-            "total": 0.049266000000000004
+            "perQuestion": 0.001020938775510204,
+            "perModelCall": 0.001316473684210526,
+            "total": 0.05002599999999999
           }
         },
         "latencyMs": {
-          "p50": 0.0727670000001126,
-          "p95": 0.6815249999999651
+          "p50": 0.07469700000001467,
+          "p95": 0.6395179999999527
         },
         "byTag": {
           "ambiguity": {
@@ -1390,24 +1394,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.005367510204081631,
-            "perModelCall": 0.006921263157894734,
-            "total": 0.2630079999999999
+            "perQuestion": 0.005695673469387755,
+            "perModelCall": 0.007344421052631579,
+            "total": 0.279088
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0026837551020408154,
-            "perModelCall": 0.003460631578947367,
-            "total": 0.13150399999999995
+            "perQuestion": 0.00276069387755102,
+            "perModelCall": 0.0035598421052631573,
+            "total": 0.13527399999999998
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0010054285714285716,
-            "perModelCall": 0.0012964736842105264,
-            "total": 0.049266000000000004
+            "perQuestion": 0.001020938775510204,
+            "perModelCall": 0.001316473684210526,
+            "total": 0.05002599999999999
           }
         },
         "latencyMs": {
-          "p50": 0.8003830000002381,
-          "p95": 1.9091170000001512
+          "p50": 0.42226099999970756,
+          "p95": 1.6156919999998536
         },
         "byTag": {
           "ambiguity": {
@@ -1495,24 +1499,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.005367510204081631,
-            "perModelCall": 0.006921263157894734,
-            "total": 0.2630079999999999
+            "perQuestion": 0.005695673469387755,
+            "perModelCall": 0.007344421052631579,
+            "total": 0.279088
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0026837551020408154,
-            "perModelCall": 0.003460631578947367,
-            "total": 0.13150399999999995
+            "perQuestion": 0.00276069387755102,
+            "perModelCall": 0.0035598421052631573,
+            "total": 0.13527399999999998
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0010054285714285716,
-            "perModelCall": 0.0012964736842105264,
-            "total": 0.049266000000000004
+            "perQuestion": 0.001020938775510204,
+            "perModelCall": 0.001316473684210526,
+            "total": 0.05002599999999999
           }
         },
         "latencyMs": {
-          "p50": 1.2660940000000664,
-          "p95": 2.4836629999999786
+          "p50": 1.0620930000000044,
+          "p95": 5.4392039999997905
         },
         "byTag": {
           "ambiguity": {
@@ -1602,24 +1606,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.004361578947368421,
-            "perModelCall": 0.006905833333333333,
-            "total": 0.16574
+            "perQuestion": 0.004602105263157895,
+            "perModelCall": 0.007286666666666667,
+            "total": 0.17488
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0021807894736842106,
-            "perModelCall": 0.0034529166666666666,
-            "total": 0.08287
+            "perQuestion": 0.002193157894736842,
+            "perModelCall": 0.0034725,
+            "total": 0.08334
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0008162105263157895,
-            "perModelCall": 0.0012923333333333335,
-            "total": 0.031016000000000002
+            "perQuestion": 0.0008192368421052629,
+            "perModelCall": 0.0012971249999999997,
+            "total": 0.031130999999999992
           }
         },
         "latencyMs": {
-          "p50": 0.07281400000010763,
-          "p95": 0.5452029999996739
+          "p50": 0.0714559999996709,
+          "p95": 0.49863599999935104
         },
         "byTag": {
           "ambiguity": {
@@ -1707,24 +1711,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.004361578947368421,
-            "perModelCall": 0.006905833333333333,
-            "total": 0.16574
+            "perQuestion": 0.004602105263157895,
+            "perModelCall": 0.007286666666666667,
+            "total": 0.17488
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0021807894736842106,
-            "perModelCall": 0.0034529166666666666,
-            "total": 0.08287
+            "perQuestion": 0.002193157894736842,
+            "perModelCall": 0.0034725,
+            "total": 0.08334
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0008162105263157895,
-            "perModelCall": 0.0012923333333333335,
-            "total": 0.031016000000000002
+            "perQuestion": 0.0008192368421052629,
+            "perModelCall": 0.0012971249999999997,
+            "total": 0.031130999999999992
           }
         },
         "latencyMs": {
-          "p50": 0.41487599999982194,
-          "p95": 0.9525410000001102
+          "p50": 0.3957580000001144,
+          "p95": 1.003596000000016
         },
         "byTag": {
           "ambiguity": {
@@ -1812,24 +1816,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.004361578947368421,
-            "perModelCall": 0.006905833333333333,
-            "total": 0.16574
+            "perQuestion": 0.004602105263157895,
+            "perModelCall": 0.007286666666666667,
+            "total": 0.17488
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0021807894736842106,
-            "perModelCall": 0.0034529166666666666,
-            "total": 0.08287
+            "perQuestion": 0.002193157894736842,
+            "perModelCall": 0.0034725,
+            "total": 0.08334
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0008162105263157895,
-            "perModelCall": 0.0012923333333333335,
-            "total": 0.031016000000000002
+            "perQuestion": 0.0008192368421052629,
+            "perModelCall": 0.0012971249999999997,
+            "total": 0.031130999999999992
           }
         },
         "latencyMs": {
-          "p50": 1.0108370000000377,
-          "p95": 5.244854000000032
+          "p50": 1.043503000000328,
+          "p95": 5.3211019999998825
         },
         "byTag": {
           "ambiguity": {
@@ -1919,24 +1923,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.006690666666666668,
-            "perModelCall": 0.006690666666666668,
-            "total": 0.08028800000000001
+            "perQuestion": 0.007057333333333333,
+            "perModelCall": 0.007057333333333333,
+            "total": 0.084688
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.003345333333333334,
-            "perModelCall": 0.003345333333333334,
-            "total": 0.040144000000000006
+            "perQuestion": 0.0035811666666666665,
+            "perModelCall": 0.0035811666666666665,
+            "total": 0.042974
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0012584166666666666,
-            "perModelCall": 0.0012584166666666666,
-            "total": 0.015101
+            "perQuestion": 0.0013246666666666667,
+            "perModelCall": 0.0013246666666666667,
+            "total": 0.015896
           }
         },
         "latencyMs": {
-          "p50": 0.07523600000013175,
-          "p95": 0.3235370000002149
+          "p50": 0.08856899999955203,
+          "p95": 0.9198030000006838
         },
         "byTag": {
           "core": {
@@ -2004,24 +2008,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.006690666666666668,
-            "perModelCall": 0.006690666666666668,
-            "total": 0.08028800000000001
+            "perQuestion": 0.007057333333333333,
+            "perModelCall": 0.007057333333333333,
+            "total": 0.084688
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.003345333333333334,
-            "perModelCall": 0.003345333333333334,
-            "total": 0.040144000000000006
+            "perQuestion": 0.0035811666666666665,
+            "perModelCall": 0.0035811666666666665,
+            "total": 0.042974
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0012584166666666666,
-            "perModelCall": 0.0012584166666666666,
-            "total": 0.015101
+            "perQuestion": 0.0013246666666666667,
+            "perModelCall": 0.0013246666666666667,
+            "total": 0.015896
           }
         },
         "latencyMs": {
-          "p50": 0.7802569999998923,
-          "p95": 1.1595109999998385
+          "p50": 0.41821500000014566,
+          "p95": 0.7031990000000405
         },
         "byTag": {
           "core": {
@@ -2089,24 +2093,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.006690666666666668,
-            "perModelCall": 0.006690666666666668,
-            "total": 0.08028800000000001
+            "perQuestion": 0.007057333333333333,
+            "perModelCall": 0.007057333333333333,
+            "total": 0.084688
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.003345333333333334,
-            "perModelCall": 0.003345333333333334,
-            "total": 0.040144000000000006
+            "perQuestion": 0.0035811666666666665,
+            "perModelCall": 0.0035811666666666665,
+            "total": 0.042974
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.0012584166666666666,
-            "perModelCall": 0.0012584166666666666,
-            "total": 0.015101
+            "perQuestion": 0.0013246666666666667,
+            "perModelCall": 0.0013246666666666667,
+            "total": 0.015896
           }
         },
         "latencyMs": {
-          "p50": 1.1127920000001268,
-          "p95": 4.53503099999989
+          "p50": 0.9090360000000146,
+          "p95": 1.3375620000001618
         },
         "byTag": {
           "core": {
@@ -2176,24 +2180,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.000206,
-            "perModelCall": 0.007828,
-            "total": 0.007828
+            "perQuestion": 0.00020284210526315787,
+            "perModelCall": 0.007708,
+            "total": 0.007708
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.000103,
-            "perModelCall": 0.003914,
-            "total": 0.003914
+            "perQuestion": 0.00010194736842105262,
+            "perModelCall": 0.003874,
+            "total": 0.003874
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000038605263157894734,
-            "perModelCall": 0.001467,
-            "total": 0.001467
+            "perQuestion": 0.000037552631578947374,
+            "perModelCall": 0.001427,
+            "total": 0.001427
           }
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 1.160127999999986
+          "p95": 1.1173209999997198
         },
         "byTag": {
           "assistant": {
@@ -2269,24 +2273,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.000206,
-            "perModelCall": 0.007828,
-            "total": 0.007828
+            "perQuestion": 0.00020284210526315787,
+            "perModelCall": 0.007708,
+            "total": 0.007708
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.000103,
-            "perModelCall": 0.003914,
-            "total": 0.003914
+            "perQuestion": 0.00010194736842105262,
+            "perModelCall": 0.003874,
+            "total": 0.003874
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000038605263157894734,
-            "perModelCall": 0.001467,
-            "total": 0.001467
+            "perQuestion": 0.000037552631578947374,
+            "perModelCall": 0.001427,
+            "total": 0.001427
           }
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 1.4736299999999574
+          "p95": 1.5222140000000763
         },
         "byTag": {
           "assistant": {
@@ -2362,24 +2366,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.000206,
-            "perModelCall": 0.007828,
-            "total": 0.007828
+            "perQuestion": 0.00020284210526315787,
+            "perModelCall": 0.007708,
+            "total": 0.007708
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.000103,
-            "perModelCall": 0.003914,
-            "total": 0.003914
+            "perQuestion": 0.00010194736842105262,
+            "perModelCall": 0.003874,
+            "total": 0.003874
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000038605263157894734,
-            "perModelCall": 0.001467,
-            "total": 0.001467
+            "perQuestion": 0.000037552631578947374,
+            "perModelCall": 0.001427,
+            "total": 0.001427
           }
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 2.257571999999982
+          "p95": 2.0754939999997077
         },
         "byTag": {
           "assistant": {
@@ -2457,24 +2461,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0011717777777777777,
-            "perModelCall": 0.007030666666666667,
-            "total": 0.042184
+            "perQuestion": 0.0012345555555555556,
+            "perModelCall": 0.007407333333333333,
+            "total": 0.044444
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0005858888888888888,
-            "perModelCall": 0.0035153333333333334,
-            "total": 0.021092
+            "perQuestion": 0.0005945,
+            "perModelCall": 0.0035670000000000003,
+            "total": 0.021402
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000216,
-            "perModelCall": 0.001296,
-            "total": 0.007776
+            "perQuestion": 0.00022155555555555557,
+            "perModelCall": 0.0013293333333333334,
+            "total": 0.007976
           }
         },
         "latencyMs": {
-          "p50": 0.3793780000000879,
-          "p95": 0.7364059999999881
+          "p50": 0.3201600000002145,
+          "p95": 0.7359280000000581
         },
         "byTag": {
           "core": {
@@ -2554,24 +2558,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0011717777777777777,
-            "perModelCall": 0.007030666666666667,
-            "total": 0.042184
+            "perQuestion": 0.0012345555555555556,
+            "perModelCall": 0.007407333333333333,
+            "total": 0.044444
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0005858888888888888,
-            "perModelCall": 0.0035153333333333334,
-            "total": 0.021092
+            "perQuestion": 0.0005945,
+            "perModelCall": 0.0035670000000000003,
+            "total": 0.021402
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000216,
-            "perModelCall": 0.001296,
-            "total": 0.007776
+            "perQuestion": 0.00022155555555555557,
+            "perModelCall": 0.0013293333333333334,
+            "total": 0.007976
           }
         },
         "latencyMs": {
-          "p50": 0.7808469999999943,
-          "p95": 1.7638139999999112
+          "p50": 0.7299970000003668,
+          "p95": 1.1887339999998403
         },
         "byTag": {
           "core": {
@@ -2651,24 +2655,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0011717777777777777,
-            "perModelCall": 0.007030666666666667,
-            "total": 0.042184
+            "perQuestion": 0.0012345555555555556,
+            "perModelCall": 0.007407333333333333,
+            "total": 0.044444
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0005858888888888888,
-            "perModelCall": 0.0035153333333333334,
-            "total": 0.021092
+            "perQuestion": 0.0005945,
+            "perModelCall": 0.0035670000000000003,
+            "total": 0.021402
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000216,
-            "perModelCall": 0.001296,
-            "total": 0.007776
+            "perQuestion": 0.00022155555555555557,
+            "perModelCall": 0.0013293333333333334,
+            "total": 0.007976
           }
         },
         "latencyMs": {
-          "p50": 1.2883640000000014,
-          "p95": 2.903731999999991
+          "p50": 1.2147310000000289,
+          "p95": 2.395155000000159
         },
         "byTag": {
           "core": {
@@ -2750,24 +2754,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0008669166666666668,
-            "perModelCall": 0.006935333333333334,
-            "total": 0.041612
+            "perQuestion": 0.0008756666666666666,
+            "perModelCall": 0.007005333333333333,
+            "total": 0.042032
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0004334583333333334,
-            "perModelCall": 0.003467666666666667,
-            "total": 0.020806
+            "perQuestion": 0.00042908333333333335,
+            "perModelCall": 0.0034326666666666668,
+            "total": 0.020596
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.00016133333333333334,
-            "perModelCall": 0.0012906666666666667,
-            "total": 0.007744
+            "perQuestion": 0.00015362499999999998,
+            "perModelCall": 0.0012289999999999998,
+            "total": 0.0073739999999999995
           }
         },
         "latencyMs": {
-          "p50": 0.5305169999996906,
-          "p95": 1.2198560000001635
+          "p50": 0.5356050000000323,
+          "p95": 1.9889430000002903
         },
         "byTag": {
           "ambiguity": {
@@ -2863,24 +2867,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0008669166666666668,
-            "perModelCall": 0.006935333333333334,
-            "total": 0.041612
+            "perQuestion": 0.0008756666666666666,
+            "perModelCall": 0.007005333333333333,
+            "total": 0.042032
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0004334583333333334,
-            "perModelCall": 0.003467666666666667,
-            "total": 0.020806
+            "perQuestion": 0.00042908333333333335,
+            "perModelCall": 0.0034326666666666668,
+            "total": 0.020596
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.00016133333333333334,
-            "perModelCall": 0.0012906666666666667,
-            "total": 0.007744
+            "perQuestion": 0.00015362499999999998,
+            "perModelCall": 0.0012289999999999998,
+            "total": 0.0073739999999999995
           }
         },
         "latencyMs": {
-          "p50": 1.13178999999991,
-          "p95": 2.4406510000003436
+          "p50": 1.072559000000183,
+          "p95": 1.7547899999999572
         },
         "byTag": {
           "ambiguity": {
@@ -2976,24 +2980,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.0008669166666666668,
-            "perModelCall": 0.006935333333333334,
-            "total": 0.041612
+            "perQuestion": 0.0008756666666666666,
+            "perModelCall": 0.007005333333333333,
+            "total": 0.042032
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0004334583333333334,
-            "perModelCall": 0.003467666666666667,
-            "total": 0.020806
+            "perQuestion": 0.00042908333333333335,
+            "perModelCall": 0.0034326666666666668,
+            "total": 0.020596
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.00016133333333333334,
-            "perModelCall": 0.0012906666666666667,
-            "total": 0.007744
+            "perQuestion": 0.00015362499999999998,
+            "perModelCall": 0.0012289999999999998,
+            "total": 0.0073739999999999995
           }
         },
         "latencyMs": {
-          "p50": 2.289780999999948,
-          "p95": 3.968258999999989
+          "p50": 1.5235349999998107,
+          "p95": 2.3182220000003326
         },
         "byTag": {
           "ambiguity": {
@@ -3091,24 +3095,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.002957828947368423,
-            "perModelCall": 0.006916769230769235,
-            "total": 0.8991800000000005
+            "perQuestion": 0.0031488815789473697,
+            "perModelCall": 0.007363538461538465,
+            "total": 0.9572600000000004
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0014789144736842114,
-            "perModelCall": 0.0034583846153846175,
-            "total": 0.44959000000000027
+            "perQuestion": 0.0015256907894736842,
+            "perModelCall": 0.0035677692307692307,
+            "total": 0.46381
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000553105263157895,
-            "perModelCall": 0.0012934153846153853,
-            "total": 0.1681440000000001
+            "perQuestion": 0.0005591907894736841,
+            "perModelCall": 0.0013076461538461537,
+            "total": 0.16999399999999998
           }
         },
         "latencyMs": {
-          "p50": 0.07942499999990105,
-          "p95": 0.9737270000000535
+          "p50": 0.08157000000028347,
+          "p95": 0.9463100000002669
         },
         "byTag": {
           "ambiguity": {
@@ -3220,24 +3224,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.002957828947368423,
-            "perModelCall": 0.006916769230769235,
-            "total": 0.8991800000000005
+            "perQuestion": 0.0031488815789473697,
+            "perModelCall": 0.007363538461538465,
+            "total": 0.9572600000000004
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0014789144736842114,
-            "perModelCall": 0.0034583846153846175,
-            "total": 0.44959000000000027
+            "perQuestion": 0.0015256907894736842,
+            "perModelCall": 0.0035677692307692307,
+            "total": 0.46381
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000553105263157895,
-            "perModelCall": 0.0012934153846153853,
-            "total": 0.1681440000000001
+            "perQuestion": 0.0005591907894736841,
+            "perModelCall": 0.0013076461538461537,
+            "total": 0.16999399999999998
           }
         },
         "latencyMs": {
-          "p50": 0.7751189999999042,
-          "p95": 1.7638139999999112
+          "p50": 0.461493999999675,
+          "p95": 1.5579619999998613
         },
         "byTag": {
           "ambiguity": {
@@ -3349,24 +3353,24 @@
         },
         "cost": {
           "claude-opus-5-5": {
-            "perQuestion": 0.002957828947368423,
-            "perModelCall": 0.006916769230769235,
-            "total": 0.8991800000000005
+            "perQuestion": 0.0031488815789473697,
+            "perModelCall": 0.007363538461538465,
+            "total": 0.9572600000000004
           },
           "claude-sonnet-5-5": {
-            "perQuestion": 0.0014789144736842114,
-            "perModelCall": 0.0034583846153846175,
-            "total": 0.44959000000000027
+            "perQuestion": 0.0015256907894736842,
+            "perModelCall": 0.0035677692307692307,
+            "total": 0.46381
           },
           "claude-haiku-4-5": {
-            "perQuestion": 0.000553105263157895,
-            "perModelCall": 0.0012934153846153853,
-            "total": 0.1681440000000001
+            "perQuestion": 0.0005591907894736841,
+            "perModelCall": 0.0013076461538461537,
+            "total": 0.16999399999999998
           }
         },
         "latencyMs": {
-          "p50": 1.2252619999999297,
-          "p95": 3.476235000000088
+          "p50": 1.1388600000000224,
+          "p95": 4.825454000000036
         },
         "byTag": {
           "ambiguity": {
@@ -3441,8 +3445,8 @@
     "sameTop1": 304,
     "sameTop3": 304,
     "microsecondsPerQuestion": {
-      "flat": 544.606,
-      "hnsw": 574.552
+      "flat": 557.99,
+      "hnsw": 562.566
     },
     "sameOutcome": 304
   },
@@ -3514,17 +3518,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 14.399001999999996,
+      "retrievalMs": 29.99034699999993,
       "tokens": {
         "inputTokens": 1012,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 184,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007148,
-        "claude-sonnet-5-5": 0.003574,
-        "claude-haiku-4-5": 0.001362
+        "claude-opus-5-5": 0.007508,
+        "claude-sonnet-5-5": 0.003864,
+        "claude-haiku-4-5": 0.001447
       },
       "pass": true,
       "neverViolated": false,
@@ -3597,17 +3600,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.8275830000000042,
+      "retrievalMs": 7.373483999999962,
       "tokens": {
         "inputTokens": 1007,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007128,
-        "claude-sonnet-5-5": 0.003564,
-        "claude-haiku-4-5": 0.001356
+        "claude-opus-5-5": 0.007428,
+        "claude-sonnet-5-5": 0.003724,
+        "claude-haiku-4-5": 0.001446
       },
       "pass": true,
       "neverViolated": false,
@@ -3680,17 +3682,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 3.0971680000000106,
+      "retrievalMs": 6.341763000000128,
       "tokens": {
         "inputTokens": 1018,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 137,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007172,
-        "claude-sonnet-5-5": 0.003586,
-        "claude-haiku-4-5": 0.001365
+        "claude-opus-5-5": 0.007512,
+        "claude-sonnet-5-5": 0.003406,
+        "claude-haiku-4-5": 0.001455
       },
       "pass": true,
       "neverViolated": false,
@@ -3761,17 +3762,16 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 1.461291000000017,
+      "retrievalMs": 2.4717880000000605,
       "tokens": {
         "inputTokens": 967,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 96,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006108,
-        "claude-sonnet-5-5": 0.003054,
-        "claude-haiku-4-5": 0.001152
+        "claude-opus-5-5": 0.006228,
+        "claude-sonnet-5-5": 0.002894,
+        "claude-haiku-4-5": 0.001212
       },
       "pass": true,
       "neverViolated": false,
@@ -3847,17 +3847,16 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 2.1321519999999623,
+      "retrievalMs": 7.769506999999976,
       "tokens": {
         "inputTokens": 1318,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 172,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008372,
-        "claude-sonnet-5-5": 0.004186,
-        "claude-haiku-4-5": 0.001592
+        "claude-opus-5-5": 0.008912,
+        "claude-sonnet-5-5": 0.004356,
+        "claude-haiku-4-5": 0.001682
       },
       "pass": true,
       "neverViolated": false,
@@ -3929,17 +3928,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.9235909999999876,
+      "retrievalMs": 4.825454000000036,
       "tokens": {
         "inputTokens": 1009,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 177,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007136,
-        "claude-sonnet-5-5": 0.003568,
-        "claude-haiku-4-5": 0.001356
+        "claude-opus-5-5": 0.007516,
+        "claude-sonnet-5-5": 0.003788,
+        "claude-haiku-4-5": 0.001446
       },
       "pass": true,
       "neverViolated": false,
@@ -4011,17 +4009,16 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 1.6011699999999678,
+      "retrievalMs": 5.146265000000085,
       "tokens": {
         "inputTokens": 1162,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 124,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006888,
-        "claude-sonnet-5-5": 0.003444,
-        "claude-haiku-4-5": 0.001288
+        "claude-opus-5-5": 0.007228,
+        "claude-sonnet-5-5": 0.003564,
+        "claude-haiku-4-5": 0.001363
       },
       "pass": true,
       "neverViolated": false,
@@ -4092,17 +4089,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 2.3185320000000047,
+      "retrievalMs": 3.528912999999875,
       "tokens": {
         "inputTokens": 1007,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 185,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007128,
-        "claude-sonnet-5-5": 0.003564,
-        "claude-haiku-4-5": 0.001357
+        "claude-opus-5-5": 0.007488,
+        "claude-sonnet-5-5": 0.003864,
+        "claude-haiku-4-5": 0.001447
       },
       "pass": true,
       "neverViolated": false,
@@ -4167,17 +4163,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1847349999999892,
+      "retrievalMs": 1.294338999999809,
       "tokens": {
         "inputTokens": 1088,
-        "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "outputTokens": 155,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007732,
-        "claude-sonnet-5-5": 0.003866,
-        "claude-haiku-4-5": 0.00145
+        "claude-opus-5-5": 0.007632,
+        "claude-sonnet-5-5": 0.003726,
+        "claude-haiku-4-5": 0.001375
       },
       "pass": true,
       "neverViolated": false,
@@ -4246,17 +4241,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1127850000000308,
+      "retrievalMs": 1.1009209999999712,
       "tokens": {
         "inputTokens": 1125,
-        "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "outputTokens": 177,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00788,
-        "claude-sonnet-5-5": 0.00394,
-        "claude-haiku-4-5": 0.001479
+        "claude-opus-5-5": 0.00808,
+        "claude-sonnet-5-5": 0.00402,
+        "claude-haiku-4-5": 0.001504
       },
       "pass": true,
       "neverViolated": false,
@@ -4322,17 +4316,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.3550369999999816,
+      "retrievalMs": 5.7701220000001285,
       "tokens": {
         "inputTokens": 995,
-        "outputTokens": 145,
-        "measured": false,
-        "counted": true
+        "outputTokens": 162,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00688,
-        "claude-sonnet-5-5": 0.00344,
-        "claude-haiku-4-5": 0.001304
+        "claude-opus-5-5": 0.0073,
+        "claude-sonnet-5-5": 0.00361,
+        "claude-haiku-4-5": 0.001369
       },
       "pass": true,
       "neverViolated": false,
@@ -4397,17 +4390,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.2490149999999858,
+      "retrievalMs": 1.0901449999998931,
       "tokens": {
         "inputTokens": 1011,
-        "outputTokens": 162,
-        "measured": false,
-        "counted": true
+        "outputTokens": 164,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007284,
-        "claude-sonnet-5-5": 0.003642,
-        "claude-haiku-4-5": 0.001325
+        "claude-opus-5-5": 0.007444,
+        "claude-sonnet-5-5": 0.003662,
+        "claude-haiku-4-5": 0.001345
       },
       "pass": true,
       "neverViolated": false,
@@ -4470,17 +4462,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3165579999999864,
+      "retrievalMs": 1.0553010000000995,
       "tokens": {
         "inputTokens": 988,
-        "outputTokens": 174,
-        "measured": false,
-        "counted": true
+        "outputTokens": 191,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007432,
-        "claude-sonnet-5-5": 0.003716,
-        "claude-haiku-4-5": 0.001374
+        "claude-opus-5-5": 0.009452,
+        "claude-sonnet-5-5": 0.003886,
+        "claude-haiku-4-5": 0.001429
       },
       "pass": true,
       "neverViolated": false,
@@ -4546,17 +4537,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1800510000000486,
+      "retrievalMs": 1.100014000000101,
       "tokens": {
         "inputTokens": 977,
-        "outputTokens": 129,
-        "measured": false,
-        "counted": true
+        "outputTokens": 154,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006488,
-        "claude-sonnet-5-5": 0.003244,
-        "claude-haiku-4-5": 0.001199
+        "claude-opus-5-5": 0.007068,
+        "claude-sonnet-5-5": 0.003494,
+        "claude-haiku-4-5": 0.001299
       },
       "pass": true,
       "neverViolated": false,
@@ -4622,17 +4612,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 4.283303999999987,
+      "retrievalMs": 1.2680199999999786,
       "tokens": {
         "inputTokens": 963,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 141,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006192,
-        "claude-sonnet-5-5": 0.003096,
-        "claude-haiku-4-5": 0.001187
+        "claude-opus-5-5": 0.006672,
+        "claude-sonnet-5-5": 0.003336,
+        "claude-haiku-4-5": 0.001217
       },
       "pass": true,
       "neverViolated": false,
@@ -4696,17 +4685,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3689549999999144,
+      "retrievalMs": 10.964751999999862,
       "tokens": {
         "inputTokens": 950,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 136,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00648,
-        "claude-sonnet-5-5": 0.00324,
-        "claude-haiku-4-5": 0.001196
+        "claude-opus-5-5": 0.00704,
+        "claude-sonnet-5-5": 0.00326,
+        "claude-haiku-4-5": 0.001276
       },
       "pass": true,
       "neverViolated": false,
@@ -4772,17 +4760,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.3388360000000148,
+      "retrievalMs": 1.217245000000048,
       "tokens": {
         "inputTokens": 963,
-        "outputTokens": 111,
-        "measured": false,
-        "counted": true
+        "outputTokens": 155,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006072,
-        "claude-sonnet-5-5": 0.003036,
-        "claude-haiku-4-5": 0.001174
+        "claude-opus-5-5": 0.011052,
+        "claude-sonnet-5-5": 0.003476,
+        "claude-haiku-4-5": 0.000854
       },
       "pass": true,
       "neverViolated": false,
@@ -4847,17 +4834,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6118069999999989,
+      "retrievalMs": 1.7311589999999342,
       "tokens": {
         "inputTokens": 938,
-        "outputTokens": 129,
-        "measured": false,
-        "counted": true
+        "outputTokens": 145,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006332,
-        "claude-sonnet-5-5": 0.003166,
-        "claude-haiku-4-5": 0.001169
+        "claude-opus-5-5": 0.006692,
+        "claude-sonnet-5-5": 0.003326,
+        "claude-haiku-4-5": 0.001254
       },
       "pass": true,
       "neverViolated": false,
@@ -4918,17 +4904,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 7.757073999999989,
+      "retrievalMs": 1.5648969999999736,
       "tokens": {
         "inputTokens": 969,
-        "outputTokens": 162,
-        "measured": false,
-        "counted": true
+        "outputTokens": 112,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007116,
-        "claude-sonnet-5-5": 0.003558,
-        "claude-haiku-4-5": 0.001292
+        "claude-opus-5-5": 0.006816,
+        "claude-sonnet-5-5": 0.003058,
+        "claude-haiku-4-5": 0.001122
       },
       "pass": true,
       "neverViolated": false,
@@ -4994,17 +4979,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7254149999999981,
+      "retrievalMs": 6.86930499999994,
       "tokens": {
         "inputTokens": 1062,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 159,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006928,
-        "claude-sonnet-5-5": 0.003464,
-        "claude-haiku-4-5": 0.001307
+        "claude-opus-5-5": 0.007348,
+        "claude-sonnet-5-5": 0.003714,
+        "claude-haiku-4-5": 0.001427
       },
       "pass": true,
       "neverViolated": false,
@@ -5067,17 +5051,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3432570000001078,
+      "retrievalMs": 5.179354999999987,
       "tokens": {
         "inputTokens": 929,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 110,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006076,
-        "claude-sonnet-5-5": 0.003038,
-        "claude-haiku-4-5": 0.001137
+        "claude-opus-5-5": 0.005856,
+        "claude-sonnet-5-5": 0.002958,
+        "claude-haiku-4-5": 0.001042
       },
       "pass": true,
       "neverViolated": false,
@@ -5141,17 +5124,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0969659999999521,
+      "retrievalMs": 1.0043929999999364,
       "tokens": {
         "inputTokens": 1045,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 130,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00652,
-        "claude-sonnet-5-5": 0.00326,
-        "claude-haiku-4-5": 0.00123
+        "claude-opus-5-5": 0.00678,
+        "claude-sonnet-5-5": 0.00339,
+        "claude-haiku-4-5": 0.00127
       },
       "pass": true,
       "neverViolated": false,
@@ -5216,17 +5198,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2218659999999772,
+      "retrievalMs": 1.1388600000000224,
       "tokens": {
         "inputTokens": 1064,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 109,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006616,
-        "claude-sonnet-5-5": 0.003308,
-        "claude-haiku-4-5": 0.001239
+        "claude-opus-5-5": 0.006516,
+        "claude-sonnet-5-5": 0.003218,
+        "claude-haiku-4-5": 0.001189
       },
       "pass": true,
       "neverViolated": false,
@@ -5293,17 +5274,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.087315999999987,
+      "retrievalMs": 1.0617640000000392,
       "tokens": {
         "inputTokens": 1267,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 173,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008388,
-        "claude-sonnet-5-5": 0.004194,
-        "claude-haiku-4-5": 0.00156
+        "claude-opus-5-5": 0.008988,
+        "claude-sonnet-5-5": 0.004264,
+        "claude-haiku-4-5": 0.001665
       },
       "pass": true,
       "neverViolated": false,
@@ -5365,17 +5345,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1176380000000563,
+      "retrievalMs": 0.964296000000104,
       "tokens": {
         "inputTokens": 1092,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 168,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007688,
-        "claude-sonnet-5-5": 0.003844,
-        "claude-haiku-4-5": 0.001398
+        "claude-opus-5-5": 0.008628,
+        "claude-sonnet-5-5": 0.003864,
+        "claude-haiku-4-5": 0.001448
       },
       "pass": true,
       "neverViolated": false,
@@ -5439,17 +5418,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3957279999999628,
+      "retrievalMs": 1.2607029999999213,
       "tokens": {
         "inputTokens": 1024,
-        "outputTokens": 101,
-        "measured": false,
-        "counted": true
+        "outputTokens": 134,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006116,
-        "claude-sonnet-5-5": 0.003058,
-        "claude-haiku-4-5": 0.001169
+        "claude-opus-5-5": 0.007276,
+        "claude-sonnet-5-5": 0.003388,
+        "claude-haiku-4-5": 0.001189
       },
       "pass": true,
       "neverViolated": false,
@@ -5513,17 +5491,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2442570000000615,
+      "retrievalMs": 1.3510319999998046,
       "tokens": {
         "inputTokens": 992,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 176,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007528,
-        "claude-sonnet-5-5": 0.003764,
-        "claude-haiku-4-5": 0.001395
+        "claude-opus-5-5": 0.007628,
+        "claude-sonnet-5-5": 0.003744,
+        "claude-haiku-4-5": 0.00139
       },
       "pass": true,
       "neverViolated": false,
@@ -5588,17 +5565,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9891220000000658,
+      "retrievalMs": 0.8626780000001872,
       "tokens": {
         "inputTokens": 1028,
-        "outputTokens": 100,
-        "measured": false,
-        "counted": true
+        "outputTokens": 124,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006112,
-        "claude-sonnet-5-5": 0.003056,
-        "claude-haiku-4-5": 0.001147
+        "claude-opus-5-5": 0.006592,
+        "claude-sonnet-5-5": 0.003296,
+        "claude-haiku-4-5": 0.001242
       },
       "pass": true,
       "neverViolated": false,
@@ -5663,17 +5639,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0867569999999205,
+      "retrievalMs": 0.9549599999998009,
       "tokens": {
         "inputTokens": 1122,
-        "outputTokens": 119,
-        "measured": false,
-        "counted": true
+        "outputTokens": 134,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006868,
-        "claude-sonnet-5-5": 0.003434,
-        "claude-haiku-4-5": 0.001282
+        "claude-opus-5-5": 0.007208,
+        "claude-sonnet-5-5": 0.003584,
+        "claude-haiku-4-5": 0.001347
       },
       "pass": true,
       "neverViolated": false,
@@ -5736,17 +5711,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6047790000000077,
+      "retrievalMs": 1.314630999999963,
       "tokens": {
         "inputTokens": 986,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 183,
+        "measured": true
       },
       "costByModel": {
         "claude-opus-5-5": 0.007504,
-        "claude-sonnet-5-5": 0.003752,
-        "claude-haiku-4-5": 0.001391
+        "claude-sonnet-5-5": 0.003802,
+        "claude-haiku-4-5": 0.001136
       },
       "pass": true,
       "neverViolated": false,
@@ -5811,17 +5785,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0480929999999944,
+      "retrievalMs": 0.8719009999999798,
       "tokens": {
         "inputTokens": 1048,
-        "outputTokens": 120,
-        "measured": false,
-        "counted": true
+        "outputTokens": 132,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006592,
-        "claude-sonnet-5-5": 0.003296,
-        "claude-haiku-4-5": 0.001227
+        "claude-opus-5-5": 0.006832,
+        "claude-sonnet-5-5": 0.003416,
+        "claude-haiku-4-5": 0.001312
       },
       "pass": true,
       "neverViolated": false,
@@ -5886,17 +5859,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0283279999999877,
+      "retrievalMs": 1.2090729999999894,
       "tokens": {
         "inputTokens": 1150,
-        "outputTokens": 234,
-        "measured": false,
-        "counted": true
+        "outputTokens": 211,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00928,
-        "claude-sonnet-5-5": 0.00464,
-        "claude-haiku-4-5": 0.00172
+        "claude-opus-5-5": 0.00882,
+        "claude-sonnet-5-5": 0.00441,
+        "claude-haiku-4-5": 0.00164
       },
       "pass": true,
       "neverViolated": false,
@@ -5959,17 +5931,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.002890000000093,
+      "retrievalMs": 0.8617400000000544,
       "tokens": {
         "inputTokens": 963,
-        "outputTokens": 148,
-        "measured": false,
-        "counted": true
+        "outputTokens": 117,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006812,
-        "claude-sonnet-5-5": 0.003406,
-        "claude-haiku-4-5": 0.001329
+        "claude-opus-5-5": 0.006292,
+        "claude-sonnet-5-5": 0.003096,
+        "claude-haiku-4-5": 0.001204
       },
       "pass": true,
       "neverViolated": false,
@@ -6035,17 +6006,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0246579999999312,
+      "retrievalMs": 0.8530080000000453,
       "tokens": {
         "inputTokens": 1341,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 111,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007504,
-        "claude-sonnet-5-5": 0.003752,
-        "claude-haiku-4-5": 0.00142
+        "claude-opus-5-5": 0.007844,
+        "claude-sonnet-5-5": 0.003792,
+        "claude-haiku-4-5": 0.0015
       },
       "pass": true,
       "neverViolated": false,
@@ -6106,17 +6076,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.138112000000092,
+      "retrievalMs": 1.6712649999999485,
       "tokens": {
         "inputTokens": 1002,
-        "outputTokens": 184,
-        "measured": false,
-        "counted": true
+        "outputTokens": 159,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007688,
-        "claude-sonnet-5-5": 0.003844,
-        "claude-haiku-4-5": 0.001412
+        "claude-opus-5-5": 0.007528,
+        "claude-sonnet-5-5": 0.003594,
+        "claude-haiku-4-5": 0.001207
       },
       "pass": true,
       "neverViolated": false,
@@ -6180,17 +6149,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0990570000000162,
+      "retrievalMs": 0.9895329999999376,
       "tokens": {
         "inputTokens": 902,
-        "outputTokens": 99,
-        "measured": false,
-        "counted": true
+        "outputTokens": 96,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005588,
-        "claude-sonnet-5-5": 0.002794,
-        "claude-haiku-4-5": 0.001065
+        "claude-opus-5-5": 0.005908,
+        "claude-sonnet-5-5": 0.002764,
+        "claude-haiku-4-5": 0.001165
       },
       "pass": true,
       "neverViolated": false,
@@ -6243,16 +6211,15 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9945309999999381,
+      "retrievalMs": 1.1135249999999814,
       "tokens": {
         "inputTokens": 942,
-        "outputTokens": 135,
-        "measured": false,
-        "counted": true
+        "outputTokens": 131,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006468,
-        "claude-sonnet-5-5": 0.003234,
+        "claude-opus-5-5": 0.006408,
+        "claude-sonnet-5-5": 0.003194,
         "claude-haiku-4-5": 0.001183
       },
       "pass": true,
@@ -6317,17 +6284,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.891928000000007,
+      "retrievalMs": 2.52882099999988,
       "tokens": {
         "inputTokens": 913,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 113,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005792,
-        "claude-sonnet-5-5": 0.002896,
-        "claude-haiku-4-5": 0.001084
+        "claude-opus-5-5": 0.005912,
+        "claude-sonnet-5-5": 0.002956,
+        "claude-haiku-4-5": 0.001174
       },
       "pass": true,
       "neverViolated": false,
@@ -6391,17 +6357,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1251790000000028,
+      "retrievalMs": 1.0077719999999317,
       "tokens": {
         "inputTokens": 924,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 123,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005936,
-        "claude-sonnet-5-5": 0.002968,
-        "claude-haiku-4-5": 0.00112
+        "claude-opus-5-5": 0.006116,
+        "claude-sonnet-5-5": 0.003078,
+        "claude-haiku-4-5": 0.001205
       },
       "pass": true,
       "neverViolated": false,
@@ -6468,17 +6433,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 2.511193999999932,
+      "retrievalMs": 2.4532980000001317,
       "tokens": {
         "inputTokens": 1041,
-        "outputTokens": 171,
-        "measured": false,
-        "counted": true
+        "outputTokens": 197,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007584,
-        "claude-sonnet-5-5": 0.003792,
-        "claude-haiku-4-5": 0.001371
+        "claude-opus-5-5": 0.008324,
+        "claude-sonnet-5-5": 0.004052,
+        "claude-haiku-4-5": 0.001331
       },
       "pass": true,
       "neverViolated": false,
@@ -6542,17 +6506,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1386569999999665,
+      "retrievalMs": 0.9508429999998498,
       "tokens": {
         "inputTokens": 938,
-        "outputTokens": 113,
-        "measured": false,
-        "counted": true
+        "outputTokens": 122,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006012,
-        "claude-sonnet-5-5": 0.003006,
-        "claude-haiku-4-5": 0.001101
+        "claude-opus-5-5": 0.007152,
+        "claude-sonnet-5-5": 0.003096,
+        "claude-haiku-4-5": 0.001161
       },
       "pass": true,
       "neverViolated": false,
@@ -6617,7 +6580,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2169750000000477,
+      "retrievalMs": 0.9897309999998924,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6690,7 +6653,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0770009999999957,
+      "retrievalMs": 2.30742999999984,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6760,7 +6723,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.044685999999956,
+      "retrievalMs": 1.4448560000000725,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6836,7 +6799,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9537129999999934,
+      "retrievalMs": 1.0232229999999163,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6899,7 +6862,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.901032999999984,
+      "retrievalMs": 0.7944159999999556,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6967,7 +6930,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.799654999999916,
+      "retrievalMs": 1.4123180000001412,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7012,7 +6975,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5157689999999775,
+      "retrievalMs": 6.688944999999876,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7053,7 +7016,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.621994000000086,
+      "retrievalMs": 1.4404300000001058,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7119,7 +7082,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3074960000000146,
+      "retrievalMs": 1.7875239999998485,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7156,7 +7119,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 7.004187999999999,
+      "retrievalMs": 1.683522000000039,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7224,7 +7187,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3729419999999664,
+      "retrievalMs": 1.7115199999998367,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7290,7 +7253,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3074250000000802,
+      "retrievalMs": 1.0431209999999282,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7357,7 +7320,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5395200000000386,
+      "retrievalMs": 1.8000540000000456,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7421,7 +7384,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8001230000000987,
+      "retrievalMs": 1.3935710000000654,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7458,7 +7421,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1432549999999537,
+      "retrievalMs": 1.1485119999999824,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7531,17 +7494,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.038966999999957,
+      "retrievalMs": 1.0084979999999177,
       "tokens": {
         "inputTokens": 1091,
-        "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "outputTokens": 165,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007744,
-        "claude-sonnet-5-5": 0.003872,
-        "claude-haiku-4-5": 0.001452
+        "claude-opus-5-5": 0.008604,
+        "claude-sonnet-5-5": 0.003832,
+        "claude-haiku-4-5": 0.001437
       },
       "pass": true,
       "neverViolated": false,
@@ -7609,17 +7571,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0244329999999309,
+      "retrievalMs": 0.8841290000000299,
       "tokens": {
         "inputTokens": 1000,
-        "outputTokens": 145,
-        "measured": false,
-        "counted": true
+        "outputTokens": 157,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.0069,
-        "claude-sonnet-5-5": 0.00345,
-        "claude-haiku-4-5": 0.00131
+        "claude-opus-5-5": 0.00714,
+        "claude-sonnet-5-5": 0.00357,
+        "claude-haiku-4-5": 0.00124
       },
       "pass": true,
       "neverViolated": false,
@@ -7685,17 +7646,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.2660940000000664,
+      "retrievalMs": 0.9226800000001276,
       "tokens": {
         "inputTokens": 1176,
-        "outputTokens": 162,
-        "measured": false,
-        "counted": true
+        "outputTokens": 160,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007944,
-        "claude-sonnet-5-5": 0.003972,
-        "claude-haiku-4-5": 0.001448
+        "claude-opus-5-5": 0.008044,
+        "claude-sonnet-5-5": 0.003952,
+        "claude-haiku-4-5": 0.001373
       },
       "pass": true,
       "neverViolated": false,
@@ -7759,17 +7719,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.4836629999999786,
+      "retrievalMs": 1.0015719999998964,
       "tokens": {
         "inputTokens": 982,
-        "outputTokens": 174,
-        "measured": false,
-        "counted": true
+        "outputTokens": 179,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007408,
-        "claude-sonnet-5-5": 0.003704,
-        "claude-haiku-4-5": 0.001367
+        "claude-opus-5-5": 0.007968,
+        "claude-sonnet-5-5": 0.003754,
+        "claude-haiku-4-5": 0.001372
       },
       "pass": true,
       "neverViolated": false,
@@ -7836,17 +7795,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1453329999999369,
+      "retrievalMs": 0.828220999999985,
       "tokens": {
         "inputTokens": 977,
-        "outputTokens": 129,
-        "measured": false,
-        "counted": true
+        "outputTokens": 158,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006488,
-        "claude-sonnet-5-5": 0.003244,
-        "claude-haiku-4-5": 0.001198
+        "claude-opus-5-5": 0.006948,
+        "claude-sonnet-5-5": 0.003534,
+        "claude-haiku-4-5": 0.001303
       },
       "pass": true,
       "neverViolated": false,
@@ -7909,17 +7867,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2500179999999546,
+      "retrievalMs": 0.9346439999999347,
       "tokens": {
         "inputTokens": 922,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 122,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006028,
-        "claude-sonnet-5-5": 0.003014,
-        "claude-haiku-4-5": 0.001154
+        "claude-opus-5-5": 0.006188,
+        "claude-sonnet-5-5": 0.003064,
+        "claude-haiku-4-5": 0.001074
       },
       "pass": true,
       "neverViolated": false,
@@ -7985,17 +7942,16 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1952669999999443,
+      "retrievalMs": 1.1945800000000872,
       "tokens": {
         "inputTokens": 986,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 165,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006624,
-        "claude-sonnet-5-5": 0.003312,
-        "claude-haiku-4-5": 0.001225
+        "claude-opus-5-5": 0.007284,
+        "claude-sonnet-5-5": 0.003622,
+        "claude-haiku-4-5": 0.00128
       },
       "pass": true,
       "neverViolated": false,
@@ -8056,17 +8012,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0317619999999579,
+      "retrievalMs": 1.1003960000000461,
       "tokens": {
         "inputTokens": 927,
-        "outputTokens": 111,
-        "measured": false,
-        "counted": true
+        "outputTokens": 137,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005928,
-        "claude-sonnet-5-5": 0.002964,
-        "claude-haiku-4-5": 0.001144
+        "claude-opus-5-5": 0.006708,
+        "claude-sonnet-5-5": 0.003224,
+        "claude-haiku-4-5": 0.001244
       },
       "pass": true,
       "neverViolated": false,
@@ -8131,17 +8086,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.026593000000048,
+      "retrievalMs": 2.0155990000000656,
       "tokens": {
         "inputTokens": 956,
-        "outputTokens": 145,
-        "measured": false,
-        "counted": true
+        "outputTokens": 158,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006724,
-        "claude-sonnet-5-5": 0.003362,
-        "claude-haiku-4-5": 0.001274
+        "claude-opus-5-5": 0.007004,
+        "claude-sonnet-5-5": 0.003492,
+        "claude-haiku-4-5": 0.001259
       },
       "pass": true,
       "neverViolated": false,
@@ -8205,16 +8159,15 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3187310000000707,
+      "retrievalMs": 1.1765490000000227,
       "tokens": {
         "inputTokens": 1164,
-        "outputTokens": 174,
-        "measured": false,
-        "counted": true
+        "outputTokens": 200,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008136,
-        "claude-sonnet-5-5": 0.004068,
+        "claude-opus-5-5": 0.008596,
+        "claude-sonnet-5-5": 0.004328,
         "claude-haiku-4-5": 0.001503
       },
       "pass": true,
@@ -8280,17 +8233,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.142048999999929,
+      "retrievalMs": 1.3809709999998176,
       "tokens": {
         "inputTokens": 1059,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 155,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006916,
-        "claude-sonnet-5-5": 0.003458,
-        "claude-haiku-4-5": 0.001306
+        "claude-opus-5-5": 0.007236,
+        "claude-sonnet-5-5": 0.003668,
+        "claude-haiku-4-5": 0.001441
       },
       "pass": true,
       "neverViolated": false,
@@ -8354,17 +8306,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4230059999999867,
+      "retrievalMs": 1.5892899999998917,
       "tokens": {
         "inputTokens": 934,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 109,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006096,
-        "claude-sonnet-5-5": 0.003048,
-        "claude-haiku-4-5": 0.00114
+        "claude-opus-5-5": 0.005976,
+        "claude-sonnet-5-5": 0.002958,
+        "claude-haiku-4-5": 0.001045
       },
       "pass": true,
       "neverViolated": false,
@@ -8429,17 +8380,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.086362999999892,
+      "retrievalMs": 1.0686640000001262,
       "tokens": {
         "inputTokens": 1047,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 143,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006528,
-        "claude-sonnet-5-5": 0.003264,
-        "claude-haiku-4-5": 0.00123
+        "claude-opus-5-5": 0.006848,
+        "claude-sonnet-5-5": 0.003524,
+        "claude-haiku-4-5": 0.00132
       },
       "pass": true,
       "neverViolated": false,
@@ -8502,17 +8452,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5274299999999812,
+      "retrievalMs": 2.1767489999999725,
       "tokens": {
         "inputTokens": 929,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 137,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006056,
-        "claude-sonnet-5-5": 0.003028,
-        "claude-haiku-4-5": 0.001145
+        "claude-opus-5-5": 0.006776,
+        "claude-sonnet-5-5": 0.003228,
+        "claude-haiku-4-5": 0.001025
       },
       "pass": true,
       "neverViolated": false,
@@ -8577,17 +8526,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 5.2491979999999785,
+      "retrievalMs": 1.015288000000055,
       "tokens": {
         "inputTokens": 1086,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 196,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007664,
-        "claude-sonnet-5-5": 0.003832,
-        "claude-haiku-4-5": 0.001431
+        "claude-opus-5-5": 0.008044,
+        "claude-sonnet-5-5": 0.004132,
+        "claude-haiku-4-5": 0.001536
       },
       "pass": true,
       "neverViolated": false,
@@ -8652,17 +8600,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 2.069356999999968,
+      "retrievalMs": 0.9649959999999282,
       "tokens": {
         "inputTokens": 1027,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 174,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007428,
-        "claude-sonnet-5-5": 0.003714,
-        "claude-haiku-4-5": 0.00135
+        "claude-opus-5-5": 0.007768,
+        "claude-sonnet-5-5": 0.003794,
+        "claude-haiku-4-5": 0.001395
       },
       "pass": true,
       "neverViolated": false,
@@ -8724,17 +8671,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1031130000000076,
+      "retrievalMs": 0.9257340000001477,
       "tokens": {
         "inputTokens": 1022,
-        "outputTokens": 101,
-        "measured": false,
-        "counted": true
+        "outputTokens": 140,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006108,
-        "claude-sonnet-5-5": 0.003054,
-        "claude-haiku-4-5": 0.001168
+        "claude-opus-5-5": 0.007408,
+        "claude-sonnet-5-5": 0.003444,
+        "claude-haiku-4-5": 0.001228
       },
       "pass": true,
       "neverViolated": false,
@@ -8800,17 +8746,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.141157000000021,
+      "retrievalMs": 0.9930539999998018,
       "tokens": {
         "inputTokens": 1112,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 163,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008008,
-        "claude-sonnet-5-5": 0.004004,
-        "claude-haiku-4-5": 0.001485
+        "claude-opus-5-5": 0.008408,
+        "claude-sonnet-5-5": 0.003854,
+        "claude-haiku-4-5": 0.00148
       },
       "pass": true,
       "neverViolated": false,
@@ -8872,17 +8817,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6707810000000336,
+      "retrievalMs": 0.7589830000001712,
       "tokens": {
         "inputTokens": 1089,
-        "outputTokens": 100,
-        "measured": false,
-        "counted": true
+        "outputTokens": 124,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006356,
-        "claude-sonnet-5-5": 0.003178,
-        "claude-haiku-4-5": 0.00118
+        "claude-opus-5-5": 0.006796,
+        "claude-sonnet-5-5": 0.003418,
+        "claude-haiku-4-5": 0.00125
       },
       "pass": true,
       "neverViolated": false,
@@ -8949,17 +8893,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.5044809999999416,
+      "retrievalMs": 0.9431090000000495,
       "tokens": {
         "inputTokens": 1123,
-        "outputTokens": 119,
-        "measured": false,
-        "counted": true
+        "outputTokens": 132,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006872,
-        "claude-sonnet-5-5": 0.003436,
-        "claude-haiku-4-5": 0.001283
+        "claude-opus-5-5": 0.007232,
+        "claude-sonnet-5-5": 0.003566,
+        "claude-haiku-4-5": 0.001363
       },
       "pass": true,
       "neverViolated": false,
@@ -9025,17 +8968,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3803219999999783,
+      "retrievalMs": 1.1024210000000494,
       "tokens": {
         "inputTokens": 1048,
-        "outputTokens": 120,
-        "measured": false,
-        "counted": true
+        "outputTokens": 22,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006592,
-        "claude-sonnet-5-5": 0.003296,
-        "claude-haiku-4-5": 0.001228
+        "claude-opus-5-5": 0.006932,
+        "claude-sonnet-5-5": 0.002316,
+        "claude-haiku-4-5": 0.001328
       },
       "pass": true,
       "neverViolated": false,
@@ -9100,17 +9042,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.106217000000015,
+      "retrievalMs": 0.9434349999999085,
       "tokens": {
         "inputTokens": 1148,
-        "outputTokens": 234,
-        "measured": false,
-        "counted": true
+        "outputTokens": 203,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.009272,
-        "claude-sonnet-5-5": 0.004636,
-        "claude-haiku-4-5": 0.00172
+        "claude-opus-5-5": 0.008372,
+        "claude-sonnet-5-5": 0.004326,
+        "claude-haiku-4-5": 0.001635
       },
       "pass": true,
       "neverViolated": false,
@@ -9173,17 +9114,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.014793999999938,
+      "retrievalMs": 0.9569449999999051,
       "tokens": {
         "inputTokens": 959,
-        "outputTokens": 148,
-        "measured": false,
-        "counted": true
+        "outputTokens": 144,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006796,
-        "claude-sonnet-5-5": 0.003398,
-        "claude-haiku-4-5": 0.001326
+        "claude-opus-5-5": 0.006716,
+        "claude-sonnet-5-5": 0.003358,
+        "claude-haiku-4-5": 0.001136
       },
       "pass": true,
       "neverViolated": false,
@@ -9249,17 +9189,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9562389999999823,
+      "retrievalMs": 0.893675999999914,
       "tokens": {
         "inputTokens": 1346,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 129,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007524,
-        "claude-sonnet-5-5": 0.003762,
-        "claude-haiku-4-5": 0.001424
+        "claude-opus-5-5": 0.007984,
+        "claude-sonnet-5-5": 0.003982,
+        "claude-haiku-4-5": 0.001539
       },
       "pass": true,
       "neverViolated": false,
@@ -9323,17 +9262,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.091462999999976,
+      "retrievalMs": 1.01538400000004,
       "tokens": {
         "inputTokens": 969,
-        "outputTokens": 148,
-        "measured": false,
-        "counted": true
+        "outputTokens": 185,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006836,
-        "claude-sonnet-5-5": 0.003418,
-        "claude-haiku-4-5": 0.001334
+        "claude-opus-5-5": 0.007616,
+        "claude-sonnet-5-5": 0.003788,
+        "claude-haiku-4-5": 0.001059
       },
       "pass": true,
       "neverViolated": false,
@@ -9394,17 +9332,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3718549999999823,
+      "retrievalMs": 1.0398059999999987,
       "tokens": {
         "inputTokens": 999,
-        "outputTokens": 184,
-        "measured": false,
-        "counted": true
+        "outputTokens": 134,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007676,
-        "claude-sonnet-5-5": 0.003838,
-        "claude-haiku-4-5": 0.00141
+        "claude-opus-5-5": 0.007056,
+        "claude-sonnet-5-5": 0.003338,
+        "claude-haiku-4-5": 0.001115
       },
       "pass": true,
       "neverViolated": false,
@@ -9468,17 +9405,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1605349999999817,
+      "retrievalMs": 1.0765759999999318,
       "tokens": {
         "inputTokens": 903,
-        "outputTokens": 99,
-        "measured": false,
-        "counted": true
+        "outputTokens": 104,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005592,
-        "claude-sonnet-5-5": 0.002796,
-        "claude-haiku-4-5": 0.001065
+        "claude-opus-5-5": 0.005912,
+        "claude-sonnet-5-5": 0.002846,
+        "claude-haiku-4-5": 0.001185
       },
       "pass": true,
       "neverViolated": false,
@@ -9543,17 +9479,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1539280000000645,
+      "retrievalMs": 1.002809999999954,
       "tokens": {
         "inputTokens": 1106,
-        "outputTokens": 135,
-        "measured": false,
-        "counted": true
+        "outputTokens": 137,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007124,
-        "claude-sonnet-5-5": 0.003562,
-        "claude-haiku-4-5": 0.001304
+        "claude-opus-5-5": 0.007624,
+        "claude-sonnet-5-5": 0.003582,
+        "claude-haiku-4-5": 0.001369
       },
       "pass": true,
       "neverViolated": false,
@@ -9616,17 +9551,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1360539999999446,
+      "retrievalMs": 1.0822239999999965,
       "tokens": {
         "inputTokens": 920,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 113,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00582,
-        "claude-sonnet-5-5": 0.00291,
-        "claude-haiku-4-5": 0.001089
+        "claude-opus-5-5": 0.00692,
+        "claude-sonnet-5-5": 0.00297,
+        "claude-haiku-4-5": 0.001199
       },
       "pass": true,
       "neverViolated": false,
@@ -9698,17 +9632,16 @@
         "\"number you have on file for us\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 1.055894999999964,
+      "retrievalMs": 1.0057099999999082,
       "tokens": {
         "inputTokens": 971,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 102,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006124,
-        "claude-sonnet-5-5": 0.003062,
-        "claude-haiku-4-5": 0.001157
+        "claude-opus-5-5": 0.006004,
+        "claude-sonnet-5-5": 0.002962,
+        "claude-haiku-4-5": 0.001122
       },
       "pass": true,
       "neverViolated": false,
@@ -9775,17 +9708,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.162413000000015,
+      "retrievalMs": 1.0449110000001838,
       "tokens": {
         "inputTokens": 1039,
-        "outputTokens": 171,
-        "measured": false,
-        "counted": true
+        "outputTokens": 190,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007576,
-        "claude-sonnet-5-5": 0.003788,
-        "claude-haiku-4-5": 0.00137
+        "claude-opus-5-5": 0.008216,
+        "claude-sonnet-5-5": 0.003978,
+        "claude-haiku-4-5": 0.001355
       },
       "pass": true,
       "neverViolated": false,
@@ -9828,17 +9760,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1592580000000225,
+      "retrievalMs": 0.9665420000001177,
       "tokens": {
         "inputTokens": 935,
-        "outputTokens": 113,
-        "measured": false,
-        "counted": true
+        "outputTokens": 124,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006,
-        "claude-sonnet-5-5": 0.003,
-        "claude-haiku-4-5": 0.001102
+        "claude-opus-5-5": 0.00652,
+        "claude-sonnet-5-5": 0.00311,
+        "claude-haiku-4-5": 0.001142
       },
       "pass": true,
       "neverViolated": false,
@@ -9903,7 +9834,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0723970000000236,
+      "retrievalMs": 1.0620930000000044,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -9978,17 +9909,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8403620000000274,
+      "retrievalMs": 1.5889079999999467,
       "tokens": {
         "inputTokens": 1198,
-        "outputTokens": 100,
-        "measured": false,
-        "counted": true
+        "outputTokens": 274,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006792,
-        "claude-sonnet-5-5": 0.003396,
-        "claude-haiku-4-5": 0.001266
+        "claude-opus-5-5": 0.010992,
+        "claude-sonnet-5-5": 0.005136,
+        "claude-haiku-4-5": 0.001926
       },
       "pass": false,
       "neverViolated": false,
@@ -10049,7 +9979,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0702870000000075,
+      "retrievalMs": 0.9665150000000722,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10122,7 +10052,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9571920000000773,
+      "retrievalMs": 0.8957490000000234,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10188,7 +10118,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7587489999999661,
+      "retrievalMs": 5.4392039999997905,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10225,7 +10155,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7570530000000417,
+      "retrievalMs": 5.503416000000016,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10294,7 +10224,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8521979999999303,
+      "retrievalMs": 1.6218320000000404,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10364,17 +10294,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9937760000000253,
+      "retrievalMs": 1.7260309999999208,
       "tokens": {
         "inputTokens": 916,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 22,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005804,
-        "claude-sonnet-5-5": 0.002902,
-        "claude-haiku-4-5": 0.001085
+        "claude-opus-5-5": 0.004104,
+        "claude-sonnet-5-5": 0.002052,
+        "claude-haiku-4-5": 0.00081
       },
       "pass": false,
       "neverViolated": false,
@@ -10430,7 +10359,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1877520000000459,
+      "retrievalMs": 1.037063999999873,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10498,7 +10427,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8646039999999857,
+      "retrievalMs": 1.824722999999949,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10541,7 +10470,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4513259999999946,
+      "retrievalMs": 1.1831010000000788,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10609,7 +10538,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.0266670000000886,
+      "retrievalMs": 1.921472999999878,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10676,7 +10605,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1107230000000072,
+      "retrievalMs": 1.1784660000000713,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10758,17 +10687,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0048209999999926,
+      "retrievalMs": 0.9838009999998576,
       "tokens": {
         "inputTokens": 1011,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007144,
-        "claude-sonnet-5-5": 0.003572,
-        "claude-haiku-4-5": 0.001361
+        "claude-opus-5-5": 0.007584,
+        "claude-sonnet-5-5": 0.003732,
+        "claude-haiku-4-5": 0.001446
       },
       "pass": true,
       "neverViolated": false,
@@ -10842,17 +10770,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9306259999999611,
+      "retrievalMs": 1.0280709999999544,
       "tokens": {
         "inputTokens": 1306,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 172,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008324,
-        "claude-sonnet-5-5": 0.004162,
-        "claude-haiku-4-5": 0.001581
+        "claude-opus-5-5": 0.008744,
+        "claude-sonnet-5-5": 0.004332,
+        "claude-haiku-4-5": 0.001671
       },
       "pass": true,
       "neverViolated": false,
@@ -10923,17 +10850,16 @@
         "\"our own contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 3.150009999999952,
+      "retrievalMs": 3.10641499999997,
       "tokens": {
         "inputTokens": 972,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 116,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006128,
-        "claude-sonnet-5-5": 0.003064,
-        "claude-haiku-4-5": 0.001155
+        "claude-opus-5-5": 0.006248,
+        "claude-sonnet-5-5": 0.003104,
+        "claude-haiku-4-5": 0.001215
       },
       "pass": true,
       "neverViolated": false,
@@ -11000,7 +10926,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9625369999999975,
+      "retrievalMs": 1.6205469999999877,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11074,17 +11000,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0479219999999714,
+      "retrievalMs": 1.1223789999999099,
       "tokens": {
         "inputTokens": 1091,
-        "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "outputTokens": 173,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007744,
-        "claude-sonnet-5-5": 0.003872,
-        "claude-haiku-4-5": 0.001453
+        "claude-opus-5-5": 0.007784,
+        "claude-sonnet-5-5": 0.003912,
+        "claude-haiku-4-5": 0.001503
       },
       "pass": true,
       "neverViolated": false,
@@ -11143,7 +11068,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5171550000000025,
+      "retrievalMs": 1.2908750000001419,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11213,7 +11138,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 8.232950999999957,
+      "retrievalMs": 5.3211019999998825,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11283,17 +11208,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9528069999998934,
+      "retrievalMs": 3.296728999999914,
       "tokens": {
         "inputTokens": 982,
-        "outputTokens": 174,
-        "measured": false,
-        "counted": true
+        "outputTokens": 109,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007408,
-        "claude-sonnet-5-5": 0.003704,
-        "claude-haiku-4-5": 0.001368
+        "claude-opus-5-5": 0.006528,
+        "claude-sonnet-5-5": 0.003054,
+        "claude-haiku-4-5": 0.001238
       },
       "pass": true,
       "neverViolated": false,
@@ -11360,17 +11284,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.934240999999929,
+      "retrievalMs": 1.065808000000061,
       "tokens": {
         "inputTokens": 975,
-        "outputTokens": 129,
-        "measured": false,
-        "counted": true
+        "outputTokens": 150,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00648,
-        "claude-sonnet-5-5": 0.00324,
-        "claude-haiku-4-5": 0.001197
+        "claude-opus-5-5": 0.00696,
+        "claude-sonnet-5-5": 0.00345,
+        "claude-haiku-4-5": 0.001292
       },
       "pass": true,
       "neverViolated": false,
@@ -11435,17 +11358,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9246749999999793,
+      "retrievalMs": 0.9155639999999039,
       "tokens": {
         "inputTokens": 922,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 142,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006028,
-        "claude-sonnet-5-5": 0.003014,
-        "claude-haiku-4-5": 0.001155
+        "claude-opus-5-5": 0.006648,
+        "claude-sonnet-5-5": 0.003264,
+        "claude-haiku-4-5": 0.001215
       },
       "pass": true,
       "neverViolated": false,
@@ -11506,17 +11428,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9284900000000107,
+      "retrievalMs": 1.0579210000000785,
       "tokens": {
         "inputTokens": 947,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 136,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006468,
-        "claude-sonnet-5-5": 0.003234,
-        "claude-haiku-4-5": 0.001194
+        "claude-opus-5-5": 0.006888,
+        "claude-sonnet-5-5": 0.003254,
+        "claude-haiku-4-5": 0.001284
       },
       "pass": true,
       "neverViolated": false,
@@ -11575,7 +11496,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2390179999999873,
+      "retrievalMs": 1.0565740000001824,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11648,17 +11569,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0448449999998957,
+      "retrievalMs": 0.9967860000001565,
       "tokens": {
         "inputTokens": 1064,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 144,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006936,
-        "claude-sonnet-5-5": 0.003468,
-        "claude-haiku-4-5": 0.00131
+        "claude-opus-5-5": 0.007116,
+        "claude-sonnet-5-5": 0.003568,
+        "claude-haiku-4-5": 0.001445
       },
       "pass": true,
       "neverViolated": false,
@@ -11722,17 +11642,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9313210000000254,
+      "retrievalMs": 0.9382780000000821,
       "tokens": {
         "inputTokens": 932,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 111,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006088,
-        "claude-sonnet-5-5": 0.003044,
-        "claude-haiku-4-5": 0.001138
+        "claude-opus-5-5": 0.005868,
+        "claude-sonnet-5-5": 0.002974,
+        "claude-haiku-4-5": 0.001078
       },
       "pass": true,
       "neverViolated": false,
@@ -11797,17 +11716,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.19958500000007,
+      "retrievalMs": 1.2134479999999712,
       "tokens": {
         "inputTokens": 1047,
-        "outputTokens": 117,
-        "measured": false,
-        "counted": true
+        "outputTokens": 130,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006528,
-        "claude-sonnet-5-5": 0.003264,
-        "claude-haiku-4-5": 0.001232
+        "claude-opus-5-5": 0.006568,
+        "claude-sonnet-5-5": 0.003394,
+        "claude-haiku-4-5": 0.001302
       },
       "pass": true,
       "neverViolated": false,
@@ -11870,17 +11788,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0011429999999564,
+      "retrievalMs": 0.9646250000000691,
       "tokens": {
         "inputTokens": 970,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 179,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.0072,
-        "claude-sonnet-5-5": 0.0036,
-        "claude-haiku-4-5": 0.001337
+        "claude-opus-5-5": 0.00748,
+        "claude-sonnet-5-5": 0.00373,
+        "claude-haiku-4-5": 0.001412
       },
       "pass": true,
       "neverViolated": false,
@@ -11938,7 +11855,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6204379999999219,
+      "retrievalMs": 1.9954000000002452,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12011,17 +11928,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0108370000000377,
+      "retrievalMs": 1.043503000000328,
       "tokens": {
         "inputTokens": 1023,
-        "outputTokens": 101,
-        "measured": false,
-        "counted": true
+        "outputTokens": 115,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006112,
-        "claude-sonnet-5-5": 0.003056,
-        "claude-haiku-4-5": 0.001168
+        "claude-opus-5-5": 0.007512,
+        "claude-sonnet-5-5": 0.003196,
+        "claude-haiku-4-5": 0.001198
       },
       "pass": true,
       "neverViolated": false,
@@ -12082,17 +11998,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1999949999999444,
+      "retrievalMs": 0.9889290000000983,
       "tokens": {
         "inputTokens": 991,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 138,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007524,
-        "claude-sonnet-5-5": 0.003762,
-        "claude-haiku-4-5": 0.001393
+        "claude-opus-5-5": 0.007204,
+        "claude-sonnet-5-5": 0.003362,
+        "claude-haiku-4-5": 0.001123
       },
       "pass": true,
       "neverViolated": false,
@@ -12156,17 +12071,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8798289999999724,
+      "retrievalMs": 0.8199119999999311,
       "tokens": {
         "inputTokens": 1088,
-        "outputTokens": 100,
-        "measured": false,
-        "counted": true
+        "outputTokens": 128,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006352,
-        "claude-sonnet-5-5": 0.003176,
-        "claude-haiku-4-5": 0.00118
+        "claude-opus-5-5": 0.006912,
+        "claude-sonnet-5-5": 0.003456,
+        "claude-haiku-4-5": 0.00125
       },
       "pass": true,
       "neverViolated": false,
@@ -12231,17 +12145,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9554299999999785,
+      "retrievalMs": 0.922099999999773,
       "tokens": {
         "inputTokens": 1121,
-        "outputTokens": 119,
-        "measured": false,
-        "counted": true
+        "outputTokens": 136,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006864,
-        "claude-sonnet-5-5": 0.003432,
-        "claude-haiku-4-5": 0.001282
+        "claude-opus-5-5": 0.007184,
+        "claude-sonnet-5-5": 0.003602,
+        "claude-haiku-4-5": 0.001362
       },
       "pass": true,
       "neverViolated": false,
@@ -12304,17 +12217,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9989470000000438,
+      "retrievalMs": 0.810222000000067,
       "tokens": {
         "inputTokens": 1037,
-        "outputTokens": 234,
-        "measured": false,
-        "counted": true
+        "outputTokens": 182,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008828,
-        "claude-sonnet-5-5": 0.004414,
-        "claude-haiku-4-5": 0.001631
+        "claude-opus-5-5": 0.007468,
+        "claude-sonnet-5-5": 0.003894,
+        "claude-haiku-4-5": 0.001496
       },
       "pass": true,
       "neverViolated": false,
@@ -12375,17 +12287,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0675840000001244,
+      "retrievalMs": 0.8078510000000279,
       "tokens": {
         "inputTokens": 1001,
-        "outputTokens": 184,
-        "measured": false,
-        "counted": true
+        "outputTokens": 98,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007684,
-        "claude-sonnet-5-5": 0.003842,
-        "claude-haiku-4-5": 0.00141
+        "claude-opus-5-5": 0.007264,
+        "claude-sonnet-5-5": 0.002982,
+        "claude-haiku-4-5": 0.001095
       },
       "pass": true,
       "neverViolated": false,
@@ -12449,17 +12360,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9486190000000079,
+      "retrievalMs": 0.8651970000000802,
       "tokens": {
         "inputTokens": 961,
-        "outputTokens": 148,
-        "measured": false,
-        "counted": true
+        "outputTokens": 102,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006804,
-        "claude-sonnet-5-5": 0.003402,
-        "claude-haiku-4-5": 0.001329
+        "claude-opus-5-5": 0.006764,
+        "claude-sonnet-5-5": 0.002942,
+        "claude-haiku-4-5": 0.001154
       },
       "pass": true,
       "neverViolated": false,
@@ -12512,17 +12422,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8730110000001332,
+      "retrievalMs": 0.8044719999998051,
       "tokens": {
         "inputTokens": 940,
-        "outputTokens": 135,
-        "measured": false,
-        "counted": true
+        "outputTokens": 131,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00646,
-        "claude-sonnet-5-5": 0.00323,
-        "claude-haiku-4-5": 0.001183
+        "claude-opus-5-5": 0.0064,
+        "claude-sonnet-5-5": 0.00319,
+        "claude-haiku-4-5": 0.001198
       },
       "pass": true,
       "neverViolated": false,
@@ -12586,17 +12495,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0337610000001405,
+      "retrievalMs": 0.9236689999997907,
       "tokens": {
         "inputTokens": 1036,
-        "outputTokens": 99,
-        "measured": false,
-        "counted": true
+        "outputTokens": 114,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006124,
-        "claude-sonnet-5-5": 0.003062,
-        "claude-haiku-4-5": 0.001167
+        "claude-opus-5-5": 0.007104,
+        "claude-sonnet-5-5": 0.003212,
+        "claude-haiku-4-5": 0.001252
       },
       "pass": true,
       "neverViolated": false,
@@ -12657,17 +12565,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.008544000000029,
+      "retrievalMs": 0.9394800000000032,
       "tokens": {
         "inputTokens": 915,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 113,
+        "measured": true
       },
       "costByModel": {
         "claude-opus-5-5": 0.0058,
-        "claude-sonnet-5-5": 0.0029,
-        "claude-haiku-4-5": 0.001086
+        "claude-sonnet-5-5": 0.00296,
+        "claude-haiku-4-5": 0.001171
       },
       "pass": true,
       "neverViolated": false,
@@ -12733,17 +12640,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0719839999999294,
+      "retrievalMs": 0.9580919999998514,
       "tokens": {
         "inputTokens": 1042,
-        "outputTokens": 171,
-        "measured": false,
-        "counted": true
+        "outputTokens": 176,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007588,
-        "claude-sonnet-5-5": 0.003794,
-        "claude-haiku-4-5": 0.00137
+        "claude-opus-5-5": 0.007968,
+        "claude-sonnet-5-5": 0.003844,
+        "claude-haiku-4-5": 0.00139
       },
       "pass": true,
       "neverViolated": false,
@@ -12806,7 +12712,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9699920000000475,
+      "retrievalMs": 0.8876919999997881,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12874,7 +12780,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8402129999999488,
+      "retrievalMs": 1.1731300000001283,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12951,17 +12857,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.6453200000000834,
+      "retrievalMs": 0.794542999999976,
       "tokens": {
         "inputTokens": 1191,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 255,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007124,
-        "claude-sonnet-5-5": 0.003562,
-        "claude-haiku-4-5": 0.001336
+        "claude-opus-5-5": 0.012884,
+        "claude-sonnet-5-5": 0.004932,
+        "claude-haiku-4-5": 0.001341
       },
       "pass": false,
       "neverViolated": false,
@@ -13018,7 +12923,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3646839999998974,
+      "retrievalMs": 1.2934109999996508,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13083,7 +12988,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.7849100000000817,
+      "retrievalMs": 5.9040430000000015,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13150,7 +13055,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 5.244854000000032,
+      "retrievalMs": 1.2531319999998232,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13219,7 +13124,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.146347999999989,
+      "retrievalMs": 1.0485090000001946,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13269,7 +13174,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3704879999997956,
+      "retrievalMs": 2.1166870000001836,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13336,7 +13241,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.417419000000109,
+      "retrievalMs": 2.0390910000000986,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13441,7 +13346,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2411939999999504,
+      "retrievalMs": 1.409085000000232,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13478,7 +13383,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5186469999998735,
+      "retrievalMs": 1.4183940000002622,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13521,7 +13426,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.605562000000191,
+      "retrievalMs": 1.4678490000001148,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13596,17 +13501,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9568400000000565,
+      "retrievalMs": 1.1092260000000351,
       "tokens": {
         "inputTokens": 1108,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 163,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007992,
-        "claude-sonnet-5-5": 0.003996,
-        "claude-haiku-4-5": 0.001483
+        "claude-opus-5-5": 0.008152,
+        "claude-sonnet-5-5": 0.003846,
+        "claude-haiku-4-5": 0.001473
       },
       "pass": true,
       "neverViolated": false,
@@ -13954,7 +13858,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.426733000000013,
+      "retrievalMs": 1.450847000000067,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -14020,7 +13924,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5596080000000256,
+      "retrievalMs": 1.540117999999893,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -14094,17 +13998,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9832330000001548,
+      "retrievalMs": 1.059910999999829,
       "tokens": {
         "inputTokens": 991,
-        "outputTokens": 178,
-        "measured": false,
-        "counted": true
+        "outputTokens": 463,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007524,
-        "claude-sonnet-5-5": 0.003762,
-        "claude-haiku-4-5": 0.001395
+        "claude-opus-5-5": 0.010304,
+        "claude-sonnet-5-5": 0.006612,
+        "claude-haiku-4-5": 0.001265
       },
       "pass": true,
       "neverViolated": false,
@@ -14170,17 +14073,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.860580999999911,
+      "retrievalMs": 0.9598860000000968,
       "tokens": {
         "inputTokens": 1067,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 352,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006628,
-        "claude-sonnet-5-5": 0.003314,
-        "claude-haiku-4-5": 0.001243
+        "claude-opus-5-5": 0.011648,
+        "claude-sonnet-5-5": 0.005654,
+        "claude-haiku-4-5": 0.001223
       },
       "pass": true,
       "neverViolated": false,
@@ -15285,7 +15187,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7512539999997898,
+      "retrievalMs": 1.6569049999998242,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15351,7 +15253,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.047207999999955,
+      "retrievalMs": 1.0471459999998842,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15419,7 +15321,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0066620000000057,
+      "retrievalMs": 1.0565269999997327,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15488,7 +15390,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0911870000002182,
+      "retrievalMs": 1.0563959999999497,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15526,7 +15428,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.0028950000000805,
+      "retrievalMs": 1.8081570000003921,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15564,7 +15466,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8052339999999276,
+      "retrievalMs": 1.488673999999719,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15602,7 +15504,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6667339999999058,
+      "retrievalMs": 1.4728500000001077,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15640,7 +15542,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.257571999999982,
+      "retrievalMs": 2.0754939999997077,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15678,7 +15580,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.406739000000016,
+      "retrievalMs": 2.46827600000006,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15716,7 +15618,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4111709999999675,
+      "retrievalMs": 1.3089849999996659,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15790,17 +15692,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9702259999999114,
+      "retrievalMs": 0.972041999999874,
       "tokens": {
         "inputTokens": 1112,
-        "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "outputTokens": 165,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007828,
-        "claude-sonnet-5-5": 0.003914,
-        "claude-haiku-4-5": 0.001467
+        "claude-opus-5-5": 0.007708,
+        "claude-sonnet-5-5": 0.003874,
+        "claude-haiku-4-5": 0.001427
       },
       "pass": true,
       "neverViolated": false,
@@ -15865,7 +15766,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.992031999999881,
+      "retrievalMs": 0.9630890000003092,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15941,17 +15842,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.3876110000001063,
+      "retrievalMs": 1.298779000000195,
       "tokens": {
         "inputTokens": 1139,
         "outputTokens": 169,
-        "measured": false,
-        "counted": true
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007936,
+        "claude-opus-5-5": 0.008936,
         "claude-sonnet-5-5": 0.003968,
-        "claude-haiku-4-5": 0.00149
+        "claude-haiku-4-5": 0.00148
       },
       "pass": true,
       "neverViolated": false,
@@ -16008,7 +15908,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4410629999999855,
+      "retrievalMs": 1.3395810000001802,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16072,7 +15972,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5269510000000537,
+      "retrievalMs": 1.471621000000141,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16120,7 +16020,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.21550400000001,
+      "retrievalMs": 1.251737999999932,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16186,7 +16086,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.152943999999934,
+      "retrievalMs": 1.2457119999999122,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16260,17 +16160,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1460420000000795,
+      "retrievalMs": 1.1029370000001109,
       "tokens": {
         "inputTokens": 1065,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 148,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00694,
-        "claude-sonnet-5-5": 0.00347,
-        "claude-haiku-4-5": 0.001311
+        "claude-opus-5-5": 0.00748,
+        "claude-sonnet-5-5": 0.00361,
+        "claude-haiku-4-5": 0.001451
       },
       "pass": true,
       "neverViolated": false,
@@ -16328,7 +16227,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1981740000001082,
+      "retrievalMs": 1.357796999999664,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16395,7 +16294,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6115889999998672,
+      "retrievalMs": 1.5518040000001747,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16464,7 +16363,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1922159999999167,
+      "retrievalMs": 1.3027400000000853,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16513,7 +16412,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.514901000000009,
+      "retrievalMs": 1.7514810000002399,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16580,7 +16479,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3615000000002055,
+      "retrievalMs": 1.327158000000054,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16626,7 +16525,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.8466040000000703,
+      "retrievalMs": 1.5651229999998577,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16699,17 +16598,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0606729999999516,
+      "retrievalMs": 0.8947299999999814,
       "tokens": {
         "inputTokens": 939,
-        "outputTokens": 135,
-        "measured": false,
-        "counted": true
+        "outputTokens": 137,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006456,
-        "claude-sonnet-5-5": 0.003228,
-        "claude-haiku-4-5": 0.001181
+        "claude-opus-5-5": 0.006516,
+        "claude-sonnet-5-5": 0.003248,
+        "claude-haiku-4-5": 0.001241
       },
       "pass": true,
       "neverViolated": false,
@@ -16769,7 +16667,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.991905000000088,
+      "retrievalMs": 0.9484800000000178,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16846,7 +16744,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.361407999999983,
+      "retrievalMs": 0.9537769999997181,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16921,7 +16819,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.237826000000041,
+      "retrievalMs": 1.1926220000000285,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16994,7 +16892,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3001240000000962,
+      "retrievalMs": 1.2708149999998568,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17062,7 +16960,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8554890000000341,
+      "retrievalMs": 1.7478219999998146,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17100,7 +16998,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5465240000000904,
+      "retrievalMs": 1.4649180000001252,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17140,7 +17038,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1887759999999616,
+      "retrievalMs": 1.5360509999995884,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17210,7 +17108,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0617299999998977,
+      "retrievalMs": 1.004718000000139,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17279,7 +17177,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2252619999999297,
+      "retrievalMs": 1.1889970000001995,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17347,7 +17245,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.4446040000000266,
+      "retrievalMs": 4.049649000000045,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17422,17 +17320,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.7925039999997807,
+      "retrievalMs": 1.0391070000000582,
       "tokens": {
         "inputTokens": 994,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 161,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006656,
-        "claude-sonnet-5-5": 0.003328,
-        "claude-haiku-4-5": 0.001232
+        "claude-opus-5-5": 0.007556,
+        "claude-sonnet-5-5": 0.003598,
+        "claude-haiku-4-5": 0.001287
       },
       "pass": true,
       "neverViolated": false,
@@ -17494,7 +17391,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2630960000001323,
+      "retrievalMs": 1.3386539999996785,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17563,7 +17460,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2883640000000014,
+      "retrievalMs": 1.057452000000012,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17633,7 +17530,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.903731999999991,
+      "retrievalMs": 1.57761199999959,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17702,7 +17599,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6509279999997943,
+      "retrievalMs": 0.8783419999999751,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17777,17 +17674,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9185560000000805,
+      "retrievalMs": 1.0167730000002848,
       "tokens": {
         "inputTokens": 1090,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 189,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00768,
-        "claude-sonnet-5-5": 0.00384,
-        "claude-haiku-4-5": 0.001432
+        "claude-opus-5-5": 0.00814,
+        "claude-sonnet-5-5": 0.00407,
+        "claude-haiku-4-5": 0.001537
       },
       "pass": true,
       "neverViolated": false,
@@ -17847,7 +17743,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9384969999998702,
+      "retrievalMs": 0.9997559999997065,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17917,7 +17813,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3615460000000894,
+      "retrievalMs": 1.260171999999784,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17991,17 +17887,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8260909999999058,
+      "retrievalMs": 0.9063470000000962,
       "tokens": {
         "inputTokens": 1019,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007396,
-        "claude-sonnet-5-5": 0.003698,
-        "claude-haiku-4-5": 0.001345
+        "claude-opus-5-5": 0.007636,
+        "claude-sonnet-5-5": 0.003748,
+        "claude-haiku-4-5": 0.00141
       },
       "pass": true,
       "neverViolated": false,
@@ -18058,7 +17953,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2057079999999587,
+      "retrievalMs": 1.1873860000000604,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18132,17 +18027,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2256280000001425,
+      "retrievalMs": 1.324645000000146,
       "tokens": {
         "inputTokens": 1131,
-        "outputTokens": 119,
-        "measured": false,
-        "counted": true
+        "outputTokens": 134,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006904,
-        "claude-sonnet-5-5": 0.003452,
-        "claude-haiku-4-5": 0.00129
+        "claude-opus-5-5": 0.007244,
+        "claude-sonnet-5-5": 0.003602,
+        "claude-haiku-4-5": 0.00132
       },
       "pass": true,
       "neverViolated": false,
@@ -18206,17 +18100,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0490899999999783,
+      "retrievalMs": 1.065117999999984,
       "tokens": {
         "inputTokens": 931,
-        "outputTokens": 120,
-        "measured": false,
-        "counted": true
+        "outputTokens": 110,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006124,
-        "claude-sonnet-5-5": 0.003062,
-        "claude-haiku-4-5": 0.001137
+        "claude-opus-5-5": 0.006384,
+        "claude-sonnet-5-5": 0.002962,
+        "claude-haiku-4-5": 0.001237
       },
       "pass": true,
       "neverViolated": false,
@@ -18273,7 +18166,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4007799999999406,
+      "retrievalMs": 1.505971000000045,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18339,7 +18232,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8953520000000026,
+      "retrievalMs": 0.9491010000001552,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18408,7 +18301,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1913899999999558,
+      "retrievalMs": 1.1733230000004369,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18476,7 +18369,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.010829000000058,
+      "retrievalMs": 0.9247799999998279,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18545,7 +18438,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.184502000000066,
+      "retrievalMs": 1.3789670000001024,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18599,7 +18492,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.201373999999987,
+      "retrievalMs": 1.3278510000000097,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18670,7 +18563,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5636869999998453,
+      "retrievalMs": 1.5504949999999553,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18742,17 +18635,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.896539999999959,
+      "retrievalMs": 0.9326559999999517,
       "tokens": {
         "inputTokens": 1001,
-        "outputTokens": 171,
-        "measured": false,
-        "counted": true
+        "outputTokens": 142,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007424,
-        "claude-sonnet-5-5": 0.003712,
-        "claude-haiku-4-5": 0.00134
+        "claude-opus-5-5": 0.007484,
+        "claude-sonnet-5-5": 0.003422,
+        "claude-haiku-4-5": 0.001185
       },
       "pass": true,
       "neverViolated": false,
@@ -18811,7 +18703,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1222700000000714,
+      "retrievalMs": 1.2147310000000289,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18878,7 +18770,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.954426999999896,
+      "retrievalMs": 0.9222079999999551,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18948,7 +18840,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3960570000001553,
+      "retrievalMs": 1.4793649999996887,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -19011,7 +18903,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3072819999999865,
+      "retrievalMs": 1.4780040000000554,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -19079,7 +18971,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3543970000000627,
+      "retrievalMs": 1.3618679999999586,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -19116,7 +19008,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.462769999999864,
+      "retrievalMs": 2.395155000000159,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -19233,17 +19125,16 @@
         "\"phone number on our client profile\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.948472000000038,
+      "retrievalMs": 0.8625170000000253,
       "tokens": {
         "inputTokens": 974,
-        "outputTokens": 112,
-        "measured": false,
-        "counted": true
+        "outputTokens": 122,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006136,
-        "claude-sonnet-5-5": 0.003068,
-        "claude-haiku-4-5": 0.001157
+        "claude-opus-5-5": 0.006256,
+        "claude-sonnet-5-5": 0.003168,
+        "claude-haiku-4-5": 0.001232
       },
       "pass": true,
       "neverViolated": false,
@@ -19316,17 +19207,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.016634999999951,
+      "retrievalMs": 0.9090360000000146,
       "tokens": {
         "inputTokens": 1011,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007144,
-        "claude-sonnet-5-5": 0.003572,
-        "claude-haiku-4-5": 0.001361
+        "claude-opus-5-5": 0.007564,
+        "claude-sonnet-5-5": 0.003732,
+        "claude-haiku-4-5": 0.001396
       },
       "pass": true,
       "neverViolated": false,
@@ -19402,17 +19292,16 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.2034330000001319,
+      "retrievalMs": 1.2599330000002738,
       "tokens": {
         "inputTokens": 1202,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007908,
-        "claude-sonnet-5-5": 0.003954,
-        "claude-haiku-4-5": 0.001501
+        "claude-opus-5-5": 0.008388,
+        "claude-sonnet-5-5": 0.004114,
+        "claude-haiku-4-5": 0.001591
       },
       "pass": true,
       "neverViolated": false,
@@ -19484,17 +19373,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.2334180000000288,
+      "retrievalMs": 1.3375620000001618,
       "tokens": {
         "inputTokens": 1008,
-        "outputTokens": 155,
-        "measured": false,
-        "counted": true
+        "outputTokens": 171,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007132,
-        "claude-sonnet-5-5": 0.003566,
-        "claude-haiku-4-5": 0.001357
+        "claude-opus-5-5": 0.007792,
+        "claude-sonnet-5-5": 0.003726,
+        "claude-haiku-4-5": 0.001447
       },
       "pass": true,
       "neverViolated": false,
@@ -19564,17 +19452,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0008949999999004,
+      "retrievalMs": 1.1196869999998853,
       "tokens": {
         "inputTokens": 944,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 221,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006136,
-        "claude-sonnet-5-5": 0.003068,
-        "claude-haiku-4-5": 0.001149
+        "claude-opus-5-5": 0.005436,
+        "claude-sonnet-5-5": 0.004098,
+        "claude-haiku-4-5": 0.001209
       },
       "pass": false,
       "neverViolated": false,
@@ -19643,17 +19530,16 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8772919999998976,
+      "retrievalMs": 0.8528160000000753,
       "tokens": {
         "inputTokens": 998,
-        "outputTokens": 145,
-        "measured": false,
-        "counted": true
+        "outputTokens": 165,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006892,
-        "claude-sonnet-5-5": 0.003446,
-        "claude-haiku-4-5": 0.001307
+        "claude-opus-5-5": 0.007352,
+        "claude-sonnet-5-5": 0.003646,
+        "claude-haiku-4-5": 0.001352
       },
       "pass": true,
       "neverViolated": false,
@@ -19723,17 +19609,16 @@
         "\"our client account\" is about the user's own client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9185910000001059,
+      "retrievalMs": 0.8954309999999168,
       "tokens": {
         "inputTokens": 947,
-        "outputTokens": 107,
-        "measured": false,
-        "counted": true
+        "outputTokens": 113,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.005928,
-        "claude-sonnet-5-5": 0.002964,
-        "claude-haiku-4-5": 0.001111
+        "claude-opus-5-5": 0.006048,
+        "claude-sonnet-5-5": 0.003024,
+        "claude-haiku-4-5": 0.001201
       },
       "pass": true,
       "neverViolated": false,
@@ -19800,17 +19685,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 4.53503099999989,
+      "retrievalMs": 0.8840749999999389,
       "tokens": {
         "inputTokens": 905,
-        "outputTokens": 99,
-        "measured": false,
-        "counted": true
+        "outputTokens": 102,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.0056,
-        "claude-sonnet-5-5": 0.0028,
-        "claude-haiku-4-5": 0.001068
+        "claude-opus-5-5": 0.00582,
+        "claude-sonnet-5-5": 0.00283,
+        "claude-haiku-4-5": 0.001153
       },
       "pass": true,
       "neverViolated": false,
@@ -19877,17 +19761,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1211680000001252,
+      "retrievalMs": 0.8670219999999063,
       "tokens": {
         "inputTokens": 1038,
-        "outputTokens": 171,
-        "measured": false,
-        "counted": true
+        "outputTokens": 185,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007572,
-        "claude-sonnet-5-5": 0.003786,
-        "claude-haiku-4-5": 0.001369
+        "claude-opus-5-5": 0.008572,
+        "claude-sonnet-5-5": 0.003926,
+        "claude-haiku-4-5": 0.001299
       },
       "pass": true,
       "neverViolated": false,
@@ -19953,17 +19836,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9940140000001065,
+      "retrievalMs": 0.9150369999997565,
       "tokens": {
         "inputTokens": 977,
-        "outputTokens": 129,
-        "measured": false,
-        "counted": true
+        "outputTokens": 148,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006488,
-        "claude-sonnet-5-5": 0.003244,
-        "claude-haiku-4-5": 0.001199
+        "claude-opus-5-5": 0.007028,
+        "claude-sonnet-5-5": 0.003434,
+        "claude-haiku-4-5": 0.001309
       },
       "pass": true,
       "neverViolated": false,
@@ -20030,17 +19912,16 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.2414770000000317,
+      "retrievalMs": 1.077893000000131,
       "tokens": {
         "inputTokens": 1127,
-        "outputTokens": 111,
-        "measured": false,
-        "counted": true
+        "outputTokens": 132,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006728,
-        "claude-sonnet-5-5": 0.003364,
-        "claude-haiku-4-5": 0.001296
+        "claude-opus-5-5": 0.007468,
+        "claude-sonnet-5-5": 0.003574,
+        "claude-haiku-4-5": 0.001381
       },
       "pass": true,
       "neverViolated": false,
@@ -20105,17 +19986,16 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1127920000001268,
+      "retrievalMs": 0.8840759999998227,
       "tokens": {
         "inputTokens": 986,
-        "outputTokens": 134,
-        "measured": false,
-        "counted": true
+        "outputTokens": 173,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006624,
-        "claude-sonnet-5-5": 0.003312,
-        "claude-haiku-4-5": 0.001226
+        "claude-opus-5-5": 0.006964,
+        "claude-sonnet-5-5": 0.003702,
+        "claude-haiku-4-5": 0.001326
       },
       "pass": true,
       "neverViolated": false,
@@ -20185,7 +20065,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7988530000000083,
+      "retrievalMs": 1.5205999999998312,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20260,7 +20140,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5093239999998787,
+      "retrievalMs": 1.304885000000013,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20331,7 +20211,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.2018980000000283,
+      "retrievalMs": 1.5235349999998107,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20409,7 +20289,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.6253719999999703,
+      "retrievalMs": 1.4279830000000402,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20484,7 +20364,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.424208000000135,
+      "retrievalMs": 2.2506889999999657,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20558,7 +20438,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.132331000000022,
+      "retrievalMs": 0.9890099999997801,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20633,7 +20513,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.388733000000002,
+      "retrievalMs": 1.9597520000002078,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20708,7 +20588,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4269020000001547,
+      "retrievalMs": 1.2632520000001932,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20781,7 +20661,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7180349999998725,
+      "retrievalMs": 1.685907000000043,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20857,7 +20737,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8289819999999963,
+      "retrievalMs": 1.5701600000002145,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20929,7 +20809,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6835849999999937,
+      "retrievalMs": 1.5618060000001606,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21001,7 +20881,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6187150000000656,
+      "retrievalMs": 1.27121999999963,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21072,7 +20952,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7110139999999774,
+      "retrievalMs": 1.3448929999999564,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21147,7 +21027,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.8574180000000524,
+      "retrievalMs": 1.4928210000002764,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21223,17 +21103,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1671819999999116,
+      "retrievalMs": 1.0066629999996621,
       "tokens": {
         "inputTokens": 982,
-        "outputTokens": 166,
-        "measured": false,
-        "counted": true
+        "outputTokens": 206,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.007248,
-        "claude-sonnet-5-5": 0.003624,
-        "claude-haiku-4-5": 0.001347
+        "claude-opus-5-5": 0.007868,
+        "claude-sonnet-5-5": 0.004024,
+        "claude-haiku-4-5": 0.001487
       },
       "pass": true,
       "neverViolated": false,
@@ -21295,7 +21174,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.793833000000177,
+      "retrievalMs": 1.9286389999997482,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21365,7 +21244,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.2404710000000705,
+      "retrievalMs": 1.213952000000063,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21440,7 +21319,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.9274259999999686,
+      "retrievalMs": 1.4883210000002691,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21511,7 +21390,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.6046010000000024,
+      "retrievalMs": 1.5437970000002679,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21586,7 +21465,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.2590090000001055,
+      "retrievalMs": 1.2533690000000206,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21655,7 +21534,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.9342599999999948,
+      "retrievalMs": 1.5911630000000514,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21726,7 +21605,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.083806000000095,
+      "retrievalMs": 1.955565000000206,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21793,7 +21672,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.1755450000000565,
+      "retrievalMs": 1.1909630000000107,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21868,7 +21747,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 4.151608000000124,
+      "retrievalMs": 2.1738729999997304,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21938,7 +21817,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.289780999999948,
+      "retrievalMs": 1.2195540000002438,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22011,7 +21890,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.8818599999999606,
+      "retrievalMs": 2.060993999999937,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22083,7 +21962,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.4082840000000942,
+      "retrievalMs": 1.8279570000004242,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22162,17 +22041,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.8351709999999457,
+      "retrievalMs": 1.4888439999999719,
       "tokens": {
         "inputTokens": 945,
-        "outputTokens": 118,
-        "measured": false,
-        "counted": true
+        "outputTokens": 94,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00614,
-        "claude-sonnet-5-5": 0.00307,
-        "claude-haiku-4-5": 0.001149
+        "claude-opus-5-5": 0.00612,
+        "claude-sonnet-5-5": 0.00283,
+        "claude-haiku-4-5": 0.001124
       },
       "pass": true,
       "neverViolated": false,
@@ -22241,7 +22119,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.2078919999999016,
+      "retrievalMs": 1.1401599999999235,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22316,7 +22194,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.8765829999999823,
+      "retrievalMs": 1.6014000000000124,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22392,7 +22270,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7058449999999539,
+      "retrievalMs": 1.1024740000002566,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22465,7 +22343,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.968258999999989,
+      "retrievalMs": 1.8402510000000802,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22542,7 +22420,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5369720000001053,
+      "retrievalMs": 0.8248629999998229,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22618,17 +22496,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.1631589999999505,
+      "retrievalMs": 1.4001760000001013,
       "tokens": {
         "inputTokens": 910,
-        "outputTokens": 99,
-        "measured": false,
-        "counted": true
+        "outputTokens": 98,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00562,
-        "claude-sonnet-5-5": 0.00281,
-        "claude-haiku-4-5": 0.001071
+        "claude-opus-5-5": 0.00886,
+        "claude-sonnet-5-5": 0.0028,
+        "claude-haiku-4-5": 0.001146
       },
       "pass": false,
       "neverViolated": false,
@@ -22696,17 +22573,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.6446229999999105,
+      "retrievalMs": 5.069703000000118,
       "tokens": {
         "inputTokens": 1085,
-        "outputTokens": 162,
-        "measured": false,
-        "counted": true
+        "outputTokens": 159,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.00758,
-        "claude-sonnet-5-5": 0.00379,
-        "claude-haiku-4-5": 0.001387
+        "claude-opus-5-5": 0.00762,
+        "claude-sonnet-5-5": 0.00376,
+        "claude-haiku-4-5": 0.001442
       },
       "pass": false,
       "neverViolated": false,
@@ -22768,7 +22644,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6358330000000478,
+      "retrievalMs": 1.3545569999996587,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22848,17 +22724,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7349309999999605,
+      "retrievalMs": 1.5501060000001416,
       "tokens": {
         "inputTokens": 1052,
-        "outputTokens": 234,
-        "measured": false,
-        "counted": true
+        "outputTokens": 181,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.008888,
-        "claude-sonnet-5-5": 0.004444,
-        "claude-haiku-4-5": 0.001648
+        "claude-opus-5-5": 0.004648,
+        "claude-sonnet-5-5": 0.003914,
+        "claude-haiku-4-5": 0.000913
       },
       "pass": false,
       "neverViolated": false,
@@ -22927,17 +22802,16 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6362450000001445,
+      "retrievalMs": 0.917410000000018,
       "tokens": {
         "inputTokens": 934,
-        "outputTokens": 120,
-        "measured": false,
-        "counted": true
+        "outputTokens": 140,
+        "measured": true
       },
       "costByModel": {
-        "claude-opus-5-5": 0.006136,
-        "claude-sonnet-5-5": 0.003068,
-        "claude-haiku-4-5": 0.001142
+        "claude-opus-5-5": 0.006916,
+        "claude-sonnet-5-5": 0.003268,
+        "claude-haiku-4-5": 0.001262
       },
       "pass": false,
       "neverViolated": false,
@@ -22997,7 +22871,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.476235000000088,
+      "retrievalMs": 2.0983070000002044,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23067,7 +22941,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.7919959999999264,
+      "retrievalMs": 1.5241370000003371,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23135,7 +23009,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.6776230000000396,
+      "retrievalMs": 1.9352039999998851,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23207,7 +23081,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.1525719999999637,
+      "retrievalMs": 1.7374200000003839,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23254,7 +23128,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.421244999999999,
+      "retrievalMs": 1.3662560000002486,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23325,7 +23199,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.7605570000000625,
+      "retrievalMs": 2.3182220000003326,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23389,7 +23263,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.2867780000001403,
+      "retrievalMs": 1.598193999999694,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23434,7 +23308,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 5.330828999999994,
+      "retrievalMs": 2.6526120000003175,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,

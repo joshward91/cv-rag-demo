@@ -1,0 +1,1 @@
+{"type":"answer","answer":"Update their status to **Customer**:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose **Customer** in the **Status** list.\n4. Select **Save contact**.\n\nTheir status is now updated to reflect that they're a customer.","citations":["contact-change-status"],"model":"claude-haiku-4-5-20251001"}

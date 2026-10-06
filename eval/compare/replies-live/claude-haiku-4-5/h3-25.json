@@ -1,0 +1,1 @@
+{"type":"answer","answer":"To remove the **Preferred contact method** field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the field.\n3. In the confirmation box, select **Delete field**.\n\nNote: Deleting the field removes its values from every contact. This can't be undone.","citations":["custom-field-delete"],"model":"claude-haiku-4-5-20251001"}

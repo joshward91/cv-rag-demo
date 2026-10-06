@@ -1,0 +1,1 @@
+{"type":"clarify","answer":"Do you want to permanently delete this contact (which also deletes their notes and can't be undone), or keep their record and change their **Status** to **Inactive**?","citations":["contact-delete","contact-change-status"],"model":"claude-opus-5-5"}

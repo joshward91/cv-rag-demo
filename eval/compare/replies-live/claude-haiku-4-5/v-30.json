@@ -1,0 +1,1 @@
+{"type":"answer","answer":"1. Go to **Settings** > **Client profile**.\n2. Choose **GBP** in the **Currency** list.\n3. Select **Save client profile**.\n\nThis changes the currency symbol shown on every deal. Note: it doesn't convert existing deal values—you'll need to update those manually if needed.","citations":["account-currency"],"model":"claude-haiku-4-5-20251001"}

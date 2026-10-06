@@ -9,8 +9,8 @@
   "v-23"
  ],
  "countedAt": "2026-10-06T05:02:36.944Z",
- "measuredAt": null,
- "generatedAt": "2026-10-06T05:33:55.169Z",
+ "measuredAt": "2026-10-06T05:51:10.586Z",
+ "generatedAt": "2026-10-06T05:53:30.082Z",
  "splits": [
   "voice",
   "holdout3",
@@ -73,14 +73,14 @@
    },
    "tokens": {
     "input": 155723,
-    "output": 9437,
+    "output": 10498,
     "counted": true,
-    "measured": false
+    "measured": true
    },
-   "cost": 0.202908,
-   "costPerQuestion": 0.001548916030534351,
-   "costPerCorrect": 0.001795646017699115,
-   "costPer1000Questions": 1.548916030534351
+   "cost": 0.208213,
+   "costPerQuestion": 0.0015894122137404582,
+   "costPerCorrect": 0.0018425929203539824,
+   "costPer1000Questions": 1.5894122137404583
   },
   {
    "key": "sonnet",
@@ -136,14 +136,14 @@
    },
    "tokens": {
     "input": 199799,
-    "output": 14556,
+    "output": 15861,
     "counted": true,
-    "measured": false
+    "measured": true
    },
-   "cost": 0.545158,
-   "costPerQuestion": 0.0041615114503816795,
-   "costPerCorrect": 0.004542983333333334,
-   "costPer1000Questions": 4.1615114503816795
+   "cost": 0.558208,
+   "costPerQuestion": 0.004261129770992367,
+   "costPerCorrect": 0.004651733333333334,
+   "costPer1000Questions": 4.261129770992367
   },
   {
    "key": "opus",
@@ -199,14 +199,14 @@
    },
    "tokens": {
     "input": 199799,
-    "output": 15109,
+    "output": 17685,
     "counted": true,
-    "measured": false
+    "measured": true
    },
-   "cost": 1.101376,
-   "costPerQuestion": 0.008407450381679388,
-   "costPerCorrect": 0.00925526050420168,
-   "costPer1000Questions": 8.407450381679388
+   "cost": 1.152896,
+   "costPerQuestion": 0.00880073282442748,
+   "costPerCorrect": 0.009688201680672269,
+   "costPer1000Questions": 8.80073282442748
   }
  ],
  "rows": [
@@ -9497,5 +9497,10 @@
   "useful": 107,
   "wrongAnswers": 6
  },
- "measuredModels": []
+ "measuredModels": [
+  "Claude Haiku 4.5",
+  "Claude Sonnet 5.5",
+  "Claude Opus 5.5"
+ ],
+ "partlyMeasuredAt": "2026-10-06T05:51:10.586Z"
 }

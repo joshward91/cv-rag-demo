@@ -1,0 +1,1 @@
+{"type":"answer","answer":"To delete the unused 'Fax' field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the 'Fax' field.\n3. In the confirmation box, select **Delete field**.\n\nThis removes the field and its values from all records. Note: this action can't be undone.","citations":["custom-field-delete"],"model":"claude-haiku-4-5-20251001"}

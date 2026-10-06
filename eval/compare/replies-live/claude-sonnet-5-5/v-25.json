@@ -1,0 +1,1 @@
+{"type":"answer","answer":"To remove the **Fax** custom field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the **Fax** field.\n3. In the confirmation box, select **Delete field**.\n\nWarning: deleting a field removes its values from every record, and this can't be undone.","citations":["custom-field-delete"],"model":"claude-sonnet-5-5"}

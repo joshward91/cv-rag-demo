@@ -62,13 +62,13 @@
     "passed": 113,
     "passRate": 0.8625954198473282,
     "wrongAnswers": 5,
-    "cost": 0.20135908396946622,
-    "costPer1000Questions": 1.5370922440417267
+    "cost": 0.20662358778625928,
+    "costPer1000Questions": 1.577279296078315
    },
    "alwaysModel": {
     "passRate": 0.8625954198473282,
     "wrongAnswers": 5,
-    "costPer1000Questions": 1.548916030534351
+    "costPer1000Questions": 1.5894122137404583
    },
    "prose": [
     {
@@ -82,8 +82,8 @@
      "passed": 115,
      "passRate": 0.8778625954198473,
      "wrongAnswers": 7,
-     "cost": 0.1824524503816798,
-     "costPer1000Questions": 1.3927667968067161
+     "cost": 0.18635115267175556,
+     "costPer1000Questions": 1.4225278829905004
     },
     {
      "threshold": 0.6,
@@ -96,8 +96,8 @@
      "passed": 113,
      "passRate": 0.8625954198473282,
      "wrongAnswers": 6,
-     "cost": 0.18517777862595464,
-     "costPer1000Questions": 1.4135708292057605
+     "cost": 0.1889604503816792,
+     "costPer1000Questions": 1.4424461861196884
     },
     {
      "threshold": 0.65,
@@ -110,8 +110,8 @@
      "passed": 113,
      "passRate": 0.8625954198473282,
      "wrongAnswers": 6,
-     "cost": 0.1862423587786264,
-     "costPer1000Questions": 1.4216973952566903
+     "cost": 0.19060751145038146,
+     "costPer1000Questions": 1.4550191713769576
     },
     {
      "threshold": 0.7,
@@ -124,8 +124,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18681593893129816,
-     "costPer1000Questions": 1.4260758697045661
+     "cost": 0.19220857251908374,
+     "costPer1000Questions": 1.4672410115960592
     },
     {
      "threshold": 0.75,
@@ -138,8 +138,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18681593893129816,
-     "costPer1000Questions": 1.4260758697045661
+     "cost": 0.19220857251908374,
+     "costPer1000Questions": 1.4672410115960592
     },
     {
      "threshold": 0.8,
@@ -152,8 +152,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18743477099236688,
-     "costPer1000Questions": 1.4307997785676863
+     "cost": 0.19271339694656464,
+     "costPer1000Questions": 1.4710946331798826
     },
     {
      "threshold": 0.85,
@@ -166,8 +166,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18803260305343558,
-     "costPer1000Questions": 1.4353633820872946
+     "cost": 0.19326722137404556,
+     "costPer1000Questions": 1.4753223005652334
     },
     {
      "threshold": 0.9,
@@ -180,8 +180,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18803260305343558,
-     "costPer1000Questions": 1.4353633820872946
+     "cost": 0.19326722137404556,
+     "costPer1000Questions": 1.4753223005652334
     },
     {
      "threshold": 0.95,
@@ -194,8 +194,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18803260305343558,
-     "costPer1000Questions": 1.4353633820872946
+     "cost": 0.19326722137404556,
+     "costPer1000Questions": 1.4753223005652334
     },
     {
      "threshold": 1,
@@ -208,8 +208,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.18834951908396994,
-     "costPer1000Questions": 1.4377825884272515
+     "cost": 0.193569633587786,
+     "costPer1000Questions": 1.477630790746458
     }
    ],
    "offline": [
@@ -224,8 +224,8 @@
      "passed": 115,
      "passRate": 0.8778625954198473,
      "wrongAnswers": 7,
-     "cost": 0.12081545038167933,
-     "costPer1000Questions": 0.922255346425033
+     "cost": 0.12397415267175564,
+     "costPer1000Questions": 0.9463675776469896
     },
     {
      "threshold": 0.6,
@@ -238,8 +238,8 @@
      "passed": 113,
      "passRate": 0.8625954198473282,
      "wrongAnswers": 6,
-     "cost": 0.1332067786259542,
-     "costPer1000Questions": 1.0168456383660627
+     "cost": 0.1366894503816793,
+     "costPer1000Questions": 1.0434309189441167
     },
     {
      "threshold": 0.65,
@@ -252,8 +252,8 @@
      "passed": 113,
      "passRate": 0.8625954198473282,
      "wrongAnswers": 6,
-     "cost": 0.14095135877862602,
-     "costPer1000Questions": 1.0759645708292065
+     "cost": 0.14463651145038156,
+     "costPer1000Questions": 1.104095507254821
     },
     {
      "threshold": 0.7,
@@ -266,8 +266,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.14869593893129784,
-     "costPer1000Questions": 1.1350835032923499
+     "cost": 0.15258357251908383,
+     "costPer1000Questions": 1.1647600955655255
     },
     {
      "threshold": 0.75,
@@ -280,8 +280,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.14869593893129784,
-     "costPer1000Questions": 1.1350835032923499
+     "cost": 0.15258357251908383,
+     "costPer1000Questions": 1.1647600955655255
     },
     {
      "threshold": 0.8,
@@ -294,8 +294,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.15179377099236657,
-     "costPer1000Questions": 1.1587310762776073
+     "cost": 0.15576239694656474,
+     "costPer1000Questions": 1.189025930889807
     },
     {
      "threshold": 0.85,
@@ -308,8 +308,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.1548916030534353,
-     "costPer1000Questions": 1.1823786492628647
+     "cost": 0.15894122137404565,
+     "costPer1000Questions": 1.213291766214089
     },
     {
      "threshold": 0.9,
@@ -322,8 +322,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.1548916030534353,
-     "costPer1000Questions": 1.1823786492628647
+     "cost": 0.15894122137404565,
+     "costPer1000Questions": 1.213291766214089
     },
     {
      "threshold": 0.95,
@@ -336,8 +336,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.1548916030534353,
-     "costPer1000Questions": 1.1823786492628647
+     "cost": 0.15894122137404565,
+     "costPer1000Questions": 1.213291766214089
     },
     {
      "threshold": 1,
@@ -350,8 +350,8 @@
      "passed": 112,
      "passRate": 0.8549618320610687,
      "wrongAnswers": 6,
-     "cost": 0.15644051908396966,
-     "costPer1000Questions": 1.1942024357554937
+     "cost": 0.1605306335877861,
+     "costPer1000Questions": 1.22542468387623
     }
    ]
   },
@@ -369,13 +369,13 @@
     "passed": 120,
     "passRate": 0.916030534351145,
     "wrongAnswers": 4,
-    "cost": 0.5409964885496187,
-    "costPer1000Questions": 4.129744187401669
+    "cost": 0.5539468702290067,
+    "costPer1000Questions": 4.2286020628168455
    },
    "alwaysModel": {
     "passRate": 0.916030534351145,
     "wrongAnswers": 4,
-    "costPer1000Questions": 4.1615114503816795
+    "costPer1000Questions": 4.261129770992367
    },
    "prose": [
     {
@@ -389,8 +389,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 7,
-     "cost": 0.48950989312977145,
-     "costPer1000Questions": 3.736716741448637
+     "cost": 0.5006801221374039,
+     "costPer1000Questions": 3.821985665171022
     },
     {
      "threshold": 0.6,
@@ -403,8 +403,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.49672798473282487,
-     "costPer1000Questions": 3.791816677349808
+     "cost": 0.5081451603053427,
+     "costPer1000Questions": 3.8789706893537614
     },
     {
      "threshold": 0.65,
@@ -417,8 +417,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.4996255419847333,
-     "costPer1000Questions": 3.8139354349979637
+     "cost": 0.5124308091603046,
+     "costPer1000Questions": 3.911685566109195
     },
     {
      "threshold": 0.7,
@@ -431,8 +431,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.5012430992366417,
-     "costPer1000Questions": 3.8262832002797076
+     "cost": 0.5159364580152663,
+     "costPer1000Questions": 3.9384462443913457
     },
     {
      "threshold": 0.75,
@@ -445,8 +445,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.5012430992366417,
-     "costPer1000Questions": 3.8262832002797076
+     "cost": 0.5159364580152663,
+     "costPer1000Questions": 3.9384462443913457
     },
     {
      "threshold": 0.8,
@@ -459,8 +459,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.502898122137405,
-     "costPer1000Questions": 3.8389169628809547
+     "cost": 0.5174607175572511,
+     "costPer1000Questions": 3.9500818134141307
     },
     {
      "threshold": 0.85,
@@ -473,8 +473,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.5045091450381683,
-     "costPer1000Questions": 3.8512148476196053
+     "cost": 0.5189709770992358,
+     "costPer1000Questions": 3.961610512207907
     },
     {
      "threshold": 0.9,
@@ -487,8 +487,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.5045091450381683,
-     "costPer1000Questions": 3.8512148476196053
+     "cost": 0.5189709770992358,
+     "costPer1000Questions": 3.961610512207907
     },
     {
      "threshold": 0.95,
@@ -501,8 +501,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.5045091450381683,
-     "costPer1000Questions": 3.8512148476196053
+     "cost": 0.5189709770992358,
+     "costPer1000Questions": 3.961610512207907
     },
     {
      "threshold": 1,
@@ -515,8 +515,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.50534265648855,
-     "costPer1000Questions": 3.857577530446947
+     "cost": 0.5196341068702282,
+     "costPer1000Questions": 3.966672571528459
     }
    ],
    "offline": [
@@ -531,8 +531,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 7,
-     "cost": 0.3245978931297712,
-     "costPer1000Questions": 2.4778465124410016
+     "cost": 0.33236812213740413,
+     "costPer1000Questions": 2.5371612376901083
     },
     {
      "threshold": 0.6,
@@ -545,8 +545,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.3578899847328247,
-     "costPer1000Questions": 2.7319846162811046
+     "cost": 0.366457160305343,
+     "costPer1000Questions": 2.797382903094221
     },
     {
      "threshold": 0.65,
@@ -559,8 +559,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.3786975419847331,
-     "costPer1000Questions": 2.890820931181169
+     "cost": 0.38776280916030476,
+     "costPer1000Questions": 2.9600214439717925
     },
     {
      "threshold": 0.7,
@@ -573,8 +573,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.3995050992366415,
-     "costPer1000Questions": 3.049657246081233
+     "cost": 0.40906845801526653,
+     "costPer1000Questions": 3.122659984849363
     },
     {
      "threshold": 0.75,
@@ -587,8 +587,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.3995050992366415,
-     "costPer1000Questions": 3.049657246081233
+     "cost": 0.40906845801526653,
+     "costPer1000Questions": 3.122659984849363
     },
     {
      "threshold": 0.8,
@@ -601,8 +601,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.4078281221374049,
-     "costPer1000Questions": 3.1131917720412585
+     "cost": 0.41759071755725125,
+     "costPer1000Questions": 3.1877154012003914
     },
     {
      "threshold": 0.85,
@@ -615,8 +615,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.41615114503816825,
-     "costPer1000Questions": 3.176726298001284
+     "cost": 0.42611297709923596,
+     "costPer1000Questions": 3.25277081755142
     },
     {
      "threshold": 0.9,
@@ -629,8 +629,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.41615114503816825,
-     "costPer1000Questions": 3.176726298001284
+     "cost": 0.42611297709923596,
+     "costPer1000Questions": 3.25277081755142
     },
     {
      "threshold": 0.95,
@@ -643,8 +643,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.41615114503816825,
-     "costPer1000Questions": 3.176726298001284
+     "cost": 0.42611297709923596,
+     "costPer1000Questions": 3.25277081755142
     },
     {
      "threshold": 1,
@@ -657,8 +657,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.42031265648854993,
-     "costPer1000Questions": 3.2084935609812972
+     "cost": 0.4303741068702283,
+     "costPer1000Questions": 3.2852985257269336
     }
    ]
   },
@@ -676,13 +676,13 @@
     "passed": 119,
     "passRate": 0.9083969465648855,
     "wrongAnswers": 4,
-    "cost": 1.0929685496183172,
-    "costPer1000Questions": 8.343271371132191
+    "cost": 1.1440952671755746,
+    "costPer1000Questions": 8.733551657828816
    },
    "alwaysModel": {
     "passRate": 0.9083969465648855,
     "wrongAnswers": 4,
-    "costPer1000Questions": 8.407450381679388
+    "costPer1000Questions": 8.80073282442748
    },
    "prose": [
     {
@@ -696,8 +696,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 8,
-     "cost": 0.9856051297709906,
-     "costPer1000Questions": 7.523703280694584
+     "cost": 1.0325011603053451,
+     "costPer1000Questions": 7.881688246605688
     },
     {
      "threshold": 0.6,
@@ -710,8 +710,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 7,
-     "cost": 1.0007167328244255,
-     "costPer1000Questions": 7.6390590291940885
+     "cost": 1.045239022900765,
+     "costPer1000Questions": 7.9789238389371375
     },
     {
      "threshold": 0.65,
@@ -724,8 +724,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 7,
-     "cost": 1.0069339847328223,
-     "costPer1000Questions": 7.6865189674261245
+     "cost": 1.0533426870229026,
+     "costPer1000Questions": 8.040783870403837
     },
     {
      "threshold": 0.7,
@@ -738,8 +738,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.010591236641219,
-     "costPer1000Questions": 7.714436920925337
+     "cost": 1.0638063511450402,
+     "costPer1000Questions": 8.120659169046107
     },
     {
      "threshold": 0.75,
@@ -752,8 +752,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.010591236641219,
-     "costPer1000Questions": 7.714436920925337
+     "cost": 1.0638063511450402,
+     "costPer1000Questions": 8.120659169046107
     },
     {
      "threshold": 0.8,
@@ -766,8 +766,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.0140701374045777,
-     "costPer1000Questions": 7.740993415302119
+     "cost": 1.0670118167938951,
+     "costPer1000Questions": 8.145128372472481
     },
     {
      "threshold": 0.85,
@@ -780,8 +780,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.0174610381679365,
-     "costPer1000Questions": 7.766878153953714
+     "cost": 1.0703292824427502,
+     "costPer1000Questions": 8.170452537730917
     },
     {
      "threshold": 0.9,
@@ -794,8 +794,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.0174610381679365,
-     "costPer1000Questions": 7.766878153953714
+     "cost": 1.0703292824427502,
+     "costPer1000Questions": 8.170452537730917
     },
     {
      "threshold": 0.95,
@@ -808,8 +808,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 1.0174610381679365,
-     "costPer1000Questions": 7.766878153953714
+     "cost": 1.0703292824427502,
+     "costPer1000Questions": 8.170452537730917
     },
     {
      "threshold": 1,
@@ -822,8 +822,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 6,
-     "cost": 1.0192124885496159,
-     "costPer1000Questions": 7.780248004195541
+     "cost": 1.0715740152671775,
+     "costPer1000Questions": 8.179954315016621
     }
    ],
    "offline": [
@@ -838,8 +838,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 8,
-     "cost": 0.6557811297709916,
-     "costPer1000Questions": 5.005962822679325
+     "cost": 0.6864571603053445,
+     "costPer1000Questions": 5.240130994697286
     },
     {
      "threshold": 0.6,
@@ -852,8 +852,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 7,
-     "cost": 0.7230407328244263,
-     "costPer1000Questions": 5.519394907056689
+     "cost": 0.7568630229007646,
+     "costPer1000Questions": 5.777580327486752
     },
     {
      "threshold": 0.65,
@@ -866,8 +866,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 7,
-     "cost": 0.765077984732823,
-     "costPer1000Questions": 5.840289959792542
+     "cost": 0.8008666870229021,
+     "costPer1000Questions": 6.113486160480169
     },
     {
      "threshold": 0.7,
@@ -880,8 +880,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.8071152366412196,
-     "costPer1000Questions": 6.161185012528395
+     "cost": 0.8448703511450396,
+     "costPer1000Questions": 6.4493919934735855
     },
     {
      "threshold": 0.75,
@@ -894,8 +894,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.8071152366412196,
-     "costPer1000Questions": 6.161185012528395
+     "cost": 0.8448703511450396,
+     "costPer1000Questions": 6.4493919934735855
     },
     {
      "threshold": 0.8,
@@ -908,8 +908,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.8239301374045783,
-     "costPer1000Questions": 6.289543033622736
+     "cost": 0.8624718167938946,
+     "costPer1000Questions": 6.5837543266709515
     },
     {
      "threshold": 0.85,
@@ -922,8 +922,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.840745038167937,
-     "costPer1000Questions": 6.417901054717077
+     "cost": 0.8800732824427496,
+     "costPer1000Questions": 6.7181166598683175
     },
     {
      "threshold": 0.9,
@@ -936,8 +936,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.840745038167937,
-     "costPer1000Questions": 6.417901054717077
+     "cost": 0.8800732824427496,
+     "costPer1000Questions": 6.7181166598683175
     },
     {
      "threshold": 0.95,
@@ -950,8 +950,8 @@
      "passed": 117,
      "passRate": 0.8931297709923665,
      "wrongAnswers": 6,
-     "cost": 0.840745038167937,
-     "costPer1000Questions": 6.417901054717077
+     "cost": 0.8800732824427496,
+     "costPer1000Questions": 6.7181166598683175
     },
     {
      "threshold": 1,
@@ -964,8 +964,8 @@
      "passed": 116,
      "passRate": 0.8854961832061069,
      "wrongAnswers": 6,
-     "cost": 0.8491524885496163,
-     "costPer1000Questions": 6.482080065264246
+     "cost": 0.8888740152671771,
+     "costPer1000Questions": 6.7852978264670005
     }
    ]
   }
