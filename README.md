@@ -239,7 +239,7 @@ Metrics are defined in `eval/metrics.js`:
 - **Retrieval hit rate**: expected article ranked first (and in the top three) for answerable questions.
 - **Citation validity**: answers whose citations all exist and were in the prompt, measured before the guardrail. It is trivially 100% offline and becomes meaningful with `--live`.
 - **Refusal correctness**: recall on out-of-scope questions, precision of hand-offs, and the false-refusal rate on answerable ones. A suggestion counts as not answering, since it asserts nothing and offers Contact support.
-- **Cost per question**: averaged over all questions, including the free clarifications and escalations. Offline runs estimate tokens from the exact prompt at four characters per token and leave out adaptive thinking tokens. `ANTHROPIC_API_KEY=... npm run count:tokens` replaces the estimate with exact counts from Anthropic's free token-counting endpoint, for this evaluation and for the model comparison's prompts and replies (`eval/token-counts.json`, saved by hash, so it holds no prompt text; then re-run `npm run eval`, `node eval/compare/score.mjs` and `npm run build`). Thinking still can't be counted that way; `--live` measures everything.
+- **Cost per question**: averaged over all questions, including the free clarifications and escalations. Token counts are exact for the exact prompt each question would send, with the article's own text priced as the answer; adaptive thinking tokens are left out. Without `eval/token-counts.json`, offline runs fall back to four characters per token. `ANTHROPIC_API_KEY=... npm run count:tokens` makes the exact counts from Anthropic's free token-counting endpoint, for this evaluation and for the model comparison's prompts and replies (`eval/token-counts.json`, saved by hash, so it holds no prompt text; then re-run `npm run eval`, `node eval/compare/score.mjs` and `npm run build`). Thinking still can't be counted that way; `--live` measures everything.
 
 The history and known issues are in `eval/history.json`, and the report page renders both.
 
@@ -254,12 +254,12 @@ The history and known issues are in `eval/history.json`, and the report page ren
 | Everyday voice questions | | 36/46 | 38/46 | **39/46** |
 | Wrong answers | 6 | 5 | 4 | 4 |
 | Answers not faithful to the article (judged) | | 4 of 95 | 1 of 97 | 2 of 97 |
-| Cost per 1,000 questions | $0 | $1.29 | $2.68 | $5.41 |
-| Cost per correct answer | $0 | **$0.0015** | $0.0029 | $0.0060 |
+| Cost per 1,000 questions | $0 | $1.55 | $4.16 | $8.41 |
+| Cost per correct answer | $0 | **$0.0018** | $0.0045 | $0.0093 |
 
-**Sonnet is the pick for this job.** Overall it matches Opus at half the price; Opus is one question better on the everyday voice set. Haiku has the lowest cost per correct answer, but it gets there with nearly twice as many bad answers (wrong article or invented detail). A bad answer costs a support ticket, which is worth far more than the $1.39 per thousand questions saved. Every model beats the shipped keyword policy, which is the case for putting a model in the decision once there is a budget for it. The baseline is graded slightly more leniently: a suggestion counts as a clarification or a hand-off, while a model must return exactly that decision.
+**Sonnet is the pick for this job.** Overall it matches Opus at half the price; Opus is one question better on the everyday voice set. Haiku has the lowest cost per correct answer, but it gets there with nearly twice as many bad answers (wrong article or invented detail). A bad answer costs a support ticket, which is worth far more than the $2.61 per thousand questions saved. Every model beats the shipped keyword policy, which is the case for putting a model in the decision once there is a budget for it. The baseline is graded slightly more leniently: a suggestion counts as a clarification or a hand-off, while a model must return exactly that decision.
 
-How it was run, without API credits: each model ran as a Claude Code subagent, given the routing prompt and one question per file (`eval/compare/batches/`), and wrote one JSON reply per question (`eval/compare/replies/`). The decisions are real model output. Tokens are estimated from the prompt and reply text and priced at API list prices, so thinking tokens are left out: the real cost of Sonnet and Opus, which both think by default, is higher than shown, while Haiku's is not. A separate Opus judge graded all 289 answers against their cited articles, pooled and shuffled with model names removed (`eval/compare/judging.mjs`). Opus grading Opus could favour it slightly, and Sonnet still came out ahead.
+How it was run, without API credits: each model ran as a Claude Code subagent, given the routing prompt and one question per file (`eval/compare/batches/`), and wrote one JSON reply per question (`eval/compare/replies/`). The decisions are real model output. Token counts for every prompt and every reply are exact, from Anthropic's token-counting endpoint (`npm run count:tokens`, saved in `eval/token-counts.json`), and priced at API list prices. The exact counts came out about 20% higher than the first estimate (four characters per token) for Haiku, and about 55% higher for Sonnet and Opus, which count the same prompts as about 28% more tokens than Haiku does. Thinking tokens can't be counted without running the model, so they are left out: the real cost of Sonnet and Opus, which both think by default, is higher than shown, while Haiku's is not. A separate Opus judge graded all 289 answers against their cited articles, pooled and shuffled with model names removed (`eval/compare/judging.mjs`). Opus grading Opus could favour it slightly, and Sonnet still came out ahead.
 
 ```bash
 node eval/compare/prepare.mjs          # build prompts and batches
@@ -277,13 +277,13 @@ Can the model be skipped when keyword search is already confident? `eval/compare
 | Policy (Sonnet 5.5) | Pass rate | Wrong answers | Calls a model | Cost per 1,000 |
 |---|---|---|---|---|
 | No model (offline mode) | 49.6% | 6 | 0% | $0.00 |
-| 1. Full model (default) | 91.6% | 4 | 99% | $2.66 |
-| 2. Prose only when search is ≥70%, else the model decides | 89.3% | 6 | 96% | $2.45 |
-| 3. Offline when search is ≥70%, else the model decides | 89.3% | 6 | 73% | $1.96 |
+| 1. Full model (default) | 91.6% | 4 | 99% | $4.13 |
+| 2. Prose only when search is ≥70%, else the model decides | 89.3% | 6 | 96% | $3.83 |
+| 3. Offline when search is ≥70%, else the model decides | 89.3% | 6 | 73% | $3.05 |
 
-**Full model is recommended; tiers 2 and 3 are included for evaluation.** Tier 3 is 26% cheaper per question, but it resolves 2.3 points fewer questions, about 23 more per 1,000 that end in a wrong answer or a hand-off, so it will likely raise the number of support tickets. That saves $0.70 per 1,000 questions, less than handling one ticket. Tier 2 saves only 8%, because writing prose costs nearly as much as deciding. Most of the model's value is where search is unsure: 52 of the 56 questions Sonnet rescues sit below the 55% hand-off line, which every tier still sends to the model.
+**Full model is recommended; tiers 2 and 3 are included for evaluation.** Tier 3 is 26% cheaper per question, but it resolves 2.3 points fewer questions, about 23 more per 1,000 that end in a wrong answer or a hand-off, so it will likely raise the number of support tickets. That saves $1.08 per 1,000 questions, less than handling one ticket. Tier 2 saves only 7%, because writing prose costs nearly as much as deciding. Most of the model's value is where search is unsure: 52 of the 56 questions Sonnet rescues sit below the 55% hand-off line, which every tier still sends to the model.
 
-The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a calibrated probability, and the questions are bimodal: 78 sit below 55%, 29 at exactly 100%, and only 5 between 70% and 100%. Any threshold from 55% to 100% gives the same 89.3% pass rate and only changes cost ($1.60 to $2.07). The extra wrong answers are short, ambiguous questions such as "how do I change the status", which search covers 100%. Catching them would need an ambiguity signal, such as the gap to the second article, tested on fresh questions.
+The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a calibrated probability, and the questions are bimodal: 78 sit below 55%, 29 at exactly 100%, and only 5 between 70% and 100%. Any threshold from 55% to 100% gives the same 89.3% pass rate and only changes cost ($2.48 to $3.21). The extra wrong answers are short, ambiguous questions such as "how do I change the status", which search covers 100%. Catching them would need an ambiguity signal, such as the gap to the second article, tested on fresh questions.
 
 ## Known limitations
 

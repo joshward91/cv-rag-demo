@@ -8,8 +8,8 @@
   "v-22",
   "v-23"
  ],
- "countedAt": null,
- "generatedAt": "2026-10-06T04:33:10.913Z",
+ "countedAt": "2026-10-06T05:02:36.944Z",
+ "generatedAt": "2026-10-06T05:03:09.691Z",
  "splits": [
   "voice",
   "holdout3",
@@ -71,14 +71,14 @@
     "complete": 94
    },
    "tokens": {
-    "input": 129164,
-    "output": 8076,
-    "counted": false
+    "input": 155723,
+    "output": 9437,
+    "counted": true
    },
-   "cost": 0.169544,
-   "costPerQuestion": 0.0012942290076335878,
-   "costPerCorrect": 0.0015003893805309735,
-   "costPer1000Questions": 1.2942290076335878
+   "cost": 0.202908,
+   "costPerQuestion": 0.001548916030534351,
+   "costPerCorrect": 0.001795646017699115,
+   "costPer1000Questions": 1.548916030534351
   },
   {
    "key": "sonnet",
@@ -133,14 +133,14 @@
     "complete": 97
    },
    "tokens": {
-    "input": 129164,
-    "output": 9284,
-    "counted": false
+    "input": 199799,
+    "output": 14556,
+    "counted": true
    },
-   "cost": 0.351168,
-   "costPerQuestion": 0.0026806717557251907,
-   "costPerCorrect": 0.0029264,
-   "costPer1000Questions": 2.6806717557251907
+   "cost": 0.545158,
+   "costPerQuestion": 0.0041615114503816795,
+   "costPerCorrect": 0.004542983333333334,
+   "costPer1000Questions": 4.1615114503816795
   },
   {
    "key": "opus",
@@ -195,14 +195,14 @@
     "complete": 97
    },
    "tokens": {
-    "input": 129164,
-    "output": 9625,
-    "counted": false
+    "input": 199799,
+    "output": 15109,
+    "counted": true
    },
-   "cost": 0.709156,
-   "costPerQuestion": 0.005413404580152672,
-   "costPerCorrect": 0.005959294117647059,
-   "costPer1000Questions": 5.413404580152672
+   "cost": 1.101376,
+   "costPerQuestion": 0.008407450381679388,
+   "costPerCorrect": 0.00925526050420168,
+   "costPer1000Questions": 8.407450381679388
   }
  ],
  "rows": [
