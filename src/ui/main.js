@@ -1,6 +1,7 @@
 import { articles } from '../kb/articles.js';
 import { Store } from '../crm/store.js';
-import { Retriever } from '../rag/retriever.js';
+import { overviewArticles } from '../kb/overview-articles.js';
+import { viewerRetriever } from '../rag/suite.js';
 import { SemanticIndex } from '../rag/semantic.js';
 import { articleVectors } from '../kb/article-vectors.js';
 import { CrmApp } from './app.js';
@@ -11,7 +12,12 @@ const store = new Store();
 // static site ships them; the single-file claude.ai build can't, so it is
 // built with __SEMANTIC__ false and stays lexical.
 const semanticEnabled = globalThis.__SEMANTIC__ ?? true;
-const retriever = new Retriever(articles, {}, { semantic: semanticEnabled ? new SemanticIndex(articleVectors.passages, { graph: articleVectors.graph }) : null });
+const semantic = semanticEnabled ? new SemanticIndex(articleVectors.passages, { graph: articleVectors.graph }) : null;
+const helpCentre = [...articles, ...overviewArticles];
+const retrievers = {
+  signedIn: viewerRetriever(helpCentre, { loggedIn: true }, { semantic }),
+  signedOut: viewerRetriever(helpCentre, { loggedIn: false }, { semantic }),
+};
 
 const app = new CrmApp({
   root: document.getElementById('app'),
@@ -24,7 +30,7 @@ const app = new CrmApp({
 const chat = new ChatWidget({
   root: document.getElementById('chat'),
   app,
-  retriever,
+  retrievers,
   sample: null,
   loadEmbedder: semanticEnabled ? () => import('./embedder.browser.js').then((m) => m.createBrowserEmbedder(document.baseURI)) : null,
   loadSuite: semanticEnabled ? () => import('./suite.browser.js').then((m) => m.loadSuite(document.baseURI)) : null,

@@ -1,6 +1,6 @@
 import { Retriever } from '../rag/retriever.js';
 import { SemanticIndex } from '../rag/semantic.js';
-import { Suite, SISTER_PRODUCTS, partition } from '../rag/suite.js';
+import { Suite, SISTER_PRODUCTS, partition, canSee } from '../rag/suite.js';
 
 /**
  * Loads the help centres of Harbour's other products, served next to the
@@ -30,9 +30,12 @@ export async function loadSuite(baseUrl) {
   // mislabelled file still can't put anything else in front of the assistant.
   const { visible } = partition(articles);
   const semantic = new SemanticIndex(passagesOf(meta, bin), { graph });
-  const suite = new Suite(
-    SISTER_PRODUCTS.map((p) => ({ key: p.key, retriever: new Retriever(visible.filter((a) => a.product === p.name), {}, { semantic, plain: true }) })),
-  );
+  // A suite per viewer. The sister products' help is for signed-in customers,
+  // so a visitor's suite still recognises "in Harbour People" but has nothing
+  // to answer from: the question is handed off, not answered from the CRM.
+  const suiteFor = (viewer) =>
+    new Suite(SISTER_PRODUCTS.map((p) => ({ key: p.key, retriever: new Retriever(visible.filter((a) => a.product === p.name && canSee(a, viewer)), {}, { semantic, plain: true }) })));
+  const suites = { signedIn: suiteFor({ loggedIn: true }), signedOut: suiteFor({ loggedIn: false }) };
   // Withheld documents, loaded only for the retrieval panel's clearly labelled
   // "filtered out" section. Nothing here is given to the assistant.
   const internal = {
@@ -40,5 +43,5 @@ export async function loadSuite(baseUrl) {
     retriever: new Retriever(internalArticles, {}, { plain: true }),
     semantic: new SemanticIndex(passagesOf(internalMeta, internalBin)),
   };
-  return { suite, semantic, articles: visible, internal };
+  return { suites, semantic, articles: visible, internal };
 }

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T02:42:25.783Z",
+ "generatedAt": "2026-10-06T02:59:44.559Z",
  "articles": {
   "crm": 29,
   "sister": 969,
@@ -12,12 +12,12 @@
   }
  },
  "passages": {
-  "crm-flat": 292,
-  "crm-hnsw": 292,
-  "suite-flat": 10131,
-  "suite-hnsw": 10131,
-  "suite-acl": 12592,
-  "suite-no-acl": 12592
+  "crm-flat": 575,
+  "crm-hnsw": 575,
+  "suite-flat": 10414,
+  "suite-hnsw": 10414,
+  "suite-acl": 12875,
+  "suite-no-acl": 12875
  },
  "configs": {
   "crm-flat": {
@@ -250,7 +250,7 @@
     "changedFromBefore": [],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 2.814706148026312
+    "msPerQuestion": 3.449500717105267
    },
    "suite": null
   },
@@ -457,7 +457,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 6.671833575657916
+    "msPerQuestion": 7.209866710526304
    },
    "suite": {
     "cases": 64,
@@ -700,7 +700,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 14.260316157894753
+    "msPerQuestion": 14.666528980263111
    },
    "suite": {
     "cases": 64,
@@ -943,7 +943,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 16.191139013157898
+    "msPerQuestion": 17.27050975657905
    },
    "suite": {
     "cases": 64,
@@ -3770,7 +3770,7 @@
      "archived": 24,
      "internal": 60
     },
-    "msPerQuestion": 11.628456555921083
+    "msPerQuestion": 11.588633773026507
    },
    "suite": {
     "cases": 64,

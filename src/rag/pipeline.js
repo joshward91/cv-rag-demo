@@ -59,7 +59,7 @@ export class HelpDesk {
    */
   constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS, suite = null, allowInternal = false }) {
     // allowInternal exists only so the evaluation can measure what the filter prevents.
-    if (!allowInternal) assertPublic(retriever.articles, CRM.name);
+    if (!allowInternal) assertPublic([...retriever.articles, ...(retriever.fallback?.articles ?? [])], CRM.name);
     this.retriever = retriever;
     this.suite = suite;
     this.generator = generator;

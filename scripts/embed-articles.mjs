@@ -1,16 +1,19 @@
 #!/usr/bin/env node
 /**
- * Embeds every help article (as title, alias and sentence passages) and writes src/kb/article-vectors.js, so the
+ * Embeds every help article and overview page (as title, alias and sentence passages) and writes src/kb/article-vectors.js, so the
  * browser only has to embed the question. Also builds the HNSW graph over them. Re-run after any article change;
  * `npm test` fails if the vectors are stale.
  */
 import { writeFileSync } from 'node:fs';
-import { articles } from '../src/kb/articles.js';
+import { articles as taskArticles } from '../src/kb/articles.js';
+import { overviewArticles } from '../src/kb/overview-articles.js';
 import { articlePassages, quantise, EMBEDDING_MODEL } from '../src/rag/semantic.js';
 import { createNodeEmbedder } from '../src/rag/embedder.node.js';
 import { HnswIndex } from '../src/rag/hnsw.js';
 import { fingerprintArticles } from './fingerprint.mjs';
 
+// One index for both audiences; each viewer's retriever filters it to what they may see.
+const articles = [...taskArticles, ...overviewArticles];
 const embed = await createNodeEmbedder();
 const passages = articles.flatMap((a) => articlePassages(a).map((p) => ({ id: a.id, ...p })));
 const vectors = await embed(passages.map((p) => p.text));

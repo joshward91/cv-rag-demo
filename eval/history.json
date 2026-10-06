@@ -374,6 +374,137 @@
           "tuned": false
         }
       ]
+    },
+    {
+      "round": "Round 11",
+      "change": "Vector index and the wider Harbour suite. Semantic search now reads an HNSW graph index built at build time instead of scanning every passage; on all 304 questions it gives the same top article, top three and outcome as the flat scan, and a benchmark shows it at 1.4 ms against 64 ms at 100,000 passages. 969 help articles for five sister products were added, with product routing, \"also in\" links and cross-product suggestions; 9 hand-offs became suggestions from another product. Every document now has a status (draft, public, internal or archived) and only public ones reach the assistant; 190 withheld documents share the vector index and none surfaced (265 of 304 questions would surface one without the filter). A new blind set of 64 suite questions, written by a separate agent, passed 32 on its first and only scoring. Record types are now written as proper nouns (Contact, Deal) in the articles and app; no outcome changed.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 71,
+          "cases": 83,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "redteam",
+          "passed": 38,
+          "cases": 38,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout3",
+          "passed": 12,
+          "cases": 36,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "voice",
+          "passed": 13,
+          "cases": 48,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "suite",
+          "passed": 32,
+          "cases": 64,
+          "blind": true,
+          "tuned": false
+        }
+      ]
+    },
+    {
+      "round": "Round 12",
+      "change": "Signed in or visitor. 15 overview pages for visitors were added beside the task help. Visitors search only the overview pages; signed in, the task help is searched first and the overview pages answer only when it would hand off. Weighting the overview pages down in one shared index was measured first and dropped: it changed 21 of the original answers. 48 new questions, half signed in and half as a visitor, were written blind by a separate agent. First scoring: signed in 11 of 24, visitor 12 of 24. Two changes followed. Overview answers stopped replacing suggestions, prompted by a dev-set failure. Exact title or alias matches now count for more on the overview pages, prompted by the owner's own example (\"how do I add a contact\" as a visitor), which is also in this set, so the visitor score below counts as tuned. The original questions are unchanged.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 71,
+          "cases": 83,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "redteam",
+          "passed": 38,
+          "cases": 38,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout3",
+          "passed": 12,
+          "cases": 36,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "voice",
+          "passed": 13,
+          "cases": 48,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "viewer-in",
+          "passed": 10,
+          "cases": 24,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "viewer-out",
+          "passed": 13,
+          "cases": 24,
+          "blind": false,
+          "tuned": true
+        }
+      ]
     }
   ],
   "knownIssues": [
@@ -386,5 +517,15 @@
     "Long, conversational questions add words the help centre never uses, so keyword coverage falls and the policy escalates even when the right article ranks first. Semantic suggestions recover most of these as suggestions, and a model making the decision recovers most as answers, at a per-question cost."
   ],
   "afterHoldout": "After the hold-out run, articles declared as look-alikes stopped being passed to the model as extra context, and the core-example check got stricter: the forbidden article must not be ranked first, offered, put in the prompt or cited. Pass rates didn't change.",
-  "knowledgeBaseFingerprint": "33cb57b59ece"
+  "knowledgeBaseFingerprint": "65ed64e2979d",
+  "knowledgeBaseChanges": [
+    {
+      "date": "2026-10-06",
+      "change": "Metadata only: every article gained status: public (document lifecycle: draft, public, internal or archived). No text changed."
+    },
+    {
+      "date": "2026-10-06",
+      "change": "House style requested by the owner: record types written as proper nouns (Contact, Company, Deal, Client) in titles, bodies and the app UI. Retrieval lowercases text and the embedding model is uncased; all 304 outcomes and citations are identical before and after."
+    }
+  ]
 }

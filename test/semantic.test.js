@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { articles } from '../src/kb/articles.js';
+import { overviewArticles } from '../src/kb/overview-articles.js';
 import { articleVectors } from '../src/kb/article-vectors.js';
 import { Retriever } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
@@ -19,7 +20,7 @@ const desk = new HelpDesk({ retriever, generator: new ExtractiveGenerator(), emb
 
 test('precomputed article vectors match the current articles and model', () => {
   assert.equal(articleVectors.model, EMBEDDING_MODEL);
-  assert.equal(articleVectors.fingerprint, fingerprintArticles(articles),
+  assert.equal(articleVectors.fingerprint, fingerprintArticles([...articles, ...overviewArticles]),
     'Articles changed since the vectors were built: run node scripts/embed-articles.mjs');
 });
 

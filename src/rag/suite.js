@@ -1,3 +1,5 @@
+import { Retriever } from './retriever.js';
+
 /**
  * Harbour's other products. The assistant lives inside Harbour CRM, so a
  * question is about the CRM unless it names another product. Sister products
@@ -64,6 +66,54 @@ export function partition(list) {
 export function assertPublic(list, where) {
   const held = list.filter((a) => !isPublic(a));
   if (held.length) throw new Error(`Non-public documents in the ${where} retriever: ${held.map((a) => `${a.id} (${withheldReason(a)})`).join(', ')}`);
+}
+
+/**
+ * Who a public document is written for, separate from its status (a page for
+ * signed-in customers can still be a draft or archived):
+ *   everyone   overview and product pages, for visitors and customers alike
+ *   customers  task help for people using the product, shown once signed in
+ * A missing audience counts as customers, the narrower of the two.
+ */
+export const AUDIENCES = ['everyone', 'customers'];
+
+export function audienceOf(article) {
+  return article.audience === 'everyone' ? 'everyone' : 'customers';
+}
+
+/** Whether a viewer may see a document at all. */
+export function canSee(article, { loggedIn }) {
+  return isPublic(article) && (loggedIn || audienceOf(article) === 'everyone');
+}
+
+/**
+ * A score weight for overview pages when signed in. Kept for the evaluation,
+ * which shows why the assistant doesn't use it: mixing the two sets in one
+ * index changes the term statistics the task help is ranked by, so a weight
+ * on the overview pages still moved 21 of the original answers.
+ */
+export const OVERVIEW_WEIGHT_SIGNED_IN = 0.5;
+
+/** Ranking weight of a document for a viewer (see Retriever's `weight` option). */
+export function viewerWeight({ loggedIn }) {
+  return (article) => (loggedIn && audienceOf(article) === 'everyone' ? OVERVIEW_WEIGHT_SIGNED_IN : 1);
+}
+
+/**
+ * The Harbour CRM help centre for a viewer. Signed out: the overview pages
+ * only. Signed in: the task help first, with the overview pages as a
+ * fallback that answers only when the task help would hand off (see
+ * Retriever's `fallback` option). The pitch never replaces the steps.
+ */
+/** Overview pages are long prose: an exact title or alias match counts for more (see Retriever). */
+export const OVERVIEW_POLICY = { exactPhrasingBoost: 1.5 };
+
+export function viewerRetriever(articles, { loggedIn }, options = {}) {
+  const everyone = articles.filter((a) => canSee(a, { loggedIn: false }));
+  const overview = () => new Retriever(everyone, OVERVIEW_POLICY, options);
+  if (!loggedIn) return overview();
+  const customers = articles.filter((a) => canSee(a, { loggedIn: true }) && audienceOf(a) === 'customers');
+  return new Retriever(customers, {}, { ...options, fallback: overview() });
 }
 
 export class Suite {

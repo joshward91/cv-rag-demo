@@ -1,0 +1,668 @@
+[
+  {
+    "id": "vw-01",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how do i add a new contact",
+    "expect": {
+      "type": "answer",
+      "article": "overview-contacts"
+    }
+  },
+  {
+    "id": "vw-02",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how do i add a new contact",
+    "expect": {
+      "type": "answer",
+      "article": "contact-create"
+    }
+  },
+  {
+    "id": "vw-03",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "one of my customers got a new mobile number, where do I go to change it on their record?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-keeping-contact-details-current"
+    }
+  },
+  {
+    "id": "vw-04",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "one of my customers got a new mobile number, where do I go to change it on their record?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-edit-phone"
+    }
+  },
+  {
+    "id": "vw-05",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "fix typo in a contacts email adress",
+    "expect": {
+      "type": "answer",
+      "article": "overview-keeping-contact-details-current"
+    }
+  },
+  {
+    "id": "vw-06",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "fix typo in a contacts email adress",
+    "expect": {
+      "type": "answer",
+      "article": "contact-edit-email"
+    }
+  },
+  {
+    "id": "vw-07",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how can I put a person under the business they work for",
+    "expect": {
+      "type": "answer",
+      "article": "overview-companies"
+    }
+  },
+  {
+    "id": "vw-08",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how can I put a person under the business they work for",
+    "expect": {
+      "type": "answer",
+      "article": "contact-link-company"
+    }
+  },
+  {
+    "id": "vw-09",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "add an organisation record",
+    "expect": {
+      "type": "answer",
+      "article": "overview-companies"
+    }
+  },
+  {
+    "id": "vw-10",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "add an organisation record",
+    "expect": {
+      "type": "answer",
+      "article": "company-create"
+    }
+  },
+  {
+    "id": "vw-11",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "we've got a potential job coming up for a customer worth about 5k, how do I start tracking it as an opportunity?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-deals-pipeline"
+    }
+  },
+  {
+    "id": "vw-12",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "we've got a potential job coming up for a customer worth about 5k, how do I start tracking it as an opportunity?",
+    "expect": {
+      "type": "answer",
+      "article": "deal-create"
+    }
+  },
+  {
+    "id": "vw-13",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "move a deal to proposal sent",
+    "expect": {
+      "type": "answer",
+      "article": "overview-deals-pipeline"
+    }
+  },
+  {
+    "id": "vw-14",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "move a deal to proposal sent",
+    "expect": {
+      "type": "answer",
+      "article": "deal-change-stage"
+    }
+  },
+  {
+    "id": "vw-15",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "we finally got the signature!! how do i record that the deal is closed and won",
+    "expect": {
+      "type": "answer",
+      "article": "overview-winning-losing-deals"
+    }
+  },
+  {
+    "id": "vw-16",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "we finally got the signature!! how do i record that the deal is closed and won",
+    "expect": {
+      "type": "answer",
+      "article": "deal-mark-won"
+    }
+  },
+  {
+    "id": "vw-17",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "the client went with a competitor, how do I record that we didnt get it",
+    "expect": {
+      "type": "answer",
+      "article": "overview-winning-losing-deals"
+    }
+  },
+  {
+    "id": "vw-18",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "the client went with a competitor, how do I record that we didnt get it",
+    "expect": {
+      "type": "answer",
+      "article": "deal-mark-lost"
+    }
+  },
+  {
+    "id": "vw-19",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "can I add my own field to contacts, like where they heard about us?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-custom-fields"
+    }
+  },
+  {
+    "id": "vw-20",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "can I add my own field to contacts, like where they heard about us?",
+    "expect": {
+      "type": "answer",
+      "article": "custom-field-create"
+    }
+  },
+  {
+    "id": "vw-21",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "download my whole customer list into excel",
+    "expect": {
+      "type": "answer",
+      "article": "overview-exporting-contacts"
+    }
+  },
+  {
+    "id": "vw-22",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "download my whole customer list into excel",
+    "expect": {
+      "type": "answer",
+      "article": "contact-export"
+    }
+  },
+  {
+    "id": "vw-23",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how do I look up a client when all I have is part of their phone number",
+    "expect": {
+      "type": "answer",
+      "article": "overview-search-filters"
+    }
+  },
+  {
+    "id": "vw-24",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "how do I look up a client when all I have is part of their phone number",
+    "expect": {
+      "type": "answer",
+      "article": "contact-search"
+    }
+  },
+  {
+    "id": "vw-25",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "Just got off the phone with a client and want to jot down what we talked about so the rest of the team can see it. How?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-notes-contact-history"
+    }
+  },
+  {
+    "id": "vw-26",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "Just got off the phone with a client and want to jot down what we talked about so the rest of the team can see it. How?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-add-note"
+    }
+  },
+  {
+    "id": "vw-27",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "switch someone from lead to customer",
+    "expect": {
+      "type": "answer",
+      "article": "overview-contact-statuses"
+    }
+  },
+  {
+    "id": "vw-28",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "switch someone from lead to customer",
+    "expect": {
+      "type": "answer",
+      "article": "contact-change-status"
+    }
+  },
+  {
+    "id": "vw-29",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "our receipts are going to my old email, I want them sent to accounts@ instead",
+    "expect": {
+      "type": "answer",
+      "article": "overview-account-billing-settings"
+    }
+  },
+  {
+    "id": "vw-30",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "our receipts are going to my old email, I want them sent to accounts@ instead",
+    "expect": {
+      "type": "answer",
+      "article": "account-billing-email"
+    }
+  },
+  {
+    "id": "vw-31",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "chnage currency to NZD",
+    "expect": {
+      "type": "answer",
+      "article": "overview-account-billing-settings"
+    }
+  },
+  {
+    "id": "vw-32",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "pair",
+      "how-to"
+    ],
+    "query": "chnage currency to NZD",
+    "expect": {
+      "type": "answer",
+      "article": "account-currency"
+    }
+  },
+  {
+    "id": "vw-33",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "what-is"
+    ],
+    "query": "what does harbour crm actually do and is it worth it for a one-person plumbing business",
+    "expect": {
+      "type": "answer",
+      "article": "overview-who-is-it-for"
+    }
+  },
+  {
+    "id": "vw-34",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "what-is"
+    ],
+    "query": "if I put my customer list in your system, who owns that data?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-data-ownership-privacy"
+    }
+  },
+  {
+    "id": "vw-35",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "what-is"
+    ],
+    "query": "never used a CRM before, where would I even start",
+    "expect": {
+      "type": "answer",
+      "article": "overview-getting-started"
+    }
+  },
+  {
+    "id": "vw-36",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "what-is"
+    ],
+    "query": "does harbour also do invoices or is that a different thing",
+    "expect": {
+      "type": "answer",
+      "article": "overview-harbour-products"
+    }
+  },
+  {
+    "id": "vw-37",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "out-of-scope"
+    ],
+    "query": "how do I reset my password",
+    "expect": {
+      "type": "escalate"
+    }
+  },
+  {
+    "id": "vw-38",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "out-of-scope"
+    ],
+    "query": "can it sync with my google calendar so appointments show up?",
+    "expect": {
+      "type": "escalate"
+    }
+  },
+  {
+    "id": "vw-39",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "out-of-scope"
+    ],
+    "query": "how do i cancel my subscripton and get a refund for this month",
+    "expect": {
+      "type": "escalate"
+    }
+  },
+  {
+    "id": "vw-40",
+    "split": "viewer",
+    "loggedIn": false,
+    "tags": [
+      "signed-out",
+      "out-of-scope"
+    ],
+    "query": "send a bulk SMS to all my contacts",
+    "expect": {
+      "type": "escalate"
+    }
+  },
+  {
+    "id": "vw-41",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "what are custom fields good for",
+    "expect": {
+      "type": "answer",
+      "article": "overview-custom-fields"
+    }
+  },
+  {
+    "id": "vw-42",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "why would I bother using the deals pipeline instead of just my spreadsheet?",
+    "expect": {
+      "type": "answer",
+      "article": "overview-deals-pipeline"
+    }
+  },
+  {
+    "id": "vw-43",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "whats the point of giving contacts a status",
+    "expect": {
+      "type": "answer",
+      "article": "overview-contact-statuses"
+    }
+  },
+  {
+    "id": "vw-44",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "why keep lost deals around at all? what do they tell me",
+    "expect": {
+      "type": "answer",
+      "article": "overview-winning-losing-deals"
+    }
+  },
+  {
+    "id": "vw-45",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "is the customer info we store in here ours or yours",
+    "expect": {
+      "type": "answer",
+      "article": "overview-data-ownership-privacy"
+    }
+  },
+  {
+    "id": "vw-46",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "what-is"
+    ],
+    "query": "what's harbour desk and how is it different from the crm",
+    "expect": {
+      "type": "answer",
+      "article": "overview-harbour-products"
+    }
+  },
+  {
+    "id": "vw-47",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "out-of-scope"
+    ],
+    "query": "how do I turn on two-factor authentication for my login",
+    "expect": {
+      "type": "escalate"
+    }
+  },
+  {
+    "id": "vw-48",
+    "split": "viewer",
+    "loggedIn": true,
+    "tags": [
+      "signed-in",
+      "out-of-scope"
+    ],
+    "query": "can I connect harbour crm to xero so invoices sync",
+    "expect": {
+      "type": "escalate"
+    }
+  }
+]

@@ -80,7 +80,7 @@ for (const [route, button] of [
 // Validation messages only appear after an invalid submit.
 await page.goto(`${base}#/contacts/ct_1/edit`);
 await page.getByLabel('Email').fill('not-an-email');
-await page.getByRole('button', { name: 'Save contact' }).click();
+await page.getByRole('button', { name: 'Save Contact' }).click();
 await collect();
 // The "Dropdown" type reveals the Options field.
 await page.goto(`${base}#/settings/custom-fields/new`);
@@ -117,33 +117,33 @@ const expectText = async (value) => {
   if (!(await page.locator('main').innerText()).includes(value)) throw new Error(`expected to see "${value}"`);
 };
 
-await walk("contact-edit-phone: Update a contact's phone number", async () => {
+await walk("contact-edit-phone: Update a Contact's phone number", async () => {
   await page.goto(`${base}#/contacts`);
   await click('Contacts');
   await click('Priya Raman');
   await click('Edit');
   await page.getByLabel('Phone').fill('+61 491 570 006');
-  await click('Save contact');
+  await click('Save Contact');
   await expectText('+61 491 570 006');
 });
 
-await walk('account-client-contact-number: Change your client contact number', async () => {
+await walk('account-client-contact-number: Change your Client contact number', async () => {
   await page.goto(`${base}#/contacts`);
   await click('Settings');
   await click('Client profile');
   await page.getByLabel('Client contact number').fill('02 5550 9999');
-  await click('Save client profile');
+  await click('Save Client profile');
   if ((await page.getByLabel('Client contact number').inputValue()) !== '02 5550 9999') throw new Error('number was not saved');
 });
 
-await walk('deal-mark-lost: Mark a deal as lost', async () => {
+await walk('deal-mark-lost: Mark a Deal as lost', async () => {
   await page.goto(`${base}#/deals`);
   await page.getByText('Fernhill brand refresh').click();
   await click('Mark as lost');
   await page.getByLabel('Lost reason').selectOption('Timing');
   await click('Confirm');
   await expectText('Lost reason: Timing');
-  await click('Reopen deal');
+  await click('Reopen Deal');
   await expectText('Mark as won');
 });
 
@@ -160,15 +160,15 @@ await walk('custom-field-create: Create a custom field', async () => {
   await click('Priya Raman');
   await click('Edit');
   await page.getByLabel('Birthday').fill('1990-04-12');
-  await click('Save contact');
+  await click('Save Contact');
   await expectText('Birthday');
 });
 
-await walk('contact-delete: Delete a contact', async () => {
+await walk('contact-delete: Delete a Contact', async () => {
   await page.goto(`${base}#/contacts/ct_7`);
   await click('Delete');
-  await click('Delete contact');
-  await expectText('of 7 contacts');
+  await click('Delete Contact');
+  await expectText('of 7 Contacts');
 });
 
 await browser.close();

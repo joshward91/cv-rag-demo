@@ -12,8 +12,8 @@ const WITHHELD_LABELS = { internal: 'Internal staff document', draft: 'Unpublish
 const SUGGESTIONS = [
   "How do I update a client's phone number?",
   'How do I change the phone number?',
-  'Can I import contacts from a spreadsheet?',
-  'mark a deal as lost',
+  'Can I import Contacts from a spreadsheet?',
+  'Mark a Deal as lost',
 ];
 
 const MODEL_USE_LABELS = { decides: 'Full model', prose: 'Prose only when confident', offline: 'Offline when confident' };
@@ -33,14 +33,19 @@ const SEARCH_STATE = {
 };
 
 export class ChatWidget {
-  constructor({ root, app, retriever, sample, loadEmbedder = null, loadSuite = null }) {
+  constructor({ root, app, retrievers, sample, loadEmbedder = null, loadSuite = null }) {
     this.root = root;
     this.app = app;
-    this.retriever = retriever;
+    // One help centre per viewer (viewerRetriever in src/rag/suite.js):
+    // signed in gets the task help with overview pages as a fallback; a
+    // visitor gets the overview pages only. The demo starts signed in.
+    this.retrievers = retrievers;
+    this.signedIn = true;
+    this.allArticles = new Map([...retrievers.signedIn.byId, ...retrievers.signedOut.byId]);
     // Harbour's other products load with the semantic model. Until then the
     // assistant knows only the CRM's help centre.
     this.loadSuite = loadSuite;
-    this.suite = null;
+    this.suites = null;
     this.suiteArticles = new Map();
     this.internal = null;
     // Semantic search loads in the background the first time the chat opens;
@@ -103,6 +108,10 @@ export class ChatWidget {
               <h2>Harbour Help</h2>
               <p class="chat-sub">Answers only from the help centre, with sources.</p>
             </div>
+            <div class="viewer-switch" role="group" aria-label="Simulate signing in">
+              <button type="button" data-chat="viewer" data-signed-in="true" aria-pressed="${this.signedIn}">Signed in</button>
+              <button type="button" data-chat="viewer" data-signed-in="false" aria-pressed="${!this.signedIn}">Visitor</button>
+            </div>
             <button type="button" class="icon-btn" data-chat="settings" aria-expanded="${this.settingsOpen}" title="Answer mode">${raw(GEAR_ICON)}<span class="visually-hidden">Answer mode</span></button>
           </header>
           ${this.settingsOpen ? this.#settings() : ''}
@@ -123,9 +132,14 @@ export class ChatWidget {
     if (log) log.scrollTop = log.scrollHeight;
   }
 
+  get retriever() {
+    return this.signedIn ? this.retrievers.signedIn : this.retrievers.signedOut;
+  }
+
   #welcome() {
     return html`<div class="chat-welcome">
       <p>Ask how to do something in Harbour CRM. Every answer cites the help article it came from, and <strong>Show retrieval</strong> reveals how it was found.</p>
+      <p class="panel-note">${this.signedIn ? 'Signed in: task help first, overview pages only when no task article fits.' : 'Visitor: overview pages only. Task help is for signed-in customers.'} Switch with <strong>Signed in</strong> / <strong>Visitor</strong> above.</p>
       <p class="suggest-label">Try one of these:</p>
       <div class="suggestions">${SUGGESTIONS.map((s) => html`<button type="button" class="suggestion" data-ask="${s}">${s}</button>`)}</div>
     </div>`;
@@ -203,10 +217,10 @@ export class ChatWidget {
       body = html`<p>I couldn’t find a help article that answers this, so I won’t guess.${m.result.guardrail?.action === 'withheld' ? ' I drafted an answer but couldn’t match it to a source, so I held it back.' : ''}</p>
         <button type="button" class="btn small" data-support="${index}">Contact support</button>`;
     }
-    return html`<div class="msg bot">${body}${this.#retrievalPanel(m.result, index, m.filteredOut)}</div>`;
+    return html`<div class="msg bot">${body}${this.#retrievalPanel(m.result, index, m.filteredOut, m.signedIn)}</div>`;
   }
 
-  #retrievalPanel(result, index, filteredOut = null) {
+  #retrievalPanel(result, index, filteredOut = null, signedIn = true) {
     const { retrieval, decision, prompt, reply, guardrail } = result;
     const { analysis } = retrieval;
     const contextIds = prompt?.contextIds ?? [];
@@ -236,6 +250,7 @@ export class ChatWidget {
     return html`<details class="retrieval" data-panel-for="${index}" ${this.openPanels.has(String(index)) ? raw('open') : ''}>
       <summary>Show retrieval</summary>
       <div class="retrieval-body">
+        <p class="panel-note">Viewer: ${signedIn ? 'signed in. Task help is searched first; overview pages answer only if it would hand off.' : 'visitor. Only the overview pages are searched; task help and other products are for signed-in customers.'}</p>
         <h3>Rewritten query</h3>
         <p class="terms">${analysis.terms.length ? analysis.terms.map((t) => html`<code class="${analysis.unknownTerms.includes(t) ? 'unknown' : ''}">${t}</code>`) : html`<span class="muted">No searchable terms</span>`}</p>
         ${analysis.unknownTerms.length ? html`<p class="panel-note">Highlighted terms don’t appear anywhere in the help centre.</p>` : ''}
@@ -294,7 +309,7 @@ export class ChatWidget {
 
   #drawer() {
     const a = this.#article(this.drawerArticle);
-    const byId = this.suiteArticles.has(a.id) ? this.suiteArticles : this.retriever.byId;
+    const byId = this.suiteArticles.has(a.id) ? this.suiteArticles : this.allArticles;
     return html`<div class="drawer" role="dialog" aria-label="Help article">
       <button type="button" class="btn small ghost drawer-back" data-chat="close-drawer">← Back to chat</button>
       ${isPublic(a) ? '' : html`<p class="internal-banner"><strong>${WITHHELD_LABELS[withheldReason(a)] ?? 'Withheld document'}, shown for evaluation only.</strong> Only public documents reach the assistant, so it never sees this one. It is published here deliberately so the filter can be checked.</p>`}
@@ -320,7 +335,7 @@ export class ChatWidget {
 
   /** A help article from the CRM or, once loaded, another Harbour product. */
   #article(id) {
-    return this.retriever.byId.get(id) ?? this.suiteArticles.get(id);
+    return this.allArticles.get(id) ?? this.suiteArticles.get(id);
   }
 
   /** "You can also do this in ..." under a CRM answer. */
@@ -341,15 +356,16 @@ export class ChatWidget {
     this.messages.push(pending);
     this.render();
 
-    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse, suite: this.suite });
+    const suite = this.suites ? this.suites[this.signedIn ? 'signedIn' : 'signedOut'] : null;
+    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse, suite });
     let message;
     try {
       const result = await desk.ask(question, { chosenArticleId });
-      message = { role: 'bot', result, filteredOut: await this.#filteredOut(question, result) };
+      message = { role: 'bot', result, signedIn: this.signedIn, filteredOut: await this.#filteredOut(question, result) };
     } catch (error) {
       // Show what retrieval found even when generation fails.
-      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator(), embedder: this.embedder, suite: this.suite }).ask(question, { chosenArticleId });
-      message = { role: 'bot', result, error: `Claude couldn’t answer (${describeError(error)}). Switch to Offline mode in the settings to keep going.` };
+      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator(), embedder: this.embedder, suite }).ask(question, { chosenArticleId });
+      message = { role: 'bot', result, signedIn: this.signedIn, error: `Claude couldn’t answer (${describeError(error)}). Switch to Offline mode in the settings to keep going.` };
     }
     this.messages.splice(this.messages.indexOf(pending), 1, message);
     this.busy = false;
@@ -381,8 +397,11 @@ export class ChatWidget {
         this.embedder = embedder;
         if (loaded) {
           // One index for every product; each retriever filters it to its own articles.
-          this.retriever.semantic = loaded.semantic;
-          this.suite = loaded.suite;
+          for (const r of Object.values(this.retrievers)) {
+            r.semantic = loaded.semantic;
+            if (r.fallback) r.fallback.semantic = loaded.semantic;
+          }
+          this.suites = loaded.suites;
           this.suiteArticles = new Map([...loaded.articles, ...loaded.internal.articles].map((a) => [a.id, a]));
           this.internal = loaded.internal;
         }
@@ -403,6 +422,9 @@ export class ChatWidget {
       this.render();
       if (this.open) $('#chat-question', this.root)?.focus();
       if (this.open) this.#startSemantic();
+    } else if (el.dataset.chat === 'viewer') {
+      this.signedIn = el.dataset.signedIn === 'true';
+      this.render();
     } else if (el.dataset.chat === 'settings') {
       this.settingsOpen = !this.settingsOpen;
       this.render();

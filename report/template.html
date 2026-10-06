@@ -121,18 +121,19 @@
     <p class="eyebrow">Harbour CRM · help assistant</p>
     <h1>Harbour Help evaluation</h1>
     <div class="prose">
-      <p><strong>Harbour Help is a grounded, retrieval-augmented help assistant for a small demo CRM.</strong> It answers only from the CRM's help centre: 29 short articles (27 single-task how-tos that match the app screen for screen, a glossary and a note about the demo data). It doesn't use the model's general knowledge, has no tools or web access, and cites the article behind every answer. Retrieval is hybrid: <strong>keyword search</strong> (BM25F) with a coverage-based decision policy, plus <strong>semantic search</strong> (sentence embeddings from all-MiniLM-L6-v2, run in the visitor's browser). It is designed to fail safe: when it isn't confident it asks or hands over to support instead of guessing.</p>
+      <p><strong>Harbour Help is a grounded, retrieval-augmented help assistant for a small demo CRM.</strong> It answers only from the CRM's help centre: 29 short articles for signed-in customers (27 single-task how-tos that match the app screen for screen, a glossary and a note about the demo data), plus 15 overview pages for visitors who aren't signed in. It doesn't use the model's general knowledge, has no tools or web access, and cites the article behind every answer. Retrieval is hybrid: <strong>keyword search</strong> (BM25F) with a coverage-based decision policy, plus <strong>semantic search</strong> (sentence embeddings from all-MiniLM-L6-v2, run in the visitor's browser). Semantic search reads an <strong>HNSW vector index</strong> built ahead of time, the same kind of index pgvector or a vector database would use. It is designed to fail safe: when it isn't confident it asks or hands over to support instead of guessing.</p>
+      <p>To test retrieval under more realistic pressure, the evaluation also runs it inside a wider <strong>Harbour suite</strong>: 969 help articles for five sister products, and 190 documents the assistant must never show (internal staff material, drafts, archived articles and documents with no status) in the same vector index. Only documents whose status is public reach the assistant, and a visitor sees only the pages written for everyone.</p>
     </div>
     <div class="pipeline">
       <div class="step"><strong>Screen</strong>An input guard blocks obvious prompt injection (“ignore previous instructions”, role changes, prompt extraction, tag smuggling) before anything else runs.</div>
-      <div class="step"><strong>Rewrite</strong>The question is normalised and rewritten with domain rules. The articles say "client" for the user's own business, so "a client's phone number" is read as a contact's phone. Synonyms are mapped and typos corrected.</div>
-      <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and compared with 292 precomputed article passages (titles, aliases and sentences, with sentences weighted ×0.9).</div>
+      <div class="step"><strong>Rewrite</strong>The question is normalised and rewritten with domain rules. The articles say "client" for the user's own business, so "a client's phone number" is read as a Contact's phone. Synonyms are mapped and typos corrected.</div>
+      <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and its nearest article passages (titles, aliases and sentences, with sentences weighted ×0.9) are read from an HNSW index, filtered to the documents this viewer may see.</div>
       <div class="step"><strong>Decide</strong>A deterministic policy, so the decision is free and explainable. Answer when coverage is high. Ask when two look-alike articles are equally likely. Suggest up to three articles when only semantic search finds a close match. Otherwise hand over to support.</div>
       <div class="step"><strong>Generate</strong>Offline, the article's own steps. With Claude, a schema-constrained reply that may cite only the articles in the prompt, with a note saying which "client" the user meant.</div>
       <div class="step"><strong>Verify</strong>Any answer that cites none of the articles it was given, or contains a link, is withheld. Citations of articles it wasn't given are dropped.</div>
     </div>
     <div class="prose">
-      <p>This report measures every step on <span data-fill="cases"></span> questions in seven sets. Four are held out from the code they test, and three of those have never been tuned on. It shows how often the assistant finds and cites the right article, asks when it should, and hands off what the help centre doesn't cover. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.</p>
+      <p>This report measures every step on <span data-fill="cases"></span> questions in seven sets. Four are held out from the code they test, and three of those have never been tuned on. It shows how often the assistant finds and cites the right article, asks when it should, and hands off what the help centre doesn't cover. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer, measures the vector index against a flat scan, and runs two further blind sets: one across the Harbour suite and one asked both signed in and as a visitor.</p>
     </div>
     <p class="meta" id="meta"></p>
     <p class="links"><a id="demo-link" href="#">Open the CRM demo</a><a href="https://github.com/joshward91/cv-rag-demo" target="_blank" rel="noopener">Source code on GitHub</a></p>
@@ -189,6 +190,13 @@
     <div class="prose" id="suite-blind-notes"></div>
   </section>
 
+  <section aria-labelledby="viewer-h" id="viewer-section" hidden>
+    <h2 id="viewer-h">Signed in or not: who the help is for</h2>
+    <div class="prose" id="viewer-intro"></div>
+    <div class="table-wrap"><table id="viewer-table"></table></div>
+    <div class="prose" id="viewer-notes"></div>
+  </section>
+
   <section aria-labelledby="history-h">
     <h2 id="history-h">Pass rate through tuning</h2>
     <div class="legend"><span><span class="swatch"></span>Never tuned on ("blind" marks its first score)</span><span><span class="swatch tuned"></span>Tuned on: failures from this set informed a change</span></div>
@@ -241,7 +249,7 @@
 
   <section aria-labelledby="docs-h" id="docs-section" hidden>
     <h2 id="docs-h">Appendix: every help article</h2>
-    <div class="prose"><p>Every public article the assistant can search: the Harbour CRM help centre and the five sister products' help centres, exactly as the evaluation and the demo use them. Select an article to read it. Documents the assistant must never show are not in this list; they have their own appendix below.</p></div>
+    <div class="prose"><p>Every public article the assistant can search: the Harbour CRM help centre and the five sister products' help centres, exactly as the evaluation and the demo use them. Overview pages for visitors are tagged <em>everyone</em>; the rest are for signed-in customers. Select an article to read it. Documents the assistant must never show are not in this list; they have their own appendix below.</p></div>
     <div class="filters">
       <label for="doc-search" class="count">Search</label>
       <input id="doc-search" type="search" placeholder="Filter by title, text or article id" />
@@ -271,6 +279,7 @@
 <script type="application/json" id="scale-data">__SCALE__</script>
 <script type="application/json" id="suite-data">__SUITE__</script>
 <script type="application/json" id="documents-data">__DOCUMENTS__</script>
+<script type="application/json" id="viewer-data">__VIEWER__</script>
 <script type="application/json" id="withheld-data">__WITHHELD__</script>
 <script>
   const data = JSON.parse(document.getElementById('results-data').textContent);
@@ -328,7 +337,7 @@
   document.getElementById('core-big').textContent = `${core.passed}/${core.total}`;
   const coreRows = data.rows.filter((r) => r.tags.includes('core'));
   const coreFail = coreRows.filter((r) => !r.pass);
-  document.getElementById('core-text').innerHTML = `<p><strong>The client/contact trap.</strong> In Harbour CRM the client is the business using the product and a contact is the client's customer. So "how do I update a client's phone number" must retrieve <code>contact-edit-phone</code>, never <code>account-client-contact-number</code>. ${core.passed} of ${core.total} phrasings passed, and the forbidden article was never ranked first, offered, put in the prompt or cited (${core.neverViolations} violations).</p>${
+  document.getElementById('core-text').innerHTML = `<p><strong>The client/contact trap.</strong> In Harbour CRM the Client is the business using the product and a Contact is the Client's customer. So "how do I update a client's phone number" must retrieve <code>contact-edit-phone</code>, never <code>account-client-contact-number</code>. ${core.passed} of ${core.total} phrasings passed, and the forbidden article was never ranked first, offered, put in the prompt or cited (${core.neverViolations} violations).</p>${
     coreFail.length
       ? `<p>Failures: ${coreFail
           .map((r) => `"${esc(r.query)}" was ${describeFailure(r)}`)
@@ -337,7 +346,7 @@
   }`;
 
   document.getElementById('stress-big').textContent = `${core.promptChecked - core.promptMissed}/${core.promptChecked}`;
-  document.getElementById('stress-text').innerHTML = `<p><strong>Same word, two perspectives.</strong> The help centre is written by the vendor, so its articles say "client" for the user's own business: <strong>Settings &gt; Client profile</strong>, "your client contact number". The user's own customers are their clients too, so a contact is the client's client. The articles are not reworded to help retrieval. The query rewriter reads "client" in a question as a contact unless it is plainly about the user's own profile, and the prompt tells the model which one was meant. In ${core.promptChecked - core.promptMissed} of the ${core.promptChecked} client/contact questions that reached the model, that note was in the prompt and correct.</p>`;
+  document.getElementById('stress-text').innerHTML = `<p><strong>Same word, two perspectives.</strong> The help centre is written by the vendor, so its articles say "client" for the user's own business: <strong>Settings &gt; Client profile</strong>, "your Client contact number". The user's own customers are their clients too, so a Contact is the Client's client. The articles are not reworded to help retrieval. The query rewriter reads "client" in a question as a Contact unless it is plainly about the user's own profile, and the prompt tells the model which one was meant. In ${core.promptChecked - core.promptMissed} of the ${core.promptChecked} client/contact questions that reached the model, that note was in the prompt and correct.</p>`;
 
   const hold = data.summary.holdout;
   document.getElementById('holdout-big').textContent = pct(hold.passRate);
@@ -404,7 +413,7 @@
     const n = suiteData.articles;
     const statusCounts = (o) => Object.entries(o ?? {}).map(([k, v]) => `${v} ${k}`).join(', ');
     const withheldList = statusCounts(n.withheldByStatus);
-    document.getElementById('suite-intro').innerHTML = `<p>A help centre of ${n.crm} articles is too small to show retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced ${n.sister.toLocaleString('en')} help articles for five sister products (Invoicing, Mail, Desk, People and Projects; duplicates two writers both covered were merged) and ${n.withheld} documents the assistant must never show, deliberately written about the same tasks customers ask about: ${withheldList}. Several sister products share the CRM's words ("contact", "client", "phone number"), so they are realistic traps.</p><p><strong>How the assistant uses them.</strong> A question is about the CRM unless it names another product ("in Harbour People", "the invoicing app"), in which case that product's help centre answers it, without the CRM's "client" rules. A CRM answer also lists close matches in other products ("Also in Harbour People"). If the CRM would hand off but another product covers the question, its articles are suggested, never answered. Every public passage, ${suiteData.passages['suite-hnsw'].toLocaleString('en')} in all, shares one HNSW index; each product's retriever filters it to its own articles during the walk. <strong>Access control:</strong> every document has a status (draft, the default for new documents, public, internal or archived), and only public ones reach the assistant. The status is metadata from where the document is managed, never guessed from its length or wording, so a dense public page such as API reference stays public. A document with no status is withheld by the same rule, as a safety net rather than an expected state. The withheld documents sit in the same vector index (${suiteData.passages['suite-acl'].toLocaleString('en')} passages) but are never given to any retriever, and the filter removes them during search. Every row below records every article id it surfaced anywhere, so a single leak would show.</p>`;
+    document.getElementById('suite-intro').innerHTML = `<p>A help centre of ${n.crm} articles is too small to show retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced ${n.sister.toLocaleString('en')} help articles for five sister products (Invoicing, Mail, Desk, People and Projects; duplicates two writers both covered were merged) and ${n.withheld} documents the assistant must never show, deliberately written about the same tasks customers ask about: ${withheldList}. Several sister products share the CRM's words ("contact", "client", "phone number"), so they are realistic traps.</p><p><strong>How the assistant uses them.</strong> A question is about the CRM unless it names another product ("in Harbour People", "the invoicing app"), in which case that product's help centre answers it, without the CRM's "client" rules. A CRM answer also lists close matches in other products ("Also in Harbour People"). If the CRM would hand off but another product covers the question, its articles are suggested, never answered. Every public passage, ${suiteData.passages['suite-hnsw'].toLocaleString('en')} in all, shares one HNSW index; each product's retriever filters it to its own articles during the walk.</p><p><strong>Access control.</strong> Every document has a status (draft, the default for new documents, public, internal or archived), and only public ones reach the assistant. The status is metadata from where the document is managed, never guessed from its length or wording, so a dense public page such as API reference stays public. A document with no status is withheld by the same rule, as a safety net rather than an expected state. The withheld documents sit in the same vector index (${suiteData.passages['suite-acl'].toLocaleString('en')} passages) but are never given to any retriever, and the filter removes them during search. Every row below records every article id it surfaced anywhere, so a single leak would show.</p>`;
     const labels = {
       'crm-flat': 'Before: CRM only, flat scan',
       'crm-hnsw': 'CRM only, HNSW graph',
@@ -427,6 +436,29 @@
       document.getElementById('suite-blind-notes').innerHTML = `<p>These ${acl.suite.cases} questions were written by a separate agent that saw only the document titles and bodies, never the retrieval code, and were scored once, blind; nothing was tuned on them. With the filter on, no withheld document surfaced for any of them; with it off, one did for ${noAcl.suite.leaks}. The "also in" link found the expected other-product article for ${acl.suite.alsoIn.hit} of ${acl.suite.alsoIn.cases}. The weak spot is questions that name another product: the right article was usually offered (${acl.suite.byTag.named?.useful} of ${acl.suite.byTag.named?.cases}) but rarely answered outright (${acl.suite.byTag.named?.passed}), because the sister products have no synonym lexicon of their own yet, and rambling questions fall under the coverage threshold. Questions only another product covers are searched by keyword alone, which found ${acl.suite.byTag['other-only']?.passed} of ${acl.suite.byTag['other-only']?.cases}. Both are the next things to build, and would need a fresh blind set to measure.</p>`;
     }
   }
+  // Signed in vs visitor -------------------------------------------------------
+  const viewerData = JSON.parse(document.getElementById('viewer-data').textContent);
+  if (viewerData) {
+    const v = viewerData.configs;
+    const n = viewerData.articles;
+    document.getElementById('viewer-section').hidden = false;
+    document.getElementById('viewer-intro').innerHTML = `<p>A help centre usually serves two audiences. Visitors who aren't signed in get overview pages: what a feature is for and why it is useful. Signed-in customers want the steps. So each public document also has an <strong>audience</strong>, separate from its status: <em>everyone</em> or <em>customers</em> (a missing audience counts as customers, the narrower one). A writer agent added ${n.overview} overview pages for Harbour CRM next to the ${n.tasks} task articles. In the demo, the <strong>Signed in</strong> / <strong>Visitor</strong> switch in the chat header changes which help centre is searched.</p><p>A separate agent that read only the articles wrote ${v.out.viewer.cases * 2} questions, half asked as a visitor and half signed in, most of them as the same question in both states (<code>eval/viewer/cases.json</code>). Signed-in rows also re-run the original ${v.before.original.cases} questions, to show what adding the overview pages changed for customers.</p>`;
+    const rows = [
+      ['before', 'Before: task articles only'],
+      ['in-unweighted', 'Signed in, both sets in one index'],
+      ['in-weighted', 'Signed in, overview scores halved'],
+      ['in-tiered', 'Signed in, task help first, overview as fallback (the demo)'],
+      ['out', 'Visitor, overview pages only (the demo)'],
+    ];
+    const cell = (x) => (x === undefined ? '<td class="num">–</td>' : `<td class="num">${x}</td>`);
+    document.getElementById('viewer-table').innerHTML = `<thead><tr><th>Setup</th><th class="num">New questions passed</th><th class="num">Useful (passed, or right article offered)</th><th class="num">Original ${v.before.original.cases}: pass rate</th><th class="num">Original: outcomes changed</th></tr></thead><tbody>${rows
+      .map(([k, label]) => { const c = v[k]; return `<tr${k === 'in-unweighted' || k === 'in-weighted' ? ' class="row-warn"' : ''}><td><span class="metric-name">${esc(label)}</span></td>${cell(`${c.viewer.passed} of ${c.viewer.cases}`)}${cell(c.viewer.useful)}${cell(c.original ? pct(c.original.passRate) : undefined)}${cell(c.original?.changed.length)}</tr>`; })
+      .join('')}</tbody>`;
+    const whatIs = (k) => { const r = v[k].viewer.rows.filter((x) => x.tags.includes('what-is')); return [r.filter((x) => x.pass).length, r.length]; };
+    const [wiPass, wiAll] = whatIs('in-tiered');
+    document.getElementById('viewer-notes').innerHTML = `<p><strong>Why not just weight the overview pages down?</strong> That was the first design, and the table shows why it was dropped. Putting both sets in one keyword index changes the term statistics every article is scored against (which words are rare, which are unknown, how long an average article is), so the same task article scores differently for the same question. Halving the overview pages' scores still changed ${v['in-weighted'].original.changed.length} of the original answers, mostly confident answers becoming suggestions, without one overview page being cited. Unweighted, ${v['in-unweighted'].original.changed.length} changed.</p><p><strong>What ships.</strong> Signed in, the task help is searched on its own, exactly as before, and the overview pages are a separate fallback consulted only when the task help would hand off. The original questions are unchanged (${v['in-tiered'].original.changed.length} changed). The fallback first replaced suggestions too, but on the dev set that turned "Can I import contacts from a spreadsheet?" into a confident answer from the export overview, so suggestions now stand. The pitch never replaces the steps. On the overview pages only, an exact title or alias match counts for more: they are long prose that repeats the common words, and without it "how do I add a contact" as a visitor got the custom fields overview. (On the task help the same rule cost dev-set answers, so it stays off there.)</p><p><strong>What it doesn't do yet.</strong> Signed-in "what is it for" questions still get the task help (${wiPass} of ${wiAll} went to the overview page, though most were offered the related task article), because nothing tells a "why" question from a "how" question. Visitors' how-to questions often get the right overview page as a suggestion rather than an answer (${v.out.viewer.useful} of ${v.out.viewer.cases} useful, ${v.out.viewer.passed} answered): the coverage threshold was set for short task articles, and the overview pages are longer prose. Both would need a fresh blind set to tune against; these ${v.out.viewer.cases * 2} questions have been looked at.</p>`;
+  }
+
   // Document browsers --------------------------------------------------------
   // Shows the first matches and renders more on request: ~1,000 articles is
   // too many to put in the page at once.
@@ -440,7 +472,7 @@
       const hits = docs.filter((d) => (!p || d[field] === p) && (!q || `${d.id} ${d.title} ${d.body}`.toLowerCase().includes(q)));
       count.textContent = `${hits.length.toLocaleString('en')} of ${docs.length.toLocaleString('en')} ${noun}`;
       list.innerHTML = hits.slice(0, shown)
-        .map((d) => `<details><summary><span class="doc-title">${esc(d.title)}</span><span class="doc-meta">${d.status ? `<span class="eval-tag">${esc(d.status)}</span> ` : ''}${esc(d.product)} · ${esc(d.category)}</span></summary><div class="doc-body">${body(d.body)}<span class="doc-id">${esc(d.id)}</span></div></details>`)
+        .map((d) => `<details><summary><span class="doc-title">${esc(d.title)}</span><span class="doc-meta">${d.status ? `<span class="eval-tag">${esc(d.status)}</span> ` : ''}${d.audience === 'everyone' ? '<span class="eval-tag">everyone</span> ' : ''}${esc(d.product)} · ${esc(d.category)}</span></summary><div class="doc-body">${body(d.body)}<span class="doc-id">${esc(d.id)}</span></div></details>`)
         .join('') + (hits.length > shown ? `<button type="button" class="doc-more">Show ${Math.min(PAGE, hits.length - shown)} more</button>` : '');
       list.querySelector('.doc-more')?.addEventListener('click', () => { shown += PAGE; render(); });
     };
@@ -484,7 +516,7 @@
   // Bars -------------------------------------------------------------------
   const bar = (label, ratio, value, tuned = false, title = '') =>
     `<div class="bar-row" title="${esc(title || `${label}: ${value}`)}"><span class="bar-label">${esc(label)}</span><span class="bar-track"><span class="bar-fill${tuned ? ' tuned' : ''}" style="width:${(ratio * 100).toFixed(1)}%"></span></span><span class="bar-value">${value}</span></div>`;
-  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out', voice: 'Everyday voice' };
+  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out', voice: 'Everyday voice', suite: 'Harbour suite', 'viewer-in': 'Signed in', 'viewer-out': 'Visitor' };
   document.getElementById('history').innerHTML = history.rounds
     .map(
       (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores
@@ -493,7 +525,7 @@
     )
     .join('');
 
-  const tagNames = { 'human-voice': 'Everyday, non-expert wording', long: 'Two sentences or more', redteam: 'Pen test probes', injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
+  const tagNames = { 'human-voice': 'Everyday, non-expert wording', long: 'Two sentences or more', redteam: 'Pen test probes', injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs Contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
   document.getElementById('tags').innerHTML = Object.entries(all.byTag)
     .sort((a, b) => b[1].passed / b[1].cases - a[1].passed / a[1].cases)
     .map(([tag, t]) => bar(tagNames[tag] ?? tag, t.passed / t.cases, `${t.passed}/${t.cases} · ${pct(t.passed / t.cases)}`))

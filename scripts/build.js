@@ -22,6 +22,7 @@ import { build } from 'esbuild';
 import { copyFileSync, existsSync, cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { articles as crmArticles } from '../src/kb/articles.js';
+import { overviewArticles } from '../src/kb/overview-articles.js';
 import { withheldReason } from '../src/rag/suite.js';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -71,7 +72,8 @@ function reportPage(demoUrl) {
     .replace('__HISTORY__', () => inlineJson(JSON.parse(read('eval/history.json'))))
     .replace('__SUITE__', () => (existsSync(`${root}eval/suite/results.json`) ? inlineJson(JSON.parse(read('eval/suite/results.json'))) : 'null'))
     .replace('__WITHHELD__', () => inlineJson(JSON.parse(read('eval/suite/withheld-articles.json')).map((a) => ({ id: a.id, product: a.product, category: a.category, title: a.title, body: a.body, status: withheldReason(a) }))))
-    .replace('__DOCUMENTS__', () => inlineJson([...crmArticles.map((a) => ({ ...a, product: 'Harbour CRM' })), ...JSON.parse(read('src/kb/suite-articles.json'))].map(({ id, product, category, title, body }) => ({ id, product, category, title, body }))))
+    .replace('__DOCUMENTS__', () => inlineJson([...crmArticles, ...overviewArticles].map((a) => ({ ...a, product: 'Harbour CRM' })).concat(JSON.parse(read('src/kb/suite-articles.json'))).map(({ id, product, category, title, body, audience }) => ({ id, product, category, title, body, audience: audience === 'everyone' ? 'everyone' : 'customers' }))))
+    .replace('__VIEWER__', () => (existsSync(`${root}eval/viewer/results.json`) ? inlineJson(JSON.parse(read('eval/viewer/results.json'))) : 'null'))
     .replace('__SCALE__', () => (existsSync(`${root}eval/scale/results.json`) ? inlineJson(JSON.parse(read('eval/scale/results.json'))) : 'null'))
     .replace('__TIERS__', () => (existsSync(`${root}eval/compare/tiers.json`) ? inlineJson(JSON.parse(read('eval/compare/tiers.json'))) : 'null'))
     .replace('__COMPARISON__', () => (existsSync(`${root}eval/compare/results.json`) ? inlineJson(JSON.parse(read('eval/compare/results.json'))) : 'null'))

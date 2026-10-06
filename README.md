@@ -4,8 +4,8 @@ A grounded retrieval-augmented help-desk assistant, built around a small CRM tha
 
 It answers only from the CRM's own help centre, never from the model's general knowledge or the web, and cites the article behind every answer. Retrieval is hybrid: **keyword search** (BM25F with a coverage-based decision policy) plus **semantic search** (all-MiniLM-L6-v2 sentence embeddings, run in the visitor's browser). A deterministic policy then answers, asks a clarifying question, suggests close matches or hands over to support, before any model is called.
 
-- **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
-- **The help centre** is 29 short articles: 27 single-task how-tos, a glossary and a note about the demo data. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every how-to describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
+- **The CRM** is a static web app with Contacts, Companies, Deals, custom fields and a Client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
+- **The help centre** is 29 short articles for signed-in customers (27 single-task how-tos, a glossary and a note about the demo data) and 15 overview pages for visitors. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every how-to describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
 - **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
 - **The evaluation suite** has 304 realistic phrasings across seven sets. Four are held out from the code they test, and three of those have never been tuned on. The report shows retrieval hit rate, citation validity, refusal correctness, keyword vs hybrid retrieval, and cost per question. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.
 
@@ -47,9 +47,9 @@ question
 
 ### Rewrite
 
-The vocabulary problem in this product is deliberate: in Harbour CRM the **client** is the business using the CRM, and a **contact** is the client's customer. Users don't talk like that. "How do I update a client's phone number" means a contact's phone number, and it must never retrieve the article about the account's own *client contact number*.
+The vocabulary problem in this product is deliberate: in Harbour CRM the **Client** is the business using the CRM, and a **Contact** is the Client's customer. Users don't talk like that. "How do I update a client's phone number" means a Contact's phone number, and it must never retrieve the article about the account's own *Client contact number*.
 
-The articles use the vendor's terms: **client** is the user's own business and **contact** is one of its customers. The word means different things depending on who wrote it. The help centre is written by the vendor, for whom the client is the business paying for Harbour CRM. Questions come from that business, for whom a client is one of their own customers. A contact is the client's client. So the rewrite stage is perspective-aware: everything in an article (title, aliases and body) is analysed as the vendor's voice, and questions as the user's.
+The articles use the vendor's terms: **Client** is the user's own business and **Contact** is one of its customers. The word means different things depending on who wrote it. The help centre is written by the vendor, for whom the client is the business paying for Harbour CRM. Questions come from that business, for whom a client is one of their own customers. A Contact is the Client's client. So the rewrite stage is perspective-aware: everything in an article (title, aliases and body) is analysed as the vendor's voice, and questions as the user's.
 
 1. Terms of art are protected first on both sides. "client contact number", "our phone number", "the number on our account" and "the number support calls us on" become one token, `clientcontactnumber`.
 2. In articles, "client" becomes `account`, and "client phone number" or "client name" become the account's own settings.
@@ -60,7 +60,7 @@ Every rule that fires is recorded and shown in the retrieval panel.
 
 ### Retrieve and decide
 
-Retrieval is a simplified BM25F: title, aliases and body are scored separately and weighted 3 : 2 : 1. Raw BM25 scores aren't comparable across queries, so the decision policy uses **coverage** as well: the IDF-weighted share of the question's terms that an article explains. Terms found only in the body count for half, because bodies mention neighbouring tasks ("to change a contact's number, edit the contact instead").
+Retrieval is a simplified BM25F: title, aliases and body are scored separately and weighted 3 : 2 : 1. Raw BM25 scores aren't comparable across queries, so the decision policy uses **coverage** as well: the IDF-weighted share of the question's terms that an article explains. Terms found only in the body count for half, because bodies mention neighbouring tasks ("to change a Contact's number, edit the Contact instead").
 
 - **Escalate** when the best article covers less than 55% of the question. A word the help centre never uses ("import", "password") counts against coverage, capped at the weight of the most specific recognised word.
 - **Clarify** when a rival article scores close to the top one (60% if the docs declare the two as easy to confuse, 95% otherwise) *and* the rival's title or aliases cover every term the top article's do. A question that names only an action ("delete") also gets a clarifying question.
@@ -70,9 +70,9 @@ Clarification and escalation happen before any model call, so they are determini
 
 ### Semantic suggestions (hybrid retrieval)
 
-Keyword search fails on paraphrases that share no words with an article: "they signed the contract" is about marking a deal as won. So a small sentence-embedding model (all-MiniLM-L6-v2, 384 dimensions, 8-bit quantised) runs alongside BM25.
+Keyword search fails on paraphrases that share no words with an article: "they signed the contract" is about marking a Deal as won. So a small sentence-embedding model (all-MiniLM-L6-v2, 384 dimensions, 8-bit quantised) runs alongside BM25.
 
-- **Offline indexing.** `scripts/embed-articles.mjs` embeds every article as separate passages: the title, each alias and each body sentence. That produces 292 vectors, stored as int8 in `src/kb/article-vectors.js` (about 350 KB with the index graph) with a fingerprint of the articles they came from.
+- **Offline indexing.** `scripts/embed-articles.mjs` embeds every article as separate passages: the title, each alias and each body sentence. For the 29 articles and 15 overview pages that produces 575 vectors, stored as int8 in `src/kb/article-vectors.js` (about 350 KB with the index graph) with a fingerprint of the articles they came from.
 - **In the browser.** Only the question is embedded, on the visitor's machine via ONNX Runtime Web (WebAssembly). Tokenisation is a small WordPiece implementation (`src/rag/wordpiece.js`), and a unit test checks it matches the reference Hugging Face tokenizer on every passage and eval question. Node and the browser share the same model, tokenizer and pooling code (`src/rag/minilm.js`). Only the runtime differs (native ONNX Runtime in Node, single-threaded WebAssembly in the browser), so similarities can differ in the low decimal places. The model and runtime are served from this site, not a CDN, so the question never leaves the page and offline mode stays free. The first chat open downloads about 37 MB once. The question is embedded after the rewrite step, so "client" has already become "contact" and the perspective rules still apply.
 - **Keyword search decides first.** Semantic search only acts when keyword search would escalate. If the best match is at least 0.45 similar (cosine similarity, with body sentences weighted ×0.9), the user is offered up to three articles within 0.08 of the best, and declared look-alikes are never offered together. A suggestion makes no model call.
 
@@ -80,11 +80,11 @@ Keyword search fails on paraphrases that share no words with an article: "they s
 
 **Vector index (HNSW).** The passages are searched through an HNSW graph (`src/rag/hnsw.js`), the approximate nearest-neighbour index that pgvector, Qdrant and Pinecone use, written in plain JavaScript so Node builds it and the browser queries it. `scripts/embed-articles.mjs` builds it once (M 16, efConstruction 200, seeded so the build is reproducible) and ships it as data, so GitHub Pages only serves files. The browser reads the 48 nearest passages and groups them by article; an article keyword search ranks but the graph didn't reach is scored exactly. A hosted vector database isn't an option on Pages: the browser would have to hold its key.
 
-At 292 passages the graph is honestly overhead. Run against the flat scan on all 304 questions, it gives the same top article, top three and outcome for every question, but takes 0.39 ms per question against 0.26 ms for the flat scan. `eval/scale/bench.mjs` shows where it pays off. It grows the corpus with synthetic vectors (synthetic articles of ten passages each, centred on a mix of three real passages, with noise tuned so nearest-neighbour similarities match the real set) and queries it with the real eval questions. The synthetic items are vectors with no text behind them, so they measure the index's speed and recall, not answer quality:
+At 575 passages the graph is honestly overhead. Run against the flat scan on all 304 questions, it gives the same top article, top three and outcome for every question, in about the same time (0.52 ms per question against 0.54 ms). `eval/scale/bench.mjs` shows where it pays off. It grows the corpus with synthetic vectors (synthetic articles of ten passages each, centred on a mix of three real passages, with noise tuned so nearest-neighbour similarities match the real set) and queries it with the real eval questions. The synthetic items are vectors with no text behind them, so they measure the index's speed and recall, not answer quality:
 
 | Passages | Flat scan | HNSW (efSearch 64) | Recall@10 | Same top article | Same top 3 | Build | Graph |
 |---|---|---|---|---|---|---|---|
-| 292 (real) | 0.37 ms | 0.39 ms | 100% | 100% | 100% | 0.4 s | 28 KB |
+| 292 (real, before the overview pages) | 0.37 ms | 0.39 ms | 100% | 100% | 100% | 0.4 s | 28 KB |
 | 10,000 | 6.7 ms | 1.0 ms | 97.8% | 98.4% | 96.4% | 44 s | 1.1 MB |
 | 100,000 | 63.8 ms | 1.4 ms | 89.6% | 91.1% | 82.9% | 10 min | 10.7 MB |
 
@@ -130,7 +130,7 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 
 ## Harbour suite: other products and withheld documents
 
-The CRM help centre alone (29 articles) is too small to put retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced 969 help articles for five sister products (Invoicing, Mail, Desk, People and Projects), and 190 documents the assistant must never show, all deliberately about the same tasks customers ask about: 100 internal staff documents (support training, runbooks, policies and sales playbooks), 40 unpublished drafts, 40 archived articles for the old interface, and 10 legacy documents with no status at all. The sister products share the CRM's vocabulary ("contact", "client", "phone number"), so they are realistic traps. `scripts/build-suite.mjs` cleans the drafts (boilerplate closing sentences stripped, 31 tasks two writers both covered merged) and embeds all 12,592 passages into one HNSW index, as a shared vector database would hold them.
+The CRM help centre alone (29 articles) is too small to put retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced 969 help articles for five sister products (Invoicing, Mail, Desk, People and Projects), and 190 documents the assistant must never show, all deliberately about the same tasks customers ask about: 100 internal staff documents (support training, runbooks, policies and sales playbooks), 40 unpublished drafts, 40 archived articles for the old interface, and 10 legacy documents with no status at all. The sister products share the CRM's vocabulary ("contact", "client", "phone number"), so they are realistic traps. `scripts/build-suite.mjs` cleans the drafts (boilerplate closing sentences stripped, 31 tasks two writers both covered merged) and embeds all 12,875 passages into one HNSW index, as a shared vector database would hold them.
 
 - **Product routing.** A question is about the CRM unless it names another product ("in Harbour People", "the invoicing app"). Then that product's help centre answers it, without the CRM's "client" rules, and the prompt names that product.
 - **Also in.** A CRM answer lists close matches in other products: "How do I change a contact's phone number?" gets the CRM article plus "Also in Harbour People". With "in the People app" added, the People article is the answer.
@@ -147,16 +147,27 @@ The demo and report do show the withheld documents, on purpose and clearly label
 
 | Configuration | Passages | Pass rate (304 CRM questions) | Changed vs CRM only | Questions surfacing a withheld document |
 |---|---|---|---|---|
-| CRM only, flat scan | 292 | 73.7% | | 0 |
-| CRM only, HNSW | 292 | 73.7% | 0 | 0 |
-| Suite, flat scan | 10,131 | 73.7% | 9 | 0 |
-| Suite, HNSW | 10,131 | 73.7% | 9 | 0 |
-| Suite + withheld docs, filtered | 12,592 | 73.7% | 9 | 0 |
-| Suite + withheld docs, filter off | 12,592 | 12.8% | 135 | 265 |
+| CRM only, flat scan | 575 | 73.7% | | 0 |
+| CRM only, HNSW | 575 | 73.7% | 0 | 0 |
+| Suite, flat scan | 10,414 | 73.7% | 9 | 0 |
+| Suite, HNSW | 10,414 | 73.7% | 9 | 0 |
+| Suite + withheld docs, filtered | 12,875 | 73.7% | 9 | 0 |
+| Suite + withheld docs, filter off | 12,875 | 12.8% | 135 | 265 |
 
 (The pass rate here is keyword retrieval with semantic suggestions and no model, the offline mode.) Adding 969 articles changed 9 outcomes, all hand-offs that became suggestions from another product. Most are reasonable, but "reset my password" now suggests the Invoicing and People password articles, which is a known weakness. With the filter off, withheld documents change 135 outcomes: 113 different ones surface (60 internal, 24 draft, 24 archived, 5 with no status). Internal documents are longer and denser in keywords than single-task help articles, and drafts and archived articles cover the very same tasks, so they rank as strong matches. Ranking them lower would not be safe; they have to be filtered out before ranking.
 
 **Blind suite set.** 64 new questions (`eval/suite/cases.json`) were written by a separate agent that saw only the documents, never the code, and were scored once without tuning. 32 passed. The answer or the right article was offered for 13 of 16 that named another product, 5 of 12 that only another product covers, 15 of 16 CRM questions with an "also in" match, 13 of 14 written to bait internal documents, and 5 of 6 CRM-only questions. No withheld document surfaced with the filter on; with it off, one surfaced for 53 of the 64. Those questions predate the draft, archived and untagged documents; adding them changed no result with the filter on. The weak spots are sister-product questions (no synonym lexicon of their own yet) and other-product-only questions, which keyword search alone finds poorly.
+
+## Signed in or visitor
+
+A help centre usually serves two audiences, so each public document also has an `audience`, separate from its status: `everyone` (overview pages: what a feature is for and why it is useful) or `customers` (the task help). A missing audience counts as customers, the narrower one. A writer agent added 15 overview pages for Harbour CRM (`src/kb/overview-articles.js`). The chat header has a **Signed in** / **Visitor** switch.
+
+- **Visitor:** only the overview pages are searched. "How do I add a contact" gets the Contacts overview. Sister products' help is for customers, so "in Harbour People" is handed off rather than answered from the CRM.
+- **Signed in:** the task help is searched exactly as before, and the overview pages are a separate fallback, consulted only when the task help would hand off (`viewerRetriever` in `src/rag/suite.js`).
+
+The first design weighted the overview pages down inside one shared index. `eval/viewer/run.mjs` shows why it was dropped. Mixing the two sets changes the term statistics every article is scored against, so halving the overview pages' scores still changed 21 of the original 304 answers, and with no weighting 65 changed. With the fallback, none change.
+
+48 new questions (`eval/viewer/cases.json`), half asked as a visitor and half signed in, were written by a separate agent that read only the articles. Signed in, 10 of 24 pass (15 useful). Visitors pass 13 of 24 (21 useful): the right overview page is usually offered, but often as a suggestion, because the coverage threshold was set for short task articles. Signed-in "what is it for" questions still get the task help, because nothing yet tells a "why" question from a "how" question. Two changes followed the first scoring, so this set is no longer blind: overview answers no longer replace suggestions (a dev-set failure), and on the overview pages an exact title or alias match counts for more (the example this feature was designed around, "how do I add a contact" as a visitor, picked the custom fields overview without it).
 
 ## Evaluation
 
@@ -281,6 +292,8 @@ eval/compare/             model comparison: prompts, replies, anonymised judging
 eval/scale/               vector index benchmark: flat scan vs HNSW up to 100,000 passages
 eval/suite/               sister-product and withheld documents, blind suite questions, access-control runner
 src/kb/suite-articles.json sister-product help articles (generated by scripts/build-suite.mjs)
+src/kb/overview-articles.js overview pages for visitors (audience: everyone)
+eval/viewer/              signed-in vs visitor questions and runner
 scripts/build-suite.mjs   cleans the suite drafts and builds its vector index
 scripts/embed-articles.mjs re-embeds the help centre into src/kb/article-vectors.js
 report/template.html      the evaluation report page

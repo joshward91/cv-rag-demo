@@ -5,7 +5,8 @@ import { Retriever } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
 import { ExtractiveGenerator } from '../src/rag/generators.js';
 import { SemanticIndex } from '../src/rag/semantic.js';
-import { Suite, partition, withheldReason } from '../src/rag/suite.js';
+import { Suite, partition, withheldReason, viewerRetriever } from '../src/rag/suite.js';
+import { overviewArticles } from '../src/kb/overview-articles.js';
 
 // A tiny sister product and one internal document, so routing is tested
 // without the generated suite.
@@ -107,4 +108,13 @@ test('semantic search over an index that holds internal documents never returns 
   assert.equal(index.rank(query)[0].id, internalDoc.id);
   const publicIds = new Map(people.map((a) => [a.id, a]));
   assert.ok(index.rank(query, { onlyIds: publicIds }).every((r) => publicIds.has(r.id)));
+});
+
+test('a visitor gets the overview page; signed in, the task help wins and the overview is only a fallback', async () => {
+  const helpCentre = [...articles, ...overviewArticles];
+  const ask = (loggedIn, q) => new HelpDesk({ retriever: viewerRetriever(helpCentre, { loggedIn }), generator: new ExtractiveGenerator() }).ask(q);
+  assert.deepEqual((await ask(false, 'how do I add a contact')).outcome.citations, ['overview-contacts']);
+  assert.deepEqual((await ask(true, 'how do I add a contact')).outcome.citations, ['contact-create']);
+  const visitor = viewerRetriever(helpCentre, { loggedIn: false });
+  assert.ok(visitor.articles.every((a) => a.audience === 'everyone'));
 });

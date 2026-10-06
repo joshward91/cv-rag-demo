@@ -40,6 +40,8 @@ export const DEFAULT_POLICY = {
   /** Also suggest articles within this distance of the best semantic match. */
   suggestWindow: 0.08,
   maxSuggestions: 3,
+  /** Score multiplier when the question's terms are exactly a title's or an alias's (1 = off). */
+  exactPhrasingBoost: 1,
 };
 
 export function stripMarkdown(md) {
@@ -54,9 +56,16 @@ export class Retriever {
    *        With a semantic index, retrieval is hybrid (see `retrieve`). `plain`
    *        turns off Harbour CRM's phrase rules, for a sister product's help
    *        centre. With `product`, semantic search only returns that product's
-   *        articles (the index may hold several products).
+   *        articles (the index may hold several products). `weight(article)`
+   *        scales an article's keyword score and semantic similarity, so the
+   *        same articles can rank differently for different viewers (see
+   *        viewerWeight in suite.js); it changes ranking, never coverage.
+   *        `fallback` is a second retriever (the overview pages, for a
+   *        signed-in customer) that is consulted only when this one would
+   *        hand off. Each keeps its own term statistics, so
+   *        adding overview pages can't change how the task help is ranked.
    */
-  constructor(articles, policy = {}, { semantic = null, plain = false, product = null } = {}) {
+  constructor(articles, policy = {}, { semantic = null, plain = false, product = null, weight = null, fallback = null } = {}) {
     this.policy = { ...DEFAULT_POLICY, ...policy };
     this.semantic = semantic;
     this.plain = plain;
@@ -64,6 +73,11 @@ export class Retriever {
     const docSide = plain ? 'plain' : 'document';
     this.articles = articles;
     this.byId = new Map(articles.map((a) => [a.id, a]));
+    this.weightOf = weight ? new Map(articles.map((a) => [a.id, weight(a)])) : null;
+    this.fallback = fallback;
+    // Ids this retriever searches itself; byId also resolves the fallback's.
+    this.ownIds = new Set(this.byId.keys());
+    for (const [id, a] of fallback?.byId ?? []) this.byId.set(id, a);
 
     this.docs = articles.map((a) => {
       const fields = {
@@ -77,7 +91,10 @@ export class Retriever {
         for (const t of terms) tf[field].set(t, (tf[field].get(t) ?? 0) + 1);
       }
       const termSet = new Set(Object.values(fields).flat());
-      return { id: a.id, fields, tf, termSet };
+      // Each title and alias as a set of terms, to spot a question that is
+      // exactly one of the article's own phrasings.
+      const phrasings = [a.title, ...a.aliases].map((x) => [...new Set(analyse(x, { perspective: docSide }).terms)].sort().join(' '));
+      return { id: a.id, fields, tf, termSet, phrasings: new Set(phrasings) };
     });
 
     this.avgLength = {};
@@ -152,14 +169,23 @@ export class Retriever {
     const unknownWeight = Math.max(0, ...known.map((t) => this.idf(t)));
     const weightOf = (t) => (this.df.has(t) ? this.idf(t) : unknownWeight);
     const totalIdf = terms.reduce((sum, t) => sum + weightOf(t), 0);
+    const phrasing = [...terms].sort().join(' ');
 
     const ranked = this.docs
       .map((doc) => {
-        const { score, matched, coveredIdf } = this.scoreDoc(doc, terms);
+        const { score: raw, matched, coveredIdf } = this.scoreDoc(doc, terms);
+        // A question that is exactly one of an article's own phrasings (its
+        // title or an "also called" alias) is strong evidence on its own.
+        // Off by default: on the task help it cost dev-set answers. The
+        // overview pages turn it on (viewerRetriever in suite.js), because
+        // they are long prose that repeats the common words, so a page that
+        // says "contact" and "add" often outranked the Contacts overview for
+        // "how do I add a contact".
+        const score = doc.phrasings.has(phrasing) ? raw * this.policy.exactPhrasingBoost : raw;
         return {
           id: doc.id,
           title: this.byId.get(doc.id).title,
-          score,
+          score: score * (this.weightOf?.get(doc.id) ?? 1),
           coverage: totalIdf ? coveredIdf / totalIdf : 0,
           matched,
         };
@@ -172,18 +198,35 @@ export class Retriever {
 
     let semantic = null;
     if (queryVector && this.semantic) {
-      semantic = this.semantic.rank(queryVector, { onlyIds: this.byId });
+      semantic = this.semantic.rank(queryVector, { onlyIds: this.ownIds });
+      if (this.weightOf) {
+        semantic = semantic.map((s) => ({ ...s, similarity: s.similarity * this.weightOf.get(s.id) })).sort((a, b) => b.similarity - a.similarity);
+      }
       const similarityOf = new Map(semantic.map((s) => [s.id, s.similarity]));
-      for (const r of ranked) r.similarity = similarityOf.get(r.id) ?? this.semantic.similarityTo(queryVector, r.id);
+      for (const r of ranked) r.similarity = similarityOf.get(r.id) ?? this.semantic.similarityTo(queryVector, r.id) * (this.weightOf?.get(r.id) ?? 1);
       if (decision.type === 'escalate') decision = this.suggest(semantic, decision);
     }
 
-    return {
+    const own = {
       query,
       analysis: { ...analysis, terms, unknownTerms },
       results: ranked.slice(0, this.policy.topK),
       semantic: semantic?.slice(0, this.policy.topK) ?? null,
       decision,
+      elapsedMs: now() - started,
+    };
+    // Only a hand-off goes to the fallback. A suggestion already points at
+    // the task help; letting the overview pages answer instead turned "Can I
+    // import contacts from a spreadsheet?" (dev set) into a confident answer
+    // from the export overview.
+    if (!this.fallback || decision.type !== 'escalate') return own;
+    const other = this.fallback.retrieve(query, { queryVector });
+    if (other.decision.type !== 'answer') return own;
+    return {
+      ...own,
+      results: [...other.results, ...own.results].slice(0, this.policy.topK),
+      semantic: own.semantic && other.semantic ? [...other.semantic, ...own.semantic].slice(0, this.policy.topK) : own.semantic,
+      decision: { ...other.decision, reason: `${decision.reason} Fallback: ${other.decision.reason}` },
       elapsedMs: now() - started,
     };
   }

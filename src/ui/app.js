@@ -145,17 +145,17 @@ export class CrmApp {
         <h1>Contacts</h1>
         <div class="actions">
           <button type="button" class="btn" data-action="export-contacts">Export CSV</button>
-          <a class="btn primary" href="#/contacts/new" data-link>New contact</a>
+          <a class="btn primary" href="#/contacts/new" data-link>New Contact</a>
         </div>
       </div>
       <div class="filters" role="search">
-        <label class="visually-hidden" for="contact-search">Search contacts</label>
+        <label class="visually-hidden" for="contact-search">Search Contacts</label>
         <input id="contact-search" type="search" name="q" value="${q}" placeholder="Search by name, email or phone" data-filter="q" autocomplete="off" />
         <span class="filter-group">
           <label class="inline-label" for="contact-company-filter">Company</label>
           <select id="contact-company-filter" data-filter="company">
-            <option value="">All companies</option>
-            <option value="none" ${company === 'none' ? 'selected' : ''}>No company</option>
+            <option value="">All Companies</option>
+            <option value="none" ${company === 'none' ? 'selected' : ''}>No Company</option>
             ${this.store.state.companies.map((co) => html`<option value="${co.id}" ${company === co.id ? raw('selected') : ''}>${co.name}</option>`)}
           </select>
         </span>
@@ -173,7 +173,7 @@ export class CrmApp {
   }
 
   #contactTable(rows) {
-    if (!rows.length) return html`<p class="empty">No contacts match these filters.</p>`;
+    if (!rows.length) return html`<p class="empty">No Contacts match these filters.</p>`;
     return html`
       <div class="table-wrap">
         <table>
@@ -182,7 +182,7 @@ export class CrmApp {
             ${rows.map(
               (c) => html`<tr>
                 <td><a href="#/contacts/${c.id}" data-link class="row-link">${c.firstName} ${c.lastName}</a></td>
-                <td>${this.store.company(c.companyId)?.name ?? html`<span class="muted">No company</span>`}</td>
+                <td>${this.store.company(c.companyId)?.name ?? html`<span class="muted">No Company</span>`}</td>
                 <td>${c.email}</td>
                 <td class="num">${c.phone}</td>
                 <td>${statusChip(c.status)}</td>
@@ -191,12 +191,12 @@ export class CrmApp {
           </tbody>
         </table>
       </div>
-      <p class="table-foot">${rows.length} of ${this.store.state.contacts.length} contacts</p>
+      <p class="table-foot">${rows.length} of ${this.store.state.contacts.length} Contacts</p>
     `;
   }
 
   #contactPage(c) {
-    if (!c) return notFound('contact', '#/contacts');
+    if (!c) return notFound('Contact', '#/contacts');
     const company = this.store.company(c.companyId);
     const deals = this.store.state.deals.filter((d) => d.contactId === c.id);
     const notes = this.store.notesFor(c.id);
@@ -216,7 +216,7 @@ export class CrmApp {
             ${fact('Email', c.email)}
             ${fact('Phone', c.phone)}
             ${fact('Job title', c.jobTitle)}
-            ${fact('Company', company ? html`<a href="#/companies/${company.id}" data-link>${company.name}</a>` : 'No company')}
+            ${fact('Company', company ? html`<a href="#/companies/${company.id}" data-link>${company.name}</a>` : 'No Company')}
             ${fact('Status', statusChip(c.status))}
             ${this.store.fieldsFor('contacts').map((f) => fact(f.label, c.custom[f.id]))}
           </dl>
@@ -236,19 +236,19 @@ export class CrmApp {
           <h2>Deals</h2>
           ${deals.length
             ? html`<ul class="link-list">${deals.map((d) => html`<li><a href="#/deals/${d.id}" data-link>${d.name}</a> <span class="muted">${stageLabel(d.stage)} · ${this.#money(d.value)}</span></li>`)}</ul>`
-            : html`<p class="muted">No deals linked to this contact.</p>`}
+            : html`<p class="muted">No Deals linked to this Contact.</p>`}
         </section>
       </div>
     `;
   }
 
   #contactForm(c) {
-    if (c === null && !this.route.endsWith('/new')) return notFound('contact', '#/contacts');
+    if (c === null && !this.route.endsWith('/new')) return notFound('Contact', '#/contacts');
     const editing = Boolean(c);
     const v = c ?? { firstName: '', lastName: '', email: '', phone: '', jobTitle: '', companyId: null, status: 'lead', custom: {} };
     return html`
       ${crumbs([['Contacts', '#/contacts'], ...(editing ? [[`${v.firstName} ${v.lastName}`, `#/contacts/${v.id}`]] : [])])}
-      <h1>${editing ? `Edit ${v.firstName} ${v.lastName}` : 'New contact'}</h1>
+      <h1>${editing ? `Edit ${v.firstName} ${v.lastName}` : 'New Contact'}</h1>
       <form class="form" data-form="contact" data-id="${v.id ?? ''}" novalidate>
         <div class="field-grid">
           ${input('First name', 'firstName', v.firstName, { required: true })}
@@ -256,12 +256,12 @@ export class CrmApp {
           ${input('Email', 'email', v.email, { type: 'email' })}
           ${input('Phone', 'phone', v.phone, { type: 'tel' })}
           ${input('Job title', 'jobTitle', v.jobTitle)}
-          ${select('Company', 'companyId', v.companyId ?? '', [{ value: '', label: 'No company' }, ...this.store.state.companies.map((co) => ({ value: co.id, label: co.name }))])}
+          ${select('Company', 'companyId', v.companyId ?? '', [{ value: '', label: 'No Company' }, ...this.store.state.companies.map((co) => ({ value: co.id, label: co.name }))])}
           ${select('Status', 'status', v.status, STATUSES)}
         </div>
         ${this.#customFieldInputs('contacts', v.custom)}
         <div class="form-actions">
-          <button type="submit" class="btn primary">Save contact</button>
+          <button type="submit" class="btn primary">Save Contact</button>
           <a class="btn ghost" href="${editing ? `#/contacts/${v.id}` : '#/contacts'}" data-link>Cancel</a>
         </div>
       </form>
@@ -274,7 +274,7 @@ export class CrmApp {
     return html`
       <div class="page-head">
         <h1>Companies</h1>
-        <div class="actions"><a class="btn primary" href="#/companies/new" data-link>New company</a></div>
+        <div class="actions"><a class="btn primary" href="#/companies/new" data-link>New Company</a></div>
       </div>
       ${companies.length
         ? html`<div class="table-wrap"><table>
@@ -288,12 +288,12 @@ export class CrmApp {
                 <td class="num">${this.store.state.contacts.filter((c) => c.companyId === co.id).length}</td>
               </tr>`,
             )}</tbody></table></div>`
-        : html`<p class="empty">No companies yet. Select <strong>New company</strong> to add one.</p>`}
+        : html`<p class="empty">No Companies yet. Select <strong>New Company</strong> to add one.</p>`}
     `;
   }
 
   #companyPage(co) {
-    if (!co) return notFound('company', '#/companies');
+    if (!co) return notFound('Company', '#/companies');
     const contacts = this.store.state.contacts.filter((c) => c.companyId === co.id);
     const deals = this.store.state.deals.filter((d) => d.companyId === co.id);
     return html`
@@ -317,28 +317,28 @@ export class CrmApp {
           </dl>
         </section>
         <section class="panel">
-          <h2>Contacts at this company</h2>
+          <h2>Contacts at this Company</h2>
           ${contacts.length
             ? html`<ul class="link-list">${contacts.map((c) => html`<li><a href="#/contacts/${c.id}" data-link>${c.firstName} ${c.lastName}</a> <span class="muted">${c.jobTitle}</span></li>`)}</ul>`
-            : html`<p class="muted">No contacts linked to this company.</p>`}
+            : html`<p class="muted">No Contacts linked to this Company.</p>`}
         </section>
         <section class="panel">
           <h2>Deals</h2>
           ${deals.length
             ? html`<ul class="link-list">${deals.map((d) => html`<li><a href="#/deals/${d.id}" data-link>${d.name}</a> <span class="muted">${stageLabel(d.stage)} · ${this.#money(d.value)}</span></li>`)}</ul>`
-            : html`<p class="muted">No deals linked to this company.</p>`}
+            : html`<p class="muted">No Deals linked to this Company.</p>`}
         </section>
       </div>
     `;
   }
 
   #companyForm(co) {
-    if (co === null && !this.route.endsWith('/new')) return notFound('company', '#/companies');
+    if (co === null && !this.route.endsWith('/new')) return notFound('Company', '#/companies');
     const editing = Boolean(co);
     const v = co ?? { name: '', industry: '', phone: '', website: '', address: '', custom: {} };
     return html`
       ${crumbs([['Companies', '#/companies'], ...(editing ? [[v.name, `#/companies/${v.id}`]] : [])])}
-      <h1>${editing ? `Edit ${v.name}` : 'New company'}</h1>
+      <h1>${editing ? `Edit ${v.name}` : 'New Company'}</h1>
       <form class="form" data-form="company" data-id="${v.id ?? ''}" novalidate>
         <div class="field-grid">
           ${input('Company name', 'name', v.name, { required: true })}
@@ -349,7 +349,7 @@ export class CrmApp {
         </div>
         ${this.#customFieldInputs('companies', v.custom)}
         <div class="form-actions">
-          <button type="submit" class="btn primary">Save company</button>
+          <button type="submit" class="btn primary">Save Company</button>
           <a class="btn ghost" href="${editing ? `#/companies/${v.id}` : '#/companies'}" data-link>Cancel</a>
         </div>
       </form>
@@ -362,7 +362,7 @@ export class CrmApp {
     return html`
       <div class="page-head">
         <h1>Deals</h1>
-        <div class="actions"><a class="btn primary" href="#/deals/new" data-link>New deal</a></div>
+        <div class="actions"><a class="btn primary" href="#/deals/new" data-link>New Deal</a></div>
       </div>
       <div class="board" role="list">
         ${STAGES.map((stage) => {
@@ -374,11 +374,11 @@ export class CrmApp {
               ? inStage.map(
                   (d) => html`<a class="deal-card" href="#/deals/${d.id}" data-link>
                     <span class="deal-name">${d.name}</span>
-                    <span class="deal-meta">${this.store.company(d.companyId)?.name ?? 'No company'}</span>
+                    <span class="deal-meta">${this.store.company(d.companyId)?.name ?? 'No Company'}</span>
                     <span class="deal-value">${this.#money(d.value)}</span>
                   </a>`,
                 )
-              : html`<p class="column-empty">No deals</p>`}
+              : html`<p class="column-empty">No Deals</p>`}
           </section>`;
         })}
       </div>
@@ -386,7 +386,7 @@ export class CrmApp {
   }
 
   #dealPage(d) {
-    if (!d) return notFound('deal', '#/deals');
+    if (!d) return notFound('Deal', '#/deals');
     const company = this.store.company(d.companyId);
     const contact = this.store.contact(d.contactId);
     const closed = d.stage === 'won' || d.stage === 'lost';
@@ -404,7 +404,7 @@ export class CrmApp {
           <h2>Stage</h2>
           ${closed
             ? html`<p class="closed-state ${d.stage}">${d.stage === 'won' ? 'Won' : 'Lost'}${d.closeDate ? ` on ${formatDate(d.closeDate)}` : ''}${d.lostReason ? ` · Lost reason: ${d.lostReason}` : ''}</p>
-                <button type="button" class="btn" data-action="reopen" data-id="${d.id}">Reopen deal</button>`
+                <button type="button" class="btn" data-action="reopen" data-id="${d.id}">Reopen Deal</button>`
             : html`<label for="deal-stage">Stage</label>
                 <select id="deal-stage" data-stage-for="${d.id}">
                   ${OPEN_STAGES.map((s) => html`<option value="${s.value}" ${d.stage === s.value ? raw('selected') : ''}>${s.label}</option>`)}
@@ -418,8 +418,8 @@ export class CrmApp {
           <h2>Details</h2>
           <dl class="facts">
             ${fact('Value', this.#money(d.value))}
-            ${fact('Company', company ? html`<a href="#/companies/${company.id}" data-link>${company.name}</a>` : 'No company')}
-            ${fact('Contact', contact ? html`<a href="#/contacts/${contact.id}" data-link>${contact.firstName} ${contact.lastName}</a>` : 'No contact')}
+            ${fact('Company', company ? html`<a href="#/companies/${company.id}" data-link>${company.name}</a>` : 'No Company')}
+            ${fact('Contact', contact ? html`<a href="#/contacts/${contact.id}" data-link>${contact.firstName} ${contact.lastName}</a>` : 'No Contact')}
             ${fact(closed ? 'Close date' : 'Expected close date', d.closeDate ? formatDate(d.closeDate) : '')}
             ${this.store.fieldsFor('deals').map((f) => fact(f.label, d.custom[f.id]))}
           </dl>
@@ -429,27 +429,27 @@ export class CrmApp {
   }
 
   #dealForm(d) {
-    if (d === null && !this.route.endsWith('/new')) return notFound('deal', '#/deals');
+    if (d === null && !this.route.endsWith('/new')) return notFound('Deal', '#/deals');
     const editing = Boolean(d);
     const v = d ?? { name: '', value: '', companyId: null, contactId: null, stage: 'new', closeDate: '', custom: {} };
     const closed = v.stage === 'won' || v.stage === 'lost';
     return html`
       ${crumbs([['Deals', '#/deals'], ...(editing ? [[v.name, `#/deals/${v.id}`]] : [])])}
-      <h1>${editing ? `Edit ${v.name}` : 'New deal'}</h1>
+      <h1>${editing ? `Edit ${v.name}` : 'New Deal'}</h1>
       <form class="form" data-form="deal" data-id="${v.id ?? ''}" novalidate>
         <div class="field-grid">
           ${input('Deal name', 'name', v.name, { required: true })}
           ${input('Value', 'value', v.value, { required: true, inputmode: 'decimal', hint: `In ${this.store.state.account.currency}. Numbers only, without a currency symbol.` })}
-          ${select('Company', 'companyId', v.companyId ?? '', [{ value: '', label: 'No company' }, ...this.store.state.companies.map((co) => ({ value: co.id, label: co.name }))])}
-          ${select('Contact', 'contactId', v.contactId ?? '', [{ value: '', label: 'No contact' }, ...this.store.state.contacts.map((c) => ({ value: c.id, label: `${c.firstName} ${c.lastName}` }))])}
+          ${select('Company', 'companyId', v.companyId ?? '', [{ value: '', label: 'No Company' }, ...this.store.state.companies.map((co) => ({ value: co.id, label: co.name }))])}
+          ${select('Contact', 'contactId', v.contactId ?? '', [{ value: '', label: 'No Contact' }, ...this.store.state.contacts.map((c) => ({ value: c.id, label: `${c.firstName} ${c.lastName}` }))])}
           ${closed
-            ? html`<div class="field"><span class="label">Stage</span><p class="static">${stageLabel(v.stage)}. Use <strong>Reopen deal</strong> on the deal page to change it.</p></div>`
+            ? html`<div class="field"><span class="label">Stage</span><p class="static">${stageLabel(v.stage)}. Use <strong>Reopen Deal</strong> on the Deal page to change it.</p></div>`
             : select('Stage', 'stage', v.stage, OPEN_STAGES)}
           ${input(closed ? 'Close date' : 'Expected close date', 'closeDate', v.closeDate ?? '', { type: 'date' })}
         </div>
         ${this.#customFieldInputs('deals', v.custom)}
         <div class="form-actions">
-          <button type="submit" class="btn primary">Save deal</button>
+          <button type="submit" class="btn primary">Save Deal</button>
           <a class="btn ghost" href="${editing ? `#/deals/${v.id}` : '#/deals'}" data-link>Cancel</a>
         </div>
       </form>
@@ -478,10 +478,10 @@ export class CrmApp {
             hint: 'The number Harbour CRM support and billing use to reach you.',
           })}
           ${input('Billing email', 'billingEmail', acc.billingEmail, { type: 'email', required: true, hint: 'Where we send your subscription receipts.' })}
-          ${select('Currency', 'currency', acc.currency, CURRENCIES.map((c) => ({ value: c, label: c })), { hint: 'Changes the symbol on deal values. Existing values are not converted.' })}
+          ${select('Currency', 'currency', acc.currency, CURRENCIES.map((c) => ({ value: c, label: c })), { hint: 'Changes the symbol on Deal values. Existing values are not converted.' })}
           ${select('Time zone', 'timeZone', acc.timeZone, ['Australia/Sydney', 'Australia/Melbourne', 'Australia/Brisbane', 'Australia/Perth', 'Pacific/Auckland'].map((z) => ({ value: z, label: z })))}
         </div>
-        <div class="form-actions"><button type="submit" class="btn primary">Save client profile</button></div>
+        <div class="form-actions"><button type="submit" class="btn primary">Save Client profile</button></div>
       </form>
     `;
   }
@@ -659,7 +659,7 @@ export class CrmApp {
     }
 
     if (kind === 'company') {
-      required('name', 'Enter a company name');
+      required('name', 'Enter a Company name');
       if (data.phone && !PHONE.test(data.phone)) errors.phone = 'Use digits, spaces, brackets and a leading +';
       if (showErrors(form, errors)) return;
       const saved = this.store.saveCompany({
@@ -670,7 +670,7 @@ export class CrmApp {
     }
 
     if (kind === 'deal') {
-      required('name', 'Enter a deal name');
+      required('name', 'Enter a Deal name');
       if (!/^\d+(\.\d{1,2})?$/.test(String(data.value ?? '').trim())) errors.value = 'Enter the value as a number, without a currency symbol';
       if (showErrors(form, errors)) return;
       const existing = id ? this.store.deal(id) : null;
@@ -690,7 +690,7 @@ export class CrmApp {
     }
 
     if (kind === 'account') {
-      required('businessName', 'Enter a business name');
+      required('businessName', 'Enter a Client name');
       if (!PHONE.test(data.clientContactNumber ?? '')) errors.clientContactNumber = 'Enter a phone number using digits, spaces, brackets and a leading +';
       if (!EMAIL.test(data.billingEmail ?? '')) errors.billingEmail = 'Enter a valid email address';
       if (showErrors(form, errors)) return;
@@ -717,9 +717,9 @@ export class CrmApp {
   // Dialogs ---------------------------------------------------------------
   #confirmDelete(kind, id) {
     const copy = {
-      contact: ['Delete contact?', 'This deletes the contact and their notes. Linked deals are kept and show No contact. This can’t be undone.', 'Delete contact'],
-      company: ['Delete company?', 'Contacts and deals linked to this company are kept and change to No company. This can’t be undone.', 'Delete company'],
-      deal: ['Delete deal?', 'This can’t be undone. If the deal fell through, Mark as lost keeps it in your history.', 'Delete deal'],
+      contact: ['Delete Contact?', 'This deletes the Contact and their notes. Linked Deals are kept and show No Contact. This can’t be undone.', 'Delete Contact'],
+      company: ['Delete Company?', 'Contacts and Deals linked to this Company are kept and change to No Company. This can’t be undone.', 'Delete Company'],
+      deal: ['Delete Deal?', 'This can’t be undone. If the Deal fell through, Mark as lost keeps it in your history.', 'Delete Deal'],
       field: ['Delete field?', 'Deleting a field removes its values from every record. This can’t be undone.', 'Delete field'],
     }[kind];
     this.openModal(
@@ -789,7 +789,7 @@ export class CrmApp {
     ]);
     const csv = [header, ...rows].map((r) => r.map(csvCell).join(',')).join('\r\n');
     const ok = await this.onDownload('contacts.csv', csv);
-    this.toast(ok ? `Exported ${rows.length} contacts` : 'Your browser blocked the download');
+    this.toast(ok ? `Exported ${rows.length} Contacts` : 'Your browser blocked the download');
   }
 
   #money(value) {

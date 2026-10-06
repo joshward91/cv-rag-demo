@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { articles } from '../src/kb/articles.js';
+import { overviewArticles } from '../src/kb/overview-articles.js';
 import { Retriever, DEFAULT_POLICY } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
 import { ExtractiveGenerator, AnthropicGenerator } from '../src/rag/generators.js';
@@ -54,7 +55,7 @@ if (live) {
   generator = new AnthropicGenerator({ client: new Anthropic(), model });
 }
 
-if (articleVectors.fingerprint !== fingerprintArticles(articles)) {
+if (articleVectors.fingerprint !== fingerprintArticles([...articles, ...overviewArticles])) {
   console.error('src/kb/article-vectors.js is stale. Run: node scripts/embed-articles.mjs');
   process.exit(2);
 }
