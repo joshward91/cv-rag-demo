@@ -32,8 +32,7 @@ export function isAboutAssistant(terms) {
  *   'offline': when search is that confident, the offline answer (the
  *       article's own steps) is returned with no model call. Below that, the
  *       model decides.
- * The reverse (skip the model when search is NOT confident) was measured and
- * rejected: nearly every question the model rescues is a low-confidence one.
+ * Full model is recommended; the other two are kept for evaluation.
  * eval/compare/tiers.mjs has the numbers.
  */
 export const MODEL_TIERS = { skipModelAtCoverage: 0.7 };

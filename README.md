@@ -212,9 +212,8 @@ Can the model be skipped when keyword search is already confident? `eval/compare
 | 1. Full model (default) | 91.6% | 4 | 99% | $2.66 |
 | 2. Prose only when search is ≥70%, else the model decides | 89.3% | 6 | 96% | $2.45 |
 | 3. Offline when search is ≥70%, else the model decides | 89.3% | 6 | 73% | $1.96 |
-| 3 reversed: offline when search is below 70% | 51.9% | 4 | 26% | $0.70 |
 
-**Full model is recommended; tiers 2 and 3 are included for evaluation.** Tier 3 is 26% cheaper per question, but it resolves 2.3 points fewer questions, about 23 more per 1,000 that end in a wrong answer or a hand-off, so it will likely raise the number of support tickets. That saves $0.70 per 1,000 questions, less than handling one ticket. Tier 2 saves only 8%, because writing prose costs nearly as much as deciding. Skipping the model when search is *unsure* is the wrong way round: 52 of the 56 questions Sonnet rescues sit below the 55% hand-off line.
+**Full model is recommended; tiers 2 and 3 are included for evaluation.** Tier 3 is 26% cheaper per question, but it resolves 2.3 points fewer questions, about 23 more per 1,000 that end in a wrong answer or a hand-off, so it will likely raise the number of support tickets. That saves $0.70 per 1,000 questions, less than handling one ticket. Tier 2 saves only 8%, because writing prose costs nearly as much as deciding. Most of the model's value is where search is unsure: 52 of the 56 questions Sonnet rescues sit below the 55% hand-off line, which every tier still sends to the model.
 
 The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a calibrated probability, and the questions are bimodal: 78 sit below 55%, 29 at exactly 100%, and only 5 between 70% and 100%. Any threshold from 55% to 100% gives the same 89.3% pass rate and only changes cost ($1.60 to $2.07). The extra wrong answers are short, ambiguous questions such as "how do I change the status", which search covers 100%. Catching them would need an ambiguity signal, such as the gap to the second article, tested on fresh questions.
 
