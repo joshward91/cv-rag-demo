@@ -2,6 +2,8 @@
  * Claude API list prices in USD per million tokens (first-party API).
  * Source: Anthropic model pricing, checked 2026-10-03.
  */
+export const PRICES_CHECKED = '2026-10-03';
+
 export const MODELS = {
   'claude-opus-5-5': { label: 'Claude Opus 5.5', input: 4, output: 20 },
   'claude-sonnet-5-5': { label: 'Claude Sonnet 5.5', input: 2, output: 10 },

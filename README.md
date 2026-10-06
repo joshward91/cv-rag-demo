@@ -239,7 +239,7 @@ Metrics are defined in `eval/metrics.js`:
 - **Retrieval hit rate**: expected article ranked first (and in the top three) for answerable questions.
 - **Citation validity**: answers whose citations all exist and were in the prompt, measured before the guardrail. It is trivially 100% offline and becomes meaningful with `--live`.
 - **Refusal correctness**: recall on out-of-scope questions, precision of hand-offs, and the false-refusal rate on answerable ones. A suggestion counts as not answering, since it asserts nothing and offers Contact support.
-- **Cost per question**: averaged over all questions, including the free clarifications and escalations. Token counts are exact for the exact prompt each question would send, with the article's own text priced as the answer; adaptive thinking tokens are left out. Without `eval/token-counts.json`, offline runs fall back to four characters per token. `ANTHROPIC_API_KEY=... npm run count:tokens` makes the exact counts from Anthropic's free token-counting endpoint, for this evaluation and for the model comparison's prompts and replies (`eval/token-counts.json`, saved by hash, so it holds no prompt text; then re-run `npm run eval`, `node eval/compare/score.mjs` and `npm run build`). Thinking still can't be counted that way; `--live` measures everything.
+- **Cost per question**[^cost]: averaged over all questions, including the free clarifications and escalations. Token counts are exact for the exact prompt each question would send, with the article's own text priced as the answer; adaptive thinking tokens are left out. Without `eval/token-counts.json`, offline runs fall back to four characters per token. `ANTHROPIC_API_KEY=... npm run count:tokens` makes the exact counts from Anthropic's free token-counting endpoint, for this evaluation and for the model comparison's prompts and replies (`eval/token-counts.json`, saved by hash, so it holds no prompt text; then re-run `npm run eval`, `node eval/compare/score.mjs` and `npm run build`). Thinking still can't be counted that way; `--live` measures everything.
 
 The history and known issues are in `eval/history.json`, and the report page renders both.
 
@@ -254,7 +254,7 @@ The history and known issues are in `eval/history.json`, and the report page ren
 | Everyday voice questions | | 36/46 | 38/46 | **39/46** |
 | Wrong answers | 6 | 5 | 4 | 4 |
 | Answers not faithful to the article (judged) | | 4 of 95 | 1 of 97 | 2 of 97 |
-| Cost per 1,000 questions | $0 | $1.55 | $4.16 | $8.41 |
+| Cost per 1,000 questions[^cost] | $0 | $1.55 | $4.16 | $8.41 |
 | Cost per correct answer | $0 | **$0.0018** | $0.0045 | $0.0093 |
 
 **Sonnet is the pick for this job.** Overall it matches Opus at half the price; Opus is one question better on the everyday voice set. Haiku has the lowest cost per correct answer, but it gets there with nearly twice as many bad answers (wrong article or invented detail). A bad answer costs a support ticket, which is worth far more than the $2.61 per thousand questions saved. Every model beats the shipped keyword policy, which is the case for putting a model in the decision once there is a budget for it. The baseline is graded slightly more leniently: a suggestion counts as a clarification or a hand-off, while a model must return exactly that decision.
@@ -274,7 +274,7 @@ node eval/compare/tiers.mjs            # replays the replies under each model-us
 
 Can the model be skipped when keyword search is already confident? `eval/compare/tiers.mjs` replays the same 131 questions under each tier with Sonnet's recorded replies, so no new model calls are needed. Confidence is the coverage of search's top article. The 70% threshold was fixed before measuring.
 
-| Policy (Sonnet 5.5) | Pass rate | Wrong answers | Calls a model | Cost per 1,000 |
+| Policy (Sonnet 5.5) | Pass rate | Wrong answers | Calls a model | Cost per 1,000[^cost] |
 |---|---|---|---|---|
 | No model (offline mode) | 49.6% | 6 | 0% | $0.00 |
 | 1. Full model (default) | 91.6% | 4 | 99% | $4.13 |
@@ -318,3 +318,5 @@ docs/                     the built GitHub Pages site (regenerate with npm run e
 scripts/check-docs.mjs    browser check that the docs match the app
 test/                     unit tests
 ```
+
+[^cost]: Cost figures: token counts are exact as of 6 October 2026, from Anthropic's token-counting endpoint, and leave out thinking tokens. Prices are Anthropic's published API list prices in US dollars, checked 3 October 2026 (`src/rag/pricing.js`), before any tax or currency conversion. Prices and tokenizers change, so treat these figures as a snapshot rather than a quote.

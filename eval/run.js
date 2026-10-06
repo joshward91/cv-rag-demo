@@ -31,7 +31,7 @@ import { SemanticIndex, queryText, INDEX_CANDIDATES } from '../src/rag/semantic.
 import { createNodeEmbedder } from '../src/rag/embedder.node.js';
 import { articleVectors } from '../src/kb/article-vectors.js';
 import { fingerprintArticles } from '../scripts/fingerprint.mjs';
-import { MODELS, DEFAULT_MODEL, estimateTokens, costUsd } from '../src/rag/pricing.js';
+import { MODELS, DEFAULT_MODEL, PRICES_CHECKED, estimateTokens, costUsd } from '../src/rag/pricing.js';
 import { cases } from './cases.js';
 import { loadCounts } from './token-counts.js';
 import { grade, summarise } from './metrics.js';
@@ -185,6 +185,7 @@ const report = {
   knowledgeBase: { articles: articles.length, fingerprint },
   policy: DEFAULT_POLICY,
   pricing: MODELS,
+  pricesChecked: PRICES_CHECKED,
   defaultModel: DEFAULT_MODEL,
   summary: {
     all: summarise(rows, kbIds),
