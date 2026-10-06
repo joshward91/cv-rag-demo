@@ -2,6 +2,7 @@ import { buildPrompt } from './prompt.js';
 import { costUsd, MODELS } from './pricing.js';
 import { stem } from './text.js';
 import { screenQuestion, LINK_PATTERN } from './guard.js';
+import { queryText } from './semantic.js';
 
 /**
  * Words that point at the assistant itself rather than at Harbour CRM. The
@@ -30,11 +31,13 @@ export function isAboutAssistant(terms) {
  */
 export class HelpDesk {
   /**
-   * @param {{ retriever: import('./retriever.js').Retriever, generator: object }} deps
+   * @param {{ retriever: import('./retriever.js').Retriever, generator: object, embedder?: (texts: string[]) => Promise<number[][]> }} deps
+   *        With an embedder and a retriever that has a semantic index, retrieval is hybrid.
    */
-  constructor({ retriever, generator }) {
+  constructor({ retriever, generator, embedder = null }) {
     this.retriever = retriever;
     this.generator = generator;
+    this.embedder = embedder;
   }
 
   /**
@@ -42,7 +45,11 @@ export class HelpDesk {
    * @param {{ chosenArticleId?: string }} [options] Set when the user picks a clarification option.
    */
   async ask(question, { chosenArticleId } = {}) {
-    const retrieval = this.retriever.retrieve(question);
+    let queryVector = null;
+    if (this.embedder && this.retriever.semantic) {
+      [queryVector] = await this.embedder([queryText(this.retriever.analyse(question))]);
+    }
+    const retrieval = this.retriever.retrieve(question, { queryVector });
     let decision = retrieval.decision;
 
     // Input guard: obvious prompt injection never reaches retrieval's decision or a model.
@@ -63,12 +70,23 @@ export class HelpDesk {
 
     const base = { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0 };
 
-    if (decision.type === 'escalate' && !chosenArticleId && isAboutAssistant(retrieval.analysis.terms)) {
+    if ((decision.type === 'escalate' || decision.type === 'suggest') && !chosenArticleId && isAboutAssistant(retrieval.analysis.terms)) {
       return { ...base, outcome: { type: 'assistant', citations: [] } };
     }
 
     if (decision.type === 'escalate') {
       return { ...base, outcome: { type: 'escalate', citations: [] } };
+    }
+
+    if (decision.type === 'suggest') {
+      return {
+        ...base,
+        outcome: {
+          type: 'suggest',
+          options: decision.articleIds.map((id) => ({ id, title: this.retriever.byId.get(id).title })),
+          citations: [],
+        },
+      };
     }
 
     if (decision.type === 'clarify') {

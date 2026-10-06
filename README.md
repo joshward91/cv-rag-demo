@@ -4,8 +4,8 @@ A grounded retrieval-augmented help-desk assistant, built around a small CRM tha
 
 - **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 single-task articles. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every article describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
-- **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
-- **The evaluation suite** has 205 realistic phrasings across four sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
+- **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
+- **The evaluation suite** has 256 realistic phrasings across six sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
 
@@ -18,13 +18,15 @@ The interesting part is not calling a model. It is everything around the call th
 Requires Node 20 or later. There is no backend.
 
 ```bash
-npm install
+npm install              # add --ignore-scripts if onnxruntime-node's postinstall can't download; its CPU binaries ship in the package
 npm test                 # unit tests: retrieval, guardrail, generator contract, grading
-npm run eval             # runs all 205 cases offline, writes eval/results.json
+npm run eval             # runs all 256 cases offline, keyword-only and hybrid, writes eval/results.json
 npm run check:docs       # browser check: docs labels exist in the UI, plus five walkthroughs
 npm run build            # self-contained pages in dist/, plus the GitHub Pages site in docs/
 npm run serve            # then open http://localhost:8080 to run from source
 ```
+
+`node scripts/embed-articles.mjs` re-embeds the help centre after an article changes; `npm test` fails while the vectors are stale.
 
 `npm run eval -- --live` generates answers with the Claude API instead of the offline generator and records measured token usage. It needs `ANTHROPIC_API_KEY`; `--model claude-sonnet-5-5` picks another model.
 
@@ -34,7 +36,8 @@ npm run serve            # then open http://localhost:8080 to run from source
 question
   -> rewrite      normalise, phrase rules, synonyms, spelling        src/rag/analyze.js, lexicon.js
   -> retrieve     field-weighted BM25 over title, aliases, body       src/rag/retriever.js
-  -> decide       answer / clarify / escalate                         src/rag/retriever.js
+                  + sentence embeddings, in the browser               src/rag/semantic.js
+  -> decide       answer / clarify / suggest / escalate               src/rag/retriever.js
   -> generate     offline extractive, or Claude                       src/rag/generators.js, prompt.js
   -> verify       citation guardrail                                  src/rag/pipeline.js
 ```
@@ -61,6 +64,20 @@ Retrieval is a simplified BM25F: title, aliases and body are scored separately a
 - **Answer** otherwise. The prompt gets the answer article plus up to two other strong matches, but never an article the docs list under "not to be confused with". Handing the model a look-alike invites it to blend the two.
 
 Clarification and escalation happen before any model call, so they are deterministic and free.
+
+### Semantic suggestions (hybrid retrieval)
+
+Keyword search fails on paraphrases that share no words with an article: "they signed the contract" is about marking a deal as won. So a small sentence-embedding model (all-MiniLM-L6-v2, 384 dimensions, 8-bit quantised) runs alongside BM25.
+
+- **Offline indexing.** `scripts/embed-articles.mjs` embeds every article as separate passages: the title, each alias and each body sentence. That produces 292 vectors, stored as int8 in `src/kb/article-vectors.js` (about 320 KB) with a fingerprint of the articles they came from.
+- **In the browser.** Only the question is embedded, on the visitor's machine via ONNX Runtime Web (WebAssembly). Tokenisation is a small WordPiece implementation (`src/rag/wordpiece.js`), and a unit test checks it matches the reference Hugging Face tokenizer on every passage and eval question. Node and the browser share the same embedding code (`src/rag/minilm.js`), so the eval measures exactly what visitors run. The model and runtime are served from this site, not a CDN, so the question never leaves the page and offline mode stays free. The first chat open downloads about 37 MB once. The question is embedded after the rewrite step, so "client" has already become "contact" and the perspective rules still apply.
+- **Keyword search decides first.** Semantic search only acts when keyword search would escalate. If the best article sentence is at least 0.45 similar, the user is offered up to three articles within 0.08 of the best, and declared look-alikes are never offered together. A suggestion makes no model call.
+
+**Why it only suggests.** On dev data, raw similarity couldn't separate right matches from near misses: "import contacts" (unsupported) scores 0.78 against the export article, higher than many correct paraphrases. Answering on similarity alone would have meant confident wrong answers. Suggesting means a wrong match costs the user one click to Contact support.
+
+**Why no vector database.** 292 vectors take under a millisecond to search with a dot product in memory. At hundreds of thousands of passages I would move them to pgvector next to the articles and keep the same decide-first policy.
+
+The model weights are the original Xenova/all-MiniLM-L6-v2 q8 ONNX export, vendored in `models/` with a SHA-256 in `models/CHECKSUM.json`. Remote model loading is disabled in both Node and the browser.
 
 ### Generate
 
@@ -96,15 +113,16 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 
 ## Evaluation
 
-`eval/cases.js` holds 205 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split five ways:
+`eval/cases.js` holds 256 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split six ways:
 
 | Set | Cases | Role |
 |---|---|---|
-| dev | 52 | Tuned on from the start. |
+| dev | 83 | Tuned on from the start. Round 9 added 15 paraphrases to calibrate semantic suggestions. |
 | test | 49 | Written with dev. Scored blind once after round 1, then used for tuning in round 2. |
 | holdout | 38 | Written after round 1 and before round 2 changed anything. Never tuned on. |
 | redteam | 38 | A cursory pen test, added in round 8. |
 | perspective | 12 | "Client" from both sides. Written after round 3, scored blind once, then one failure was tuned on in round 4. |
+| holdout3 (hard hold-out) | 36 | Paraphrases that avoid the articles' wording. Committed before any semantic code was written, scored blind in round 9, never tuned on. |
 
 | Round | Dev | Test | Hold-out | Perspective |
 |---|---|---|---|---|
@@ -117,6 +135,19 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 | Round 6 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 | Round 7 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 | Round 8 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
+| Round 9 | 85.5%* | 95.9% | 84.2% (not tuned on) | 91.7% |
+
+\* Dev gained 15 hard paraphrases in round 9; the original 68 dev cases still all pass.
+
+Round 9 added semantic suggestions. The strict pass rate doesn't move, because a suggestion is not counted as an answer. The **useful rate** (answered correctly, or the right article suggested) does:
+
+| Set | Keyword only | Keyword + semantic |
+|---|---|---|
+| Hard hold-out (blind) | 20.0% | **70.0%** |
+| Hold-out | 82.1% | 100% |
+| All 256 | 74.1% | 90.1% |
+
+The cost: suggestions also appear for 17 of 41 out-of-scope questions, where the right action is Contact support, which sits under the suggestions.
 
 Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes. Round 7 added the prompt-injection defences above, with twelve cases, two of which check that ordinary questions are not blocked.
 
@@ -140,7 +171,7 @@ The history and known issues are in `eval/history.json`, and the report page ren
 - Unknown but harmless words ("typo", "keep", "paying") lower coverage and cause false refusals. This is the main hold-out failure mode, and it fails safe.
 - Lexical retrieval can't tell "send an invoice to a contact" (unsupported) from "where invoices are sent" (billing email). In Claude mode the model is instructed to escalate when the article doesn't answer the question.
 - "We have a new office number" gets the company article. Without "our" or "account", nothing marks the number as the user's own.
-- Retrieval is lexical only. The next step would be hybrid retrieval with embeddings fused by reciprocal rank, measured against the same hold-out set, followed by a fresh hold-out set.
+- Semantic suggestions appear for some out-of-scope questions (17 of 41), because similarity can't tell a near miss from a match. They are suggestions, never answers, with Contact support underneath.
 - At 29 short articles the whole help centre would fit in one cached prompt. Retrieval is still the right design here because it scales, makes every decision inspectable and keeps clarification and escalation deterministic and free.
 
 ## Layout
@@ -148,7 +179,9 @@ The history and known issues are in `eval/history.json`, and the report page ren
 ```
 src/kb/articles.js        the help centre
 src/crm/                  sample data and the in-memory store
-src/rag/                  rewrite, retrieval, decision policy, prompt, generators, guardrail, pricing
+src/kb/article-vectors.js precomputed article embeddings (generated)
+src/rag/                  rewrite, retrieval, semantic index, decision policy, prompt, generators, guardrail, pricing
+models/                   vendored embedding model (q8 ONNX) with checksum
 src/ui/                   CRM screens, chat widget, retrieval panel, styles
 eval/                     cases, runner, metrics, tuning history, results
 report/template.html      the evaluation report page

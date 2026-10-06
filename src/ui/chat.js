@@ -19,11 +19,24 @@ const SUPPORT_EMAIL = 'support@harbourcrm.example';
  * The embedded help assistant: launcher, conversation, citation drawer and the
  * per-answer "show retrieval" panel.
  */
+const SEARCH_STATE = {
+  off: 'Search: keyword',
+  idle: 'Search: keyword',
+  loading: 'Search: loading semantic model (about 37 MB, once)…',
+  ready: 'Search: keyword + semantic',
+  failed: 'Search: keyword (semantic model failed to load)',
+};
+
 export class ChatWidget {
-  constructor({ root, app, retriever, sample }) {
+  constructor({ root, app, retriever, sample, loadEmbedder = null }) {
     this.root = root;
     this.app = app;
     this.retriever = retriever;
+    // Semantic search loads in the background the first time the chat opens;
+    // until it is ready (or if it fails) retrieval is lexical only.
+    this.loadEmbedder = loadEmbedder;
+    this.embedder = null;
+    this.semanticState = loadEmbedder ? 'idle' : 'off';
     this.sample = sample; // claude.ai runtime, or null
     this.inArtifact = typeof window !== 'undefined' && Boolean(window.claude);
     this.messages = [];
@@ -89,7 +102,7 @@ export class ChatWidget {
             <input id="chat-question" name="q" autocomplete="off" placeholder="Ask how to do something in Harbour CRM" ${this.busy ? raw('disabled') : ''} />
             <button type="submit" class="btn primary" ${this.busy ? raw('disabled') : ''}>Ask</button>
           </form>
-          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''} · <button type="button" class="link-button" data-chat="settings">Change</button></p>
+          <p class="chat-mode-line">Mode: ${this.modes().find((m) => m.id === this.mode)?.label}${this.mode === 'api' ? ` · ${MODELS[this.model].label}` : ''} · <button type="button" class="link-button" data-chat="settings">Change</button>${SEARCH_STATE[this.semanticState] ? ` · ${SEARCH_STATE[this.semanticState]}` : ''}</p>
           ${this.drawerArticle ? this.#drawer() : ''}
         </section>
       `,
@@ -149,6 +162,10 @@ export class ChatWidget {
     } else if (outcome.type === 'clarify') {
       body = html`<p>${outcome.question}</p>
         <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>`;
+    } else if (outcome.type === 'suggest') {
+      body = html`<p>I couldn’t find an article that clearly answers this. These look closest. Pick one if it matches, or contact support.</p>
+        <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>
+        <button type="button" class="btn small" data-support="${index}">Contact support</button>`;
     } else if (outcome.type === 'blocked') {
       body = html`<p>I can only help with using Harbour CRM, so I can’t follow instructions that change how I work. Ask me how to do something in Harbour CRM.</p>`;
     } else if (outcome.type === 'assistant') {
@@ -169,6 +186,7 @@ export class ChatWidget {
     const statusOf = (id) => {
       if (decision.type === 'answer' && id === decision.articleId) return ['answer', 'Answer'];
       if (decision.type === 'clarify' && decision.articleIds.includes(id)) return ['clarify', 'Offered'];
+      if (decision.type === 'suggest' && decision.articleIds.includes(id)) return ['clarify', 'Suggested'];
       if (contextIds.includes(id)) return ['context', 'In prompt'];
       if (decision.excludedLookAlikes?.includes(id)) return ['excluded', 'Look-alike, kept out'];
       return ['below', ''];
@@ -183,7 +201,7 @@ export class ChatWidget {
       promptBlock =
         decision.type === 'blocked'
           ? html`<p class="panel-note">No model call. The input guard blocked the question before retrieval decided anything, which costs nothing.</p>`
-          : html`<p class="panel-note">No model call. The retrieval policy decided to ${decision.type === 'clarify' ? 'ask a clarifying question' : 'escalate'} before generation, which costs nothing.</p>`;
+          : html`<p class="panel-note">No model call. The retrieval policy decided to ${decision.type === 'clarify' ? 'ask a clarifying question' : decision.type === 'suggest' ? 'suggest articles' : 'escalate'} before generation, which costs nothing.</p>`;
     }
 
     return html`<details class="retrieval" data-panel-for="${index}" ${this.openPanels.has(String(index)) ? raw('open') : ''}>
@@ -199,7 +217,7 @@ export class ChatWidget {
         <h3>Decision: ${decision.type}</h3>
         <p class="panel-note">${decision.reason}</p>
 
-        <h3>Articles retrieved</h3>
+        <h3>Keyword search (BM25)</h3>
         <div class="table-wrap"><table class="scores">
           <thead><tr><th>#</th><th>Article</th><th class="num">BM25</th><th class="num">Coverage</th><th>Use</th></tr></thead>
           <tbody>${retrieval.results.map((r, i) => {
@@ -208,6 +226,18 @@ export class ChatWidget {
           })}</tbody>
         </table></div>
         ${retrieval.results.length ? '' : html`<p class="muted">No article matched.</p>`}
+
+        <h3>Semantic search</h3>
+        ${retrieval.semantic
+          ? html`<p class="panel-note">Cosine similarity between the rewritten question and each article’s closest title, alias or sentence (all-MiniLM-L6-v2, running in this browser). Only used when keyword search would escalate.</p>
+            <div class="table-wrap"><table class="scores">
+              <thead><tr><th>#</th><th>Article</th><th class="num">Similarity</th><th>Use</th></tr></thead>
+              <tbody>${retrieval.semantic.map((r, i) => {
+                const [cls, label] = statusOf(r.id);
+                return html`<tr class="${cls}"><td class="num">${i + 1}</td><td><button type="button" class="link-button" data-open-article="${r.id}">${r.id}</button><span class="matched">${r.passage}</span></td><td class="num">${r.similarity.toFixed(2)}</td><td>${label}</td></tr>`;
+              })}</tbody>
+            </table></div>`
+          : html`<p class="muted">${this.semanticState === 'loading' ? 'The semantic model was still loading, so this question used keyword search only.' : 'Not used in this build: keyword search only.'}</p>`}
 
         <h3>Prompt</h3>
         ${promptBlock}
@@ -237,14 +267,14 @@ export class ChatWidget {
     this.messages.push(pending);
     this.render();
 
-    const desk = new HelpDesk({ retriever: this.retriever, generator });
+    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder });
     let message;
     try {
       const result = await desk.ask(question, { chosenArticleId });
       message = { role: 'bot', result };
     } catch (error) {
       // Show what retrieval found even when generation fails.
-      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator() }).ask(question, { chosenArticleId });
+      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator(), embedder: this.embedder }).ask(question, { chosenArticleId });
       message = { role: 'bot', result, error: `Claude couldn’t answer (${describeError(error)}). Switch to Offline mode in the settings to keep going.` };
     }
     this.messages.splice(this.messages.indexOf(pending), 1, message);
@@ -268,6 +298,22 @@ export class ChatWidget {
     return new AnthropicGenerator({ client, model: this.model });
   }
 
+  #startSemantic() {
+    if (this.semanticState !== 'idle') return;
+    this.semanticState = 'loading';
+    this.render();
+    this.loadEmbedder()
+      .then((embedder) => {
+        this.embedder = embedder;
+        this.semanticState = 'ready';
+      })
+      .catch((error) => {
+        console.warn('Semantic search unavailable, using keyword search only.', error);
+        this.semanticState = 'failed';
+      })
+      .finally(() => this.render());
+  }
+
   #onClick(e) {
     const el = e.target.closest('button, a');
     if (!el) return;
@@ -275,6 +321,7 @@ export class ChatWidget {
       this.open = !this.open;
       this.render();
       if (this.open) $('#chat-question', this.root)?.focus();
+      if (this.open) this.#startSemantic();
     } else if (el.dataset.chat === 'settings') {
       this.settingsOpen = !this.settingsOpen;
       this.render();

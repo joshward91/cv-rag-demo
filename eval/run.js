@@ -6,6 +6,10 @@
  *   node eval/run.js --split dev     only the tuning set (also: test, holdout)
  *   node eval/run.js --live          Claude API generation; needs ANTHROPIC_API_KEY
  *   node eval/run.js --live --model claude-sonnet-5-5
+ *   node eval/run.js --lexical       BM25 only, without the semantic side of hybrid retrieval
+ *
+ * Every run also scores lexical-only retrieval and stores it under
+ * `comparison`, so the report can show what the embeddings changed.
  *
  * Writes eval/results.json (or --out <file>), which scripts/build.js embeds in
  * the report page.
@@ -13,7 +17,6 @@
  * ranked first, offered, put in the prompt or cited, so it can gate CI.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { articles } from '../src/kb/articles.js';
@@ -21,6 +24,10 @@ import { Retriever, DEFAULT_POLICY } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
 import { ExtractiveGenerator, AnthropicGenerator } from '../src/rag/generators.js';
 import { promptAsText, interpretationNotes } from '../src/rag/prompt.js';
+import { SemanticIndex } from '../src/rag/semantic.js';
+import { createNodeEmbedder } from '../src/rag/embedder.node.js';
+import { articleVectors } from '../src/kb/article-vectors.js';
+import { fingerprintArticles } from '../scripts/fingerprint.mjs';
 import { MODELS, DEFAULT_MODEL, estimateTokens, costUsd } from '../src/rag/pricing.js';
 import { cases } from './cases.js';
 import { grade, summarise } from './metrics.js';
@@ -47,12 +54,21 @@ if (live) {
   generator = new AnthropicGenerator({ client: new Anthropic(), model });
 }
 
-const selected = cases.filter((c) => split === 'all' || c.split === split);
-const rows = await runCases(articles, selected);
+if (articleVectors.fingerprint !== fingerprintArticles(articles)) {
+  console.error('src/kb/article-vectors.js is stale. Run: node scripts/embed-articles.mjs');
+  process.exit(2);
+}
+const semantic = new SemanticIndex(articleVectors.passages);
+const embedder = await createNodeEmbedder();
+const hybrid = !flag('lexical');
 
-async function runCases(knowledgeBase, selectedCases) {
-  const retriever = new Retriever(knowledgeBase);
-  const desk = new HelpDesk({ retriever, generator });
+const selected = cases.filter((c) => split === 'all' || c.split === split);
+const rows = await runCases(articles, selected, { hybrid });
+const lexicalRows = hybrid ? await runCases(articles, selected, { hybrid: false }) : rows;
+
+async function runCases(knowledgeBase, selectedCases, { hybrid: useSemantic }) {
+  const retriever = new Retriever(knowledgeBase, {}, { semantic: useSemantic ? semantic : null });
+  const desk = new HelpDesk({ retriever, generator, embedder: useSemantic ? embedder : null });
   const rows = [];
   for (const testCase of selectedCases) {
     const result = await desk.ask(testCase.query);
@@ -105,7 +121,7 @@ async function runCases(knowledgeBase, selectedCases) {
 
 // The help centre is fixed content. Retrieval failures are fixed in the
 // pipeline, not by editing articles, so flag any run against changed articles.
-const fingerprint = createHash('sha256').update(JSON.stringify(articles)).digest('hex').slice(0, 12);
+const fingerprint = fingerprintArticles(articles);
 const history = JSON.parse(readFileSync(join(here, 'history.json'), 'utf8'));
 if (history.knowledgeBaseFingerprint && history.knowledgeBaseFingerprint !== fingerprint) {
   console.warn(`Note: the help articles changed since they were frozen (${history.knowledgeBaseFingerprint} -> ${fingerprint}). Record why in eval/history.json.`);
@@ -125,7 +141,15 @@ const report = {
     holdout: summarise(rows.filter((r) => r.split === 'holdout'), kbIds),
     perspective: summarise(rows.filter((r) => r.split === 'perspective'), kbIds),
     redteam: summarise(rows.filter((r) => r.split === 'redteam'), kbIds),
+    holdout3: summarise(rows.filter((r) => r.split === 'holdout3'), kbIds),
   },
+  retrieval: hybrid ? 'hybrid' : 'lexical',
+  comparison: Object.fromEntries(
+    ['dev', 'test', 'holdout', 'perspective', 'redteam', 'holdout3', 'all'].map((k) => {
+      const pick = (rs) => (k === 'all' ? rs : rs.filter((r) => r.split === k));
+      return [k, { lexical: summarise(pick(lexicalRows), kbIds), hybrid: summarise(pick(rows), kbIds) }];
+    }),
+  ),
   rows: rows.map(({ rank, ...rest }) => rest),
 };
 

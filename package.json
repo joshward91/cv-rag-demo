@@ -12,9 +12,12 @@
     "serve": "python3 -m http.server 8080"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "0.131.0"
+    "@anthropic-ai/sdk": "0.131.0",
+    "onnxruntime-node": "1.30.0",
+    "onnxruntime-web": "1.30.0"
   },
   "devDependencies": {
+    "@huggingface/transformers": "4.3.0",
     "esbuild": "0.28.2",
     "playwright": "1.56.1"
   }

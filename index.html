@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="src/ui/styles.css" />
   <!-- Development only: the built pages bundle the SDK instead. -->
+  <!-- Semantic search needs the built site (npm run build, then serve docs/). -->
+  <script>globalThis.__SEMANTIC__ = false;</script>
   <script type="importmap">{ "imports": { "@anthropic-ai/sdk": "./node_modules/@anthropic-ai/sdk/index.mjs" } }</script>
 </head>
 <body>

@@ -31,6 +31,15 @@ export const DEFAULT_POLICY = {
   topK: 5,
   /** Articles passed to the language model as context. */
   contextK: 3,
+  /**
+   * Hybrid retrieval. When lexical retrieval would escalate, semantic matches
+   * at or above this cosine similarity are offered as suggestions instead.
+   * Calibrated on the dev set's paraphrases and out-of-scope questions.
+   */
+  suggestMinSimilarity: 0.45,
+  /** Also suggest articles within this distance of the best semantic match. */
+  suggestWindow: 0.08,
+  maxSuggestions: 3,
 };
 
 export function stripMarkdown(md) {
@@ -41,9 +50,12 @@ export class Retriever {
   /**
    * @param {Array<object>} articles
    * @param {Partial<typeof DEFAULT_POLICY>} [policy]
+   * @param {{ semantic?: import('./semantic.js').SemanticIndex }} [options]
+   *        With a semantic index, retrieval is hybrid (see `retrieve`).
    */
-  constructor(articles, policy = {}) {
+  constructor(articles, policy = {}, { semantic = null } = {}) {
     this.policy = { ...DEFAULT_POLICY, ...policy };
+    this.semantic = semantic;
     this.articles = articles;
     this.byId = new Map(articles.map((a) => [a.id, a]));
 
@@ -102,13 +114,28 @@ export class Retriever {
     return { score, matched, coveredIdf };
   }
 
+  /** The query analysis on its own, so a caller can embed the rewritten question first. */
+  analyse(query) {
+    return analyse(query, { vocabulary: this.vocabulary, spellCheck: true });
+  }
+
   /**
    * Run retrieval and the decision policy for one query.
+   *
+   * Hybrid retrieval, when a query vector is given: lexical BM25 decides
+   * first, because it is precise about product terms ("client contact
+   * number") and its coverage measure knows when a question mentions things
+   * the help centre never does. Where it would escalate, semantic similarity
+   * gets a say: close paraphrases are offered as suggestions ("Did you mean
+   * ...?") rather than answered outright, because embeddings also rate
+   * unsupported look-alikes ("import contacts" vs "export contacts") highly.
+   *
    * @param {string} query
+   * @param {{ queryVector?: number[] | Float32Array }} [options]
    */
-  retrieve(query) {
+  retrieve(query, { queryVector = null } = {}) {
     const started = now();
-    const analysis = analyse(query, { vocabulary: this.vocabulary, spellCheck: true });
+    const analysis = this.analyse(query);
     const terms = [...new Set(analysis.terms)];
 
     // A word the help centre never uses (e.g. "import") is evidence that the
@@ -135,14 +162,53 @@ export class Retriever {
       .sort((a, b) => b.score - a.score || b.coverage - a.coverage || a.id.localeCompare(b.id));
 
     const unknownTerms = terms.filter((t) => !this.df.has(t));
-    const decision = this.decide(terms, ranked);
+    let decision = this.decide(terms, ranked);
+
+    let semantic = null;
+    if (queryVector && this.semantic) {
+      semantic = this.semantic.rank(queryVector);
+      const similarityOf = new Map(semantic.map((s) => [s.id, s.similarity]));
+      for (const r of ranked) r.similarity = similarityOf.get(r.id);
+      if (decision.type === 'escalate') decision = this.suggest(semantic, decision);
+    }
 
     return {
       query,
       analysis: { ...analysis, terms, unknownTerms },
       results: ranked.slice(0, this.policy.topK),
+      semantic: semantic?.slice(0, this.policy.topK) ?? null,
       decision,
       elapsedMs: now() - started,
+    };
+  }
+
+  /** True when either article declares the other easy to confuse with it. */
+  linked(a, b) {
+    const x = this.byId.get(a);
+    const y = this.byId.get(b);
+    return x.notConfusedWith.includes(b) || y.notConfusedWith.includes(a);
+  }
+
+  /** Turn a lexical escalation into suggestions when the semantic match is close enough. */
+  suggest(semantic, escalation) {
+    const p = this.policy;
+    const [best] = semantic;
+    if (!best || best.similarity < p.suggestMinSimilarity) {
+      return { ...escalation, reason: `${escalation.reason} Closest semantic match "${best?.id}" is ${best ? best.similarity.toFixed(2) : 'n/a'}, below ${p.suggestMinSimilarity}.` };
+    }
+    // As with model context, never offer an article next to one it is declared
+    // easy to confuse with: the best match wins and its look-alikes are dropped.
+    const options = [];
+    for (const s of semantic) {
+      if (s.similarity < p.suggestMinSimilarity || s.similarity < best.similarity - p.suggestWindow) break;
+      if (options.some((o) => this.linked(o.id, s.id))) continue;
+      options.push(s);
+      if (options.length === p.maxSuggestions) break;
+    }
+    return {
+      type: 'suggest',
+      articleIds: options.map((s) => s.id),
+      reason: `${escalation.reason} Semantic search found ${options.length === 1 ? 'a close match' : 'close matches'} (best "${best.id}" at ${best.similarity.toFixed(2)}, via "${best.passage}"), so they are suggested rather than answered.`,
     };
   }
 
@@ -174,11 +240,7 @@ export class Retriever {
       }
     }
 
-    const linked = (a, b) => {
-      const x = this.byId.get(a);
-      const y = this.byId.get(b);
-      return x.notConfusedWith.includes(b) || y.notConfusedWith.includes(a);
-    };
+    const linked = (a, b) => this.linked(a, b);
     // A rival is only a real alternative if its title or aliases mention
     // every query term that the top article's title or aliases mention. If the
     // user named something that only the top article is about ("contact" in

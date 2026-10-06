@@ -1,11 +1,17 @@
 import { articles } from '../kb/articles.js';
 import { Store } from '../crm/store.js';
 import { Retriever } from '../rag/retriever.js';
+import { SemanticIndex } from '../rag/semantic.js';
+import { articleVectors } from '../kb/article-vectors.js';
 import { CrmApp } from './app.js';
 import { ChatWidget } from './chat.js';
 
 const store = new Store();
-const retriever = new Retriever(articles);
+// Hybrid retrieval needs the embedding model files next to the page. The
+// static site ships them; the single-file claude.ai build can't, so it is
+// built with __SEMANTIC__ false and stays lexical.
+const semanticEnabled = globalThis.__SEMANTIC__ ?? true;
+const retriever = new Retriever(articles, {}, { semantic: semanticEnabled ? new SemanticIndex(articleVectors.passages) : null });
 
 const app = new CrmApp({
   root: document.getElementById('app'),
@@ -15,7 +21,13 @@ const app = new CrmApp({
   // Set at build time by scripts/build.js; absent when running from source.
   reportUrl: typeof __REPORT_URL__ !== 'undefined' ? __REPORT_URL__ : '',
 });
-const chat = new ChatWidget({ root: document.getElementById('chat'), app, retriever, sample: null });
+const chat = new ChatWidget({
+  root: document.getElementById('chat'),
+  app,
+  retriever,
+  sample: null,
+  loadEmbedder: semanticEnabled ? () => import('./embedder.browser.js').then((m) => m.createBrowserEmbedder(document.baseURI)) : null,
+});
 
 app.start();
 chat.render();

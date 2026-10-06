@@ -240,6 +240,48 @@
           "blind": false
         }
       ]
+    },
+    {
+      "round": "Round 9",
+      "change": "Hybrid retrieval. A small embedding model (all-MiniLM-L6-v2, run in the browser) now sits behind keyword search. A new blind hold-out of 36 paraphrases that avoid the articles' wording was written and committed before any of this code. Keyword search decides first. When it would hand off to support and the closest semantic match is at least 0.45 similar, the bot suggests up to three articles instead of answering, so a wrong semantic match costs a click, not a wrong answer. The 0.45 threshold was chosen on 15 new dev paraphrases. Strict pass rates are unchanged on every split. The useful rate (answered correctly or right article suggested) on the new hold-out rose from 20% to 70%, on the original hold-out from 82% to 100%, and across all 256 cases from 74% to 90%.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 71,
+          "cases": 83,
+          "blind": false
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": false
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false
+        },
+        {
+          "split": "redteam",
+          "passed": 38,
+          "cases": 38,
+          "blind": false
+        },
+        {
+          "split": "holdout3",
+          "passed": 12,
+          "cases": 36,
+          "blind": true
+        }
+      ]
     }
   ],
   "knownIssues": [
@@ -247,7 +289,8 @@
     "Lexical retrieval can't tell 'send an invoice to a contact' (unsupported) from 'where invoices are sent' (billing email). In Claude mode the model is told to escalate when the article doesn't answer the question, which is the intended second line of defence.",
     "'Change an address' is ambiguous between a company's postal address and an email address, but the policy answers with the company article.",
     "'We have a new office number' is answered with the company article, not the client contact number. Without 'our' or 'account', nothing marks the number as the user's own.",
-    "The input guard is pattern-based, so a determined attacker can phrase an injection it doesn't recognise. Such a question still has to pass retrieval's coverage threshold, and then faces a model with no tools, a prompt that treats the question as untrusted, a reply schema that only allows citations of the articles provided, and an output check that withholds uncited or linked answers."
+    "The input guard is pattern-based, so a determined attacker can phrase an injection it doesn't recognise. Such a question still has to pass retrieval's coverage threshold, and then faces a model with no tools, a prompt that treats the question as untrusted, a reply schema that only allows citations of the articles provided, and an output check that withholds uncited or linked answers.",
+    "Semantic similarity alone can't separate a right paraphrase from a near-miss: \"import contacts\" scores 0.78 against the export article, higher than many true matches. That is why semantic search only suggests and never answers. Suggestions are also shown for 17 of 41 out-of-scope questions, where the user then picks Contact support."
   ],
   "afterHoldout": "After the hold-out run, articles declared as look-alikes stopped being passed to the model as extra context, and the core-example check got stricter: the forbidden article must not be ranked first, offered, put in the prompt or cited. Pass rates didn't change.",
   "knowledgeBaseFingerprint": "33cb57b59ece"
