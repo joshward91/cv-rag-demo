@@ -33,6 +33,7 @@ import { articleVectors } from '../src/kb/article-vectors.js';
 import { fingerprintArticles } from '../scripts/fingerprint.mjs';
 import { MODELS, DEFAULT_MODEL, estimateTokens, costUsd } from '../src/rag/pricing.js';
 import { cases } from './cases.js';
+import { loadCounts } from './token-counts.js';
 import { grade, summarise } from './metrics.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -67,6 +68,9 @@ const indexed = new SemanticIndex(articleVectors.passages, { graph: articleVecto
 const flat = new SemanticIndex(articleVectors.passages);
 const embedder = await createNodeEmbedder();
 const hybrid = !flag('lexical');
+
+// Exact token counts, when eval/count-tokens.mjs has been run with an API key.
+const counted = live ? null : loadCounts();
 
 const selected = cases.filter((c) => split === 'all' || c.split === split);
 const rows = await runCases(articles, selected, { semantic: hybrid ? indexed : null });
@@ -118,16 +122,22 @@ async function runCases(knowledgeBase, selectedCases, { semantic }) {
     // Cost model: the prompt the pipeline would send, priced for each model.
     // Questions decided as clarify or escalate never reach a model and cost $0.
     let tokens = { inputTokens: 0, outputTokens: 0, measured: false };
+    let tokensByModel = null;
     if (result.prompt) {
       if (result.reply?.usage?.measured) {
         tokens = result.reply.usage;
       } else {
         const expectedAnswer = retriever.byId.get(result.prompt.contextIds[0]).body;
-        tokens = {
-          inputTokens: estimateTokens(promptAsText(result.prompt)),
-          outputTokens: estimateTokens(JSON.stringify({ type: 'answer', answer: expectedAnswer, citations: [result.prompt.contextIds[0]] })),
-          measured: false,
-        };
+        const answerText = JSON.stringify({ type: 'answer', answer: expectedAnswer, citations: [result.prompt.contextIds[0]] });
+        const estimate = { inputTokens: estimateTokens(promptAsText(result.prompt)), outputTokens: estimateTokens(answerText), measured: false };
+        // Counted per model, since models don't all share a tokenizer.
+        tokensByModel = Object.fromEntries(Object.keys(MODELS).map((m) => {
+          const input = counted?.input(m, result.prompt);
+          const output = counted?.output(m, answerText);
+          if (input == null || output == null) return [m, estimate];
+          return [m, { inputTokens: input, outputTokens: output, measured: false, counted: true }];
+        }));
+        tokens = tokensByModel[DEFAULT_MODEL];
       }
     }
 
@@ -151,7 +161,7 @@ async function runCases(knowledgeBase, selectedCases, { semantic }) {
       guardrail: result.guardrail,
       retrievalMs: result.retrieval.elapsedMs,
       tokens,
-      costByModel: Object.fromEntries(Object.keys(MODELS).map((m) => [m, tokens.inputTokens ? costUsd(m, tokens) : 0])),
+      costByModel: Object.fromEntries(Object.keys(MODELS).map((m) => [m, tokens.inputTokens ? costUsd(m, tokensByModel?.[m] ?? tokens) : 0])),
       rank: ranked,
     };
     Object.assign(row, grade(row));
@@ -171,7 +181,7 @@ if (history.knowledgeBaseFingerprint && history.knowledgeBaseFingerprint !== fin
 const kbIds = new Set(articles.map((a) => a.id));
 const report = {
   generatedAt: new Date().toISOString(),
-  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false },
+  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false, countedTokens: Boolean(counted) && rows.every((r) => !r.tokens.inputTokens || r.tokens.counted), countedAt: counted?.countedAt ?? null },
   knowledgeBase: { articles: articles.length, fingerprint },
   policy: DEFAULT_POLICY,
   pricing: MODELS,

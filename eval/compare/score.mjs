@@ -11,6 +11,10 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { cases } from '../cases.js';
 import { MODELS, estimateTokens, costUsd } from '../../src/rag/pricing.js';
+import { loadCounts } from '../token-counts.js';
+
+// Exact token counts from eval/count-tokens.mjs, when it has been run.
+const counted = loadCounts();
 
 const dir = new URL('./', import.meta.url);
 const { prompts, splits } = JSON.parse(readFileSync(new URL('prompts.json', dir), 'utf8'));
@@ -41,7 +45,7 @@ function gradeReply(c, prompt, reply) {
 
 // Answer questions whose article search never put in front of the model: no model can pass these.
 const unreachable = prompts.filter((p) => { const c = byId.get(p.id); return c.expect.type === 'answer' && !p.candidates.includes(c.expect.article); }).map((p) => p.id);
-const results = { unreachable, generatedAt: new Date().toISOString(), splits, questions: prompts.length, models: [], rows: [] };
+const results = { unreachable, countedAt: counted?.countedAt ?? null, generatedAt: new Date().toISOString(), splits, questions: prompts.length, models: [], rows: [] };
 
 // Baseline: the shipped pipeline (keyword + semantic, no model in the decision).
 const shipped = JSON.parse(readFileSync(new URL('../results.json', dir), 'utf8')).rows.filter((r) => prompts.some((p) => p.id === r.id));
@@ -58,13 +62,15 @@ for (const run of RUNS) {
   const judgements = existsSync(judgementsFile) ? JSON.parse(readFileSync(judgementsFile, 'utf8')) : null;
   let inputTokens = 0;
   let outputTokens = 0;
+  let uncountedReplies = 0;
   const rows = [];
   for (const prompt of prompts) {
     const file = new URL(`replies/${run.key}/${prompt.id}.json`, dir);
     if (!existsSync(file)) continue;
     let reply;
+    const replyText = readFileSync(file, 'utf8').trim();
     try {
-      reply = JSON.parse(readFileSync(file, 'utf8'));
+      reply = JSON.parse(replyText);
     } catch {
       reply = { type: 'invalid', answer: '', citations: [] };
     }
@@ -75,7 +81,11 @@ for (const run of RUNS) {
     const judged = judgements?.[prompt.id] ?? null;
     // An answer the judge found unfaithful to its article is not a pass.
     const pass = g.pass && (reply.type !== 'answer' || !judged || judged.faithful);
-    const tokens = { inputTokens: estimateTokens(prompt.system + prompt.user + JSON.stringify(prompt.schema)), outputTokens: estimateTokens(JSON.stringify(reply)) };
+    const exact = { inputTokens: counted?.input(run.model, prompt), outputTokens: counted?.output(run.model, replyText) };
+    const tokens = exact.inputTokens != null && exact.outputTokens != null
+      ? exact
+      : { inputTokens: estimateTokens(prompt.system + prompt.user + JSON.stringify(prompt.schema)), outputTokens: estimateTokens(JSON.stringify(reply)) };
+    if (tokens !== exact) uncountedReplies += 1;
     inputTokens += tokens.inputTokens;
     outputTokens += tokens.outputTokens;
     rows.push({ id: prompt.id, split: c.split, query: c.query, expect: c.expect, type: reply.type, citations: reply.citations, answer: reply.answer, valid, pass, wrongAnswer: g.wrongAnswer, neverCited: g.neverCited, judged });
@@ -101,7 +111,7 @@ for (const run of RUNS) {
     neverCited: rows.filter((r) => r.neverCited).length,
     invalid: rows.filter((r) => !r.valid).length,
     faithfulness: judgedAnswers.length ? { judged: judgedAnswers.length, faithful: judgedAnswers.filter((r) => r.judged.faithful).length, complete: judgedAnswers.filter((r) => r.judged.complete).length } : null,
-    tokens: { input: inputTokens, output: outputTokens },
+    tokens: { input: inputTokens, output: outputTokens, counted: uncountedReplies === 0 },
     cost,
     costPerQuestion: cost / rows.length,
     costPerCorrect: passed ? cost / passed : null,

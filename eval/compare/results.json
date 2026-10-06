@@ -8,7 +8,8 @@
   "v-22",
   "v-23"
  ],
- "generatedAt": "2026-10-06T00:44:38.098Z",
+ "countedAt": null,
+ "generatedAt": "2026-10-06T04:33:10.913Z",
  "splits": [
   "voice",
   "holdout3",
@@ -71,7 +72,8 @@
    },
    "tokens": {
     "input": 129164,
-    "output": 8076
+    "output": 8076,
+    "counted": false
    },
    "cost": 0.169544,
    "costPerQuestion": 0.0012942290076335878,
@@ -132,7 +134,8 @@
    },
    "tokens": {
     "input": 129164,
-    "output": 9284
+    "output": 9284,
+    "counted": false
    },
    "cost": 0.351168,
    "costPerQuestion": 0.0026806717557251907,
@@ -193,7 +196,8 @@
    },
    "tokens": {
     "input": 129164,
-    "output": 9625
+    "output": 9625,
+    "counted": false
    },
    "cost": 0.709156,
    "costPerQuestion": 0.005413404580152672,
@@ -9486,7 +9490,7 @@
   "label": "No model in the decision (shipped pipeline)",
   "cases": 131,
   "passed": 65,
-  "useful": 106,
+  "useful": 107,
   "wrongAnswers": 6
  }
 }

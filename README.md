@@ -239,7 +239,7 @@ Metrics are defined in `eval/metrics.js`:
 - **Retrieval hit rate**: expected article ranked first (and in the top three) for answerable questions.
 - **Citation validity**: answers whose citations all exist and were in the prompt, measured before the guardrail. It is trivially 100% offline and becomes meaningful with `--live`.
 - **Refusal correctness**: recall on out-of-scope questions, precision of hand-offs, and the false-refusal rate on answerable ones. A suggestion counts as not answering, since it asserts nothing and offers Contact support.
-- **Cost per question**: averaged over all questions, including the free clarifications and escalations. Offline runs estimate tokens from the exact prompt at four characters per token and leave out adaptive thinking tokens; `--live` replaces this with measured usage.
+- **Cost per question**: averaged over all questions, including the free clarifications and escalations. Offline runs estimate tokens from the exact prompt at four characters per token and leave out adaptive thinking tokens. `ANTHROPIC_API_KEY=... npm run count:tokens` replaces the estimate with exact counts from Anthropic's free token-counting endpoint, for this evaluation and for the model comparison's prompts and replies (`eval/token-counts.json`, saved by hash, so it holds no prompt text; then re-run `npm run eval`, `node eval/compare/score.mjs` and `npm run build`). Thinking still can't be counted that way; `--live` measures everything.
 
 The history and known issues are in `eval/history.json`, and the report page renders both.
 
