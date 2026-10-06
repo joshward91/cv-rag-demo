@@ -66,14 +66,29 @@ export function buildUserMessage(question, articles, notes = []) {
  * @param {object} [analysis] the retriever's query analysis, for <interpretation>
  * @returns {{ system: string, user: string, schema: object, contextIds: string[] }}
  */
-export function buildPrompt(question, articles, analysis = null) {
+export function buildPrompt(question, articles, analysis = null, { product = 'Harbour CRM' } = {}) {
   const contextIds = articles.map((a) => a.id);
   return {
-    system: SYSTEM_PROMPT,
+    system: systemPromptFor(SYSTEM_PROMPT, product),
     user: buildUserMessage(question, articles, interpretationNotes(analysis)),
     schema: responseSchema(contextIds),
     contextIds,
   };
+}
+
+/**
+ * The same prompt for a question about one of Harbour's other products. The
+ * CRM's "client" terminology note doesn't apply there, so it is dropped.
+ */
+export function systemPromptFor(prompt, product) {
+  if (product === 'Harbour CRM') return prompt;
+  return prompt
+    .replace(/\n\nTerminology:[^\n]*/, '')
+    .replace('You are the help assistant inside Harbour CRM.', `You are the help assistant inside Harbour CRM, answering a question about ${product}, another Harbour product.`)
+    .replaceAll('Harbour CRM help', `${product} help`)
+    .replaceAll('question about Harbour CRM', `question about ${product}`)
+    .replaceAll('how to use Harbour CRM', `how to use ${product}`)
+    .replaceAll('using Harbour CRM', `using ${product}`);
 }
 
 /** Plain-text rendering used by the retrieval panel and by the claude.ai runtime, which takes a single prompt. */
@@ -93,9 +108,9 @@ export const ROUTING_PROMPT = SYSTEM_PROMPT.replace(
 - If the articles don't answer the question,`,
 ).replace('Answer the user\'s question using only the help articles inside <articles>.', 'Answer the user\'s question using only the help articles inside <articles>. They are the closest matches from search and may include articles that are not relevant.');
 
-export function buildRoutingPrompt(question, articles, analysis = null) {
+export function buildRoutingPrompt(question, articles, analysis = null, { product = 'Harbour CRM' } = {}) {
   const contextIds = articles.map((a) => a.id);
   const schema = responseSchema(contextIds);
   schema.properties.type.enum = ['answer', 'clarify', 'escalate'];
-  return { system: ROUTING_PROMPT, user: buildUserMessage(question, articles, interpretationNotes(analysis)), schema, contextIds };
+  return { system: systemPromptFor(ROUTING_PROMPT, product), user: buildUserMessage(question, articles, interpretationNotes(analysis)), schema, contextIds };
 }

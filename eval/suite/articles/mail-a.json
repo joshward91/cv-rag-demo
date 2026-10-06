@@ -1,0 +1,1526 @@
+[
+ {
+  "id": "mail-update-subscriber-email-address",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Update a subscriber's email address",
+  "aliases": [
+   "change a subscriber's email",
+   "fix a typo in someone's email",
+   "edit email on a contact",
+   "customer changed their email"
+  ],
+  "body": "Use this when a subscriber tells you their email address has changed.\n\n1. Go to **Audience** > **Subscribers**.\n2. Search for the subscriber and select their name.\n3. Select **Edit profile**.\n4. Type the new address in the **Email** field.\n5. Select **Save changes**.\n\nThe subscriber keeps their history and list memberships.",
+  "notConfusedWith": [
+   "mail-update-subscriber-phone-number"
+  ]
+ },
+ {
+  "id": "mail-update-subscriber-phone-number",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Update a subscriber's phone number",
+  "aliases": [
+   "change a customer's mobile number",
+   "edit phone number on a contact",
+   "fix a wrong mobile number",
+   "new number for SMS"
+  ],
+  "body": "Keep mobile numbers current so text messages reach the right person.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select **Edit profile**.\n3. Enter the new number in **Mobile phone**, including the country code, for example +61.\n4. Select **Save changes**.\n\nIf the subscriber had opted in to SMS, their opt-in carries over to the new number.",
+  "notConfusedWith": [
+   "mail-update-subscriber-email-address",
+   "mail-update-team-member-mobile-number"
+  ]
+ },
+ {
+  "id": "mail-add-a-subscriber-manually",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Add a subscriber manually",
+  "aliases": [
+   "add one contact",
+   "create a new subscriber",
+   "add a customer to my audience",
+   "enter a contact by hand"
+  ],
+  "body": "Add a single person without preparing an import file.\n\n1. Go to **Audience** > **Subscribers**.\n2. Select **Add subscriber**.\n3. Enter at least an **Email** or **Mobile phone**.\n4. Choose one or more lists under **Add to lists**.\n5. Tick **This person has given consent** and select **Save**.\n\nYou cannot save a subscriber without confirming consent.",
+  "notConfusedWith": [
+   "mail-import-subscribers-from-a-csv-file"
+  ]
+ },
+ {
+  "id": "mail-delete-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Delete a subscriber",
+  "aliases": [
+   "remove a contact permanently",
+   "delete a customer record",
+   "get rid of a subscriber",
+   "erase one contact"
+  ],
+  "body": "Deleting removes the subscriber and their activity from your account.\n\n1. Go to **Audience** > **Subscribers**.\n2. Select the subscriber's name.\n3. Select **More actions** > **Delete subscriber**.\n4. Select **Delete** to confirm.\n\nDeleted subscribers cannot be recovered. If you only want to stop mailing someone, archive them instead.",
+  "notConfusedWith": [
+   "mail-archive-a-subscriber",
+   "mail-delete-subscriber-data-on-request"
+  ]
+ },
+ {
+  "id": "mail-archive-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Archive a subscriber",
+  "aliases": [
+   "hide a contact without deleting",
+   "change a subscriber's status to archived",
+   "deactivate a customer",
+   "set contact to inactive"
+  ],
+  "body": "Archiving keeps the record and its history but excludes the person from all sends.\n\n1. Go to **Audience** > **Subscribers**.\n2. Open the subscriber's profile.\n3. Select **Status** and choose **Archived**.\n4. Select **Save**.\n\nArchived subscribers do not count towards your plan's subscriber limit.",
+  "notConfusedWith": [
+   "mail-delete-a-subscriber",
+   "mail-restore-an-archived-subscriber"
+  ]
+ },
+ {
+  "id": "mail-restore-an-archived-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Restore an archived subscriber",
+  "aliases": [
+   "unarchive a contact",
+   "bring back an inactive customer",
+   "reactivate archived subscriber",
+   "undo archive"
+  ],
+  "body": "You can bring an archived subscriber back to your active audience.\n\n1. Go to **Audience** > **Subscribers**.\n2. Select the **Status** filter and choose **Archived**.\n3. Open the subscriber's profile.\n4. Select **Status** > **Subscribed**, then **Save**.\n\nOnly restore people who have not unsubscribed.",
+  "notConfusedWith": [
+   "mail-archive-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-add-a-note-to-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Add a note to a subscriber",
+  "aliases": [
+   "write a note on a contact",
+   "leave a comment on a customer",
+   "record a call on someone's profile",
+   "jot something on a subscriber"
+  ],
+  "body": "Notes are visible to your team and never to the subscriber.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note.\n5. Select **Save note**.\n\nEach note shows who wrote it and when.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-merge-duplicate-subscribers",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Merge duplicate subscribers",
+  "aliases": [
+   "combine two contacts",
+   "same person is in twice",
+   "fix duplicate customer records",
+   "join duplicate profiles"
+  ],
+  "body": "Merge profiles when one person has been added twice.\n\n1. Go to **Audience** > **Subscribers**.\n2. Tick the two duplicate subscribers.\n3. Select **More actions** > **Merge**.\n4. Choose which profile to keep as the **Primary** record.\n5. Select **Merge subscribers**.\n\nTags, list memberships and activity from both profiles are combined.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-tags-to-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Add a tag to a subscriber",
+  "aliases": [
+   "label a contact",
+   "tag a customer",
+   "categorise a subscriber",
+   "apply a tag to one person"
+  ],
+  "body": "Tags are quick labels you can use later to build segments.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select **Tags** in the right-hand panel.\n3. Start typing a tag name and choose it, or press Enter to create a new one.\n4. Select **Save**.",
+  "notConfusedWith": [
+   "mail-remove-a-tag-from-a-subscriber",
+   "mail-add-tags-during-import"
+  ]
+ },
+ {
+  "id": "mail-remove-a-tag-from-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Remove a tag from a subscriber",
+  "aliases": [
+   "untag a contact",
+   "take a label off a customer",
+   "delete tag from one person",
+   "clear a tag"
+  ],
+  "body": "Removing a tag does not delete the tag itself or affect other subscribers.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Find **Tags** in the right-hand panel.\n3. Select the **x** beside the tag you want to remove.\n4. Select **Save**.\n\nSegments that use the tag will update automatically.",
+  "notConfusedWith": [
+   "mail-add-tags-to-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-edit-a-subscribers-name",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Edit a subscriber's name",
+  "aliases": [
+   "change a contact's name",
+   "fix spelling of a customer name",
+   "update first name and last name",
+   "rename a subscriber"
+  ],
+  "body": "Names are used for personalisation, so correct spellings matter.\n\n1. Go to **Audience** > **Subscribers**.\n2. Select the subscriber.\n3. Select **Edit profile**.\n4. Update **First name** and **Last name**.\n5. Select **Save changes**.\n\nNew emails will use the updated name straight away.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-custom-field",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Create a custom field",
+  "aliases": [
+   "add a new field to contacts",
+   "track extra info like birthday",
+   "make my own subscriber field",
+   "add a company field"
+  ],
+  "body": "Custom fields let you store details such as birthday, company or membership number.\n\n1. Go to **Audience** > **Fields**.\n2. Select **Create field**.\n3. Enter a **Field name**.\n4. Choose a **Field type**: **Text**, **Number**, **Date** or **Dropdown**.\n5. Select **Save field**.\n\nThe field appears on every subscriber profile.",
+  "notConfusedWith": [
+   "mail-update-a-custom-field-value"
+  ]
+ },
+ {
+  "id": "mail-update-a-custom-field-value",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Update a custom field value on a subscriber",
+  "aliases": [
+   "change a contact's birthday",
+   "edit membership number",
+   "fix company name on a profile",
+   "set a custom field for one person"
+  ],
+  "body": "Change a stored detail for a single subscriber.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select **Edit profile**.\n3. Scroll to **Custom fields**.\n4. Update the value you need.\n5. Select **Save changes**. Changes are saved to the profile history.",
+  "notConfusedWith": [
+   "mail-create-a-custom-field"
+  ]
+ },
+ {
+  "id": "mail-view-a-subscribers-activity",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "View a subscriber's activity",
+  "aliases": [
+   "see what a contact opened",
+   "check a customer's click history",
+   "see emails a subscriber received",
+   "subscriber engagement timeline"
+  ],
+  "body": "The activity timeline shows how someone has engaged with your messages.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select the **Activity** tab.\n3. Use the **Filter** menu to show **Emails**, **SMS** or **Forms**.\n4. Select an item to see the campaign it came from.\n\nActivity is listed with the newest first.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-find-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Find a subscriber",
+  "aliases": [
+   "search for a contact",
+   "look up a customer",
+   "locate someone in my audience",
+   "search by email or phone"
+  ],
+  "body": "Search works across names, email addresses and mobile numbers.\n\n1. Go to **Audience** > **Subscribers**.\n2. Type a name, email address or number in the **Search** box.\n3. Press Enter.\n4. Select a result to open the profile.\n\nUse **Filters** beside the search box to narrow results by status, list or tag.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-change-a-subscribers-language",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Change a subscriber's preferred language",
+  "aliases": [
+   "set contact language",
+   "switch language for a customer",
+   "update language preference",
+   "send emails in another language"
+  ],
+  "body": "The preferred language decides which version of translated forms and unsubscribe pages a person sees.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select **Edit profile**.\n3. Choose a language from **Preferred language**.\n4. Select **Save changes**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-see-which-lists-a-subscriber-belongs-to",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "See which lists a subscriber belongs to",
+  "aliases": [
+   "check list membership for a contact",
+   "what lists is this customer on",
+   "find a person's lists",
+   "view subscriber's groups"
+  ],
+  "body": "Check this before removing or moving someone.\n\n1. Go to **Audience** > **Subscribers**.\n2. Open the subscriber's profile.\n3. Select the **Lists** tab.\n4. Review the lists and the date they joined each one.\n\nSelect a list name to open it.",
+  "notConfusedWith": [
+   "mail-remove-a-subscriber-from-a-list"
+  ]
+ },
+ {
+  "id": "mail-clear-a-bounce-status",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Clear a bounce status from a subscriber",
+  "aliases": [
+   "contact marked as bounced",
+   "email address flagged as cleaned",
+   "fix bounced customer",
+   "unblock an email that bounced"
+  ],
+  "body": "Subscribers are marked **Cleaned** when an email address bounces repeatedly. If you know the address works again, you can clear the status.\n\n1. Go to **Audience** > **Subscribers**.\n2. Filter **Status** by **Cleaned** and open the subscriber.\n3. Select **More actions** > **Clear bounce status**.\n4. Select **Confirm**.\n\nIf the address bounces again it will be cleaned again.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-update-team-member-mobile-number",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Update a team member's mobile number",
+  "aliases": [
+   "change an employee's phone number",
+   "edit my own mobile for sign-in codes",
+   "new phone for two-factor login",
+   "update staff phone number"
+  ],
+  "body": "Your mobile number receives sign-in codes and sending alerts.\n\n1. Select your initials at the top right, then choose **My account**.\n2. Select **Security**.\n3. Under **Mobile number**, select **Change**.\n4. Enter the new number and select **Send code**.\n5. Enter the code you receive, then select **Verify**.\n\nAccount owners can update other team members from **Settings** > **Team**.",
+  "notConfusedWith": [
+   "mail-update-subscriber-phone-number"
+  ]
+ },
+ {
+  "id": "mail-update-the-billing-contact",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Contacts and subscribers",
+  "title": "Update the billing contact for your account",
+  "aliases": [
+   "change who gets invoices",
+   "new billing email",
+   "edit billing contact details",
+   "switch the invoice recipient"
+  ],
+  "body": "Invoices and payment reminders go to the billing contact.\n\n1. Go to **Settings** > **Billing**.\n2. Select **Billing contact**.\n3. Select **Edit**.\n4. Update the **Name** and **Email**.\n5. Select **Save**.\n\nOnly account owners can change the billing contact. The new contact will be copied on future payment reminders and receipts.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Create a list",
+  "aliases": [
+   "make a new mailing list",
+   "start a new audience group",
+   "set up a list",
+   "add a list"
+  ],
+  "body": "Lists are the main way to organise who receives your campaigns.\n\n1. Go to **Audience** > **Lists**.\n2. Select **Create list**.\n3. Enter a **List name** and a short **Description**.\n4. Confirm the **Default sender** name and email.\n5. Select **Save list**.\n\nYou can add subscribers once the list is created.",
+  "notConfusedWith": [
+   "mail-create-a-segment"
+  ]
+ },
+ {
+  "id": "mail-rename-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Rename a list",
+  "aliases": [
+   "change the name of a list",
+   "edit list title",
+   "relabel my mailing list"
+  ],
+  "body": "Renaming a list does not affect its subscribers or past campaigns.\n\n1. Go to **Audience** > **Lists**.\n2. Select the list you want to change.\n3. Select **Settings**.\n4. Edit the **List name**.\n5. Select **Save**. The new name shows everywhere, including forms and the campaign audience picker.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-delete-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Delete a list",
+  "aliases": [
+   "remove a mailing list",
+   "get rid of a list",
+   "delete audience group"
+  ],
+  "body": "Deleting a list removes the grouping, not the people on it.\n\n1. Go to **Audience** > **Lists**.\n2. Select **More** beside the list.\n3. Choose **Delete list**.\n4. Choose whether to keep subscribers in your account or delete those who are on no other list.\n5. Select **Delete**.\n\nScheduled campaigns that use the list will be paused.",
+  "notConfusedWith": [
+   "mail-archive-a-list"
+  ]
+ },
+ {
+  "id": "mail-archive-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Archive a list",
+  "aliases": [
+   "hide an old list",
+   "retire a list but keep it",
+   "put a list away"
+  ],
+  "body": "Archive a list you no longer send to but want to keep for reporting.\n\n1. Go to **Audience** > **Lists**.\n2. Select **More** beside the list.\n3. Choose **Archive list**.\n4. Select **Archive** to confirm.\n\nArchived lists appear under the **Archived** filter and can be restored at any time.",
+  "notConfusedWith": [
+   "mail-delete-a-list"
+  ]
+ },
+ {
+  "id": "mail-add-subscribers-to-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Add existing subscribers to a list",
+  "aliases": [
+   "put contacts on a list",
+   "add customers to a mailing list",
+   "subscribe existing people to a list"
+  ],
+  "body": "Use this for people already in your account.\n\n1. Go to **Audience** > **Subscribers**.\n2. Tick the subscribers you want.\n3. Select **Add to list**.\n4. Choose the list.\n5. Select **Add**.\n\nOnly add people who have consented to receive messages from that list.",
+  "notConfusedWith": [
+   "mail-move-subscribers-to-another-list"
+  ]
+ },
+ {
+  "id": "mail-remove-a-subscriber-from-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Remove a subscriber from a list",
+  "aliases": [
+   "take a contact off a list",
+   "drop a customer from a mailing list",
+   "unlist one person"
+  ],
+  "body": "Removing someone from a list does not delete them or unsubscribe them from other lists.\n\n1. Go to **Audience** > **Lists** and open the list.\n2. Find the subscriber.\n3. Tick the box beside their name.\n4. Select **Remove from list**.\n5. Select **Remove** to confirm.",
+  "notConfusedWith": [
+   "mail-unsubscribe-a-subscriber-manually"
+  ]
+ },
+ {
+  "id": "mail-move-subscribers-to-another-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Move subscribers to another list",
+  "aliases": [
+   "transfer contacts between lists",
+   "shift customers to a different list",
+   "relocate subscribers"
+  ],
+  "body": "Moving adds people to the new list and removes them from the old one.\n\n1. Go to **Audience** > **Lists** and open the current list.\n2. Tick the subscribers you want to move.\n3. Select **More actions** > **Move to list**.\n4. Choose the destination list.\n5. Select **Move**.",
+  "notConfusedWith": [
+   "mail-copy-subscribers-to-another-list"
+  ]
+ },
+ {
+  "id": "mail-copy-subscribers-to-another-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Copy subscribers to another list",
+  "aliases": [
+   "duplicate contacts onto a second list",
+   "put the same people on two lists",
+   "clone list members"
+  ],
+  "body": "Copying keeps people on their original list as well.\n\n1. Go to **Audience** > **Lists** and open the list.\n2. Tick the subscribers you want to copy.\n3. Select **More actions** > **Copy to list**.\n4. Choose the destination list.\n5. Select **Copy**.",
+  "notConfusedWith": [
+   "mail-move-subscribers-to-another-list"
+  ]
+ },
+ {
+  "id": "mail-merge-two-lists",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Merge two lists",
+  "aliases": [
+   "combine lists",
+   "join two mailing lists into one",
+   "consolidate lists"
+  ],
+  "body": "Merging combines the members of two lists. Duplicates are counted once.\n\n1. Go to **Audience** > **Lists**.\n2. Tick the two lists you want to combine.\n3. Select **Merge lists**.\n4. Choose which list to keep and name the merged list.\n5. Select **Merge**.\n\nThe list you do not keep is archived.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Create a segment",
+  "aliases": [
+   "build a segment",
+   "filter my audience into a group",
+   "target a section of my list",
+   "make a dynamic group"
+  ],
+  "body": "Segments update automatically as subscribers meet your conditions.\n\n1. Go to **Audience** > **Segments**.\n2. Select **Create segment**.\n3. Enter a **Segment name**.\n4. Select **Add condition** and choose a field, such as **Tag** or **Country**.\n5. Set the rule, then select **Save segment**.\n\nAdd more conditions and choose **Match all** or **Match any**.",
+  "notConfusedWith": [
+   "mail-create-a-static-segment"
+  ]
+ },
+ {
+  "id": "mail-create-a-static-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Create a static segment from selected subscribers",
+  "aliases": [
+   "make a fixed group of contacts",
+   "save a hand-picked group",
+   "snapshot of customers"
+  ],
+  "body": "A static segment is a fixed group that does not change when subscriber details change.\n\n1. Go to **Audience** > **Subscribers**.\n2. Tick the subscribers you want.\n3. Select **Save as segment**.\n4. Choose **Static**.\n5. Enter a name and select **Save**.",
+  "notConfusedWith": [
+   "mail-create-a-segment"
+  ]
+ },
+ {
+  "id": "mail-edit-a-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Edit a segment's conditions",
+  "aliases": [
+   "change segment rules",
+   "update a segment filter",
+   "modify who is in a segment"
+  ],
+  "body": "Changes apply to future sends and to the segment's member count straight away.\n\n1. Go to **Audience** > **Segments**.\n2. Select the segment.\n3. Select **Edit conditions**.\n4. Change, add or remove conditions.\n5. Select **Save segment**.\n\nCampaigns already sent are not affected.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-duplicate-a-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Duplicate a segment",
+  "aliases": [
+   "copy a segment",
+   "clone segment rules",
+   "make a similar segment"
+  ],
+  "body": "Duplicating saves you rebuilding conditions from scratch.\n\n1. Go to **Audience** > **Segments**.\n2. Select **More** beside the segment.\n3. Choose **Duplicate**.\n4. Rename the copy and select **Save**.\n\nThe copy keeps all conditions and can be edited separately. This is handy when you want to test a slightly different audience.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-delete-a-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Delete a segment",
+  "aliases": [
+   "remove a segment",
+   "get rid of a saved filter",
+   "delete a group of contacts"
+  ],
+  "body": "Deleting a segment does not delete the subscribers inside it.\n\n1. Go to **Audience** > **Segments**.\n2. Select **More** beside the segment.\n3. Choose **Delete segment**.\n4. Select **Delete** to confirm.\n\nDraft campaigns that target the segment will need a new audience.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-segment-by-engagement",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Segment subscribers by engagement",
+  "aliases": [
+   "target people who opened my emails",
+   "find inactive subscribers",
+   "group contacts who clicked recently"
+  ],
+  "body": "Engagement segments help you reward active readers or win back quiet ones.\n\n1. Go to **Audience** > **Segments** and select **Create segment**.\n2. Select **Add condition** > **Campaign activity**.\n3. Choose **Opened** or **Clicked** and set a time period, such as **in the last 30 days**.\n4. Select **Save segment**.\n\nChoose **Did not open** to find subscribers who have gone quiet.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-segment-by-location",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Segment subscribers by location",
+  "aliases": [
+   "target customers by city",
+   "group contacts by state or country",
+   "send to people in one region"
+  ],
+  "body": "Location comes from the address fields on a profile or the sign-up form.\n\n1. Go to **Audience** > **Segments** and select **Create segment**.\n2. Select **Add condition** > **Location**.\n3. Choose **Country**, **State** or **City**.\n4. Enter the value, for example **Victoria**.\n5. Select **Save segment**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-preview-segment-members",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Preview who is in a segment",
+  "aliases": [
+   "see segment size",
+   "check how many contacts match",
+   "view segment members before sending"
+  ],
+  "body": "Always check the size of a segment before you send.\n\n1. Go to **Audience** > **Segments**.\n2. Select the segment.\n3. Select the **Members** tab to see the list of people.\n4. Check the count shown at the top of the page.\n\nThe count refreshes automatically every few minutes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-set-the-default-sender-for-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Set the default sender for a list",
+  "aliases": [
+   "change the from name on a list",
+   "edit reply-to for list",
+   "update sender email for a list"
+  ],
+  "body": "New campaigns sent to the list will use these details.\n\n1. Go to **Audience** > **Lists** and open the list.\n2. Select **Settings**.\n3. Under **Default sender**, update **From name**, **From email** and **Reply-to**.\n4. Select **Save**.\n\nThe sender email must be on a verified domain.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-turn-on-double-opt-in-for-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Turn on double opt-in for a list",
+  "aliases": [
+   "require email confirmation on a list",
+   "enable confirmed subscription",
+   "ask new subscribers to confirm"
+  ],
+  "body": "With double opt-in, new subscribers must confirm by email before they are added.\n\n1. Go to **Audience** > **Lists** and open the list.\n2. Select **Settings**.\n3. Switch on **Require confirmation**.\n4. Select **Edit confirmation email** to adjust the wording.\n5. Select **Save**.\n\nThis applies to forms and manually added subscribers.",
+  "notConfusedWith": [
+   "mail-add-a-consent-checkbox-to-a-form"
+  ]
+ },
+ {
+  "id": "mail-import-subscribers-from-a-csv-file",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Import subscribers from a CSV file",
+  "aliases": [
+   "upload a contact list",
+   "bulk add customers from a spreadsheet",
+   "load contacts from csv"
+  ],
+  "body": "Your file needs a header row and at least one column for email or mobile number.\n\n1. Go to **Audience** > **Import**.\n2. Select **Upload file** and choose your CSV.\n3. Select **Next**, then match your columns to Harbour fields.\n4. Confirm the consent statement.\n5. Select **Start import**.\n\nYou will get an email when the import finishes.",
+  "notConfusedWith": [
+   "mail-import-from-an-excel-file"
+  ]
+ },
+ {
+  "id": "mail-import-from-an-excel-file",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Import subscribers from an Excel file",
+  "aliases": [
+   "upload xlsx contacts",
+   "add contacts from excel",
+   "bulk upload spreadsheet"
+  ],
+  "body": "Excel files (.xlsx) can be imported directly. Only the first sheet is read.\n\n1. Go to **Audience** > **Import**.\n2. Select **Upload file** and choose your .xlsx file.\n3. Check the preview and select **Next**.\n4. Map your columns and confirm consent.\n5. Select **Start import**.\n\nFor very large files, CSV is faster.",
+  "notConfusedWith": [
+   "mail-import-subscribers-from-a-csv-file"
+  ]
+ },
+ {
+  "id": "mail-map-columns-during-an-import",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Map columns during an import",
+  "aliases": [
+   "match spreadsheet columns to fields",
+   "fix wrong field mapping",
+   "assign import columns"
+  ],
+  "body": "Mapping tells Harbour Mail which column holds which detail.\n\n1. On the **Map columns** step of an import, find each column from your file.\n2. Select the drop-down beside it and choose a field, such as **Email** or **Mobile phone**.\n3. Choose **Do not import** for columns you do not need.\n4. Select **Next**.\n\nSelect **Create custom field** to import data that has no matching field.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-import-and-add-to-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Choose a list when importing",
+  "aliases": [
+   "add imported contacts to a list",
+   "import straight into a list",
+   "send import to specific list"
+  ],
+  "body": "Choosing a list during import saves you adding people afterwards.\n\n1. Start an import from **Audience** > **Import**.\n2. Upload your file and map columns.\n3. On the **Destination** step, choose **Add to existing list** or **Create new list**.\n4. Select the list.\n5. Select **Start import**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-tags-during-import",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Add tags during an import",
+  "aliases": [
+   "tag imported contacts",
+   "label a batch of subscribers on upload",
+   "apply tag on import"
+  ],
+  "body": "Tagging imports makes it easy to find a batch later.\n\n1. Start an import from **Audience** > **Import**.\n2. On the **Destination** step, find **Tags**.\n3. Type one or more tags, such as **Expo 2026**.\n4. Select **Start import**.\n\nAll imported subscribers receive the tags, including those who already existed.",
+  "notConfusedWith": [
+   "mail-add-tags-to-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-update-existing-subscribers-with-an-import",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Update existing subscribers with an import",
+  "aliases": [
+   "overwrite contact details in bulk",
+   "bulk edit phone numbers via csv",
+   "change many customers at once"
+  ],
+  "body": "You can update many profiles at once by importing a file with the new details.\n\n1. Go to **Audience** > **Import** and upload your file.\n2. Include a column for **Email** so rows can be matched.\n3. On the **Existing subscribers** step, choose **Update existing**.\n4. Select **Start import**.\n\nBlank cells in your file are ignored and will not erase current values.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-fix-import-errors",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Download an import error report",
+  "aliases": [
+   "why did rows fail to import",
+   "see skipped contacts",
+   "fix invalid emails from upload"
+  ],
+  "body": "Rows that cannot be imported are saved in an error report.\n\n1. Go to **Audience** > **Import** and select **History**.\n2. Find the import and select **View details**.\n3. Select **Download error report**.\n4. Correct the rows listed and import the corrected file.\n\nCommon causes are invalid email addresses and missing country codes on phone numbers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-import-sms-phone-numbers",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Import mobile numbers for SMS",
+  "aliases": [
+   "upload phone numbers",
+   "bulk add mobiles",
+   "import contacts for text messages"
+  ],
+  "body": "Mobile numbers must include the country code, for example +61412345678.\n\n1. Go to **Audience** > **Import** and upload your file.\n2. Map the number column to **Mobile phone**.\n3. Select **Default country** if your numbers do not start with a plus sign.\n4. Confirm that you hold SMS consent for everyone in the file.\n5. Select **Start import**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-import-an-unsubscribe-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Import an unsubscribe list",
+  "aliases": [
+   "upload people who opted out",
+   "add suppressed emails from another system",
+   "bulk block addresses"
+  ],
+  "body": "Bring over opt-outs from your old system so those people are never emailed.\n\n1. Go to **Audience** > **Suppression**.\n2. Select **Import**.\n3. Upload a CSV with one email or number per row.\n4. Select **Import to suppression list**.\n\nSuppressed addresses are blocked from every send, even if they appear on a list.",
+  "notConfusedWith": [
+   "mail-add-an-address-to-the-suppression-list"
+  ]
+ },
+ {
+  "id": "mail-view-import-history",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "View import history",
+  "aliases": [
+   "see past uploads",
+   "check when a file was imported",
+   "find a previous import"
+  ],
+  "body": "Import history shows every file uploaded, who uploaded it and the result.\n\n1. Go to **Audience** > **Import**.\n2. Select the **History** tab.\n3. Select an import to see how many subscribers were added, updated or skipped.\n\nHistory is kept for 12 months.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-undo-an-import",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Undo an import",
+  "aliases": [
+   "reverse a bulk upload",
+   "remove contacts I just imported",
+   "delete a whole import"
+  ],
+  "body": "Undoing removes only the subscribers added by that import. Existing subscribers stay as they are.\n\n1. Go to **Audience** > **Import** > **History**.\n2. Find the import.\n3. Select **More** > **Undo import**.\n4. Select **Undo** to confirm.\n\nYou can undo an import within 7 days of running it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-export-all-subscribers-to-csv",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Export all subscribers to CSV",
+  "aliases": [
+   "download my whole audience",
+   "get a spreadsheet of contacts",
+   "export customers"
+  ],
+  "body": "Exports include every subscriber on your account.\n\n1. Go to **Audience** > **Subscribers**.\n2. Select **Export**.\n3. Choose **All subscribers** and the **CSV** format.\n4. Select **Start export**.\n\nWe email you a download link when the file is ready. Large exports can take a few minutes, so you can keep working while it runs.",
+  "notConfusedWith": [
+   "mail-export-a-list"
+  ]
+ },
+ {
+  "id": "mail-export-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Export a list",
+  "aliases": [
+   "download a mailing list",
+   "get contacts on one list",
+   "list to spreadsheet"
+  ],
+  "body": "Export just the people on one list.\n\n1. Go to **Audience** > **Lists**.\n2. Open the list.\n3. Select **Export**.\n4. Choose the fields to include.\n5. Select **Start export**. The file is a CSV that opens in Excel or Google Sheets, and it includes each subscriber's status.",
+  "notConfusedWith": [
+   "mail-export-all-subscribers-to-csv",
+   "mail-export-a-segment"
+  ]
+ },
+ {
+  "id": "mail-export-a-segment",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Export a segment",
+  "aliases": [
+   "download segment contacts",
+   "get a CSV of filtered contacts",
+   "export a group"
+  ],
+  "body": "Segment exports reflect who matches at the moment you export.\n\n1. Go to **Audience** > **Segments**.\n2. Open the segment.\n3. Select **Export**.\n4. Choose the **CSV** format.\n5. Select **Start export**. The file is a CSV that opens in Excel or Google Sheets. It includes each person's status and tags.",
+  "notConfusedWith": [
+   "mail-export-a-list"
+  ]
+ },
+ {
+  "id": "mail-export-campaign-results",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Export campaign results",
+  "aliases": [
+   "download campaign report",
+   "get opens and clicks in a spreadsheet",
+   "export email stats"
+  ],
+  "body": "Campaign exports list each recipient with their opens, clicks and bounces.\n\n1. Go to **Campaigns** and open a sent campaign.\n2. Select the **Reports** tab.\n3. Select **Export results**.\n4. Choose **Recipients** or **Summary** and select **Export**. Choose **Recipients** for one row per person, or **Summary** for the totals only. The file arrives by email as a CSV.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-export-unsubscribes",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Export your unsubscribes",
+  "aliases": [
+   "download opted-out contacts",
+   "list of people who unsubscribed",
+   "get suppression list as csv"
+  ],
+  "body": "Keep a copy of opt-outs for your own records.\n\n1. Go to **Audience** > **Suppression**.\n2. Select the **Unsubscribed** tab.\n3. Select **Export**.\n4. Select **Start export**.\n\nThe file includes the date and the reason, where one was given. Keep the file somewhere secure, as it contains personal details.",
+  "notConfusedWith": [
+   "mail-view-unsubscribe-reasons"
+  ]
+ },
+ {
+  "id": "mail-choose-fields-to-export",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Choose which fields to export",
+  "aliases": [
+   "pick columns for csv download",
+   "leave out fields in export",
+   "customise export file"
+  ],
+  "body": "Choose only the details you need in your file.\n\n1. Select **Export** from any subscriber, list or segment page.\n2. Select **Choose fields**.\n3. Tick the fields to include, such as **Email**, **Mobile phone** and **Tags**.\n4. Select **Start export**.\n\nYour choices are remembered for next time.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-schedule-a-recurring-export",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Schedule a recurring export",
+  "aliases": [
+   "automatic weekly contact export",
+   "set up regular csv download",
+   "export every month"
+  ],
+  "body": "Recurring exports are emailed to you on a set day.\n\n1. Go to **Audience** > **Export**.\n2. Select **Schedule export**.\n3. Choose the audience, fields and file format.\n4. Set **Frequency** to **Daily**, **Weekly** or **Monthly**.\n5. Select **Save schedule**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-download-a-previous-export",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Download a previous export",
+  "aliases": [
+   "find my export file",
+   "export link expired",
+   "redownload csv"
+  ],
+  "body": "Export files are kept for 14 days.\n\n1. Go to **Audience** > **Export**.\n2. Select the **History** tab.\n3. Find your export and select **Download**.\n\nIf the file has expired, run the export again. Any team member with access to the **Audience** area can download it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-sync-subscribers-from-harbour-crm",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Importing and exporting",
+  "title": "Sync subscribers from Harbour CRM",
+  "aliases": [
+   "import customers from the CRM",
+   "connect Harbour CRM contacts",
+   "pull clients into email"
+  ],
+  "body": "Harbour Mail can bring over customer contacts from Harbour CRM.\n\n1. Go to **Settings** > **Integrations**.\n2. Select **Harbour CRM**, then **Connect**.\n3. Choose the CRM contacts or groups to sync.\n4. Choose the destination list.\n5. Select **Start sync**.\n\nOnly contacts with marketing consent in the CRM are imported.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-sign-up-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Create a sign-up form",
+  "aliases": [
+   "make a subscribe form",
+   "build a newsletter signup",
+   "new form for my website"
+  ],
+  "body": "Forms add new subscribers straight to a list.\n\n1. Go to **Forms**.\n2. Select **Create form**.\n3. Choose a type: **Embedded**, **Pop-up** or **Landing page**.\n4. Choose the **Destination list**.\n5. Select **Create**.\n\nThen edit fields and styling before you publish.",
+  "notConfusedWith": [
+   "mail-create-a-pop-up-form"
+  ]
+ },
+ {
+  "id": "mail-embed-a-form-on-your-website",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Embed a form on your website",
+  "aliases": [
+   "put signup form on my site",
+   "get the form code",
+   "add subscribe box to a web page"
+  ],
+  "body": "Embedding places the form directly on a page of your site.\n\n1. Go to **Forms** and open the form.\n2. Select **Publish**.\n3. Select **Embed on website**.\n4. Select **Copy embed snippet**.\n5. Paste it where you want the form to appear on your page.\n\nYou do not need to paste it again after editing the form. Changes appear automatically.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-a-field-to-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Add a field to a form",
+  "aliases": [
+   "ask for more info on signup",
+   "add last name box",
+   "include extra question"
+  ],
+  "body": "Keep forms short to get more sign-ups.\n\n1. Go to **Forms** and open the form.\n2. Select **Fields**.\n3. Select **Add field** and choose one, such as **Last name** or a custom field.\n4. Drag it into position and select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-remove-a-field-from-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Remove a field from a form",
+  "aliases": [
+   "delete a form question",
+   "take a box off the signup form",
+   "hide a field"
+  ],
+  "body": "The email field cannot be removed unless the form collects mobile numbers only.\n\n1. Go to **Forms** and open the form.\n2. Select **Fields**.\n3. Hover over the field and select the **bin** icon.\n4. Select **Save**. Removing a field does not delete any answers already collected. They stay on the subscriber profiles.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-change-form-colours-and-fonts",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Change a form's colours and fonts",
+  "aliases": [
+   "style my signup form",
+   "match form to brand",
+   "edit form design"
+  ],
+  "body": "Match the form to your website branding.\n\n1. Go to **Forms** and open the form.\n2. Select **Design**.\n3. Choose a **Background**, **Button** and **Text** colour.\n4. Choose a **Font**.\n5. Select **Save**.\n\nUse **Preview** to check the form on desktop and mobile.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-edit-the-thank-you-message",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Edit the thank-you message on a form",
+  "aliases": [
+   "change confirmation text after signup",
+   "update message shown after subscribing",
+   "customise success message"
+  ],
+  "body": "This message appears after someone submits the form.\n\n1. Go to **Forms** and open the form.\n2. Select **Messages**.\n3. Edit the text under **Thank-you message**.\n4. Select **Save**.\n\nIf double opt-in is on, remind people to check their inbox.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-redirect-to-a-page-after-sign-up",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Redirect to a page after sign-up",
+  "aliases": [
+   "send people to a thank you page",
+   "change where signups land",
+   "forward subscribers to my website"
+  ],
+  "body": "Send new subscribers to a page on your own site instead of a message.\n\n1. Go to **Forms** and open the form.\n2. Select **Messages**.\n3. Switch on **Redirect after sign-up**.\n4. Enter the page address.\n5. Select **Save**. This replaces the thank-you message, so make sure the page tells people what happens next.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-pop-up-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Create a pop-up form",
+  "aliases": [
+   "add a popup subscribe box",
+   "exit intent signup",
+   "website overlay form"
+  ],
+  "body": "Pop-ups appear over your page after a trigger you choose.\n\n1. Go to **Forms** and select **Create form**.\n2. Choose **Pop-up**.\n3. Under **Display**, choose a trigger: **After a delay**, **On scroll** or **On exit**.\n4. Choose the **Destination list** and select **Create**.\n\nPublish it with the website snippet from the **Publish** tab.",
+  "notConfusedWith": [
+   "mail-create-a-sign-up-form"
+  ]
+ },
+ {
+  "id": "mail-collect-mobile-numbers-on-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Collect mobile numbers on a form",
+  "aliases": [
+   "add phone field to signup",
+   "get sms subscribers from a form",
+   "ask for mobile number"
+  ],
+  "body": "Add a mobile field so people can join your SMS lists.\n\n1. Go to **Forms** and open the form.\n2. Select **Fields** > **Add field** > **Mobile phone**.\n3. Switch on **SMS consent checkbox**.\n4. Select **Save**.\n\nThe SMS consent checkbox is unticked by default, as required by law.",
+  "notConfusedWith": [
+   "mail-create-a-text-to-join-keyword"
+  ]
+ },
+ {
+  "id": "mail-add-a-consent-checkbox-to-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Add a consent checkbox to a form",
+  "aliases": [
+   "add a tick box for permission",
+   "require agreement on signup",
+   "privacy checkbox on a form"
+  ],
+  "body": "A checkbox records clear permission from each subscriber.\n\n1. Go to **Forms** and open the form.\n2. Select **Fields** > **Add field** > **Consent checkbox**.\n3. Edit the wording, for example **I agree to receive marketing emails**.\n4. Switch on **Required**.\n5. Select **Save**.\n\nThe wording is saved against each subscriber's consent history.",
+  "notConfusedWith": [
+   "mail-turn-on-double-opt-in-for-a-list",
+   "mail-record-consent-for-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-change-the-list-a-form-adds-to",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Change the list a form adds to",
+  "aliases": [
+   "send signups to a different list",
+   "edit form destination",
+   "switch form audience"
+  ],
+  "body": "New sign-ups go to whichever list is selected here.\n\n1. Go to **Forms** and open the form.\n2. Select **Settings**.\n3. Under **Destination list**, choose a different list.\n4. Select **Save**.\n\nExisting subscribers are not moved. The change applies to everyone who signs up from now on, including visitors who already have the form open.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-tag-new-subscribers-from-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Tag new subscribers from a form",
+  "aliases": [
+   "label people who sign up on this form",
+   "auto-tag signups",
+   "apply tags when someone subscribes"
+  ],
+  "body": "Tags tell you where each subscriber came from.\n\n1. Go to **Forms** and open the form.\n2. Select **Settings**.\n3. Under **Tags for new subscribers**, type one or more tags.\n4. Select **Save**. You can then build a segment from the tag to see everyone who joined through this form.",
+  "notConfusedWith": [
+   "mail-add-tags-during-import"
+  ]
+ },
+ {
+  "id": "mail-duplicate-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Duplicate a form",
+  "aliases": [
+   "copy a signup form",
+   "clone a form",
+   "make a variant of my form"
+  ],
+  "body": "Duplicating is the quickest way to make a variant for A/B testing or another page.\n\n1. Go to **Forms**.\n2. Select **More** beside the form.\n3. Choose **Duplicate**.\n4. Rename the copy and select **Save**.\n\nThe copy starts as a draft.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-delete-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Delete a form",
+  "aliases": [
+   "remove a signup form",
+   "get rid of a form",
+   "delete my subscribe box"
+  ],
+  "body": "Deleting a form does not remove the subscribers who signed up through it.\n\n1. Go to **Forms**.\n2. Select **More** beside the form.\n3. Choose **Delete form**.\n4. Select **Delete** to confirm.\n\nAny copies of the form on your website will stop working.",
+  "notConfusedWith": [
+   "mail-unpublish-a-form"
+  ]
+ },
+ {
+  "id": "mail-unpublish-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Unpublish a form",
+  "aliases": [
+   "turn off a signup form",
+   "pause a form",
+   "stop accepting signups"
+  ],
+  "body": "Unpublishing stops the form accepting new sign-ups without deleting it.\n\n1. Go to **Forms** and open the form.\n2. Select **Publish**.\n3. Select **Unpublish**.\n\nVisitors will see a message that the form is closed. You can publish again at any time.",
+  "notConfusedWith": [
+   "mail-delete-a-form"
+  ]
+ },
+ {
+  "id": "mail-view-form-submissions",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "View form submissions",
+  "aliases": [
+   "see who signed up",
+   "check form results",
+   "list people who used a form"
+  ],
+  "body": "Submissions show everyone who has used the form.\n\n1. Go to **Forms** and open the form.\n2. Select the **Submissions** tab.\n3. Use the date filter to narrow results.\n4. Select a name to open the subscriber profile.\n\nSelect **Export** to download the submissions as a CSV.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-spam-protection-to-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Add spam protection to a form",
+  "aliases": [
+   "stop bots signing up",
+   "turn on captcha",
+   "block fake subscriptions"
+  ],
+  "body": "Spam protection reduces fake sign-ups.\n\n1. Go to **Forms** and open the form.\n2. Select **Settings**.\n3. Switch on **Spam protection**.\n4. Choose **Invisible check** or **Tick-box check**.\n5. Select **Save**. The invisible check works for most sites. If you still see fake sign-ups, switch to the tick-box check.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-edit-the-confirmation-email-for-a-form",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Edit the welcome email sent after sign-up",
+  "aliases": [
+   "change the subscribe confirmation email",
+   "customise welcome message",
+   "edit form email"
+  ],
+  "body": "This email is sent when someone subscribes through the form.\n\n1. Go to **Forms** and open the form.\n2. Select **Messages** > **Welcome email**.\n3. Edit the subject and body.\n4. Select **Send test** to check it.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-change-a-forms-language",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Change a form's language",
+  "aliases": [
+   "translate signup form",
+   "make form in another language",
+   "edit form wording language"
+  ],
+  "body": "You can show the form in a different language.\n\n1. Go to **Forms** and open the form.\n2. Select **Settings** > **Language**.\n3. Choose the language.\n4. Review the button and error messages.\n5. Select **Save**. The form's button text, error messages and confirmation prompts all change to the language you choose.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-a-text-to-join-keyword",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sign-up forms",
+  "title": "Create a text-to-join keyword",
+  "aliases": [
+   "let people subscribe by sms",
+   "set up a keyword for signups",
+   "join by text message"
+  ],
+  "body": "People send a keyword to your SMS number to join a list.\n\n1. Go to **Forms** and select **Create form** > **Text to join**.\n2. Enter a **Keyword**, for example **JOIN**.\n3. Choose the **Destination list**.\n4. Edit the **Reply message**, which must state how to opt out.\n5. Select **Activate**.\n\nKeywords must be unique to your account.",
+  "notConfusedWith": [
+   "mail-collect-mobile-numbers-on-a-form"
+  ]
+ },
+ {
+  "id": "mail-unsubscribe-a-subscriber-manually",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Unsubscribe a subscriber manually",
+  "aliases": [
+   "opt someone out",
+   "a customer asked to be removed from emails",
+   "mark contact as unsubscribed"
+  ],
+  "body": "Use this when someone asks you directly to stop receiving messages.\n\n1. Go to **Audience** > **Subscribers** and open the subscriber's profile.\n2. Select **Status** and choose **Unsubscribed**.\n3. Choose the **Reason**, such as **Requested by email**.\n4. Select **Save**.\n\nThe change takes effect immediately across all lists.",
+  "notConfusedWith": [
+   "mail-remove-a-subscriber-from-a-list"
+  ]
+ },
+ {
+  "id": "mail-resubscribe-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Resubscribe a subscriber",
+  "aliases": [
+   "opt someone back in",
+   "customer wants emails again",
+   "reactivate an unsubscribed contact"
+  ],
+  "body": "You can only resubscribe someone who has asked to be added back.\n\n1. Go to **Audience** > **Suppression** > **Unsubscribed**.\n2. Select the subscriber.\n3. Select **Resubscribe**.\n4. Record how they gave permission, then select **Confirm**.\n\nWe recommend sending a confirmation email.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-customise-the-unsubscribe-page",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Customise the unsubscribe page",
+  "aliases": [
+   "edit what people see when they opt out",
+   "change unsubscribe page text",
+   "brand unsubscribe page"
+  ],
+  "body": "This is the page subscribers see after they select the unsubscribe link.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Unsubscribe page**.\n3. Edit the **Heading**, **Message** and **Logo**.\n4. Select **Save**.\n\nUse **Preview** to check how it looks. Keep the page short. You can also add a link to your preference centre.",
+  "notConfusedWith": [
+   "mail-change-the-unsubscribe-confirmation-message"
+  ]
+ },
+ {
+  "id": "mail-add-an-unsubscribe-link-to-an-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Add an unsubscribe link to an email",
+  "aliases": [
+   "required footer link",
+   "opt-out link missing",
+   "include unsubscribe in campaign"
+  ],
+  "body": "Every marketing email must include an unsubscribe link.\n\n1. Open the campaign in the editor.\n2. Select the footer block.\n3. Select **Insert** > **Unsubscribe link**.\n4. Edit the link text if you like.\n5. Select **Save**.\n\nYou will not be able to send a campaign without one.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-view-the-unsubscribe-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "View the unsubscribe list",
+  "aliases": [
+   "see who opted out",
+   "check unsubscribed contacts",
+   "list of people who left"
+  ],
+  "body": "Review everyone who has opted out.\n\n1. Go to **Audience** > **Suppression**.\n2. Select the **Unsubscribed** tab.\n3. Use **Search** or the date filter to find a person.\n\nThe list shows the date, channel (email or SMS) and the reason.",
+  "notConfusedWith": [
+   "mail-view-unsubscribe-reasons"
+  ]
+ },
+ {
+  "id": "mail-add-an-address-to-the-suppression-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Add an address to the suppression list",
+  "aliases": [
+   "block an email from ever being mailed",
+   "do not contact list",
+   "never email this person"
+  ],
+  "body": "Suppressed addresses are excluded from all sends.\n\n1. Go to **Audience** > **Suppression**.\n2. Select **Add address**.\n3. Enter the email address or mobile number.\n4. Choose a **Reason**.\n5. Select **Add**. Use this for complaints, role addresses or anyone who has asked never to be contacted. The entry applies to every list.",
+  "notConfusedWith": [
+   "mail-import-an-unsubscribe-list"
+  ]
+ },
+ {
+  "id": "mail-remove-an-address-from-the-suppression-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Remove an address from the suppression list",
+  "aliases": [
+   "unblock a contact",
+   "take someone off do not contact",
+   "allow emailing again"
+  ],
+  "body": "Only remove addresses where the person has given fresh permission.\n\n1. Go to **Audience** > **Suppression**.\n2. Find the address.\n3. Select **Remove** and confirm.\n\nThe person will not be added to a list automatically. The address will be sendable again straight away, so check you have fresh consent first.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-record-consent-for-a-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Record consent for a subscriber",
+  "aliases": [
+   "log permission",
+   "note how someone opted in",
+   "save consent source"
+  ],
+  "body": "Keep a record of when and how each person agreed to hear from you.\n\n1. Open the subscriber's profile.\n2. Select the **Consent** tab.\n3. Select **Add consent record**.\n4. Choose the **Channel**, **Source** and **Date**.\n5. Select **Save**. Consent records are time-stamped and show which team member added them.",
+  "notConfusedWith": [
+   "mail-view-consent-history"
+  ]
+ },
+ {
+  "id": "mail-view-consent-history",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "View a subscriber's consent history",
+  "aliases": [
+   "see when a contact opted in",
+   "check permission record",
+   "audit consent"
+  ],
+  "body": "The consent history is a time-stamped log of every opt-in and opt-out.\n\n1. Open the subscriber's profile.\n2. Select the **Consent** tab.\n3. Review each entry, including the source and IP address.\n\nEntries cannot be edited or deleted. You can show this to a regulator or the subscriber if they ask for proof of consent.",
+  "notConfusedWith": [
+   "mail-record-consent-for-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-collect-sms-consent",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Set up SMS consent",
+  "aliases": [
+   "make sure texts are allowed",
+   "require opt-in for text messages",
+   "sms permission settings"
+  ],
+  "body": "You need clear consent before sending marketing texts.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **SMS consent**.\n3. Switch on **Only send SMS to subscribers with recorded consent**.\n4. Select **Save**.\n\nSubscribers without SMS consent will be skipped in SMS campaigns.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-set-up-the-stop-reply-keyword",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Set up opt-out keywords for SMS",
+  "aliases": [
+   "handle STOP replies",
+   "let people text to unsubscribe",
+   "configure opt-out words"
+  ],
+  "body": "Subscribers can reply to a text to opt out.\n\n1. Go to **Settings** > **SMS**.\n2. Select **Opt-out keywords**.\n3. Add words such as **STOP** and **UNSUBSCRIBE**.\n4. Edit the **Auto-reply** message.\n5. Select **Save**.\n\nSTOP is always active and cannot be removed.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-delete-subscriber-data-on-request",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Delete a subscriber's data on request",
+  "aliases": [
+   "right to be forgotten",
+   "erase personal data",
+   "privacy deletion request"
+  ],
+  "body": "Use this when someone formally asks you to erase their personal data.\n\n1. Go to **Audience** > **Privacy requests**.\n2. Select **New request** > **Erase data**.\n3. Enter the subscriber's email address.\n4. Select **Erase permanently**.\n\nTheir address is kept in a hashed form on the suppression list so they are not re-added by mistake.",
+  "notConfusedWith": [
+   "mail-delete-a-subscriber"
+  ]
+ },
+ {
+  "id": "mail-export-a-subscribers-data-on-request",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Export a subscriber's data on request",
+  "aliases": [
+   "data access request",
+   "send someone a copy of their data",
+   "download one person's information"
+  ],
+  "body": "Use this to respond to a data access request.\n\n1. Go to **Audience** > **Privacy requests**.\n2. Select **New request** > **Export data**.\n3. Enter the subscriber's email address.\n4. Select **Generate file**.\n\nThe file is a ZIP that you can send to the person.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-set-up-a-preference-centre",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Set up a preference centre",
+  "aliases": [
+   "let subscribers choose topics",
+   "manage email frequency options",
+   "subscriber preference page"
+  ],
+  "body": "A preference centre lets people choose what they hear about instead of unsubscribing.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Preference centre**.\n3. Switch on **Enable preference centre**.\n4. Tick the lists people can choose from.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-update-subscriber-preferences",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Update a subscriber's list preferences for them",
+  "aliases": [
+   "change topics a contact receives",
+   "edit what a customer opted in to",
+   "adjust subscriptions"
+  ],
+  "body": "If a subscriber asks, you can change their preferences on their behalf.\n\n1. Open the subscriber's profile.\n2. Select the **Lists** tab.\n3. Switch on or off each list.\n4. Add a note about how the request was made.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-change-the-unsubscribe-confirmation-message",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Change the unsubscribe confirmation message",
+  "aliases": [
+   "edit goodbye message",
+   "update opt-out thank you",
+   "change text after opting out"
+  ],
+  "body": "This is the message shown after someone has successfully unsubscribed.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Unsubscribe page**.\n3. Edit **Confirmation message**.\n4. Select **Save**. Keep it short and polite, and avoid asking people to reconsider. Use **Preview** to check how it looks on mobile before you save.",
+  "notConfusedWith": [
+   "mail-customise-the-unsubscribe-page"
+  ]
+ },
+ {
+  "id": "mail-view-unsubscribe-reasons",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "View unsubscribe reasons",
+  "aliases": [
+   "why are people leaving",
+   "see opt-out feedback",
+   "report on unsubscribe survey"
+  ],
+  "body": "If you ask why people leave, you can see the answers in one place.\n\n1. Go to **Reports** > **Unsubscribes**.\n2. Choose a date range.\n3. Review the chart of **Reasons**.\n4. Select **Export** to download the details. Reasons are only collected if you switched on the question on the unsubscribe page.",
+  "notConfusedWith": [
+   "mail-view-the-unsubscribe-list"
+  ]
+ },
+ {
+  "id": "mail-turn-on-one-click-unsubscribe",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Turn on one-click unsubscribe",
+  "aliases": [
+   "list-unsubscribe header",
+   "let mail apps show an unsubscribe button",
+   "easy opt-out for gmail"
+  ],
+  "body": "One-click unsubscribe adds a button in supported inbox apps.\n\n1. Go to **Settings** > **Compliance**.\n2. Switch on **One-click unsubscribe**.\n3. Select **Save**.\n\nThis is recommended for all senders and helps your deliverability. Subscribers can then unsubscribe from the inbox app without opening your unsubscribe page, which also reduces spam complaints.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-set-sms-quiet-hours",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Set SMS quiet hours",
+  "aliases": [
+   "stop texts at night",
+   "do not send sms late",
+   "time window for messages"
+  ],
+  "body": "Quiet hours stop texts being sent at inconvenient times.\n\n1. Go to **Settings** > **SMS**.\n2. Select **Quiet hours**.\n3. Choose a start and end time.\n4. Choose the **Time zone** to use: yours or the subscriber's.\n5. Select **Save**.\n\nMessages scheduled in quiet hours are sent when they end.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-set-the-consent-expiry-period",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Unsubscribes and consent",
+  "title": "Set the consent expiry period",
+  "aliases": [
+   "expire old permissions",
+   "stop mailing people after a long time",
+   "automatic consent expiry"
+  ],
+  "body": "Subscribers whose consent is older than your set period are paused automatically.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Consent expiry**.\n3. Choose a period, for example **24 months**.\n4. Choose whether to **Pause** or **Archive** expired subscribers.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-search-within-a-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Lists and segments",
+  "title": "Search for a subscriber within a list",
+  "aliases": [
+   "find a contact on one list",
+   "look up a customer in a mailing list",
+   "filter list members"
+  ],
+  "body": "Searching inside a list is quicker than searching your whole audience when you know where someone belongs.\n\n1. Go to **Audience** > **Lists** and open the list.\n2. Type a name, email address or number in the **Search** box.\n3. Press Enter.\n4. Select a result to open the subscriber's profile.\n\nUse **Filters** to narrow the list by status or tag.",
+  "notConfusedWith": [
+   "mail-find-a-subscriber"
+  ]
+ }
+]

@@ -50,20 +50,26 @@ export class Retriever {
   /**
    * @param {Array<object>} articles
    * @param {Partial<typeof DEFAULT_POLICY>} [policy]
-   * @param {{ semantic?: import('./semantic.js').SemanticIndex }} [options]
-   *        With a semantic index, retrieval is hybrid (see `retrieve`).
+   * @param {{ semantic?: import('./semantic.js').SemanticIndex, plain?: boolean, product?: string }} [options]
+   *        With a semantic index, retrieval is hybrid (see `retrieve`). `plain`
+   *        turns off Harbour CRM's phrase rules, for a sister product's help
+   *        centre. With `product`, semantic search only returns that product's
+   *        articles (the index may hold several products).
    */
-  constructor(articles, policy = {}, { semantic = null } = {}) {
+  constructor(articles, policy = {}, { semantic = null, plain = false, product = null } = {}) {
     this.policy = { ...DEFAULT_POLICY, ...policy };
     this.semantic = semantic;
+    this.plain = plain;
+    this.product = product;
+    const docSide = plain ? 'plain' : 'document';
     this.articles = articles;
     this.byId = new Map(articles.map((a) => [a.id, a]));
 
     this.docs = articles.map((a) => {
       const fields = {
-        title: analyse(a.title, { perspective: 'document' }).terms,
-        aliases: a.aliases.flatMap((alias) => analyse(alias, { perspective: 'document' }).terms),
-        body: analyse(stripMarkdown(a.body), { perspective: 'document' }).terms,
+        title: analyse(a.title, { perspective: docSide }).terms,
+        aliases: a.aliases.flatMap((alias) => analyse(alias, { perspective: docSide }).terms),
+        body: analyse(stripMarkdown(a.body), { perspective: docSide }).terms,
       };
       const tf = {};
       for (const [field, terms] of Object.entries(fields)) {
@@ -116,7 +122,7 @@ export class Retriever {
 
   /** The query analysis on its own, so a caller can embed the rewritten question first. */
   analyse(query) {
-    return analyse(query, { vocabulary: this.vocabulary, spellCheck: true });
+    return analyse(query, { vocabulary: this.vocabulary, spellCheck: true, perspective: this.plain ? 'plain' : 'query' });
   }
 
   /**
@@ -166,9 +172,9 @@ export class Retriever {
 
     let semantic = null;
     if (queryVector && this.semantic) {
-      semantic = this.semantic.rank(queryVector);
+      semantic = this.semantic.rank(queryVector, { onlyIds: this.byId });
       const similarityOf = new Map(semantic.map((s) => [s.id, s.similarity]));
-      for (const r of ranked) r.similarity = similarityOf.get(r.id);
+      for (const r of ranked) r.similarity = similarityOf.get(r.id) ?? this.semantic.similarityTo(queryVector, r.id);
       if (decision.type === 'escalate') decision = this.suggest(semantic, decision);
     }
 

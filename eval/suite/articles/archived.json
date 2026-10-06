@@ -1,0 +1,562 @@
+[
+  {
+    "id": "archived-crm-add-contact-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Add a contact in the classic interface",
+    "aliases": [
+      "create a contact in the old Contacts tab",
+      "add a customer, classic view",
+      "new contact classic"
+    ],
+    "body": "Archived: this article describes the classic interface, retired in March 2025. See the current article for the new layout.\n\nIn classic Harbour CRM, contacts were added from the old Contacts tab.\n\n1. Click the **Contacts** tab on the left-hand menu.\n2. Click the green **Add Contact** button above the list.\n3. Fill in **First Name**, **Last Name** and **Email** in the pop-up window.\n4. Click **Save & Close**, or **Save & Add Another** to enter several people in a row.\n\nIn the classic version the **Company** field was a plain text box, so linked companies had to be matched later by an administrator.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-update-contact-phone-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Update a contact's phone number (classic)",
+    "aliases": [
+      "edit phone in old contact page",
+      "change customer phone, classic editor",
+      "classic contact edit"
+    ],
+    "body": "Archived: describes the classic editor, retired in March 2025.\n\nTo change a contact's phone number in the classic editor:\n\n1. Open the old **Contacts** tab and click the contact's name.\n2. Click **Edit Contact** in the grey toolbar.\n3. Find the **Phone (Primary)** box and type the new number. Classic did not add country codes automatically, so include the + sign.\n4. Click **Update**.\n\nA second number could be stored in **Phone (Alt)**. Changes were not logged in the contact's history in the classic version, which is why some older accounts have no record of who edited a number.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-change-contact-email-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Change a contact's email (classic)",
+    "aliases": [
+      "edit contact email old interface",
+      "update customer email classic",
+      "old contacts tab email"
+    ],
+    "body": "Archived: this article describes the classic interface, retired in March 2025.\n\n1. Open the old **Contacts** tab.\n2. Click the contact, then **Edit Contact**.\n3. Type the new address into the **Email** box. Classic accepted only one address per contact.\n4. Click **Update**.\n\nIf the old address was on a mailing list, you also needed to open **Lists** and remove it by hand, because classic did not sync the two. Duplicate email warnings did not exist, so two contacts could share the same address without any message.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-delete-contact-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Delete a contact (classic)",
+    "aliases": [
+      "remove contact old Contacts tab",
+      "classic delete customer",
+      "permanently delete a contact"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\nDeleting a contact in the classic version was immediate and could not be reversed.\n\n1. Open the old **Contacts** tab.\n2. Tick the box beside one or more contacts.\n3. Click **Actions** > **Delete Selected**.\n4. Click **OK** on the grey warning box.\n\nNo recycle bin existed. Any open deals showed the contact name in plain text but were no longer linked. Classic accounts needed to contact support within 7 days to ask for a backup restore, a policy that no longer applies.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-export-contacts-csv-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Export contacts to CSV (classic)",
+    "aliases": [
+      "download contact list old version",
+      "classic export",
+      "export customers legacy"
+    ],
+    "body": "Archived: describes the classic export, retired in March 2025.\n\n1. Click the **Contacts** tab.\n2. Click **Tools** in the top right and choose **Export to CSV**.\n3. Classic always exported every contact and every column; there was no filter.\n4. Click **Generate File**. A link appeared under **Tools** > **My Downloads** after a few minutes and stayed for 48 hours.\n\nCustom fields were placed at the end of the file with their internal names, such as cf_1042, rather than their labels. Exports were limited to 10,000 rows.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-link-contact-company-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Companies",
+    "title": "Link a contact to a company (classic)",
+    "aliases": [
+      "connect contact to company old interface",
+      "classic company link",
+      "old Contacts tab company"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\nIn classic, the link between a contact and a company was set from the company side.\n\n1. Open the **Accounts** tab (the old name for Companies).\n2. Click the company name.\n3. Scroll to **Related Contacts** and click **Link Existing**.\n4. Tick one or more contacts and click **Add**.\n\nThe **Company** box on the contact page was only a text label and did not create a link. Today you can link directly from the contact's page.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-add-company-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Companies",
+    "title": "Add a company (classic Accounts tab)",
+    "aliases": [
+      "create account in old CRM",
+      "new company classic",
+      "add an organisation old UI"
+    ],
+    "body": "Archived: this article describes the classic interface, retired in March 2025.\n\nCompanies were called Accounts in the classic version.\n\n1. Click the **Accounts** tab.\n2. Click **New Account**.\n3. Type the **Account Name**. Also fill in **Phone**, **Web** and **Billing Street** if you have them.\n4. Choose an **Account Owner** from the drop-down.\n5. Click **Save**.\n\nClassic had no website lookup. Logos could only be uploaded manually on the edit page.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-edit-company-details-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Companies",
+    "title": "Edit a company's phone, website or address (classic)",
+    "aliases": [
+      "change account phone old",
+      "update company address classic",
+      "edit Accounts tab"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\n1. Open the **Accounts** tab and click the company.\n2. Click **Edit** in the grey toolbar.\n3. Change **Phone**, **Web** or the address fields **Street**, **City**, **State** and **Postcode**. Each part of the address was a separate box.\n4. Click **Save**.\n\nThe website was not checked, so entries like www.example needed the full http:// to be clickable. Contacts linked to the account did not pick up the new address; they had their own address fields.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-create-deal-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Deals",
+    "title": "Create a deal (classic pipeline)",
+    "aliases": [
+      "add opportunity old CRM",
+      "new deal classic",
+      "create sales deal old interface"
+    ],
+    "body": "Archived: describes the classic pipeline, retired in March 2025.\n\n1. Click the **Pipeline** tab.\n2. Click **+ Add Opportunity** at the top of the first column.\n3. Enter the **Opportunity Name** and **Value**.\n4. Search for the **Contact**. The company is filled in from the contact.\n5. Click **Save**.\n\nClassic called deals opportunities and only supported one pipeline. The **Close Date** was optional, which meant reports often showed gaps.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-mark-deal-won-lost-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Deals",
+    "title": "Mark a deal as won or lost (classic)",
+    "aliases": [
+      "close opportunity old CRM",
+      "classic deal status",
+      "set opportunity to lost"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\n1. In the **Pipeline** tab, click the opportunity card.\n2. Click **Change Status**.\n3. Choose **Closed Won** or **Closed Lost**.\n4. For **Closed Lost**, type a reason in the free-text **Notes** box. Classic had no reason list.\n5. Click **OK**.\n\nClosed cards disappeared from the board and could only be found by filtering the list view with **Show Closed**. There was no Reopen button; support had to reopen them.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-move-deal-stage-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Deals",
+    "title": "Move a deal to another stage (classic Kanban)",
+    "aliases": [
+      "drag opportunity old pipeline",
+      "change stage classic",
+      "advance opportunity"
+    ],
+    "body": "Archived: this article describes the classic Kanban board, retired in March 2025.\n\n1. Open the **Pipeline** tab.\n2. Click and hold the opportunity card.\n3. Drag it onto the next column header and release.\n4. A box asks for a **Stage Note**. Click **Skip** if not needed.\n\nOn laptops without a mouse, open the card, click **Edit** and use the **Stage** drop-down instead. Classic could not skip over locked stages, and there was no keyboard method. The board showed a maximum of 50 cards per column.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-create-custom-field-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Settings",
+    "title": "Create a custom field (Settings > Legacy)",
+    "aliases": [
+      "add custom field old settings",
+      "classic custom fields",
+      "Legacy settings fields"
+    ],
+    "body": "Archived: describes Settings > Legacy, retired in March 2025.\n\n1. Click the cog icon, then **Settings** > **Legacy** > **Field Manager**.\n2. Choose the module: **Contacts**, **Accounts** or **Opportunities**.\n3. Click **Create Field**.\n4. Enter a **Field Name** and choose a **Data Type**: Text, Number, Date or Pick List.\n5. Click **Save**.\n\nClassic allowed up to 25 custom fields per module. New fields only showed on records after the user refreshed the browser.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-rename-custom-field-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Settings",
+    "title": "Rename a custom field (classic Field Manager)",
+    "aliases": [
+      "edit custom field name old",
+      "change field label legacy",
+      "classic Field Manager"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\n1. Go to **Settings** > **Legacy** > **Field Manager**.\n2. Select the module and find the field.\n3. Click the **Edit** link at the end of the row.\n4. Change the **Field Name**.\n5. Click **Save**.\n\nRenaming in classic did not update saved reports or filters that used the old name; they showed an empty column until someone rebuilt them. This limitation is the reason many clients kept the old name and added a description instead.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-delete-custom-field-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Settings",
+    "title": "Delete a custom field (classic)",
+    "aliases": [
+      "remove field Settings Legacy",
+      "classic delete field",
+      "old Field Manager delete"
+    ],
+    "body": "Archived: describes Settings > Legacy, retired in March 2025.\n\n1. Open **Settings** > **Legacy** > **Field Manager**.\n2. Find the field for the right module.\n3. Click **Delete** at the end of the row.\n4. Click **Yes, delete** on the warning.\n\nValues were wiped immediately from every record and could not be restored. Deleting a field used by a saved report caused that report to show an error until it was edited. Only users with the **Super Admin** role could delete fields in classic.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-client-contact-number-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Change your client contact number (classic account page)",
+    "aliases": [
+      "update our business phone old settings",
+      "classic My Account phone",
+      "company phone legacy account"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\nIn classic Harbour CRM, the client is the business using the CRM, and its number was kept on the old My Account page.\n\n1. Click your name at the top right and choose **My Account**.\n2. Open the **Company Profile** section.\n3. Edit **Primary Phone**.\n4. Click **Update Profile**.\n\nChanges needed a support ticket if the account had more than one **Super Admin**. No verification code was sent. This number is different from any contact's phone number.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-change-billing-email-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Change the billing email (classic)",
+    "aliases": [
+      "update invoice email for subscription old",
+      "classic billing contact",
+      "old My Account billing"
+    ],
+    "body": "Archived: describes the classic interface, retired in March 2025.\n\n1. Click your name and choose **My Account**.\n2. Open **Plan & Billing**.\n3. Click **Change** next to **Invoice Email**.\n4. Enter the new address and click **Save**.\n\nIn classic the receipts for the whole account went to this single address, and there was no confirmation link. Because of that, some accounts discovered missed receipts months later. The newer Billing page supports additional recipients and a verification email.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-change-currency-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Change currency (classic Settings > Legacy)",
+    "aliases": [
+      "switch currency old CRM",
+      "legacy currency setting",
+      "default currency classic"
+    ],
+    "body": "Archived: classic interface, retired in March 2025.\n\n1. Go to **Settings** > **Legacy** > **Localisation**.\n2. Choose a value from **Base Currency**.\n3. Click **Apply**.\n\nChanging the base currency in classic recalculated every opportunity value using that day's exchange rate, which surprised many clients. This is no longer the behaviour: amounts are left unchanged. Classic also required you to log out and back in before the new currency symbol appeared.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-reset-password-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Reset your password (classic sign-in page)",
+    "aliases": [
+      "forgot password old login",
+      "classic password reset",
+      "can't sign in old"
+    ],
+    "body": "Archived: describes the classic sign-in page, retired in March 2025.\n\n1. On the old sign-in page, click **Trouble signing in?** under the password box.\n2. Type your username. In classic this was often not your email address.\n3. Click **Email Me**.\n4. Follow the link, which expired after 24 hours, and enter a password of at least 8 characters.\n\nPasswords from classic were accepted without symbols or numbers. Everyone has since been asked to update to the newer 12-character rule.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-lead-scoring-retired",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Lead scoring (retired feature)",
+    "aliases": [
+      "score my leads",
+      "lead score points",
+      "rate contacts automatically"
+    ],
+    "body": "Archived: this feature was retired in March 2025 along with the classic interface.\n\nLead scoring gave each contact a number of points based on activity.\n\n1. Go to **Settings** > **Legacy** > **Scoring Rules**.\n2. Click **New Rule**.\n3. Choose an event such as **Email opened** (+2) or **Form submitted** (+10).\n4. Click **Save Rule**.\n\nScores appeared in a **Score** column on the old Contacts tab. Existing scores were not carried over to the new interface. Use deal stages and tags to prioritise contacts instead.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-data-retention-policy-old",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Data retention policy for deleted records (pre-2025)",
+    "aliases": [
+      "how long are deleted contacts kept",
+      "old retention period",
+      "deleted data backups"
+    ],
+    "body": "Archived: superseded policy. Retention changed after March 2025.\n\nUnder the previous policy, records deleted from your Harbour CRM were kept in system backups for 7 days and then removed. During that period, the client's account owner could ask support to restore them.\n\nRequests had to be made from the client's registered billing email, and restoration was a full-account restore, not a single contact. Because of that, anything created after the backup time was lost.\n\nThis policy does not apply to accounts migrated to the new interface. Please see the current article on deleting contacts for the timeframes that apply today.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-import-contacts-classic",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Contacts",
+    "title": "Import contacts (classic importer)",
+    "aliases": [
+      "upload CSV to old CRM",
+      "classic import wizard",
+      "import customers legacy"
+    ],
+    "body": "Archived: classic importer, retired in March 2025.\n\n1. Click **Tools** > **Import Contacts**.\n2. Click **Choose File** and select a CSV. XLSX files were not supported.\n3. Click **Next** and match each column header to a field. Headers had to match exactly or be mapped by hand.\n4. Click **Run Import**.\n\nClassic created a duplicate whenever an email already existed, and there was no undo. The recommended trick was to export first, then import into a test account. Imports over 5,000 rows were split by support.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-tasks-tab-retired",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Activities",
+    "title": "Using the Tasks tab (retired)",
+    "aliases": [
+      "to-do list in old CRM",
+      "follow-up reminders classic",
+      "Tasks tab"
+    ],
+    "body": "Archived: the Tasks tab was retired in March 2025.\n\nIn the classic interface, follow-ups were kept in a separate Tasks tab.\n\n1. Click **Tasks** in the left menu.\n2. Click **New Task**.\n3. Type a **Subject**, choose a **Due Date** and link the task to a contact with **Related To**.\n4. Click **Save**.\n\nOverdue tasks were shown in red. Tasks are now created from the contact or deal itself under **Activities**, and existing tasks were migrated automatically. Recurring tasks were not supported in classic.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-api-key-legacy",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Generate a legacy API key",
+    "aliases": [
+      "old API token",
+      "classic API access",
+      "create API key old settings"
+    ],
+    "body": "Archived: legacy API keys stopped working in June 2025.\n\n1. Click the cog icon and choose **Settings** > **Legacy** > **API Access**.\n2. Click **Generate Key**.\n3. Copy the key immediately. It was shown only once.\n4. Use it as the **X-Harbour-Key** header on your requests.\n\nLegacy keys had full access to everything in the client's account and could not be limited. They have been replaced by scoped tokens. Anyone still using an old key must create a new token and update their connected tools.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-crm-sms-two-step",
+    "product": "Harbour CRM",
+    "status": "archived",
+    "category": "Account",
+    "title": "Two-step sign-in by text message (retired)",
+    "aliases": [
+      "SMS verification code",
+      "text message login code",
+      "old two factor"
+    ],
+    "body": "Archived: SMS codes were retired in March 2025 for security reasons.\n\nClassic accounts could receive a six-digit code by text message.\n\n1. Open **My Account** > **Security**.\n2. Click **Enable Text Verification**.\n3. Enter your mobile number and click **Send Code**.\n4. Type the code and click **Confirm**.\n\nThe number used was the sign-in user's own mobile, not the client contact number in company settings. If you still see this setting, switch to an authenticator app as described in the current security articles.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-people-update-employee-phone-classic",
+    "product": "Harbour People",
+    "status": "archived",
+    "category": "Employees",
+    "title": "Update an employee's phone number (classic)",
+    "aliases": [
+      "change staff phone old People",
+      "edit employee mobile classic",
+      "legacy staff directory"
+    ],
+    "body": "Archived: describes the classic People directory, retired in 2025.\n\n1. Click **Staff Directory** in the left menu.\n2. Click the employee's name.\n3. Click the **Edit** pencil on the **Contact Info** card.\n4. Change **Mobile** or **Work Phone**.\n5. Click **Save**.\n\nIn the classic version only the **HR Admin** role could change numbers; employees saw their own details as read-only. Numbers were shown in the staff directory to everyone, a setting that is now optional.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-people-leave-request-classic",
+    "product": "Harbour People",
+    "status": "archived",
+    "category": "Leave",
+    "title": "Request leave (classic form)",
+    "aliases": [
+      "book time off old People",
+      "apply for annual leave classic",
+      "old leave form"
+    ],
+    "body": "Archived: classic leave form, retired in 2025.\n\n1. Click **My Leave** and then **Request Leave**.\n2. Pick a **Leave Type** from the list.\n3. Type the **From** and **To** dates in DD/MM/YYYY format.\n4. Add a reason in the **Comments** box.\n5. Click **Submit Request**.\n\nYour manager received an email with Approve and Decline links. Half days could only be entered by writing 0.5 in the **Days** box. The calendar view did not exist in classic.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-people-add-employee-classic",
+    "product": "Harbour People",
+    "status": "archived",
+    "category": "Employees",
+    "title": "Add an employee (classic wizard)",
+    "aliases": [
+      "new starter old People",
+      "create staff record legacy",
+      "onboard employee classic"
+    ],
+    "body": "Archived: the three-step wizard was retired in 2025.\n\n1. Click **Staff Directory** then **Add Employee**.\n2. Step 1: enter **Name**, **Email** and **Start Date**.\n3. Step 2: choose **Department** and **Manager**.\n4. Step 3: tick the **Welcome email** box if you want the invitation sent.\n5. Click **Finish**.\n\nBank details and tax numbers could not be entered at this point; they were added later by a second administrator. The new onboarding checklist replaces this process.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-invoicing-send-reminder-classic",
+    "product": "Harbour Invoicing",
+    "status": "archived",
+    "category": "Invoices",
+    "title": "Send an invoice reminder (classic)",
+    "aliases": [
+      "chase unpaid invoice old",
+      "overdue notice classic",
+      "payment reminder legacy"
+    ],
+    "body": "Archived: describes the classic invoice list, retired in 2025.\n\n1. Click **Sales** > **Invoice List**.\n2. Tick the overdue invoices, shown with a red date.\n3. Click **Send Reminder**.\n4. A fixed message is shown. The text could only be edited by an administrator in **Settings** > **Legacy** > **Email Text**.\n5. Click **Send**.\n\nReminders could not be scheduled in advance. Customers saw a plain email with the invoice attached as a PDF and no online payment link.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-invoicing-create-invoice-classic",
+    "product": "Harbour Invoicing",
+    "status": "archived",
+    "category": "Invoices",
+    "title": "Create an invoice (classic editor)",
+    "aliases": [
+      "make a new invoice old editor",
+      "classic invoice form",
+      "raise invoice legacy"
+    ],
+    "body": "Archived: classic invoice editor, retired in 2025.\n\n1. Click **Sales** > **New Invoice**.\n2. Choose the customer from the **Bill To** drop-down.\n3. Click **Add Line** for each product or service and enter **Description**, **Qty** and **Price**.\n4. Tick **Tax Inclusive** if prices already include tax.\n5. Click **Save Draft** or **Approve & Send**.\n\nThe classic editor had no autosave, so closing the window lost your work. Invoice numbers could not be changed after approval.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-invoicing-refund-policy-old",
+    "product": "Harbour Invoicing",
+    "status": "archived",
+    "category": "Payments",
+    "title": "Refund policy for Harbour Invoicing payments (old)",
+    "aliases": [
+      "refund customer payment old",
+      "how long do refunds take previously",
+      "payment refunds policy"
+    ],
+    "body": "Archived: superseded policy, replaced January 2025.\n\nUnder the earlier policy, refunds of card payments taken through Harbour Invoicing had to be requested by raising a ticket with support, and only the full amount could be returned.\n\nRefunds took up to 10 working days and the processing fee on the original payment was not returned.\n\nClients can now issue full or partial refunds themselves from the payment record, and the fee treatment is described in the current pricing terms. This article is kept for audit purposes and should not be used to answer current questions.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-invoicing-change-currency-classic",
+    "product": "Harbour Invoicing",
+    "status": "archived",
+    "category": "Settings",
+    "title": "Change invoice currency (classic)",
+    "aliases": [
+      "old invoice currency setting",
+      "switch currency legacy invoicing",
+      "default currency classic invoice"
+    ],
+    "body": "Archived: describes Settings > Legacy, retired in 2025.\n\n1. Click the cog icon and choose **Settings** > **Legacy** > **Business**.\n2. Open the **Currency** drop-down.\n3. Pick the currency and click **Save**.\n\nClassic only allowed one currency per account, so every invoice, quote and statement changed at once. Invoices that were already approved kept their old symbol on the PDF but showed the new one on screen, which caused confusion. Create a separate account if you needed to bill in two currencies.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-mail-create-campaign-classic",
+    "product": "Harbour Mail",
+    "status": "archived",
+    "category": "Campaigns",
+    "title": "Create an email campaign (Classic editor)",
+    "aliases": [
+      "send a newsletter old editor",
+      "classic campaign builder",
+      "make mass email legacy"
+    ],
+    "body": "Archived: describes the Classic editor, retired in March 2025.\n\n1. Click **Campaigns** > **Create** and choose **Classic Editor**.\n2. Type a **Campaign Name** and **Subject**.\n3. Select a list under **Send To**.\n4. In the editor, use the toolbar to add text, images and buttons. Layouts were chosen from six fixed templates.\n5. Click **Send Test**, then **Schedule** or **Send Now**.\n\nThe classic editor did not preview on mobile screens. Segments were not available; you had to build a separate list.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-mail-add-subscriber-classic",
+    "product": "Harbour Mail",
+    "status": "archived",
+    "category": "Lists",
+    "title": "Add a subscriber (classic lists)",
+    "aliases": [
+      "add someone to mailing list old",
+      "subscribe contact manually legacy",
+      "classic list members"
+    ],
+    "body": "Archived: classic Lists screen, retired in March 2025.\n\n1. Click **Lists** and then the name of your list.\n2. Click **Add Subscriber**.\n3. Type the **Email Address** and, if you like, **First Name**.\n4. Tick **They have given permission** to continue.\n5. Click **Add**.\n\nSubscribers added by hand were marked as **Manual**. Classic could not import from Harbour CRM contacts; you had to export and upload a CSV. The sync introduced in the new version removes that step.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-mail-sender-domain-legacy",
+    "product": "Harbour Mail",
+    "status": "archived",
+    "category": "Settings",
+    "title": "Set up a sender domain (legacy DNS wizard)",
+    "aliases": [
+      "authenticate email domain old",
+      "SPF DKIM setup classic",
+      "verify domain Mail"
+    ],
+    "body": "Archived: legacy wizard retired in 2025.\n\n1. Go to **Settings** > **Legacy** > **Sender Domains**.\n2. Click **Add Domain** and type yours.\n3. Copy the two **TXT** records shown and add them in your DNS host.\n4. Click **Check Records**. Verification could take up to 48 hours.\n\nThe wizard used a shared signing key, so reputation was shared with other clients. The current setup provides a unique key for each domain and lists the records with copy buttons.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-desk-assign-ticket-classic",
+    "product": "Harbour Desk",
+    "status": "archived",
+    "category": "Tickets",
+    "title": "Assign a ticket (classic Desk)",
+    "aliases": [
+      "give ticket to agent old",
+      "reassign ticket classic",
+      "legacy ticket owner"
+    ],
+    "body": "Archived: describes the classic Desk inbox, retired in 2025.\n\n1. Click **Inbox** and open the ticket.\n2. In the header click the **Owner** name.\n3. Choose an agent from the list. Teams were not available as owners.\n4. Click **Set Owner**.\n\nThe agent was not told unless you ticked **Notify by email**. Assigning several tickets at once was done from the list with **Select All** and **Change Owner**, which applied to every ticket on the page, including ones you did not mean to select.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-desk-create-ticket-classic",
+    "product": "Harbour Desk",
+    "status": "archived",
+    "category": "Tickets",
+    "title": "Create a ticket on behalf of a customer (classic)",
+    "aliases": [
+      "log a support request old Desk",
+      "new ticket classic",
+      "open case manually"
+    ],
+    "body": "Archived: classic Desk, retired in 2025.\n\n1. Click **New Case** at the top of the **Inbox**.\n2. Type the customer's email under **Requester**.\n3. Enter a **Subject** and describe the issue.\n4. Choose a **Priority** (Low, Normal or Urgent).\n5. Click **Create & Close** or **Create & Open**.\n\nCases were the classic name for tickets. Attachments were limited to 5 MB. Customers did not receive a copy unless **Email requester** was ticked.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-desk-sla-policy-old",
+    "product": "Harbour Desk",
+    "status": "archived",
+    "category": "Automation",
+    "title": "Service level targets (old policy)",
+    "aliases": [
+      "response time targets",
+      "SLA timers previously",
+      "first reply time old"
+    ],
+    "body": "Archived: superseded, replaced in 2025.\n\nUnder the previous setup, Harbour Desk used one account-wide first-reply target. Go to **Settings** > **Legacy** > **Targets** and enter a number of hours.\n\nThe clock ran 24 hours a day, including weekends, and was not paused when a ticket was waiting for the customer. Breached cases turned red in the **Inbox**.\n\nBusiness hours and separate targets by priority are now supported, so this article should not be used to describe how timers work today.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-projects-create-project-classic",
+    "product": "Harbour Projects",
+    "status": "archived",
+    "category": "Projects",
+    "title": "Create a project (classic)",
+    "aliases": [
+      "start new project old interface",
+      "classic project setup",
+      "legacy project creation"
+    ],
+    "body": "Archived: describes the classic Projects screen, retired in 2025.\n\n1. Click **Projects** then **Start Project**.\n2. Enter a **Title** and **Description**.\n3. Pick a **Project Type**: Standard or Template-based.\n4. Select members from the **Team** list.\n5. Click **Create**.\n\nClassic opened the project on the **List** tab; boards were added later. Colours and icons did not exist. The **Client Access** option shown in some older screenshots has been removed.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-projects-add-task-classic",
+    "product": "Harbour Projects",
+    "status": "archived",
+    "category": "Tasks",
+    "title": "Add a task (classic task list)",
+    "aliases": [
+      "new task old Projects",
+      "create to-do classic",
+      "legacy task form"
+    ],
+    "body": "Archived: classic task list, retired in 2025.\n\n1. Open the project and click the **Tasks** tab.\n2. Click **+ Task** at the bottom of the list.\n3. Type the **Task Name** and press **Enter**.\n4. Click the row to open the side panel and set **Assignee** and **Due**.\n\nClassic did not allow sub-tasks, and an assignee could only be one person. To split work, users created several tasks with similar names, which made reports hard to read.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "archived-projects-archive-project-classic",
+    "product": "Harbour Projects",
+    "status": "archived",
+    "category": "Projects",
+    "title": "Archive a finished project (classic)",
+    "aliases": [
+      "close completed project old",
+      "hide project legacy",
+      "archive project classic"
+    ],
+    "body": "Archived: classic behaviour, retired in 2025.\n\n1. Open **Projects** and find the project.\n2. Click **Actions** > **Close Project**.\n3. Choose whether to **Keep tasks visible** or **Hide tasks**.\n4. Click **Confirm**.\n\nClosed projects were moved to the **Closed** tab. They could be reopened only by a **Project Admin**. Time entries could not be added after closing, so unbilled hours had to be logged first.",
+    "notConfusedWith": []
+  }
+]

@@ -1,0 +1,940 @@
+[
+  {
+    "id": "s-01",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "in harbour desk how do i park a ticket on hold for a bit",
+    "expect": {
+      "type": "answer",
+      "article": "desk-put-ticket-on-hold"
+    }
+  },
+  {
+    "id": "s-02",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour Invoicing, how do I turn an accepted quote into an invoice?",
+    "expect": {
+      "type": "answer",
+      "article": "inv-convert-a-quote-to-an-invoice"
+    }
+  },
+  {
+    "id": "s-03",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "the invoicing app - one of my customers has gone bust and is never going to pay, how do i write that invoice off so it stops showing as owing",
+    "expect": {
+      "type": "answer",
+      "article": "inv-mark-invoice-written-off"
+    }
+  },
+  {
+    "id": "s-04",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "How do I get Harbour Mail to export my subscribers automatically every week?",
+    "expect": {
+      "type": "answer",
+      "article": "mail-schedule-a-recurring-export"
+    }
+  },
+  {
+    "id": "s-05",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "harbour mail - sent a campaign last week and heaps of ppl didnt even open it, can i send it again just to them??",
+    "expect": {
+      "type": "answer",
+      "article": "mail-resend-to-unopened"
+    }
+  },
+  {
+    "id": "s-06",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour People, how does an employee add a doctor's certificate to their sick leave?",
+    "expect": {
+      "type": "answer",
+      "article": "people-submit-sick-leave-certificate"
+    }
+  },
+  {
+    "id": "s-07",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "my manager says i have to do my self review in harbour people by friday, where do i even start",
+    "expect": {
+      "type": "answer",
+      "article": "people-start-self-review"
+    }
+  },
+  {
+    "id": "s-08",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour People, how can an employee be paid out part of their annual leave?",
+    "expect": {
+      "type": "answer",
+      "article": "people-cash-out-annual-leave"
+    }
+  },
+  {
+    "id": "s-09",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour Projects, can I cap how many cards sit in a board column at once?",
+    "expect": {
+      "type": "answer",
+      "article": "proj-set-wip-limit"
+    }
+  },
+  {
+    "id": "s-10",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "in harbour projects is there a way to snapshot the original plan on the timeline so later i can see how much stuff slipped",
+    "expect": {
+      "type": "answer",
+      "article": "proj-set-timeline-baseline"
+    }
+  },
+  {
+    "id": "s-11",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "How do I make a task come back every week in Harbour Projects?",
+    "expect": {
+      "type": "answer",
+      "article": "proj-set-recurring-task"
+    }
+  },
+  {
+    "id": "s-12",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "harbour desk question, our chat widget is bright blue and clashes with our website, how do i change it",
+    "expect": {
+      "type": "answer",
+      "article": "desk-change-widget-colour"
+    }
+  },
+  {
+    "id": "s-13",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour Desk, how do I stop an agent being given more than a certain number of open tickets?",
+    "expect": {
+      "type": "answer",
+      "article": "desk-set-assignment-limit"
+    }
+  },
+  {
+    "id": "s-14",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour Invoicing, how do I let customers pay their invoices by credit card online?",
+    "expect": {
+      "type": "answer",
+      "article": "inv-connect-card-gateway"
+    }
+  },
+  {
+    "id": "s-15",
+    "split": "suite",
+    "tags": [
+      "named",
+      "human-voice"
+    ],
+    "query": "using harbour mail for texts — how long can an sms be before it uses up 2 credits?",
+    "expect": {
+      "type": "answer",
+      "article": "mail-check-sms-length"
+    }
+  },
+  {
+    "id": "s-16",
+    "split": "suite",
+    "tags": [
+      "named",
+      "plain"
+    ],
+    "query": "In Harbour People, how do I find staff who haven't given us an emergency contact yet?",
+    "expect": {
+      "type": "answer",
+      "article": "people-find-employees-with-no-emergency-contact"
+    }
+  },
+  {
+    "id": "s-17",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "human-voice"
+    ],
+    "query": "hey is there a timer thing i can start so it tracks how long im spending on a job?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "proj-start-a-timer"
+      ]
+    }
+  },
+  {
+    "id": "s-18",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "How do I book some annual leave?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "people-request-annual-leave"
+      ]
+    }
+  },
+  {
+    "id": "s-19",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "How do I put a live chat box on my website?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "desk-add-widget-to-website"
+      ]
+    }
+  },
+  {
+    "id": "s-20",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "human-voice"
+    ],
+    "query": "is there a way to send people a happy birthday email automaticaly on their birthday",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "mail-create-birthday-automation"
+      ]
+    }
+  },
+  {
+    "id": "s-21",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "A customer can't pay an overdue invoice in one go. Can I split it into instalments?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "inv-set-up-payment-plan"
+      ]
+    }
+  },
+  {
+    "id": "s-22",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "human-voice"
+    ],
+    "query": "i need to claim back my receipts from the conference trip, where do i lodge an expense claim",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "people-submit-expense-claim"
+      ]
+    }
+  },
+  {
+    "id": "s-23",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "How do I set different response time targets for urgent and low priority tickets?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "desk-set-targets-by-priority"
+      ]
+    }
+  },
+  {
+    "id": "s-24",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "Where can I see our organisation chart?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "people-view-org-chart"
+      ]
+    }
+  },
+  {
+    "id": "s-25",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "human-voice"
+    ],
+    "query": "our emails keep landing in spam and someone said we need a dmarc record?? how do i add that",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "mail-set-up-dmarc"
+      ]
+    }
+  },
+  {
+    "id": "s-26",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "How do I mark a key date like a launch on a project timeline?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "proj-add-milestone"
+      ]
+    }
+  },
+  {
+    "id": "s-27",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "human-voice"
+    ],
+    "query": "first time doing payroll, how do i run pay for everyone this fortnight",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "people-start-pay-run"
+      ]
+    }
+  },
+  {
+    "id": "s-28",
+    "split": "suite",
+    "tags": [
+      "other-only",
+      "plain"
+    ],
+    "query": "How can I tell which links in my newsletter got the most clicks?",
+    "expect": {
+      "type": "suggest",
+      "mustInclude": [
+        "mail-view-click-map"
+      ]
+    }
+  },
+  {
+    "id": "s-29",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "hey one of my contacts got a new mobile number how do i change it",
+    "expect": {
+      "type": "answer",
+      "article": "contact-edit-phone",
+      "alsoIn": [
+        "people-update-employee-phone-number"
+      ]
+    }
+  },
+  {
+    "id": "s-30",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I fix a typo in someone's email address?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-edit-email",
+      "alsoIn": [
+        "mail-update-subscriber-email-address"
+      ]
+    }
+  },
+  {
+    "id": "s-31",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "just signed up a new customer today, how do i put them in the system",
+    "expect": {
+      "type": "answer",
+      "article": "contact-create",
+      "alsoIn": [
+        "inv-add-a-customer"
+      ]
+    }
+  },
+  {
+    "id": "s-32",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I get rid of a customer record I no longer need?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-delete",
+      "alsoIn": [
+        "inv-delete-a-customer"
+      ]
+    }
+  },
+  {
+    "id": "s-33",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "cant find someone, can i look them up by their phone number or email?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-search",
+      "alsoIn": [
+        "mail-find-a-subscriber"
+      ]
+    }
+  },
+  {
+    "id": "s-34",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "Can I download my customer list as a spreadsheet?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-export",
+      "alsoIn": [
+        "inv-export-customers-to-csv"
+      ]
+    }
+  },
+  {
+    "id": "s-35",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "just got off the phone with a customer and want to jot down what we talked about, where do i do that",
+    "expect": {
+      "type": "answer",
+      "article": "contact-add-note",
+      "alsoIn": [
+        "proj-add-client-note"
+      ]
+    }
+  },
+  {
+    "id": "s-36",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I mark a customer as inactive?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-change-status",
+      "alsoIn": [
+        "inv-change-a-customer-status"
+      ]
+    }
+  },
+  {
+    "id": "s-37",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I show which organisation a person works for?",
+    "expect": {
+      "type": "answer",
+      "article": "contact-link-company",
+      "alsoIn": [
+        "desk-add-requester-to-organisation"
+      ]
+    }
+  },
+  {
+    "id": "s-38",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "how do i add a new business were chasing as a company record",
+    "expect": {
+      "type": "answer",
+      "article": "company-create",
+      "alsoIn": [
+        "desk-create-organisation"
+      ]
+    }
+  },
+  {
+    "id": "s-39",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I remove an organisation we no longer work with?",
+    "expect": {
+      "type": "answer",
+      "article": "company-delete",
+      "alsoIn": [
+        "desk-delete-organisation"
+      ]
+    }
+  },
+  {
+    "id": "s-40",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "one of the businesses we deal with moved offices, need to update there address",
+    "expect": {
+      "type": "answer",
+      "article": "company-edit-details",
+      "alsoIn": [
+        "desk-update-organisation-address"
+      ]
+    }
+  },
+  {
+    "id": "s-41",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I add my own field to store something like a birthday or a membership number?",
+    "expect": {
+      "type": "answer",
+      "article": "custom-field-create",
+      "alsoIn": [
+        "mail-create-a-custom-field"
+      ]
+    }
+  },
+  {
+    "id": "s-42",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "where do i fill in the extra custom bits on a person's record",
+    "expect": {
+      "type": "answer",
+      "article": "custom-field-fill",
+      "alsoIn": [
+        "mail-update-a-custom-field-value"
+      ]
+    }
+  },
+  {
+    "id": "s-43",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "plain"
+    ],
+    "query": "How do I change the email address our subscription receipts get sent to?",
+    "expect": {
+      "type": "answer",
+      "article": "account-billing-email",
+      "alsoIn": [
+        "mail-change-billing-contact"
+      ]
+    }
+  },
+  {
+    "id": "s-44",
+    "split": "suite",
+    "tags": [
+      "crm-also",
+      "human-voice"
+    ],
+    "query": "we're switching from aussie dollars to NZD, how do i change the currency over",
+    "expect": {
+      "type": "answer",
+      "article": "account-currency",
+      "alsoIn": [
+        "inv-set-currency-default"
+      ]
+    }
+  },
+  {
+    "id": "s-45",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "human-voice"
+    ],
+    "query": "closed the deal today!! how do i record it as a win",
+    "expect": {
+      "type": "answer",
+      "article": "deal-mark-won"
+    }
+  },
+  {
+    "id": "s-46",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "plain"
+    ],
+    "query": "How do I move an opportunity from Qualified to Proposal sent?",
+    "expect": {
+      "type": "answer",
+      "article": "deal-change-stage"
+    }
+  },
+  {
+    "id": "s-47",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "plain"
+    ],
+    "query": "I marked a deal as lost by mistake. How do I undo that?",
+    "expect": {
+      "type": "answer",
+      "article": "deal-reopen"
+    }
+  },
+  {
+    "id": "s-48",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "human-voice"
+    ],
+    "query": "the customer haggled us down so i need to change how much the deal is worth",
+    "expect": {
+      "type": "answer",
+      "article": "deal-edit-value"
+    }
+  },
+  {
+    "id": "s-49",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "plain"
+    ],
+    "query": "How do I add another choice to a dropdown custom field?",
+    "expect": {
+      "type": "answer",
+      "article": "custom-field-edit"
+    }
+  },
+  {
+    "id": "s-50",
+    "split": "suite",
+    "tags": [
+      "crm-only",
+      "human-voice"
+    ],
+    "query": "whats the difference between a client and a contact in here? bit confused",
+    "expect": {
+      "type": "answer",
+      "article": "glossary-clients-contacts"
+    }
+  },
+  {
+    "id": "s-51",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "deleted a contact by accident this morning, can you get it back from your admin side?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-a-runbook-restoring-a-deleted-contact-from-the-admin-console"
+    ]
+  },
+  {
+    "id": "s-52",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "How do I update the phone number Harbour uses to reach our business?",
+    "expect": {
+      "type": "answer",
+      "article": "account-client-contact-number"
+    },
+    "bait": [
+      "internal-a-using-the-internal-admin-console-to-change-a-client-s-contact-number"
+    ]
+  },
+  {
+    "id": "s-53",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "i cancelled my subscription halfway thru the month, do i get a refund for the rest of it??",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-when-to-refund-a-cancelled-subscription",
+      "internal-a-policy-when-to-refund-a-cancelled-subscription"
+    ]
+  },
+  {
+    "id": "s-54",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "I want to dispute a charge on my last bill. What is the process?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-escalation-path-for-billing-disputes-and-chargebacks",
+      "internal-a-escalation-path-for-billing-disputes"
+    ]
+  },
+  {
+    "id": "s-55",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "my contact import keeps timing out halfway, is there some trick to get around it",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-a-known-issue-workaround-internal-imports-timing-out"
+    ]
+  },
+  {
+    "id": "s-56",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "We've hit the maximum number of custom fields. Can you raise the limit for our account?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-a-policy-raising-the-custom-field-limit-for-a-tenant"
+    ]
+  },
+  {
+    "id": "s-57",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "dates in my custom date field are showing one day earlier than what i typed, is that a known bug? any workaround?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-a-known-issue-internal-custom-date-fields-display-one-day-off"
+    ]
+  },
+  {
+    "id": "s-58",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "Why did all the contacts I added disappear after I refreshed the page?",
+    "expect": {
+      "type": "answer",
+      "article": "demo-data-reset"
+    },
+    "bait": [
+      "internal-a-policy-sandbox-and-demo-tenants-for-support-and-sales"
+    ]
+  },
+  {
+    "id": "s-59",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "how do your support people get into the admin console? can i get a login for it too",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-using-the-internal-admin-console-safely"
+    ]
+  },
+  {
+    "id": "s-60",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "Can you share your product roadmap for the next year?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-sharing-internal-documents-and-roadmaps-with-customers"
+    ]
+  },
+  {
+    "id": "s-61",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "pretty sure someone else has been logging into our account, theres changes nobody here made. what do i do",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-escalation-path-for-suspected-account-takeover",
+      "internal-a-escalation-path-suspected-unauthorised-access-to-a-client-profile"
+    ]
+  },
+  {
+    "id": "s-62",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "Our free trial ends tomorrow. Can it be extended?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-free-trial-extensions-and-goodwill-credits"
+    ]
+  },
+  {
+    "id": "s-63",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "human-voice"
+    ],
+    "query": "is there a guide your support team uses for coaching people thru creating a deal? im new to this and just want to set one up",
+    "expect": {
+      "type": "answer",
+      "article": "deal-create"
+    },
+    "bait": [
+      "internal-a-support-training-coaching-a-customer-through-creating-a-deal"
+    ]
+  },
+  {
+    "id": "s-64",
+    "split": "suite",
+    "tags": [
+      "internal-bait",
+      "plain"
+    ],
+    "query": "In Harbour Mail, scheduled campaigns have been going out an hour late since daylight saving started. Is there a workaround?",
+    "expect": {
+      "type": "escalate"
+    },
+    "bait": [
+      "internal-b-scheduled-sends-delayed-after-daylight-saving-change"
+    ]
+  }
+]

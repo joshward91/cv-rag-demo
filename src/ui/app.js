@@ -809,12 +809,12 @@ export function articleView(a, articleById, { linkTarget = 'page' } = {}) {
       ? html`<a href="#/help/${x.id}" data-link>${x.title}</a>`
       : html`<button type="button" class="link-button" data-open-article="${x.id}">${x.title}</button>`;
   return html`<article class="help-article">
-    <p class="eyebrow">${a.category} · <code>${a.id}</code></p>
+    <p class="eyebrow">${a.product ? `${a.product} · ` : ''}${a.category} · <code>${a.id}</code></p>
     <h1 class="article-title">${a.title}</h1>
     ${a.aliases.length ? html`<p class="aliases"><span>Also called</span> ${a.aliases.join(' · ')}</p>` : ''}
     <div class="article-body">${markdown(a.body)}</div>
     ${lookAlikes.length ? html`<div class="look-alikes"><h2>Not to be confused with</h2><ul>${lookAlikes.map((x) => html`<li>${link(x)}</li>`)}</ul></div>` : ''}
-    ${a.screen !== '#/help' ? html`<p class="open-screen"><a href="${a.screen}" data-link data-close-drawer>Open this screen</a></p>` : ''}
+    ${a.screen && a.screen !== '#/help' ? html`<p class="open-screen"><a href="${a.screen}" data-link data-close-drawer>Open this screen</a></p>` : ''}
   </article>`;
 }
 

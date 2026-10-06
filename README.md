@@ -72,13 +72,25 @@ Clarification and escalation happen before any model call, so they are determini
 
 Keyword search fails on paraphrases that share no words with an article: "they signed the contract" is about marking a deal as won. So a small sentence-embedding model (all-MiniLM-L6-v2, 384 dimensions, 8-bit quantised) runs alongside BM25.
 
-- **Offline indexing.** `scripts/embed-articles.mjs` embeds every article as separate passages: the title, each alias and each body sentence. That produces 292 vectors, stored as int8 in `src/kb/article-vectors.js` (about 320 KB) with a fingerprint of the articles they came from.
+- **Offline indexing.** `scripts/embed-articles.mjs` embeds every article as separate passages: the title, each alias and each body sentence. That produces 292 vectors, stored as int8 in `src/kb/article-vectors.js` (about 350 KB with the index graph) with a fingerprint of the articles they came from.
 - **In the browser.** Only the question is embedded, on the visitor's machine via ONNX Runtime Web (WebAssembly). Tokenisation is a small WordPiece implementation (`src/rag/wordpiece.js`), and a unit test checks it matches the reference Hugging Face tokenizer on every passage and eval question. Node and the browser share the same model, tokenizer and pooling code (`src/rag/minilm.js`). Only the runtime differs (native ONNX Runtime in Node, single-threaded WebAssembly in the browser), so similarities can differ in the low decimal places. The model and runtime are served from this site, not a CDN, so the question never leaves the page and offline mode stays free. The first chat open downloads about 37 MB once. The question is embedded after the rewrite step, so "client" has already become "contact" and the perspective rules still apply.
 - **Keyword search decides first.** Semantic search only acts when keyword search would escalate. If the best match is at least 0.45 similar (cosine similarity, with body sentences weighted ×0.9), the user is offered up to three articles within 0.08 of the best, and declared look-alikes are never offered together. A suggestion makes no model call.
 
 **Why it only suggests.** On dev data, raw similarity couldn't separate right matches from near misses: "import contacts" (unsupported) scores 0.78 against the export article, higher than many correct paraphrases. Answering on similarity alone would have meant confident wrong answers. Suggesting means a wrong match costs the user one click to Contact support.
 
-**Why no vector database.** 292 vectors take under a millisecond to search with a dot product in memory. At hundreds of thousands of passages I would move them to pgvector next to the articles and keep the same decide-first policy.
+**Vector index (HNSW).** The passages are searched through an HNSW graph (`src/rag/hnsw.js`), the approximate nearest-neighbour index that pgvector, Qdrant and Pinecone use, written in plain JavaScript so Node builds it and the browser queries it. `scripts/embed-articles.mjs` builds it once (M 16, efConstruction 200, seeded so the build is reproducible) and ships it as data, so GitHub Pages only serves files. The browser reads the 48 nearest passages and groups them by article; an article keyword search ranks but the graph didn't reach is scored exactly. A hosted vector database isn't an option on Pages: the browser would have to hold its key.
+
+At 292 passages the graph is honestly overhead. Run against the flat scan on all 304 questions, it gives the same top article, top three and outcome for every question, but takes 0.39 ms per question against 0.26 ms for the flat scan. `eval/scale/bench.mjs` shows where it pays off. It grows the corpus with synthetic vectors (synthetic articles of ten passages each, centred on a mix of three real passages, with noise tuned so nearest-neighbour similarities match the real set) and queries it with the real eval questions. The synthetic items are vectors with no text behind them, so they measure the index's speed and recall, not answer quality:
+
+| Passages | Flat scan | HNSW (efSearch 64) | Recall@10 | Same top article | Same top 3 | Build | Graph |
+|---|---|---|---|---|---|---|---|
+| 292 (real) | 0.37 ms | 0.39 ms | 100% | 100% | 100% | 0.4 s | 28 KB |
+| 10,000 | 6.7 ms | 1.0 ms | 97.8% | 98.4% | 96.4% | 44 s | 1.1 MB |
+| 100,000 | 63.8 ms | 1.4 ms | 89.6% | 91.1% | 82.9% | 10 min | 10.7 MB |
+
+efSearch trades speed for recall at query time. At 100,000 passages, efSearch 256 finds 98.0% of the true top 10 and the same top article 99.0% of the time, in 4.5 ms, still 14 times faster than the flat scan. The report has the full sweep.
+
+In production I would put the index in the database instead, as pgvector's HNSW index next to the articles in Postgres behind the PHP API, with the same contract: nearest passages in, articles out, keyword search deciding first.
 
 The model weights are the original Xenova/all-MiniLM-L6-v2 q8 ONNX export, vendored in `models/` with a SHA-256 in `models/CHECKSUM.json`. Node and the browser both load these vendored files directly, so nothing is fetched from a model hub.
 
@@ -115,6 +127,36 @@ The assistant is a SaaS help bot, so it must only ever explain Harbour CRM from 
 The guard is pattern-based and only catches the obvious cases. The later layers make an injection that slips past it harmless.
 
 **Pen test.** The `redteam` set holds 38 probes: overrides, fake system messages, prompt extraction, role play, jailbreaks, obfuscated variants, harmful and off-topic asks, and XSS payloads. All pass. A one-off manual browser run of the XSS payloads through the chat and CRM forms triggered no script; that check is not automated.
+
+## Harbour suite: other products and withheld documents
+
+The CRM help centre alone (29 articles) is too small to put retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced 969 help articles for five sister products (Invoicing, Mail, Desk, People and Projects), and 190 documents the assistant must never show, all deliberately about the same tasks customers ask about: 100 internal staff documents (support training, runbooks, policies and sales playbooks), 40 unpublished drafts, 40 archived articles for the old interface, and 10 legacy documents with no status at all. The sister products share the CRM's vocabulary ("contact", "client", "phone number"), so they are realistic traps. `scripts/build-suite.mjs` cleans the drafts (boilerplate closing sentences stripped, 31 tasks two writers both covered merged) and embeds all 12,592 passages into one HNSW index, as a shared vector database would hold them.
+
+- **Product routing.** A question is about the CRM unless it names another product ("in Harbour People", "the invoicing app"). Then that product's help centre answers it, without the CRM's "client" rules, and the prompt names that product.
+- **Also in.** A CRM answer lists close matches in other products: "How do I change a contact's phone number?" gets the CRM article plus "Also in Harbour People". With "in the People app" added, the People article is the answer.
+- **Suggest, never answer, across products.** If the CRM would hand off but another product covers the question ("how do I request annual leave"), its articles are suggested with a product label.
+
+**Access control.** Every document has a status, as a help centre or wiki would store it: draft (the default for new documents), public, internal or archived. Only public documents reach the assistant. The status is metadata from where the document is managed, never inferred from its length or wording, so dense public pages such as API reference stay public. The rules:
+
+- `isPublic` (`src/rag/suite.js`) passes only `status: 'public'`. A missing or unknown status is withheld by the same rule. That is a safety net, not an expected state; in the evaluation one untagged legacy note alone was enough to turn "How do I update a client's phone number?" from an answer into a clarifying question.
+- Every retriever, the CRM's included, throws if it is given anything else.
+- The shared vector index is searched with an allow-list of the retriever's own ids, applied during the HNSW walk rather than afterwards, so withheld passages can sit in the same index and never come back. In production this would be a `WHERE` clause or row-level security in pgvector.
+- The build fails if a withheld document's id or title appears in any published file other than the labelled ones.
+
+The demo and report do show the withheld documents, on purpose and clearly labelled, so a reviewer can check that the filter works: the chat's retrieval panel has a "Filtered out: documents not published to customers (shown for evaluation only)" section, and the report has its own appendix for them.
+
+| Configuration | Passages | Pass rate (304 CRM questions) | Changed vs CRM only | Questions surfacing a withheld document |
+|---|---|---|---|---|
+| CRM only, flat scan | 292 | 73.7% | | 0 |
+| CRM only, HNSW | 292 | 73.7% | 0 | 0 |
+| Suite, flat scan | 10,131 | 73.7% | 9 | 0 |
+| Suite, HNSW | 10,131 | 73.7% | 9 | 0 |
+| Suite + withheld docs, filtered | 12,592 | 73.7% | 9 | 0 |
+| Suite + withheld docs, filter off | 12,592 | 12.8% | 135 | 265 |
+
+(The pass rate here is keyword retrieval with semantic suggestions and no model, the offline mode.) Adding 969 articles changed 9 outcomes, all hand-offs that became suggestions from another product. Most are reasonable, but "reset my password" now suggests the Invoicing and People password articles, which is a known weakness. With the filter off, withheld documents change 135 outcomes: 113 different ones surface (60 internal, 24 draft, 24 archived, 5 with no status). Internal documents are longer and denser in keywords than single-task help articles, and drafts and archived articles cover the very same tasks, so they rank as strong matches. Ranking them lower would not be safe; they have to be filtered out before ranking.
+
+**Blind suite set.** 64 new questions (`eval/suite/cases.json`) were written by a separate agent that saw only the documents, never the code, and were scored once without tuning. 32 passed. The answer or the right article was offered for 13 of 16 that named another product, 5 of 12 that only another product covers, 15 of 16 CRM questions with an "also in" match, 13 of 14 written to bait internal documents, and 5 of 6 CRM-only questions. No withheld document surfaced with the filter on; with it off, one surfaced for 53 of the 64. Those questions predate the draft, archived and untagged documents; adding them changed no result with the filter on. The weak spots are sister-product questions (no synonym lexicon of their own yet) and other-product-only questions, which keyword search alone finds poorly.
 
 ## Evaluation
 
@@ -231,11 +273,15 @@ The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a 
 src/kb/articles.js        the help centre
 src/crm/                  sample data and the in-memory store
 src/kb/article-vectors.js precomputed article embeddings (generated)
-src/rag/                  rewrite, retrieval, semantic index, decision policy, prompt, generators, guardrail, pricing
+src/rag/                  rewrite, retrieval, semantic index and HNSW graph, decision policy, prompt, generators, guardrail, pricing
 models/                   vendored embedding model (q8 ONNX) with checksum
 src/ui/                   CRM screens, chat widget, retrieval panel, styles
 eval/                     cases, runner, metrics, tuning history, results
-eval/compare/             model comparison: prompts, replies, anonymised judging, scoring
+eval/compare/             model comparison: prompts, replies, anonymised judging, scoring, model-use tiers
+eval/scale/               vector index benchmark: flat scan vs HNSW up to 100,000 passages
+eval/suite/               sister-product and withheld documents, blind suite questions, access-control runner
+src/kb/suite-articles.json sister-product help articles (generated by scripts/build-suite.mjs)
+scripts/build-suite.mjs   cleans the suite drafts and builds its vector index
 scripts/embed-articles.mjs re-embeds the help centre into src/kb/article-vectors.js
 report/template.html      the evaluation report page
 scripts/build.js          single-file builds for publishing

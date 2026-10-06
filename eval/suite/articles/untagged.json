@@ -1,0 +1,132 @@
+[
+  {
+    "id": "legacy-crm-change-contact-phone",
+    "product": "Harbour CRM",
+    "category": "Contacts",
+    "title": "Changing a contact phone number",
+    "aliases": [
+      "edit phone number of a customer",
+      "update contact telephone",
+      "fix wrong phone"
+    ],
+    "body": "Imported from wiki page 'contacts_howto_v3'.\n\nTo change a contact's phone number, find the person in Contacts and open them. Press Edit, type the new number in the Phone field and press Save. If the number has an extension, put it after the main number with an x.\n\nIf you have a lot of numbers to change, ask your admin to use the importer with the Update existing option. Make sure the email column is filled in, otherwise the importer cannot match people. Don't confuse this with the company phone, which is edited on the Company page.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-crm-staff-note-export-limits",
+    "product": "Harbour CRM",
+    "category": "Contacts",
+    "title": "Staff note: contact export limits",
+    "aliases": [
+      "why export stops at 10000 contacts",
+      "CSV export row limit",
+      "export is missing contacts"
+    ],
+    "body": "STAFF ONLY - do not paste to customers.\n\nExport to CSV fails silently for clients with more than about 10k contacts when the job runs during the nightly backup (01:00 to 03:00 server time). Workaround: ask the client to export in two halves using a filter on Created date, or have engineering run the export for them and attach it to the ticket.\n\nSee ticket HB-2291. Some clients on the oldest plan still hit the 48 hour link expiry. Remember the client is the account holder; their contacts are their customers, so check consent before sending any file.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-crm-delete-company",
+    "product": "Harbour CRM",
+    "category": "Companies",
+    "title": "Deleting a company record",
+    "aliases": [
+      "remove a company from CRM",
+      "delete business",
+      "get rid of company"
+    ],
+    "body": "Wiki import, author unknown.\n\nOpen Companies and click the company name. Click the three dots and choose Delete. You will be asked whether to keep the people linked to it. Choose Keep contacts unless you really want them gone as well.\n\nDeals linked to the company stay in the pipeline, but the company name turns grey. If the Delete option is missing you are probably not an administrator. Ask the owner of the client account to either give you the role or do the delete themselves. Deleted companies cannot be brought back, so export first if unsure.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-crm-change-billing-email-note",
+    "product": "Harbour CRM",
+    "category": "Account",
+    "title": "Billing email changes (support cheat sheet)",
+    "aliases": [
+      "who can change the billing email",
+      "update email for receipts",
+      "billing contact change"
+    ],
+    "body": "Cheat sheet copied from the support wiki.\n\nCustomer asks to change the billing email: the request must come from the account owner. Check the sender address matches the owner on file. Then in the admin console open the client, go to Billing, edit Billing email and save.\n\nA confirmation email goes to the new address. If they say they never got it, check spam, then resend. Do not change it on a request from a contact of the client, since that is the client's customer, not the account holder. Log everything in the ticket notes before closing.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-crm-mark-deal-lost",
+    "product": "Harbour CRM",
+    "category": "Deals",
+    "title": "Closing a lost deal",
+    "aliases": [
+      "deal lost",
+      "set a deal as lost",
+      "mark opportunity lost"
+    ],
+    "body": "Open the deal and click Lost near the top right. A small window asks for a reason. Pick the closest one, or choose Other and write a few words. Click Confirm.\n\nThe deal moves out of your open pipeline and into the Lost report, so your forecast numbers change straight away. If you clicked the wrong button, use Reopen from the three dots menu. People often ask whether lost deals count towards revenue. They do not.\n\n(Old wiki text, last edited 2023, screenshots missing.)",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-people-update-employee-phone",
+    "product": "Harbour People",
+    "category": "Employees",
+    "title": "Changing an employee's phone number",
+    "aliases": [
+      "staff phone number change",
+      "edit employee mobile",
+      "update contact details for a team member"
+    ],
+    "body": "From the old HR wiki.\n\nGo to People, search for the name and open the profile. On the Contact tab press Edit and update Mobile or Work phone. Press Save.\n\nIf you are an employee and the Edit button is greyed out, your HR manager has turned off self-service for contact details. Please ask them to do it. Phone changes do not alter payroll records. If someone's emergency contact changes too, use the Personal tab, which is a separate section.\n\nTODO move this to the new help centre.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-invoicing-send-reminder",
+    "product": "Harbour Invoicing",
+    "category": "Invoices",
+    "title": "Sending a payment reminder",
+    "aliases": [
+      "remind customer about unpaid invoice",
+      "overdue invoice email",
+      "chase payment"
+    ],
+    "body": "Wiki import.\n\nOpen the invoice that is overdue and click Send reminder. Choose a message from the list or write your own, then click Send. The customer gets an email with a link to view and pay the invoice.\n\nYou can see when reminders went out in the Activity panel. To stop getting asked about this, set up automatic reminders in Settings under Reminders, where you can send one 3 days before the due date and another 7 days after.\n\nNote: the wording of the default templates was last updated by finance in 2022.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-mail-create-campaign",
+    "product": "Harbour Mail",
+    "category": "Campaigns",
+    "title": "Making a campaign step by step",
+    "aliases": [
+      "create newsletter",
+      "email blast setup",
+      "new campaign"
+    ],
+    "body": "Imported from marketing wiki, no metadata.\n\nClick Campaigns, then New. Give it a name that only you will see, then a subject line your readers will see. Choose a list to send to. Write your message, adding images if you like. Always click Send test and look at it on your phone before sending to everyone.\n\nPick Send now or choose a date and time. If your list is over 2,000 people, schedule the send for off-peak hours so delivery is smooth. Check the Reports tab the next day for opens and clicks.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-desk-staff-note-assign",
+    "product": "Harbour Desk",
+    "category": "Tickets",
+    "title": "Internal: ticket assignment etiquette",
+    "aliases": [
+      "assign ticket to a colleague",
+      "reassigning tickets rules",
+      "who owns a ticket"
+    ],
+    "body": "INTERNAL - team leads only.\n\nWhen you assign a ticket to a colleague, add an internal note explaining what has been tried. Do not assign to someone who is marked Away without checking with the team lead first. Urgent tickets must always be assigned to a named person, not a team, so someone is accountable.\n\nTo assign: open the ticket, select Assignee in the side panel, choose the person, then Assign. Customers never see assignee names unless the signature setting is on. Review this page in Q3.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "legacy-projects-create-project",
+    "product": "Harbour Projects",
+    "category": "Projects",
+    "title": "Creating a new project",
+    "aliases": [
+      "start a project",
+      "new project setup",
+      "make a project and invite team"
+    ],
+    "body": "Old wiki article, author left the company.\n\nClick New and pick Project. Type a name, choose whether it is Private or visible to everyone, and add the people who will work on it. You can start empty or copy the layout of a previous project. Click Create.\n\nAfter creating it, add your first tasks and set a due date for each. Members get an email when they are added. If a person does not receive it, check that their address is correct in People. Projects can be renamed at any time from Settings inside the project.",
+    "notConfusedWith": []
+  }
+]

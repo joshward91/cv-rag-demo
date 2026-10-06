@@ -1,0 +1,702 @@
+[
+ {
+  "id": "internal-b-walking-a-customer-through-connecting-a-mailbox",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through connecting a mailbox",
+  "aliases": [
+   "connect mailbox training",
+   "mailbox setup coaching",
+   "new agent mail onboarding"
+  ],
+  "body": "Use this when coaching new agents on mailbox connection calls. Do not share this with customers.\n\n1. Confirm the customer's provider and whether their admin has blocked third-party apps.\n2. Ask them to open Settings, then Mailboxes, then Connect mailbox.\n3. Have them sign in and approve the permission screen. Stay on the line until the status reads Connected.\n4. Check the first sync in the admin console under Mail, Sync Monitor.\n\nMost failures are expired app passwords or a blocked consent screen. Never ask for the customer's mailbox password. If sync stays stuck for more than 30 minutes, open a ticket in the Mail-Tier2 queue with the mailbox ID.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-deleted-emails-from-the-mail-admin-console",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring deleted emails from the Mail admin console",
+  "aliases": [
+   "recover deleted mail internal",
+   "undelete email admin console",
+   "mail restore runbook"
+  ],
+  "body": "Deleted mail is kept in a hidden recovery store for 30 days. Customers cannot see this store, so do not describe it as a feature.\n\n1. Verify the requester is an account owner or admin.\n2. In the admin console open Mail, Recovery Store and search by mailbox ID.\n3. Select the date range and click Queue restore.\n4. Wait for the job to show Complete, normally under 20 minutes.\n5. Tell the customer the messages are back in a folder named Recovered.\n\nRestores older than 30 days need Mail-Tier2 approval and a ticket tagged RECOVERY-LATE. Always log the restore in the audit field of the case.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-scheduled-sends-delayed-after-daylight-saving-change",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): scheduled sends delayed after daylight saving change",
+  "aliases": [
+   "scheduled send late workaround",
+   "send later wrong time internal",
+   "mail timezone bug"
+  ],
+  "body": "Engineering has confirmed that scheduled emails shift by one hour for accounts whose timezone was saved before the daylight saving change. The fix is expected in a later release, and the date is not public. Do not share this with customers.\n\nWorkaround:\n1. Ask the customer to open Settings, then Profile, and re-save their timezone.\n2. In the admin console, open Mail, Scheduled Queue and confirm the new send times.\n3. If messages are already late, use Send now on each item.\n\nLink every case to the internal issue tag MAIL-TZ-DST. Do not promise compensation without approval from a team lead.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-when-to-disable-a-mailbox-for-suspected-spam",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: when to disable a mailbox for suspected spam",
+  "aliases": [
+   "spam suspension policy",
+   "disable mailbox abuse",
+   "outbound spam rule"
+  ],
+  "body": "Suspend sending only when the abuse monitor flags a mailbox for sending more than 500 messages in an hour or when the bounce rate passes 15 percent. This is internal only, and the thresholds must not be quoted to customers.\n\n- Use the Pause outbound toggle in the admin console, never delete the mailbox.\n- Add a note with the monitor alert ID.\n- Tell the customer their sending was paused for a security review.\n- Hand off to the Trust and Safety queue within one hour.\n\nOnly Trust and Safety can lift a pause that lasted more than 24 hours. If the customer disputes it, follow the escalation path for account disputes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-mail-delivery-failures",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for Mail delivery failures",
+  "aliases": [
+   "mail bounce escalation",
+   "delivery problem escalate",
+   "email not arriving internal"
+  ],
+  "body": "Handle delivery cases in three stages. Do not share queue names with customers.\n\n1. Tier 1 checks the customer's domain records in the admin console under Mail, Domain Health. Fix anything marked red.\n2. If records are healthy and messages still bounce, create a ticket in the Mail-Tier2 queue with two sample bounce messages.\n3. If more than ten accounts report the same failure, page the on-call deliverability engineer through the incident channel and raise severity to major.\n\nSet customer expectations at one business day for Tier 2 replies. Never promise that a message will be delivered, only that we are investigating.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-shared-inbox-permissions",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining shared inbox permissions",
+  "aliases": [
+   "shared inbox coaching",
+   "team inbox access training",
+   "mail permissions script"
+  ],
+  "body": "New agents often confuse shared inbox access with mailbox delegation. Use this guide before taking calls.\n\nA shared inbox has three roles: Viewer, Responder and Manager. Only Managers can add members. Delegation is a separate feature and gives full mailbox access, so do not suggest it as a substitute.\n\n1. Ask which role the person needs.\n2. Confirm the requester is a Manager or admin.\n3. In the admin console open Mail, Shared Inboxes, select the inbox and edit members.\n\nNever add yourself to a customer inbox to troubleshoot. Use the read-only Support View, which logs each access. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-rebuilding-a-broken-mail-sync-using-the-admin-console",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: rebuilding a broken mail sync using the admin console",
+  "aliases": [
+   "reset mailbox sync internal",
+   "resync mail runbook",
+   "mail sync repair"
+  ],
+  "body": "Use this only after the customer has tried disconnecting and reconnecting.\n\n1. Open the admin console, then Mail, Sync Monitor, and find the mailbox ID.\n2. Note the last successful sync time in the case.\n3. Click Force rebuild. This clears the local index and re-downloads headers.\n4. Wait for the state to move from Rebuilding to Healthy. Large mailboxes can take up to two hours.\n5. Confirm with the customer that search works again.\n\nDo not run a rebuild more than twice in 24 hours. A third attempt must go to the Mail-Tier2 queue. This button is internal, so never refer to it by name when speaking to customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-mail-storage-limits",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to Mail storage limits",
+  "aliases": [
+   "mail storage objection",
+   "storage upsell script",
+   "mail plan upgrade pitch"
+  ],
+  "body": "Customers hitting storage limits are often frustrated. Use the playbook below and keep the discounting rules private.\n\n- Acknowledge first. Do not defend the limit.\n- Ask what is filling the mailbox. Attachments are usually the cause.\n- Offer cleanup help before an upgrade.\n- If they want more space, present the next tier and the annual saving.\n\nSupport agents may offer one month of the next tier free once per account. Anything beyond that needs sales approval via the Revenue queue. Do not share this with customers, and never mention that other customers received larger credits.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-attachments-over-20-mb-failing-to-send",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): attachments over 20 MB failing to send",
+  "aliases": [
+   "large attachment bug internal",
+   "mail attachment too big",
+   "attachment upload fails workaround"
+  ],
+  "body": "A gateway fault rejects some large attachments even though the visible limit is 25 MB. This is internal only until the release notes are published.\n\nWorkaround steps:\n1. Ask the customer to compress the file or send it through Harbour Projects file sharing.\n2. If the file must be sent, ask an engineer to raise the gateway threshold for that mailbox using the admin console Mail, Limits tab. This needs team lead approval.\n3. Tag the case MAIL-ATT-GW.\n\nDo not tell the customer that the 25 MB limit is incorrect. Say we are investigating a delay and offer the workaround.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-customer-requests-to-read-another-user-email",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: handling customer requests to read another user email",
+  "aliases": [
+   "access to employee mailbox policy",
+   "mailbox access request rule",
+   "read someone else mail"
+  ],
+  "body": "Support never opens or reads a customer's mail content on request from a third party. This is non-negotiable.\n\n- Only an account owner can approve access to another user's mailbox, and they must do it in writing from their verified address.\n- Support may then enable delegation. Never export mail content ourselves.\n- If a staff member has left and the owner needs their mail, use the offboarding procedure and log it in the Mail-Tier2 queue.\n- Legal requests go straight to the Legal queue.\n\nRecord who approved, when and why in the case. Do not share this with customers beyond saying the owner must approve.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-creating-a-ticket-queue",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through creating a ticket queue",
+  "aliases": [
+   "desk queue setup training",
+   "new queue coaching",
+   "create helpdesk queue internal"
+  ],
+  "body": "Use this guide for calls about setting up queues in Harbour Desk. Do not share this with customers.\n\n1. Ask what the customer wants to route, for example billing or sales enquiries.\n2. Have them open Settings, then Queues, then New queue.\n3. Name the queue and choose a default assignee or team.\n4. Add routing rules by email address or form field.\n5. Send a test ticket and confirm it lands.\n\nCommon errors are overlapping rules where the older rule wins. Check ordering first. Our own internal queues use the prefix INT, which customers must never create, so remove it if a customer copies the pattern.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-merging-duplicate-tickets-in-the-desk-admin-console",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: merging duplicate tickets in the Desk admin console",
+  "aliases": [
+   "merge tickets internal",
+   "duplicate ticket cleanup",
+   "desk merge runbook"
+  ],
+  "body": "Customers can merge tickets themselves in the product, but only within one queue. Cross-queue merges are an admin console action.\n\n1. Confirm both ticket IDs and the requester's account.\n2. Open the admin console, then Desk, Ticket Tools, Merge.\n3. Choose the primary ticket. Its history is kept.\n4. Click Merge and wait for confirmation.\n\nMerges cannot be undone, so take a screenshot of both tickets first and add it to the case. Closed tickets older than 90 days need Desk-Tier2 approval. Do not share the admin console screen names with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-email-replies-creating-duplicate-tickets",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): email replies creating duplicate tickets",
+  "aliases": [
+   "duplicate tickets from email",
+   "desk reply creates new ticket",
+   "email threading bug workaround"
+  ],
+  "body": "Some replies lose their reference code because of a mail client quirk, so Desk opens a new ticket instead of updating the old one. Engineering tracks this as DESK-THR-14. Do not share this with customers.\n\nWorkaround:\n1. Merge the new ticket into the original using the admin console.\n2. Ask the customer to reply above the dashed line without editing the subject.\n3. For repeat cases, enable Match by sender and subject under Queue Settings, Advanced.\n\nIf more than 50 duplicates appear in an hour for one account, raise it to Desk-Tier2 right away.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-sla-credits-for-missed-response-targets",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: SLA credits for missed response targets",
+  "aliases": [
+   "SLA credit rules",
+   "service credit policy desk",
+   "missed SLA compensation"
+  ],
+  "body": "Customers on the Business and Enterprise plans have response targets. Credits are internal policy and must not be advertised.\n\n- Confirm the miss in the SLA report under Desk, Reports, Breaches.\n- A single miss gets an apology only.\n- Three misses in a month allow a credit of up to 10 percent of the monthly fee, approved by a team lead.\n- Anything above 10 percent goes to the Revenue queue.\n\nNever offer a credit before the customer raises it. Record the breach IDs and the approved amount in the case. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-desk-outages-affecting-many-customers",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for Desk outages affecting many customers",
+  "aliases": [
+   "desk incident escalation",
+   "helpdesk outage escalate",
+   "major incident desk"
+  ],
+  "body": "Declare a major incident when more than five customers report the same Desk failure within 30 minutes.\n\n1. Check the internal status board first.\n2. Post in the incident channel with a summary and three example case numbers.\n3. The incident manager role will assign a severity.\n4. Tag every related case INC and link it to the master ticket.\n5. Use only the approved status wording when replying.\n\nDo not speculate on causes or timelines with customers. Do not share this with customers. Updates go out every 30 minutes until the incident manager closes it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-automation-rules-without-over-promising",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining automation rules without over-promising",
+  "aliases": [
+   "desk automation coaching",
+   "ticket rules training",
+   "automation call script"
+  ],
+  "body": "Automation rules are popular and easy to break. Coach new agents using this outline.\n\n- Rules run in order, top to bottom, and stop at the first Stop processing action.\n- Rules run on ticket creation and update, not on historic tickets.\n- A bulk change needs a macro instead.\n\n1. Ask the customer to describe the outcome they want.\n2. Open Settings, then Automations and review the order.\n3. Test with a sample ticket.\n\nNever edit a customer's automations ourselves unless they ask in writing. Use the Support View in the admin console to look, not to change. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-exporting-ticket-history-for-a-customer-who-is-leaving",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: exporting ticket history for a customer who is leaving",
+  "aliases": [
+   "desk data export internal",
+   "ticket export for offboarding",
+   "helpdesk export runbook"
+  ],
+  "body": "Customers can request a full export when closing their account. Follow these steps in order.\n\n1. Verify the requester is an account owner.\n2. Open the admin console, then Desk, Data Export, and choose Full history.\n3. Select CSV and include attachments only if the customer asks. Attachments can make the file very large.\n4. Start the job and note the job ID in the case.\n5. Send the download link by the secure message tool, never as a plain email attachment.\n\nLinks expire after seven days. Exports over 5 GB must go to Desk-Tier2. Do not share the console path with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-desk-per-agent-pricing",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to Desk per-agent pricing",
+  "aliases": [
+   "desk pricing objection",
+   "per agent price pushback",
+   "helpdesk upsell playbook"
+  ],
+  "body": "Per-seat pricing is the most common reason a Desk trial stalls. Keep these talking points internal.\n\n- Ask how many people actually answer tickets. Light users can use the cheaper collaborator seat.\n- Compare against the cost of missed tickets, not against free tools.\n- Offer the annual option, which saves two months.\n\nAgents may extend a trial by seven days once. Discounts of any size need approval from the Revenue queue. Do not share this with customers, and never quote the internal discount ceiling.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-imports-timing-out-for-large-ticket-files",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): imports timing out for large ticket files",
+  "aliases": [
+   "desk import timeout",
+   "ticket import failing internal",
+   "large import workaround"
+  ],
+  "body": "Imports of more than 20,000 tickets can time out at the gateway, leaving a half-finished job. This is internal only.\n\nWorkaround:\n1. Check the import in the admin console, Desk, Import Jobs. Note how many rows were completed.\n2. Ask the customer to split the file into batches of 10,000 rows, removing rows already imported.\n3. Run each batch separately.\n4. If the job is stuck in Running for over an hour, cancel it from the console.\n\nTag the case DESK-IMP-TO. Do not promise a fix date. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-closing-tickets-on-behalf-of-a-customer",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: closing tickets on behalf of a customer",
+  "aliases": [
+   "close ticket for customer policy",
+   "agent closing tickets rule",
+   "support ticket closure"
+  ],
+  "body": "Agents may close a Desk ticket on a customer's behalf only if the customer has confirmed in writing, or the ticket has had no reply for 14 days after two reminders.\n\n- Use the Resolved status, not Closed, so the customer can reopen.\n- Add an internal note with the reason.\n- Never close tickets to improve our own response metrics. This is audited monthly.\n\nSpam tickets can be deleted by a team lead only. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-adding-an-employee",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through adding an employee",
+  "aliases": [
+   "people add employee training",
+   "new hire record coaching",
+   "employee setup script"
+  ],
+  "body": "Harbour People holds sensitive data, so confirm identity before any change. Do not share this with customers.\n\n1. Verify the caller is an HR admin using the account verification checklist.\n2. Ask them to open People, then Add employee.\n3. Required fields are name, start date, role and employment type. Pay details are optional and can be added later.\n4. Have them save and check the profile appears in the directory.\n\nNever ask for tax file numbers or bank details over chat. If the customer pastes them into a ticket, mask them and tell the customer. Duplicate records go to People-Tier2.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-an-archived-employee-record-in-the-admin-console",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring an archived employee record in the admin console",
+  "aliases": [
+   "unarchive employee internal",
+   "restore terminated employee record",
+   "people archive runbook"
+  ],
+  "body": "Archived records are retained for seven years in a locked store. Customers only see that the employee is archived.\n\n1. Confirm the requester is an HR admin and note the reason.\n2. In the admin console open People, Archive Store and search by employee ID.\n3. Click Restore and choose whether to restore leave balances.\n4. Confirm the status returns to Active.\n\nRestoring a record that was archived over 12 months ago needs People-Tier2 approval. Never restore at the request of the archived employee. Log the ticket reference in the audit note. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-payroll-data-access-requests",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: handling payroll data access requests",
+  "aliases": [
+   "payroll data policy",
+   "who can see salary support",
+   "pay details access rule"
+  ],
+  "body": "Support agents must never view salary or bank fields. The Support View masks them, and any unmasking requires written approval from the Privacy queue.\n\n- Salary questions are answered from the customer's own screens, with the customer sharing their screen.\n- Bank detail changes can only be made by an HR admin in the product.\n- If an employee, not an admin, asks about someone else's pay, decline and do not explain what we hold.\n\nReport any suspected misuse to the Privacy queue at once. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-leave-balance-errors",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for leave balance errors",
+  "aliases": [
+   "leave balance wrong escalation",
+   "annual leave discrepancy internal",
+   "people leave bug escalate"
+  ],
+  "body": "Wrong leave balances are time sensitive near payroll cut-off.\n\n1. Check the leave policy assigned to the employee and the accrual start date.\n2. Compare with the Leave Ledger in the admin console, People, Ledger.\n3. If the ledger disagrees with the policy, open a People-Tier2 ticket with employee ID and screenshots.\n4. If more than 20 employees are affected, mark it high priority and notify the on-call engineer role.\n\nDo not manually edit ledger entries. Corrections are made only by Tier 2. Do not share this with customers. Tell customers we will update them within one business day.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-onboarding-checklist-not-sending-to-new-starters",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): onboarding checklist not sending to new starters",
+  "aliases": [
+   "onboarding email not sent internal",
+   "new starter checklist bug",
+   "people onboarding workaround"
+  ],
+  "body": "New starters whose start date is set in the past do not receive the onboarding checklist email. Engineering tracks this as PPL-ONB-07.\n\nWorkaround:\n1. Ask the HR admin to set the start date to today or later.\n2. Re-save the employee, which re-triggers the email.\n3. If it still fails, use Resend onboarding in the admin console, People, Onboarding Jobs.\n\nDo not tell the customer this is a defect. Say the checklist only sends for current or future start dates. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-performance-review-cycles",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining performance review cycles",
+  "aliases": [
+   "review cycle coaching",
+   "people performance training",
+   "appraisal setup script"
+  ],
+  "body": "Review cycles confuse new agents. Use this summary.\n\n- A cycle has stages: Setup, Self review, Manager review, Calibration and Release.\n- Moving to the next stage is one way. A stage cannot be reopened by the customer.\n- Only Support Tier 2 can reopen a stage, and only with a request from the HR admin.\n\n1. Open the cycle in the Support View to see its current stage.\n2. Confirm the customer's goal.\n3. Offer a new cycle if reopening is not suitable.\n\nNever read review comments aloud or paste them in a ticket. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-correcting-a-wrong-start-date-after-payroll-sync",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: correcting a wrong start date after payroll sync",
+  "aliases": [
+   "fix start date payroll sync",
+   "start date change internal",
+   "people payroll mismatch"
+  ],
+  "body": "When a start date is changed after the payroll sync, the payroll connector keeps the old date.\n\n1. Ask the HR admin to correct the date in the employee profile.\n2. In the admin console open People, Connectors, Payroll and find the employee's sync row.\n3. Click Re-sync employee.\n4. Wait for the status Matched.\n5. Ask the customer to confirm in their payroll system.\n\nIf the pay period is already closed, stop and send to People-Tier2. Do not share this with customers, and do not suggest they edit the payroll system directly unless the HR admin chooses to.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-people-per-employee-pricing",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to People per-employee pricing",
+  "aliases": [
+   "people pricing objection",
+   "per employee price script",
+   "hr upsell playbook"
+  ],
+  "body": "Small teams often say per-employee pricing is high. Keep this internal.\n\n- Ask how they manage leave, onboarding and documents today and what it costs in hours.\n- Highlight the inactive employee rule: archived staff are not billed.\n- Offer the annual plan.\n\nAgents can offer a 14 day trial extension once. Price concessions require approval from the Revenue queue, and the maximum authorised discount must never be quoted to customers. Do not share this with customers or mention competitor comparisons made in internal docs.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-deleting-an-employee-record-on-request",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: deleting an employee record on request",
+  "aliases": [
+   "delete employee data policy",
+   "employee erasure request",
+   "people deletion rule"
+  ],
+  "body": "An employee's request to delete their data is handled through the customer, who is the data controller.\n\n- Do not delete anything at the request of an individual employee.\n- Refer the employee to their HR admin.\n- If the HR admin confirms in writing, raise a Privacy queue ticket.\n- The Privacy team checks legal retention rules, such as payroll records, before approving.\n\nDeletion cannot be undone and takes up to 30 days. Do not share the retention periods with customers beyond saying some records must be kept. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-creating-a-project",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through creating a project",
+  "aliases": [
+   "projects create training",
+   "new project coaching",
+   "project setup script"
+  ],
+  "body": "Use this when coaching new agents on Harbour Projects calls. Do not share this with customers.\n\n1. Ask what they want to track, for example a client job or an internal launch.\n2. Have them select Projects, then New project.\n3. Choose a template or start blank. Templates save time for first-time users.\n4. Add members and set the visibility.\n5. Create the first task together.\n\nCommon confusion is between private and team projects. Private projects cannot be seen by admins in the product, though we can see them through the admin console Support View, which must only be used with consent. Do not mention this to customers unless asked.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-a-deleted-project-from-the-admin-console",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring a deleted project from the admin console",
+  "aliases": [
+   "recover deleted project internal",
+   "undelete project runbook",
+   "projects restore"
+  ],
+  "body": "Deleted projects stay in a recovery store for 60 days. Customers are told 30 days, so do not share the longer period.\n\n1. Verify the requester is a workspace admin.\n2. Open the admin console, then Projects, Recovery, and search by project name or ID.\n3. Click Restore and select the original workspace.\n4. Confirm tasks and files appear.\n\nBetween 30 and 60 days, add the tag RESTORE-EXT and get team lead approval before restoring. After 60 days nothing can be recovered. Log all restores in the case audit field.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-gantt-view-loading-slowly-on-large-projects",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): Gantt view loading slowly on large projects",
+  "aliases": [
+   "gantt slow internal",
+   "timeline performance workaround",
+   "projects large project lag"
+  ],
+  "body": "Projects with more than 2,000 tasks load the timeline slowly because of a query fault. Engineering tracks it as PRJ-GNT-21. Do not share this with customers.\n\nWorkaround:\n1. Ask the customer to filter the timeline by assignee or milestone.\n2. Suggest archiving completed tasks, which removes them from the view without deleting them.\n3. If the page times out, increase the project's timeline cache in the admin console, Projects, Performance. This needs team lead approval.\n\nDo not give a fix date. Tell customers we are working on performance improvements.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-the-projects-price-rise",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to the Projects price rise",
+  "aliases": [
+   "projects price increase objection",
+   "price rise script",
+   "projects renewal pushback"
+  ],
+  "body": "The Projects price rise has caused churn risk at renewal. This script is internal only.\n\n- Acknowledge the increase and thank them for staying.\n- Ask which features they use most, and tie value to those.\n- Offer to lock the current price for 12 months if they move to annual billing.\n- Do not discuss internal cost reasons.\n\nAgents can apply the price lock once per account without approval. Larger concessions go to the Revenue queue. Customers asking to cancel must be given the cancellation steps without delay. Never quote other customers' arrangements. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-guest-access-and-external-sharing-requests",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: guest access and external sharing requests",
+  "aliases": [
+   "external sharing policy projects",
+   "guest user rules",
+   "client guest access internal"
+  ],
+  "body": "Guests can view projects but not billing or members. Support never adds a guest on a customer's behalf.\n\n- The workspace admin must make the request.\n- If a former client or contractor asks for access, send them to the workspace admin and do not confirm the project exists.\n- If sharing was done in error, remove the guest in the admin console, Projects, Access, and log it.\n\nMass invites over 25 guests are reviewed by the Trust and Safety queue first. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-missing-files-in-projects",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for missing files in Projects",
+  "aliases": [
+   "lost files escalation projects",
+   "attachment missing internal",
+   "project files gone"
+  ],
+  "body": "Missing files are high priority because customers may blame us for data loss.\n\n1. Check the project activity log for a delete event and the user.\n2. Search the recovery store in the admin console, Projects, Recovery, Files.\n3. If the file was deleted by a user within 30 days, restore it.\n4. If there is no delete event, open a Projects-Tier2 ticket marked possible data loss.\n5. Notify the on-call storage engineer role if more than one customer is affected.\n\nNever say a file is lost permanently until Tier 2 confirms. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-task-dependencies-and-why-dates-shift",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining task dependencies and why dates shift",
+  "aliases": [
+   "dependencies coaching projects",
+   "task dates move training",
+   "gantt dependency script"
+  ],
+  "body": "Customers regularly report that dates move on their own. Teach agents this explanation.\n\n- Finish to start dependencies move successor tasks when the predecessor date changes.\n- Auto scheduling can be switched off for a project by the admin.\n- Weekend and holiday calendars affect the result.\n\n1. Ask which task moved and what changed before it.\n2. Open the activity log to see the trigger.\n3. Offer to turn off auto scheduling in Project Settings.\n\nDo not edit task dates through the admin console. Doing so breaks the audit trail. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-transferring-project-ownership-when-the-owner-has-left",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: transferring project ownership when the owner has left",
+  "aliases": [
+   "change project owner internal",
+   "ownership transfer runbook",
+   "orphaned project fix"
+  ],
+  "body": "Use when a project owner has left and nobody can manage it.\n\n1. Confirm the request comes from a workspace admin in writing.\n2. Check the workspace in the admin console, Projects, Ownership, and note the current owner.\n3. Click Reassign, choose the new owner, and add the ticket number.\n4. Notify the new owner by the product notification, not by email.\n\nIf the former owner is still active and has not agreed, do not transfer. Escalate to the Privacy queue. Do not share this with customers beyond the admin steps.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-csv-import-of-tasks-dropping-assignees",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): CSV import of tasks dropping assignees",
+  "aliases": [
+   "task import assignee missing",
+   "projects csv import bug",
+   "import loses owners workaround"
+  ],
+  "body": "Imports silently drop assignees when the email column has a trailing space. Engineering tracks this as PRJ-IMP-09. This is internal until fixed.\n\nWorkaround:\n1. Ask the customer to trim spaces in the email column and import again.\n2. If the task already exists, bulk assign using the filter and Assign action.\n3. For files over 5,000 tasks, offer to run the import for them using the admin console, Projects, Import Tools.\n\nAdd the tag PRJ-IMP-09. Do not share this with customers or call it a bug.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-when-to-refund-a-cancelled-subscription",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: when to refund a cancelled subscription",
+  "aliases": [
+   "refund policy cancelled plan",
+   "cancellation refund rules",
+   "when to give a refund"
+  ],
+  "body": "Customers can request a refund after cancelling. Apply these internal limits and do not share this with customers.\n\n- Within 14 days of the first payment: full refund, no approval needed.\n- Annual plans cancelled within 30 days: refund the unused portion.\n- Monthly plans after 14 days: no refund, but offer a service credit up to one month.\n- Anything above 250 dollars needs team lead approval, and above 1,000 needs the Revenue queue.\n\nAlways process refunds in the billing console, add the reason code and never promise a refund before approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-billing-disputes-and-chargebacks",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for billing disputes and chargebacks",
+  "aliases": [
+   "billing dispute escalation",
+   "chargeback handling internal",
+   "disputed charge escalate"
+  ],
+  "body": "Billing disputes can lead to chargebacks, which cost us fees. Move quickly.\n\n1. Verify the account owner and find the charge in the billing console.\n2. If the charge is correct, explain it and offer a statement.\n3. If the customer insists, open a ticket in the Billing-Tier2 queue.\n4. If a chargeback notice arrives, do not contact the customer. Send it to the Finance Disputes role.\n5. Pause renewal emails but do not close the account without approval.\n\nNever admit liability in writing. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-account-access-recovery-and-identity-checks",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: account access recovery and identity checks",
+  "aliases": [
+   "locked out account policy",
+   "account recovery verification",
+   "reset access identity check"
+  ],
+  "body": "We must never give account access to the wrong person.\n\n1. Ask for the account owner's name, the account email and the last four digits of the card on file.\n2. Confirm two of the three match the billing console.\n3. Send the reset link only to the email on file, even if the customer says they no longer use it.\n4. If the email is unavailable, escalate to the Account Security queue for manual checks.\n\nDo not explain which checks failed. Do not reset multi-factor authentication without Account Security approval. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-processing-a-data-deletion-request",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: processing a data deletion request",
+  "aliases": [
+   "delete my data internal",
+   "data erasure runbook",
+   "privacy deletion procedure"
+  ],
+  "body": "Deletion requests are handled by the Privacy team, not by Tier 1.\n\n1. Verify the account owner using the identity check policy.\n2. Create a ticket in the Privacy queue using the Deletion template.\n3. Tell the customer to expect confirmation within 30 days.\n4. Privacy checks legal holds and billing records that must be retained.\n5. Privacy runs the Delete account job in the admin console.\n\nDeletion cannot be reversed. Warn the customer to export data first. Backups are purged on a 35 day cycle, which should not be quoted to customers. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-an-angry-customer-who-wants-a-refund",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: handling an angry customer who wants a refund",
+  "aliases": [
+   "refund call de-escalation",
+   "upset customer script",
+   "difficult refund conversation"
+  ],
+  "body": "Stay calm and follow this order.\n\n1. Let the customer finish without interrupting.\n2. Summarise the problem back to them.\n3. Check the refund policy and your authority limit in the internal guide.\n4. Offer what you can do, starting with the fix, then a credit, then a refund where eligible.\n5. If you cannot approve, say you will ask a team lead and give a time.\n\nDo not argue, blame another team or say the policy is silly. Do not mention approval limits. If abuse starts, give one warning and then end the call, logging it. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-suspected-account-takeover",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for suspected account takeover",
+  "aliases": [
+   "hacked account escalation",
+   "compromised account internal",
+   "account takeover procedure"
+  ],
+  "body": "Treat every report of a compromised account as urgent.\n\n1. Do not discuss details until the identity check is complete.\n2. Open a ticket in the Account Security queue marked priority.\n3. Ask Security to lock the account using the admin console, Security, Lock account.\n4. Tell the customer that we have secured the account and will contact the owner.\n5. Preserve logs by not editing any case notes.\n\nDo not reveal login history or IP addresses to the caller. Do not share this with customers, and never speculate about how the breach occurred.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-free-trial-extensions-and-goodwill-credits",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: free trial extensions and goodwill credits",
+  "aliases": [
+   "trial extension rules",
+   "goodwill credit limits",
+   "how much credit can I give"
+  ],
+  "body": "Use goodwill sparingly and record each use. This table is for staff only.\n\n- Trial extensions: seven days, once per account, no approval needed.\n- Goodwill credits: up to 25 dollars for Tier 1 and up to 100 dollars for team leads.\n- Anything above that needs the Revenue queue.\n\nCredits must be tied to a real problem and a case number. Never offer credits in exchange for a positive review. Do not share this with customers, and do not disclose credit amounts given to others.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-changing-an-account-owner-or-primary-contact",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: changing an account owner or primary contact",
+  "aliases": [
+   "transfer account ownership internal",
+   "change billing contact runbook",
+   "owner change procedure"
+  ],
+  "body": "Ownership changes are high risk and need documents.\n\n1. Ask the current owner to confirm in writing from the email on file.\n2. If the owner has left, ask the company for a signed letter on letterhead and check the business registration.\n3. Send the case to the Account Security queue.\n4. Security uses the admin console, Accounts, Ownership, to apply the change.\n5. Notify both old and new owner.\n\nNever change the owner on a verbal request. Allow up to two business days. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-using-the-internal-admin-console-safely",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: using the internal admin console safely",
+  "aliases": [
+   "admin console basics",
+   "support tools orientation",
+   "new agent console guide"
+  ],
+  "body": "The admin console gives powerful access, so follow these rules.\n\n- Use Support View first. It is read-only and logged.\n- Edit mode needs a case number and a reason, both of which are audited.\n- Never screenshot customer data into a chat or a personal device.\n- Never describe console screens or buttons to customers.\n\n1. Sign in with your staff account and security key.\n2. Search by account ID, never by name alone.\n3. Confirm you have the right account by checking the billing email.\n\nMisuse is a disciplinary matter. Report mistakes to your team lead immediately. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-sharing-internal-documents-and-roadmaps-with-customers",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: sharing internal documents and roadmaps with customers",
+  "aliases": [
+   "confidential roadmap rule",
+   "what not to tell customers",
+   "internal information policy"
+  ],
+  "body": "Internal articles, queue names, thresholds and release plans are confidential.\n\n- Do not paste or paraphrase internal documents in replies.\n- Do not confirm or deny roadmap dates. Say you will pass the feedback on.\n- Do not name engineers or internal tools.\n- Use only the published help centre for how-to answers.\n\nIf a customer asks about a known issue, share only the approved wording from the incident channel. If you are unsure whether something is public, treat it as internal and ask your team lead. Breaches must be reported to the Privacy queue.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-reissuing-employee-documents-and-contracts-to-a-former-employee",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: reissuing employee documents and contracts to a former employee",
+  "aliases": [
+   "former employee document request",
+   "ex-staff contract copy internal",
+   "people document access policy"
+  ],
+  "body": "Former employees sometimes contact us directly for contracts or payslips. We hold these on behalf of the employer, so Support does not release them.\n\n1. Do not confirm what documents exist.\n2. Direct the person to their former employer's HR admin.\n3. If the HR admin asks us for help, they can share a document from the employee profile themselves, or raise a Privacy queue ticket for a bulk export.\n\nLog every contact from a former employee in the case notes with the date. Do not share this with customers beyond the referral to their employer.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-time-tracking-corrections-after-an-invoice-has-been-sent",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: time tracking corrections after an invoice has been sent",
+  "aliases": [
+   "edit timesheet after invoice",
+   "locked time entries internal",
+   "time entry correction rule"
+  ],
+  "body": "Time entries are locked once they are billed through Harbour Invoicing. Customers see the lock but not the reason.\n\n- Only a workspace admin can request an unlock, in writing.\n- Support unlocks entries in the admin console, Projects, Time, Unlock, and the invoice must first be voided or credited by the customer.\n- Never unlock entries if the invoice has been paid.\n\nRecord the entry IDs and the invoice number in the case. Unlocks of more than 50 entries need team lead approval. Do not share this with customers.",
+  "notConfusedWith": []
+ }
+]

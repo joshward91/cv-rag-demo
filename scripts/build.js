@@ -19,8 +19,10 @@
  *   docs/report.html   the evaluation report
  */
 import { build } from 'esbuild';
-import { copyFileSync, existsSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, cpSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { articles as crmArticles } from '../src/kb/articles.js';
+import { withheldReason } from '../src/rag/suite.js';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const read = (path) => readFileSync(root + path, 'utf8');
@@ -32,9 +34,9 @@ mkdirSync(`${root}dist`, { recursive: true });
 const withoutSemantic = {
   name: 'without-semantic',
   setup(b) {
-    b.onResolve({ filter: /(?:embedder\.browser|article-vectors)\.js$/ }, (args) => ({ path: args.path, namespace: 'stub' }));
+    b.onResolve({ filter: /(?:embedder\.browser|suite\.browser|article-vectors)\.js$/ }, (args) => ({ path: args.path, namespace: 'stub' }));
     b.onLoad({ filter: /.*/, namespace: 'stub' }, () => ({
-      contents: 'export const articleVectors = null; export function createBrowserEmbedder() { throw new Error("Semantic search is not in this build."); }',
+      contents: 'export const articleVectors = null; export function createBrowserEmbedder() { throw new Error("Semantic search is not in this build."); } export function loadSuite() { throw new Error("Other products are not in this build."); }',
     }));
   },
 };
@@ -67,6 +69,10 @@ function reportPage(demoUrl) {
   return read('report/template.html')
     .replace('__RESULTS__', () => inlineJson(JSON.parse(read('eval/results.json'))))
     .replace('__HISTORY__', () => inlineJson(JSON.parse(read('eval/history.json'))))
+    .replace('__SUITE__', () => (existsSync(`${root}eval/suite/results.json`) ? inlineJson(JSON.parse(read('eval/suite/results.json'))) : 'null'))
+    .replace('__WITHHELD__', () => inlineJson(JSON.parse(read('eval/suite/withheld-articles.json')).map((a) => ({ id: a.id, product: a.product, category: a.category, title: a.title, body: a.body, status: withheldReason(a) }))))
+    .replace('__DOCUMENTS__', () => inlineJson([...crmArticles.map((a) => ({ ...a, product: 'Harbour CRM' })), ...JSON.parse(read('src/kb/suite-articles.json'))].map(({ id, product, category, title, body }) => ({ id, product, category, title, body }))))
+    .replace('__SCALE__', () => (existsSync(`${root}eval/scale/results.json`) ? inlineJson(JSON.parse(read('eval/scale/results.json'))) : 'null'))
     .replace('__TIERS__', () => (existsSync(`${root}eval/compare/tiers.json`) ? inlineJson(JSON.parse(read('eval/compare/tiers.json'))) : 'null'))
     .replace('__COMPARISON__', () => (existsSync(`${root}eval/compare/results.json`) ? inlineJson(JSON.parse(read('eval/compare/results.json'))) : 'null'))
     .replace('__DEMO_URL__', () => demoUrl);
@@ -105,8 +111,36 @@ writeFileSync(`${root}docs/index.html`, asDocument(await demoPage('report.html',
 cpSync(`${root}models/Xenova`, `${root}docs/models/Xenova`, { recursive: true });
 mkdirSync(`${root}docs/ort`, { recursive: true });
 for (const file of ORT_FILES) copyFileSync(`${root}node_modules/onnxruntime-web/dist/${file}`, `${root}docs/ort/${file}`);
+// Harbour's other products: public articles and one HNSW index over every
+// public passage (scripts/build-suite.mjs). The withheld documents are
+// published deliberately, in separate files, for the retrieval panel's
+// labelled "filtered out" section; the assistant's index never holds them.
+mkdirSync(`${root}docs/suite`, { recursive: true });
+copyFileSync(`${root}src/kb/suite-articles.json`, `${root}docs/suite/articles.json`);
+copyFileSync(`${root}eval/suite/withheld-articles.json`, `${root}docs/suite/withheld-articles.json`);
+for (const file of ['public.json', 'public.bin', 'public.graph.json', 'withheld.json', 'withheld.bin']) copyFileSync(`${root}eval/suite/index/${file}`, `${root}docs/suite/${file}`);
 writeFileSync(`${root}docs/report.html`, asDocument(reportPage('./')));
 writeFileSync(`${root}docs/.nojekyll`, '');
+
+// Withheld documents (internal, draft, archived, no status) may only be
+// published in their own labelled files.
+// Check every other text file in docs/ and dist/ for their ids and titles.
+const withheldDocs = JSON.parse(readFileSync(`${root}eval/suite/withheld-articles.json`, 'utf8'));
+// An archived article can share its title with the public one that replaced it.
+const publicTitles = new Set([...crmArticles, ...JSON.parse(read('src/kb/suite-articles.json'))].map((a) => a.title));
+const labelled = new Set([`${root}docs/suite/withheld-articles.json`, `${root}docs/suite/withheld.json`]);
+const published = [...walk(`${root}docs`), ...walk(`${root}dist`)].filter((f) => /\.(?:html|js|mjs|json)$/.test(f) && !labelled.has(f));
+for (const file of published) {
+  // The report's appendix lists the withheld documents in one labelled data block.
+  const text = readFileSync(file, 'utf8').replace(/<script type="application\/json" id="withheld-data">[\s\S]*?<\/script>/, '');
+  const hit = withheldDocs.find((d) => text.includes(d.id) || (!publicTitles.has(d.title) && text.includes(d.title)));
+  if (hit) throw new Error(`Withheld document "${hit.id}" found in ${file}`);
+}
+console.log(`checked ${published.length} published files: withheld documents only in their labelled files`);
+
+function walk(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(`${dir}/${e.name}`) : [`${dir}/${e.name}`]));
+}
 
 console.log(`dist/harbour-crm.html  ${(demo.length / 1024).toFixed(0)} KB`);
 console.log(`dist/report.html       ${(report.length / 1024).toFixed(0)} KB`);

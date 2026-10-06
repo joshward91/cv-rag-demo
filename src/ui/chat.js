@@ -4,6 +4,9 @@ import { HelpDesk, DEFAULT_MODEL_USE, MODEL_TIERS } from '../rag/pipeline.js';
 import { ExtractiveGenerator, AnthropicGenerator, ClaudeAiGenerator } from '../rag/generators.js';
 import { promptAsText } from '../rag/prompt.js';
 import { MODELS, DEFAULT_MODEL, formatUsd } from '../rag/pricing.js';
+import { isPublic, withheldReason } from '../rag/suite.js';
+
+const WITHHELD_LABELS = { internal: 'Internal staff document', draft: 'Unpublished draft', archived: 'Archived article', 'no status': 'Document with no status' };
 
 
 const SUGGESTIONS = [
@@ -30,10 +33,16 @@ const SEARCH_STATE = {
 };
 
 export class ChatWidget {
-  constructor({ root, app, retriever, sample, loadEmbedder = null }) {
+  constructor({ root, app, retriever, sample, loadEmbedder = null, loadSuite = null }) {
     this.root = root;
     this.app = app;
     this.retriever = retriever;
+    // Harbour's other products load with the semantic model. Until then the
+    // assistant knows only the CRM's help centre.
+    this.loadSuite = loadSuite;
+    this.suite = null;
+    this.suiteArticles = new Map();
+    this.internal = null;
     // Semantic search loads in the background the first time the chat opens;
     // until it is ready (or if it fails) retrieval is lexical only.
     this.loadEmbedder = loadEmbedder;
@@ -173,16 +182,16 @@ export class ChatWidget {
     const { outcome } = m.result;
     let body;
     if (outcome.type === 'answer') {
-      body = html`<div class="answer">${markdown(outcome.text)}</div>
+      body = html`${m.result.product && m.result.product !== 'Harbour CRM' ? html`<p class="product-note">From the ${m.result.product} help centre.</p>` : ''}<div class="answer">${markdown(outcome.text)}</div>
         <div class="sources"><span class="sources-label">Source${outcome.citations.length > 1 ? 's' : ''}</span>
-          ${outcome.citations.map((id, i) => html`<button type="button" class="citation" data-open-article="${id}"><span class="cite-num">${i + 1}</span>${this.retriever.byId.get(id).title}</button>`)}
-        </div>`;
+          ${outcome.citations.map((id, i) => html`<button type="button" class="citation" data-open-article="${id}"><span class="cite-num">${i + 1}</span>${this.#article(id).title}</button>`)}
+        </div>${this.#alsoIn(m.result)}`;
     } else if (outcome.type === 'clarify') {
       body = html`<p>${outcome.question}</p>
         <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>`;
     } else if (outcome.type === 'suggest') {
-      body = html`<p>I couldn’t find an article that clearly answers this. These look closest. Pick one if it matches, or contact support.</p>
-        <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>
+      body = html`<p>${outcome.otherProducts ? 'Harbour CRM’s help centre doesn’t cover this, but another Harbour product’s does. Pick one if it’s what you meant, or contact support.' : 'I couldn’t find an article that clearly answers this. These look closest. Pick one if it matches, or contact support.'}</p>
+        <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.product ? html`<span class="option-product">${o.product}</span>` : ''}${o.title}</button>`)}</div>
         <button type="button" class="btn small" data-support="${index}">Contact support</button>`;
     } else if (outcome.type === 'blocked') {
       body = html`<p>I can only help with using Harbour CRM, so I can’t follow instructions that change how I work. Ask me how to do something in Harbour CRM.</p>`;
@@ -194,10 +203,10 @@ export class ChatWidget {
       body = html`<p>I couldn’t find a help article that answers this, so I won’t guess.${m.result.guardrail?.action === 'withheld' ? ' I drafted an answer but couldn’t match it to a source, so I held it back.' : ''}</p>
         <button type="button" class="btn small" data-support="${index}">Contact support</button>`;
     }
-    return html`<div class="msg bot">${body}${this.#retrievalPanel(m.result, index)}</div>`;
+    return html`<div class="msg bot">${body}${this.#retrievalPanel(m.result, index, m.filteredOut)}</div>`;
   }
 
-  #retrievalPanel(result, index) {
+  #retrievalPanel(result, index, filteredOut = null) {
     const { retrieval, decision, prompt, reply, guardrail } = result;
     const { analysis } = retrieval;
     const contextIds = prompt?.contextIds ?? [];
@@ -264,6 +273,15 @@ export class ChatWidget {
           : html`<p class="muted">${this.semanticState === 'loading' ? 'The semantic model was still loading, so this question used keyword search only.' : 'Not used in this build: keyword search only.'}</p>`}
 `}
 
+        ${filteredOut?.length
+          ? html`<div class="filtered-out"><h3>Filtered out: documents not published to customers <span class="eval-tag">shown for evaluation only</span></h3>
+            <p class="panel-note">Internal staff documents, unpublished drafts, archived articles and legacy documents with no status that match this question. Only documents whose status is public reach the assistant, so it never saw these and can never cite them. They are published deliberately, in this section only, so you can see what the filter stopped.</p>
+            <div class="table-wrap"><table class="scores">
+              <thead><tr><th>Withheld document</th><th class="num">Keyword coverage</th><th class="num">Similarity</th></tr></thead>
+              <tbody>${filteredOut.map((r) => html`<tr class="excluded"><td><button type="button" class="link-button" data-open-article="${r.id}">${this.#article(r.id)?.title ?? r.id}</button><span class="matched">${this.#article(r.id)?.product ?? ''} · ${withheldReason(this.#article(r.id) ?? {})}</span></td><td class="num">${r.coverage === undefined ? '' : `${Math.round(r.coverage * 100)}%`}</td><td class="num">${r.similarity === undefined ? '' : r.similarity.toFixed(2)}</td></tr>`)}</tbody>
+            </table></div></div>`
+          : ''}
+
         <h3>Prompt</h3>
         ${promptBlock}
 
@@ -275,10 +293,41 @@ export class ChatWidget {
   }
 
   #drawer() {
-    const a = this.retriever.byId.get(this.drawerArticle);
+    const a = this.#article(this.drawerArticle);
+    const byId = this.suiteArticles.has(a.id) ? this.suiteArticles : this.retriever.byId;
     return html`<div class="drawer" role="dialog" aria-label="Help article">
       <button type="button" class="btn small ghost drawer-back" data-chat="close-drawer">← Back to chat</button>
-      ${articleView(a, this.retriever.byId, { linkTarget: 'drawer' })}
+      ${isPublic(a) ? '' : html`<p class="internal-banner"><strong>${WITHHELD_LABELS[withheldReason(a)] ?? 'Withheld document'}, shown for evaluation only.</strong> Only public documents reach the assistant, so it never sees this one. It is published here deliberately so the filter can be checked.</p>`}
+      ${articleView(a, byId, { linkTarget: 'drawer' })}
+    </div>`;
+  }
+
+  /**
+   * Withheld documents that match the question, found by searching them on
+   * their own. The assistant's retrievers never contain them; this is only
+   * for the labelled panel section, so a reviewer can see what was kept out.
+   */
+  async #filteredOut(question, result) {
+    if (!this.internal || result.outcome.type === 'blocked' || !this.embedder) return null;
+    const lexical = this.internal.retriever.retrieve(question).results.slice(0, 3);
+    const [vector] = await this.embedder([question]);
+    const semantic = this.internal.semantic.rank(vector).slice(0, 3);
+    const byId = new Map();
+    for (const r of lexical) byId.set(r.id, { id: r.id, coverage: r.coverage });
+    for (const r of semantic) byId.set(r.id, { ...byId.get(r.id), id: r.id, similarity: r.similarity });
+    return [...byId.values()];
+  }
+
+  /** A help article from the CRM or, once loaded, another Harbour product. */
+  #article(id) {
+    return this.retriever.byId.get(id) ?? this.suiteArticles.get(id);
+  }
+
+  /** "You can also do this in ..." under a CRM answer. */
+  #alsoIn(result) {
+    if (!result.alsoIn?.length) return '';
+    return html`<div class="also-in"><span class="sources-label">Also in other Harbour products</span>
+      ${result.alsoIn.map((a) => html`<button type="button" class="citation" data-open-article="${a.id}"><span class="option-product">${a.product}</span>${a.title}</button>`)}
     </div>`;
   }
 
@@ -292,14 +341,14 @@ export class ChatWidget {
     this.messages.push(pending);
     this.render();
 
-    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse });
+    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse, suite: this.suite });
     let message;
     try {
       const result = await desk.ask(question, { chosenArticleId });
-      message = { role: 'bot', result };
+      message = { role: 'bot', result, filteredOut: await this.#filteredOut(question, result) };
     } catch (error) {
       // Show what retrieval found even when generation fails.
-      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator(), embedder: this.embedder }).ask(question, { chosenArticleId });
+      const result = await new HelpDesk({ retriever: this.retriever, generator: new ExtractiveGenerator(), embedder: this.embedder, suite: this.suite }).ask(question, { chosenArticleId });
       message = { role: 'bot', result, error: `Claude couldn’t answer (${describeError(error)}). Switch to Offline mode in the settings to keep going.` };
     }
     this.messages.splice(this.messages.indexOf(pending), 1, message);
@@ -327,9 +376,16 @@ export class ChatWidget {
     if (this.semanticState !== 'idle') return;
     this.semanticState = 'loading';
     this.render();
-    this.loadEmbedder()
-      .then((embedder) => {
+    Promise.all([this.loadEmbedder(), this.loadSuite?.().catch((error) => console.warn('Other Harbour products unavailable.', error))])
+      .then(([embedder, loaded]) => {
         this.embedder = embedder;
+        if (loaded) {
+          // One index for every product; each retriever filters it to its own articles.
+          this.retriever.semantic = loaded.semantic;
+          this.suite = loaded.suite;
+          this.suiteArticles = new Map([...loaded.articles, ...loaded.internal.articles].map((a) => [a.id, a]));
+          this.internal = loaded.internal;
+        }
         this.semanticState = 'ready';
       })
       .catch((error) => {
@@ -361,7 +417,7 @@ export class ChatWidget {
       this.ask(el.dataset.ask);
     } else if (el.dataset.choose) {
       const source = this.messages[Number(el.dataset.for)];
-      const title = this.retriever.byId.get(el.dataset.choose).title;
+      const title = this.#article(el.dataset.choose).title;
       this.messages.push({ role: 'user', text: title });
       this.ask(source.result.question, { chosenArticleId: el.dataset.choose });
     } else if (el.dataset.support !== undefined) {

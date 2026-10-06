@@ -235,6 +235,14 @@ td.num:not(:last-child) { text-align: left; }
 .sources { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .sources-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 600; }
 .citation { display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 0.82rem; border: 1px solid var(--accent); color: var(--accent); background: var(--surface); padding: 3px 9px 3px 4px; border-radius: 999px; cursor: pointer; text-align: left; }
+.also-in { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.also-in .citation { padding-left: 9px; border-color: var(--line); color: var(--ink); }
+.option-product { display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-faint); margin-right: 6px; }
+.filtered-out { margin-top: 12px; padding: 10px 12px; border: 1px dashed var(--lost); border-radius: 8px; background: color-mix(in srgb, var(--lost) 6%, transparent); }
+.filtered-out h3 { margin-top: 0; }
+.eval-tag { display: inline-block; margin-left: 6px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--lost); }
+.internal-banner { margin: 0 0 12px; padding: 8px 10px; border: 1px solid var(--lost); border-radius: 8px; font-size: 0.82rem; color: var(--ink); background: color-mix(in srgb, var(--lost) 8%, transparent); }
+.product-note { font-size: 0.8rem; color: var(--ink-faint); margin: 0 0 6px; }
 .cite-num { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 0.7rem; font-weight: 700; flex: none; }
 .options { display: flex; flex-direction: column; gap: 6px; }
 .option { border-color: var(--clarify); }

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "draft-crm-bulk-edit-contact-phone",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Bulk edit contact phone numbers",
+    "aliases": [
+      "change many contact phone numbers at once",
+      "mass update phone numbers",
+      "bulk phone number edit"
+    ],
+    "body": "Draft: waiting on final UI labels from design. Feature not released yet.\n\nIf your client list has changed phone providers or area codes, you will be able to update several contacts' phone numbers in one go.\n\n1. Open **Contacts** and tick the boxes beside the contacts you want to change.\n2. Choose **[bulk action menu name TBC]** then **Edit phone**.\n3. Pick a rule: **Replace prefix**, **Reformat numbers** or **Set a single number**.\n4. Review the preview table and select **[confirm button TBC]**.\n\nTODO: confirm the maximum batch size (currently 500 in testing) and whether the change shows in the activity timeline.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-contact-merge-tool",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Merge duplicate contacts with the new merge tool",
+    "aliases": [
+      "combine two contacts into one",
+      "duplicate contact merge",
+      "fix duplicate contacts"
+    ],
+    "body": "Draft: not for publication until the merge tool leaves beta.\n\nWhen the same customer of yours appears twice, the merge tool combines both records into one and keeps the history.\n\n1. Open **Contacts** > **[Duplicates tab, name TBC]**.\n2. Select a suggested pair, or tick two contacts and choose **Merge**.\n3. For each field that differs, choose which value to keep.\n4. Select **[Merge contacts button TBC]**.\n\nNotes and deals from both records are attached to the surviving contact. TODO: screenshots, and decide whether merges can be undone within 30 days. Legal still to review the wording about data retention.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-ai-suggested-deal-stages",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Deals",
+    "title": "AI-suggested deal stages",
+    "aliases": [
+      "automatic deal stage suggestions",
+      "let Harbour suggest the next stage",
+      "smart pipeline suggestions"
+    ],
+    "body": "Draft: EDITOR NOTE - feature name may change before launch.\n\nHarbour can look at recent emails, calls and notes on a deal and suggest which pipeline stage it belongs in. Suggestions never move a deal on their own.\n\n1. Open a deal from **Deals**.\n2. Look for the **[Suggested stage badge TBC]** beside the current stage.\n3. Select **Accept** to move the deal, or **Dismiss** to hide the suggestion.\n\nTo switch suggestions off for your whole account, a client administrator can go to **Settings** > **[AI features, label TBC]**.\n\nTODO: add accuracy disclaimer from legal and the list of supported languages.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-add-contact-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "How to add a contact (rewrite)",
+    "aliases": [
+      "create a new contact",
+      "add a customer to my CRM",
+      "new contact record"
+    ],
+    "body": "Draft rewrite - do not publish until the new contact form ships in the October release.\n\nA contact is one of your own customers or prospects stored in your Harbour CRM.\n\n1. Select **+ New** at the top of the screen and choose **Contact**.\n2. Enter a **First name** and **Email**. Everything else is optional.\n3. Add a **Phone** number with its country code.\n4. Start typing in **Company** to link an existing business, or select **[Create company, label TBC]**.\n5. Select **Save**.\n\nTODO: replace screenshot 2, new form has a Source field. Check whether duplicate warning text is final.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-update-contact-phone-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Update a contact's phone number (rewrite)",
+    "aliases": [
+      "change a contact's phone",
+      "edit customer phone number",
+      "contact phone number wrong"
+    ],
+    "body": "Draft: needs review by support before going live.\n\nNeed to correct the phone number stored for one of your contacts? You can edit it inline from the contact's page.\n\n1. Open **Contacts** and search for the person.\n2. Hover over the **Phone** field and select the pencil icon.\n3. Type the new number including the country code.\n4. Press **Enter** or select **[tick icon, name TBC]** to save.\n\nIf a contact has more than one number, use **Add another phone** and mark one as **Primary**.\n\nTODO: confirm the validation message wording. This is separate from the client contact number in account settings.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-change-contact-email-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Change a contact's email address (rewrite)",
+    "aliases": [
+      "edit contact email",
+      "update customer email in CRM",
+      "fix contact email typo"
+    ],
+    "body": "Draft: rewrite in progress, waiting on screenshots.\n\nTo change the email address of one of your contacts:\n\n1. Go to **Contacts** and open the contact record.\n2. Select **Edit** in the top right corner.\n3. Replace the address in the **Email** field.\n4. Select **Save changes**.\n\nHarbour checks the format of the new address and warns you if another contact already uses it. Previous addresses are kept in the **History** tab so past email threads stay linked.\n\nTODO: explain what happens to mailing list subscriptions when the address changes [wording TBC with Mail team].",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-delete-contact-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Delete a contact (rewrite)",
+    "aliases": [
+      "remove a contact from CRM",
+      "erase customer record",
+      "delete a customer"
+    ],
+    "body": "Draft: policy wording on recovery period still being confirmed.\n\nDeleting a contact removes the person from your lists, but you may be able to recover them for a short time.\n\n1. Open **Contacts** and select the contact.\n2. Choose the **...** menu then **Delete contact**.\n3. Read the confirmation message and select **[Delete button label TBC]**.\n\nLinked deals stay in your pipeline but show **Contact removed**. Linked companies are not affected.\n\nTODO: confirm whether the recovery period is 14 or 30 days. Need a separate paragraph for client administrators who must delete data on request.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-export-contacts-csv-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Export contacts to CSV (rewrite)",
+    "aliases": [
+      "download my contacts",
+      "export customer list",
+      "contacts to spreadsheet"
+    ],
+    "body": "Draft: the export wizard is being redesigned, labels will change.\n\nYou can download your contacts as a CSV file to open in a spreadsheet.\n\n1. Open **Contacts**.\n2. Apply a filter if you only need some contacts, or leave it blank for everyone.\n3. Select **Export** then **[CSV option, name TBC]**.\n4. Choose the columns to include.\n5. Select **Download**. Large lists are emailed to the client's account owner as a link.\n\nTODO: state the row limit (50,000?) and which roles can export. Add a note on how custom fields appear as columns.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-link-contact-to-company-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Companies",
+    "title": "Link a contact to a company (rewrite)",
+    "aliases": [
+      "associate a contact with a business",
+      "attach contact to company",
+      "set a contact's company"
+    ],
+    "body": "Draft: editor note, check terms with design (is it Company or Organisation in the new UI?).\n\n1. Open the contact from **Contacts**.\n2. In the **Company** field, start typing the business name.\n3. Select the match from the list, or choose **[Create new company TBC]** if it does not exist yet.\n4. Select **Save**.\n\nA contact can be linked to one primary company and several secondary ones. The contact then appears on the company's **People** panel.\n\nTo unlink, clear the field and save.\n\nTODO: new screenshot for the secondary company picker.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-add-company-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Companies",
+    "title": "Add a company (rewrite)",
+    "aliases": [
+      "create a company record",
+      "new business in CRM",
+      "add an organisation"
+    ],
+    "body": "Draft: rewrite waiting on final UI labels from design.\n\nCompanies are the businesses your contacts work for.\n\n1. Select **+ New** then **Company**.\n2. Enter the **Company name**. This is the only required field.\n3. Add the **Website**, **Phone** and **Address** if you have them.\n4. Choose an **Owner** from your team.\n5. Select **Save company**.\n\nOnce saved, use **Add contact** on the company page to link people straight away.\n\nTODO: describe the website lookup that auto-fills the logo [feature flag, not live yet].",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-edit-company-details-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Companies",
+    "title": "Edit a company's phone, website or address (rewrite)",
+    "aliases": [
+      "change company phone number",
+      "update company website",
+      "change business address in CRM"
+    ],
+    "body": "Draft: pending review. Address autocomplete is not available to every client yet.\n\n1. Go to **Companies** and open the company.\n2. Select **Edit details**.\n3. Update the **Phone**, **Website** or **Address** fields. For the address, start typing and pick a suggestion, or use **Enter manually**.\n4. Select **Save**.\n\nChanges apply immediately and are shown on every linked contact.\n\nTODO: add the [Billing address checkbox, label TBC] explanation and mention that website URLs are checked for https:// automatically.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-create-deal-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Deals",
+    "title": "Create a deal (rewrite)",
+    "aliases": [
+      "add a new deal",
+      "start a sales opportunity",
+      "new deal in pipeline"
+    ],
+    "body": "Draft rewrite, do not publish. The stage picker is changing.\n\nA deal tracks a possible sale to one of your contacts.\n\n1. Open **Deals** and select **+ New deal**.\n2. Give the deal a **Name** and an **Amount**.\n3. Choose the **Contact** and, if relevant, the **Company**.\n4. Pick a **Pipeline** and starting **Stage**.\n5. Set an **Expected close date**.\n6. Select **Create**.\n\nThe amount uses the currency chosen for your account.\n\nTODO: screenshot of [Stage picker, name TBC]. Check whether Expected close date will become required.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-mark-deal-won-lost-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Deals",
+    "title": "Mark a deal as won or lost (rewrite)",
+    "aliases": [
+      "close a deal",
+      "deal lost reason",
+      "set deal to won"
+    ],
+    "body": "Draft: the lost-reason list is not final.\n\nWhen a sale is decided, close the deal so your reports stay accurate.\n\n1. Open the deal.\n2. Select **Won** or **Lost** at the top of the page.\n3. If you chose **Lost**, pick a **Reason** from the list [reason names TBC].\n4. Select **Confirm**.\n\nWon deals count toward your revenue report on the close date you set. You can reopen a closed deal from the **...** menu using **Reopen deal**.\n\nTODO: describe how Invoicing can create an invoice from a won deal, once that link is announced.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-move-deal-stage-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Deals",
+    "title": "Move a deal to another stage (rewrite)",
+    "aliases": [
+      "change deal stage",
+      "drag deal in pipeline",
+      "advance a deal"
+    ],
+    "body": "Draft: keyboard shortcuts section is a placeholder.\n\nThere are two ways to move a deal along your pipeline.\n\nFrom the board view:\n1. Open **Deals** and choose **Board**.\n2. Drag the deal card into the next column.\n\nFrom the deal page:\n1. Open the deal.\n2. Select the stage name at the top, then pick a new stage from the list.\n\nMoving a deal records the change in its timeline. Some stages may ask for extra details, such as a **Next step**.\n\nTODO: [keyboard shortcut table] and a note about stages that require approval.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-create-custom-field-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Settings",
+    "title": "Create a custom field (rewrite)",
+    "aliases": [
+      "add a custom field to contacts",
+      "new field in CRM",
+      "extra contact field"
+    ],
+    "body": "Draft: field types list will grow before launch.\n\nCustom fields store details that Harbour does not track out of the box, such as a customer's account manager or renewal month.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select the record type: **Contacts**, **Companies** or **Deals**.\n3. Choose **Add field**.\n4. Enter a **Label** and pick a **Field type** such as Text, Number, Date or Dropdown.\n5. Select **Save**.\n\nThe field appears at the bottom of the record straight away.\n\nTODO: add [Required toggle, label TBC] and the limit of fields per record type.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-rename-custom-field-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Settings",
+    "title": "Rename a custom field (rewrite)",
+    "aliases": [
+      "change custom field label",
+      "edit custom field name",
+      "relabel a field"
+    ],
+    "body": "Draft: confirm with engineering that renaming keeps report filters working.\n\n1. Go to **Settings** > **Custom fields**.\n2. Find the field in the list for Contacts, Companies or Deals.\n3. Select the pencil icon beside it.\n4. Type the new **Label**.\n5. Select **Save**.\n\nThe field type cannot be changed once data has been entered. Existing values and report filters keep working under the new name.\n\nTODO: the internal field key never changes, so API users are unaffected [check wording]. Add screenshot with the new [Rename dialog, label TBC].",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-delete-custom-field-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Settings",
+    "title": "Delete a custom field (rewrite)",
+    "aliases": [
+      "remove a custom field",
+      "get rid of a field in CRM",
+      "custom field deletion warning"
+    ],
+    "body": "Draft: wording of the warning is still with legal.\n\nDeleting a custom field removes its values from every record, so export your data first if you may need it.\n\n1. Go to **Settings** > **Custom fields**.\n2. Open the correct tab: **Contacts**, **Companies** or **Deals**.\n3. Select the **...** menu beside the field and choose **Delete**.\n4. Type the field label to confirm, then select **[Delete field button TBC]**.\n\nOnly client administrators can delete fields.\n\nTODO: document the 30-day recovery option if it makes the release. Link to the export article.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-client-contact-number-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Account",
+    "title": "Change your client contact number (rewrite)",
+    "aliases": [
+      "update our business phone in account settings",
+      "change account phone number",
+      "our company contact number"
+    ],
+    "body": "Draft: terminology check - keep 'client' for the business that uses Harbour.\n\nThe client contact number is the phone number Harbour uses to reach your business about your account. It is not the phone number of one of your contacts.\n\n1. Select your profile picture then **Account settings**.\n2. Open the **Business details** tab.\n3. Edit **Client contact number**.\n4. Select **Save**. [Verification step with SMS code - TBC]\n\nOnly client administrators can change this number.\n\nTODO: say whether support calls are redirected immediately.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-change-billing-email-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Account",
+    "title": "Change the billing email (rewrite)",
+    "aliases": [
+      "update billing contact email",
+      "where invoices for Harbour are sent",
+      "change subscription invoice email"
+    ],
+    "body": "Draft: rewrite pending, billing page is moving.\n\nHarbour sends your subscription receipts to the billing email on your account.\n\n1. Select your profile picture then **Account settings**.\n2. Open **Billing** > **[Billing contacts, tab name TBC]**.\n3. Select **Edit** beside **Billing email**.\n4. Enter the new address and select **Save**.\n\nA confirmation link is sent to the new address and the change takes effect once it is clicked. You can add a second address under **Additional recipients**.\n\nTODO: check that this is only available to the account owner.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-change-currency-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Account",
+    "title": "Change your account currency (rewrite)",
+    "aliases": [
+      "switch currency in CRM",
+      "deal amounts show wrong currency",
+      "set default currency"
+    ],
+    "body": "Draft: multi-currency support is unreleased. This article covers the single default currency only for now.\n\n1. Go to **Settings** > **Account** > **Regional**.\n2. Open the **Currency** drop-down.\n3. Choose the new currency.\n4. Select **Save**.\n\nExisting deal amounts keep their numbers; they are not converted. Reports show a notice for any deals created in a previous currency.\n\nTODO: [per-deal currency toggle, label TBC] and how exchange rates will be sourced. Warn about changing currency mid-quarter.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-reset-password-rewrite",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Account",
+    "title": "Reset your password (rewrite)",
+    "aliases": [
+      "forgot my password",
+      "can't log in to Harbour",
+      "change password"
+    ],
+    "body": "Draft: security team reviewing the reset email wording.\n\nIf you cannot sign in:\n\n1. On the sign-in page select **Forgot password?**\n2. Enter the email address you use for Harbour and select **Send reset link**.\n3. Open the email and select **Choose a new password**. The link works for 60 minutes.\n4. Enter a new password of at least 12 characters and select **[Set password button TBC]**.\n\nIf you are already signed in, go to **Account settings** > **Security** > **Change password**.\n\nTODO: add the passkey option once it is released. Clarify what happens if the email never arrives.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-restore-deleted-contacts",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Restore deleted contacts from the recycle bin",
+    "aliases": [
+      "undo contact delete",
+      "recover a deleted customer",
+      "contact recycle bin"
+    ],
+    "body": "Draft: unreleased feature, targeted for the next quarterly release.\n\nDeleted contacts will be held in a recycle bin so you can bring them back.\n\n1. Open **Contacts** and select **[Recycle bin icon TBC]**.\n2. Tick the contacts you want to bring back.\n3. Select **Restore**.\n\nRestored contacts return with their notes, linked companies and deal history. Contacts are removed permanently after the retention period.\n\nTODO: retention period (30 days?), who can see the bin, and a note that bulk deletes by import rollback are handled separately.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-import-contacts-v2",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Contacts",
+    "title": "Import contacts from a spreadsheet (new importer)",
+    "aliases": [
+      "upload contacts CSV",
+      "bring in customer list",
+      "import contacts to Harbour"
+    ],
+    "body": "Draft: new importer is in internal testing, so labels are provisional.\n\n1. Open **Contacts** and select **Import**.\n2. Drop in a CSV or XLSX file.\n3. On the mapping screen, match each column to a Harbour field. Unmatched columns can create a new **Custom field**.\n4. Choose what to do with duplicates: **Skip**, **Update** or **[Merge, option TBC]**.\n5. Select **Start import**.\n\nYou will receive an email summary when the import finishes.\n\nTODO: file size limit, supported encodings and an error report example.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-crm-multiple-pipelines",
+    "product": "Harbour CRM",
+    "status": "draft",
+    "category": "Deals",
+    "title": "Set up more than one sales pipeline",
+    "aliases": [
+      "add a second pipeline",
+      "separate pipelines for products",
+      "create pipeline in CRM"
+    ],
+    "body": "Draft: EDITOR NOTE - multiple pipelines launch to Plus plans first.\n\nIf you sell more than one kind of thing, give each its own pipeline with separate stages.\n\n1. Go to **Settings** > **Pipelines**.\n2. Select **Add pipeline**.\n3. Name it and add your **Stages** in order.\n4. For each stage set a **Win probability**.\n5. Select **Save pipeline**.\n\nUse the pipeline switcher at the top of **Deals** to move between them.\n\nTODO: explain moving existing deals between pipelines [UI not ready] and the plan comparison table.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-invoicing-recurring-templates-v2",
+    "product": "Harbour Invoicing",
+    "status": "draft",
+    "category": "Recurring invoices",
+    "title": "Recurring invoice templates v2",
+    "aliases": [
+      "repeat invoices automatically",
+      "set up monthly invoice template",
+      "recurring billing schedule"
+    ],
+    "body": "Draft: templates v2 is not released. Do not link from the live help centre.\n\nRecurring templates let you bill the same customer on a schedule without recreating the invoice.\n\n1. Open **Invoices** > **Recurring**.\n2. Select **New template**.\n3. Choose the customer and add line items.\n4. Under **Schedule** pick **Weekly**, **Monthly** or **[Custom, name TBC]**.\n5. Decide whether to **Send automatically** or **Save as draft**.\n6. Select **Activate**.\n\nTODO: add pause and skip behaviour, and what happens when prices change.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-invoicing-send-reminder-rewrite",
+    "product": "Harbour Invoicing",
+    "status": "draft",
+    "category": "Invoices",
+    "title": "Send an invoice reminder (rewrite)",
+    "aliases": [
+      "chase an overdue invoice",
+      "remind customer to pay",
+      "payment reminder email"
+    ],
+    "body": "Draft rewrite: reminder templates are being renamed.\n\n1. Open **Invoices** and filter by **Overdue**.\n2. Select the invoice.\n3. Choose **Send reminder**.\n4. Pick a template such as **Friendly nudge** or **[Final notice, name TBC]**.\n5. Edit the message if you wish and select **Send**.\n\nThe reminder is logged under **Activity** on the invoice, and the customer sees a pay-now link.\n\nTo send reminders automatically, go to **Settings** > **Reminders**.\n\nTODO: confirm number of days before and after the due date available in the schedule.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-invoicing-partial-payments",
+    "product": "Harbour Invoicing",
+    "status": "draft",
+    "category": "Payments",
+    "title": "Record a partial payment",
+    "aliases": [
+      "customer paid part of an invoice",
+      "part payment",
+      "deposit received on invoice"
+    ],
+    "body": "Draft: not yet released, behind a feature flag.\n\nWhen a customer pays only part of an invoice you can record what arrived and keep the rest open.\n\n1. Open the invoice.\n2. Select **Record payment**.\n3. Enter the **Amount received**. If it is lower than the total, the **[Partial payment banner TBC]** appears.\n4. Choose the **Payment date** and method.\n5. Select **Save**.\n\nThe invoice status changes to **Part paid** and shows the balance due.\n\nTODO: how reminders treat the remaining balance, and how this appears on statements.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-invoicing-change-currency",
+    "product": "Harbour Invoicing",
+    "status": "draft",
+    "category": "Settings",
+    "title": "Change the invoice currency",
+    "aliases": [
+      "bill in a different currency",
+      "set currency on invoice",
+      "switch invoice currency"
+    ],
+    "body": "Draft: waiting on final UI labels from design.\n\nYou can invoice in a currency other than your default one.\n\n1. Create or open a draft invoice.\n2. Select the **Currency** drop-down above the line items.\n3. Choose the currency. The exchange rate is shown beside it.\n4. Review the totals and select **Save**.\n\nTo change your default for all new invoices, go to **Settings** > **Defaults** > **[Default currency, label TBC]**.\n\nTODO: sent invoices cannot change currency - add the workaround of voiding and reissuing, pending policy sign-off.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-mail-create-email-campaign-rewrite",
+    "product": "Harbour Mail",
+    "status": "draft",
+    "category": "Campaigns",
+    "title": "Create an email campaign (rewrite)",
+    "aliases": [
+      "send a newsletter",
+      "make a marketing email",
+      "new mass email"
+    ],
+    "body": "Draft: the new campaign builder replaces three screens with one. Labels will change.\n\n1. Open **Campaigns** and select **New campaign**.\n2. Enter a **Campaign name** and **Subject line**.\n3. Choose your **Audience**, either a list or a saved segment.\n4. Pick a layout and edit the content.\n5. Select **Preview and test** and send yourself a test.\n6. Choose **[Schedule or send button TBC]**.\n\nTODO: add the A/B subject test option and a note about sending limits for new accounts.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-mail-ai-subject-lines",
+    "product": "Harbour Mail",
+    "status": "draft",
+    "category": "Campaigns",
+    "title": "AI subject line suggestions",
+    "aliases": [
+      "generate subject lines",
+      "improve email open rates",
+      "suggested subject"
+    ],
+    "body": "Draft: unreleased. Do not publish until legal approves the AI wording.\n\nWhile writing a campaign, Harbour Mail can suggest subject lines based on your content.\n\n1. In the campaign editor, select the **Subject line** field.\n2. Choose **Suggest subjects**.\n3. Review the three options and select one to use, or **Regenerate**.\n4. Edit the text as needed.\n\nSuggestions are never sent without your approval. The **[Tone selector, label TBC]** lets you pick formal or casual.\n\nTODO: supported languages, and whether content is stored.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-mail-unsubscribe-page",
+    "product": "Harbour Mail",
+    "status": "draft",
+    "category": "Lists",
+    "title": "Customise your unsubscribe page",
+    "aliases": [
+      "edit unsubscribe message",
+      "unsubscribe link wording",
+      "opt-out page"
+    ],
+    "body": "Draft: editor note - screenshots from the staging site only.\n\nEvery campaign includes an unsubscribe link. You can change what people see after they click it.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Unsubscribe page**.\n3. Edit the **Heading** and **Message**.\n4. Turn on **Ask for a reason** if you want feedback.\n5. Select **Save**.\n\nThe page always keeps the required confirmation button.\n\nTODO: add a [Resubscribe link toggle, name TBC] and the legal note for each region.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-desk-assign-ticket-rewrite",
+    "product": "Harbour Desk",
+    "status": "draft",
+    "category": "Tickets",
+    "title": "Assign a ticket to a team member (rewrite)",
+    "aliases": [
+      "give ticket to an agent",
+      "change ticket owner",
+      "reassign a support ticket"
+    ],
+    "body": "Draft: rewrite pending, new ticket sidebar not live.\n\n1. Open **Tickets** and select the ticket.\n2. In the right-hand panel find **Assignee**.\n3. Select the name and choose an agent or a **Team**.\n4. Add an optional **Internal note** and select **Assign**.\n\nThe agent is notified by email and in the Harbour app. To assign several tickets, tick them in the list and use **[Bulk assign, label TBC]**.\n\nTODO: describe what happens when the chosen agent is marked away.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-desk-auto-assign-rules",
+    "product": "Harbour Desk",
+    "status": "draft",
+    "category": "Automation",
+    "title": "Auto-assign tickets by rule",
+    "aliases": [
+      "round robin ticket assignment",
+      "automatic ticket routing",
+      "assign tickets by keyword"
+    ],
+    "body": "Draft: automation rules are unreleased.\n\n1. Go to **Settings** > **Automation** > **Assignment rules**.\n2. Select **New rule**.\n3. Set conditions, for example **Subject contains** or **Channel is**.\n4. Choose an action: **Assign to agent**, **Assign to team** or **[Round robin, name TBC]**.\n5. Drag the rule to set its priority and select **Save**.\n\nRules run when a ticket is created and never override a manual assignment.\n\nTODO: rule limit per account and a troubleshooting section.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-desk-merge-tickets",
+    "product": "Harbour Desk",
+    "status": "draft",
+    "category": "Tickets",
+    "title": "Merge duplicate tickets",
+    "aliases": [
+      "combine two tickets",
+      "same customer opened two tickets",
+      "join support tickets"
+    ],
+    "body": "Draft: waiting on final UI labels from design.\n\nIf a customer writes in twice about the same issue, merge the tickets so replies stay in one place.\n\n1. Open the ticket you want to keep.\n2. Select **...** > **Merge**.\n3. Search for the duplicate by number or subject.\n4. Confirm with **[Merge button TBC]**.\n\nThe duplicate is closed and its messages appear in the main ticket's history, marked as merged.\n\nTODO: merges cannot be undone [confirm], and attachments over 25 MB need a separate note.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-people-update-employee-phone-rewrite",
+    "product": "Harbour People",
+    "status": "draft",
+    "category": "Employees",
+    "title": "Update an employee's phone number (rewrite)",
+    "aliases": [
+      "change staff phone number",
+      "edit employee contact details",
+      "employee mobile number"
+    ],
+    "body": "Draft: field permissions are changing, check with the product team.\n\n1. Open **People** and search for the employee.\n2. Select the **Contact** tab.\n3. Select **Edit** beside **Mobile phone** or **Work phone**.\n4. Enter the new number and select **Save**.\n\nEmployees can also update their own numbers from **My profile**. HR managers decide in **Settings** > **Permissions** whether staff may do this.\n\nTODO: [Emergency contact section, name TBC], and say whether payroll is notified of changes.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-people-bulk-leave-import",
+    "product": "Harbour People",
+    "status": "draft",
+    "category": "Leave",
+    "title": "Import leave balances in bulk",
+    "aliases": [
+      "upload leave balances",
+      "set leave for all staff",
+      "leave entitlement CSV"
+    ],
+    "body": "Draft: unreleased, due in the next People update.\n\n1. Go to **Leave** > **Balances**.\n2. Select **Import**.\n3. Download the **template file** and fill in one row per employee.\n4. Upload the file and review the preview.\n5. Select **[Apply balances, button TBC]**.\n\nBalances replace the current figure for each leave type listed in the file.\n\nTODO: explain how carry-over days are handled, how errors are reported, and whether this works for part-year employees.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-people-emergency-contact",
+    "product": "Harbour People",
+    "status": "draft",
+    "category": "Employees",
+    "title": "Add an employee emergency contact",
+    "aliases": [
+      "emergency contact details",
+      "next of kin",
+      "who to call for staff"
+    ],
+    "body": "Draft: editor note - sensitive data article, privacy review required.\n\n1. Open the employee's record in **People**.\n2. Select the **Personal** tab.\n3. Under **Emergency contacts**, choose **Add contact**.\n4. Enter the **Name**, **Relationship** and **Phone**.\n5. Select **Save**.\n\nOnly HR managers and the employee can see these details.\n\nTODO: maximum number of contacts, [consent checkbox, label TBC], and retention wording after an employee leaves.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-projects-create-project-rewrite",
+    "product": "Harbour Projects",
+    "status": "draft",
+    "category": "Projects",
+    "title": "Create a project (rewrite)",
+    "aliases": [
+      "start a new project",
+      "set up a project",
+      "new project in Harbour"
+    ],
+    "body": "Draft: new project wizard in progress.\n\n1. Select **+ New** and choose **Project**.\n2. Enter a **Project name** and choose a **Colour**.\n3. Pick **Start from scratch** or a **Template**.\n4. Invite teammates under **Members**.\n5. Set a **Start date** and **Due date**.\n6. Select **Create project**.\n\nYour new project opens on the **Board** view.\n\nTODO: update the template picker screenshot, mention [Client access toggle, label TBC], and describe the privacy options once they are final.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-projects-gantt-view",
+    "product": "Harbour Projects",
+    "status": "draft",
+    "category": "Views",
+    "title": "Use the timeline (Gantt) view",
+    "aliases": [
+      "see project schedule",
+      "task dependencies chart",
+      "gantt chart"
+    ],
+    "body": "Draft: timeline view is unreleased. Screenshots are mock-ups.\n\n1. Open a project and select **Timeline** from the view switcher.\n2. Drag the ends of a bar to change the start or due date.\n3. To link tasks, drag from the dot on one bar to another.\n4. Use **Zoom** to switch between days, weeks and months.\n\nDependent tasks move automatically if you turn on **[Auto-shift, name TBC]**.\n\nTODO: milestone markers, critical path highlight and a note on how the view works on phones.",
+    "notConfusedWith": []
+  },
+  {
+    "id": "draft-projects-project-templates",
+    "product": "Harbour Projects",
+    "status": "draft",
+    "category": "Projects",
+    "title": "Save a project as a template",
+    "aliases": [
+      "reuse a project setup",
+      "project template",
+      "duplicate project structure"
+    ],
+    "body": "Draft: waiting on final UI labels from design.\n\n1. Open the project you want to reuse.\n2. Select **...** > **Save as template**.\n3. Name the template and choose what to keep: **Tasks**, **Sections**, **Members**, **Due date offsets**.\n4. Select **Save template**.\n\nYour template appears in **New project** > **Templates**. Edit or delete it later from **Settings** > **Templates**.\n\nTODO: sharing templates between workspaces [not decided], and the limit on tasks per template.",
+    "notConfusedWith": []
+  }
+]

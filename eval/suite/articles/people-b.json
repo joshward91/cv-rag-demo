@@ -1,0 +1,1729 @@
+[
+ {
+  "id": "people-request-annual-leave",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Request annual leave",
+  "aliases": [
+   "book time off",
+   "apply for holiday leave",
+   "take a holiday",
+   "ask for days off"
+  ],
+  "body": "1. Go to **Leave** and select **My leave**.\n2. Select **Request leave**.\n3. Choose **Annual leave** from the **Leave type** list.\n4. Pick your **Start date** and **End date**.\n5. Check the **Hours requested** total, which updates automatically.\n6. Add a message for your manager if you wish.\n7. Select **Submit request**.\n\nYour manager is notified straight away and you will get an email when they respond.",
+  "notConfusedWith": [
+   "people-request-half-day-leave",
+   "people-add-leave-on-behalf"
+  ]
+ },
+ {
+  "id": "people-cancel-leave-request",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Cancel a leave request",
+  "aliases": [
+   "withdraw my leave",
+   "I don't need the days off any more",
+   "undo a leave booking",
+   "pull a leave request"
+  ],
+  "body": "1. Go to **Leave** and select **My leave**.\n2. Open the **Requests** tab.\n3. Find the request you want to cancel and select it.\n4. Select **Cancel request**.\n5. Confirm by selecting **Yes, cancel**.\n\nIf the leave was already approved, the hours go back into your balance and your manager is told about the change.",
+  "notConfusedWith": [
+   "people-decline-leave-request"
+  ]
+ },
+ {
+  "id": "people-approve-leave-request",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Approve a leave request",
+  "aliases": [
+   "accept time off",
+   "say yes to holiday request",
+   "sign off leave",
+   "okay an employee's leave"
+  ],
+  "body": "1. Go to **Leave** and select **Approvals**.\n2. Open the **Pending** tab.\n3. Select the request to see the dates, hours and the employee's remaining balance.\n4. Check the **Team calendar** panel for clashes.\n5. Select **Approve**.\n\nThe employee is emailed and the leave appears on the team calendar.",
+  "notConfusedWith": [
+   "people-decline-leave-request",
+   "people-bulk-approve-timesheets"
+  ]
+ },
+ {
+  "id": "people-decline-leave-request",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Decline a leave request",
+  "aliases": [
+   "reject time off",
+   "say no to holiday",
+   "turn down leave",
+   "refuse an employee's leave"
+  ],
+  "body": "1. Go to **Leave** and select **Approvals**.\n2. Open the **Pending** tab and select the request.\n3. Select **Decline**.\n4. Enter a reason in the **Message to employee** box. This is required.\n5. Select **Confirm decline**.\n\nThe employee is emailed your reason and their balance is left unchanged.",
+  "notConfusedWith": [
+   "people-approve-leave-request",
+   "people-cancel-leave-request"
+  ]
+ },
+ {
+  "id": "people-check-leave-balance",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Check your leave balance",
+  "aliases": [
+   "how much leave do I have",
+   "see remaining holiday days",
+   "annual leave left",
+   "view my sick leave hours"
+  ],
+  "body": "1. Go to **Leave** and select **My leave**.\n2. Look at the **Balances** panel at the top of the page.\n3. Select a leave type to see its history, including accruals and leave taken.\n4. Turn on **Show projected balance** and choose a future date to see what you will have by then.\n\nBalances are shown in hours. Select **Show in days** to switch the view.",
+  "notConfusedWith": [
+   "people-adjust-employee-leave-balance"
+  ]
+ },
+ {
+  "id": "people-add-leave-type",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Add a leave type",
+  "aliases": [
+   "create a new kind of leave",
+   "set up study leave",
+   "new leave category",
+   "add parental leave option"
+  ],
+  "body": "1. Go to **Settings** and select **Leave**.\n2. Select **Leave types**, then **Add leave type**.\n3. Enter a **Name**, such as Study leave.\n4. Choose whether the leave is **Paid** or **Unpaid**.\n5. Choose whether it **Accrues** over time or is a **Fixed allowance**.\n6. Select the employees or groups it applies to.\n7. Select **Save**.",
+  "notConfusedWith": [
+   "people-delete-leave-type",
+   "people-set-leave-accrual-rate"
+  ]
+ },
+ {
+  "id": "people-adjust-employee-leave-balance",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Adjust an employee's leave balance",
+  "aliases": [
+   "correct leave hours",
+   "add leave days manually",
+   "fix wrong leave balance",
+   "change someone's leave balance"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Leave** tab.\n3. Select **Adjust balance** next to the leave type.\n4. Enter the number of hours to add or remove.\n5. Enter a **Reason**. It is saved in the audit history.\n6. Select **Apply adjustment**.",
+  "notConfusedWith": [
+   "people-check-leave-balance",
+   "people-set-leave-accrual-rate"
+  ]
+ },
+ {
+  "id": "people-set-leave-accrual-rate",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Set the leave accrual rate",
+  "aliases": [
+   "change how fast leave builds up",
+   "accrual settings",
+   "how many hours of leave per pay run",
+   "configure leave accrual"
+  ],
+  "body": "1. Go to **Settings** and select **Leave**.\n2. Select **Leave types** and open the leave type.\n3. Under **Accrual**, choose **Per hour worked** or **Per pay run**.\n4. Enter the **Hours accrued**.\n5. Set a **Maximum balance** if you want a cap.\n6. Select **Save**.\n\nChanges apply from the next pay run and do not alter past balances.",
+  "notConfusedWith": [
+   "people-adjust-employee-leave-balance",
+   "people-set-up-leave-carry-over"
+  ]
+ },
+ {
+  "id": "people-add-leave-on-behalf",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Add a leave request for an employee",
+  "aliases": [
+   "book leave for someone else",
+   "enter leave for my team member",
+   "log leave on behalf of staff",
+   "record leave after the fact"
+  ],
+  "body": "1. Go to **Leave** and select **Approvals**.\n2. Select **New request**.\n3. Search for and select the **Employee**.\n4. Choose the **Leave type** and enter the dates.\n5. Turn on **Approve immediately** if no approval is needed.\n6. Select **Submit**.",
+  "notConfusedWith": [
+   "people-request-annual-leave"
+  ]
+ },
+ {
+  "id": "people-view-team-leave-calendar",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "View the team leave calendar",
+  "aliases": [
+   "see who is off",
+   "who's on holiday",
+   "team absence calendar",
+   "check staff away this week"
+  ],
+  "body": "1. Go to **Leave** and select **Team calendar**.\n2. Use **Week**, **Month** or **Quarter** to change the view.\n3. Select **Filter** and choose a **Department** or **Location**.\n4. Hover over a coloured bar to see the employee, dates and leave type.\n\nPending requests appear striped, and approved leave appears solid.",
+  "notConfusedWith": [
+   "people-export-leave-report-csv"
+  ]
+ },
+ {
+  "id": "people-export-leave-report-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Export a leave report to CSV",
+  "aliases": [
+   "download leave data",
+   "leave balances spreadsheet",
+   "get leave taken as a file",
+   "save leave report"
+  ],
+  "body": "1. Go to **Leave** and select **Reports**.\n2. Choose **Leave balances** or **Leave taken**.\n3. Set the **Date range** and any **Department** filter.\n4. Select **Run report**.\n5. Select **Export** and choose **CSV**.\n\nThe file downloads to your browser's usual downloads folder.",
+  "notConfusedWith": [
+   "people-export-timesheets-csv",
+   "people-export-pay-run-csv"
+  ]
+ },
+ {
+  "id": "people-add-note-to-leave-request",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Add a note to a leave request",
+  "aliases": [
+   "comment on a leave request",
+   "write a remark on time off",
+   "leave a message on someone's leave",
+   "attach a note to leave"
+  ],
+  "body": "1. Go to **Leave** and select **Approvals**.\n2. Open the request you want to comment on.\n3. Select the **Notes** tab.\n4. Type your comment in the box.\n5. Choose **Visible to employee** or **Managers only**.\n6. Select **Add note**.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-record"
+  ]
+ },
+ {
+  "id": "people-request-half-day-leave",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Request half a day of leave",
+  "aliases": [
+   "take a few hours off",
+   "book part of a day",
+   "short leave request",
+   "leave for an appointment"
+  ],
+  "body": "1. Go to **Leave** and select **My leave**.\n2. Select **Request leave**.\n3. Choose the **Leave type**.\n4. Pick the date and turn on **Partial day**.\n5. Enter the **Start time** and **End time**, or the number of hours.\n6. Select **Submit request**.\n\nThe hours are deducted from your balance once the request is approved.",
+  "notConfusedWith": [
+   "people-request-annual-leave"
+  ]
+ },
+ {
+  "id": "people-set-up-leave-carry-over",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Set up leave carry-over rules",
+  "aliases": [
+   "roll over unused leave",
+   "end of year leave rollover",
+   "limit carried over holidays",
+   "use it or lose it leave"
+  ],
+  "body": "1. Go to **Settings** and select **Leave**.\n2. Open the leave type you want to change.\n3. Select **Carry-over**.\n4. Choose **Carry over all**, **Carry over up to a limit** or **Reset to zero**.\n5. If you chose a limit, enter the maximum **Hours**.\n6. Select the **Rollover date**.\n7. Select **Save**.",
+  "notConfusedWith": [
+   "people-set-leave-accrual-rate"
+  ]
+ },
+ {
+  "id": "people-submit-sick-leave-certificate",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Attach a medical certificate to sick leave",
+  "aliases": [
+   "upload a doctor's note",
+   "add sick note",
+   "provide medical evidence",
+   "send my certificate"
+  ],
+  "body": "1. Go to **Leave** and select **My leave**.\n2. Open the sick leave request from the **Requests** tab.\n3. Select **Add attachment**.\n4. Choose a PDF or image file from your device.\n5. Select **Upload**, then **Save**.\n\nOnly you, your manager and payroll administrators can see the attachment.",
+  "notConfusedWith": [
+   "people-add-note-to-leave-request"
+  ]
+ },
+ {
+  "id": "people-cash-out-annual-leave",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Process a leave cash-out",
+  "aliases": [
+   "pay out some holiday leave",
+   "sell annual leave",
+   "cash in leave hours",
+   "leave payout request"
+  ],
+  "body": "1. Go to **Payroll** and select **Leave cash-outs**.\n2. Select **New cash-out**.\n3. Search for and select the **Employee**.\n4. Enter the **Hours** to pay out. The remaining balance is shown.\n5. Choose the **Pay run** the payment will be included in.\n6. Select **Save**.\n\nThe hours are deducted when the pay run is finalised.",
+  "notConfusedWith": [
+   "people-adjust-employee-leave-balance"
+  ]
+ },
+ {
+  "id": "people-delete-leave-type",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Leave and time off",
+  "title": "Delete a leave type",
+  "aliases": [
+   "remove a leave category",
+   "get rid of old leave type",
+   "archive leave option",
+   "stop using a leave type"
+  ],
+  "body": "You can only delete a leave type that has no leave booked against it. Otherwise, archive it.\n\n1. Go to **Settings** and select **Leave**.\n2. Select **Leave types**.\n3. Open the leave type.\n4. Select **Delete leave type** and confirm.\n\nTo keep the history, select **Archive** instead. Archived types cannot be chosen for new requests.",
+  "notConfusedWith": [
+   "people-add-leave-type"
+  ]
+ },
+ {
+  "id": "people-start-pay-run",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Start a pay run",
+  "aliases": [
+   "process payroll",
+   "run the pay",
+   "create a new pay run",
+   "pay my staff"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Select **New pay run**.\n3. Choose the **Pay schedule**.\n4. Check the **Pay period** and **Payment date**.\n5. Select **Create draft**.\n6. Review each employee's hours and earnings.\n7. Select **Finalise** when everything looks right.\n\nFinalising locks the pay run and generates payslips.",
+  "notConfusedWith": [
+   "people-delete-draft-pay-run",
+   "people-correct-finalised-pay-run"
+  ]
+ },
+ {
+  "id": "people-view-payslip",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "View a payslip",
+  "aliases": [
+   "see my pay",
+   "look at my wages",
+   "check how much I was paid",
+   "open latest payslip"
+  ],
+  "body": "1. Go to **Payroll** and select **My payslips**.\n2. Select the payslip for the pay date you want.\n3. Review the **Earnings**, **Tax**, **Super** and **Net pay** sections.\n4. Select **Year to date** to compare totals.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-download-payslip-pdf"
+  ]
+ },
+ {
+  "id": "people-download-payslip-pdf",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Download a payslip as a PDF",
+  "aliases": [
+   "save payslip",
+   "print my payslip",
+   "get a copy of my pay slip",
+   "payslip for a loan application"
+  ],
+  "body": "1. Go to **Payroll** and select **My payslips**.\n2. Open the payslip you need.\n3. Select **Download PDF**.\n4. Save the file to your device.\n\nYou can download any payslip from the last seven years.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-view-payslip",
+   "people-email-payslips-to-employees"
+  ]
+ },
+ {
+  "id": "people-email-payslips-to-employees",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Email payslips to employees",
+  "aliases": [
+   "send payslips out",
+   "resend payslip",
+   "distribute pay slips",
+   "employee did not get their payslip"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open a finalised pay run.\n3. Select the **Payslips** tab.\n4. Tick the employees to send to, or tick **Select all**.\n5. Select **Email payslips**.\n6. Select **Send**.\n\nEach email goes to the employee's work email address on their profile.",
+  "notConfusedWith": [
+   "people-download-payslip-pdf"
+  ]
+ },
+ {
+  "id": "people-update-employee-bank-details",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Update an employee's bank details",
+  "aliases": [
+   "change bank account",
+   "new BSB and account number",
+   "where to pay wages",
+   "fix payment account"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Pay** tab.\n3. Under **Bank accounts**, select **Edit**.\n4. Enter the **BSB**, **Account number** and **Account name**.\n5. Choose how much of their pay goes into the account.\n6. Select **Save**.\n\nThe new account is used from the next pay run.",
+  "notConfusedWith": [
+   "people-update-employee-tax-details",
+   "people-update-employee-super-fund"
+  ]
+ },
+ {
+  "id": "people-update-employee-tax-details",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Update an employee's tax details",
+  "aliases": [
+   "change tax file number",
+   "tax declaration form",
+   "claim tax-free threshold",
+   "update withholding"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Pay** tab, then **Tax**.\n3. Select **Edit**.\n4. Enter the **Tax file number**.\n5. Update the residency status and tax-free threshold answers.\n6. Select **Save**.\n\nOnly payroll administrators can see the full tax file number.",
+  "notConfusedWith": [
+   "people-update-employee-bank-details"
+  ]
+ },
+ {
+  "id": "people-update-employee-super-fund",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Update an employee's super fund",
+  "aliases": [
+   "change superannuation",
+   "new super account",
+   "switch retirement fund",
+   "add super details"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Pay** tab, then **Superannuation**.\n3. Select **Add fund** or **Change fund**.\n4. Search by fund name or enter the **USI** and **Member number**.\n5. Select **Save**.\n\nSuper contributions use the new fund from the next pay run.",
+  "notConfusedWith": [
+   "people-update-employee-bank-details"
+  ]
+ },
+ {
+  "id": "people-add-allowance-to-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Add an allowance to an employee",
+  "aliases": [
+   "pay a regular allowance",
+   "tool allowance",
+   "add phone allowance",
+   "recurring extra payment"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Pay** tab, then **Pay items**.\n3. Select **Add pay item**.\n4. Choose the **Allowance** category and pick the item.\n5. Enter the **Amount** and how often it is paid.\n6. Set the **Start date**.\n7. Select **Save**.",
+  "notConfusedWith": [
+   "people-add-one-off-bonus"
+  ]
+ },
+ {
+  "id": "people-add-one-off-bonus",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Add a one-off bonus to a pay run",
+  "aliases": [
+   "pay a bonus",
+   "include a lump sum",
+   "extra payment this fortnight",
+   "commission payment once"
+  ],
+  "body": "1. Go to **Payroll** and open the draft pay run.\n2. Select the employee's row.\n3. Select **Add earnings line**.\n4. Choose **Bonus** as the pay item.\n5. Enter the **Amount**.\n6. Select **Save**.\n\nThe bonus is included in this pay run only.",
+  "notConfusedWith": [
+   "people-add-allowance-to-employee"
+  ]
+ },
+ {
+  "id": "people-correct-finalised-pay-run",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Correct a finalised pay run",
+  "aliases": [
+   "fix a pay mistake",
+   "reverse a pay run",
+   "wrong amount paid",
+   "undo payroll"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open the finalised pay run.\n3. Select **More**, then **Reverse pay run**.\n4. Enter a **Reason**.\n5. Select **Reverse**.\n6. Create a new pay run with the correct figures.\n\nReversing is not possible once the payment file has been sent to the bank.",
+  "notConfusedWith": [
+   "people-start-pay-run",
+   "people-delete-draft-pay-run"
+  ]
+ },
+ {
+  "id": "people-delete-draft-pay-run",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Delete a draft pay run",
+  "aliases": [
+   "remove unfinished pay run",
+   "throw away a draft pay",
+   "cancel a pay run I started",
+   "scrap payroll draft"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open the pay run marked **Draft**.\n3. Select **More**, then **Delete draft**.\n4. Confirm by selecting **Delete**.\n\nFinalised pay runs cannot be deleted. Reverse them instead.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-correct-finalised-pay-run"
+  ]
+ },
+ {
+  "id": "people-export-pay-run-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Export a pay run to CSV",
+  "aliases": [
+   "download payroll summary",
+   "pay run spreadsheet",
+   "get wages as a file",
+   "save pay run data"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open the pay run.\n3. Select **Export**.\n4. Choose **CSV** and select the **Summary** or **Detailed** layout.\n5. Select **Download**.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-export-leave-report-csv",
+   "people-export-expenses-csv"
+  ]
+ },
+ {
+  "id": "people-set-up-pay-schedule",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Set up a pay schedule",
+  "aliases": [
+   "weekly or fortnightly pay",
+   "change pay frequency",
+   "pay cycle settings",
+   "create a monthly pay calendar"
+  ],
+  "body": "1. Go to **Settings** and select **Payroll**.\n2. Select **Pay schedules**, then **Add schedule**.\n3. Enter a **Name**.\n4. Choose the **Frequency**: weekly, fortnightly or monthly.\n5. Select the **First pay date**.\n6. Select the employees on this schedule.\n7. Select **Save**.",
+  "notConfusedWith": [
+   "people-start-pay-run"
+  ]
+ },
+ {
+  "id": "people-add-note-to-pay-run",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Add a note to a pay run",
+  "aliases": [
+   "comment on payroll",
+   "leave a remark on a pay run",
+   "write a payroll note",
+   "record why a pay run changed"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open the pay run.\n3. Select the **Notes** tab.\n4. Type your note.\n5. Select **Add note**.\n\nNotes are visible to payroll administrators only.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-record"
+  ]
+ },
+ {
+  "id": "people-mark-pay-run-as-paid",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Mark a pay run as paid",
+  "aliases": [
+   "change pay run status",
+   "confirm wages were paid",
+   "set status to paid",
+   "payment done"
+  ],
+  "body": "1. Go to **Payroll** and select **Pay runs**.\n2. Open a finalised pay run with the status **Awaiting payment**.\n3. Select **Change status**.\n4. Choose **Paid**.\n5. Enter the date the money left your bank account.\n6. Select **Save**.\n\nYou can review the result in the pay run summary before anything is paid.",
+  "notConfusedWith": [
+   "people-start-pay-run"
+  ]
+ },
+ {
+  "id": "people-process-final-pay",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Process a final pay",
+  "aliases": [
+   "pay out a departing employee",
+   "termination pay",
+   "last pay for someone leaving",
+   "resignation payout"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select **More**, then **End employment**.\n3. Enter the **Last day of work** and the **Reason**.\n4. Select **Calculate final pay**.\n5. Review the unused leave payout and any other amounts.\n6. Select **Add to pay run**.",
+  "notConfusedWith": [
+   "people-cash-out-annual-leave"
+  ]
+ },
+ {
+  "id": "people-enter-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Enter hours on your timesheet",
+  "aliases": [
+   "log my hours",
+   "fill in my timesheet",
+   "record time worked",
+   "add my time"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Select the week using the arrows at the top.\n3. Select **Add entry** on the day you worked.\n4. Enter the **Start time** and **End time**.\n5. Choose the **Project** if one applies.\n6. Select **Save**.\n\nYour hours are saved as a draft until you submit them.",
+  "notConfusedWith": [
+   "people-submit-timesheet"
+  ]
+ },
+ {
+  "id": "people-submit-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Submit a timesheet for approval",
+  "aliases": [
+   "send my timesheet to my manager",
+   "finish my timesheet",
+   "hand in hours",
+   "timesheet sign off request"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Check that every day shows the correct hours.\n3. Select **Submit for approval**.\n4. Confirm by selecting **Submit**.\n\nThe status changes from **Draft** to **Submitted**.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-enter-timesheet",
+   "people-recall-submitted-timesheet"
+  ]
+ },
+ {
+  "id": "people-approve-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Approve a timesheet",
+  "aliases": [
+   "sign off hours",
+   "accept an employee's time",
+   "okay a timesheet",
+   "check and approve staff hours"
+  ],
+  "body": "1. Go to **Timesheets** and select **Approvals**.\n2. Select a timesheet marked **Submitted**.\n3. Check the daily totals and any notes.\n4. Select **Approve**.\n\nApproved hours flow into the next pay run automatically.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-bulk-approve-timesheets",
+   "people-reject-timesheet"
+  ]
+ },
+ {
+  "id": "people-reject-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Reject a timesheet",
+  "aliases": [
+   "send a timesheet back",
+   "hours are wrong",
+   "return timesheet to employee",
+   "ask for a timesheet fix"
+  ],
+  "body": "1. Go to **Timesheets** and select **Approvals**.\n2. Open the submitted timesheet.\n3. Select **Reject**.\n4. Enter what needs to change in the **Reason** box.\n5. Select **Send back**.\n\nThe employee is emailed and can edit and resubmit.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-approve-timesheet"
+  ]
+ },
+ {
+  "id": "people-recall-submitted-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Recall a submitted timesheet",
+  "aliases": [
+   "edit timesheet after submitting",
+   "take back my hours",
+   "I made a mistake after submitting",
+   "undo timesheet submission"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Open the week you submitted.\n3. Select **Recall**.\n4. Make your changes.\n5. Select **Submit for approval** again.\n\nYou can only recall a timesheet that has not been approved yet.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-submit-timesheet"
+  ]
+ },
+ {
+  "id": "people-add-note-to-timesheet-entry",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Add a note to a timesheet entry",
+  "aliases": [
+   "comment on an entry",
+   "explain my hours",
+   "write a remark on a time entry",
+   "leave a note on a shift"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Select the entry you want to explain.\n3. Select **Add note**.\n4. Type your note, for example the reason for the overtime.\n5. Select **Save**.\n\nYour manager sees the note when they review your timesheet.",
+  "notConfusedWith": [
+   "people-add-note-to-leave-request"
+  ]
+ },
+ {
+  "id": "people-clock-in-and-out-mobile",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Clock in and out on the mobile app",
+  "aliases": [
+   "start my shift on my phone",
+   "punch the clock",
+   "track time with the app",
+   "finish shift on mobile"
+  ],
+  "body": "1. Open the Harbour People app and tap **Time clock**.\n2. Tap **Clock in** when you start work.\n3. Tap **Start break** and **End break** as needed.\n4. Tap **Clock out** when you finish.\n5. Check the entry under **Timesheets**.\n\nIf location checks are on, allow the app to use your location.",
+  "notConfusedWith": [
+   "people-enter-timesheet"
+  ]
+ },
+ {
+  "id": "people-add-project-code",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Add a project code",
+  "aliases": [
+   "create a job code",
+   "new project to book time against",
+   "set up a cost code",
+   "add client project for timesheets"
+  ],
+  "body": "1. Go to **Settings** and select **Timesheets**.\n2. Select **Projects**, then **Add project**.\n3. Enter a **Name** and **Code**.\n4. Choose whether it is **Billable**.\n5. Select who can book time to it.\n6. Select **Save**.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-delete-project-code"
+  ]
+ },
+ {
+  "id": "people-delete-project-code",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Delete a project code",
+  "aliases": [
+   "remove a project",
+   "get rid of a job code",
+   "archive old project",
+   "stop time being booked to a project"
+  ],
+  "body": "1. Go to **Settings** and select **Timesheets**.\n2. Select **Projects**.\n3. Open the project.\n4. Select **Delete project** and confirm.\n\nIf hours are already booked to the project, select **Archive** instead.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-add-project-code"
+  ]
+ },
+ {
+  "id": "people-delete-timesheet-entry",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Delete a timesheet entry",
+  "aliases": [
+   "remove a time entry",
+   "wrong hours entered",
+   "get rid of a shift",
+   "clear a line on my timesheet"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Select the entry you want to remove.\n3. Select **Delete entry**.\n4. Confirm by selecting **Delete**.\n\nYou cannot delete entries on a timesheet that has been approved.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-recall-submitted-timesheet"
+  ]
+ },
+ {
+  "id": "people-export-timesheets-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Export timesheets to CSV",
+  "aliases": [
+   "download hours worked",
+   "timesheet spreadsheet",
+   "get time data in a file",
+   "save timesheet report"
+  ],
+  "body": "1. Go to **Timesheets** and select **Reports**.\n2. Choose **Hours by employee** or **Hours by project**.\n3. Set the **Date range**.\n4. Select **Run report**.\n5. Select **Export**, then **CSV**.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-export-leave-report-csv",
+   "people-export-pay-run-csv"
+  ]
+ },
+ {
+  "id": "people-set-overtime-rules",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Set overtime rules",
+  "aliases": [
+   "configure time and a half",
+   "overtime rates",
+   "when overtime kicks in",
+   "change penalty rates for hours"
+  ],
+  "body": "1. Go to **Settings** and select **Timesheets**.\n2. Select **Overtime**.\n3. Choose **Daily**, **Weekly** or **Both** as the trigger.\n4. Enter the number of hours before overtime starts.\n5. Choose the **Pay rate multiplier**, such as 1.5.\n6. Select **Save**.",
+  "notConfusedWith": [
+   "people-lock-timesheet-period"
+  ]
+ },
+ {
+  "id": "people-set-timesheet-reminder",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Set a timesheet reminder",
+  "aliases": [
+   "nudge staff to submit",
+   "automatic reminder emails",
+   "remind people to fill timesheets",
+   "chase late timesheets"
+  ],
+  "body": "1. Go to **Settings** and select **Timesheets**.\n2. Select **Reminders**.\n3. Turn on **Remind employees to submit**.\n4. Choose the **Day** and **Time**.\n5. Select **Save**.\n\nEmployees who have already submitted are not reminded.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-set-review-reminders"
+  ]
+ },
+ {
+  "id": "people-copy-previous-week-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Copy last week's timesheet",
+  "aliases": [
+   "repeat my hours",
+   "duplicate previous timesheet",
+   "same hours as last week",
+   "reuse last week's entries"
+  ],
+  "body": "1. Go to **Timesheets** and select **My timesheet**.\n2. Select the current week.\n3. Select **More**, then **Copy previous week**.\n4. Review the copied entries.\n5. Adjust anything that has changed and select **Save**.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-enter-timesheet"
+  ]
+ },
+ {
+  "id": "people-lock-timesheet-period",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Lock a timesheet period",
+  "aliases": [
+   "stop edits to old timesheets",
+   "close the period",
+   "freeze hours after payroll",
+   "prevent changes to past weeks"
+  ],
+  "body": "1. Go to **Timesheets** and select **Periods**.\n2. Find the pay period you want to close.\n3. Select **Lock**.\n4. Confirm by selecting **Lock period**.\n\nLocked periods cannot be edited. Select **Unlock** if you need to make a change.\n\nYou can check the result at any time under **Timesheets**.",
+  "notConfusedWith": [
+   "people-set-overtime-rules"
+  ]
+ },
+ {
+  "id": "people-bulk-approve-timesheets",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Approve several timesheets at once",
+  "aliases": [
+   "approve all timesheets",
+   "batch sign off hours",
+   "mass approve staff time",
+   "approve everyone's hours"
+  ],
+  "body": "1. Go to **Timesheets** and select **Approvals**.\n2. Tick the box next to each timesheet, or tick **Select all**.\n3. Select **Approve selected**.\n4. Confirm by selecting **Approve**.\n\nTimesheets with warnings are skipped so you can review them one by one.",
+  "notConfusedWith": [
+   "people-approve-timesheet"
+  ]
+ },
+ {
+  "id": "people-reopen-approved-timesheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Timesheets",
+  "title": "Reopen an approved timesheet",
+  "aliases": [
+   "change status back to draft",
+   "edit approved hours",
+   "fix an approved timesheet",
+   "unapprove a timesheet"
+  ],
+  "body": "1. Go to **Timesheets** and select **Approvals**.\n2. Open the **Approved** tab.\n3. Select the timesheet.\n4. Select **Change status**, then **Reopen**.\n5. Enter a **Reason** and select **Save**.\n\nYou cannot reopen a timesheet that is already in a finalised pay run.",
+  "notConfusedWith": [
+   "people-recall-submitted-timesheet"
+  ]
+ },
+ {
+  "id": "people-create-review-cycle",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Create a review cycle",
+  "aliases": [
+   "set up annual reviews",
+   "start performance review round",
+   "launch appraisals",
+   "new review period"
+  ],
+  "body": "1. Go to **Performance** and select **Review cycles**.\n2. Select **New cycle**.\n3. Enter a **Name** and choose a **Template**.\n4. Select the **Participants**.\n5. Set the due dates for self-reviews and manager reviews.\n6. Select **Launch cycle**.\n\nParticipants are emailed when the cycle launches.",
+  "notConfusedWith": [
+   "people-change-review-due-date"
+  ]
+ },
+ {
+  "id": "people-start-self-review",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Complete your self-review",
+  "aliases": [
+   "write my own appraisal",
+   "fill in my performance review",
+   "self assessment",
+   "rate myself"
+  ],
+  "body": "1. Go to **Performance** and select **My reviews**.\n2. Open the review marked **Self-review due**.\n3. Answer each question and choose a **Rating**.\n4. Select **Save draft** to finish later.\n5. Select **Submit** when you are done.\n\nYou cannot change your answers after you submit.",
+  "notConfusedWith": [
+   "people-write-manager-review"
+  ]
+ },
+ {
+  "id": "people-write-manager-review",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Write a manager review",
+  "aliases": [
+   "appraise a team member",
+   "complete a performance appraisal",
+   "rate my direct report",
+   "review an employee"
+  ],
+  "body": "1. Go to **Performance** and select **Team reviews**.\n2. Open the employee's review.\n3. Read their self-review.\n4. Enter your comments and choose a **Rating** for each question.\n5. Select **Save draft** or **Complete review**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-start-self-review",
+   "people-share-review-with-employee"
+  ]
+ },
+ {
+  "id": "people-add-goal",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Add a goal",
+  "aliases": [
+   "set an objective",
+   "create a target",
+   "new performance goal",
+   "write a development goal"
+  ],
+  "body": "1. Go to **Performance** and select **Goals**.\n2. Select **Add goal**.\n3. Enter a **Title** and **Description**.\n4. Set the **Due date**.\n5. Choose how it is measured: **Percentage** or **Milestones**.\n6. Select **Save**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-update-goal-progress",
+   "people-delete-goal"
+  ]
+ },
+ {
+  "id": "people-update-goal-progress",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Update goal progress",
+  "aliases": [
+   "mark goal as done",
+   "change goal percentage",
+   "log progress on an objective",
+   "move goal forward"
+  ],
+  "body": "1. Go to **Performance** and select **Goals**.\n2. Open the goal.\n3. Select **Update progress**.\n4. Enter the new percentage or tick the completed milestone.\n5. Add a comment if you wish.\n6. Select **Save**.\n\nChoose **Completed** from the **Status** list to close the goal.",
+  "notConfusedWith": [
+   "people-add-goal"
+  ]
+ },
+ {
+  "id": "people-delete-goal",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Delete a goal",
+  "aliases": [
+   "remove an objective",
+   "get rid of a goal",
+   "cancel a target",
+   "clear out an old goal"
+  ],
+  "body": "1. Go to **Performance** and select **Goals**.\n2. Open the goal.\n3. Select **More**, then **Delete goal**.\n4. Confirm by selecting **Delete**.\n\nDeleted goals are removed from any open reviews.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-add-goal"
+  ]
+ },
+ {
+  "id": "people-request-peer-feedback",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Request peer feedback",
+  "aliases": [
+   "ask colleagues for feedback",
+   "360 review",
+   "get input from coworkers",
+   "invite feedback providers"
+  ],
+  "body": "1. Go to **Performance** and select **Feedback**.\n2. Select **Request feedback**.\n3. Choose the employee the feedback is about.\n4. Search for and select up to eight colleagues.\n5. Choose a **Question set**.\n6. Select **Send requests**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-send-recognition"
+  ]
+ },
+ {
+  "id": "people-add-private-note-to-review",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Add a private note to a review",
+  "aliases": [
+   "manager only comment",
+   "confidential remark on appraisal",
+   "hidden note about an employee review",
+   "write a note employee can't see"
+  ],
+  "body": "1. Go to **Performance** and select **Team reviews**.\n2. Open the review.\n3. Select the **Notes** tab.\n4. Type your note.\n5. Choose **Managers only** as the visibility.\n6. Select **Add note**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-record"
+  ]
+ },
+ {
+  "id": "people-share-review-with-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Share a completed review with an employee",
+  "aliases": [
+   "release review results",
+   "show employee their appraisal",
+   "send the review outcome",
+   "publish a review"
+  ],
+  "body": "1. Go to **Performance** and select **Team reviews**.\n2. Open a review with the status **Completed**.\n3. Select **Share with employee**.\n4. Choose whether to include your **Rating**.\n5. Select **Share**.\n\nThe employee is emailed and can view the review under **My reviews**.",
+  "notConfusedWith": [
+   "people-write-manager-review"
+  ]
+ },
+ {
+  "id": "people-reopen-completed-review",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Reopen a completed review",
+  "aliases": [
+   "change a finished appraisal",
+   "edit a review after completing",
+   "undo review completion",
+   "review status back to in progress"
+  ],
+  "body": "1. Go to **Performance** and select **Review cycles**.\n2. Open the cycle and select the employee's review.\n3. Select **Change status**.\n4. Choose **In progress**.\n5. Enter a **Reason** and select **Save**.\n\nIf the review was already shared, the employee will no longer see it until you share it again.",
+  "notConfusedWith": [
+   "people-share-review-with-employee"
+  ]
+ },
+ {
+  "id": "people-export-review-results-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Export review results to CSV",
+  "aliases": [
+   "download appraisal ratings",
+   "review scores spreadsheet",
+   "get performance data as a file",
+   "save review outcomes"
+  ],
+  "body": "1. Go to **Performance** and select **Reports**.\n2. Select **Review results**.\n3. Choose the **Review cycle**.\n4. Select **Run report**.\n5. Select **Export**, then **CSV**.\n\nThe file opens in Excel or any spreadsheet program and includes one row for each employee in the cycle. You can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-export-timesheets-csv"
+  ]
+ },
+ {
+  "id": "people-add-rating-scale",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Add a rating scale",
+  "aliases": [
+   "change review scoring",
+   "create a 1 to 5 scale",
+   "new ratings for appraisals",
+   "customise rating labels"
+  ],
+  "body": "1. Go to **Settings** and select **Performance**.\n2. Select **Rating scales**, then **Add scale**.\n3. Enter a **Name**.\n4. Add each level with a **Label** and a **Score**.\n5. Select **Save**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-create-review-template"
+  ]
+ },
+ {
+  "id": "people-change-review-due-date",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Change a review due date",
+  "aliases": [
+   "extend the review deadline",
+   "move appraisal date",
+   "give more time for reviews",
+   "push back review cut-off"
+  ],
+  "body": "1. Go to **Performance** and select **Review cycles**.\n2. Open the cycle.\n3. Select **Edit dates**.\n4. Choose a new date for **Self-reviews** or **Manager reviews**.\n5. Select **Save**.\n\nEmployees who have not finished are emailed about the new date.",
+  "notConfusedWith": [
+   "people-create-review-cycle",
+   "people-set-review-reminders"
+  ]
+ },
+ {
+  "id": "people-create-review-template",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Create a review template",
+  "aliases": [
+   "build a review form",
+   "design appraisal questions",
+   "new review questionnaire",
+   "set up review questions"
+  ],
+  "body": "1. Go to **Settings** and select **Performance**.\n2. Select **Templates**, then **New template**.\n3. Enter a **Name**.\n4. Select **Add question** and choose the type, such as **Rating** or **Free text**.\n5. Drag questions to reorder them.\n6. Select **Save**.",
+  "notConfusedWith": [
+   "people-add-rating-scale"
+  ]
+ },
+ {
+  "id": "people-send-recognition",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Send recognition to a colleague",
+  "aliases": [
+   "give kudos",
+   "say thanks to a teammate",
+   "praise a coworker",
+   "shout out"
+  ],
+  "body": "1. Go to **Performance** and select **Recognition**.\n2. Select **Give recognition**.\n3. Search for and select a colleague.\n4. Choose a **Value**, such as Teamwork.\n5. Write a short message.\n6. Select **Send**.\n\nRecognition appears on the colleague's profile and in their next review.",
+  "notConfusedWith": [
+   "people-request-peer-feedback"
+  ]
+ },
+ {
+  "id": "people-set-review-reminders",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Performance reviews",
+  "title": "Set review reminders",
+  "aliases": [
+   "automatic review nudges",
+   "chase overdue appraisals",
+   "remind managers to finish reviews",
+   "reminder emails for reviews"
+  ],
+  "body": "1. Go to **Performance** and select **Review cycles**.\n2. Open the cycle and select **Reminders**.\n3. Turn on **Send reminders**.\n4. Choose how many days before the due date to send them.\n5. Select **Save**.\n\nYou can review the outcome at any time from the **Performance** page.",
+  "notConfusedWith": [
+   "people-set-timesheet-reminder",
+   "people-change-review-due-date"
+  ]
+ },
+ {
+  "id": "people-submit-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Submit an expense claim",
+  "aliases": [
+   "claim back money I spent",
+   "reimbursement request",
+   "new expense",
+   "put in expenses"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Select **New claim**.\n3. Enter the **Date**, **Amount** and **Merchant**.\n4. Choose a **Category**.\n5. Attach your receipt.\n6. Select **Submit for approval**.\n\nYou can add several expenses to one claim before you submit.",
+  "notConfusedWith": [
+   "people-add-mileage-claim",
+   "people-edit-draft-expense-claim"
+  ]
+ },
+ {
+  "id": "people-attach-receipt",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Attach a receipt to an expense",
+  "aliases": [
+   "upload receipt photo",
+   "add proof of purchase",
+   "missing receipt",
+   "scan a receipt"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Open the expense.\n3. Select **Add receipt**.\n4. Choose a photo or PDF from your device, or take a picture in the mobile app.\n5. Select **Upload**.\n\nEach receipt can be up to 10 MB.",
+  "notConfusedWith": [
+   "people-submit-expense-claim"
+  ]
+ },
+ {
+  "id": "people-edit-draft-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Edit a draft expense claim",
+  "aliases": [
+   "change an unsent claim",
+   "fix amount on my claim",
+   "update a saved expense",
+   "correct claim before submitting"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Open the **Drafts** tab.\n3. Select the claim.\n4. Change the details you need, such as the **Amount** or **Category**.\n5. Select **Save**.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-submit-expense-claim"
+  ]
+ },
+ {
+  "id": "people-delete-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Delete an expense claim",
+  "aliases": [
+   "remove a claim",
+   "cancel my expense",
+   "get rid of an expense",
+   "withdraw reimbursement request"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Open the claim.\n3. Select **More**, then **Delete claim**.\n4. Confirm by selecting **Delete**.\n\nYou can only delete claims that are in **Draft** or **Submitted** status.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-edit-draft-expense-claim"
+  ]
+ },
+ {
+  "id": "people-approve-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Approve an expense claim",
+  "aliases": [
+   "sign off an expense",
+   "accept reimbursement",
+   "okay staff spending",
+   "approve a claim"
+  ],
+  "body": "1. Go to **Expenses** and select **Approvals**.\n2. Open a claim marked **Submitted**.\n3. Check the receipt, amount and category.\n4. Select **Approve**.\n\nApproved claims are ready to be paid in the next pay run.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-reject-expense-claim",
+   "people-reimburse-claims-in-pay-run"
+  ]
+ },
+ {
+  "id": "people-reject-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Reject an expense claim",
+  "aliases": [
+   "decline a claim",
+   "send an expense back",
+   "refuse reimbursement",
+   "claim not eligible"
+  ],
+  "body": "1. Go to **Expenses** and select **Approvals**.\n2. Open the claim.\n3. Select **Reject**.\n4. Enter a reason, such as a missing receipt.\n5. Select **Confirm**.\n\nThe employee can edit the claim and submit it again.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-approve-expense-claim"
+  ]
+ },
+ {
+  "id": "people-add-expense-category",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Add an expense category",
+  "aliases": [
+   "create a new expense type",
+   "set up a spending category",
+   "new claim category",
+   "add travel category"
+  ],
+  "body": "1. Go to **Settings** and select **Expenses**.\n2. Select **Categories**, then **Add category**.\n3. Enter a **Name**.\n4. Choose whether a **Receipt is required**.\n5. Enter the **Account code** used by your accountant.\n6. Select **Save**.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-set-expense-limit"
+  ]
+ },
+ {
+  "id": "people-set-expense-limit",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Set an expense spending limit",
+  "aliases": [
+   "cap claim amounts",
+   "maximum for meals",
+   "limit what staff can claim",
+   "per-claim ceiling"
+  ],
+  "body": "1. Go to **Settings** and select **Expenses**.\n2. Select **Categories** and open a category.\n3. Under **Spending limit**, enter the **Maximum amount**.\n4. Choose **Per claim** or **Per month**.\n5. Choose whether to **Block** or **Warn** when the limit is passed.\n6. Select **Save**.",
+  "notConfusedWith": [
+   "people-add-expense-category"
+  ]
+ },
+ {
+  "id": "people-export-expenses-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Export expenses to CSV",
+  "aliases": [
+   "download claims",
+   "expenses spreadsheet",
+   "get expense data as a file",
+   "save expense report"
+  ],
+  "body": "1. Go to **Expenses** and select **Reports**.\n2. Select **All claims**.\n3. Set the **Date range** and **Status**.\n4. Select **Run report**.\n5. Select **Export**, then **CSV**.\n\nYou can follow the progress of any claim under **Expenses**. Changes take effect immediately, and you can undo them at any time by repeating the steps.",
+  "notConfusedWith": [
+   "people-export-pay-run-csv",
+   "people-export-timesheets-csv"
+  ]
+ },
+ {
+  "id": "people-add-mileage-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Add a mileage claim",
+  "aliases": [
+   "claim kilometres driven",
+   "car travel reimbursement",
+   "log a work trip",
+   "claim for using my own car"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Select **New claim**, then **Mileage**.\n3. Enter the **Date**, **From**, **To** and the **Distance** in kilometres.\n4. Choose the **Vehicle type**.\n5. Check the calculated **Amount**.\n6. Select **Submit for approval**.",
+  "notConfusedWith": [
+   "people-submit-expense-claim"
+  ]
+ },
+ {
+  "id": "people-reimburse-claims-in-pay-run",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Reimburse expense claims in a pay run",
+  "aliases": [
+   "pay back approved claims",
+   "include expenses in pay",
+   "pay employees their expenses",
+   "settle approved expenses"
+  ],
+  "body": "1. Go to **Payroll** and open a draft pay run.\n2. Select **Add reimbursements**.\n3. Tick the approved claims to include.\n4. Select **Add to pay run**.\n\nThe claims change to **Paid** when you finalise the pay run.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-approve-expense-claim",
+   "people-mark-expense-claim-as-paid"
+  ]
+ },
+ {
+  "id": "people-add-note-to-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Add a note to an expense claim",
+  "aliases": [
+   "comment on a claim",
+   "explain an expense",
+   "leave a remark on spending",
+   "write why I bought it"
+  ],
+  "body": "1. Go to **Expenses** and open the claim.\n2. Select the **Notes** tab.\n3. Type your note.\n4. Select **Add note**.\n\nThe approver is notified when a note is added to a submitted claim.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-add-note-to-timesheet-entry"
+  ]
+ },
+ {
+  "id": "people-mark-expense-claim-as-paid",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Mark an expense claim as paid",
+  "aliases": [
+   "change claim status",
+   "paid outside payroll",
+   "record manual reimbursement",
+   "set expense to paid"
+  ],
+  "body": "1. Go to **Expenses** and select **Approvals**.\n2. Open the **Approved** tab.\n3. Select the claim.\n4. Select **Change status**, then **Paid**.\n5. Enter the **Payment date** and select **Save**.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-reimburse-claims-in-pay-run"
+  ]
+ },
+ {
+  "id": "people-add-company-card",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Add a company card",
+  "aliases": [
+   "register a corporate credit card",
+   "set up a business card",
+   "link a card to an employee",
+   "new card for spending"
+  ],
+  "body": "1. Go to **Settings** and select **Expenses**.\n2. Select **Company cards**, then **Add card**.\n3. Enter the **Card name** and the last four digits.\n4. Select the **Cardholder**.\n5. Select **Save**.\n\nCard transactions appear on the cardholder's **My claims** page for matching.",
+  "notConfusedWith": [
+   "people-set-expense-limit"
+  ]
+ },
+ {
+  "id": "people-claim-foreign-currency-expense",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Claim an expense in a foreign currency",
+  "aliases": [
+   "overseas spending claim",
+   "expense in US dollars",
+   "travel abroad claim",
+   "convert currency on a claim"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Select **New claim**.\n3. Choose the currency from the **Currency** list.\n4. Enter the **Amount** in that currency.\n5. Check the **Exchange rate** and converted amount.\n6. Attach the receipt and select **Submit for approval**.",
+  "notConfusedWith": [
+   "people-submit-expense-claim"
+  ]
+ },
+ {
+  "id": "people-copy-expense-claim",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Copy a previous expense claim",
+  "aliases": [
+   "repeat an expense",
+   "duplicate a claim",
+   "reuse an old claim",
+   "same expense again"
+  ],
+  "body": "1. Go to **Expenses** and select **My claims**.\n2. Open the claim you want to copy.\n3. Select **More**, then **Duplicate**.\n4. Update the **Date** and **Amount**.\n5. Attach a new receipt.\n6. Select **Submit for approval**.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-submit-expense-claim"
+  ]
+ },
+ {
+  "id": "people-set-expense-approver",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Expenses",
+  "title": "Set an expense approver",
+  "aliases": [
+   "change who approves claims",
+   "choose approval person",
+   "assign claims manager",
+   "expense approval route"
+  ],
+  "body": "1. Go to **Settings** and select **Expenses**.\n2. Select **Approval rules**.\n3. Choose a **Department** or employee.\n4. Select the **Approver**.\n5. Enter a **Backup approver** if needed.\n6. Select **Save**.\n\nYou can follow the progress of any claim under **Expenses**.",
+  "notConfusedWith": [
+   "people-approve-expense-claim"
+  ]
+ },
+ {
+  "id": "people-update-employee-phone-number",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Update an employee's phone number",
+  "aliases": [
+   "change someone's mobile number",
+   "edit contact number",
+   "new phone for a staff member",
+   "fix employee phone"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select the **Contact** tab.\n4. Select **Edit**.\n5. Enter the new number in the **Mobile phone** field.\n6. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-update-employee-email-address"
+  ]
+ },
+ {
+  "id": "people-update-employee-email-address",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Update an employee's email address",
+  "aliases": [
+   "change work email",
+   "edit staff email",
+   "new email for employee",
+   "fix wrong email"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select the **Contact** tab, then **Edit**.\n4. Change the **Work email** or **Personal email**.\n5. Select **Save**.\n\nIf you change a work email, the employee uses the new address to sign in.",
+  "notConfusedWith": [
+   "people-update-employee-phone-number"
+  ]
+ },
+ {
+  "id": "people-add-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Add an employee",
+  "aliases": [
+   "create a new staff member",
+   "onboard a new hire",
+   "new starter",
+   "add someone to the system"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Select **Add employee**.\n3. Enter their **Name**, **Email** and **Start date**.\n4. Choose a **Department** and **Manager**.\n5. Select **Add pay details** to enter their rate and tax details.\n6. Select **Save**.\n\nSelect **Send invitation** to let them sign in and complete their profile.",
+  "notConfusedWith": [
+   "people-import-employees-csv"
+  ]
+ },
+ {
+  "id": "people-delete-employee-record",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Delete an employee record",
+  "aliases": [
+   "remove a staff member",
+   "erase an employee",
+   "get rid of an employee profile",
+   "wrongly added person"
+  ],
+  "body": "Only delete records created by mistake. For people who have left, change their status instead.\n\n1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select **More**, then **Delete employee**.\n4. Type the employee's name to confirm.\n5. Select **Delete permanently**.\n\nEmployees with payslips cannot be deleted.",
+  "notConfusedWith": [
+   "people-change-employee-status"
+  ]
+ },
+ {
+  "id": "people-add-note-to-employee-record",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Add a note to an employee record",
+  "aliases": [
+   "write a note on someone's profile",
+   "comment on a staff file",
+   "record a conversation",
+   "log a note about an employee"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select the **Notes** tab.\n4. Select **Add note**.\n5. Type your note and choose who can see it.\n6. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-add-note-to-pay-run",
+   "people-add-private-note-to-review"
+  ]
+ },
+ {
+  "id": "people-export-employee-list-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Export the employee list to CSV",
+  "aliases": [
+   "download all staff",
+   "staff directory spreadsheet",
+   "get employee details as a file",
+   "save people list"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Use **Filter** to narrow the list if needed.\n3. Select **Export**.\n4. Choose **CSV** and tick the columns to include.\n5. Select **Download**.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-export-pay-run-csv",
+   "people-import-employees-csv"
+  ]
+ },
+ {
+  "id": "people-change-employee-status",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Change an employee's status",
+  "aliases": [
+   "mark someone as inactive",
+   "set employee to terminated",
+   "deactivate staff member",
+   "put employee on leave status"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select **Change status**.\n4. Choose **Active**, **On leave** or **Inactive**.\n5. Enter the **Effective date**.\n6. Select **Save**.\n\nInactive employees are left out of new pay runs and cannot sign in.",
+  "notConfusedWith": [
+   "people-delete-employee-record",
+   "people-process-final-pay"
+  ]
+ },
+ {
+  "id": "people-add-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Add a department",
+  "aliases": [
+   "create a team",
+   "new business unit",
+   "set up a department",
+   "add a cost centre"
+  ],
+  "body": "1. Go to **Settings** and select **Company**.\n2. Select **Departments**, then **Add department**.\n3. Enter a **Name**.\n4. Choose a **Department head**.\n5. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**. Changes take effect immediately, and you can undo them at any time by repeating the steps.",
+  "notConfusedWith": [
+   "people-add-employee"
+  ]
+ },
+ {
+  "id": "people-update-company-logo",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Update the company logo",
+  "aliases": [
+   "change our logo",
+   "upload new branding",
+   "payslip logo",
+   "replace company image"
+  ],
+  "body": "1. Go to **Settings** and select **Company**.\n2. Select **Branding**.\n3. Select **Upload logo**.\n4. Choose a PNG or JPG file, at least 400 pixels wide.\n5. Select **Save**.\n\nThe new logo appears on payslips and emails sent from now on.",
+  "notConfusedWith": [
+   "people-update-company-details"
+  ]
+ },
+ {
+  "id": "people-update-company-details",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Update company details",
+  "aliases": [
+   "change business address",
+   "edit ABN",
+   "new company name",
+   "update our contact information"
+  ],
+  "body": "1. Go to **Settings** and select **Company**.\n2. Select **Company details**.\n3. Select **Edit**.\n4. Update the **Legal name**, **ABN** or **Address**.\n5. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**. Changes take effect immediately, and you can undo them at any time by repeating the steps.",
+  "notConfusedWith": [
+   "people-update-company-logo"
+  ]
+ },
+ {
+  "id": "people-invite-administrator",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Invite an administrator",
+  "aliases": [
+   "add a payroll admin",
+   "give someone admin access",
+   "new HR manager user",
+   "add another account owner"
+  ],
+  "body": "1. Go to **Settings** and select **Users**.\n2. Select **Invite user**.\n3. Enter their **Email**.\n4. Choose the **Role**, such as **Payroll admin** or **HR admin**.\n5. Select **Send invitation**.\n\nThe invitation link expires after seven days.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-set-user-permissions"
+  ]
+ },
+ {
+  "id": "people-set-user-permissions",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Change a user's permissions",
+  "aliases": [
+   "edit admin access",
+   "restrict what a user can see",
+   "change someone's role",
+   "limit payroll access"
+  ],
+  "body": "1. Go to **Settings** and select **Users**.\n2. Open the user.\n3. Select **Edit role**.\n4. Choose a different **Role**, or select **Custom** to tick individual permissions.\n5. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-invite-administrator"
+  ]
+ },
+ {
+  "id": "people-reset-employee-password",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Reset an employee's password",
+  "aliases": [
+   "employee locked out",
+   "forgot password for staff",
+   "send a password reset",
+   "can't sign in"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Open the employee's profile.\n3. Select **More**, then **Send password reset**.\n4. Confirm by selecting **Send**.\n\nThe employee receives an email with a link that works for 24 hours.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-turn-on-two-step-verification"
+  ]
+ },
+ {
+  "id": "people-set-public-holidays",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Set public holidays",
+  "aliases": [
+   "add a company holiday",
+   "configure public holiday calendar",
+   "mark a day as closed",
+   "holiday dates for pay"
+  ],
+  "body": "1. Go to **Settings** and select **Calendar**.\n2. Select **Public holidays**.\n3. Choose your **State or region** to load the standard holidays.\n4. Select **Add holiday** to enter a custom day.\n5. Select **Save**.\n\nThe change is recorded in the audit history under **Settings**.",
+  "notConfusedWith": [
+   "people-add-leave-type"
+  ]
+ },
+ {
+  "id": "people-import-employees-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Import employees from a CSV file",
+  "aliases": [
+   "bulk upload staff",
+   "add many employees at once",
+   "load employee spreadsheet",
+   "migrate people data"
+  ],
+  "body": "1. Go to **People** and select **Employees**.\n2. Select **Import**.\n3. Select **Download template** and fill it in.\n4. Select **Upload file** and choose your CSV.\n5. Match any columns that are not recognised.\n6. Select **Import**.\n\nRows with errors are listed so you can fix them and try again.",
+  "notConfusedWith": [
+   "people-add-employee",
+   "people-export-employee-list-csv"
+  ]
+ },
+ {
+  "id": "people-turn-on-two-step-verification",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Company settings",
+  "title": "Turn on two-step verification",
+  "aliases": [
+   "enable 2FA",
+   "extra security for login",
+   "authenticator app setup",
+   "require a code when signing in"
+  ],
+  "body": "1. Go to **Settings** and select **Security**.\n2. Under **Two-step verification**, select **Turn on**.\n3. Scan the QR code with your authenticator app.\n4. Enter the six-digit code.\n5. Select **Verify**.\n\nSelect **Require for all users** to make it mandatory for your company.",
+  "notConfusedWith": [
+   "people-reset-employee-password"
+  ]
+ },
+ {
+  "id": "people-add-payroll-deduction",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Payroll and payslips",
+  "title": "Add a deduction to an employee's pay",
+  "aliases": [
+   "take money out of wages",
+   "set up a salary sacrifice",
+   "regular pay deduction",
+   "dock pay for union fees"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Pay** tab, then **Pay items**.\n3. Select **Add pay item**.\n4. Choose the **Deduction** category and pick the item, such as **Union fees**.\n5. Enter the **Amount** and how often it is taken.\n6. Set the **Start date** and, if needed, an **End date**.\n7. Select **Save**.\n\nDeductions appear on the employee's payslip from the next pay run.",
+  "notConfusedWith": [
+   "people-add-allowance-to-employee"
+  ]
+ }
+]

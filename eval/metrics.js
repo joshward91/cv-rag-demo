@@ -21,6 +21,9 @@ export function grade(row) {
       (row.outcome === 'clarify' || row.outcome === 'suggest') &&
       expect.mustInclude.every((id) => row.options.includes(id)) &&
       (!expect.allowed || row.options.every((id) => expect.allowed.includes(id)));
+  } else if (expect.type === 'suggest') {
+    // Another product covers it: its article is offered, not answered.
+    pass = row.outcome === 'suggest' && expect.mustInclude.every((id) => row.options.includes(id));
   } else if (expect.type === 'assistant') {
     pass = row.outcome === 'assistant';
   } else if (expect.type === 'blocked') {

@@ -1,0 +1,1761 @@
+[
+ {
+  "id": "desk-invite-agent",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Invite a new agent",
+  "aliases": [
+   "add a new support agent",
+   "add someone to my helpdesk",
+   "send an invite to a new team member",
+   "create an agent account"
+  ],
+  "body": "Only admins can invite agents.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Select **Invite agent**.\n3. Enter the agent's name and work email address.\n4. Choose a **Role**, then select a **Team** if you want to add them straight away.\n5. Select **Send invite**.\n\nThe invite link expires after 7 days. You can resend it from the agent's row.",
+  "notConfusedWith": [
+   "desk-assign-agent-role",
+   "desk-reactivate-agent"
+  ]
+ },
+ {
+  "id": "desk-update-agent-phone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Update an agent's phone number",
+  "aliases": [
+   "change an agent's phone",
+   "edit agent contact number",
+   "agent mobile number is wrong",
+   "fix phone number on agent profile"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Select the agent's name to open their profile.\n3. Select **Edit profile**.\n4. Enter the new number in the **Phone** field.\n5. Select **Save changes**.\n\nAgents can also update their own number from **My profile**.",
+  "notConfusedWith": [
+   "desk-update-agent-email",
+   "desk-update-customer-phone"
+  ]
+ },
+ {
+  "id": "desk-update-agent-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Change an agent's email address",
+  "aliases": [
+   "update agent email",
+   "agent has a new email",
+   "edit the login email for an agent",
+   "switch an agent's email"
+  ],
+  "body": "Changing the email also changes the address the agent uses to sign in.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Open the agent's profile.\n3. Select **Edit profile**.\n4. Replace the address in the **Email** field.\n5. Select **Save changes**.\n6. Ask the agent to confirm the new address using the link we send.",
+  "notConfusedWith": [
+   "desk-update-agent-phone",
+   "desk-update-requester-email"
+  ]
+ },
+ {
+  "id": "desk-deactivate-agent",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Deactivate an agent",
+  "aliases": [
+   "remove an agent who left",
+   "disable an agent account",
+   "delete an agent",
+   "offboard a team member"
+  ],
+  "body": "Deactivating an agent stops them signing in but keeps their ticket history.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Select the agent's name.\n3. Select **More actions** > **Deactivate agent**.\n4. Choose who should receive their open tickets.\n5. Select **Deactivate**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-reactivate-agent",
+   "desk-remove-agent-from-team"
+  ]
+ },
+ {
+  "id": "desk-reactivate-agent",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Reactivate a deactivated agent",
+  "aliases": [
+   "bring back a former agent",
+   "restore an agent account",
+   "turn an agent back on",
+   "undo agent deactivation"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Select the **Deactivated** filter.\n3. Open the agent's profile.\n4. Select **More actions** > **Reactivate agent**.\n5. Confirm their **Role** and **Team**, then select **Reactivate**.\n\nThe agent will receive an email asking them to set a new password.",
+  "notConfusedWith": [
+   "desk-deactivate-agent",
+   "desk-invite-agent"
+  ]
+ },
+ {
+  "id": "desk-create-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Create a team",
+  "aliases": [
+   "set up a new support team",
+   "add a group of agents",
+   "make a new team",
+   "start a team for billing queries"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select **New team**.\n3. Enter a **Team name** and an optional description.\n4. Choose the agents to include.\n5. Select **Create team**.\n\nTeams can be used as assignment targets in routing rules and reports.",
+  "notConfusedWith": [
+   "desk-add-agent-to-team",
+   "desk-rename-team"
+  ]
+ },
+ {
+  "id": "desk-add-agent-to-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Add an agent to a team",
+  "aliases": [
+   "put an agent in a team",
+   "move someone into a team",
+   "assign agent to a group",
+   "add a member to a team"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select the team's name.\n3. Select **Add members**.\n4. Tick the agents you want to add.\n5. Select **Add to team**.\n\nAn agent can belong to more than one team.",
+  "notConfusedWith": [
+   "desk-remove-agent-from-team",
+   "desk-create-team"
+  ]
+ },
+ {
+  "id": "desk-remove-agent-from-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Remove an agent from a team",
+  "aliases": [
+   "take someone out of a team",
+   "kick an agent out of a group",
+   "agent no longer on this team",
+   "unassign agent from team"
+  ],
+  "body": "Removing an agent from a team does not deactivate their account.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select the team's name.\n3. Find the agent in the **Members** list.\n4. Select **Remove** next to their name.\n5. Select **Confirm**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-add-agent-to-team",
+   "desk-deactivate-agent"
+  ]
+ },
+ {
+  "id": "desk-rename-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Rename a team",
+  "aliases": [
+   "change a team's name",
+   "edit team name",
+   "team name is wrong",
+   "update team title"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select the team you want to rename.\n3. Select **Edit team**.\n4. Type the new name in **Team name**.\n5. Select **Save changes**.\n\nExisting routing rules and reports will pick up the new name automatically.",
+  "notConfusedWith": [
+   "desk-create-team",
+   "desk-delete-team"
+  ]
+ },
+ {
+  "id": "desk-delete-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Delete a team",
+  "aliases": [
+   "remove a team",
+   "get rid of a team",
+   "delete a group of agents",
+   "close down a team"
+  ],
+  "body": "Deleting a team does not delete its agents or their tickets.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select the team's name.\n3. Select **More actions** > **Delete team**.\n4. Choose a team to receive any tickets still assigned to this one.\n5. Select **Delete team**.",
+  "notConfusedWith": [
+   "desk-remove-agent-from-team",
+   "desk-rename-team"
+  ]
+ },
+ {
+  "id": "desk-assign-agent-role",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Change an agent's role",
+  "aliases": [
+   "make someone an admin",
+   "promote an agent",
+   "change permissions for an agent",
+   "switch agent role to supervisor"
+  ],
+  "body": "Roles control what an agent can see and change. The built-in roles are **Agent**, **Supervisor** and **Admin**.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Open the agent's profile.\n3. Select **Edit profile**.\n4. Pick a new option from the **Role** list.\n5. Select **Save changes**.",
+  "notConfusedWith": [
+   "desk-create-custom-role",
+   "desk-invite-agent"
+  ]
+ },
+ {
+  "id": "desk-create-custom-role",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Create a custom role",
+  "aliases": [
+   "make a new permission set",
+   "build a role with limited access",
+   "custom agent permissions",
+   "set up a read-only role"
+  ],
+  "body": "1. Go to **Admin** > **People** > **Roles**.\n2. Select **New role**.\n3. Name the role, for example **Billing specialist**.\n4. Switch on the permissions this role needs, such as **View reports** or **Edit knowledge base**.\n5. Select **Save role**.\n\nYou can then choose the new role when you invite or edit an agent.",
+  "notConfusedWith": [
+   "desk-assign-agent-role"
+  ]
+ },
+ {
+  "id": "desk-set-agent-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Set your availability status",
+  "aliases": [
+   "go offline in the helpdesk",
+   "mark myself as away",
+   "show I'm on a break",
+   "change my status to unavailable"
+  ],
+  "body": "Your status decides whether new tickets and chats can be assigned to you.\n\n1. Select your profile picture at the top right.\n2. Select the current status, such as **Available**.\n3. Choose **Away**, **Busy** or **Offline**.\n4. Optionally add a note, such as \"Back at 2pm\".\n\nSelect **Available** again when you return.",
+  "notConfusedWith": [
+   "desk-set-assignment-limit"
+  ]
+ },
+ {
+  "id": "desk-set-agent-signature",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Add an email signature to your profile",
+  "aliases": [
+   "set my signature",
+   "change my agent signature",
+   "sign off replies with my name",
+   "edit my reply signature"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Select your profile picture, then **My profile**.\n2. Open the **Signature** tab.\n3. Type your signature in the editor. You can use bold text and line breaks.\n4. Select **Save**.\n\nYour signature is added to email replies you send from the **Inbox**.",
+  "notConfusedWith": [
+   "desk-set-default-signature"
+  ]
+ },
+ {
+  "id": "desk-set-assignment-limit",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Set a maximum number of open tickets for an agent",
+  "aliases": [
+   "cap tickets per agent",
+   "limit workload for an agent",
+   "stop an agent getting too many tickets",
+   "set ticket capacity"
+  ],
+  "body": "Once an agent reaches the limit, automatic assignment skips them.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Open the agent's profile.\n3. Select **Workload**.\n4. Enter a number in **Maximum open tickets**.\n5. Select **Save changes**.\n\nYour administrator controls who has permission to do this. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-set-max-concurrent-chats",
+   "desk-set-agent-status"
+  ]
+ },
+ {
+  "id": "desk-export-agent-list",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Export your agent list to CSV",
+  "aliases": [
+   "download all agents as a spreadsheet",
+   "get a list of agents in Excel",
+   "export staff list",
+   "csv of support agents"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Use the filters if you only need some agents, for example a **Team**.\n3. Select **Export**.\n4. Choose **CSV** and select **Download**.\n\nThe file includes name, email, phone, role, team and status.",
+  "notConfusedWith": [
+   "desk-export-tickets-csv",
+   "desk-export-report-csv"
+  ]
+ },
+ {
+  "id": "desk-add-agent-note",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Agents and teams",
+  "title": "Add an internal note to an agent's profile",
+  "aliases": [
+   "leave a note about an agent",
+   "write a note on a team member",
+   "record training notes for an agent",
+   "add a comment to agent record"
+  ],
+  "body": "Notes on a profile are visible to admins and supervisors only.\n\n1. Go to **Admin** > **People** > **Agents**.\n2. Open the agent's profile.\n3. Select the **Notes** tab.\n4. Type your note in the box.\n5. Select **Add note**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-add-private-note"
+  ]
+ },
+ {
+  "id": "desk-create-sla-policy",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Create an SLA policy",
+  "aliases": [
+   "set up a service level agreement",
+   "add a new SLA",
+   "define response targets",
+   "make an SLA for premium customers"
+  ],
+  "body": "An SLA policy sets the time targets your team works to.\n\n1. Go to **Admin** > **Service levels** > **SLAs**.\n2. Select **New SLA policy**.\n3. Enter a **Policy name**.\n4. Under **Applies to**, add conditions such as **Customer plan** is **Premium**.\n5. Set your targets, then select **Save policy**.",
+  "notConfusedWith": [
+   "desk-edit-sla-policy",
+   "desk-duplicate-sla-policy"
+  ]
+ },
+ {
+  "id": "desk-edit-sla-policy",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Edit an SLA policy",
+  "aliases": [
+   "change an existing SLA",
+   "update SLA conditions",
+   "modify service level policy",
+   "amend an SLA"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Service levels** > **SLAs**.\n2. Select the policy name.\n3. Change the conditions or targets.\n4. Select **Save policy**.\n\nChanges apply to new tickets. Tickets already open keep their original targets unless you select **Apply to open tickets**.",
+  "notConfusedWith": [
+   "desk-create-sla-policy",
+   "desk-set-first-response-target"
+  ]
+ },
+ {
+  "id": "desk-delete-sla-policy",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Delete an SLA policy",
+  "aliases": [
+   "remove an SLA",
+   "get rid of a service level policy",
+   "turn off and delete SLA",
+   "stop using an SLA"
+  ],
+  "body": "Tickets that used the policy keep their breach history in reports.\n\n1. Go to **Admin** > **Service levels** > **SLAs**.\n2. Select the **More** menu on the policy's row.\n3. Select **Delete**.\n4. Select **Confirm**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-edit-sla-policy"
+  ]
+ },
+ {
+  "id": "desk-duplicate-sla-policy",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Duplicate an SLA policy",
+  "aliases": [
+   "copy an SLA",
+   "clone a service level policy",
+   "make a copy of an existing SLA",
+   "reuse an SLA as a template"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Service levels** > **SLAs**.\n2. Select the **More** menu on the policy you want to copy.\n3. Select **Duplicate**.\n4. Rename the copy and adjust its conditions.\n5. Select **Save policy**.\n\nThe copy is created switched off until you turn it on.",
+  "notConfusedWith": [
+   "desk-create-sla-policy"
+  ]
+ },
+ {
+  "id": "desk-set-first-response-target",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Set a first response target",
+  "aliases": [
+   "how fast should we first reply",
+   "set first reply time",
+   "change first response time goal",
+   "define reply deadline"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **Service levels** > **SLAs** and open a policy.\n2. Find the **First response time** section.\n3. Enter a time for each priority: **Low**, **Normal**, **High** and **Urgent**.\n4. Choose **Business hours** or **Calendar hours**.\n5. Select **Save policy**.",
+  "notConfusedWith": [
+   "desk-set-resolution-target",
+   "desk-set-targets-by-priority"
+  ]
+ },
+ {
+  "id": "desk-set-resolution-target",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Set a resolution target",
+  "aliases": [
+   "set time to resolve tickets",
+   "change resolution time goal",
+   "how long to solve a ticket",
+   "define resolve deadline"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Service levels** > **SLAs** and open a policy.\n2. Find the **Resolution time** section.\n3. Enter a target time for each priority.\n4. Select **Business hours** or **Calendar hours** under **Count time by**.\n5. Select **Save policy**.",
+  "notConfusedWith": [
+   "desk-set-first-response-target",
+   "desk-set-targets-by-priority"
+  ]
+ },
+ {
+  "id": "desk-set-targets-by-priority",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Use different SLA targets for each priority",
+  "aliases": [
+   "urgent tickets need faster replies",
+   "priority based SLA",
+   "set shorter targets for urgent tickets",
+   "vary SLA by priority"
+  ],
+  "body": "A single policy can hold a separate target for every priority level.\n\n1. Go to **Admin** > **Service levels** > **SLAs** and open a policy.\n2. Select **Different targets per priority**.\n3. Enter first response and resolution times for **Low**, **Normal**, **High** and **Urgent**.\n4. Select **Save policy**.",
+  "notConfusedWith": [
+   "desk-set-first-response-target",
+   "desk-set-resolution-target"
+  ]
+ },
+ {
+  "id": "desk-create-business-hours",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Create a business hours schedule",
+  "aliases": [
+   "add opening hours",
+   "set up working hours",
+   "define when support is open",
+   "new support schedule"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select **New schedule**.\n3. Name the schedule, for example **Sydney weekdays**.\n4. Choose a **Time zone**.\n5. Set opening and closing times for each day, then select **Save schedule**.",
+  "notConfusedWith": [
+   "desk-edit-business-hours",
+   "desk-change-schedule-timezone"
+  ]
+ },
+ {
+  "id": "desk-edit-business-hours",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Edit business hours",
+  "aliases": [
+   "change opening hours",
+   "update our working hours",
+   "extend support hours",
+   "change Friday closing time"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select the schedule you want to change.\n3. Adjust the times for the days affected, or switch a day off with the **Open** toggle.\n4. Select **Save schedule**.\n\nSLA clocks use the new hours straight away.",
+  "notConfusedWith": [
+   "desk-create-business-hours",
+   "desk-add-holiday"
+  ]
+ },
+ {
+  "id": "desk-change-schedule-timezone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Change the time zone of a schedule",
+  "aliases": [
+   "wrong time zone on business hours",
+   "switch schedule to another time zone",
+   "fix timezone for support hours",
+   "update timezone"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select the schedule.\n3. Open the **Time zone** list and choose the correct one.\n4. Select **Save schedule**.\n\nOpening times stay the same in the new time zone, so check them after you save.",
+  "notConfusedWith": [
+   "desk-edit-business-hours"
+  ]
+ },
+ {
+  "id": "desk-add-holiday",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Add a holiday to a schedule",
+  "aliases": [
+   "mark a public holiday as closed",
+   "add a day off",
+   "set closure dates",
+   "add Christmas closure"
+  ],
+  "body": "Tickets received on a holiday do not count against SLA targets.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select the schedule.\n3. Open the **Holidays** tab and select **Add holiday**.\n4. Enter a name and choose the date or date range.\n5. Select **Save**.",
+  "notConfusedWith": [
+   "desk-delete-holiday",
+   "desk-export-holidays"
+  ]
+ },
+ {
+  "id": "desk-delete-holiday",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Delete a holiday from a schedule",
+  "aliases": [
+   "remove a closure date",
+   "take off a holiday",
+   "undo a day off",
+   "remove holiday entry"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select the schedule and open the **Holidays** tab.\n3. Select the **Delete** icon next to the holiday.\n4. Select **Confirm**.\n\nChanges are saved straight away.",
+  "notConfusedWith": [
+   "desk-add-holiday"
+  ]
+ },
+ {
+  "id": "desk-assign-hours-to-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Assign a business hours schedule to a team",
+  "aliases": [
+   "use different hours for a team",
+   "link schedule to team",
+   "team works different hours",
+   "apply opening hours to a team"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **People** > **Teams**.\n2. Select the team's name.\n3. Select **Edit team**.\n4. Choose a schedule from the **Business hours** list.\n5. Select **Save changes**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-create-business-hours",
+   "desk-create-team"
+  ]
+ },
+ {
+  "id": "desk-pause-sla-pending",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Pause the SLA clock while waiting for the customer",
+  "aliases": [
+   "stop SLA timer when pending",
+   "hold SLA on pending status",
+   "don't count customer wait time",
+   "SLA on hold"
+  ],
+  "body": "When a ticket is set to **Pending**, you can stop the clock so waiting time is not counted against your team.\n\n1. Go to **Admin** > **Service levels** > **SLAs**.\n2. Select **Settings**.\n3. Switch on **Pause SLA when status is Pending**.\n4. Select **Save**.\n\nThe clock restarts when the customer replies.",
+  "notConfusedWith": [
+   "desk-change-ticket-status"
+  ]
+ },
+ {
+  "id": "desk-set-breach-alerts",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Send an alert before an SLA is breached",
+  "aliases": [
+   "warn me about tickets about to breach",
+   "SLA warning emails",
+   "notify supervisor of late tickets",
+   "set SLA reminder"
+  ],
+  "body": "1. Go to **Admin** > **Service levels** > **SLAs** and open a policy.\n2. Select **Alerts**.\n3. Choose how long before the target the alert is sent, for example **30 minutes**.\n4. Pick who to notify: the **Assignee**, the **Team supervisor** or both.\n5. Select **Save policy**.",
+  "notConfusedWith": [
+   "desk-view-at-risk-tickets"
+  ]
+ },
+ {
+  "id": "desk-view-at-risk-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "See tickets at risk of breaching their SLA",
+  "aliases": [
+   "find overdue tickets",
+   "which tickets are about to be late",
+   "list tickets near SLA deadline",
+   "check breached tickets"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Inbox**.\n2. Select the **Views** menu.\n3. Choose **At risk of SLA breach**.\n4. Sort by **Time remaining** to see the most urgent first.\n\nBreached tickets appear in red. Changes are saved straight away.",
+  "notConfusedWith": [
+   "desk-view-sla-report",
+   "desk-set-breach-alerts"
+  ]
+ },
+ {
+  "id": "desk-export-holidays",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "SLAs and business hours",
+  "title": "Export your holiday list to CSV",
+  "aliases": [
+   "download holidays as a spreadsheet",
+   "csv of closure dates",
+   "save the holiday calendar",
+   "get holidays in Excel"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **Service levels** > **Business hours**.\n2. Select the schedule and open the **Holidays** tab.\n3. Select **Export**.\n4. Select **Download CSV**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**. Your administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-add-holiday",
+   "desk-export-report-csv"
+  ]
+ },
+ {
+  "id": "desk-create-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Create a knowledge base article",
+  "aliases": [
+   "write a new help article",
+   "add an article to the knowledge base",
+   "publish a how-to for customers",
+   "new FAQ entry"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Knowledge base**.\n2. Select **New article**.\n3. Enter a **Title** and write the content in the editor.\n4. Choose a **Category**.\n5. Select **Save draft** to keep it private, or **Publish** to make it live.",
+  "notConfusedWith": [
+   "desk-publish-article",
+   "desk-edit-article"
+  ]
+ },
+ {
+  "id": "desk-edit-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Edit a knowledge base article",
+  "aliases": [
+   "update a help article",
+   "fix a typo in an article",
+   "change article text",
+   "amend FAQ content"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Knowledge base**.\n2. Search for the article or browse to its category.\n3. Select the article, then **Edit**.\n4. Make your changes in the editor.\n5. Select **Save**.\n\nPublished articles update straight away. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-create-article",
+   "desk-restore-article-version"
+  ]
+ },
+ {
+  "id": "desk-delete-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Delete a knowledge base article",
+  "aliases": [
+   "remove a help article",
+   "get rid of an article",
+   "delete an FAQ",
+   "take down an article for good"
+  ],
+  "body": "Deleted articles can be restored from the **Trash** for 30 days. To hide an article without deleting it, unpublish it instead.\n\n1. Go to **Knowledge base**.\n2. Open the article.\n3. Select **More actions** > **Delete**.\n4. Select **Move to Trash**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-unpublish-article"
+  ]
+ },
+ {
+  "id": "desk-publish-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Publish a draft article",
+  "aliases": [
+   "make an article live",
+   "release a draft to customers",
+   "put article online",
+   "go live with a help article"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Knowledge base** and select the **Drafts** tab.\n2. Open the article.\n3. Check the content and **Category**.\n4. Select **Publish**.\n\nCustomers can find the article in the help centre straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-schedule-article",
+   "desk-unpublish-article"
+  ]
+ },
+ {
+  "id": "desk-unpublish-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Unpublish an article",
+  "aliases": [
+   "hide an article from customers",
+   "take an article offline",
+   "revert article to draft",
+   "pull a help article temporarily"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Knowledge base**.\n2. Open the published article.\n3. Select **More actions** > **Unpublish**.\n4. Select **Confirm**.\n\nThe article moves back to **Drafts**, and keeps its content and history. Your administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-delete-article",
+   "desk-publish-article"
+  ]
+ },
+ {
+  "id": "desk-schedule-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Schedule an article to publish later",
+  "aliases": [
+   "publish an article at a set time",
+   "set a go-live date for an article",
+   "queue article for later",
+   "time a help article release"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Knowledge base** and open a draft.\n2. Select the arrow next to **Publish**.\n3. Choose **Schedule**.\n4. Pick a date and time.\n5. Select **Schedule article**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-publish-article"
+  ]
+ },
+ {
+  "id": "desk-create-category",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Create a knowledge base category",
+  "aliases": [
+   "add a new category",
+   "set up a folder for articles",
+   "make a new help topic section",
+   "add a section to the help centre"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Knowledge base** > **Categories**.\n2. Select **New category**.\n3. Enter a **Name** and a short description.\n4. Select **Save**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-rename-category",
+   "desk-move-article"
+  ]
+ },
+ {
+  "id": "desk-rename-category",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Rename a knowledge base category",
+  "aliases": [
+   "change a category name",
+   "edit help centre section title",
+   "category name is wrong",
+   "update folder name"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Knowledge base** > **Categories**.\n2. Select **Edit** next to the category.\n3. Type the new **Name**.\n4. Select **Save**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**. Your administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-create-category",
+   "desk-delete-category"
+  ]
+ },
+ {
+  "id": "desk-delete-category",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Delete a knowledge base category",
+  "aliases": [
+   "remove a category",
+   "get rid of a help section",
+   "delete a folder of articles",
+   "remove empty category"
+  ],
+  "body": "A category must be empty before it can be deleted.\n\n1. Go to **Knowledge base** > **Categories**.\n2. Move or delete any articles inside it.\n3. Select **More** next to the category.\n4. Select **Delete category**.\n\nYour administrator controls who has permission to do this. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-rename-category",
+   "desk-move-article"
+  ]
+ },
+ {
+  "id": "desk-move-article",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Move an article to another category",
+  "aliases": [
+   "change an article's category",
+   "re-file a help article",
+   "put article in a different folder",
+   "reorganise knowledge base"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Knowledge base**.\n2. Open the article.\n3. Select **Edit**.\n4. Choose a new option from the **Category** list.\n5. Select **Save**.\n\nIf you can't see this option, ask an admin to check your role. Changes are saved straight away.",
+  "notConfusedWith": [
+   "desk-create-category",
+   "desk-edit-article"
+  ]
+ },
+ {
+  "id": "desk-add-article-image",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Add an image to an article",
+  "aliases": [
+   "insert a screenshot into a help article",
+   "upload a picture to an article",
+   "put a photo in the knowledge base",
+   "embed an image"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Open the article and select **Edit**.\n2. Place the cursor where you want the image.\n3. Select **Insert** > **Image**.\n4. Upload a file from your computer. Images up to 5 MB are supported.\n5. Add **Alt text**, then select **Save**.",
+  "notConfusedWith": [
+   "desk-edit-article"
+  ]
+ },
+ {
+  "id": "desk-make-article-internal",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Make an article visible to agents only",
+  "aliases": [
+   "create an internal-only article",
+   "hide article from customers but keep it for staff",
+   "private knowledge for agents",
+   "internal help doc"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Knowledge base** and open the article.\n2. Select **Edit**.\n3. Open the **Visibility** list.\n4. Choose **Agents only**.\n5. Select **Save**.\n\nAgents can still find it when replying to tickets. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-unpublish-article",
+   "desk-add-article-note"
+  ]
+ },
+ {
+  "id": "desk-restore-article-version",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Restore a previous version of an article",
+  "aliases": [
+   "undo changes to an article",
+   "roll back an article",
+   "see article history",
+   "go back to an earlier version"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Knowledge base** and open the article.\n2. Select **History**.\n3. Choose the version you want from the list.\n4. Select **Restore this version**.\n5. Select **Confirm**.\n\nRestoring creates a new version, so no history is lost.",
+  "notConfusedWith": [
+   "desk-edit-article"
+  ]
+ },
+ {
+  "id": "desk-add-article-translation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Add a translation to an article",
+  "aliases": [
+   "translate a help article",
+   "make an article available in another language",
+   "add Spanish version",
+   "multi-language knowledge base"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Knowledge base** and open the article.\n2. Select **Translations**.\n3. Select **Add translation** and choose a language.\n4. Enter the translated title and content.\n5. Select **Publish translation**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-create-article"
+  ]
+ },
+ {
+  "id": "desk-add-article-note",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Add an internal note to an article",
+  "aliases": [
+   "leave a comment on an article",
+   "note for other editors",
+   "write a reminder on a help article",
+   "add a review note"
+  ],
+  "body": "Notes are only visible to agents with permission to edit the knowledge base.\n\n1. Open the article in **Knowledge base**.\n2. Select **Notes** in the side panel.\n3. Type your note.\n4. Select **Add note**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-make-article-internal",
+   "desk-add-private-note"
+  ]
+ },
+ {
+  "id": "desk-export-articles-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Export knowledge base articles to CSV",
+  "aliases": [
+   "download all help articles",
+   "get a spreadsheet of articles",
+   "csv of knowledge base content",
+   "backup my articles"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Knowledge base**.\n2. Use the **Category** and **Status** filters if you only need some articles.\n3. Select **Export**.\n4. Choose **CSV** and select **Download**.\n\nThe file lists titles, categories, status and last updated date. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-export-tickets-csv",
+   "desk-export-agent-list"
+  ]
+ },
+ {
+  "id": "desk-insert-article-in-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Knowledge base",
+  "title": "Insert a knowledge base article into a reply",
+  "aliases": [
+   "send a help article to a customer",
+   "link an article in my response",
+   "share an FAQ in a ticket reply",
+   "attach article to a reply"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Open the ticket in your **Inbox**.\n2. Select **Reply**.\n3. Select the **Articles** icon in the editor toolbar.\n4. Search for the article and select **Insert link**.\n5. Select **Send**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-create-article"
+  ]
+ },
+ {
+  "id": "desk-add-widget-to-website",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Add the chat widget to your website",
+  "aliases": [
+   "install live chat",
+   "put the chat button on my site",
+   "embed chat on website",
+   "get the chat code snippet"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **Channels** > **Live chat**.\n2. Select **Widget**, then **Install**.\n3. Copy the code snippet.\n4. Paste it just before the closing body tag on every page where you want chat to appear.\n5. Select **Verify installation**.",
+  "notConfusedWith": [
+   "desk-change-widget-colour"
+  ]
+ },
+ {
+  "id": "desk-change-widget-colour",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Change the chat widget colour",
+  "aliases": [
+   "customise chat button colour",
+   "match chat to our brand",
+   "change the colour of live chat",
+   "widget theme colour"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Appearance**.\n3. Enter a hex code in **Accent colour**, or choose from the picker.\n4. Select **Save**.\n\nThe preview on the right shows how the widget will look.",
+  "notConfusedWith": [
+   "desk-set-welcome-message",
+   "desk-add-widget-to-website"
+  ]
+ },
+ {
+  "id": "desk-set-welcome-message",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Edit the chat welcome message",
+  "aliases": [
+   "change the greeting in chat",
+   "set what customers see when chat opens",
+   "update chat intro text",
+   "write an opening message for live chat"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Messages**.\n3. Edit the text in **Welcome message**.\n4. Select **Save**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**. Your administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-set-offline-message",
+   "desk-change-widget-colour"
+  ]
+ },
+ {
+  "id": "desk-set-offline-message",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Show an offline message when no agents are available",
+  "aliases": [
+   "what customers see after hours in chat",
+   "set away message for chat",
+   "change chat offline text",
+   "leave a message form"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Messages**.\n3. Edit the text in **Offline message**.\n4. Switch on **Let visitors leave a message** if you want to collect an email address.\n5. Select **Save**.\n\nMessages left offline become tickets.",
+  "notConfusedWith": [
+   "desk-set-welcome-message",
+   "desk-convert-chat-to-ticket"
+  ]
+ },
+ {
+  "id": "desk-set-up-prechat-form",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Set up a pre-chat form",
+  "aliases": [
+   "ask for name and email before chat",
+   "collect details before starting a chat",
+   "require email to chat",
+   "customer details form in chat"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Pre-chat form**.\n3. Switch on the fields you want to ask for, such as **Name**, **Email** and **Topic**.\n4. Mark any field as **Required**.\n5. Select **Save**.",
+  "notConfusedWith": [
+   "desk-set-welcome-message"
+  ]
+ },
+ {
+  "id": "desk-transfer-chat",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Transfer a chat to another agent or team",
+  "aliases": [
+   "hand over a chat",
+   "pass a live chat to someone else",
+   "reassign an active chat",
+   "escalate a chat"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Open the chat from your **Inbox**.\n2. Select **Transfer**.\n3. Choose an **Agent** or a **Team**.\n4. Add a short note explaining the context.\n5. Select **Transfer chat**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-end-chat",
+   "desk-convert-chat-to-ticket"
+  ]
+ },
+ {
+  "id": "desk-end-chat",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "End a live chat",
+  "aliases": [
+   "close a chat",
+   "finish chatting with a customer",
+   "hang up a chat session",
+   "stop a conversation"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Open the chat from your **Inbox**.\n2. Select **End chat**.\n3. Select **End chat** again to confirm.\n\nThe customer sees a message that the chat has finished, and the conversation stays in the ticket history. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-transfer-chat",
+   "desk-send-chat-transcript"
+  ]
+ },
+ {
+  "id": "desk-send-chat-transcript",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Send a chat transcript to a customer",
+  "aliases": [
+   "email a copy of the chat",
+   "give customer the conversation history",
+   "send chat log",
+   "forward transcript"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Open the finished chat from your **Inbox**.\n2. Select **More actions** > **Send transcript**.\n3. Check the customer's email address.\n4. Select **Send**.\n\nYou can also switch on **Send transcript automatically** in the live chat settings.",
+  "notConfusedWith": [
+   "desk-end-chat"
+  ]
+ },
+ {
+  "id": "desk-create-saved-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Create a saved reply for chat",
+  "aliases": [
+   "make a canned response",
+   "add a shortcut for common answers",
+   "set up quick replies",
+   "save a template message"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Saved replies**.\n2. Select **New saved reply**.\n3. Enter a **Shortcut**, such as /refund.\n4. Type the message text.\n5. Select **Save**.\n\nAgents type the shortcut in a chat to insert the message.",
+  "notConfusedWith": [
+   "desk-delete-saved-reply"
+  ]
+ },
+ {
+  "id": "desk-delete-saved-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Delete a saved reply",
+  "aliases": [
+   "remove a canned response",
+   "get rid of a quick reply",
+   "delete a chat shortcut",
+   "clean up templates"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Saved replies**.\n2. Find the reply using the search box.\n3. Select the **Delete** icon.\n4. Select **Confirm**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-create-saved-reply"
+  ]
+ },
+ {
+  "id": "desk-block-visitor",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Block a chat visitor",
+  "aliases": [
+   "stop an abusive visitor chatting",
+   "ban someone from live chat",
+   "prevent a person from starting chats",
+   "block a customer from chat"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Open the chat with the visitor.\n2. Select **More actions** > **Block visitor**.\n3. Choose **Block by email** or **Block by IP address**.\n4. Select **Block**.\n\nTo undo this, go to **Admin** > **Channels** > **Live chat** > **Blocked visitors** and select **Unblock**.",
+  "notConfusedWith": [
+   "desk-block-sender"
+  ]
+ },
+ {
+  "id": "desk-set-max-concurrent-chats",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Set how many chats an agent can handle at once",
+  "aliases": [
+   "limit simultaneous chats",
+   "maximum chats per agent",
+   "cap live chat workload",
+   "change concurrent chat limit"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Routing**.\n2. Enter a number in **Maximum concurrent chats**.\n3. Select **Save**.\n\nAgents at their limit will not be offered new chats until one ends.",
+  "notConfusedWith": [
+   "desk-set-assignment-limit"
+  ]
+ },
+ {
+  "id": "desk-convert-chat-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Convert a chat into a ticket",
+  "aliases": [
+   "turn a chat into a ticket",
+   "follow up on a chat later by email",
+   "save chat as a ticket",
+   "create ticket from conversation"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Open the chat from your **Inbox**.\n2. Select **More actions** > **Convert to ticket**.\n3. Set the **Priority** and **Assignee**.\n4. Select **Create ticket**.\n\nIf you can't see this option, ask an admin to check your role. Changes are saved straight away.",
+  "notConfusedWith": [
+   "desk-end-chat",
+   "desk-merge-tickets"
+  ]
+ },
+ {
+  "id": "desk-allow-chat-file-upload",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Allow customers to send files in chat",
+  "aliases": [
+   "let customers upload attachments in chat",
+   "turn on file sharing in live chat",
+   "enable screenshots in chat",
+   "attach images to chat"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Features**.\n3. Switch on **File uploads**.\n4. Choose the maximum file size.\n5. Select **Save**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-add-widget-to-website"
+  ]
+ },
+ {
+  "id": "desk-turn-on-chat-notifications",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Turn on desktop notifications for new chats",
+  "aliases": [
+   "get a sound when a chat arrives",
+   "enable chat alerts",
+   "notify me about new chats",
+   "browser notifications for live chat"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Select your profile picture, then **My profile**.\n2. Open the **Notifications** tab.\n3. Switch on **New chat** under **Desktop**.\n4. Allow notifications when your browser asks.\n\nYou can choose a sound in the same section. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-set-agent-status"
+  ]
+ },
+ {
+  "id": "desk-enable-chat-rating",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Live chat",
+  "title": "Ask customers to rate a chat",
+  "aliases": [
+   "collect satisfaction scores after chat",
+   "turn on chat CSAT",
+   "get feedback after live chat",
+   "enable thumbs up and down rating"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Channels** > **Live chat** > **Widget**.\n2. Select **Features**.\n3. Switch on **Satisfaction rating**.\n4. Edit the rating question if you wish.\n5. Select **Save**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-view-csat-report"
+  ]
+ },
+ {
+  "id": "desk-connect-support-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Connect a support email address",
+  "aliases": [
+   "add a support email",
+   "set up support@ inbox",
+   "link a mailbox to Harbour Desk",
+   "receive emails as tickets"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **Channels** > **Email**.\n2. Select **Add email address**.\n3. Enter the address, for example support@yourcompany.com.\n4. Choose the **Default team** to receive tickets.\n5. Select **Save**, then follow the forwarding instructions shown.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-forward-email",
+   "desk-verify-domain"
+  ]
+ },
+ {
+  "id": "desk-forward-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Forward emails to Harbour Desk",
+  "aliases": [
+   "set up email forwarding",
+   "send my mailbox to Desk",
+   "forward support emails to the helpdesk address",
+   "auto forward"
+  ],
+  "body": "1. Go to **Admin** > **Channels** > **Email** and open your address.\n2. Copy the **Forwarding address**.\n3. In your email provider's settings, create a forwarding rule to that address.\n4. Return to Desk and select **Send test email**.\n\nThe status changes to **Connected** once the test email arrives.",
+  "notConfusedWith": [
+   "desk-connect-support-email"
+  ]
+ },
+ {
+  "id": "desk-verify-domain",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Verify your sending domain",
+  "aliases": [
+   "set up SPF and DKIM",
+   "authenticate our domain",
+   "improve email deliverability",
+   "stop replies going to spam"
+  ],
+  "body": "Verifying your domain helps customers receive your replies in their inbox.\n\n1. Go to **Admin** > **Channels** > **Email** > **Domains**.\n2. Select **Add domain** and enter your domain name.\n3. Copy the DNS records shown.\n4. Add them with your domain provider.\n5. Select **Verify**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-connect-support-email"
+  ]
+ },
+ {
+  "id": "desk-set-default-signature",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Set the default email signature for a channel",
+  "aliases": [
+   "company signature on replies",
+   "change footer on outgoing emails",
+   "standard sign-off for support emails",
+   "edit email footer"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Admin** > **Channels** > **Email** and open the address.\n2. Select **Signature**.\n3. Edit the text in the editor. Use **{{agent.name}}** to include the agent's name.\n4. Select **Save**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-set-agent-signature"
+  ]
+ },
+ {
+  "id": "desk-set-auto-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Turn on the automatic acknowledgement email",
+  "aliases": [
+   "send a confirmation when a ticket is received",
+   "auto reply to new emails",
+   "set up ticket received message",
+   "edit auto responder"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Admin** > **Channels** > **Email** > **Auto-replies**.\n2. Switch on **Acknowledge new tickets**.\n3. Edit the **Subject** and message.\n4. Select **Save**.\n\nThe message is sent once, when a customer first emails you. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-set-welcome-message"
+  ]
+ },
+ {
+  "id": "desk-add-cc-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Add a CC recipient to a ticket",
+  "aliases": [
+   "copy someone in on an email",
+   "include another person in a reply",
+   "cc a colleague",
+   "add another contact to a conversation"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Open the ticket in your **Inbox**.\n2. Select **Reply**.\n3. Select **CC** above the editor.\n4. Enter the email address.\n5. Select **Send**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-update-requester-email"
+  ]
+ },
+ {
+  "id": "desk-update-requester-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Update a requester's email address",
+  "aliases": [
+   "change a customer's email",
+   "customer gave a new email",
+   "edit contact email on a ticket",
+   "fix wrong email address"
+  ],
+  "body": "Changing the email updates the customer's record and all of their tickets.\n\n1. Go to **Customers**.\n2. Search for the customer and open their record.\n3. Select **Edit**.\n4. Replace the address in the **Email** field.\n5. Select **Save**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-update-agent-email",
+   "desk-update-customer-phone"
+  ]
+ },
+ {
+  "id": "desk-update-customer-phone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Update a customer's phone number",
+  "aliases": [
+   "change a customer's phone",
+   "edit customer mobile",
+   "fix contact number",
+   "customer got a new number"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Customers**.\n2. Search for the customer and open their record.\n3. Select **Edit**.\n4. Enter the new number in **Phone**.\n5. Select **Save**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-update-agent-phone",
+   "desk-update-requester-email"
+  ]
+ },
+ {
+  "id": "desk-add-customer",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Add a customer",
+  "aliases": [
+   "create a new customer record",
+   "add a contact manually",
+   "enter a new requester",
+   "add a client to the helpdesk"
+  ],
+  "body": "Customers are usually created automatically when they email you. You can also add one yourself.\n\n1. Go to **Customers**.\n2. Select **New customer**.\n3. Enter the **Name** and **Email**. Phone and **Organisation** are optional.\n4. Select **Save**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-delete-customer"
+  ]
+ },
+ {
+  "id": "desk-delete-customer",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Delete a customer record",
+  "aliases": [
+   "remove a customer",
+   "erase a contact",
+   "delete a requester and their data",
+   "get rid of a client record"
+  ],
+  "body": "Deleting a customer also removes their tickets after 30 days. This cannot be undone once that period has passed.\n\n1. Go to **Customers**.\n2. Open the customer's record.\n3. Select **More actions** > **Delete customer**.\n4. Type **DELETE** to confirm.\n5. Select **Delete**.\n\nChanges are saved straight away.",
+  "notConfusedWith": [
+   "desk-add-customer",
+   "desk-block-sender"
+  ]
+ },
+ {
+  "id": "desk-block-sender",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Block an email sender",
+  "aliases": [
+   "stop emails from an address",
+   "blacklist a sender",
+   "ban someone from emailing us",
+   "reject messages from a domain"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Open a ticket from the sender.\n2. Select **More actions** > **Block sender**.\n3. Choose **This address** or **Entire domain**.\n4. Select **Block**.\n\nFuture emails from them are discarded and no tickets are created. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-restore-spam-ticket",
+   "desk-block-visitor"
+  ]
+ },
+ {
+  "id": "desk-restore-spam-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Restore a ticket from spam",
+  "aliases": [
+   "rescue a real email from spam",
+   "not spam",
+   "move ticket out of spam folder",
+   "recover a ticket wrongly marked as spam"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Inbox** > **Spam**.\n2. Open the ticket.\n3. Select **Not spam**.\n4. Select **Confirm**.\n\nThe ticket returns to the **New** view and the sender is allowed to email you again. Your administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-block-sender"
+  ]
+ },
+ {
+  "id": "desk-merge-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Merge duplicate tickets",
+  "aliases": [
+   "combine two tickets",
+   "customer emailed twice",
+   "join tickets together",
+   "merge conversations"
+  ],
+  "body": "Merging moves all messages into one ticket and closes the other.\n\n1. Open the ticket you want to close.\n2. Select **More actions** > **Merge**.\n3. Search for the ticket to keep.\n4. Select **Merge tickets**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-convert-chat-to-ticket",
+   "desk-change-ticket-status"
+  ]
+ },
+ {
+  "id": "desk-set-email-routing-rule",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Route emails to a team by address",
+  "aliases": [
+   "send emails from sales@ to a certain team",
+   "assign tickets automatically by recipient",
+   "route by email address",
+   "auto assign incoming emails"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Admin** > **Channels** > **Email** > **Routing**.\n2. Select **New rule**.\n3. Under **If**, choose **Recipient address** is the address you want.\n4. Under **Then**, choose **Assign to team** and pick the team.\n5. Select **Save rule**.",
+  "notConfusedWith": [
+   "desk-connect-support-email",
+   "desk-add-agent-to-team"
+  ]
+ },
+ {
+  "id": "desk-add-private-note",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Add a private note to a ticket",
+  "aliases": [
+   "leave an internal comment on a ticket",
+   "write a note only agents see",
+   "record a note for colleagues",
+   "note on a conversation"
+  ],
+  "body": "Private notes are never sent to the customer.\n\n1. Open the ticket in your **Inbox**.\n2. Select **Add note** above the reply box.\n3. Type your note. Use @ to mention a colleague.\n4. Select **Save note**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-add-agent-note",
+   "desk-add-article-note"
+  ]
+ },
+ {
+  "id": "desk-change-ticket-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Email channels",
+  "title": "Change a ticket's status",
+  "aliases": [
+   "close a ticket",
+   "mark a ticket as solved",
+   "reopen a ticket",
+   "set a ticket to pending"
+  ],
+  "body": "The statuses are **Open**, **Pending**, **On hold**, **Solved** and **Closed**.\n\n1. Open the ticket in your **Inbox**.\n2. Select the **Status** list in the right panel.\n3. Choose the new status.\n4. Select **Save**.\n\nYour administrator controls who has permission to do this. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-pause-sla-pending",
+   "desk-merge-tickets"
+  ]
+ },
+ {
+  "id": "desk-view-dashboard",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "View the reports dashboard",
+  "aliases": [
+   "see support overview",
+   "open analytics",
+   "check how the team is doing",
+   "main reports page"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Select **Reports** in the left menu.\n2. Open **Overview**.\n3. Use the **Date range** list at the top to choose a period.\n4. Scroll to see ticket volume, response times and satisfaction.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-add-dashboard-chart"
+  ]
+ },
+ {
+  "id": "desk-create-custom-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Create a custom report",
+  "aliases": [
+   "build my own report",
+   "make a new report with chosen metrics",
+   "design a report",
+   "set up a custom analytics report"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Reports** > **Custom reports**.\n2. Select **New report**.\n3. Choose a **Metric**, such as **Tickets created**, and a **Group by** option.\n4. Add any filters.\n5. Select **Save report** and give it a name.",
+  "notConfusedWith": [
+   "desk-duplicate-report",
+   "desk-add-dashboard-chart"
+  ]
+ },
+ {
+  "id": "desk-duplicate-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Duplicate a report",
+  "aliases": [
+   "copy a report",
+   "clone a custom report",
+   "make a version of an existing report",
+   "reuse report setup"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Reports** > **Custom reports**.\n2. Select the **More** menu on the report.\n3. Select **Duplicate**.\n4. Rename the copy and adjust its filters.\n5. Select **Save report**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-create-custom-report"
+  ]
+ },
+ {
+  "id": "desk-delete-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Delete a custom report",
+  "aliases": [
+   "remove a report",
+   "get rid of a saved report",
+   "delete analytics report",
+   "clean up old reports"
+  ],
+  "body": "Deleting a report also removes any schedules attached to it.\n\n1. Go to **Reports** > **Custom reports**.\n2. Select the **More** menu on the report.\n3. Select **Delete**.\n4. Select **Confirm**.\n\nYour administrator controls who has permission to do this. If you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-schedule-report"
+  ]
+ },
+ {
+  "id": "desk-export-report-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export a report to CSV",
+  "aliases": [
+   "download report as spreadsheet",
+   "save report data to Excel",
+   "get csv of a report",
+   "export analytics"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Reports** and open the report.\n2. Set the **Date range** and any filters.\n3. Select **Export**.\n4. Choose **CSV** and select **Download**.\n\nIf you can't see this option, ask an admin to check your role. Changes are saved straight away.",
+  "notConfusedWith": [
+   "desk-export-tickets-csv",
+   "desk-schedule-report"
+  ]
+ },
+ {
+  "id": "desk-export-tickets-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export tickets to CSV",
+  "aliases": [
+   "download all tickets",
+   "get a spreadsheet of tickets",
+   "export ticket list",
+   "csv of conversations"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Inbox** and open a view, or use **Search** to find the tickets you need.\n2. Select **Export**.\n3. Choose the fields to include.\n4. Select **Export to CSV**.\n\nWe will email you a download link when the file is ready.",
+  "notConfusedWith": [
+   "desk-export-report-csv",
+   "desk-export-agent-list"
+  ]
+ },
+ {
+  "id": "desk-schedule-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Schedule a report by email",
+  "aliases": [
+   "get a weekly report email",
+   "send report automatically",
+   "set up recurring report",
+   "email me this report every Monday"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Reports** and open the report.\n2. Select **Schedule**.\n3. Choose how often it is sent: **Daily**, **Weekly** or **Monthly**.\n4. Enter the recipients' email addresses.\n5. Select **Save schedule**.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-export-report-csv",
+   "desk-share-report"
+  ]
+ },
+ {
+  "id": "desk-share-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Share a report with a colleague",
+  "aliases": [
+   "give someone access to a report",
+   "let a supervisor see my report",
+   "send report link to team",
+   "report permissions"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Reports** and open the report.\n2. Select **Share**.\n3. Enter the name of an agent or team.\n4. Choose **Can view** or **Can edit**.\n5. Select **Share**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-schedule-report"
+  ]
+ },
+ {
+  "id": "desk-filter-report-by-date",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Change the date range of a report",
+  "aliases": [
+   "see last month's figures",
+   "filter report by dates",
+   "report on a different period",
+   "pick a custom time frame"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Open any report in **Reports**.\n2. Select the **Date range** list at the top.\n3. Choose a preset, such as **Last 30 days**, or select **Custom**.\n4. Select **Apply**.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-filter-report-by-team"
+  ]
+ },
+ {
+  "id": "desk-filter-report-by-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Filter a report by team",
+  "aliases": [
+   "show one team's figures",
+   "report for a single team",
+   "compare teams",
+   "only see my team in reports"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Open any report in **Reports**.\n2. Select **Filters** > **Team**.\n3. Tick one or more teams.\n4. Select **Apply**.\n\nChanges are saved straight away. The action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-filter-report-by-date",
+   "desk-view-agent-performance"
+  ]
+ },
+ {
+  "id": "desk-view-agent-performance",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "View agent performance",
+  "aliases": [
+   "how many tickets did each agent solve",
+   "check an agent's response times",
+   "agent leaderboard",
+   "staff productivity report"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Reports** > **Agents**.\n2. Choose a **Date range**.\n3. Review tickets solved, average first response time and satisfaction for each agent.\n4. Select an agent's name for a detailed breakdown.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-filter-report-by-team",
+   "desk-view-csat-report"
+  ]
+ },
+ {
+  "id": "desk-view-csat-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "View customer satisfaction results",
+  "aliases": [
+   "see CSAT scores",
+   "check customer ratings",
+   "how happy are our customers",
+   "satisfaction survey results"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Go to **Reports** > **Satisfaction**.\n2. Choose a **Date range**.\n3. See the overall score and the split of **Good** and **Bad** ratings.\n4. Select **Comments** to read what customers wrote.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-enable-chat-rating",
+   "desk-view-agent-performance"
+  ]
+ },
+ {
+  "id": "desk-view-sla-report",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "View SLA compliance",
+  "aliases": [
+   "how many tickets breached SLA",
+   "check we met our targets",
+   "SLA performance report",
+   "service level results"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Reports** > **SLAs**.\n2. Choose a policy from the **SLA policy** list.\n3. Review the percentage of tickets that met first response and resolution targets.\n4. Select a bar in the chart to list the breached tickets.",
+  "notConfusedWith": [
+   "desk-view-at-risk-tickets",
+   "desk-view-first-response-time"
+  ]
+ },
+ {
+  "id": "desk-view-first-response-time",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "View first response time",
+  "aliases": [
+   "how fast do we reply",
+   "average reply time",
+   "check response speed",
+   "first reply time report"
+  ],
+  "body": "If you can't see this option, ask an admin to check your role.\n\n1. Go to **Reports** > **Response times**.\n2. Choose a **Date range**.\n3. Select **Group by** > **Channel**, **Team** or **Agent**.\n4. Read the average and median times in the table.\n\nTimes are shown in business hours if the ticket uses a schedule.",
+  "notConfusedWith": [
+   "desk-view-sla-report"
+  ]
+ },
+ {
+  "id": "desk-view-volume-by-channel",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "See ticket volume by channel",
+  "aliases": [
+   "how many tickets come from email vs chat",
+   "which channel is busiest",
+   "tickets per channel",
+   "channel breakdown"
+  ],
+  "body": "Changes are saved straight away.\n\n1. Go to **Reports** > **Overview**.\n2. Open the **Tickets created** chart.\n3. Select **Group by** > **Channel**.\n4. Hover over a bar to see the count for each channel.\n\nThe action is recorded in the audit log under **Admin** > **Audit log**.",
+  "notConfusedWith": [
+   "desk-view-dashboard"
+  ]
+ },
+ {
+  "id": "desk-add-dashboard-chart",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Add a chart to your dashboard",
+  "aliases": [
+   "pin a report to the overview",
+   "put a chart on my dashboard",
+   "customise dashboard",
+   "show a report on the home page"
+  ],
+  "body": "The action is recorded in the audit log under **Admin** > **Audit log**.\n\n1. Open a report in **Reports**.\n2. Select **Add to dashboard**.\n3. Choose the dashboard and a chart type such as **Bar** or **Line**.\n4. Select **Add**.\n\nYour administrator controls who has permission to do this.",
+  "notConfusedWith": [
+   "desk-view-dashboard",
+   "desk-create-custom-report"
+  ]
+ },
+ {
+  "id": "desk-view-popular-articles",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Reports",
+  "title": "See which knowledge base articles are viewed most",
+  "aliases": [
+   "most popular help articles",
+   "article views report",
+   "which FAQs do customers read",
+   "top articles"
+  ],
+  "body": "Your administrator controls who has permission to do this.\n\n1. Go to **Reports** > **Knowledge base**.\n2. Choose a **Date range**.\n3. Sort the table by **Views**.\n4. Select an article title to see searches that led to it.\n\nIf you can't see this option, ask an admin to check your role.",
+  "notConfusedWith": [
+   "desk-export-articles-csv"
+  ]
+ }
+]

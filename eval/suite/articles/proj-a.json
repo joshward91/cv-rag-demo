@@ -1,0 +1,1613 @@
+[
+ {
+  "id": "proj-create-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Create a project",
+  "aliases": [
+   "start a new project",
+   "set up a project",
+   "make a new project",
+   "add project"
+  ],
+  "body": "Every piece of work in Harbour Projects lives in a project.\n1. In the left sidebar, select **Projects**.\n2. Select **New project**.\n3. Enter a **Project name** and, if you like, a short **Description**.\n4. Choose a **Start date** and **Due date**.\n5. Select **Create project**.\nThe project opens on its **Overview** tab, ready for tasks.",
+  "notConfusedWith": [
+   "proj-create-project-from-template"
+  ]
+ },
+ {
+  "id": "proj-create-project-from-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Create a project from a template",
+  "aliases": [
+   "use a template for a new project",
+   "start project from template",
+   "new project from saved template"
+  ],
+  "body": "Templates save you rebuilding the same tasks and columns each time.\n1. Select **Projects** in the left sidebar.\n2. Select the arrow next to **New project**, then choose **From template**.\n3. Pick a template from the **Template library**.\n4. Enter a **Project name** and set the **Start date**. Task dates shift to match.\n5. Select **Create project**.",
+  "notConfusedWith": [
+   "proj-create-project",
+   "proj-save-project-as-template"
+  ]
+ },
+ {
+  "id": "proj-save-project-as-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Save a project as a template",
+  "aliases": [
+   "make a template from a project",
+   "turn project into template",
+   "reuse project structure"
+  ],
+  "body": "Save a project you are happy with so your team can reuse its tasks, columns and settings.\n1. Open the project and select the **More** menu (three dots) at the top right.\n2. Select **Save as template**.\n3. Enter a **Template name**.\n4. Choose whether to **Include tasks** and **Include files**.\n5. Select **Save template**.\nComments and time logs are never copied into a template.",
+  "notConfusedWith": [
+   "proj-create-project-from-template",
+   "proj-duplicate-project"
+  ]
+ },
+ {
+  "id": "proj-rename-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Rename a project",
+  "aliases": [
+   "change project name",
+   "edit project title",
+   "call the project something else"
+  ],
+  "body": "1. Open the project.\n2. Select the **Settings** tab.\n3. Under **General**, edit the **Project name** field.\n4. Select **Save changes**.\nThe new name appears straight away in the sidebar, in reports and on any task notifications sent from now on. Old notifications keep the previous name.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-edit-project-description",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Edit a project description",
+  "aliases": [
+   "change project summary",
+   "update project overview text",
+   "add a description to a project"
+  ],
+  "body": "The description sits at the top of the **Overview** tab and helps new members understand the project.\n1. Open the project and select the **Overview** tab.\n2. Select **Edit description**.\n3. Type or paste your text. You can use bold and bullet lists.\n4. Select **Save**.\nGuests with access to the project can read the description too.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-project-dates",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Change a project’s start and due dates",
+  "aliases": [
+   "move project deadline",
+   "reschedule a project",
+   "update project end date",
+   "push out project dates"
+  ],
+  "body": "1. Open the project and select the **Settings** tab.\n2. Under **Schedule**, select the **Start date** or **Due date** field.\n3. Choose the new date from the calendar.\n4. To move tasks with the project, tick **Shift task dates by the same amount**.\n5. Select **Save changes**.\nTasks that now fall outside the project dates are flagged with an amber warning on the **Timeline**.",
+  "notConfusedWith": [
+   "proj-move-timeline-bar"
+  ]
+ },
+ {
+  "id": "proj-change-project-status",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Change a project’s status",
+  "aliases": [
+   "mark project on hold",
+   "set project as at risk",
+   "update project health",
+   "set project to complete"
+  ],
+  "body": "Status tells your team and clients where a project stands.\n1. Open the project.\n2. Select the status badge next to the project name, for example **On track**.\n3. Choose **On track**, **At risk**, **Off track**, **On hold** or **Complete**.\n4. Add a short note if you wish.\n5. Select **Update status**.\nEach change is recorded in the **Status history** on the **Overview** tab.",
+  "notConfusedWith": [
+   "proj-post-project-status-update",
+   "proj-archive-project"
+  ]
+ },
+ {
+  "id": "proj-post-project-status-update",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Post a project status update",
+  "aliases": [
+   "write a project update",
+   "add a progress note to a project",
+   "send weekly project update"
+  ],
+  "body": "Status updates give stakeholders a written summary without a meeting.\n1. Open the project and select the **Overview** tab.\n2. Select **New update**.\n3. Choose a **Status** and write your summary.\n4. Tick **Notify guests** if clients should receive it.\n5. Select **Post update**.\nProject members get an email and an in-app notification.",
+  "notConfusedWith": [
+   "proj-change-project-status"
+  ]
+ },
+ {
+  "id": "proj-archive-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Archive a project",
+  "aliases": [
+   "close off a finished project",
+   "hide a completed project",
+   "put project in archive",
+   "shelve a project"
+  ],
+  "body": "Archiving removes a project from your active list but keeps everything in it.\n1. Open the project.\n2. Select the **More** menu (three dots), then **Archive project**.\n3. Select **Archive** to confirm.\nArchived projects are read-only. Members and guests can still view them, but nobody can add tasks or comments until the project is restored.",
+  "notConfusedWith": [
+   "proj-restore-archived-project",
+   "proj-delete-project"
+  ]
+ },
+ {
+  "id": "proj-restore-archived-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Restore an archived project",
+  "aliases": [
+   "unarchive a project",
+   "bring back archived project",
+   "reopen archived project"
+  ],
+  "body": "1. Select **Projects** in the left sidebar.\n2. Select the **Filter** button and choose **Archived**.\n3. Open the project you want to bring back.\n4. Select **Restore project** at the top of the page.\n5. Choose a status, such as **On track**, then select **Restore**.\nThe project returns to your active list with all tasks, files and comments intact.",
+  "notConfusedWith": [
+   "proj-archive-project"
+  ]
+ },
+ {
+  "id": "proj-delete-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Delete a project",
+  "aliases": [
+   "remove a project permanently",
+   "get rid of a project",
+   "trash a project"
+  ],
+  "body": "Only project owners and account admins can delete a project. Deleting is permanent after 30 days.\n1. Open the project and select the **Settings** tab.\n2. Scroll to **Danger zone**.\n3. Select **Delete project**.\n4. Type the project name to confirm.\n5. Select **Delete forever**.\nIf you may want the work later, archive the project instead.",
+  "notConfusedWith": [
+   "proj-archive-project"
+  ]
+ },
+ {
+  "id": "proj-duplicate-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Duplicate a project",
+  "aliases": [
+   "copy a project",
+   "clone a project",
+   "make a copy of an existing project"
+  ],
+  "body": "1. Select **Projects** in the left sidebar.\n2. Hover over the project and select the **More** menu (three dots).\n3. Select **Duplicate**.\n4. Enter a name for the copy.\n5. Choose what to include: **Tasks**, **Files**, **Members** and **Board layout**.\n6. Select **Duplicate project**.\nComments and time logs are not copied. Use a template if you plan to repeat this often.",
+  "notConfusedWith": [
+   "proj-save-project-as-template"
+  ]
+ },
+ {
+  "id": "proj-export-project-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Export a project’s tasks to CSV",
+  "aliases": [
+   "download project data as spreadsheet",
+   "export project list",
+   "get project into Excel"
+  ],
+  "body": "1. Open the project and select the **Tasks** tab.\n2. Select the **More** menu (three dots) above the task list.\n3. Select **Export to CSV**.\n4. Choose the columns you need, such as **Assignee**, **Due date** and **Status**.\n5. Select **Export**.\nThe file downloads to your browser’s usual download folder. Subtasks appear on their own rows.",
+  "notConfusedWith": [
+   "proj-export-tasks-csv-all-projects"
+  ]
+ },
+ {
+  "id": "proj-add-project-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Add a team member to a project",
+  "aliases": [
+   "invite a colleague to a project",
+   "give someone access to a project",
+   "add person to project"
+  ],
+  "body": "1. Open the project and select the **People** tab.\n2. Select **Add member**.\n3. Start typing the person’s name or email address and choose them from the list.\n4. Pick a **Role**: **Manager**, **Contributor** or **Viewer**.\n5. Select **Add**.\nThey receive a notification and the project appears in their **Projects** list. To include someone outside your company, invite them as a guest instead.",
+  "notConfusedWith": [
+   "proj-invite-guest-to-project",
+   "proj-remove-project-member"
+  ]
+ },
+ {
+  "id": "proj-remove-project-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Remove a member from a project",
+  "aliases": [
+   "take someone off a project",
+   "revoke project access for a colleague",
+   "kick user out of project"
+  ],
+  "body": "1. Open the project and select the **People** tab.\n2. Find the person in the **Members** list.\n3. Select the **More** menu (three dots) beside their name, then **Remove from project**.\n4. Choose whether to **Reassign their open tasks** to another member or leave them unassigned.\n5. Select **Remove**.\nTheir past comments and completed work stay in the project.",
+  "notConfusedWith": [
+   "proj-add-project-member",
+   "proj-remove-guest"
+  ]
+ },
+ {
+  "id": "proj-change-member-role",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Change a member’s role in a project",
+  "aliases": [
+   "make someone a project manager",
+   "give a colleague edit access",
+   "downgrade member to viewer"
+  ],
+  "body": "Roles control what each member can do in a project.\n1. Open the project and select the **People** tab.\n2. Find the member in the list.\n3. Select their current role, for example **Contributor**.\n4. Choose **Manager**, **Contributor** or **Viewer**.\n5. Select **Save**.\nThe change takes effect immediately.",
+  "notConfusedWith": [
+   "proj-change-guest-permission"
+  ]
+ },
+ {
+  "id": "proj-change-project-owner",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Transfer project ownership",
+  "aliases": [
+   "make someone else the project owner",
+   "hand over a project",
+   "change who owns a project"
+  ],
+  "body": "Each project has one owner who can delete it and manage billing codes.\n1. Open the project and select the **Settings** tab.\n2. Under **General**, select the **Owner** field.\n3. Choose a current **Manager** from the list.\n4. Select **Transfer ownership**.\n5. Confirm by selecting **Yes, transfer**.\nYou stay on the project as a **Manager**.",
+  "notConfusedWith": [
+   "proj-change-member-role"
+  ]
+ },
+ {
+  "id": "proj-set-project-budget",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Set a project budget",
+  "aliases": [
+   "add a budget to a project",
+   "track project spend",
+   "enter project hours budget"
+  ],
+  "body": "1. Open the project and select the **Settings** tab.\n2. Select **Budget**.\n3. Choose **Budget type**: **Hours** or **Amount**.\n4. Enter the budget figure and, for amounts, the **Currency**.\n5. Select **Save changes**.\nA progress bar appears on the **Overview** tab and turns amber when 80 per cent is used. Logged time updates it automatically.",
+  "notConfusedWith": [
+   "proj-log-time-on-task"
+  ]
+ },
+ {
+  "id": "proj-set-project-colour",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Change a project’s colour and icon",
+  "aliases": [
+   "pick a colour for a project",
+   "change project icon",
+   "customise how a project looks in the sidebar"
+  ],
+  "body": "Colours make projects easy to tell apart at a glance.\n1. Open the project and select the **Settings** tab.\n2. Under **Appearance**, select the coloured square.\n3. Choose a colour and an icon.\n4. Select **Save changes**.\nThe new look shows in the sidebar, on the **Projects** page and on your board cards.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-filter-project-list",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Projects",
+  "title": "Filter the projects list",
+  "aliases": [
+   "find a project by status",
+   "show only my projects",
+   "search for a project"
+  ],
+  "body": "1. Select **Projects** in the left sidebar.\n2. Select **Filter** above the list.\n3. Choose one or more conditions, such as **Status**, **Owner** or **Client**.\n4. Select **Apply**.\n5. To keep the filter for next time, select **Save view** and name it.\nSelect **Clear all** to see every project again. Use the search box to find a project by name.",
+  "notConfusedWith": [
+   "proj-save-board-view"
+  ]
+ },
+ {
+  "id": "proj-create-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Create a task",
+  "aliases": [
+   "add a task",
+   "make a new to-do",
+   "add a new task to a project"
+  ],
+  "body": "1. Open the project and select the **Tasks** tab.\n2. Select **Add task**.\n3. Type the task name and press **Enter**.\n4. Select the task to open its details.\n5. Add an **Assignee**, **Due date** and **Description**.\nSelect **Save** if you changed any details. Tasks you create inside a column on the **Board** are placed in that column automatically.",
+  "notConfusedWith": [
+   "proj-create-subtask"
+  ]
+ },
+ {
+  "id": "proj-create-subtask",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Add a subtask to a task",
+  "aliases": [
+   "break a task into smaller steps",
+   "create a checklist item under a task",
+   "add a child task"
+  ],
+  "body": "Subtasks split bigger jobs into steps that can each have an owner and due date.\n1. Open the task.\n2. Under **Subtasks**, select **Add subtask**.\n3. Type a name and press **Enter**.\n4. Repeat for each step.\nThe parent task shows progress, such as 2 of 5 complete. Subtasks can sit one level below a task only.",
+  "notConfusedWith": [
+   "proj-create-task",
+   "proj-convert-subtask-to-task"
+  ]
+ },
+ {
+  "id": "proj-assign-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Assign a task to someone",
+  "aliases": [
+   "change task owner",
+   "reassign a task",
+   "give a task to a colleague",
+   "set the assignee"
+  ],
+  "body": "1. Open the task.\n2. Select the **Assignee** field.\n3. Start typing a name and choose the person from the list.\n4. To add more people, select **Add assignee**.\n5. Close the task panel.\nThe person receives a notification. Only project members can be assigned tasks. Guests can be mentioned in comments but not assigned.",
+  "notConfusedWith": [
+   "proj-bulk-edit-tasks"
+  ]
+ },
+ {
+  "id": "proj-change-task-due-date",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Change a task’s due date",
+  "aliases": [
+   "reschedule a task",
+   "move the deadline on a task",
+   "push a task back",
+   "update task due date"
+  ],
+  "body": "1. Open the task.\n2. Select the **Due date** field.\n3. Choose the new date from the calendar, or select **Clear** to remove it.\n4. Optionally add a time under **Due time**.\nThe assignee is notified of the change. If other tasks depend on this one, a prompt asks whether to move them as well.",
+  "notConfusedWith": [
+   "proj-move-timeline-bar",
+   "proj-set-recurring-task"
+  ]
+ },
+ {
+  "id": "proj-set-task-priority",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Set a task’s priority",
+  "aliases": [
+   "mark a task as urgent",
+   "make task high priority",
+   "change priority level"
+  ],
+  "body": "1. Open the task.\n2. Select the **Priority** field.\n3. Choose **Low**, **Medium**, **High** or **Urgent**.\nPriority shows as a coloured flag on the task list and on board cards. You can sort the **Tasks** tab by priority by selecting the **Priority** column heading.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-change-task-status",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Change a task’s status",
+  "aliases": [
+   "mark task as in progress",
+   "move task to blocked",
+   "update task status"
+  ],
+  "body": "Every task has a status that matches the columns on your board.\n1. Open the task.\n2. Select the **Status** field.\n3. Choose a status, such as **To do**, **In progress**, **Blocked** or **Done**.\nOn the **Board**, the card moves to the matching column straight away. Admins can rename statuses under **Settings**, then **Workflow**.",
+  "notConfusedWith": [
+   "proj-complete-task",
+   "proj-move-card"
+  ]
+ },
+ {
+  "id": "proj-complete-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Mark a task as complete",
+  "aliases": [
+   "tick off a task",
+   "finish a task",
+   "close out a task",
+   "set task to done"
+  ],
+  "body": "1. Find the task in the **Tasks** tab or on your **My tasks** page.\n2. Select the circle to the left of the task name.\nThe circle turns green and the task moves to **Done**. If it has open subtasks, you will be asked whether to complete them too.\nTo complete a task from inside its details, select **Mark complete** at the top.",
+  "notConfusedWith": [
+   "proj-reopen-task",
+   "proj-change-task-status"
+  ]
+ },
+ {
+  "id": "proj-reopen-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Reopen a completed task",
+  "aliases": [
+   "undo task completion",
+   "bring back a finished task",
+   "mark done task as not done"
+  ],
+  "body": "1. Open the project and select the **Tasks** tab.\n2. Select **Show completed** at the bottom of the list.\n3. Open the task.\n4. Select **Reopen task**.\n5. Choose the status it should return to, such as **To do**.\nThe assignee is notified and the task reappears in the active list with its comments and files intact.",
+  "notConfusedWith": [
+   "proj-complete-task"
+  ]
+ },
+ {
+  "id": "proj-add-task-labels",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Add a label to a task",
+  "aliases": [
+   "tag a task",
+   "categorise tasks",
+   "add a tag to a task"
+  ],
+  "body": "Labels help you group and filter tasks across a project.\n1. Open the task.\n2. Select the **Labels** field.\n3. Choose an existing label, or type a new name and select **Create label**.\n4. Press **Esc** to close the list.\nYou can add several labels to one task. Admins can edit or delete labels under **Settings**, then **Labels**.",
+  "notConfusedWith": [
+   "proj-filter-board"
+  ]
+ },
+ {
+  "id": "proj-set-task-estimate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Add a time estimate to a task",
+  "aliases": [
+   "estimate how long a task will take",
+   "enter estimated hours",
+   "set planned hours"
+  ],
+  "body": "1. Open the task.\n2. Select the **Estimate** field.\n3. Enter the time, for example **4h** or **1d 2h**.\n4. Press **Enter**.\nEstimates are added up on the **Overview** tab and compared with logged time in the **Reports** area. Subtask estimates roll up into the parent task.",
+  "notConfusedWith": [
+   "proj-log-time-on-task"
+  ]
+ },
+ {
+  "id": "proj-log-time-on-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Log time on a task",
+  "aliases": [
+   "record hours worked",
+   "add a timesheet entry",
+   "track time against a task"
+  ],
+  "body": "1. Open the task.\n2. Select the **Time** tab.\n3. Select **Log time**.\n4. Enter the **Duration**, the **Date** and an optional note.\n5. Select **Save**.\nYou can also select **Start timer** and stop it when you finish. Time you log counts towards the project budget if one is set.",
+  "notConfusedWith": [
+   "proj-set-task-estimate",
+   "proj-set-project-budget"
+  ]
+ },
+ {
+  "id": "proj-delete-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Delete a task",
+  "aliases": [
+   "remove a task",
+   "get rid of a task",
+   "trash a task"
+  ],
+  "body": "1. Open the task.\n2. Select the **More** menu (three dots) at the top of the task panel.\n3. Select **Delete task**.\n4. Select **Delete** to confirm.\nDeleted tasks go to the project’s **Trash** for 30 days, where a manager can restore them. Subtasks are deleted along with the parent.",
+  "notConfusedWith": [
+   "proj-archive-done-cards"
+  ]
+ },
+ {
+  "id": "proj-duplicate-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Duplicate a task",
+  "aliases": [
+   "copy a task",
+   "clone a task",
+   "make a copy of a task"
+  ],
+  "body": "1. Open the task.\n2. Select the **More** menu (three dots).\n3. Select **Duplicate task**.\n4. Choose whether to include **Subtasks**, **Assignee** and **Attachments**.\n5. Select **Duplicate**.\nThe copy is named with the word Copy at the end and appears in the same column or list.",
+  "notConfusedWith": [
+   "proj-move-task-to-project"
+  ]
+ },
+ {
+  "id": "proj-convert-subtask-to-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Turn a subtask into a task",
+  "aliases": [
+   "promote a subtask",
+   "make a subtask its own task",
+   "move subtask up a level"
+  ],
+  "body": "Use this when a step has grown into a job of its own.\n1. Open the parent task.\n2. Hover over the subtask under **Subtasks**.\n3. Select the **More** menu (three dots), then **Convert to task**.\nThe subtask becomes a task in the same project, keeping its assignee, due date and comments. It is no longer counted in the parent’s progress.",
+  "notConfusedWith": [
+   "proj-create-subtask"
+  ]
+ },
+ {
+  "id": "proj-move-task-to-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Move a task to another project",
+  "aliases": [
+   "transfer a task between projects",
+   "put task in a different project",
+   "relocate a task"
+  ],
+  "body": "1. Open the task.\n2. Select the **More** menu (three dots), then **Move to project**.\n3. Search for and select the destination project.\n4. Choose a **Status** in that project.\n5. Select **Move**.\nComments and files travel with the task. Assignees who are not members of the new project are removed from the task.",
+  "notConfusedWith": [
+   "proj-duplicate-task"
+  ]
+ },
+ {
+  "id": "proj-set-recurring-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Make a task repeat",
+  "aliases": [
+   "set up a recurring task",
+   "repeat task every week",
+   "schedule regular tasks"
+  ],
+  "body": "1. Open the task.\n2. Select the **Repeat** field.\n3. Choose how often: **Daily**, **Weekly**, **Monthly** or **Custom**.\n4. Pick an end: **Never** or **On a date**.\n5. Select **Save**.\nWhen someone completes the task, Harbour Projects creates the next one with the same assignee and a new due date.",
+  "notConfusedWith": [
+   "proj-change-task-due-date"
+  ]
+ },
+ {
+  "id": "proj-add-task-dependency",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Link a task that depends on another",
+  "aliases": [
+   "make one task wait for another",
+   "set a dependency",
+   "add predecessor to a task"
+  ],
+  "body": "1. Open the task that has to wait.\n2. Select **Dependencies**, then **Add dependency**.\n3. Choose **Waiting on** and search for the other task.\n4. Select **Add**.\nThe task shows a **Blocked** label until the one it is waiting on is complete. On the **Timeline**, an arrow connects the two bars.",
+  "notConfusedWith": [
+   "proj-show-dependencies"
+  ]
+ },
+ {
+  "id": "proj-bulk-edit-tasks",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Edit several tasks at once",
+  "aliases": [
+   "change many tasks together",
+   "bulk update task status",
+   "assign multiple tasks"
+  ],
+  "body": "1. Open the project and select the **Tasks** tab.\n2. Tick the box beside each task you want to change.\n3. Select **Edit selected** in the bar that appears.\n4. Choose the field to change, such as **Assignee**, **Status** or **Due date**.\n5. Enter the new value and select **Apply**.\nYou can edit up to 200 tasks at a time.",
+  "notConfusedWith": [
+   "proj-assign-task"
+  ]
+ },
+ {
+  "id": "proj-export-tasks-csv-all-projects",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Export your tasks to CSV",
+  "aliases": [
+   "download all my tasks to a spreadsheet",
+   "export my task list",
+   "get tasks out of Harbour"
+  ],
+  "body": "1. In the left sidebar, select **My tasks**.\n2. Select **Filter** to narrow the list, if needed.\n3. Select the **More** menu (three dots), then **Export to CSV**.\n4. Select **Export**.\nThe CSV includes the task name, project, assignee, status and due date. To export one project only, use the export option on that project’s **Tasks** tab.",
+  "notConfusedWith": [
+   "proj-export-project-csv"
+  ]
+ },
+ {
+  "id": "proj-import-tasks-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Tasks and subtasks",
+  "title": "Import tasks from a CSV file",
+  "aliases": [
+   "upload tasks from a spreadsheet",
+   "bulk add tasks from Excel",
+   "bring in tasks from a file"
+  ],
+  "body": "1. Open the project and select the **Tasks** tab.\n2. Select the **More** menu (three dots), then **Import from CSV**.\n3. Select **Choose file** and pick your CSV.\n4. Match each column in your file to a Harbour field, such as **Task name** and **Due date**.\n5. Select **Import**.\nDownload the sample file first if you are unsure of the layout.",
+  "notConfusedWith": [
+   "proj-export-project-csv"
+  ]
+ },
+ {
+  "id": "proj-add-board-column",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Add a column to a board",
+  "aliases": [
+   "create a new board column",
+   "add a stage to my kanban board",
+   "new status column"
+  ],
+  "body": "1. Open the project and select the **Board** tab.\n2. Scroll to the right-hand edge and select **Add column**.\n3. Type a name, such as **In review**.\n4. Press **Enter**.\nNew columns become statuses you can use on every task in the project. Drag the column by its heading to change where it sits.",
+  "notConfusedWith": [
+   "proj-rename-board-column"
+  ]
+ },
+ {
+  "id": "proj-rename-board-column",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Rename a board column",
+  "aliases": [
+   "change a column name",
+   "edit column title",
+   "rename a kanban stage"
+  ],
+  "body": "1. Open the project and select the **Board** tab.\n2. Select the **More** menu (three dots) at the top of the column.\n3. Select **Rename**.\n4. Type the new name and press **Enter**.\nTasks in the column keep their place, and their status updates to the new name.",
+  "notConfusedWith": [
+   "proj-add-board-column"
+  ]
+ },
+ {
+  "id": "proj-delete-board-column",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Delete a board column",
+  "aliases": [
+   "remove a column from the board",
+   "get rid of a stage",
+   "take a kanban column away"
+  ],
+  "body": "1. Open the project and select the **Board** tab.\n2. Select the **More** menu (three dots) at the top of the column.\n3. Select **Delete column**.\n4. Choose a column to **Move tasks to**.\n5. Select **Delete**.\nTasks are never deleted with the column. Each one moves to the column you chose and takes on its status.",
+  "notConfusedWith": [
+   "proj-archive-done-cards"
+  ]
+ },
+ {
+  "id": "proj-set-wip-limit",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Set a work-in-progress limit on a column",
+  "aliases": [
+   "limit cards in a column",
+   "cap work in progress",
+   "set a kanban WIP limit"
+  ],
+  "body": "A limit helps your team finish work before starting more.\n1. Open the **Board** tab.\n2. Select the **More** menu (three dots) on the column.\n3. Select **Set limit**.\n4. Enter the maximum number of cards.\n5. Select **Save**.\nThe column count turns red when the limit is exceeded. Cards can still be added, so the limit acts as a warning.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-move-card",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Move a card between columns",
+  "aliases": [
+   "drag a card to another column",
+   "change a task’s stage on the board",
+   "shift a card"
+  ],
+  "body": "1. Open the project and select the **Board** tab.\n2. Click and hold the card.\n3. Drag it to the new column and release.\nTo move a card without dragging, open it, select the **Status** field and choose the column name. The task’s status updates to match, and the assignee is notified if the new status is **Done**.",
+  "notConfusedWith": [
+   "proj-change-task-status"
+  ]
+ },
+ {
+  "id": "proj-collapse-board-column",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Collapse a column",
+  "aliases": [
+   "hide a column on the board",
+   "minimise a board column",
+   "shrink a column"
+  ],
+  "body": "1. Open the **Board** tab.\n2. Select the small arrow at the top left of the column heading.\nThe column folds into a narrow strip showing only its name and card count. Select the arrow again to expand it.\nYour choice is remembered for you only. It does not change the board for other members.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-filter-board",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Filter the cards on a board",
+  "aliases": [
+   "show only my cards",
+   "hide cards by label",
+   "search the board"
+  ],
+  "body": "1. Open the **Board** tab.\n2. Select **Filter** at the top of the board.\n3. Choose conditions such as **Assignee**, **Label**, **Priority** or **Due date**.\n4. Select **Apply**.\nA blue dot on the **Filter** button shows a filter is active. Select **Clear all** to see every card again.",
+  "notConfusedWith": [
+   "proj-save-board-view",
+   "proj-filter-project-list"
+  ]
+ },
+ {
+  "id": "proj-group-board-by-assignee",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Group a board into swimlanes",
+  "aliases": [
+   "split the board by person",
+   "show rows per assignee",
+   "add swimlanes"
+  ],
+  "body": "Swimlanes add horizontal rows so you can see each person’s work across all columns.\n1. Open the **Board** tab.\n2. Select **Group by** at the top of the board.\n3. Choose **Assignee**, **Priority** or **Label**.\nSelect **None** to return to a single row. Rows can be collapsed with the arrow beside each name.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-card-fields",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Choose what shows on board cards",
+  "aliases": [
+   "change card layout",
+   "show due date on cards",
+   "hide assignee photo on board"
+  ],
+  "body": "1. Open the **Board** tab.\n2. Select **Card settings**, shown as a small sliders icon.\n3. Tick or untick the fields to show, such as **Due date**, **Assignee**, **Labels** and **Subtask progress**.\n4. Select **Done**.\nThis setting applies to everyone using the board and needs a **Manager** role.",
+  "notConfusedWith": [
+   "proj-set-card-colour"
+  ]
+ },
+ {
+  "id": "proj-set-card-colour",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Change a card’s colour",
+  "aliases": [
+   "colour code a card",
+   "highlight a card",
+   "make a card stand out"
+  ],
+  "body": "1. Open the **Board** tab.\n2. Hover over the card and select the **More** menu (three dots).\n3. Select **Card colour**.\n4. Choose a colour.\nThe colour appears as a stripe along the card’s left edge. To colour every card by priority or label instead, use **Colour by** in the board’s **Card settings**.",
+  "notConfusedWith": [
+   "proj-set-card-fields"
+  ]
+ },
+ {
+  "id": "proj-archive-done-cards",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Archive completed cards",
+  "aliases": [
+   "clear done column",
+   "tidy the board",
+   "hide finished cards"
+  ],
+  "body": "Archiving keeps a long board tidy without losing any work.\n1. Open the **Board** tab.\n2. Select the **More** menu (three dots) on the **Done** column.\n3. Select **Archive all cards**.\n4. Select **Archive** to confirm.\nTasks remain in the project and can be found under **Show completed** on the **Tasks** tab.",
+  "notConfusedWith": [
+   "proj-delete-board-column",
+   "proj-delete-task"
+  ]
+ },
+ {
+  "id": "proj-save-board-view",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Save a board view",
+  "aliases": [
+   "keep my board filters",
+   "create a saved view",
+   "remember a board setup"
+  ],
+  "body": "1. Open the **Board** tab and set up your filters and grouping.\n2. Select **Views** at the top of the board.\n3. Select **Save current view**.\n4. Enter a name, such as **My open work**.\n5. Choose **Only me** or **Everyone in project**.\n6. Select **Save**.\nSaved views appear in the **Views** list for quick switching.",
+  "notConfusedWith": [
+   "proj-filter-board",
+   "proj-filter-project-list"
+  ]
+ },
+ {
+  "id": "proj-switch-to-timeline",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Switch from the board to the timeline",
+  "aliases": [
+   "see my project as a gantt chart",
+   "view tasks on a timeline",
+   "open timeline view"
+  ],
+  "body": "1. Open the project.\n2. Select the **Timeline** tab.\nEach task with a start and due date appears as a bar. Tasks without dates are listed in the **Unscheduled** panel on the left.\nYour filters from the **Board** are carried across, so you see the same set of tasks.",
+  "notConfusedWith": [
+   "proj-zoom-timeline"
+  ]
+ },
+ {
+  "id": "proj-zoom-timeline",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Zoom the timeline in or out",
+  "aliases": [
+   "change timeline scale",
+   "show weeks instead of days",
+   "see the whole project on one screen"
+  ],
+  "body": "1. Open the **Timeline** tab.\n2. Select **Zoom** at the top right.\n3. Choose **Days**, **Weeks**, **Months** or **Quarters**.\nSelect **Fit to project** to scale the timeline so the whole project is visible. You can also hold **Ctrl** and scroll your mouse wheel.",
+  "notConfusedWith": [
+   "proj-switch-to-timeline"
+  ]
+ },
+ {
+  "id": "proj-move-timeline-bar",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Reschedule a task on the timeline",
+  "aliases": [
+   "drag task bar to new dates",
+   "change start and end date on the gantt",
+   "shift a task on the timeline"
+  ],
+  "body": "1. Open the **Timeline** tab.\n2. Drag a task bar left or right to move both dates.\n3. Drag the left or right edge of the bar to change only the start date or due date.\n4. Release to save.\nTasks linked by a dependency move together if you tick **Move dependent tasks** at the top of the timeline.",
+  "notConfusedWith": [
+   "proj-change-task-due-date"
+  ]
+ },
+ {
+  "id": "proj-add-milestone",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Add a milestone to the timeline",
+  "aliases": [
+   "mark a key date",
+   "create a project milestone",
+   "add a deadline marker"
+  ],
+  "body": "Milestones mark key dates, such as a client sign-off or launch.\n1. Open the **Timeline** tab.\n2. Select **Add**, then **Milestone**.\n3. Enter a **Name** and choose a **Date**.\n4. Select **Create**.\nA diamond appears on the timeline. You can drag it to a new date or link tasks to it so it moves when they do.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-show-dependencies",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Show or hide dependency arrows",
+  "aliases": [
+   "see task links on timeline",
+   "turn off arrows between tasks",
+   "display dependencies"
+  ],
+  "body": "1. Open the **Timeline** tab.\n2. Select **Display** at the top of the timeline.\n3. Switch **Dependencies** on or off.\nWith arrows on, any task that runs late is outlined in red. Switch dependencies off if the timeline looks cluttered. This only changes your own view.",
+  "notConfusedWith": [
+   "proj-add-task-dependency"
+  ]
+ },
+ {
+  "id": "proj-set-timeline-baseline",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Save a baseline on the timeline",
+  "aliases": [
+   "record the original plan",
+   "compare planned and actual dates",
+   "snapshot project schedule"
+  ],
+  "body": "A baseline captures your current plan so you can see how far work has slipped.\n1. Open the **Timeline** tab.\n2. Select **Baseline**, then **Save baseline**.\n3. Name the baseline, for example **Kick-off plan**.\n4. Select **Save**.\nGrey bars appear under each task showing the original dates. Only **Managers** can save or delete baselines.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-export-timeline-pdf",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Export the timeline as a PDF",
+  "aliases": [
+   "print the gantt chart",
+   "download timeline to share",
+   "save timeline as a file"
+  ],
+  "body": "1. Open the **Timeline** tab and choose the zoom level you want.\n2. Select the **More** menu (three dots) at the top right.\n3. Select **Export as PDF**.\n4. Choose a **Page size** and **Orientation**.\n5. Select **Export**.\nThe PDF shows what is on screen, including any filters, so clear them first if you want every task.",
+  "notConfusedWith": [
+   "proj-export-project-csv"
+  ]
+ },
+ {
+  "id": "proj-add-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Add a client",
+  "aliases": [
+   "create a new client",
+   "set up a customer record",
+   "add a client company"
+  ],
+  "body": "1. In the left sidebar, select **Clients**.\n2. Select **New client**.\n3. Enter the **Client name**.\n4. Add a **Primary contact**, **Email** and **Phone**.\n5. Select **Save client**.\nYou can link projects to the client afterwards. Clients are kept separate from your team, so adding one does not use a user seat.",
+  "notConfusedWith": [
+   "proj-add-billing-contact"
+  ]
+ },
+ {
+  "id": "proj-update-client-phone",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Update a client’s phone number",
+  "aliases": [
+   "change a customer phone number",
+   "edit client contact number",
+   "fix client’s mobile"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Open the client.\n3. On the **Details** tab, select **Edit**.\n4. Update the **Phone** field.\n5. Select **Save**.\nThe new number shows on the client page and on any project linked to that client. Previous numbers are not kept.",
+  "notConfusedWith": [
+   "proj-update-client-email",
+   "proj-change-billing-contact"
+  ]
+ },
+ {
+  "id": "proj-update-client-email",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Update a client’s email address",
+  "aliases": [
+   "change a customer email",
+   "edit client email",
+   "new email for a client contact"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Open the client.\n3. On the **Details** tab, select **Edit**.\n4. Change the **Email** field.\n5. Select **Save**.\nNotifications to the client contact are sent to the new address from now on. If the contact is also a guest, update their sign-in email separately from the **People** tab.",
+  "notConfusedWith": [
+   "proj-update-client-phone",
+   "proj-add-billing-contact"
+  ]
+ },
+ {
+  "id": "proj-delete-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Delete a client",
+  "aliases": [
+   "remove a client record",
+   "erase a customer",
+   "get rid of a client"
+  ],
+  "body": "Only account admins can delete clients.\n1. Select **Clients** in the left sidebar.\n2. Open the client.\n3. Select the **More** menu (three dots), then **Delete client**.\n4. Select **Delete** to confirm.\nLinked projects are not deleted. They simply lose their client. If you want to keep the record, set the client to inactive instead.",
+  "notConfusedWith": [
+   "proj-archive-client"
+  ]
+ },
+ {
+  "id": "proj-archive-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Mark a client as inactive",
+  "aliases": [
+   "change client status",
+   "set client to former",
+   "hide a client I no longer work with"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Open the client.\n3. Select the **Status** field and choose **Inactive**.\n4. Select **Save**.\nInactive clients are hidden from the default **Clients** list and cannot be chosen for new projects. Select **Filter**, then **Inactive** to find them again.",
+  "notConfusedWith": [
+   "proj-delete-client"
+  ]
+ },
+ {
+  "id": "proj-merge-clients",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Merge duplicate clients",
+  "aliases": [
+   "combine two client records",
+   "fix duplicate customer",
+   "join clients together"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Tick the two records you want to combine.\n3. Select **Merge**.\n4. Choose which record to keep as the main one.\n5. Review the fields and select **Merge clients**.\nProjects, notes and guests from both records move to the one you kept. A merge cannot be undone.",
+  "notConfusedWith": [
+   "proj-delete-client"
+  ]
+ },
+ {
+  "id": "proj-add-billing-contact",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Add a billing contact to a client",
+  "aliases": [
+   "set who receives invoices",
+   "add accounts contact",
+   "new billing person for a customer"
+  ],
+  "body": "The billing contact receives budget and time reports if you share them.\n1. Open the client from **Clients**.\n2. Select the **Contacts** tab.\n3. Select **Add contact**.\n4. Enter their name, email and phone.\n5. Tick **Billing contact**.\n6. Select **Save**.",
+  "notConfusedWith": [
+   "proj-change-billing-contact",
+   "proj-add-client"
+  ]
+ },
+ {
+  "id": "proj-change-billing-contact",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Change a client’s billing contact",
+  "aliases": [
+   "switch who gets billing emails",
+   "replace the accounts contact",
+   "update billing person"
+  ],
+  "body": "1. Open the client from **Clients**.\n2. Select the **Contacts** tab.\n3. Find the contact you want to make the billing contact.\n4. Select the **More** menu (three dots), then **Make billing contact**.\n5. Select **Confirm**.\nThe previous billing contact stays on the client as a regular contact. A client can have only one billing contact at a time.",
+  "notConfusedWith": [
+   "proj-add-billing-contact",
+   "proj-update-client-email"
+  ]
+ },
+ {
+  "id": "proj-add-client-note",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Add a note to a client",
+  "aliases": [
+   "record a call with a client",
+   "write a client note",
+   "log a conversation with a customer"
+  ],
+  "body": "Notes are visible to your team only. Clients and guests never see them.\n1. Open the client from **Clients**.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note. You can mention a teammate with @.\n5. Select **Save note**.\nNotes are listed with the newest first and show who wrote them.",
+  "notConfusedWith": [
+   "proj-post-project-status-update"
+  ]
+ },
+ {
+  "id": "proj-link-project-to-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Link a project to a client",
+  "aliases": [
+   "assign a client to a project",
+   "connect project with customer",
+   "set the client for a project"
+  ],
+  "body": "1. Open the project and select the **Settings** tab.\n2. Under **General**, select the **Client** field.\n3. Search for and choose the client.\n4. Select **Save changes**.\nThe project now appears on the client’s **Projects** tab. You can invite that client’s contacts as guests from the **People** tab.",
+  "notConfusedWith": [
+   "proj-view-client-projects"
+  ]
+ },
+ {
+  "id": "proj-view-client-projects",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "See all projects for a client",
+  "aliases": [
+   "list a client’s projects",
+   "find work done for a customer",
+   "client project history"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Open the client.\n3. Select the **Projects** tab.\nThe list shows every project linked to the client, with its status, owner and due date. Select **Show archived** to include finished work. Select a project name to open it.",
+  "notConfusedWith": [
+   "proj-link-project-to-client"
+  ]
+ },
+ {
+  "id": "proj-export-clients-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Export your clients to CSV",
+  "aliases": [
+   "download client list",
+   "get customers into a spreadsheet",
+   "export contacts"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Use **Filter** if you only need some clients.\n3. Select the **More** menu (three dots), then **Export to CSV**.\n4. Choose the columns to include, such as **Client name**, **Email**, **Phone** and **Status**.\n5. Select **Export**.\nThe file downloads straight away. Only admins and managers can export clients.",
+  "notConfusedWith": [
+   "proj-import-clients-csv",
+   "proj-export-project-csv"
+  ]
+ },
+ {
+  "id": "proj-import-clients-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Import clients from a CSV file",
+  "aliases": [
+   "upload client list",
+   "bulk add customers",
+   "bring clients in from a spreadsheet"
+  ],
+  "body": "1. Select **Clients** in the left sidebar.\n2. Select the **More** menu (three dots), then **Import from CSV**.\n3. Select **Choose file**.\n4. Match your columns to fields such as **Client name** and **Email**.\n5. Select **Import**.\nRows with an email that already exists are skipped and listed in a summary you can download.",
+  "notConfusedWith": [
+   "proj-export-clients-csv",
+   "proj-import-tasks-csv"
+  ]
+ },
+ {
+  "id": "proj-set-client-rate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Set a client’s default hourly rate",
+  "aliases": [
+   "change charge-out rate",
+   "set billing rate for a customer",
+   "add a rate to a client"
+  ],
+  "body": "1. Open the client from **Clients**.\n2. Select the **Billing** tab.\n3. Select **Edit rates**.\n4. Enter the **Hourly rate** and choose the **Currency**.\n5. Select **Save**.\nNew projects linked to this client use the rate by default. Existing projects keep their current rate unless you change it in the project’s **Budget** settings.",
+  "notConfusedWith": [
+   "proj-set-project-budget"
+  ]
+ },
+ {
+  "id": "proj-invite-guest-to-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Invite a guest to a project",
+  "aliases": [
+   "give a client access to a project",
+   "share a project with an outsider",
+   "add an external person"
+  ],
+  "body": "Guests are people outside your company, such as clients, who can see only the projects you share.\n1. Open the project and select the **People** tab.\n2. Select **Invite guest**.\n3. Enter their email address.\n4. Choose a **Permission**: **Can view**, **Can comment** or **Can approve**.\n5. Select **Send invite**.",
+  "notConfusedWith": [
+   "proj-add-project-member",
+   "proj-resend-guest-invite"
+  ]
+ },
+ {
+  "id": "proj-resend-guest-invite",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Resend a guest invitation",
+  "aliases": [
+   "guest didn’t get the invite",
+   "send invite again",
+   "invitation expired"
+  ],
+  "body": "Invitations expire after 14 days.\n1. Open the project and select the **People** tab.\n2. Find the guest under **Pending invites**.\n3. Select **Resend invite**.\nA fresh email goes to the guest with a new link. If it still does not arrive, ask them to check their spam folder, or correct the address by removing the guest and inviting them again.",
+  "notConfusedWith": [
+   "proj-invite-guest-to-project"
+  ]
+ },
+ {
+  "id": "proj-change-guest-permission",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Change a guest’s permission",
+  "aliases": [
+   "let a guest comment",
+   "make guest view only",
+   "allow client to approve work"
+  ],
+  "body": "1. Open the project and select the **People** tab.\n2. Find the guest under **Guests**.\n3. Select their current permission.\n4. Choose **Can view**, **Can comment** or **Can approve**.\n5. Select **Save**.\nGuests on **Can comment** can add comments but cannot edit tasks. Guests on **Can approve** can also approve tasks marked **Needs approval**.",
+  "notConfusedWith": [
+   "proj-change-member-role"
+  ]
+ },
+ {
+  "id": "proj-remove-guest",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Remove a guest from a project",
+  "aliases": [
+   "revoke client access",
+   "cut off a guest",
+   "stop sharing project with someone outside"
+  ],
+  "body": "1. Open the project and select the **People** tab.\n2. Find the guest under **Guests**.\n3. Select the **More** menu (three dots), then **Remove guest**.\n4. Select **Remove** to confirm.\nThe guest can no longer open the project. Their comments stay in place. If they are a guest on other projects, those are not affected.",
+  "notConfusedWith": [
+   "proj-remove-project-member",
+   "proj-set-guest-expiry"
+  ]
+ },
+ {
+  "id": "proj-set-guest-expiry",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Set an end date for a guest’s access",
+  "aliases": [
+   "make guest access expire",
+   "time-limit client access",
+   "auto remove a guest"
+  ],
+  "body": "1. Open the project and select the **People** tab.\n2. Find the guest under **Guests**.\n3. Select the **More** menu (three dots), then **Set access end date**.\n4. Choose a date.\n5. Select **Save**.\nHarbour Projects emails the guest and the project owner seven days before access ends. After that, the guest cannot open the project.",
+  "notConfusedWith": [
+   "proj-remove-guest"
+  ]
+ },
+ {
+  "id": "proj-guest-notification-settings",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Clients and guests",
+  "title": "Choose what guests are emailed about",
+  "aliases": [
+   "stop emailing clients",
+   "control guest notifications",
+   "turn on updates for guests"
+  ],
+  "body": "1. Open the project and select the **Settings** tab.\n2. Select **Guest notifications**.\n3. Tick the events guests should hear about, such as **Status updates**, **New comments** and **Files shared**.\n4. Select **Save changes**.\nThis applies to all guests on the project. Guests can still turn off emails for themselves from their own profile.",
+  "notConfusedWith": [
+   "proj-turn-off-comment-emails"
+  ]
+ },
+ {
+  "id": "proj-upload-file",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Upload a file to a project",
+  "aliases": [
+   "attach a document",
+   "add a file",
+   "put a file in the project"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Select **Upload**.\n3. Choose one or more files from your computer, or drag them onto the page.\n4. Wait for the progress bar to finish.\nEach file can be up to 500 MB. To attach a file to one task instead, open the task and select **Attach file** under **Attachments**.",
+  "notConfusedWith": [
+   "proj-upload-new-version"
+  ]
+ },
+ {
+  "id": "proj-upload-new-version",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Upload a new version of a file",
+  "aliases": [
+   "replace a file with an updated one",
+   "update a document",
+   "add version two of a file"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Hover over the file and select the **More** menu (three dots).\n3. Select **Upload new version**.\n4. Choose the updated file.\n5. Add a short **Version note**, then select **Upload**.\nThe name and any comments stay the same. Earlier versions are kept in the file’s history.",
+  "notConfusedWith": [
+   "proj-upload-file",
+   "proj-restore-file-version"
+  ]
+ },
+ {
+  "id": "proj-download-file",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Download a file",
+  "aliases": [
+   "save a file to my computer",
+   "get a copy of an attachment",
+   "download document"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Find the file, or open the task it is attached to.\n3. Select the **More** menu (three dots) beside the file.\n4. Select **Download**.\nThe latest version downloads to your browser’s usual folder. To download older versions, open the file’s **Version history**.",
+  "notConfusedWith": [
+   "proj-download-all-files"
+  ]
+ },
+ {
+  "id": "proj-download-all-files",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Download all project files as a zip",
+  "aliases": [
+   "bulk download files",
+   "get everything in the Files tab",
+   "zip up project files"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Select **Select all**, or tick individual files and folders.\n3. Select **Download** at the top of the list.\n4. Wait for the zip to be prepared.\nLarge downloads can take a few minutes. Harbour Projects emails you a download link if the zip is bigger than 1 GB.",
+  "notConfusedWith": [
+   "proj-download-file"
+  ]
+ },
+ {
+  "id": "proj-rename-file",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Rename a file",
+  "aliases": [
+   "change file name",
+   "edit the name of a document",
+   "relabel an attachment"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Hover over the file and select the **More** menu (three dots).\n3. Select **Rename**.\n4. Type the new name. Keep the file extension, such as .pdf.\n5. Press **Enter**.\nThe new name shows wherever the file is attached, including in tasks and comments.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-create-folder",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Create a folder for files",
+  "aliases": [
+   "make a new folder",
+   "organise files into folders",
+   "add a folder"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Select **New folder**.\n3. Type a name, for example **Signed contracts**.\n4. Press **Enter**.\nTo put files inside, drag them onto the folder, or use **Move to folder** from the file’s **More** menu. Folders can be nested up to five levels deep.",
+  "notConfusedWith": [
+   "proj-move-file-to-folder"
+  ]
+ },
+ {
+  "id": "proj-move-file-to-folder",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Move a file into a folder",
+  "aliases": [
+   "put a file in a different folder",
+   "reorganise project files",
+   "file this document away"
+  ],
+  "body": "1. Open the **Files** tab.\n2. Hover over the file and select the **More** menu (three dots).\n3. Select **Move to folder**.\n4. Choose the destination folder, or select **New folder** to make one.\n5. Select **Move**.\nYou can also drag a file onto a folder in the list.",
+  "notConfusedWith": [
+   "proj-create-folder"
+  ]
+ },
+ {
+  "id": "proj-delete-file",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Delete a file",
+  "aliases": [
+   "remove a file from a project",
+   "get rid of an attachment",
+   "trash a document"
+  ],
+  "body": "1. Open the **Files** tab.\n2. Hover over the file and select the **More** menu (three dots).\n3. Select **Delete**.\n4. Select **Delete file** to confirm.\nAll versions of the file are moved to **Trash**. They are removed for good after 30 days. Removing an attachment from a task also deletes the file from the project.",
+  "notConfusedWith": [
+   "proj-restore-deleted-file"
+  ]
+ },
+ {
+  "id": "proj-restore-deleted-file",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Restore a deleted file",
+  "aliases": [
+   "recover a file I deleted",
+   "undelete a document",
+   "get a file back from trash"
+  ],
+  "body": "1. Open the project and select the **Files** tab.\n2. Select **Trash** at the top of the page.\n3. Find the file. Use the search box if the list is long.\n4. Select **Restore**.\nThe file returns to its original folder with its comments and versions. Files in **Trash** for more than 30 days cannot be recovered.",
+  "notConfusedWith": [
+   "proj-delete-file"
+  ]
+ },
+ {
+  "id": "proj-restore-file-version",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Restore an earlier version of a file",
+  "aliases": [
+   "go back to an old version",
+   "see version history",
+   "revert a document"
+  ],
+  "body": "1. Open the **Files** tab and select the file.\n2. Select **Version history** in the side panel.\n3. Find the version you need. Each shows who uploaded it and when.\n4. Select **Restore this version**.\n5. Select **Restore** to confirm.\nThe restored copy becomes the newest version. Nothing is overwritten, so the other versions stay in the list.",
+  "notConfusedWith": [
+   "proj-upload-new-version"
+  ]
+ },
+ {
+  "id": "proj-share-file-with-guests",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Choose whether guests can see a file",
+  "aliases": [
+   "hide a file from clients",
+   "make a file visible to guests",
+   "set file visibility"
+  ],
+  "body": "New files are visible to guests by default.\n1. Open the **Files** tab.\n2. Hover over the file and select the **More** menu (three dots).\n3. Select **Visibility**.\n4. Choose **Team only** or **Team and guests**.\n5. Select **Save**.\nA small lock icon marks files that are team only.",
+  "notConfusedWith": [
+   "proj-make-comment-internal"
+  ]
+ },
+ {
+  "id": "proj-add-comment",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Add a comment to a task",
+  "aliases": [
+   "write a comment",
+   "leave a message on a task",
+   "reply on a task",
+   "post an update on a task"
+  ],
+  "body": "1. Open the task.\n2. Select the box labelled **Add a comment** at the bottom of the panel.\n3. Type your message.\n4. To include a file, select the paperclip icon.\n5. Select **Send**.\nAssignees and watchers are notified. Press **Ctrl+Enter** (**Cmd+Enter** on Mac) to send faster.",
+  "notConfusedWith": [
+   "proj-reply-to-comment",
+   "proj-mention-teammate"
+  ]
+ },
+ {
+  "id": "proj-edit-comment",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Edit a comment",
+  "aliases": [
+   "fix a typo in a comment",
+   "change what I wrote",
+   "update my comment"
+  ],
+  "body": "1. Open the task and find your comment.\n2. Hover over it and select the **More** menu (three dots).\n3. Select **Edit**.\n4. Change the text.\n5. Select **Save**.\nAn **Edited** label appears beside the time. You can edit your own comments at any time, but not other people’s.",
+  "notConfusedWith": [
+   "proj-delete-comment"
+  ]
+ },
+ {
+  "id": "proj-delete-comment",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Delete a comment",
+  "aliases": [
+   "remove a comment",
+   "take down something I posted",
+   "erase a message on a task"
+  ],
+  "body": "1. Open the task and find the comment.\n2. Hover over it and select the **More** menu (three dots).\n3. Select **Delete**.\n4. Select **Delete comment** to confirm.\nYou can delete your own comments. **Managers** can delete anyone’s comment in their project. Replies stay in place and show a note that the original was removed.",
+  "notConfusedWith": [
+   "proj-edit-comment"
+  ]
+ },
+ {
+  "id": "proj-mention-teammate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Mention someone in a comment",
+  "aliases": [
+   "tag a colleague",
+   "at-mention a person",
+   "notify a teammate in a comment"
+  ],
+  "body": "1. Open the task and select the **Add a comment** box.\n2. Type @ followed by the person’s name.\n3. Choose them from the list that appears.\n4. Finish your comment and select **Send**.\nThe person gets an email and an in-app notification, even if they are not watching the task. If they are not a member of the project, you will be asked whether to add them.",
+  "notConfusedWith": [
+   "proj-add-comment"
+  ]
+ },
+ {
+  "id": "proj-reply-to-comment",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Reply to a comment",
+  "aliases": [
+   "respond in a thread",
+   "answer a message",
+   "reply to someone on a task"
+  ],
+  "body": "Replies keep related messages together.\n1. Open the task and find the comment.\n2. Select **Reply** beneath it.\n3. Type your response.\n4. Select **Send**.\nReplies appear indented under the original comment. The person you reply to is notified automatically.",
+  "notConfusedWith": [
+   "proj-add-comment",
+   "proj-resolve-comment-thread"
+  ]
+ },
+ {
+  "id": "proj-resolve-comment-thread",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Resolve a comment thread",
+  "aliases": [
+   "mark feedback as done",
+   "close a discussion",
+   "tick off a comment"
+  ],
+  "body": "Resolving tells everyone the feedback has been dealt with.\n1. Open the task or file and find the thread.\n2. Select **Resolve** at the top of the first comment.\nThe thread collapses and moves to **Resolved**. To reopen it, select **Resolved comments**, find the thread and select **Reopen**.",
+  "notConfusedWith": [
+   "proj-reply-to-comment"
+  ]
+ },
+ {
+  "id": "proj-make-comment-internal",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Make a comment visible to the team only",
+  "aliases": [
+   "hide a comment from clients",
+   "write an internal comment",
+   "private comment guests cannot see"
+  ],
+  "body": "Use internal comments for discussion you do not want guests to read.\n1. Open the task and select the **Add a comment** box.\n2. Select the **Visible to** drop-down below the box.\n3. Choose **Team only**.\n4. Type your message and select **Send**.\nA padlock marks internal comments. The setting cannot be changed after sending, so delete and repost if you chose wrongly.",
+  "notConfusedWith": [
+   "proj-share-file-with-guests"
+  ]
+ },
+ {
+  "id": "proj-attach-file-to-comment",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Attach a file to a comment",
+  "aliases": [
+   "add a document to a message",
+   "send a file with my comment",
+   "include a screenshot in a comment"
+  ],
+  "body": "1. Open the task and select the **Add a comment** box.\n2. Select the paperclip icon.\n3. Choose a file from your computer, or drag one into the box.\n4. Type your message.\n5. Select **Send**.\nThe file also appears on the project’s **Files** tab. To paste a screenshot, copy it and press **Ctrl+V** in the comment box.",
+  "notConfusedWith": [
+   "proj-upload-file"
+  ]
+ },
+ {
+  "id": "proj-turn-off-comment-emails",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Files and comments",
+  "title": "Turn off email notifications for comments",
+  "aliases": [
+   "stop getting comment emails",
+   "mute a task",
+   "reduce notification emails"
+  ],
+  "body": "1. Select your profile picture at the top right, then **Notification settings**.\n2. Under **Comments**, switch off **Email me about new comments**.\n3. Select **Save**.\nYou will still see comments in your in-app **Inbox**. To mute a single task, open it and select **Unwatch**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-print-board",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Boards and timelines",
+  "title": "Print a board",
+  "aliases": [
+   "get a paper copy of the board",
+   "print kanban cards",
+   "save board as PDF to print"
+  ],
+  "body": "1. Open the project and select the **Board** tab.\n2. Apply any filters you want to appear on the printout.\n3. Select the **More** menu (three dots) at the top right.\n4. Select **Print board**.\n5. Choose a **Page size** and select **Print**.\nOnly cards that match your current filters are included. Archived cards are never printed.",
+  "notConfusedWith": [
+   "proj-export-timeline-pdf"
+  ]
+ }
+]

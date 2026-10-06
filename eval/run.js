@@ -24,7 +24,7 @@ import { Retriever, DEFAULT_POLICY } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
 import { ExtractiveGenerator, AnthropicGenerator } from '../src/rag/generators.js';
 import { promptAsText, interpretationNotes } from '../src/rag/prompt.js';
-import { SemanticIndex } from '../src/rag/semantic.js';
+import { SemanticIndex, queryText, INDEX_CANDIDATES } from '../src/rag/semantic.js';
 import { createNodeEmbedder } from '../src/rag/embedder.node.js';
 import { articleVectors } from '../src/kb/article-vectors.js';
 import { fingerprintArticles } from '../scripts/fingerprint.mjs';
@@ -58,17 +58,54 @@ if (articleVectors.fingerprint !== fingerprintArticles(articles)) {
   console.error('src/kb/article-vectors.js is stale. Run: node scripts/embed-articles.mjs');
   process.exit(2);
 }
-const semantic = new SemanticIndex(articleVectors.passages);
+// The shipped site searches passages through the HNSW graph; the flat scan is
+// the exact "before" it is measured against.
+const indexed = new SemanticIndex(articleVectors.passages, { graph: articleVectors.graph });
+const flat = new SemanticIndex(articleVectors.passages);
 const embedder = await createNodeEmbedder();
 const hybrid = !flag('lexical');
 
 const selected = cases.filter((c) => split === 'all' || c.split === split);
-const rows = await runCases(articles, selected, { hybrid });
-const lexicalRows = hybrid ? await runCases(articles, selected, { hybrid: false }) : rows;
+const rows = await runCases(articles, selected, { semantic: hybrid ? indexed : null });
+const flatRows = hybrid ? await runCases(articles, selected, { semantic: flat }) : rows;
+const lexicalRows = hybrid ? await runCases(articles, selected, { semantic: null }) : rows;
+const vectorIndex = hybrid ? await compareIndex(selected) : null;
 
-async function runCases(knowledgeBase, selectedCases, { hybrid: useSemantic }) {
-  const retriever = new Retriever(knowledgeBase, {}, { semantic: useSemantic ? semantic : null });
-  const desk = new HelpDesk({ retriever, generator, embedder: useSemantic ? embedder : null });
+/** Flat scan vs HNSW graph on the same question vectors: agreement and time. */
+async function compareIndex(selectedCases) {
+  const analyser = new Retriever(articles);
+  const vectors = await embedder(selectedCases.map((c) => queryText(analyser.analyse(c.query))));
+  const top = (list, n) => list.slice(0, n).map((x) => x.id).join();
+  let sameTop1 = 0;
+  let sameTop3 = 0;
+  for (const v of vectors) {
+    const a = flat.rank(v);
+    const b = indexed.rank(v);
+    sameTop1 += top(a, 1) === top(b, 1) ? 1 : 0;
+    sameTop3 += top(a, 3) === top(b, 3) ? 1 : 0;
+  }
+  const time = (index) => {
+    for (const v of vectors) index.rank(v); // warm up
+    const reps = 20;
+    const started = performance.now();
+    for (let i = 0; i < reps; i += 1) for (const v of vectors) index.rank(v);
+    return ((performance.now() - started) / (reps * vectors.length)) * 1000;
+  };
+  const { M, efConstruction, efSearch } = articleVectors.graph;
+  return {
+    passages: articleVectors.passages.length,
+    params: { M, efConstruction, efSearch },
+    candidates: INDEX_CANDIDATES,
+    questions: vectors.length,
+    sameTop1,
+    sameTop3,
+    microsecondsPerQuestion: { flat: round(time(flat)), hnsw: round(time(indexed)) },
+  };
+}
+
+async function runCases(knowledgeBase, selectedCases, { semantic }) {
+  const retriever = new Retriever(knowledgeBase, {}, { semantic });
+  const desk = new HelpDesk({ retriever, generator, embedder: semantic ? embedder : null });
   const rows = [];
   for (const testCase of selectedCases) {
     const result = await desk.ask(testCase.query);
@@ -149,15 +186,24 @@ const report = {
   comparison: Object.fromEntries(
     ['dev', 'test', 'holdout', 'perspective', 'redteam', 'holdout3', 'voice', 'all'].map((k) => {
       const pick = (rs) => (k === 'all' ? rs : rs.filter((r) => r.split === k));
-      return [k, { lexical: summarise(pick(lexicalRows), kbIds), hybrid: summarise(pick(rows), kbIds) }];
+      return [k, { lexical: summarise(pick(lexicalRows), kbIds), flat: summarise(pick(flatRows), kbIds), hybrid: summarise(pick(rows), kbIds) }];
     }),
   ),
+  // Same outcome for every question with the flat scan and with the graph.
+  vectorIndex: vectorIndex && {
+    ...vectorIndex,
+    sameOutcome: rows.filter((r, i) => r.outcome === flatRows[i].outcome && r.citations.join() === flatRows[i].citations.join() && r.options.join() === flatRows[i].options.join()).length,
+  },
   rows: rows.map(({ rank, ...rest }) => rest),
 };
 
 const out = option('out', join(here, 'results.json'));
 writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`);
 printSummary(report);
+if (report.vectorIndex) {
+  const v = report.vectorIndex;
+  console.log(`\nVector index: HNSW vs flat scan on ${v.questions} questions: same top article ${v.sameTop1}, same top 3 ${v.sameTop3}, same outcome ${v.sameOutcome}. ${v.microsecondsPerQuestion.flat} µs -> ${v.microsecondsPerQuestion.hnsw} µs per question.`);
+}
 
 const violations = rows.filter((r) => r.neverViolated);
 if (violations.length) console.error(`\nForbidden-article violations: ${violations.map((r) => r.id).join(', ')}`);

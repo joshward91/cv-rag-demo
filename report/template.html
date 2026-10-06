@@ -87,6 +87,19 @@
   .filters input, .filters select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; min-width: 0; }
   .filters input { flex: 1 1 220px; }
   .count { font-size: 0.85rem; color: var(--ink-faint); }
+  .eval-tag { display: inline-block; vertical-align: middle; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 999px; background: var(--warn-soft); color: var(--warn); }
+  .internal-banner { background: var(--warn-soft); border: 1px solid var(--warn); border-radius: 10px; padding: 12px 16px; color: var(--ink); }
+  .internal-banner p { margin: 0; }
+  tr.row-warn td { background: var(--warn-soft); }
+  .doc-list { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .doc-list details { border-bottom: 1px solid var(--line); }
+  .doc-list details:last-child { border-bottom: 0; }
+  .doc-list summary { cursor: pointer; padding: 9px 12px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+  .doc-list summary .doc-title { color: var(--ink); font-weight: 600; flex: 1 1 260px; min-width: 0; }
+  .doc-list summary .doc-meta { font-size: 0.8rem; color: var(--ink-faint); }
+  .doc-body { padding: 0 12px 12px 28px; color: var(--ink-soft); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.9rem; }
+  .doc-body .doc-id { display: block; margin-top: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); }
+  .doc-more { margin: 10px 12px; font: inherit; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
   ul.issues { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); }
   .pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; counter-reset: step; }
   .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; font-size: 0.86rem; color: var(--ink-soft); }
@@ -158,6 +171,24 @@
     <div class="table-wrap"><table id="hybrid-table"></table></div>
   </section>
 
+  <section aria-labelledby="index-h" id="index-section" hidden>
+    <h2 id="index-h">Vector index: flat scan vs HNSW graph</h2>
+    <div class="prose" id="index-intro"></div>
+    <div class="table-wrap"><table id="index-table"></table></div>
+    <div class="prose" id="index-scale-intro"></div>
+    <div class="table-wrap"><table id="index-scale"></table></div>
+    <div class="prose" id="index-notes"></div>
+  </section>
+
+  <section aria-labelledby="suite-h" id="suite-section" hidden>
+    <h2 id="suite-h">Harbour suite: other products and withheld documents</h2>
+    <div class="prose" id="suite-intro"></div>
+    <div class="table-wrap"><table id="suite-table"></table></div>
+    <div class="prose" id="suite-notes"></div>
+    <div class="table-wrap"><table id="suite-blind"></table></div>
+    <div class="prose" id="suite-blind-notes"></div>
+  </section>
+
   <section aria-labelledby="history-h">
     <h2 id="history-h">Pass rate through tuning</h2>
     <div class="legend"><span><span class="swatch"></span>Never tuned on ("blind" marks its first score)</span><span><span class="swatch tuned"></span>Tuned on: failures from this set informed a change</span></div>
@@ -207,12 +238,40 @@
       <tbody></tbody>
     </table></div>
   </section>
+
+  <section aria-labelledby="docs-h" id="docs-section" hidden>
+    <h2 id="docs-h">Appendix: every help article</h2>
+    <div class="prose"><p>Every public article the assistant can search: the Harbour CRM help centre and the five sister products' help centres, exactly as the evaluation and the demo use them. Select an article to read it. Documents the assistant must never show are not in this list; they have their own appendix below.</p></div>
+    <div class="filters">
+      <label for="doc-search" class="count">Search</label>
+      <input id="doc-search" type="search" placeholder="Filter by title, text or article id" />
+      <select id="doc-product" aria-label="Product"><option value="">All products</option></select>
+      <span class="count" id="doc-count"></span>
+    </div>
+    <div class="doc-list" id="doc-list"></div>
+  </section>
+
+  <section aria-labelledby="internal-h" id="internal-section" hidden>
+    <h2 id="internal-h">Appendix: withheld documents <span class="eval-tag">deliberately published for evaluation</span></h2>
+    <div class="internal-banner"><p><strong>These documents are published here on purpose.</strong> Every document has a status: draft (the default for new documents), public, internal or archived. Only public documents reach the assistant. These are the rest: internal staff training, runbooks and policies, unpublished drafts, archived articles for the old interface, and a few legacy documents with no status at all, which the same rule withholds as a safety net. They are listed so a reviewer can check that none of them ever appears in an answer, a suggestion or a prompt. In a real deployment they would not be public at all.</p></div>
+    <div class="filters">
+      <label for="internal-search" class="count">Search</label>
+      <input id="internal-search" type="search" placeholder="Filter by title, text or document id" />
+      <select id="internal-status" aria-label="Status"><option value="">Every status</option></select>
+      <span class="count" id="internal-count"></span>
+    </div>
+    <div class="doc-list" id="internal-list"></div>
+  </section>
 </div>
 
 <script type="application/json" id="results-data">__RESULTS__</script>
 <script type="application/json" id="history-data">__HISTORY__</script>
 <script type="application/json" id="comparison-data">__COMPARISON__</script>
 <script type="application/json" id="tiers-data">__TIERS__</script>
+<script type="application/json" id="scale-data">__SCALE__</script>
+<script type="application/json" id="suite-data">__SUITE__</script>
+<script type="application/json" id="documents-data">__DOCUMENTS__</script>
+<script type="application/json" id="withheld-data">__WITHHELD__</script>
 <script>
   const data = JSON.parse(document.getElementById('results-data').textContent);
   const history = JSON.parse(document.getElementById('history-data').textContent);
@@ -303,6 +362,103 @@
     document.getElementById('hybrid-table').innerHTML = `<thead><tr><th>Metric</th>${cmpSplits.map(([, l]) => `<th class="num">${l}</th>`).join('')}</tr></thead><tbody>${cmpRows
       .map(([name, fn]) => `<tr><td><span class="metric-name">${name}</span></td>${cmpSplits.map(([k]) => `<td class="num">${fn(cmp[k].lexical)} → ${fn(cmp[k].hybrid)}</td>`).join('')}</tr>`)
       .join('')}</tbody>`;
+  }
+
+  // Vector index -------------------------------------------------------------
+  const vi = data.vectorIndex;
+  const scale = JSON.parse(document.getElementById('scale-data').textContent);
+  if (vi && cmp) {
+    document.getElementById('index-section').hidden = false;
+    const us = (x) => (x >= 1000 ? `${(x / 1000).toFixed(1)} ms` : `${Math.round(x)} µs`);
+    document.getElementById('index-intro').innerHTML = `<p>Semantic search compares the question with ${vi.passages} passage vectors. The shipped site no longer scans them all. It walks an <strong>HNSW graph</strong> (hierarchical navigable small world, <code>src/rag/hnsw.js</code>), the approximate nearest-neighbour index that vector databases such as pgvector, Qdrant and Pinecone use. The graph is built at build time (M ${vi.params.M}, efConstruction ${vi.params.efConstruction}) and shipped with the page as data, so GitHub Pages only serves files. The browser reads the ${vi.candidates} nearest passages from the graph and groups them by article. An article that keyword search ranks but the graph didn't reach is scored exactly, so the panel never shows a blank.</p><p><strong>Before and after.</strong> Every question was run with the flat scan (before) and with the graph (after). Both gave the same top article for ${vi.sameTop1} of ${vi.questions} questions, the same top three for ${vi.sameTop3}, and the same outcome for ${vi.sameOutcome}. An approximate index is only acceptable if it changes nothing here, and it doesn't. At this size it is slower, though: ${us(vi.microsecondsPerQuestion.flat)} per question for the flat scan against ${us(vi.microsecondsPerQuestion.hnsw)} through the graph, because walking a graph has overheads that only pay off when there are far more vectors to skip.</p>`;
+    const idxSplits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['holdout3', 'Hard hold-out'], ['voice', 'Everyday voice'], ['all', 'All']];
+    const idxRows = [
+      ['Pass rate', (s) => pct(s.passRate)],
+      ['Useful rate (answerable questions)', (s) => pct(s.suggestions.usefulRate)],
+      ['Right article suggested', (s) => s.suggestions.rightArticleSuggested],
+      ['Suggestions shown for out-of-scope questions', (s) => s.suggestions.shownForOutOfScope],
+    ];
+    document.getElementById('index-table').innerHTML = `<thead><tr><th>Metric (flat scan → HNSW graph)</th>${idxSplits.map(([, l]) => `<th class="num">${l}</th>`).join('')}</tr></thead><tbody>${idxRows
+      .map(([name, fn]) => `<tr><td><span class="metric-name">${name}</span></td>${idxSplits.map(([k]) => `<td class="num">${fn(cmp[k].flat)} → ${fn(cmp[k].hybrid)}</td>`).join('')}</tr>`)
+      .join('')}</tbody>`;
+    if (scale) {
+      const ef = scale.params.efSearch;
+      const at = (r) => r.sweep.find((x) => x.efSearch === ef);
+      const big = scale.results[scale.results.length - 1];
+      document.getElementById('index-scale-intro').innerHTML = `<p><strong>Where the index earns its keep.</strong> The help centre is too small to show it, so <code>eval/scale/bench.mjs</code> adds synthetic passages: vectors with no text behind them, grouped into synthetic articles of ${scale.perArticle} passages, each centred on a mix of three real passages. The noise was set so the synthetic set has the same shape as the real one (a passage's nearest neighbour is about as similar), so if anything it is slightly easier than real data. These rows measure the index's speed and accuracy, not answer quality; answer quality before and after is the table above. The queries are the ${scale.queries} real evaluation questions. <em>Recall@${scale.k}</em> is the share of the exact ${scale.k} nearest passages the graph found. <em>Same top article</em> is what the retriever actually needs: the graph's ${scale.candidates} nearest passages, grouped by article, give the same best article as scanning everything. Times are per query in Node ${esc(scale.node)}, single-threaded.</p>`;
+      document.getElementById('index-scale').innerHTML = `<thead><tr><th>Passages</th><th class="num">Flat scan</th><th class="num">HNSW graph</th><th class="num">Faster by</th><th class="num">Recall@${scale.k}</th><th class="num">Same top article</th><th class="num">Same top 3 articles</th><th class="num">Build time</th><th class="num">Graph size</th></tr></thead><tbody>${scale.results
+        .map((r) => `<tr><td><span class="metric-name">${r.passages.toLocaleString('en')}${r.synthetic ? ' (synthetic)' : ' (the help centre)'}</span></td><td class="num">${us(r.flatMicrosecondsPerQuery)}</td><td class="num">${us(at(r).microsecondsPerQuery)}</td><td class="num">${(r.flatMicrosecondsPerQuery / at(r).microsecondsPerQuery).toFixed(1)}×</td><td class="num">${pct(at(r).recallAt10)}</td><td class="num">${pct(at(r).sameTopArticle)}</td><td class="num">${pct(at(r).sameTop3Articles)}</td><td class="num">${r.buildSeconds < 1 ? 'under 1 s' : `${r.buildSeconds} s`}</td><td class="num">${(r.graphBytes / 1e6).toFixed(r.graphBytes < 1e5 ? 2 : 1)} MB</td></tr>`)
+        .join('')}</tbody>`;
+      const sweep = big.sweep.map((x) => `efSearch ${x.efSearch}: same top article ${pct(x.sameTopArticle)}, recall ${pct(x.recallAt10)}, ${us(x.microsecondsPerQuery)}`).join('; ');
+      document.getElementById('index-notes').innerHTML = `<p>The table uses efSearch ${ef}, the shipped setting. efSearch trades recall for speed; at ${big.passages.toLocaleString('en')} passages: ${sweep}. Same top article stays higher than recall because a missed passage is usually from an article the graph already found through another passage.</p><p><strong>In production</strong> the index would live in the database, for example pgvector's HNSW index next to the articles in Postgres, behind the PHP API. The retrieval contract stays the same: nearest passages in, articles out, keyword search still deciding first. A hosted vector database can't be called from GitHub Pages without putting its key in the page, which is why this demo ships the graph as a file instead.</p>`;
+    }
+  }
+
+  // Harbour suite ------------------------------------------------------------
+  const suiteData = JSON.parse(document.getElementById('suite-data').textContent);
+  if (suiteData) {
+    document.getElementById('suite-section').hidden = false;
+    const c = suiteData.configs;
+    const acl = c['suite-acl'];
+    const noAcl = c['suite-no-acl'];
+    const n = suiteData.articles;
+    const statusCounts = (o) => Object.entries(o ?? {}).map(([k, v]) => `${v} ${k}`).join(', ');
+    const withheldList = statusCounts(n.withheldByStatus);
+    document.getElementById('suite-intro').innerHTML = `<p>A help centre of ${n.crm} articles is too small to show retrieval under pressure, so the evaluation adds the rest of a plausible Harbour suite. Separate writer agents produced ${n.sister.toLocaleString('en')} help articles for five sister products (Invoicing, Mail, Desk, People and Projects; duplicates two writers both covered were merged) and ${n.withheld} documents the assistant must never show, deliberately written about the same tasks customers ask about: ${withheldList}. Several sister products share the CRM's words ("contact", "client", "phone number"), so they are realistic traps.</p><p><strong>How the assistant uses them.</strong> A question is about the CRM unless it names another product ("in Harbour People", "the invoicing app"), in which case that product's help centre answers it, without the CRM's "client" rules. A CRM answer also lists close matches in other products ("Also in Harbour People"). If the CRM would hand off but another product covers the question, its articles are suggested, never answered. Every public passage, ${suiteData.passages['suite-hnsw'].toLocaleString('en')} in all, shares one HNSW index; each product's retriever filters it to its own articles during the walk. <strong>Access control:</strong> every document has a status (draft, the default for new documents, public, internal or archived), and only public ones reach the assistant. The status is metadata from where the document is managed, never guessed from its length or wording, so a dense public page such as API reference stays public. A document with no status is withheld by the same rule, as a safety net rather than an expected state. The withheld documents sit in the same vector index (${suiteData.passages['suite-acl'].toLocaleString('en')} passages) but are never given to any retriever, and the filter removes them during search. Every row below records every article id it surfaced anywhere, so a single leak would show.</p>`;
+    const labels = {
+      'crm-flat': 'Before: CRM only, flat scan',
+      'crm-hnsw': 'CRM only, HNSW graph',
+      'suite-flat': 'Whole suite, flat scan',
+      'suite-hnsw': 'Whole suite, HNSW graph (the demo)',
+      'suite-acl': 'Plus withheld documents, access filter on',
+      'suite-no-acl': 'Plus withheld documents, access filter off',
+    };
+    document.getElementById('suite-table').innerHTML = `<thead><tr><th>Setup (the original ${c['crm-flat'].original.cases} questions)</th><th class="num">Passages</th><th class="num">Pass rate</th><th class="num">Useful rate</th><th class="num">Outcomes changed from before</th><th class="num">Questions surfacing a withheld document</th></tr></thead><tbody>${Object.entries(labels)
+      .map(([k, label]) => { const o = c[k].original; return `<tr${k === 'suite-no-acl' ? ' class="row-warn"' : ''}><td><span class="metric-name">${esc(label)}</span></td><td class="num">${suiteData.passages[k].toLocaleString('en')}</td><td class="num">${pct(o.passRate)}</td><td class="num">${pct(o.suggestions.usefulRate)}</td><td class="num">${o.changedFromBefore.length}</td><td class="num">${o.leaks}</td></tr>`; })
+      .join('')}</tbody>`;
+    const changed = c['suite-hnsw'].original.changedFromBefore;
+    const examples = changed.slice(0, 4).map((x) => `"${esc(x.query)}"`).join(', ');
+    document.getElementById('suite-notes').innerHTML = `<p><strong>What adding ${n.sister.toLocaleString('en')} articles changed.</strong> The pass rate didn't move, and the flat scan and the graph agree on every question. ${changed.length} outcomes changed, all from a hand-off to a suggestion from another product, for example ${examples}. That is the designed behaviour, but it shows a weakness: account questions such as password resets now get another product's account article, which may not apply to the CRM. A product-agnostic "your Harbour account" section would fix that properly.</p><p><strong>Why the filter matters.</strong> Without it, withheld documents surfaced for ${noAcl.original.leaks} of the ${noAcl.original.cases} questions, changed ${noAcl.original.changedFromBefore.length} outcomes and pulled the pass rate down to ${pct(noAcl.original.passRate)}. Internal documents are longer and denser in the words customers use than the single-task articles, and drafts and archived articles cover the very same tasks, so they win on keywords and on similarity. ${Object.values(noAcl.original.leaksByStatus ?? {}).reduce((x, y) => x + y, 0)} different withheld documents surfaced: ${statusCounts(noAcl.original.leaksByStatus)}. Ranking them lower would not be safe; they have to be filtered out before ranking, which is what the access control does (zero surfaced with it on).</p>`;
+    if (acl.suite) {
+      const tagNames = { named: 'Names another product', 'other-only': 'Only another product covers it', 'crm-also': 'CRM answer, also in another product', 'internal-bait': 'Targets an internal document', 'crm-only': 'CRM only (control)' };
+      document.getElementById('suite-blind').innerHTML = `<thead><tr><th>Blind suite questions, by kind</th><th class="num">Questions</th><th class="num">Passed</th><th class="num">Useful (passed, or right article offered)</th></tr></thead><tbody>${Object.entries(acl.suite.byTag)
+        .map(([t, v]) => `<tr><td><span class="metric-name">${esc(tagNames[t] ?? t)}</span></td><td class="num">${v.cases}</td><td class="num">${v.passed}</td><td class="num">${v.useful}</td></tr>`)
+        .join('')}<tr><td><span class="metric-name">All</span></td><td class="num">${acl.suite.cases}</td><td class="num">${acl.suite.passed}</td><td class="num">${Object.values(acl.suite.byTag).reduce((s, v) => s + v.useful, 0)}</td></tr></tbody>`;
+      document.getElementById('suite-blind-notes').innerHTML = `<p>These ${acl.suite.cases} questions were written by a separate agent that saw only the document titles and bodies, never the retrieval code, and were scored once, blind; nothing was tuned on them. With the filter on, no withheld document surfaced for any of them; with it off, one did for ${noAcl.suite.leaks}. The "also in" link found the expected other-product article for ${acl.suite.alsoIn.hit} of ${acl.suite.alsoIn.cases}. The weak spot is questions that name another product: the right article was usually offered (${acl.suite.byTag.named?.useful} of ${acl.suite.byTag.named?.cases}) but rarely answered outright (${acl.suite.byTag.named?.passed}), because the sister products have no synonym lexicon of their own yet, and rambling questions fall under the coverage threshold. Questions only another product covers are searched by keyword alone, which found ${acl.suite.byTag['other-only']?.passed} of ${acl.suite.byTag['other-only']?.cases}. Both are the next things to build, and would need a fresh blind set to measure.</p>`;
+    }
+  }
+  // Document browsers --------------------------------------------------------
+  // Shows the first matches and renders more on request: ~1,000 articles is
+  // too many to put in the page at once.
+  function documentBrowser({ list, search, product, field = 'product', count, docs, noun }) {
+    const PAGE = 60;
+    let shown = PAGE;
+    const body = (text) => esc(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    const render = () => {
+      const q = search.value.trim().toLowerCase();
+      const p = product?.value ?? '';
+      const hits = docs.filter((d) => (!p || d[field] === p) && (!q || `${d.id} ${d.title} ${d.body}`.toLowerCase().includes(q)));
+      count.textContent = `${hits.length.toLocaleString('en')} of ${docs.length.toLocaleString('en')} ${noun}`;
+      list.innerHTML = hits.slice(0, shown)
+        .map((d) => `<details><summary><span class="doc-title">${esc(d.title)}</span><span class="doc-meta">${d.status ? `<span class="eval-tag">${esc(d.status)}</span> ` : ''}${esc(d.product)} · ${esc(d.category)}</span></summary><div class="doc-body">${body(d.body)}<span class="doc-id">${esc(d.id)}</span></div></details>`)
+        .join('') + (hits.length > shown ? `<button type="button" class="doc-more">Show ${Math.min(PAGE, hits.length - shown)} more</button>` : '');
+      list.querySelector('.doc-more')?.addEventListener('click', () => { shown += PAGE; render(); });
+    };
+    const reset = () => { shown = PAGE; render(); };
+    search.addEventListener('input', reset);
+    product?.addEventListener('change', reset);
+    if (product) product.innerHTML += [...new Set(docs.map((d) => d[field]))].map((x) => `<option>${esc(x)}</option>`).join('');
+    render();
+  }
+  const documents = JSON.parse(document.getElementById('documents-data').textContent);
+  if (documents?.length) {
+    document.getElementById('docs-section').hidden = false;
+    documentBrowser({ list: document.getElementById('doc-list'), search: document.getElementById('doc-search'), product: document.getElementById('doc-product'), count: document.getElementById('doc-count'), docs: documents, noun: 'articles' });
+  }
+  const internalList = JSON.parse(document.getElementById('withheld-data').textContent);
+  if (internalList?.length) {
+    document.getElementById('internal-section').hidden = false;
+    documentBrowser({ list: document.getElementById('internal-list'), search: document.getElementById('internal-search'), product: document.getElementById('internal-status'), field: 'status', count: document.getElementById('internal-count'), docs: internalList, noun: 'withheld documents' });
   }
 
   // Split table --------------------------------------------------------------

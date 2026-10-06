@@ -31,16 +31,18 @@ function isNoise(word) {
  *
  * `perspective` says who wrote the text: 'query' for a user's question,
  * 'document' for anything in a help article, which the vendor wrote. See the
- * lexicon for why "client" differs.
+ * lexicon for why "client" differs. 'plain' skips the phrase rules entirely:
+ * they encode Harbour CRM's vocabulary, and a sister product's "client" or
+ * "contact" means something else.
  *
  * @param {string} text
- * @param {{ vocabulary?: Set<string>, spellCheck?: boolean, perspective?: 'query' | 'document' }} [options]
+ * @param {{ vocabulary?: Set<string>, spellCheck?: boolean, perspective?: 'query' | 'document' | 'plain' }} [options]
  */
 export function analyse(text, { vocabulary = null, spellCheck = false, perspective = 'query' } = {}) {
   const trace = [];
   let working = ` ${normalise(text)} `;
 
-  for (const rule of PHRASE_RULES) {
+  for (const rule of perspective === 'plain' ? [] : PHRASE_RULES) {
     if (rule.side && rule.side !== perspective) continue;
     working = working.replace(rule.pattern, (match) => {
       trace.push({ kind: 'phrase', rule: rule.id, from: match.trim(), to: rule.replace.trim(), note: rule.note });

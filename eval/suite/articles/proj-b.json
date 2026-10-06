@@ -1,0 +1,1543 @@
+[
+ {
+  "id": "proj-log-time-on-task",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Log time on a task",
+  "aliases": [
+   "add hours to a task",
+   "record time worked",
+   "enter my hours",
+   "book time to a task"
+  ],
+  "body": "1. Go to **Timesheets** and select the week you want.\n2. Select **Add row** and choose the project and task.\n3. Enter the hours in the box under the correct day.\n4. Select **Save**.\nYour hours appear in the weekly total straight away.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-start-a-timer"
+  ]
+ },
+ {
+  "id": "proj-start-a-timer",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Start a timer on a task",
+  "aliases": [
+   "use the stopwatch",
+   "clock in on a task",
+   "track time live",
+   "run a timer"
+  ],
+  "body": "1. Open the task from **Projects**.\n2. Select the **Start timer** button beside the task name.\n3. Work as normal. The timer keeps running if you change pages.\n4. Select **Stop timer** when you finish.\n5. Check the entry in **Timesheets** and select **Save** to keep it.",
+  "notConfusedWith": [
+   "proj-log-time-on-task"
+  ]
+ },
+ {
+  "id": "proj-edit-a-time-entry",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Edit a time entry",
+  "aliases": [
+   "change logged hours",
+   "fix my hours",
+   "correct a timesheet entry",
+   "update hours I entered"
+  ],
+  "body": "1. Go to **Timesheets** and open the week containing the entry.\n2. Select the entry you want to change.\n3. Update the hours, task or date.\n4. Select **Save changes**.\nYou can only edit entries on timesheets that are still in **Draft** or **Rejected** status.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-delete-a-time-entry"
+  ]
+ },
+ {
+  "id": "proj-delete-a-time-entry",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Delete a time entry",
+  "aliases": [
+   "remove logged time",
+   "get rid of a timesheet entry",
+   "remove hours I booked by mistake"
+  ],
+  "body": "1. Go to **Timesheets** and open the week containing the entry.\n2. Select the entry you want to remove.\n3. Select **Delete entry**.\n4. Confirm by selecting **Delete**.\nDeleted entries cannot be restored, so log the time again if you removed it by mistake.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-edit-a-time-entry"
+  ]
+ },
+ {
+  "id": "proj-submit-a-timesheet",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Submit a timesheet for approval",
+  "aliases": [
+   "send my timesheet to my manager",
+   "hand in my week",
+   "finish my timesheet",
+   "submit hours"
+  ],
+  "body": "1. Go to **Timesheets** and open the week you want to submit.\n2. Check that each day shows the hours you expect.\n3. Select **Submit for approval**.\n4. Confirm in the dialog.\nThe status changes to **Submitted** and your approver is notified.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-approve-a-timesheet"
+  ]
+ },
+ {
+  "id": "proj-approve-a-timesheet",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Approve a timesheet",
+  "aliases": [
+   "sign off on hours",
+   "accept a team member's timesheet",
+   "okay someone's week"
+  ],
+  "body": "1. Go to **Timesheets** and select the **To approve** tab.\n2. Select the member whose timesheet you want to review.\n3. Check the entries and any notes.\n4. Select **Approve**.\nThe member is notified and the hours become available for reports and invoices.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-reject-a-timesheet"
+  ]
+ },
+ {
+  "id": "proj-reject-a-timesheet",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Reject a timesheet and ask for changes",
+  "aliases": [
+   "send a timesheet back",
+   "return hours to the member",
+   "decline a timesheet"
+  ],
+  "body": "1. Go to **Timesheets** and select the **To approve** tab.\n2. Open the submitted timesheet.\n3. Select **Reject**.\n4. Type a short reason in the **Comment** box.\n5. Select **Send back**.\nThe status changes to **Rejected** so the member can edit and resubmit.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-approve-a-timesheet"
+  ]
+ },
+ {
+  "id": "proj-mark-time-billable",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Mark a time entry as billable",
+  "aliases": [
+   "make hours chargeable",
+   "set time to billable",
+   "charge the client for an entry",
+   "change an entry from non-billable"
+  ],
+  "body": "1. Go to **Timesheets** and open the week containing the entry.\n2. Select the entry.\n3. Switch on the **Billable** toggle.\n4. Select **Save changes**.\nBillable hours use the billing rate set for that member or project, and appear when you generate an invoice.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-generate-invoice-from-time"
+  ]
+ },
+ {
+  "id": "proj-add-note-to-time-entry",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Add a note to a time entry",
+  "aliases": [
+   "write a comment on my hours",
+   "describe what I worked on",
+   "attach a description to logged time"
+  ],
+  "body": "1. Go to **Timesheets** and open the week you want.\n2. Select the entry you want to describe.\n3. Type your text in the **Note** box. Keep it short and specific.\n4. Select **Save changes**.\nNotes show on approver screens and on invoices if you choose to include them.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-weekly-hours-target",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Set a member's weekly hours target",
+  "aliases": [
+   "change expected hours per week",
+   "set capacity for a person",
+   "part-time hours setting"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. In the **Working hours** section, enter the number of hours per week.\n4. Select **Save**.\nTimesheets show the target so members can see how close they are to it.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-set-the-working-week"
+  ]
+ },
+ {
+  "id": "proj-export-timesheet-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Export timesheets to CSV",
+  "aliases": [
+   "download hours as a spreadsheet",
+   "get time entries in Excel",
+   "save timesheet data as a CSV file"
+  ],
+  "body": "1. Go to **Timesheets** and select the **All timesheets** tab.\n2. Choose a date range using the **Period** filter.\n3. Filter by member or project if needed.\n4. Select **Export** and choose **CSV**.\nThe file downloads to your device and includes one row per time entry.",
+  "notConfusedWith": [
+   "proj-export-a-report-to-csv"
+  ]
+ },
+ {
+  "id": "proj-lock-a-timesheet-period",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Lock a timesheet period",
+  "aliases": [
+   "stop changes to old weeks",
+   "close the month for time entry",
+   "freeze past hours"
+  ],
+  "body": "1. Go to **Settings** and select **Time tracking**.\n2. Under **Locked periods**, select **Add lock**.\n3. Choose the date up to which timesheets should be locked.\n4. Select **Lock period**.\nMembers can no longer add or edit time before that date. Only workspace admins can remove a lock.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-log-time-for-another-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Log time for another member",
+  "aliases": [
+   "enter hours on someone's behalf",
+   "add time for a colleague",
+   "book hours for a team member"
+  ],
+  "body": "1. Go to **Timesheets** and select **Switch member**.\n2. Choose the person from the list.\n3. Add a row and enter their hours as you would your own.\n4. Select **Save**.\nOnly project managers and admins can log time for others. The entry shows who created it.",
+  "notConfusedWith": [
+   "proj-log-time-on-task"
+  ]
+ },
+ {
+  "id": "proj-reopen-a-submitted-timesheet",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Reopen a submitted timesheet",
+  "aliases": [
+   "recall my timesheet",
+   "pull back a timesheet I already sent",
+   "change status back to draft"
+  ],
+  "body": "1. Go to **Timesheets** and open the submitted week.\n2. Select **Recall**.\n3. Confirm by selecting **Return to draft**.\n4. Make your changes.\n5. Select **Submit for approval** again.\nYou cannot recall a timesheet once it has been approved. Ask an approver to reject it instead.",
+  "notConfusedWith": [
+   "proj-reject-a-timesheet"
+  ]
+ },
+ {
+  "id": "proj-copy-last-weeks-timesheet",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Copy last week's rows into this week",
+  "aliases": [
+   "repeat last week's tasks",
+   "duplicate previous timesheet",
+   "reuse my rows from last week"
+  ],
+  "body": "1. Go to **Timesheets** and open the current week.\n2. Select the **More** menu in the top right.\n3. Select **Copy last week**.\n4. Choose whether to copy rows only or rows with hours.\n5. Select **Copy**.\nYou can then adjust the hours for each day before you submit.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-add-an-activity-type",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Add an activity type",
+  "aliases": [
+   "create a time category",
+   "new work type for hours",
+   "add a category such as Design or Meetings"
+  ],
+  "body": "1. Go to **Settings** and select **Time tracking**.\n2. Select **Activity types**.\n3. Select **New activity type**.\n4. Enter a name and choose whether it is billable by default.\n5. Select **Save**.\nMembers can pick the new type when they log time.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-turn-on-time-rounding",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Time tracking",
+  "title": "Turn on time rounding",
+  "aliases": [
+   "round hours up to 15 minutes",
+   "round logged time",
+   "set time increments"
+  ],
+  "body": "1. Go to **Settings** and select **Time tracking**.\n2. Switch on **Round time entries**.\n3. Choose an increment such as 6, 15 or 30 minutes.\n4. Choose **Round up** or **Round to nearest**.\n5. Select **Save**.\nRounding applies to new entries only. Existing entries stay as they are.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-a-project-budget",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Set a project budget",
+  "aliases": [
+   "add a budget to a project",
+   "give a project a spending limit",
+   "create a budget"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **Budget** tab.\n3. Select **Set budget**.\n4. Choose **Hours** or **Amount**, then enter the value.\n5. Select **Save**.\nSpend is tracked against the budget as members log billable time and add expenses.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-edit-a-project-budget"
+  ]
+ },
+ {
+  "id": "proj-edit-a-project-budget",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Edit a project budget",
+  "aliases": [
+   "change the budget amount",
+   "increase the project budget",
+   "adjust budget total"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **Budget** tab.\n3. Select **Edit budget**.\n4. Enter the new value and a reason in the **Note** box.\n5. Select **Save**.\nEach change is kept in the **Budget history** so approvers can see who changed it and when.",
+  "notConfusedWith": [
+   "proj-set-a-project-budget"
+  ]
+ },
+ {
+  "id": "proj-set-a-budget-alert",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Set a budget alert threshold",
+  "aliases": [
+   "warn me when a project is nearly over budget",
+   "get notified at 80 percent of budget",
+   "budget warning"
+  ],
+  "body": "1. Open the project and select the **Budget** tab.\n2. Select **Alerts**.\n3. Enter the percentage of the budget that should trigger a warning, for example 80.\n4. Choose who should be notified.\n5. Select **Save**.\nAlerts are sent once when the threshold is passed.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-choose-budget-alert-recipients"
+  ]
+ },
+ {
+  "id": "proj-add-a-billing-rate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Add a billing rate",
+  "aliases": [
+   "create an hourly rate",
+   "set a charge-out rate",
+   "new rate card entry"
+  ],
+  "body": "1. Go to **Settings** and select **Billing rates**.\n2. Select **New rate**.\n3. Enter a name, such as Senior consultant, and the hourly amount.\n4. Choose the currency.\n5. Select **Save**.\nYou can then assign the rate to members or projects.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-update-a-members-billing-rate"
+  ]
+ },
+ {
+  "id": "proj-update-a-members-billing-rate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Update a member's billing rate",
+  "aliases": [
+   "change someone's hourly rate",
+   "give a person a new charge-out rate",
+   "switch a member to a different rate"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. In the **Billing rate** section, choose a rate or enter a custom amount.\n4. Select an **Effective from** date.\n5. Select **Save**.\nTime logged before the effective date keeps the old rate.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-add-a-billing-rate"
+  ]
+ },
+ {
+  "id": "proj-delete-a-billing-rate",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Delete a billing rate",
+  "aliases": [
+   "remove a rate from the rate card",
+   "get rid of an old hourly rate",
+   "how do I delete a billing rate"
+  ],
+  "body": "1. Go to **Settings** and select **Billing rates**.\n2. Find the rate you no longer need.\n3. Select the **More** menu beside it, then **Delete**.\n4. If members use the rate, choose a replacement rate.\n5. Confirm by selecting **Delete rate**.\nExisting invoices are not affected.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-a-client-rate-override",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Set a client-specific rate",
+  "aliases": [
+   "charge one client a different rate",
+   "special pricing for a client",
+   "override rates for a customer"
+  ],
+  "body": "1. Go to **Clients** and select the client.\n2. Select the **Rates** tab.\n3. Select **Add override**.\n4. Choose the rate to replace and enter the client's amount.\n5. Select **Save**.\nOverrides apply to all that client's projects unless a project has its own rate.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-add-an-expense",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Add an expense to a project",
+  "aliases": [
+   "record a cost",
+   "log a receipt",
+   "enter project spending"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **Budget** tab, then **Expenses**.\n3. Select **Add expense**.\n4. Enter the date, amount, category and a description.\n5. Select **Save**.\nExpenses count towards the project budget.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-delete-an-expense"
+  ]
+ },
+ {
+  "id": "proj-delete-an-expense",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Delete an expense",
+  "aliases": [
+   "remove a cost entry",
+   "take off an expense I added twice",
+   "how do I delete an expense"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **Budget** tab, then **Expenses**.\n3. Select the expense you want to remove.\n4. Select **Delete expense**.\n5. Confirm by selecting **Delete**.\nThe budget total updates immediately. Expenses already invoiced cannot be deleted.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-add-an-expense"
+  ]
+ },
+ {
+  "id": "proj-mark-an-expense-billable",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Mark an expense as billable",
+  "aliases": [
+   "pass a cost on to the client",
+   "charge an expense to the customer",
+   "rebill expenses"
+  ],
+  "body": "1. Open the project and select **Budget**, then **Expenses**.\n2. Select the expense.\n3. Switch on **Billable**.\n4. Optionally enter a markup percentage.\n5. Select **Save changes**.\nBillable expenses are added to the next invoice you generate.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-export-a-budget-to-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Export a project budget to CSV",
+  "aliases": [
+   "download budget figures",
+   "get budget data in a spreadsheet",
+   "save the budget as CSV"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **Budget** tab.\n3. Select **Export** in the top right.\n4. Choose **CSV**.\nThe file includes budget, spend, remaining amount and a row for each expense.\nChanges take effect straight away for everyone in the workspace.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-export-a-report-to-csv"
+  ]
+ },
+ {
+  "id": "proj-change-budget-type",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Change a budget from hours to amount",
+  "aliases": [
+   "switch budget type",
+   "track dollars instead of hours",
+   "convert hours budget"
+  ],
+  "body": "1. Open the project and select the **Budget** tab.\n2. Select **Edit budget**.\n3. Change **Budget type** to **Amount**.\n4. Enter the new total. Harbour does not convert hours automatically.\n5. Select **Save**.\nSpend is recalculated using each member's billing rate.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-edit-a-project-budget"
+  ]
+ },
+ {
+  "id": "proj-update-a-clients-billing-contact",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Update a client's billing contact email",
+  "aliases": [
+   "change where invoices are sent",
+   "new invoice email address",
+   "edit billing contact"
+  ],
+  "body": "1. Go to **Clients** and select the client.\n2. Select the **Billing** tab.\n3. Select **Edit** beside **Billing contact**.\n4. Enter the new name and email address.\n5. Select **Save**.\nFuture invoices are sent to the new address. Invoices already sent are not resent.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-update-a-clients-phone-number"
+  ]
+ },
+ {
+  "id": "proj-update-a-clients-phone-number",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Update a client's phone number",
+  "aliases": [
+   "change a customer's phone",
+   "edit client contact number",
+   "correct a phone number"
+  ],
+  "body": "1. Go to **Clients** and select the client.\n2. Select the **Details** tab.\n3. Select **Edit** beside **Phone**.\n4. Enter the new number, including the area code.\n5. Select **Save**.\nThe number also appears on the client's invoices if contact details are switched on.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-update-a-clients-billing-contact"
+  ]
+ },
+ {
+  "id": "proj-generate-invoice-from-time",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Generate an invoice from tracked time",
+  "aliases": [
+   "bill a client for hours",
+   "create an invoice from timesheets",
+   "invoice approved time"
+  ],
+  "body": "1. Go to **Billing** and select **New invoice**.\n2. Choose the client and project.\n3. Select the date range to include.\n4. Review the approved billable time and expenses, and untick anything to leave out.\n5. Select **Create draft**.\nCheck the draft, then select **Send** to email it to the billing contact.",
+  "notConfusedWith": [
+   "proj-send-an-invoice-reminder"
+  ]
+ },
+ {
+  "id": "proj-send-an-invoice-reminder",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Send an invoice payment reminder",
+  "aliases": [
+   "chase an unpaid invoice",
+   "remind a client to pay",
+   "follow up on overdue invoice"
+  ],
+  "body": "1. Go to **Billing** and select the **Unpaid** tab.\n2. Open the overdue invoice.\n3. Select **Send reminder**.\n4. Edit the message if you like.\n5. Select **Send**.\nThe reminder goes to the client's billing contact and is logged on the invoice.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-mark-an-invoice-as-paid"
+  ]
+ },
+ {
+  "id": "proj-mark-an-invoice-as-paid",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Budgets and billing rates",
+  "title": "Mark an invoice as paid",
+  "aliases": [
+   "record a payment",
+   "change invoice status to paid",
+   "close off an invoice"
+  ],
+  "body": "1. Go to **Billing** and open the invoice.\n2. Select **Record payment**.\n3. Enter the payment date and amount.\n4. Select **Save**.\nIf the full amount is recorded, the status changes to **Paid** and the invoice no longer appears under **Unpaid**.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-send-an-invoice-reminder"
+  ]
+ },
+ {
+  "id": "proj-create-a-template-from-a-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Create a template from an existing project",
+  "aliases": [
+   "save a project as a template",
+   "turn a project into a template",
+   "make a reusable project"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the **More** menu, then **Save as template**.\n3. Enter a name and description.\n4. Choose whether to keep members and budget settings.\n5. Select **Create template**.\nLogged time and comments are never copied into a template.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-create-a-project-from-a-template"
+  ]
+ },
+ {
+  "id": "proj-create-a-project-from-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Start a new project from a template",
+  "aliases": [
+   "use a template",
+   "spin up a project from a template",
+   "new project using a template"
+  ],
+  "body": "1. Go to **Templates**.\n2. Find the template you want and select **Use template**.\n3. Enter the project name and choose a client.\n4. Set the start date. Task due dates shift to match.\n5. Select **Create project**.\nThe new project opens with all template tasks, milestones and roles in place.",
+  "notConfusedWith": [
+   "proj-create-a-template-from-a-project"
+  ]
+ },
+ {
+  "id": "proj-rename-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Rename a template",
+  "aliases": [
+   "change a template's name",
+   "edit template title",
+   "how do I rename a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select **Edit details**.\n3. Type the new name in the **Name** field.\n4. Select **Save**.\nProjects already created from the template keep their own names.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-edit-a-template-description",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Edit a template's description",
+  "aliases": [
+   "change template summary",
+   "update what a template is for",
+   "how do I edit a template's description"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select **Edit details**.\n3. Update the text in the **Description** box.\n4. Select **Save**.\nA clear description helps other members choose the right template.\nThe change is recorded in the activity log for your workspace.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-rename-a-template"
+  ]
+ },
+ {
+  "id": "proj-duplicate-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Duplicate a template",
+  "aliases": [
+   "copy a template",
+   "clone a template",
+   "make a variation of a template"
+  ],
+  "body": "1. Go to **Templates**.\n2. Select the **More** menu beside the template.\n3. Select **Duplicate**.\n4. Enter a name for the copy.\n5. Select **Create copy**.\nThe copy starts in **Draft** status, so you can edit it before sharing.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-delete-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Delete a template",
+  "aliases": [
+   "remove a template",
+   "get rid of a template I don't need",
+   "how do I delete a template"
+  ],
+  "body": "1. Go to **Templates**.\n2. Select the **More** menu beside the template.\n3. Select **Delete**.\n4. Confirm by selecting **Delete template**.\nProjects already created from it are not affected. If you might need the template later, archive it instead.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-archive-a-template"
+  ]
+ },
+ {
+  "id": "proj-archive-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Archive a template",
+  "aliases": [
+   "hide an old template",
+   "retire a template without deleting",
+   "put a template away"
+  ],
+  "body": "1. Go to **Templates**.\n2. Select the **More** menu beside the template.\n3. Select **Archive**.\nArchived templates no longer appear when people start a new project. Select the **Archived** filter to see them, and restore them whenever you need.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-restore-an-archived-template"
+  ]
+ },
+ {
+  "id": "proj-restore-an-archived-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Restore an archived template",
+  "aliases": [
+   "bring back an archived template",
+   "unarchive a template",
+   "how do I restore an archived template"
+  ],
+  "body": "1. Go to **Templates**.\n2. Select the **Archived** filter.\n3. Select the **More** menu beside the template.\n4. Select **Restore**.\nThe template returns to the main list with its previous status.\nThe change is recorded in the activity log for your workspace.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-archive-a-template"
+  ]
+ },
+ {
+  "id": "proj-add-a-task-to-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Add a task to a template",
+  "aliases": [
+   "put a new task in a template",
+   "add a step to a template",
+   "how do I add a task to a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Tasks** tab.\n3. Select **Add task**.\n4. Enter a task name and set the **Due after** value, such as 5 days after the project starts.\n5. Select **Save**.\nTasks can be reordered by dragging them in the list.",
+  "notConfusedWith": [
+   "proj-edit-a-task-in-a-template"
+  ]
+ },
+ {
+  "id": "proj-edit-a-task-in-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Edit a task in a template",
+  "aliases": [
+   "change a template task",
+   "update task details in a template",
+   "how do I edit a task in a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Tasks** tab.\n3. Select the task you want to change.\n4. Update the name, description or **Due after** value.\n5. Select **Save**.\nChanges only affect projects created from the template in future.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-add-a-task-to-a-template"
+  ]
+ },
+ {
+  "id": "proj-remove-a-task-from-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Remove a task from a template",
+  "aliases": [
+   "delete a template task",
+   "take a step out of a template",
+   "how do I remove a task from a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Tasks** tab.\n3. Select the **More** menu beside the task.\n4. Select **Remove task**.\n5. Confirm in the dialog.\nSubtasks of the task are removed too.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-add-a-milestone-to-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Add a milestone to a template",
+  "aliases": [
+   "put a milestone in a template",
+   "set key dates in a template",
+   "how do I add a milestone to a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Milestones** tab.\n3. Select **Add milestone**.\n4. Enter a name and the number of days after the project start.\n5. Select **Save**.\nMilestones appear on the project timeline when the template is used.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-default-roles-in-a-template",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Set default roles in a template",
+  "aliases": [
+   "pre-assign roles in a template",
+   "add roles to a template",
+   "how do I set default roles in a template"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Roles** tab.\n3. Select **Add role** and enter a name such as Designer.\n4. Choose a billing rate for the role.\n5. Select **Save**.\nWhen someone starts a project, they assign a real member to each role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-share-a-template-with-the-workspace",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Share a template with the whole workspace",
+  "aliases": [
+   "make a template available to everyone",
+   "publish a template",
+   "let others use my template"
+  ],
+  "body": "1. Go to **Templates** and open your private template.\n2. Select **Share**.\n3. Choose **Everyone in workspace**.\n4. Select **Publish**.\nOther members can use it but only you and admins can edit it. Change the status back to **Private** at any time.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-import-template-tasks-from-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Project templates",
+  "title": "Import template tasks from a CSV file",
+  "aliases": [
+   "upload tasks to a template",
+   "bulk add tasks from a spreadsheet",
+   "how do I import template tasks from a csv file"
+  ],
+  "body": "1. Go to **Templates** and open the template.\n2. Select the **Tasks** tab.\n3. Select **Import**, then **Choose CSV file**.\n4. Match the columns in your file to **Name**, **Description** and **Due after**.\n5. Select **Import tasks**.\nRows with errors are skipped and listed so you can fix them.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-turn-on-email-notifications",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Turn on email notifications",
+  "aliases": [
+   "get emails from Harbour",
+   "start receiving email alerts",
+   "enable email alerts"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Email** tab.\n3. Switch on **Email notifications**.\n4. Tick the events you want, such as task assignments and approvals.\n5. Select **Save**.\nEmails are sent to the address on your profile.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-turn-off-task-assignment-emails"
+  ]
+ },
+ {
+  "id": "proj-turn-off-task-assignment-emails",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Turn off task assignment emails",
+  "aliases": [
+   "stop emails when I'm assigned a task",
+   "unsubscribe from assignment alerts",
+   "how do I turn off task assignment emails"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Email** tab.\n3. Untick **Task assigned to me**.\n4. Select **Save**.\nYou will still see assignments in the notification bell inside Harbour.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-turn-on-email-notifications"
+  ]
+ },
+ {
+  "id": "proj-change-notification-email-address",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Change the email address for notifications",
+  "aliases": [
+   "send alerts to a different email",
+   "update my email",
+   "new email for notifications"
+  ],
+  "body": "1. Select your profile picture and choose **Profile**.\n2. Select **Edit** beside **Email**.\n3. Enter your new email address.\n4. Select **Save** and confirm using the code we email you.\nAll notifications will go to the new address once it is verified.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-update-a-members-email-address"
+  ]
+ },
+ {
+  "id": "proj-set-a-daily-digest",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Switch to a daily digest email",
+  "aliases": [
+   "get one summary email a day",
+   "bundle notifications",
+   "fewer emails"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Email** tab.\n3. Under **Delivery**, choose **Daily digest**.\n4. Pick the time you want it sent.\n5. Select **Save**.\nUrgent items such as rejected timesheets are still sent straight away.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-mute-a-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Mute a project's notifications",
+  "aliases": [
+   "stop alerts from one project",
+   "silence a project",
+   "pause project updates"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the bell icon at the top of the page.\n3. Select **Mute project**.\n4. Choose how long to mute it, or select **Until I turn it on**.\nDirect mentions still reach you. Select **Unmute** from the same menu to resume everything else.",
+  "notConfusedWith": [
+   "proj-unmute-a-project"
+  ]
+ },
+ {
+  "id": "proj-unmute-a-project",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Unmute a project",
+  "aliases": [
+   "turn alerts back on for a project",
+   "resume project notifications",
+   "how do I unmute a project"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select the bell icon at the top of the page.\n3. Select **Unmute project**.\nYou will receive notifications for the project again, based on your usual settings.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-mute-a-project"
+  ]
+ },
+ {
+  "id": "proj-set-quiet-hours",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Set quiet hours",
+  "aliases": [
+   "do not disturb times",
+   "stop alerts at night",
+   "pause notifications overnight"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Schedule** tab.\n3. Switch on **Quiet hours**.\n4. Choose a start and end time and the days it applies to.\n5. Select **Save**.\nNotifications are held and delivered when quiet hours end.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-turn-on-mobile-push",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Turn on mobile push notifications",
+  "aliases": [
+   "get alerts on my phone",
+   "enable app notifications",
+   "how do I turn on mobile push notifications"
+  ],
+  "body": "1. Open the Harbour Projects app on your phone.\n2. Select **More**, then **Notification settings**.\n3. Switch on **Push notifications**.\n4. Allow notifications when your phone asks.\n5. Choose the events you want.\nPush settings are separate for each device.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-add-a-sms-phone-number",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Add a mobile number for text alerts",
+  "aliases": [
+   "update my phone number for SMS",
+   "get text messages for urgent alerts",
+   "change my mobile number for alerts"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Text message** tab.\n3. Select **Edit number** and enter your mobile number.\n4. Enter the code we text you.\n5. Select **Verify**.\nText alerts are only sent for overdue deadlines and rejected timesheets.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-update-a-members-phone-number"
+  ]
+ },
+ {
+  "id": "proj-be-notified-when-mentioned",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Choose how you are notified of mentions",
+  "aliases": [
+   "get alerts when someone @mentions me",
+   "mention notification settings",
+   "how do I choose how you are notified of mentions"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Find **Mentions**.\n3. Choose **Email**, **Push**, or both.\n4. Select **Save**.\nMentions are always shown in the notification bell, whichever delivery options you pick.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-overdue-task-reminders",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Set reminders for overdue tasks",
+  "aliases": [
+   "remind me when tasks are late",
+   "overdue alerts",
+   "how do I set reminders for overdue tasks"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Reminders** tab.\n3. Switch on **Overdue tasks**.\n4. Choose how often to be reminded: daily or weekly.\n5. Select **Save**.\nReminders list only tasks assigned to you.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-turn-off-timer-reminders",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Turn off timer reminders",
+  "aliases": [
+   "stop the running timer nag",
+   "no more forgot-to-stop-timer alerts",
+   "how do I turn off timer reminders"
+  ],
+  "body": "1. Select your profile picture and choose **Notification settings**.\n2. Open the **Reminders** tab.\n3. Switch off **Timer still running**.\n4. Select **Save**.\nYou can switch it back on at any time. Workspace admins may also set a default for new members.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-mark-all-notifications-as-read",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Mark all notifications as read",
+  "aliases": [
+   "clear the red dot",
+   "dismiss all alerts",
+   "clear my notification bell"
+  ],
+  "body": "1. Select the bell icon at the top of any page.\n2. Select **Mark all as read**.\nNotifications stay in the list for 30 days, so you can open them later. Select **Unread** to show only the ones you have not seen yet.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-delete-a-notification"
+  ]
+ },
+ {
+  "id": "proj-delete-a-notification",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Delete a single notification",
+  "aliases": [
+   "remove one alert",
+   "get rid of a notification",
+   "how do I delete a single notification"
+  ],
+  "body": "1. Select the bell icon at the top of any page.\n2. Point to the notification you want to remove.\n3. Select the **X** that appears on the right.\nDeleting a notification only removes it from your list. It does not change the task or comment it refers to.",
+  "notConfusedWith": [
+   "proj-mark-all-notifications-as-read"
+  ]
+ },
+ {
+  "id": "proj-choose-budget-alert-recipients",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Choose who receives budget alerts",
+  "aliases": [
+   "change who is warned about budget",
+   "send budget warnings to the project manager",
+   "how do I choose who receives budget alerts"
+  ],
+  "body": "1. Open the project and select the **Budget** tab.\n2. Select **Alerts**.\n3. In **Recipients**, add or remove members.\n4. Select **Save**.\nRecipients receive alerts by email and in the notification bell, based on their own settings.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-set-a-budget-alert"
+  ]
+ },
+ {
+  "id": "proj-unsubscribe-a-guest-from-notifications",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Unsubscribe a guest from notifications",
+  "aliases": [
+   "stop emails to a guest",
+   "guest keeps getting alerts",
+   "how do I unsubscribe a guest from notifications"
+  ],
+  "body": "1. Go to **Workspace** and select **Guests**.\n2. Select the guest's name.\n3. Switch off **Email notifications**.\n4. Select **Save**.\nThe guest can still open the projects they have access to. They can turn notifications back on from the link in any email.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-remove-a-guest"
+  ]
+ },
+ {
+  "id": "proj-notify-approver-on-submission",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Notifications",
+  "title": "Notify an approver when you submit a timesheet",
+  "aliases": [
+   "tell my manager I submitted",
+   "alert approver of my timesheet",
+   "how do I notify an approver when you submit a timesheet"
+  ],
+  "body": "1. Go to **Timesheets** and open the week you want to submit.\n2. Select **Submit for approval**.\n3. Tick **Send a message to my approver**.\n4. Type your message and select **Submit**.\nApprovers are always notified of a submission. This option adds your note to the email.",
+  "notConfusedWith": [
+   "proj-submit-a-timesheet"
+  ]
+ },
+ {
+  "id": "proj-run-a-utilisation-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a utilisation report",
+  "aliases": [
+   "see how busy my team is",
+   "check staff utilisation",
+   "billable versus total hours report"
+  ],
+  "body": "1. Go to **Reports** and select **Utilisation**.\n2. Choose a date range.\n3. Select the members or teams to include.\n4. Select **Run report**.\nThe report shows billable hours as a percentage of each person's weekly target. Use **Group by** to switch between members and teams.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-run-a-time-by-member-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a time by member report",
+  "aliases": [
+   "hours per person report",
+   "see who logged what",
+   "team hours summary"
+  ],
+  "body": "1. Go to **Reports** and select **Time**.\n2. Set **Group by** to **Member**.\n3. Choose a date range and projects.\n4. Select **Run report**.\nSelect any row to see the individual time entries behind it.\nChanges take effect straight away for everyone in the workspace.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-run-a-utilisation-report"
+  ]
+ },
+ {
+  "id": "proj-run-a-budget-vs-actual-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a budget versus actual report",
+  "aliases": [
+   "compare spend to budget",
+   "check project overruns",
+   "budget report"
+  ],
+  "body": "1. Go to **Reports** and select **Budget vs actual**.\n2. Choose the projects or clients to include.\n3. Select **Run report**.\nEach project shows budget, spend to date, remaining amount and a status bar. Projects over budget are marked in red.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-run-a-profitability-report"
+  ]
+ },
+ {
+  "id": "proj-run-a-profitability-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a project profitability report",
+  "aliases": [
+   "see margin by project",
+   "how much profit did we make",
+   "project profit report"
+  ],
+  "body": "1. Go to **Reports** and select **Profitability**.\n2. Choose a date range.\n3. Select **Run report**.\n4. Compare **Revenue**, **Cost** and **Margin** for each project.\nCost uses each member's cost rate, which admins can set under **Members**.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-run-a-budget-vs-actual-report"
+  ]
+ },
+ {
+  "id": "proj-change-a-report-date-range",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Change a report's date range",
+  "aliases": [
+   "adjust dates on a report",
+   "report for last month",
+   "pick different dates"
+  ],
+  "body": "1. Open the report from **Reports**.\n2. Select the **Date range** button.\n3. Choose a preset such as **Last month**, or select **Custom** and enter dates.\n4. Select **Apply**.\nThe report refreshes automatically.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-filter-a-report-by-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Filter a report by client",
+  "aliases": [
+   "show only one client's data",
+   "narrow a report to a customer",
+   "how do I filter a report by client"
+  ],
+  "body": "1. Open the report from **Reports**.\n2. Select **Filters**.\n3. Choose **Client** and select one or more clients.\n4. Select **Apply**.\nThe filter applies to this view only unless you save the report.\nChanges take effect straight away for everyone in the workspace.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-change-report-grouping"
+  ]
+ },
+ {
+  "id": "proj-change-report-grouping",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Change how a report is grouped",
+  "aliases": [
+   "group by project instead of member",
+   "switch report grouping",
+   "how do I change how a report is grouped"
+  ],
+  "body": "1. Open the report from **Reports**.\n2. Select **Group by**.\n3. Choose an option such as **Project**, **Client**, **Member** or **Week**.\nThe table and chart update straight away. Select **Save report** if you want to keep the new layout.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-filter-a-report-by-client"
+  ]
+ },
+ {
+  "id": "proj-export-a-report-to-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export a report to CSV",
+  "aliases": [
+   "download a report as a spreadsheet",
+   "save report data to Excel",
+   "get report numbers in CSV"
+  ],
+  "body": "1. Open the report from **Reports**.\n2. Run it with the date range and filters you want.\n3. Select **Export**.\n4. Choose **CSV**.\nThe file downloads to your device with the figures as shown on screen.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-export-timesheet-csv"
+  ]
+ },
+ {
+  "id": "proj-export-a-report-to-pdf",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export a report as a PDF",
+  "aliases": [
+   "print a report",
+   "download report to share with client",
+   "make a PDF of a report"
+  ],
+  "body": "1. Open the report from **Reports**.\n2. Run it with the date range and filters you want.\n3. Select **Export**.\n4. Choose **PDF**.\n5. Select **Include chart** if you want the graph at the top.\nThe PDF uses your workspace logo and name in the header.",
+  "notConfusedWith": [
+   "proj-export-a-report-to-csv"
+  ]
+ },
+ {
+  "id": "proj-save-a-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Save a report",
+  "aliases": [
+   "keep a report setup",
+   "store report settings for later",
+   "how do I save a report"
+  ],
+  "body": "1. Open the report and set the filters and grouping you want.\n2. Select **Save report**.\n3. Enter a name.\n4. Choose **Only me** or **Everyone in workspace**.\n5. Select **Save**.\nSaved reports appear under **Saved** on the **Reports** page.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-rename-a-saved-report"
+  ]
+ },
+ {
+  "id": "proj-rename-a-saved-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Rename a saved report",
+  "aliases": [
+   "change report name",
+   "edit saved report title",
+   "how do I rename a saved report"
+  ],
+  "body": "1. Go to **Reports** and select **Saved**.\n2. Select the **More** menu beside the report.\n3. Select **Rename**.\n4. Enter the new name and select **Save**.\nScheduled emails will use the new name from the next send.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-save-a-report"
+  ]
+ },
+ {
+  "id": "proj-delete-a-saved-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Delete a saved report",
+  "aliases": [
+   "remove a saved report",
+   "get rid of an old report",
+   "how do I delete a saved report"
+  ],
+  "body": "1. Go to **Reports** and select **Saved**.\n2. Select the **More** menu beside the report.\n3. Select **Delete**.\n4. Confirm by selecting **Delete report**.\nAny schedule attached to the report is deleted too. You can only delete reports that you created, unless you are an admin.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-schedule-a-report-by-email",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Schedule a report to be emailed",
+  "aliases": [
+   "get a report every week",
+   "automatic report emails",
+   "email me a report each month"
+  ],
+  "body": "1. Go to **Reports** and open a saved report.\n2. Select **Schedule**.\n3. Choose how often to send it: weekly or monthly.\n4. Add the email addresses of the people who should receive it.\n5. Select **Save schedule**.\nRecipients get a PDF and a CSV attached.",
+  "notConfusedWith": [
+   "proj-stop-a-scheduled-report"
+  ]
+ },
+ {
+  "id": "proj-stop-a-scheduled-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Stop a scheduled report",
+  "aliases": [
+   "cancel report emails",
+   "unsubscribe from a scheduled report",
+   "how do I stop a scheduled report"
+  ],
+  "body": "1. Go to **Reports** and select **Scheduled**.\n2. Find the report you want to stop.\n3. Select the **More** menu, then **Delete schedule**.\n4. Confirm in the dialog.\nThe saved report itself is kept. Only the automatic emails stop.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-schedule-a-report-by-email"
+  ]
+ },
+ {
+  "id": "proj-add-a-note-to-a-saved-report",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Add a note to a saved report",
+  "aliases": [
+   "write a comment on a report",
+   "annotate a report",
+   "how do I add a note to a saved report"
+  ],
+  "body": "1. Go to **Reports** and select **Saved**.\n2. Open the report.\n3. Select **Add note** below the title.\n4. Type your note, for example what the report is used for.\n5. Select **Save**.\nThe note is shown at the top of the report and in PDF exports.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-share-a-report-with-a-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Reports",
+  "title": "Share a report with a client",
+  "aliases": [
+   "send a report link to a customer",
+   "give a client access to a report",
+   "how do I share a report with a client"
+  ],
+  "body": "1. Open the saved report from **Reports**.\n2. Select **Share**.\n3. Choose **Share with client** and select the client.\n4. Select **Copy link** or **Send email**.\nClients see a read-only view of this report only. Select **Stop sharing** to turn the access off.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-invite-a-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Invite a member to the workspace",
+  "aliases": [
+   "add a new team member",
+   "add an employee",
+   "send an invitation to a colleague"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select **Invite member**.\n3. Enter their email address and choose a role.\n4. Select **Send invite**.\nThey receive an email with a link to set a password. Invites expire after 14 days.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-resend-an-invitation"
+  ]
+ },
+ {
+  "id": "proj-resend-an-invitation",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Resend an invitation",
+  "aliases": [
+   "send the invite again",
+   "new invite email",
+   "they didn't get the invite"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the **Invited** tab.\n3. Find the person and select **Resend invite**.\nA new link is emailed and the 14-day expiry restarts. Ask them to check their junk folder if it still doesn't arrive.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-invite-a-member"
+  ]
+ },
+ {
+  "id": "proj-change-a-members-role",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Change a member's role",
+  "aliases": [
+   "make someone an admin",
+   "promote a member",
+   "give a person different permissions"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. Choose a new **Role**: **Admin**, **Project manager** or **Member**.\n4. Select **Save**.\nThe new permissions apply the next time they load a page.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-update-a-members-phone-number",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Update a member's phone number",
+  "aliases": [
+   "change an employee's phone",
+   "edit staff contact number",
+   "correct a phone number on a profile"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. Select **Edit** beside **Phone**.\n4. Enter the new number.\n5. Select **Save**.\nMembers can also update their own number from **Profile**.\nThe change is recorded in the activity log for your workspace.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-add-a-sms-phone-number"
+  ]
+ },
+ {
+  "id": "proj-update-a-members-email-address",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Update a member's email address",
+  "aliases": [
+   "change an employee's email",
+   "fix a team member's email",
+   "new work email for a member"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. Select **Edit** beside **Email**.\n4. Enter the new address.\n5. Select **Save**.\nWe email the new address to confirm it. The member keeps signing in with the old address until they confirm.\nYou can reverse this at any time by repeating the steps.",
+  "notConfusedWith": [
+   "proj-change-notification-email-address"
+  ]
+ },
+ {
+  "id": "proj-deactivate-a-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Deactivate a member",
+  "aliases": [
+   "remove someone who left",
+   "disable an employee's login",
+   "offboard a team member"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the member's name.\n3. Select **Deactivate member**.\n4. Choose someone to take over their open tasks, or leave them unassigned.\n5. Confirm by selecting **Deactivate**.\nTheir time entries and history are kept. Deactivated members no longer count towards your plan.",
+  "notConfusedWith": [
+   "proj-reactivate-a-member"
+  ]
+ },
+ {
+  "id": "proj-reactivate-a-member",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Reactivate a member",
+  "aliases": [
+   "bring back a former employee",
+   "restore access for a deactivated person",
+   "how do I reactivate a member"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Select the **Deactivated** tab.\n3. Select the member's name.\n4. Select **Reactivate member** and confirm their role.\nThey can sign in again straight away. Tasks that were reassigned stay with the new owner.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-deactivate-a-member"
+  ]
+ },
+ {
+  "id": "proj-add-a-guest",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Add a guest to a project",
+  "aliases": [
+   "give a contractor access",
+   "invite an outside person",
+   "let a client view a project"
+  ],
+  "body": "1. Open the project from **Projects**.\n2. Select **Share**.\n3. Select **Add guest** and enter their email address.\n4. Choose **View only** or **Can comment**.\n5. Select **Send invite**.\nGuests only see this project and do not count as members.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": [
+   "proj-remove-a-guest"
+  ]
+ },
+ {
+  "id": "proj-remove-a-guest",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Remove a guest",
+  "aliases": [
+   "take away a guest's access",
+   "delete a guest",
+   "revoke contractor access"
+  ],
+  "body": "1. Go to **Workspace** and select **Guests**.\n2. Select the guest's name.\n3. Select **Remove guest**.\n4. Confirm by selecting **Remove**.\nThey lose access to all shared projects immediately. Their past comments stay visible.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-add-a-guest"
+  ]
+ },
+ {
+  "id": "proj-add-a-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Add a client",
+  "aliases": [
+   "create a new customer",
+   "set up a client record",
+   "new client"
+  ],
+  "body": "1. Go to **Clients** and select **New client**.\n2. Enter the client's name and billing contact email.\n3. Add an optional phone number and address.\n4. Select **Save**.\nYou can now link projects and invoices to the client.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-delete-a-client"
+  ]
+ },
+ {
+  "id": "proj-delete-a-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Delete a client",
+  "aliases": [
+   "remove a customer",
+   "get rid of a client record",
+   "how do I delete a client"
+  ],
+  "body": "1. Go to **Clients** and select the client.\n2. Select the **More** menu, then **Delete client**.\n3. If the client has projects, choose whether to move them to another client or leave them unassigned.\n4. Confirm by selecting **Delete**.\nInvoices already issued are kept for your records.",
+  "notConfusedWith": [
+   "proj-add-a-client"
+  ]
+ },
+ {
+  "id": "proj-add-a-note-to-a-client",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Add a note to a client",
+  "aliases": [
+   "write a note on a customer record",
+   "record a client conversation",
+   "how do I add a note to a client"
+  ],
+  "body": "1. Go to **Clients** and select the client.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note and select **Save**.\nNotes are visible to admins and project managers, never to the client.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-change-the-workspace-name",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Change the workspace name",
+  "aliases": [
+   "rename our workspace",
+   "edit company name",
+   "how do I change the workspace name"
+  ],
+  "body": "1. Go to **Settings** and select **Workspace**.\n2. Edit the **Workspace name** field.\n3. Select **Save**.\nThe new name appears in the sidebar, in emails and on invoices. Only admins can change it.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-the-workspace-time-zone",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Set the workspace time zone",
+  "aliases": [
+   "change timezone",
+   "fix wrong dates and times",
+   "how do I set the workspace time zone"
+  ],
+  "body": "1. Go to **Settings** and select **Workspace**.\n2. Select **Time zone**.\n3. Choose a time zone from the list.\n4. Select **Save**.\nDue dates, reports and scheduled emails use this time zone. Members can set their own under **Profile**.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-set-the-working-week",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Set the working week",
+  "aliases": [
+   "choose which days are work days",
+   "change standard working days",
+   "how do I set the working week"
+  ],
+  "body": "1. Go to **Settings** and select **Workspace**.\n2. Under **Working week**, tick the days your team normally works.\n3. Enter the standard hours for each day.\n4. Select **Save**.\nTimesheets and utilisation reports use these days to work out expected hours.\nIf you can't see this option, ask a workspace admin to check your role.",
+  "notConfusedWith": [
+   "proj-set-weekly-hours-target"
+  ]
+ },
+ {
+  "id": "proj-create-a-team",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Create a team",
+  "aliases": [
+   "group members together",
+   "set up a department",
+   "make a team of people"
+  ],
+  "body": "1. Go to **Workspace** and select **Teams**.\n2. Select **New team**.\n3. Enter a team name.\n4. Choose the members to add.\n5. Select **Create team**.\nTeams can be used to filter reports and to assign projects.\nThe change is recorded in the activity log for your workspace.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "proj-export-the-member-list-to-csv",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Export the member list to CSV",
+  "aliases": [
+   "download all staff",
+   "get employee list in a spreadsheet",
+   "how do I export the member list to csv"
+  ],
+  "body": "1. Go to **Workspace** and select **Members**.\n2. Use the filters if you only want some members.\n3. Select **Export**.\n4. Choose **CSV**.\nThe file lists each member's name, email, phone, role and status.\nYou can reverse this at any time by repeating the steps.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": [
+   "proj-export-a-report-to-csv"
+  ]
+ },
+ {
+  "id": "proj-transfer-workspace-ownership",
+  "product": "Harbour Projects (project management)",
+  "status": "public",
+  "category": "Workspace and members",
+  "title": "Transfer workspace ownership",
+  "aliases": [
+   "make someone else the owner",
+   "change the account owner",
+   "how do I transfer workspace ownership"
+  ],
+  "body": "1. Go to **Settings** and select **Workspace**.\n2. Scroll to **Ownership** and select **Transfer ownership**.\n3. Choose an existing admin.\n4. Enter your password to confirm.\n5. Select **Transfer**.\nYou stay on as an admin. The new owner receives an email confirming the change.\nChanges take effect straight away for everyone in the workspace.",
+  "notConfusedWith": []
+ }
+]

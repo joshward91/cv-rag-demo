@@ -1,0 +1,1593 @@
+[
+ {
+  "id": "mail-create-email-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Create an email campaign",
+  "aliases": [
+   "start a new newsletter",
+   "make a mailout",
+   "set up a new email blast"
+  ],
+  "body": "A campaign is a one-off email sent to a list or segment.\n\n1. Go to **Campaigns**.\n2. Select **New campaign**, then **Email**.\n3. Enter a **Campaign name** and choose the **Audience**.\n4. Add your subject line and choose a template.\n5. Select **Save draft**.\n\nYou can come back and finish it at any time.",
+  "notConfusedWith": [
+   "mail-duplicate-campaign"
+  ]
+ },
+ {
+  "id": "mail-schedule-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Schedule a campaign for later",
+  "aliases": [
+   "send an email at a set time",
+   "delay sending a mailout",
+   "pick a send date"
+  ],
+  "body": "Scheduling lets you finish a campaign now and send it at the best time.\n\n1. Open the campaign from **Campaigns**.\n2. Go to the **Review and send** step.\n3. Select **Schedule** instead of **Send now**.\n4. Choose the date, time and time zone.\n5. Select **Confirm schedule**.\n\nThe campaign status changes to **Scheduled**.",
+  "notConfusedWith": [
+   "mail-reschedule-campaign",
+   "mail-send-campaign-now"
+  ]
+ },
+ {
+  "id": "mail-reschedule-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Change the send time of a scheduled campaign",
+  "aliases": [
+   "move my scheduled email",
+   "reschedule a mailout",
+   "change when a campaign goes out"
+  ],
+  "body": "You can move a scheduled campaign to a new time without rebuilding it.\n\n1. Go to **Campaigns** and open the **Scheduled** tab.\n2. Select the campaign, then **Edit schedule**.\n3. Choose a new date and time.\n4. Select **Update schedule**.\n\nIf the new time has already passed, the campaign will not be saved.",
+  "notConfusedWith": [
+   "mail-schedule-campaign",
+   "mail-cancel-scheduled-campaign"
+  ]
+ },
+ {
+  "id": "mail-cancel-scheduled-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Cancel a scheduled campaign",
+  "aliases": [
+   "stop a scheduled email",
+   "unschedule a campaign",
+   "pull a mailout before it sends"
+  ],
+  "body": "You can cancel a campaign any time before it starts sending.\n\n1. Go to **Campaigns** and open the **Scheduled** tab.\n2. Select the campaign.\n3. Select **More**, then **Unschedule**.\n4. Confirm by selecting **Move to drafts**.\n\nThe campaign returns to **Drafts** with all content intact, so you can reschedule it later.",
+  "notConfusedWith": [
+   "mail-reschedule-campaign",
+   "mail-delete-campaign"
+  ]
+ },
+ {
+  "id": "mail-send-campaign-now",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Send a campaign immediately",
+  "aliases": [
+   "send an email right away",
+   "blast out a mailout now",
+   "publish a campaign"
+  ],
+  "body": "Use this when your campaign is ready and you do not need to wait.\n\n1. Open the draft from **Campaigns**.\n2. Select **Review and send** and check the audience and subject line.\n3. Select **Send now**.\n4. Confirm in the dialog.\n\nSending cannot be undone once it starts, so check the preview first.",
+  "notConfusedWith": [
+   "mail-schedule-campaign"
+  ]
+ },
+ {
+  "id": "mail-send-test-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Send a test email",
+  "aliases": [
+   "preview a campaign in my inbox",
+   "send myself a sample",
+   "test before sending"
+  ],
+  "body": "Test emails show how your campaign looks in a real inbox.\n\n1. Open the campaign in the editor.\n2. Select **Preview and test**.\n3. Select **Send test email**.\n4. Enter up to five email addresses, separated by commas.\n5. Select **Send**.\n\nTest emails have [TEST] added to the subject line and do not count towards your reports.",
+  "notConfusedWith": [
+   "mail-preview-on-mobile"
+  ]
+ },
+ {
+  "id": "mail-duplicate-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Duplicate a campaign",
+  "aliases": [
+   "copy a campaign",
+   "clone an old email",
+   "reuse a previous mailout"
+  ],
+  "body": "Duplicating saves time when you send a similar email regularly.\n\n1. Go to **Campaigns**.\n2. Find the campaign you want to copy.\n3. Select **More**, then **Duplicate**.\n4. Rename the copy and select **Create copy**.\n\nThe copy is saved as a draft and keeps the content, but not the schedule or results.",
+  "notConfusedWith": [
+   "mail-create-email-campaign"
+  ]
+ },
+ {
+  "id": "mail-delete-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Delete a campaign",
+  "aliases": [
+   "remove a draft email",
+   "get rid of an old mailout",
+   "trash a campaign"
+  ],
+  "body": "You can delete drafts and sent campaigns you no longer need.\n\n1. Go to **Campaigns**.\n2. Select the checkbox next to the campaign.\n3. Select **Delete**.\n4. Select **Delete campaign** to confirm.\n\nDeleting a sent campaign also removes its report, so export the results first if you need them.",
+  "notConfusedWith": [
+   "mail-archive-campaign",
+   "mail-cancel-scheduled-campaign"
+  ]
+ },
+ {
+  "id": "mail-archive-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Archive a sent campaign",
+  "aliases": [
+   "hide old campaigns",
+   "tidy my campaign list",
+   "move a mailout out of the way"
+  ],
+  "body": "Archiving keeps the campaign and its report but hides it from your main list.\n\n1. Go to **Campaigns** and open the **Sent** tab.\n2. Select the campaign.\n3. Select **More**, then **Archive**.\n\nTo see archived campaigns, select **Filters** and turn on **Show archived**.",
+  "notConfusedWith": [
+   "mail-delete-campaign"
+  ]
+ },
+ {
+  "id": "mail-set-up-ab-test",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Set up an A/B test on a subject line",
+  "aliases": [
+   "test two subject lines",
+   "split test my email",
+   "compare subject lines"
+  ],
+  "body": "An A/B test sends two versions to a small share of your audience, then sends the winner to everyone else.\n\n1. Create or open an email campaign.\n2. On the **Subject** step, select **Add A/B test**.\n3. Enter a subject line for version A and version B.\n4. Set the **Test size** and the **Winning metric**, such as **Opens**.\n5. Choose how long to wait before the winner is sent.",
+  "notConfusedWith": [
+   "mail-send-test-email"
+  ]
+ },
+ {
+  "id": "mail-choose-campaign-audience",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Choose who receives a campaign",
+  "aliases": [
+   "pick recipients for an email",
+   "select a list to send to",
+   "target a segment"
+  ],
+  "body": "Every campaign needs an audience before it can be sent.\n\n1. Open the campaign and go to the **Audience** step.\n2. Select **Choose audience**.\n3. Pick one or more **Lists** or **Segments**.\n4. To skip people, select **Exclude** and choose a list.\n5. Select **Save audience**.\n\nHarbour Mail shows the estimated number of recipients after duplicates are removed.",
+  "notConfusedWith": [
+   "mail-exclude-recent-recipients"
+  ]
+ },
+ {
+  "id": "mail-exclude-recent-recipients",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Skip subscribers who got an email recently",
+  "aliases": [
+   "avoid over-mailing people",
+   "suppress recent recipients",
+   "stop sending to people twice in a week"
+  ],
+  "body": "This setting protects your engagement rates by limiting how often people hear from you.\n\n1. Open the campaign and go to the **Audience** step.\n2. Select **Sending limits**.\n3. Turn on **Skip recent recipients**.\n4. Choose the period, for example **3 days**.\n5. Select **Save**.",
+  "notConfusedWith": [
+   "mail-choose-campaign-audience"
+  ]
+ },
+ {
+  "id": "mail-change-campaign-subject",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Edit the subject line and preview text",
+  "aliases": [
+   "change my email subject",
+   "update the preheader",
+   "rename the subject of a draft"
+  ],
+  "body": "Both fields appear in the inbox before someone opens your email.\n\n1. Open the draft from **Campaigns**.\n2. Go to the **Subject** step.\n3. Update **Subject line** and **Preview text**.\n4. Select **Save**.\n\nKeep the subject under 60 characters so it does not get cut off on phones.",
+  "notConfusedWith": [
+   "mail-set-up-ab-test"
+  ]
+ },
+ {
+  "id": "mail-add-campaign-tag",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Add a label to a campaign",
+  "aliases": [
+   "tag a mailout",
+   "categorise an email campaign",
+   "add a note tag to a campaign"
+  ],
+  "body": "Labels help you filter campaigns and compare reports by theme.\n\n1. Go to **Campaigns** and open the campaign.\n2. Select **Details**.\n3. In **Labels**, type a name and press Enter.\n4. Select **Save**.\n\nTo find labelled campaigns later, use **Filters** then **Label**.",
+  "notConfusedWith": [
+   "mail-tag-subscribers"
+  ]
+ },
+ {
+  "id": "mail-add-campaign-note",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Add an internal note to a campaign",
+  "aliases": [
+   "leave a comment on a draft",
+   "write a note for my team",
+   "jot something on a campaign"
+  ],
+  "body": "Notes are visible to your team only and never appear in the email.\n\n1. Open the campaign from **Campaigns**.\n2. Select the **Notes** tab.\n3. Type your note.\n4. Select **Add note**.\n\nEach note records your name and the date.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-export-campaign-recipients",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Export a campaign's recipients to CSV",
+  "aliases": [
+   "download who got an email",
+   "get a CSV of recipients",
+   "export a mailout list"
+  ],
+  "body": "You can download the list of people a campaign was sent to.\n\n1. Go to **Campaigns** and open a sent campaign.\n2. Select the **Recipients** tab.\n3. Select **Export**, then **CSV**.\n4. Choose the columns you need and select **Download**.\n\nThe file is also emailed to you if it has more than 50,000 rows.",
+  "notConfusedWith": [
+   "mail-export-subscribers-csv",
+   "mail-export-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-resend-to-unopened",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Campaigns",
+  "title": "Resend a campaign to people who did not open it",
+  "aliases": [
+   "follow up on non-openers",
+   "send again to unopened",
+   "second send to unengaged"
+  ],
+  "body": "Resending can lift your overall open rate without writing a new email.\n\n1. Go to **Campaigns** and open the **Sent** tab.\n2. Select the campaign, then **More**, then **Resend to non-openers**.\n3. Change the subject line if you wish.\n4. Choose a send time and select **Confirm**.\n\nYou can resend each campaign once, at least 48 hours after the first send.",
+  "notConfusedWith": [
+   "mail-send-campaign-now"
+  ]
+ },
+ {
+  "id": "mail-create-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Create an email template",
+  "aliases": [
+   "make a new template",
+   "build a reusable layout",
+   "start a template from scratch"
+  ],
+  "body": "Templates let your team reuse a consistent design.\n\n1. Go to **Templates**.\n2. Select **New template**.\n3. Choose **Blank** or a starting layout.\n4. Name the template and select **Create**.\n5. Build your design in the editor, then select **Save**.",
+  "notConfusedWith": [
+   "mail-save-campaign-as-template"
+  ]
+ },
+ {
+  "id": "mail-save-campaign-as-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Save a campaign as a template",
+  "aliases": [
+   "turn an email into a template",
+   "keep this design for later",
+   "reuse my campaign layout"
+  ],
+  "body": "Save a design you like so you can start from it again.\n\n1. Open the campaign in the editor.\n2. Select **Save** then **Save as template**.\n3. Enter a **Template name**.\n4. Select **Save template**.\n\nThe template appears under **Templates** and in the template picker for new campaigns.",
+  "notConfusedWith": [
+   "mail-create-template"
+  ]
+ },
+ {
+  "id": "mail-rename-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Rename a template",
+  "aliases": [
+   "change a template name",
+   "edit template title",
+   "relabel a layout"
+  ],
+  "body": "Clear names make templates easier to find.\n\n1. Go to **Templates**.\n2. Find the template and select **More**.\n3. Select **Rename**.\n4. Type the new name and select **Save**.\n\nCampaigns already using the template are not affected. You can rename a template as often as you like, and the new name shows straight away in the template picker.",
+  "notConfusedWith": [
+   "mail-duplicate-template"
+  ]
+ },
+ {
+  "id": "mail-duplicate-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Duplicate a template",
+  "aliases": [
+   "copy a template",
+   "clone a layout",
+   "make a variant of a template"
+  ],
+  "body": "Copy a template to try changes without touching the original.\n\n1. Go to **Templates**.\n2. Select **More** beside the template.\n3. Select **Duplicate**.\n4. Rename the copy and select **Create copy**.\n\nThe copy keeps all blocks, styles and images from the original, and appears at the top of your **Templates** list. You can then edit it freely without affecting the first version.",
+  "notConfusedWith": [
+   "mail-rename-template"
+  ]
+ },
+ {
+  "id": "mail-delete-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Delete a template",
+  "aliases": [
+   "remove a template",
+   "get rid of an old layout",
+   "trash a template"
+  ],
+  "body": "Deleting a template does not change campaigns that were built from it.\n\n1. Go to **Templates**.\n2. Select **More** beside the template.\n3. Select **Delete**.\n4. Select **Delete template** to confirm.\n\nDeleted templates cannot be restored. If other people on your team use this template, check with them first.",
+  "notConfusedWith": [
+   "mail-share-template"
+  ]
+ },
+ {
+  "id": "mail-add-image-to-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Add an image to an email",
+  "aliases": [
+   "insert a picture",
+   "put a photo in my newsletter",
+   "upload a graphic into the editor"
+  ],
+  "body": "Images should be under 5 MB and at least 600 pixels wide.\n\n1. In the editor, drag an **Image** block onto the canvas.\n2. Select **Upload** or choose one from the **Image library**.\n3. Add **Alt text** that describes the image.\n4. Select **Insert**.\n\nAlt text helps people using screen readers and shows when images are blocked.",
+  "notConfusedWith": [
+   "mail-add-button-block"
+  ]
+ },
+ {
+  "id": "mail-add-button-block",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Add a button to an email",
+  "aliases": [
+   "insert a call to action",
+   "put a link button in my email",
+   "make a clickable button"
+  ],
+  "body": "Buttons make your main call to action easy to tap.\n\n1. In the editor, drag a **Button** block onto the canvas.\n2. Select the block.\n3. In the side panel, enter the **Button text** and **Link**.\n4. Adjust the colour and shape under **Style**.\n\nUse one clear button per section for the best click rates.",
+  "notConfusedWith": [
+   "mail-add-image-to-email"
+  ]
+ },
+ {
+  "id": "mail-add-merge-tag",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Personalise an email with the subscriber's first name",
+  "aliases": [
+   "insert a first name",
+   "add a merge tag",
+   "put someone's name in the greeting"
+  ],
+  "body": "Merge tags are replaced with each subscriber's own details when the email is sent.\n\n1. In the editor, click where you want the name.\n2. Select **Insert merge tag**.\n3. Choose **First name**.\n4. Type a fallback such as **there**, for people with no name saved.\n\nThe email will then read, for example, Hi there.",
+  "notConfusedWith": [
+   "mail-add-conditional-content"
+  ]
+ },
+ {
+  "id": "mail-add-conditional-content",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Show content to certain subscribers only",
+  "aliases": [
+   "dynamic content block",
+   "hide a section for some people",
+   "personalise a block by segment"
+  ],
+  "body": "Conditional blocks let one email serve different audiences.\n\n1. Select the block you want to restrict.\n2. Select **Visibility** in the side panel.\n3. Choose **Show only to** and pick a segment.\n4. Select **Apply**.\n\nUse the **Preview as subscriber** option to check the result.",
+  "notConfusedWith": [
+   "mail-add-merge-tag"
+  ]
+ },
+ {
+  "id": "mail-edit-footer-details",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Update the footer address and company name",
+  "aliases": [
+   "change my email footer",
+   "fix the postal address in the footer",
+   "edit the business address"
+  ],
+  "body": "Australian anti-spam law requires every marketing email to show who sent it.\n\n1. Go to **Settings**, then **Email footer**.\n2. Update the **Business name** and **Postal address**.\n3. Select **Save**.\n\nThe change applies to new campaigns. Drafts need the footer block to be refreshed.",
+  "notConfusedWith": [
+   "mail-change-sender-address"
+  ]
+ },
+ {
+  "id": "mail-add-social-links",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Add social media icons",
+  "aliases": [
+   "link to Facebook from my email",
+   "insert social buttons",
+   "show Instagram icons"
+  ],
+  "body": "Social icons link readers to your profiles.\n\n1. In the editor, drag a **Social** block onto the canvas.\n2. Select the block.\n3. Turn on each network you want.\n4. Paste your profile address beside each icon.\n5. Select **Done**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-unsubscribe-link",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Restore the unsubscribe link",
+  "aliases": [
+   "unsubscribe link is missing",
+   "add opt-out link to email",
+   "put the unsubscribe button back"
+  ],
+  "body": "Every campaign must include an unsubscribe link before it can be sent.\n\n1. In the editor, click where you want the link.\n2. Select **Insert merge tag**.\n3. Choose **Unsubscribe link**.\n4. Select **Save**.\n\nIf you removed your footer block, you can drag in a new **Footer** block, which includes the link.",
+  "notConfusedWith": [
+   "mail-edit-footer-details"
+  ]
+ },
+ {
+  "id": "mail-preview-on-mobile",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Preview an email on mobile",
+  "aliases": [
+   "check phone layout",
+   "see how email looks on a phone",
+   "mobile view of a campaign"
+  ],
+  "body": "Most subscribers read on their phones, so check the mobile layout before sending.\n\n1. Open the campaign in the editor.\n2. Select **Preview** at the top.\n3. Select the **Mobile** icon.\n4. Scroll through the preview to check images and buttons.\n\nUse **Send test email** to check it on your actual phone.",
+  "notConfusedWith": [
+   "mail-send-test-email"
+  ]
+ },
+ {
+  "id": "mail-change-email-fonts",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Change fonts and colours across an email",
+  "aliases": [
+   "update brand colours",
+   "set the email font",
+   "restyle my newsletter"
+  ],
+  "body": "Global styles change the whole email at once.\n\n1. In the editor, select **Styles**.\n2. Choose a **Heading font** and **Body font**.\n3. Pick colours for **Text**, **Links** and **Background**.\n4. Select **Apply**.\n\nStyles you set here apply to every block unless you override a block's own style. Web-safe fonts display most reliably across email apps.",
+  "notConfusedWith": [
+   "mail-save-brand-kit"
+  ]
+ },
+ {
+  "id": "mail-save-brand-kit",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Save your logo and brand colours",
+  "aliases": [
+   "set up brand kit",
+   "store my logo",
+   "keep brand colours for all emails"
+  ],
+  "body": "A brand kit makes your logo and colours available in every template.\n\n1. Go to **Templates**, then **Brand kit**.\n2. Upload your **Logo**.\n3. Add your brand colours using hex codes.\n4. Select **Save brand kit**.\n\nAfter saving, your logo and colours appear as quick options inside the editor, so every email stays on brand.",
+  "notConfusedWith": [
+   "mail-change-email-fonts"
+  ]
+ },
+ {
+  "id": "mail-share-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Share a template with another team member",
+  "aliases": [
+   "give a colleague access to a template",
+   "let my team use my layout",
+   "make a template available to all"
+  ],
+  "body": "Sharing lets colleagues build on a design you have made.\n\n1. Go to **Templates**.\n2. Select **More** beside the template.\n3. Select **Share**.\n4. Choose **Entire team** or pick people by name.\n5. Select **Save**.\n\nShared people can use the template but only editors can change it.",
+  "notConfusedWith": [
+   "mail-delete-template"
+  ]
+ },
+ {
+  "id": "mail-edit-plain-text-version",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Templates and the email editor",
+  "title": "Edit the plain text version of an email",
+  "aliases": [
+   "change the text-only version",
+   "fix plain text email",
+   "write a text alternative"
+  ],
+  "body": "Some email apps show only plain text, so it is good practice to check it.\n\n1. Open the campaign in the editor.\n2. Select **Content**, then **Plain text**.\n3. Turn off **Generate automatically**.\n4. Edit the text and select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-welcome-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Create a welcome email automation",
+  "aliases": [
+   "send an email to new subscribers",
+   "set up a welcome series",
+   "greet people who sign up"
+  ],
+  "body": "A welcome automation sends an email as soon as someone joins a list.\n\n1. Go to **Automations** and select **New automation**.\n2. Choose the **Welcome new subscribers** recipe.\n3. Select the **List** that triggers it.\n4. Choose or design the email.\n5. Select **Review**, then **Turn on**.",
+  "notConfusedWith": [
+   "mail-create-birthday-automation"
+  ]
+ },
+ {
+  "id": "mail-create-birthday-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Send a birthday email automatically",
+  "aliases": [
+   "birthday greeting",
+   "wish customers happy birthday",
+   "date-based email"
+  ],
+  "body": "This automation uses the **Birthday** field on each subscriber.\n\n1. Go to **Automations** and select **New automation**.\n2. Choose the **Date-based** recipe, then **Birthday**.\n3. Pick how many days before or after the date to send.\n4. Choose the email and select **Turn on**.\n\nSubscribers without a birthday saved are skipped.",
+  "notConfusedWith": [
+   "mail-create-welcome-automation"
+  ]
+ },
+ {
+  "id": "mail-add-delay-step",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Add a delay between automation emails",
+  "aliases": [
+   "wait a few days between emails",
+   "pause between steps",
+   "space out a series"
+  ],
+  "body": "Delays stop a series from landing in one go.\n\n1. Open the automation from **Automations**.\n2. Select the **+** below the step you want to delay.\n3. Choose **Wait**.\n4. Enter the number of days or hours.\n5. Select **Save**.\n\nChanges only apply to people who enter the automation after you save.",
+  "notConfusedWith": [
+   "mail-add-condition-branch"
+  ]
+ },
+ {
+  "id": "mail-add-condition-branch",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Add an if/else branch to an automation",
+  "aliases": [
+   "split automation by condition",
+   "send different emails by behaviour",
+   "branch a workflow"
+  ],
+  "body": "Branches send people down different paths depending on what they have done.\n\n1. Open the automation from **Automations**.\n2. Select the **+** where you want to split the path.\n3. Choose **If/else**.\n4. Set the condition, such as **Opened previous email**.\n5. Add steps to the **Yes** and **No** paths.",
+  "notConfusedWith": [
+   "mail-add-delay-step"
+  ]
+ },
+ {
+  "id": "mail-pause-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Pause an automation",
+  "aliases": [
+   "stop an automation temporarily",
+   "turn off a workflow for now",
+   "hold my automation"
+  ],
+  "body": "Pausing stops new people from entering, and holds anyone already in progress.\n\n1. Go to **Automations**.\n2. Find the automation and select the **Status** toggle.\n3. Select **Pause** to confirm.\n\nSelect the toggle again to resume. People continue from where they stopped.",
+  "notConfusedWith": [
+   "mail-delete-automation"
+  ]
+ },
+ {
+  "id": "mail-delete-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Delete an automation",
+  "aliases": [
+   "remove a workflow",
+   "get rid of an old automation",
+   "trash an automation"
+  ],
+  "body": "Deleting an automation stops it immediately for everyone in progress.\n\n1. Go to **Automations**.\n2. Select **More** beside the automation.\n3. Select **Delete**.\n4. Select **Delete automation** to confirm.\n\nIf you may need it again, use **Pause** instead. Deleted automations cannot be restored, although emails already sent remain in your reports.",
+  "notConfusedWith": [
+   "mail-pause-automation"
+  ]
+ },
+ {
+  "id": "mail-duplicate-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Duplicate an automation",
+  "aliases": [
+   "copy a workflow",
+   "clone an automation",
+   "reuse a journey"
+  ],
+  "body": "Duplicate an automation to build a similar one quickly.\n\n1. Go to **Automations**.\n2. Select **More** beside the automation.\n3. Select **Duplicate**.\n4. Name the copy and select **Create**.\n\nThe copy is created switched off, so you can change it safely.",
+  "notConfusedWith": [
+   "mail-rename-automation"
+  ]
+ },
+ {
+  "id": "mail-start-automation-on-tag",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Start an automation when a tag is added",
+  "aliases": [
+   "trigger on a subscriber tag",
+   "tag-based automation",
+   "run workflow when someone is tagged"
+  ],
+  "body": "Tag triggers let you start a series whenever someone is labelled.\n\n1. Open the automation and select the **Trigger** step.\n2. Choose **Tag added**.\n3. Pick the tag from the list.\n4. Select **Save trigger**.\n\nThe tag must already exist under **Subscribers**, then **Tags**.",
+  "notConfusedWith": [
+   "mail-tag-subscribers"
+  ]
+ },
+ {
+  "id": "mail-create-abandoned-cart-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Set up an abandoned cart email",
+  "aliases": [
+   "remind shoppers about their basket",
+   "cart reminder",
+   "follow up on unfinished orders"
+  ],
+  "body": "This requires a connected online store under **Settings**, then **Integrations**.\n\n1. Go to **Automations** and select **New automation**.\n2. Choose **Abandoned cart**.\n3. Set how long to wait after someone leaves, for example **2 hours**.\n4. Select the email and choose **Turn on**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-create-win-back-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Create a win-back automation for inactive subscribers",
+  "aliases": [
+   "re-engage lapsed subscribers",
+   "email people who stopped opening",
+   "bring back inactive contacts"
+  ],
+  "body": "Win-back emails give quiet subscribers a reason to return.\n\n1. Go to **Automations** and select **New automation**.\n2. Choose **Win-back**.\n3. Define inactive, for example **No opens in 90 days**.\n4. Choose the email.\n5. Select **Turn on**.\n\nConsider adding a step to remove people who still do not respond.",
+  "notConfusedWith": [
+   "mail-remove-unengaged-subscribers"
+  ]
+ },
+ {
+  "id": "mail-view-automation-report",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "View automation performance",
+  "aliases": [
+   "see how my workflow is doing",
+   "automation stats",
+   "check automation opens and clicks"
+  ],
+  "body": "Each automation has its own report.\n\n1. Go to **Automations**.\n2. Select the automation name.\n3. Select the **Report** tab.\n4. Choose a date range to see opens, clicks and the number of people who completed each step.\n\nSelect any step to see details of that email.",
+  "notConfusedWith": [
+   "mail-export-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-see-who-is-in-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "See who is currently in an automation",
+  "aliases": [
+   "check workflow members",
+   "who is in my journey",
+   "list people in an automation"
+  ],
+  "body": "You can check where each person is in the journey.\n\n1. Go to **Automations** and open the automation.\n2. Select the **People** tab.\n3. Use **Filters** to show **In progress**, **Completed** or **Exited**.\n4. Select a person's name to see their history.",
+  "notConfusedWith": [
+   "mail-remove-person-from-automation"
+  ]
+ },
+ {
+  "id": "mail-remove-person-from-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Remove a subscriber from an automation",
+  "aliases": [
+   "take someone out of a workflow",
+   "stop emails to one person in a journey",
+   "exit a contact from automation"
+  ],
+  "body": "Use this when one person should not receive the remaining steps.\n\n1. Go to **Automations** and open the automation.\n2. Select the **People** tab.\n3. Tick the checkbox beside the person.\n4. Select **Remove from automation**, then confirm.\n\nThe person stays on your list and can receive other emails.",
+  "notConfusedWith": [
+   "mail-unsubscribe-subscriber"
+  ]
+ },
+ {
+  "id": "mail-set-automation-exit-rule",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Set an exit rule for an automation",
+  "aliases": [
+   "stop automation when someone buys",
+   "remove people automatically",
+   "finish the journey on a goal"
+  ],
+  "body": "Exit rules remove people once they have done what the automation was meant to achieve.\n\n1. Open the automation and select **Settings**.\n2. Under **Exit rules**, select **Add rule**.\n3. Choose an event, such as **Made a purchase**.\n4. Select **Save**.",
+  "notConfusedWith": [
+   "mail-remove-person-from-automation"
+  ]
+ },
+ {
+  "id": "mail-edit-live-automation-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Edit an email in a live automation",
+  "aliases": [
+   "change an automated email",
+   "update workflow content",
+   "fix a typo in an automation"
+  ],
+  "body": "You can fix content while an automation is running.\n\n1. Go to **Automations** and open the automation.\n2. Select the email step.\n3. Select **Edit email**, make your changes, then select **Save**.\n4. Select **Update automation** to publish.\n\nNew content only reaches people who have not yet received that step.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-rename-automation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Automations",
+  "title": "Rename an automation",
+  "aliases": [
+   "change a workflow name",
+   "edit automation title",
+   "relabel a journey"
+  ],
+  "body": "Renaming helps you keep a growing list of automations easy to scan.\n\n1. Go to **Automations**.\n2. Select the automation name.\n3. Select the pencil icon beside the title.\n4. Type the new name and press Enter.\n\nThe name is for your team only and is never shown to subscribers.",
+  "notConfusedWith": [
+   "mail-duplicate-automation"
+  ]
+ },
+ {
+  "id": "mail-send-sms-campaign",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Send an SMS campaign",
+  "aliases": [
+   "text my customers",
+   "send a bulk text",
+   "create an SMS blast"
+  ],
+  "body": "You need an approved sender ID or number before sending.\n\n1. Go to **SMS**, then **Campaigns**.\n2. Select **New SMS campaign**.\n3. Choose the **Audience**.\n4. Type your message and select **Next**.\n5. Choose **Send now** or **Schedule**.\n\nCheck the preview before you send, as texts cannot be recalled once they leave.",
+  "notConfusedWith": [
+   "mail-schedule-sms"
+  ]
+ },
+ {
+  "id": "mail-schedule-sms",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Schedule an SMS for later",
+  "aliases": [
+   "delay a text message",
+   "send a text at a set time",
+   "timed SMS"
+  ],
+  "body": "Scheduling lets you prepare a text now and send it at the right time.\n\n1. Open the SMS draft from **SMS**, then **Campaigns**.\n2. Select **Schedule**.\n3. Choose the date, time and time zone.\n4. Select **Confirm**.\n\nMessages are not sent between 9 pm and 8 am in the recipient's local time.",
+  "notConfusedWith": [
+   "mail-send-sms-campaign"
+  ]
+ },
+ {
+  "id": "mail-cancel-scheduled-sms",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Cancel a scheduled SMS",
+  "aliases": [
+   "stop a text from sending",
+   "unschedule an SMS",
+   "pull a scheduled text message"
+  ],
+  "body": "You can cancel an SMS any time before it starts sending.\n\n1. Go to **SMS**, then **Campaigns**.\n2. Open the **Scheduled** tab.\n3. Select the message, then **Unschedule**.\n4. Confirm by selecting **Move to drafts**.\n\nAny credits held for the message are returned to your balance.",
+  "notConfusedWith": [
+   "mail-schedule-sms",
+   "mail-cancel-scheduled-campaign"
+  ]
+ },
+ {
+  "id": "mail-send-test-sms",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Send a test SMS",
+  "aliases": [
+   "preview a text on my phone",
+   "test an SMS",
+   "send myself a sample text"
+  ],
+  "body": "Test texts show exactly what recipients will see on their phones.\n\n1. Open the SMS draft.\n2. Select **Send test**.\n3. Enter a mobile number, in international format such as +61.\n4. Select **Send**.\n\nTest messages cost one SMS credit each.",
+  "notConfusedWith": [
+   "mail-send-test-email"
+  ]
+ },
+ {
+  "id": "mail-add-sms-merge-tag",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Personalise an SMS with the customer's name",
+  "aliases": [
+   "insert first name in a text",
+   "add merge field to SMS",
+   "address people by name in a text"
+  ],
+  "body": "Personalised texts tend to get better replies.\n\n1. Open the SMS message editor.\n2. Place your cursor where the name should go.\n3. Select **Insert merge tag**.\n4. Choose **First name** and add a fallback.\n5. Select **Save**.\n\nNames increase the message length, so check the character count.",
+  "notConfusedWith": [
+   "mail-add-merge-tag"
+  ]
+ },
+ {
+  "id": "mail-check-sms-length",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Check SMS length and credits",
+  "aliases": [
+   "how many characters in a text",
+   "work out SMS cost",
+   "why did my text use two credits"
+  ],
+  "body": "A standard SMS holds 160 characters. Longer messages are split into parts, and emojis can lower the limit to 70.\n\n1. Open the SMS editor.\n2. Look below the message box at the **Characters** and **Credits** counters.\n3. Shorten the text until the credits show **1**.\n\nCredits are charged per recipient, per part.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-add-sms-link",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Add a short link to an SMS",
+  "aliases": [
+   "include a URL in a text",
+   "shorten a link for SMS",
+   "put a website in a text message"
+  ],
+  "body": "Short links save characters and let you track clicks.\n\n1. Open the SMS editor.\n2. Select **Insert link**.\n3. Paste the full web address.\n4. Select **Shorten**.\n\nShort links let you see clicks under **Reports**. Keep links short and clear, as people are less likely to tap a long or unfamiliar web address.",
+  "notConfusedWith": [
+   "mail-add-button-block"
+  ]
+ },
+ {
+  "id": "mail-add-opt-out-text",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Add opt-out wording to an SMS",
+  "aliases": [
+   "include stop to unsubscribe",
+   "SMS unsubscribe message",
+   "comply with SMS opt-out rules"
+  ],
+  "body": "Marketing texts in Australia must tell people how to opt out.\n\n1. Open the SMS editor.\n2. Select **Insert**, then **Opt-out text**.\n3. Choose the wording, such as **Reply STOP to opt out**.\n4. Select **Save**.\n\nThis wording counts towards your message length, so allow around 20 characters for it.",
+  "notConfusedWith": [
+   "mail-view-sms-opt-outs"
+  ]
+ },
+ {
+  "id": "mail-view-sms-opt-outs",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Check who has opted out of SMS",
+  "aliases": [
+   "see who replied stop",
+   "view SMS unsubscribes",
+   "list texts opt-outs"
+  ],
+  "body": "When someone replies STOP, Harbour Mail stops texting them automatically.\n\n1. Go to **Subscribers**.\n2. Select **Filters**.\n3. Choose **SMS status**, then **Opted out**.\n4. Select **Apply**.\n\nYou can export this list with **Export**. People on this list cannot receive marketing texts until they opt back in themselves.",
+  "notConfusedWith": [
+   "mail-add-opt-out-text"
+  ]
+ },
+ {
+  "id": "mail-update-subscriber-mobile",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Update a subscriber's mobile number",
+  "aliases": [
+   "change someone's phone number",
+   "fix a wrong mobile",
+   "edit a contact's number"
+  ],
+  "body": "Correct numbers mean your texts reach the right person.\n\n1. Go to **Subscribers** and search for the person.\n2. Select their name.\n3. Next to **Mobile**, select **Edit**.\n4. Enter the new number in international format.\n5. Select **Save**.\n\nIf the person was opted out, changing the number does not opt them back in.",
+  "notConfusedWith": [
+   "mail-update-subscriber-email"
+  ]
+ },
+ {
+  "id": "mail-register-sender-id",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Register an SMS sender ID",
+  "aliases": [
+   "set up a sender name for texts",
+   "brand my SMS sender",
+   "register alphanumeric sender"
+  ],
+  "body": "A sender ID is the name, such as HARBOUR, shown instead of a phone number.\n\n1. Go to **Settings**, then **SMS**.\n2. Select **Add sender ID**.\n3. Enter the name, using up to 11 letters and numbers.\n4. Upload any proof requested and select **Submit**.\n\nApproval usually takes two business days.",
+  "notConfusedWith": [
+   "mail-buy-dedicated-number"
+  ]
+ },
+ {
+  "id": "mail-buy-dedicated-number",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Get a dedicated mobile number",
+  "aliases": [
+   "lease a number for two-way SMS",
+   "buy a number to text from",
+   "get a number people can reply to"
+  ],
+  "body": "A dedicated number lets customers reply to your messages.\n\n1. Go to **Settings**, then **SMS**.\n2. Select **Get a number**.\n3. Pick a number from the list.\n4. Select **Confirm and subscribe**.\n\nMonthly fees show on your next invoice. Pick a number that matches your region so replies and local delivery work well.",
+  "notConfusedWith": [
+   "mail-register-sender-id"
+  ]
+ },
+ {
+  "id": "mail-read-sms-replies",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Read replies to your SMS",
+  "aliases": [
+   "see customer text responses",
+   "check text inbox",
+   "view incoming SMS"
+  ],
+  "body": "Replies from subscribers arrive in one shared inbox.\n\n1. Go to **SMS**, then **Inbox**.\n2. Select a conversation to read it.\n3. Use **Unread** to see new replies.\n4. Select **Reply** to answer.\n\nReplies are sent from your dedicated number.",
+  "notConfusedWith": [
+   "mail-assign-sms-conversation"
+  ]
+ },
+ {
+  "id": "mail-assign-sms-conversation",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Assign an SMS conversation to a team member",
+  "aliases": [
+   "hand a customer text to a colleague",
+   "give a reply to someone else",
+   "delegate a text conversation"
+  ],
+  "body": "Assigning makes it clear who is responsible for a reply.\n\n1. Go to **SMS**, then **Inbox**.\n2. Open the conversation.\n3. Select **Assign**.\n4. Choose a team member and select **Save**.\n\nThe person receives a notification. You can reassign it again whenever needed, and the full message history stays attached.",
+  "notConfusedWith": [
+   "mail-read-sms-replies"
+  ]
+ },
+ {
+  "id": "mail-create-sms-template",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Save an SMS template",
+  "aliases": [
+   "store a text message",
+   "create reusable text",
+   "save a message for later"
+  ],
+  "body": "Templates save you retyping messages you send often.\n\n1. Go to **SMS**, then **Templates**.\n2. Select **New SMS template**.\n3. Enter a name and the message.\n4. Select **Save**.\n\nTemplates are available when you create any SMS campaign. Keep your template short, and use merge tags for names to make each message feel personal.",
+  "notConfusedWith": [
+   "mail-create-template"
+  ]
+ },
+ {
+  "id": "mail-top-up-sms-credits",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Top up SMS credits",
+  "aliases": [
+   "buy more texts",
+   "add SMS balance",
+   "recharge sms credit"
+  ],
+  "body": "You need credits in your balance to send texts.\n\n1. Go to **Settings**, then **Billing**.\n2. Select **SMS credits**.\n3. Choose a pack, or turn on **Auto top-up**.\n4. Select **Pay now**.\n\nCredits do not expire. You will receive a receipt by email, and the new balance shows at the top of the **SMS** page.",
+  "notConfusedWith": [
+   "mail-update-payment-card"
+  ]
+ },
+ {
+  "id": "mail-export-sms-report",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "SMS messages",
+  "title": "Export an SMS delivery report",
+  "aliases": [
+   "download text message results",
+   "get SMS delivery CSV",
+   "see which texts failed"
+  ],
+  "body": "The delivery report shows what happened to every message.\n\n1. Go to **SMS**, then **Campaigns**.\n2. Open a sent campaign.\n3. Select **Delivery report**.\n4. Select **Export**, then **CSV**.\n\nThe report lists each recipient as **Delivered**, **Failed** or **Pending**. Failed messages include a reason, such as an invalid number, to help you fix your list.",
+  "notConfusedWith": [
+   "mail-export-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-view-campaign-report",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "View a campaign report",
+  "aliases": [
+   "see how my email performed",
+   "check open and click rates",
+   "campaign stats"
+  ],
+  "body": "Reports show how recipients engaged with each campaign.\n\n1. Go to **Reports**, then **Campaigns**.\n2. Select the campaign name.\n3. Review **Opens**, **Clicks**, **Bounces** and **Unsubscribes** on the **Overview** tab.\n4. Use the date picker to change the period.\n\nOpens can take up to 24 hours to settle fully.",
+  "notConfusedWith": [
+   "mail-export-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-export-campaign-report",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Export a campaign report to CSV",
+  "aliases": [
+   "download campaign results",
+   "get stats in a spreadsheet",
+   "save a report as CSV"
+  ],
+  "body": "Export results to share them or analyse them in a spreadsheet.\n\n1. Go to **Reports**, then **Campaigns**.\n2. Open the campaign.\n3. Select **Export**.\n4. Choose **CSV** or **PDF** and select **Download**.\n\nThe CSV includes totals for each metric as well as a row for every link in the email, which makes it easy to share with colleagues who do not use Harbour Mail.",
+  "notConfusedWith": [
+   "mail-export-campaign-recipients",
+   "mail-view-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-compare-campaigns",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Compare two campaigns side by side",
+  "aliases": [
+   "benchmark my emails",
+   "compare results of mailouts",
+   "see which email did better"
+  ],
+  "body": "Comparing campaigns shows what works best for your audience.\n\n1. Go to **Reports**, then **Campaigns**.\n2. Tick the checkboxes beside two to four campaigns.\n3. Select **Compare**.\n4. Switch between **Rates** and **Totals** at the top.\n\nComparison works best when the campaigns went to similar audiences, so keep that in mind when drawing conclusions.",
+  "notConfusedWith": [
+   "mail-view-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-view-click-map",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "See which links were clicked",
+  "aliases": [
+   "click map",
+   "find the most popular link",
+   "check link clicks in an email"
+  ],
+  "body": "The click map shows your email with a percentage next to each link.\n\n1. Open the campaign report from **Reports**.\n2. Select the **Links** tab.\n3. Choose **Click map** to see the overlay, or **List** for a table.\n\nSelect a link to see who clicked it.",
+  "notConfusedWith": [
+   "mail-see-who-clicked"
+  ]
+ },
+ {
+  "id": "mail-see-who-clicked",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "See which subscribers clicked a link",
+  "aliases": [
+   "list people who clicked",
+   "find who clicked my email",
+   "view clickers"
+  ],
+  "body": "You can build a follow-up audience from people who showed interest.\n\n1. Open the campaign report from **Reports**.\n2. Select the **Links** tab, then the link name.\n3. Select **View clickers**.\n4. Select **Create segment** if you want to email them again.",
+  "notConfusedWith": [
+   "mail-view-click-map"
+  ]
+ },
+ {
+  "id": "mail-view-bounced-addresses",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "View bounced email addresses",
+  "aliases": [
+   "see failed deliveries",
+   "find undelivered emails",
+   "list bounces"
+  ],
+  "body": "A bounce happens when an email cannot be delivered. Soft bounces are temporary and hard bounces are permanent.\n\n1. Go to **Reports**, then **Deliverability**.\n2. Select the **Bounces** tab.\n3. Use the **Type** filter to choose **Hard** or **Soft**.\n4. Select a row for the reason given by the receiving server.",
+  "notConfusedWith": [
+   "mail-clean-hard-bounces"
+  ]
+ },
+ {
+  "id": "mail-clean-hard-bounces",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Remove hard-bounced subscribers",
+  "aliases": [
+   "clean my list of bad emails",
+   "delete undeliverable addresses",
+   "tidy up bounces"
+  ],
+  "body": "Removing permanently failed addresses keeps your list healthy.\n\n1. Go to **Reports**, then **Deliverability**.\n2. Select the **Bounces** tab and filter by **Hard**.\n3. Select all rows using the top checkbox.\n4. Select **Remove from list**.\n\nHarbour Mail already stops sending to hard bounces, so this simply keeps your list clean.",
+  "notConfusedWith": [
+   "mail-view-bounced-addresses",
+   "mail-delete-subscriber"
+  ]
+ },
+ {
+  "id": "mail-remove-unengaged-subscribers",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Remove subscribers who never open your emails",
+  "aliases": [
+   "clean inactive people",
+   "delete unengaged contacts",
+   "prune my list"
+  ],
+  "body": "Removing unengaged people can improve your deliverability.\n\n1. Go to **Subscribers**, then **Segments**.\n2. Select **New segment**.\n3. Set **Opens** to **0** in the last **180 days**.\n4. Save the segment, then select **Actions**, then **Remove from list**.\n\nRemoved people can be added back later, but only if they have given permission to hear from you again.",
+  "notConfusedWith": [
+   "mail-create-win-back-automation"
+  ]
+ },
+ {
+  "id": "mail-view-spam-complaints",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Check spam complaints",
+  "aliases": [
+   "see who marked me as spam",
+   "find complaints",
+   "view spam reports"
+  ],
+  "body": "A complaint rate above 0.1 per cent can harm your sender reputation.\n\n1. Go to **Reports**, then **Deliverability**.\n2. Select the **Complaints** tab.\n3. Choose a date range.\n4. Select a row to see the campaign it relates to.\n\nPeople who complain are unsubscribed automatically.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-authenticate-sending-domain",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Authenticate your sending domain",
+  "aliases": [
+   "set up SPF and DKIM",
+   "verify domain for sending",
+   "stop emails going to spam"
+  ],
+  "body": "Authentication proves to inbox providers that you are allowed to send from your domain.\n\n1. Go to **Settings**, then **Domains**.\n2. Select **Add domain** and enter your domain name.\n3. Copy the **SPF** and **DKIM** records shown.\n4. Add them in your domain provider's DNS settings.\n5. Return and select **Verify**.\n\nDNS changes can take up to 48 hours.",
+  "notConfusedWith": [
+   "mail-set-up-dmarc"
+  ]
+ },
+ {
+  "id": "mail-set-up-dmarc",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Add a DMARC record",
+  "aliases": [
+   "configure DMARC",
+   "create a DMARC policy",
+   "fix DMARC failing"
+  ],
+  "body": "DMARC tells inbox providers what to do with emails that fail authentication.\n\n1. Go to **Settings**, then **Domains**.\n2. Select your domain, then **DMARC**.\n3. Choose a policy, starting with **None**.\n4. Copy the record and add it to your DNS.\n5. Select **Check record**.",
+  "notConfusedWith": [
+   "mail-authenticate-sending-domain"
+  ]
+ },
+ {
+  "id": "mail-check-deliverability-score",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Check your deliverability score",
+  "aliases": [
+   "see my sender reputation",
+   "inbox placement check",
+   "am I going to spam"
+  ],
+  "body": "The score summarises how inbox providers are likely to treat your email.\n\n1. Go to **Reports**, then **Deliverability**.\n2. Select the **Overview** tab.\n3. Read your **Sender score** and the checklist of suggestions beneath it.\n4. Select any item to see how to fix it.\n\nThe score updates daily.",
+  "notConfusedWith": [
+   "mail-view-spam-complaints"
+  ]
+ },
+ {
+  "id": "mail-schedule-report-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Email a report to your team on a schedule",
+  "aliases": [
+   "get weekly stats by email",
+   "automatic report delivery",
+   "send reports to my manager"
+  ],
+  "body": "Scheduled reports arrive in your inbox without logging in.\n\n1. Go to **Reports**, then **Scheduled reports**.\n2. Select **New scheduled report**.\n3. Choose the report and how often it should arrive.\n4. Add recipient email addresses.\n5. Select **Save**.\n\nYou can edit or stop the schedule at any time from the same page.",
+  "notConfusedWith": [
+   "mail-export-campaign-report"
+  ]
+ },
+ {
+  "id": "mail-add-utm-tracking",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Add UTM tracking to links",
+  "aliases": [
+   "track clicks in Google Analytics",
+   "tag links with campaign name",
+   "set up UTM parameters"
+  ],
+  "body": "UTM parameters show which campaigns drive visits to your website.\n\n1. Open the campaign and go to the **Tracking** step.\n2. Turn on **Add UTM parameters**.\n3. Check the **Source**, **Medium** and **Campaign** values.\n4. Select **Save**.\n\nThe parameters are added to all links when the email is sent.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-turn-off-open-tracking",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "Turn off open tracking",
+  "aliases": [
+   "stop tracking opens",
+   "privacy setting for email opens",
+   "disable the tracking pixel"
+  ],
+  "body": "Some organisations prefer not to track opens.\n\n1. Open the campaign and go to the **Tracking** step.\n2. Turn off **Track opens**.\n3. Select **Save**.\n\nOpen rates will no longer appear for this campaign. To change the default for all campaigns, go to **Settings**, then **Tracking**.",
+  "notConfusedWith": [
+   "mail-add-utm-tracking"
+  ]
+ },
+ {
+  "id": "mail-view-unsubscribe-list",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "See who unsubscribed from a campaign",
+  "aliases": [
+   "list of opt-outs",
+   "find people who left",
+   "view unsubscribes"
+  ],
+  "body": "Reviewing unsubscribes helps you spot content that is not working.\n\n1. Go to **Reports**, then **Campaigns** and open the campaign.\n2. Select the **Unsubscribes** tab.\n3. Review the list and any reasons they gave.\n4. Select **Export** to download it.",
+  "notConfusedWith": [
+   "mail-unsubscribe-subscriber"
+  ]
+ },
+ {
+  "id": "mail-view-device-breakdown",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Reports and deliverability",
+  "title": "See which devices and email apps people use",
+  "aliases": [
+   "mobile versus desktop opens",
+   "email client stats",
+   "what apps open my emails"
+  ],
+  "body": "Audience insights show how your subscribers read email.\n\n1. Go to **Reports**, then **Audience insights**.\n2. Select **Devices**.\n3. Switch between **Device type** and **Email app**.\n4. Choose a date range.\n\nUse this to decide whether to focus on mobile layouts.",
+  "notConfusedWith": [
+   "mail-preview-on-mobile"
+  ]
+ },
+ {
+  "id": "mail-change-sender-name",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Change the sender name",
+  "aliases": [
+   "update the from name",
+   "edit who emails come from",
+   "rename my sender"
+  ],
+  "body": "The sender name appears in the inbox before your subject line.\n\n1. Go to **Settings**, then **Sender details**.\n2. Select **Edit** beside **Sender name**.\n3. Type the new name.\n4. Select **Save**.\n\nNew campaigns use the updated name. Existing drafts keep the old one until you change it on the **Subject** step.",
+  "notConfusedWith": [
+   "mail-change-sender-address"
+  ]
+ },
+ {
+  "id": "mail-change-sender-address",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Change the sender email address",
+  "aliases": [
+   "update from email",
+   "use a different from address",
+   "switch my sending address"
+  ],
+  "body": "A new sender address must be verified before you can use it.\n\n1. Go to **Settings**, then **Sender details**.\n2. Select **Add sender address**.\n3. Enter the new email address.\n4. Select **Send verification** and open the email we send you.\n5. Select the confirmation button.\n\nYou can then set it as your default.",
+  "notConfusedWith": [
+   "mail-verify-sender-address",
+   "mail-change-sender-name"
+  ]
+ },
+ {
+  "id": "mail-verify-sender-address",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Verify a sender address that shows Pending",
+  "aliases": [
+   "verification email did not arrive",
+   "confirm my from address",
+   "address stuck on pending"
+  ],
+  "body": "A sender address stays pending until its owner confirms it.\n\n1. Go to **Settings**, then **Sender details**.\n2. Find the address marked **Pending**.\n3. Select **Resend verification**.\n4. Open the email and select **Confirm address**.\n\nCheck your spam or junk folder if it does not arrive within a few minutes.",
+  "notConfusedWith": [
+   "mail-change-sender-address"
+  ]
+ },
+ {
+  "id": "mail-set-reply-to-address",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Set a different reply-to address",
+  "aliases": [
+   "where replies go",
+   "change reply email",
+   "direct replies to support"
+  ],
+  "body": "The reply-to address receives responses, even if it differs from your sender address.\n\n1. Go to **Settings**, then **Sender details**.\n2. Select **Edit** beside **Reply-to address**.\n3. Enter the address.\n4. Select **Save**.\n\nUse a monitored inbox so customer replies are not missed. Changes apply to new campaigns straight away.",
+  "notConfusedWith": [
+   "mail-change-sender-address"
+  ]
+ },
+ {
+  "id": "mail-add-team-member",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Invite an employee to your account",
+  "aliases": [
+   "add a user",
+   "give a colleague access",
+   "invite a team member"
+  ],
+  "body": "Team members can work on campaigns with their own login.\n\n1. Go to **Settings**, then **Team**.\n2. Select **Invite member**.\n3. Enter their name and email address.\n4. Choose a role: **Admin**, **Editor** or **Viewer**.\n5. Select **Send invitation**.\n\nThe invitation expires after seven days.",
+  "notConfusedWith": [
+   "mail-remove-team-member"
+  ]
+ },
+ {
+  "id": "mail-remove-team-member",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Remove a team member",
+  "aliases": [
+   "delete a user",
+   "revoke access for someone who left",
+   "take an employee off my account"
+  ],
+  "body": "Remove access when someone leaves your organisation.\n\n1. Go to **Settings**, then **Team**.\n2. Find the person and select **More**.\n3. Select **Remove from account**.\n4. Select **Remove** to confirm.\n\nCampaigns they created stay on your account. The person loses access straight away, and any active sessions are signed out.",
+  "notConfusedWith": [
+   "mail-add-team-member"
+  ]
+ },
+ {
+  "id": "mail-change-billing-contact",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Change the billing contact",
+  "aliases": [
+   "update who receives invoices",
+   "new accounts contact email",
+   "edit billing email"
+  ],
+  "body": "The billing contact receives invoices and payment notices.\n\n1. Go to **Settings**, then **Billing**.\n2. Select **Billing contact**, then **Edit**.\n3. Enter the new name and email address.\n4. Select **Save**.\n\nOnly account owners and admins can change this, and a confirmation email is sent to the new contact so they know about the change.",
+  "notConfusedWith": [
+   "mail-download-invoice"
+  ]
+ },
+ {
+  "id": "mail-update-payment-card",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Update your payment card",
+  "aliases": [
+   "change credit card",
+   "new card details",
+   "replace expired card"
+  ],
+  "body": "Replace your card before it expires so your plan is not interrupted.\n\n1. Go to **Settings**, then **Billing**.\n2. Select **Payment method**.\n3. Select **Replace card**.\n4. Enter the new card details and select **Save card**.\n\nYour next invoice will be charged to the new card.",
+  "notConfusedWith": [
+   "mail-top-up-sms-credits"
+  ]
+ },
+ {
+  "id": "mail-download-invoice",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Download an invoice",
+  "aliases": [
+   "get a tax invoice",
+   "find a past receipt",
+   "save invoice as PDF"
+  ],
+  "body": "All past invoices are kept in your account.\n\n1. Go to **Settings**, then **Billing**.\n2. Select **Invoice history**.\n3. Find the invoice by date.\n4. Select **Download PDF**.\n\nInvoices show your plan and any SMS credit purchases. If you need invoices in a different name, change the billing contact first.",
+  "notConfusedWith": [
+   "mail-change-billing-contact"
+  ]
+ },
+ {
+  "id": "mail-enable-two-factor",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Turn on two-factor authentication",
+  "aliases": [
+   "add extra login security",
+   "set up 2FA",
+   "require a code at sign-in"
+  ],
+  "body": "Two-factor authentication adds a code to your sign-in.\n\n1. Select your profile picture, then **My account**.\n2. Select **Security**.\n3. Turn on **Two-factor authentication**.\n4. Scan the QR code with an authenticator app.\n5. Enter the six-digit code and select **Verify**.\n\nSave your backup codes in a safe place.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "mail-update-subscriber-email",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Update a subscriber's email address",
+  "aliases": [
+   "change a contact's email",
+   "fix a typo in a subscriber's address",
+   "edit someone's email"
+  ],
+  "body": "Correct addresses make sure your campaigns reach the right inbox.\n\n1. Go to **Subscribers** and search for the person.\n2. Select their name.\n3. Next to **Email**, select **Edit**.\n4. Enter the corrected address and select **Save**.\n\nTheir history and tags are kept. If the new address is on your unsubscribe list, they will not receive campaigns.",
+  "notConfusedWith": [
+   "mail-update-subscriber-mobile"
+  ]
+ },
+ {
+  "id": "mail-unsubscribe-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Unsubscribe a subscriber manually",
+  "aliases": [
+   "opt someone out",
+   "remove a person from marketing emails",
+   "someone asked me to stop emailing them"
+  ],
+  "body": "Use this when a person asks to stop receiving email and cannot use the link.\n\n1. Go to **Subscribers** and search for the person.\n2. Select their name.\n3. Select **Change status**, then **Unsubscribed**.\n4. Select **Save**.\n\nThey stay in your records but will not get marketing emails.",
+  "notConfusedWith": [
+   "mail-delete-subscriber"
+  ]
+ },
+ {
+  "id": "mail-tag-subscribers",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Add a tag to subscribers",
+  "aliases": [
+   "label contacts",
+   "group people with a tag",
+   "tag a customer"
+  ],
+  "body": "Tags group subscribers so you can target them later.\n\n1. Go to **Subscribers**.\n2. Tick the checkbox beside each person.\n3. Select **Actions**, then **Add tag**.\n4. Choose a tag or type a new one.\n5. Select **Apply**.\n\nYou can use tags later to build segments, start automations or filter reports.",
+  "notConfusedWith": [
+   "mail-add-campaign-tag"
+  ]
+ },
+ {
+  "id": "mail-export-subscribers-csv",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Export subscribers to CSV",
+  "aliases": [
+   "download my contact list",
+   "get my list as a spreadsheet",
+   "back up subscribers"
+  ],
+  "body": "Export your list to back it up or use it elsewhere.\n\n1. Go to **Subscribers**.\n2. Optionally use **Filters** or choose a **Segment**.\n3. Select **Export**, then **CSV**.\n4. Choose the fields and select **Download**.\n\nExports include each person's status, so unsubscribed people are marked clearly. Large lists may arrive by email.",
+  "notConfusedWith": [
+   "mail-export-campaign-recipients"
+  ]
+ },
+ {
+  "id": "mail-add-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Add a subscriber manually",
+  "aliases": [
+   "add a new contact",
+   "create a subscriber record",
+   "add someone to my list"
+  ],
+  "body": "Add people one at a time when they sign up outside your forms.\n\n1. Go to **Subscribers**.\n2. Select **Add subscriber**.\n3. Enter their email address, name and mobile number.\n4. Choose the list and tick **They have given permission**.\n5. Select **Save**.\n\nOnly add people who have agreed to receive your messages.",
+  "notConfusedWith": [
+   "mail-update-subscriber-email"
+  ]
+ },
+ {
+  "id": "mail-delete-subscriber",
+  "product": "Harbour Mail (email and SMS marketing)",
+  "status": "public",
+  "category": "Sender and account settings",
+  "title": "Delete a subscriber permanently",
+  "aliases": [
+   "erase a contact",
+   "remove a person's record",
+   "delete personal data"
+  ],
+  "body": "Deleting removes the person and their history for good.\n\n1. Go to **Subscribers** and search for the person.\n2. Select their name.\n3. Select **More**, then **Delete subscriber**.\n4. Type **DELETE** to confirm.\n\nIf you only want to stop emailing them, unsubscribe them instead.",
+  "notConfusedWith": [
+   "mail-unsubscribe-subscriber"
+  ]
+ }
+]

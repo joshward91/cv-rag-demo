@@ -1,0 +1,155 @@
+{
+ "generatedAt": "2026-10-06T02:34:00.116Z",
+ "queries": 304,
+ "k": 10,
+ "candidates": 48,
+ "noise": {
+  "topic": 0.3,
+  "passage": 0.6
+ },
+ "perArticle": 10,
+ "params": {
+  "M": 16,
+  "efConstruction": 200,
+  "efSearch": 64,
+  "seed": 42
+ },
+ "node": "v22.22.0",
+ "results": [
+  {
+   "passages": 292,
+   "synthetic": false,
+   "flatMicrosecondsPerQuery": 366,
+   "buildSeconds": 0.4,
+   "vectorBytes": 112128,
+   "graphBytes": 28428,
+   "sweep": [
+    {
+     "efSearch": 16,
+     "recallAt10": 0.9963815789473685,
+     "sameTopArticle": 1,
+     "sameTop3Articles": 1,
+     "microsecondsPerQuery": 218
+    },
+    {
+     "efSearch": 32,
+     "recallAt10": 0.999671052631579,
+     "sameTopArticle": 1,
+     "sameTop3Articles": 1,
+     "microsecondsPerQuery": 291
+    },
+    {
+     "efSearch": 64,
+     "recallAt10": 1,
+     "sameTopArticle": 1,
+     "sameTop3Articles": 1,
+     "microsecondsPerQuery": 385
+    },
+    {
+     "efSearch": 128,
+     "recallAt10": 1,
+     "sameTopArticle": 1,
+     "sameTop3Articles": 1,
+     "microsecondsPerQuery": 488
+    },
+    {
+     "efSearch": 256,
+     "recallAt10": 1,
+     "sameTopArticle": 1,
+     "sameTop3Articles": 1,
+     "microsecondsPerQuery": 640
+    }
+   ]
+  },
+  {
+   "passages": 10000,
+   "synthetic": true,
+   "flatMicrosecondsPerQuery": 6728,
+   "buildSeconds": 43.5,
+   "vectorBytes": 3840000,
+   "graphBytes": 1075704,
+   "sweep": [
+    {
+     "efSearch": 16,
+     "recallAt10": 0.8763157894736842,
+     "sameTopArticle": 0.9703947368421053,
+     "sameTop3Articles": 0.944078947368421,
+     "microsecondsPerQuery": 454
+    },
+    {
+     "efSearch": 32,
+     "recallAt10": 0.9322368421052631,
+     "sameTopArticle": 0.9703947368421053,
+     "sameTop3Articles": 0.944078947368421,
+     "microsecondsPerQuery": 633
+    },
+    {
+     "efSearch": 64,
+     "recallAt10": 0.9779605263157894,
+     "sameTopArticle": 0.9835526315789473,
+     "sameTop3Articles": 0.9638157894736842,
+     "microsecondsPerQuery": 1016
+    },
+    {
+     "efSearch": 128,
+     "recallAt10": 0.9911184210526316,
+     "sameTopArticle": 0.9901315789473685,
+     "sameTop3Articles": 0.9802631578947368,
+     "microsecondsPerQuery": 1895
+    },
+    {
+     "efSearch": 256,
+     "recallAt10": 0.9983552631578947,
+     "sameTopArticle": 0.9967105263157895,
+     "sameTop3Articles": 0.9967105263157895,
+     "microsecondsPerQuery": 3388
+    }
+   ]
+  },
+  {
+   "passages": 100000,
+   "synthetic": true,
+   "flatMicrosecondsPerQuery": 63831,
+   "buildSeconds": 604.9,
+   "vectorBytes": 38400000,
+   "graphBytes": 10730248,
+   "sweep": [
+    {
+     "efSearch": 16,
+     "recallAt10": 0.7273026315789474,
+     "sameTopArticle": 0.881578947368421,
+     "sameTop3Articles": 0.7828947368421053,
+     "microsecondsPerQuery": 645
+    },
+    {
+     "efSearch": 32,
+     "recallAt10": 0.8296052631578947,
+     "sameTopArticle": 0.881578947368421,
+     "sameTop3Articles": 0.7828947368421053,
+     "microsecondsPerQuery": 996
+    },
+    {
+     "efSearch": 64,
+     "recallAt10": 0.8963815789473685,
+     "sameTopArticle": 0.9111842105263158,
+     "sameTop3Articles": 0.8289473684210527,
+     "microsecondsPerQuery": 1388
+    },
+    {
+     "efSearch": 128,
+     "recallAt10": 0.9480263157894737,
+     "sameTopArticle": 0.9605263157894737,
+     "sameTop3Articles": 0.9078947368421053,
+     "microsecondsPerQuery": 2351
+    },
+    {
+     "efSearch": 256,
+     "recallAt10": 0.9802631578947368,
+     "sameTopArticle": 0.9901315789473685,
+     "sameTop3Articles": 0.9703947368421053,
+     "microsecondsPerQuery": 4451
+    }
+   ]
+  }
+ ]
+}

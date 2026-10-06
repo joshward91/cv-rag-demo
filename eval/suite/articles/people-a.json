@@ -1,0 +1,1684 @@
+[
+ {
+  "id": "people-update-employee-phone-number",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Update an employee's phone number",
+  "aliases": [
+   "change someone's mobile number",
+   "edit employee phone",
+   "new phone number for a staff member",
+   "fix wrong phone number on profile"
+  ],
+  "body": "Keep contact details current so managers can reach their teams.\n\n1. Go to **People** and select the employee's name.\n2. Open the **Personal** tab.\n3. Select **Edit** next to **Contact details**.\n4. Enter the new number in **Mobile phone**.\n5. Select **Save changes**.\n\nThe change is recorded in the profile's history.",
+  "notConfusedWith": [
+   "people-update-employee-email",
+   "people-update-emergency-contact-phone"
+  ]
+ },
+ {
+  "id": "people-update-employee-email",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Update an employee's email address",
+  "aliases": [
+   "change work email",
+   "edit staff email",
+   "employee's email bounced",
+   "switch to a new email address"
+  ],
+  "body": "1. Go to **People** and open the employee's profile.\n2. Select the **Personal** tab, then **Edit** next to **Contact details**.\n3. Choose **Work email** or **Personal email**.\n4. Type the new address and select **Save changes**.\n\nIf you change the work email, the employee uses the new address the next time they sign in.",
+  "notConfusedWith": [
+   "people-update-employee-phone-number",
+   "people-update-emergency-contact-email"
+  ]
+ },
+ {
+  "id": "people-update-home-address",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Update an employee's home address",
+  "aliases": [
+   "change residential address",
+   "employee moved house",
+   "edit postal address on profile",
+   "new address for payslips"
+  ],
+  "body": "A correct address matters for payslips and tax statements.\n\n1. Go to **People** and select the employee.\n2. Open the **Personal** tab.\n3. Select **Edit** beside **Home address**.\n4. Fill in **Street**, **Suburb**, **State** and **Postcode**.\n5. Select **Save changes**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-add-emergency-contact-address"
+  ]
+ },
+ {
+  "id": "people-change-preferred-name",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Change an employee's preferred name",
+  "aliases": [
+   "add nickname",
+   "use a different first name",
+   "display name instead of legal name",
+   "edit known as name"
+  ],
+  "body": "The preferred name appears in the directory and org chart. The legal name stays on payroll records.\n\n1. Go to **People** and open the profile.\n2. Select the **Personal** tab, then **Edit** next to **Name**.\n3. Type a name in **Preferred name**.\n4. Select **Save changes**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-upload-profile-photo",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Upload an employee's profile photo",
+  "aliases": [
+   "add a picture to a profile",
+   "change staff photo",
+   "set avatar for employee",
+   "replace headshot"
+  ],
+  "body": "1. Go to **People** and select the employee.\n2. Select the circle at the top of the profile.\n3. Choose **Upload photo** and pick a JPG or PNG file under 5 MB.\n4. Drag the frame to crop the image.\n5. Select **Save photo**.\n\nEmployees can also change their own photo from **My profile**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-add-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Add a new employee",
+  "aliases": [
+   "create an employee record",
+   "enter a new staff member",
+   "add person to the system",
+   "new starter profile"
+  ],
+  "body": "Use this when you need a profile without starting a full onboarding checklist.\n\n1. Go to **People** and select **Add employee**.\n2. Enter the **First name**, **Last name** and **Work email**.\n3. Choose a **Department**, **Job title** and **Start date**.\n4. Select **Employment type**.\n5. Select **Create employee**.\n\nThe new profile appears in the **People** list with the status **Active**.",
+  "notConfusedWith": [
+   "people-start-onboarding-for-a-new-hire",
+   "people-reactivate-former-employee"
+  ]
+ },
+ {
+  "id": "people-delete-employee-record",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Delete an employee record",
+  "aliases": [
+   "remove an employee permanently",
+   "erase a staff profile",
+   "delete duplicate employee",
+   "get rid of test employee"
+  ],
+  "body": "Deleting removes the profile and its documents for good. For people who have left, use offboarding instead.\n\n1. Go to **People** and open the profile.\n2. Select **More actions**, then **Delete employee**.\n3. Read the warning and type the employee's full name to confirm.\n4. Select **Delete permanently**.\n\nEmployees with payroll history can't be deleted. Archive them instead.",
+  "notConfusedWith": [
+   "people-start-offboarding",
+   "people-merge-duplicate-employee-profiles"
+  ]
+ },
+ {
+  "id": "people-export-employee-list-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Export the employee list to CSV",
+  "aliases": [
+   "download all staff as spreadsheet",
+   "employee list csv",
+   "export people to Excel",
+   "get a list of employees"
+  ],
+  "body": "1. Go to **People**.\n2. Use **Filters** to narrow the list if needed, for example by **Department** or **Status**.\n3. Select **Export**, then **CSV**.\n4. Tick the columns you want, such as **Name**, **Email** and **Start date**.\n5. Select **Download**.\n\nThe file saves to your browser's download folder.",
+  "notConfusedWith": [
+   "people-export-emergency-contacts-csv",
+   "people-export-department-list-csv"
+  ]
+ },
+ {
+  "id": "people-add-note-to-employee-profile",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Add a note to an employee's profile",
+  "aliases": [
+   "write a note on a staff member",
+   "log a conversation",
+   "record a comment about an employee",
+   "private HR note"
+  ],
+  "body": "Notes are private to HR admins and the employee's manager unless you change the visibility.\n\n1. Go to **People** and open the employee.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note and choose **Visible to**: **HR only** or **HR and manager**.\n5. Select **Save note**.",
+  "notConfusedWith": [
+   "people-add-note-to-onboarding-task",
+   "people-add-note-to-emergency-contact"
+  ]
+ },
+ {
+  "id": "people-change-employment-status",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Change an employee's status",
+  "aliases": [
+   "set employee to on leave",
+   "mark as inactive",
+   "put staff on unpaid leave",
+   "update employee status"
+  ],
+  "body": "Statuses include **Active**, **On leave** and **Inactive**.\n\n1. Go to **People** and open the profile.\n2. Select the **Job** tab.\n3. Select **Edit** next to **Status**.\n4. Pick the new status and enter the **Effective date**.\n5. Select **Save changes**.\n\nLeavers should be handled through offboarding rather than set to **Inactive** by hand.",
+  "notConfusedWith": [
+   "people-reactivate-former-employee",
+   "people-start-offboarding"
+  ]
+ },
+ {
+  "id": "people-change-job-title",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Change an employee's job title",
+  "aliases": [
+   "promotion title update",
+   "edit position name",
+   "rename role for a person",
+   "new designation"
+  ],
+  "body": "1. Go to **People** and select the employee.\n2. Open the **Job** tab.\n3. Select **Edit** next to **Job title**.\n4. Type the new title and set the **Effective date**.\n5. Select **Save changes**.\n\nPast titles stay visible under **Job history**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-change-employment-type"
+  ]
+ },
+ {
+  "id": "people-update-bank-details",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Update an employee's bank details",
+  "aliases": [
+   "change bank account for pay",
+   "new BSB and account number",
+   "edit payment account",
+   "wrong bank account on payslip"
+  ],
+  "body": "Bank details control where wages are paid, so check them carefully.\n\n1. Go to **People** and open the employee.\n2. Select the **Pay** tab.\n3. Select **Edit** beside **Bank account**.\n4. Enter the **BSB**, **Account number** and **Account name**.\n5. Select **Save changes**.\n\nChanges made within one day of a pay run apply to the next pay run.",
+  "notConfusedWith": [
+   "people-update-tax-details"
+  ]
+ },
+ {
+  "id": "people-update-tax-details",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Update an employee's tax details",
+  "aliases": [
+   "change tax file number",
+   "edit tax declaration",
+   "tax-free threshold change",
+   "fix TFN"
+  ],
+  "body": "1. Go to **People** and open the profile.\n2. Select the **Pay** tab.\n3. Select **Edit** next to **Tax details**.\n4. Update the **Tax file number** or **Tax-free threshold** answer.\n5. Select **Save changes**.\n\nOnly HR admins with payroll access can see this section.",
+  "notConfusedWith": [
+   "people-update-bank-details"
+  ]
+ },
+ {
+  "id": "people-search-employee-directory",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Search for an employee",
+  "aliases": [
+   "find a person",
+   "look up staff by name",
+   "locate colleague",
+   "directory search"
+  ],
+  "body": "1. Select the search box at the top of any page.\n2. Type a name, email address or job title.\n3. Choose the person from the results.\n4. To narrow the search, select **People** and use **Filters**.\n\nSearch also matches preferred names and former names.",
+  "notConfusedWith": [
+   "people-search-org-chart-for-an-employee"
+  ]
+ },
+ {
+  "id": "people-merge-duplicate-employee-profiles",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Merge duplicate employee profiles",
+  "aliases": [
+   "combine two records",
+   "same person entered twice",
+   "join duplicate staff profiles",
+   "clean up duplicates"
+  ],
+  "body": "Merging keeps one profile and moves documents, notes and history from the other.\n\n1. Go to **People** and select both duplicate profiles using the tick boxes.\n2. Select **Merge**.\n3. Choose the profile to keep as the **Primary record**.\n4. Review any conflicting fields and pick the correct value for each.\n5. Select **Merge profiles**.\n\nMerging can't be undone.",
+  "notConfusedWith": [
+   "people-delete-employee-record"
+  ]
+ },
+ {
+  "id": "people-add-pronouns-to-profile",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Add pronouns to an employee's profile",
+  "aliases": [
+   "set preferred pronouns",
+   "he she they on profile",
+   "edit pronouns field",
+   "gender pronouns directory"
+  ],
+  "body": "1. Go to **People** and open the profile.\n2. Select the **Personal** tab, then **Edit** next to **Name**.\n3. Choose from the **Pronouns** list or select **Other** to type your own.\n4. Select **Save changes**.\n\nPronouns show next to the name in the directory unless the employee hides them.",
+  "notConfusedWith": [
+   "people-change-preferred-name"
+  ]
+ },
+ {
+  "id": "people-change-employment-type",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Change an employee's employment type",
+  "aliases": [
+   "full-time to part-time",
+   "convert casual to permanent",
+   "update contract type",
+   "change hours category"
+  ],
+  "body": "Use this when someone's arrangement changes, such as moving from casual to permanent.\n\n1. Go to **People** and open the employee.\n2. Select the **Job** tab.\n3. Select **Edit** next to **Employment type**.\n4. Choose **Full-time**, **Part-time**, **Casual** or **Contractor**.\n5. Enter the **Effective date** and select **Save changes**.",
+  "notConfusedWith": [
+   "people-change-job-title"
+  ]
+ },
+ {
+  "id": "people-view-profile-change-history",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "View an employee's profile change history",
+  "aliases": [
+   "see who edited a record",
+   "audit trail for a profile",
+   "check past changes",
+   "who changed this field"
+  ],
+  "body": "1. Go to **People** and open the profile.\n2. Select **More actions**, then **View history**.\n3. Filter by **Date range** or **Field** if you need to.\n4. Select an entry to see the old value, the new value and who made the change.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-set-profile-field-visibility",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Choose who can see an employee's personal details",
+  "aliases": [
+   "hide phone number from colleagues",
+   "privacy settings on profile",
+   "restrict directory info",
+   "make field private"
+  ],
+  "body": "You control which fields show in the company directory.\n\n1. Go to **Settings**, then **Employee profiles**.\n2. Select **Directory privacy**.\n3. Switch each field to **Everyone**, **Managers only** or **HR only**.\n4. Select **Save changes**.\n\nThe changes apply to all employees straight away.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-reactivate-former-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Employee profiles",
+  "title": "Reactivate a former employee",
+  "aliases": [
+   "rehire a leaver",
+   "bring back an ex-employee",
+   "restore archived staff",
+   "returning employee"
+  ],
+  "body": "Rehiring restores the old profile, so history and documents are kept.\n\n1. Go to **People** and select the **Former employees** filter.\n2. Open the person's profile.\n3. Select **Rehire**.\n4. Enter the new **Start date**, **Job title** and **Department**.\n5. Select **Reactivate employee**.",
+  "notConfusedWith": [
+   "people-add-employee",
+   "people-reverse-an-offboarding"
+  ]
+ },
+ {
+  "id": "people-create-onboarding-template",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Create an onboarding checklist template",
+  "aliases": [
+   "build a new starter checklist",
+   "set up onboarding tasks",
+   "make a template for new hires",
+   "onboarding plan"
+  ],
+  "body": "1. Go to **Onboarding**, then **Templates**.\n2. Select **New template** and enter a name, such as \"Sales starter\".\n3. Select **Add task** for each step and set a **Due date** relative to the start date.\n4. Choose an **Owner** for each task.\n5. Select **Save template**.",
+  "notConfusedWith": [
+   "people-create-offboarding-template"
+  ]
+ },
+ {
+  "id": "people-start-onboarding-for-a-new-hire",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Start onboarding for a new hire",
+  "aliases": [
+   "begin onboarding",
+   "kick off new starter process",
+   "onboard a new employee",
+   "launch checklist for new person"
+  ],
+  "body": "1. Go to **Onboarding** and select **Start onboarding**.\n2. Choose the employee, or select **Add employee** if they don't have a profile yet.\n3. Pick a **Template**.\n4. Confirm the **Start date**.\n5. Select **Start**.\n\nTask owners are notified by email straight away.",
+  "notConfusedWith": [
+   "people-add-employee"
+  ]
+ },
+ {
+  "id": "people-assign-onboarding-task",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Assign an onboarding task to someone else",
+  "aliases": [
+   "change task owner",
+   "give a checklist task to IT",
+   "reassign onboarding step",
+   "delegate onboarding task"
+  ],
+  "body": "1. Go to **Onboarding** and open the new hire's checklist.\n2. Select the task.\n3. Choose a new person in **Owner**.\n4. Select **Save**.\n\nThe new owner receives an email with the task details and due date.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-complete-onboarding-task",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Mark an onboarding task as complete",
+  "aliases": [
+   "tick off checklist item",
+   "finish onboarding step",
+   "close a new starter task",
+   "update task status to done"
+  ],
+  "body": "1. Go to **Onboarding** and open the checklist.\n2. Find the task.\n3. Tick the box beside it, or open it and set **Status** to **Done**.\n4. Add a short comment if you wish and select **Save**.\n\nProgress bars update immediately.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-add-note-to-onboarding-task"
+  ]
+ },
+ {
+  "id": "people-send-welcome-email",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Send a welcome email to a new hire",
+  "aliases": [
+   "email the new starter",
+   "invite employee to sign in",
+   "send first day instructions",
+   "welcome message before start date"
+  ],
+  "body": "The welcome email includes a sign-in link and your first-day details.\n\n1. Go to **Onboarding** and open the new hire's checklist.\n2. Select **Welcome email**.\n3. Edit the message if needed and check the **Send date**.\n4. Select **Send now** or **Schedule**.",
+  "notConfusedWith": [
+   "people-resend-onboarding-invitation"
+  ]
+ },
+ {
+  "id": "people-change-onboarding-start-date",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Change a new hire's start date",
+  "aliases": [
+   "move start date",
+   "delay starting day",
+   "reschedule first day",
+   "edit commencement date"
+  ],
+  "body": "1. Go to **Onboarding** and open the checklist.\n2. Select **Edit** next to **Start date**.\n3. Choose the new date.\n4. Tick **Adjust task due dates** to move every task with it.\n5. Select **Save changes**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-add-task-to-onboarding-checklist",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Add a task to a live onboarding checklist",
+  "aliases": [
+   "extra task for new starter",
+   "add step to checklist",
+   "new onboarding item",
+   "custom task for one employee"
+  ],
+  "body": "Changes affect this employee only, not the template.\n\n1. Go to **Onboarding** and open the checklist.\n2. Select **Add task**.\n3. Enter a **Task name**, **Owner** and **Due date**.\n4. Select **Add**.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-create-onboarding-template"
+  ]
+ },
+ {
+  "id": "people-assign-onboarding-buddy",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Assign a buddy to a new hire",
+  "aliases": [
+   "pair new starter with a mentor",
+   "set a workplace buddy",
+   "choose onboarding buddy",
+   "assign a mentor"
+  ],
+  "body": "1. Go to **Onboarding** and open the checklist.\n2. Select **Buddy** in the right-hand panel.\n3. Search for a colleague and select their name.\n4. Select **Assign buddy**.\n\nThe buddy gets an email with the new hire's name and first-day plans.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-resend-onboarding-invitation",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Resend an onboarding invitation",
+  "aliases": [
+   "new hire didn't get the email",
+   "send sign-in link again",
+   "invite expired",
+   "resend welcome link"
+  ],
+  "body": "1. Go to **Onboarding** and open the new hire's checklist.\n2. Select **More actions**, then **Resend invitation**.\n3. Check the email address shown and edit it if it's wrong.\n4. Select **Send**.\n\nInvitation links stay valid for 7 days.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-send-welcome-email"
+  ]
+ },
+ {
+  "id": "people-cancel-onboarding",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Cancel an onboarding",
+  "aliases": [
+   "new hire isn't starting",
+   "stop onboarding process",
+   "withdraw an offer",
+   "remove new starter checklist"
+  ],
+  "body": "Cancelling stops reminders and removes the checklist. The employee profile is kept.\n\n1. Go to **Onboarding** and open the checklist.\n2. Select **More actions**, then **Cancel onboarding**.\n3. Choose a reason from the **Reason** list.\n4. Select **Confirm cancellation**.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-reverse-an-offboarding"
+  ]
+ },
+ {
+  "id": "people-export-onboarding-progress-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Export onboarding progress to CSV",
+  "aliases": [
+   "download onboarding report",
+   "spreadsheet of new starter tasks",
+   "onboarding status export",
+   "csv of checklists"
+  ],
+  "body": "1. Go to **Onboarding**.\n2. Select the **Progress** view.\n3. Filter by **Start date** or **Department**.\n4. Select **Export**, then **CSV**.\n\nEach row shows one task, its owner and its status.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-export-employee-list-csv"
+  ]
+ },
+ {
+  "id": "people-add-note-to-onboarding-task",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Add a note to an onboarding task",
+  "aliases": [
+   "comment on a checklist item",
+   "leave a message on a task",
+   "log progress on task",
+   "write a task note"
+  ],
+  "body": "1. Go to **Onboarding** and open the checklist.\n2. Select the task.\n3. Type your message in the **Comments** box.\n4. Select **Post**.\n\nEveryone who can see the checklist can read the comment.\n\nYou need the **HR admin** role to do this.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-profile",
+   "people-complete-onboarding-task"
+  ]
+ },
+ {
+  "id": "people-start-offboarding",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Start offboarding for a leaver",
+  "aliases": [
+   "employee is leaving",
+   "begin exit process",
+   "process a resignation",
+   "offboard a staff member"
+  ],
+  "body": "1. Go to **Offboarding** and select **Start offboarding**.\n2. Choose the employee.\n3. Select the **Reason for leaving**.\n4. Enter the **Last working day**.\n5. Pick an offboarding **Template** and select **Start**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-set-last-working-day",
+   "people-start-onboarding-for-a-new-hire"
+  ]
+ },
+ {
+  "id": "people-set-last-working-day",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Change a leaver's last working day",
+  "aliases": [
+   "extend notice period",
+   "update final day",
+   "edit termination date",
+   "move leaving date"
+  ],
+  "body": "1. Go to **Offboarding** and open the leaver's checklist.\n2. Select **Edit** next to **Last working day**.\n3. Choose the new date.\n4. Select **Save changes**.\n\nTask due dates linked to the last day move automatically.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-change-onboarding-start-date"
+  ]
+ },
+ {
+  "id": "people-record-reason-for-leaving",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Record an employee's reason for leaving",
+  "aliases": [
+   "add resignation reason",
+   "why did they leave",
+   "set exit reason",
+   "turnover reason"
+  ],
+  "body": "1. Go to **Offboarding** and open the checklist.\n2. Select **Edit** beside **Reason for leaving**.\n3. Choose a category, such as **Resignation**, **Redundancy** or **End of contract**.\n4. Add details in **Comments** if needed.\n5. Select **Save**.\n\nThese reasons feed the **Turnover** report.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-create-offboarding-template",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Create an offboarding checklist template",
+  "aliases": [
+   "build exit checklist",
+   "leaver tasks template",
+   "set up termination steps",
+   "offboarding plan"
+  ],
+  "body": "1. Go to **Offboarding**, then **Templates**.\n2. Select **New template** and enter a name.\n3. Select **Add task** for items like \"Return laptop\" or \"Final pay\".\n4. Set an **Owner** and a **Due date** for each task.\n5. Select **Save template**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-create-onboarding-template"
+  ]
+ },
+ {
+  "id": "people-remove-leaver-system-access",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Remove a leaver's system access",
+  "aliases": [
+   "disable account on last day",
+   "cut off employee login",
+   "revoke sign-in",
+   "deactivate leaver account"
+  ],
+  "body": "Harbour People can switch off the employee's sign-in on their last day.\n\n1. Go to **Offboarding** and open the leaver's checklist.\n2. Select **Access**.\n3. Choose **Disable sign-in on last working day**, or **Disable now**.\n4. Select **Save**.\n\nYou need the **HR admin** role to do this.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-schedule-exit-interview",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Schedule an exit interview",
+  "aliases": [
+   "book leaving interview",
+   "set up exit meeting",
+   "arrange exit chat",
+   "exit interview date"
+  ],
+  "body": "1. Go to **Offboarding** and open the checklist.\n2. Select the **Exit interview** task.\n3. Choose a **Date**, **Time** and **Interviewer**.\n4. Select **Send invitation**.\n\nThe interviewer and the employee both receive a calendar invite.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-flag-final-pay",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Flag a leaver for final pay",
+  "aliases": [
+   "final pay run",
+   "last pay for departing staff",
+   "terminate payroll for employee",
+   "payout leave balance"
+  ],
+  "body": "Flagging makes sure payroll includes accrued leave and any outstanding pay.\n\n1. Go to **Offboarding** and open the leaver's checklist.\n2. Select the **Final pay** task.\n3. Tick **Pay out leave balance** if it applies.\n4. Select **Send to payroll**.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-reverse-an-offboarding",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Onboarding and offboarding",
+  "title": "Reverse an offboarding",
+  "aliases": [
+   "employee changed their mind",
+   "withdraw resignation",
+   "cancel leaver process",
+   "undo termination"
+  ],
+  "body": "1. Go to **Offboarding** and open the leaver's checklist.\n2. Select **More actions**, then **Cancel offboarding**.\n3. Choose the reason.\n4. Select **Confirm**.\n\nThe employee's status goes back to **Active**.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-cancel-onboarding",
+   "people-reactivate-former-employee"
+  ]
+ },
+ {
+  "id": "people-upload-document-to-profile",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Upload a document to an employee's profile",
+  "aliases": [
+   "attach a file to a staff record",
+   "add contract to profile",
+   "save a PDF against employee",
+   "store employee paperwork"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Documents** tab.\n3. Select **Upload document**.\n4. Choose the file, then pick a **Category** such as **Contract** or **Identification**.\n5. Select **Upload**.\n\nFiles can be up to 25 MB.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-bulk-upload-documents"
+  ]
+ },
+ {
+  "id": "people-delete-employee-document",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Delete a document",
+  "aliases": [
+   "remove a file from profile",
+   "get rid of an uploaded file",
+   "erase wrong document",
+   "delete attachment"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Documents** tab.\n3. Select the three dots beside the file, then **Delete**.\n4. Confirm by selecting **Delete document**.\n\nDeleted documents stay in the **Recycle bin** for 30 days.\n\nYou need the **HR admin** role to do this.",
+  "notConfusedWith": [
+   "people-delete-employee-record"
+  ]
+ },
+ {
+  "id": "people-download-employee-document",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Download a document",
+  "aliases": [
+   "save a copy of a file",
+   "get employee contract as PDF",
+   "export document",
+   "open stored paperwork"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Documents** tab.\n3. Find the file, using **Search** if needed.\n4. Select the three dots, then **Download**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-rename-document",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Rename a document",
+  "aliases": [
+   "change file name",
+   "edit document title",
+   "fix a typo in a document name",
+   "relabel a file"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the three dots beside the file.\n3. Choose **Rename**.\n4. Type the new name and select **Save**.\n\nRenaming doesn't change the file itself.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-set-document-expiry-date",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Set an expiry date on a document",
+  "aliases": [
+   "track visa expiry",
+   "licence expires",
+   "add renewal date to file",
+   "document end date"
+  ],
+  "body": "Expiry dates let Harbour People remind you before something lapses, such as a working visa.\n\n1. Open the **Documents** tab on the employee's profile.\n2. Select the three dots beside the document, then **Edit details**.\n3. Enter a date in **Expires on**.\n4. Select **Save**.",
+  "notConfusedWith": [
+   "people-set-expiring-document-reminders"
+  ]
+ },
+ {
+  "id": "people-request-document-from-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Request a document from an employee",
+  "aliases": [
+   "ask staff to upload a file",
+   "chase missing paperwork",
+   "get a signed form from new hire",
+   "document request"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Documents** tab, then **Request document**.\n3. Choose a **Category** and write a short message.\n4. Set a **Due date**.\n5. Select **Send request**.\n\nThe employee uploads the file from **My documents**.",
+  "notConfusedWith": [
+   "people-upload-document-to-profile"
+  ]
+ },
+ {
+  "id": "people-send-document-for-esignature",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Send a document for e-signature",
+  "aliases": [
+   "get contract signed online",
+   "ask employee to sign",
+   "electronic signature request",
+   "sign offer letter"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the document, then **Request signature**.\n3. Add any extra signers, such as the manager.\n4. Select **Send**.\n\nSigned copies are saved to the profile automatically.\n\nYou need the **HR admin** role to do this.",
+  "notConfusedWith": [
+   "people-generate-employment-letter"
+  ]
+ },
+ {
+  "id": "people-create-document-template",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Create a document template",
+  "aliases": [
+   "make a letter template",
+   "reusable contract template",
+   "save a standard document",
+   "build a form template"
+  ],
+  "body": "Templates use merge fields such as {{first_name}} so each document is filled in for you.\n\n1. Go to **Documents**, then **Templates**.\n2. Select **New template**.\n3. Name the template and choose a **Category**.\n4. Write or paste the text and insert merge fields with **Add field**.\n5. Select **Save template**.",
+  "notConfusedWith": [
+   "people-generate-employment-letter"
+  ]
+ },
+ {
+  "id": "people-add-document-category",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Add a document category",
+  "aliases": [
+   "create new folder type",
+   "new document type",
+   "custom category",
+   "add file label"
+  ],
+  "body": "1. Go to **Settings**, then **Documents**.\n2. Select **Categories**.\n3. Select **Add category**.\n4. Enter a name and choose who can see it: **HR only** or **Employee and HR**.\n5. Select **Save**.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-restrict-document-to-hr"
+  ]
+ },
+ {
+  "id": "people-export-document-list-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Export a list of documents to CSV",
+  "aliases": [
+   "download document register",
+   "spreadsheet of uploaded files",
+   "document report csv",
+   "list all files"
+  ],
+  "body": "1. Go to **Documents**.\n2. Choose a **Category** or **Date range** to filter the list.\n3. Select **Export**, then **CSV**.\n4. Select **Download**.\n\nThe export lists file names, owners and expiry dates, not the files themselves.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-export-employee-list-csv"
+  ]
+ },
+ {
+  "id": "people-add-note-to-document",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Add a note to a document",
+  "aliases": [
+   "comment on a file",
+   "write a note against a document",
+   "annotate an uploaded file",
+   "leave a reviewer comment"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the document name.\n3. In the side panel, select **Add note**.\n4. Type your note and select **Save**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-profile"
+  ]
+ },
+ {
+  "id": "people-upload-new-document-version",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Replace a document with a new version",
+  "aliases": [
+   "update a contract file",
+   "upload revised copy",
+   "overwrite an old file",
+   "new version of a document"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the three dots beside the file, then **Upload new version**.\n3. Choose the updated file.\n4. Add a **Version note** and select **Upload**.\n\nThe earlier version is kept in the version history.",
+  "notConfusedWith": [
+   "people-view-document-version-history"
+  ]
+ },
+ {
+  "id": "people-view-document-version-history",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "View a document's version history",
+  "aliases": [
+   "see old versions of a file",
+   "previous copies",
+   "who uploaded this",
+   "restore earlier version"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the document name.\n3. Select **Version history**.\n4. Select a version to preview it, or choose **Restore** to make it current.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-upload-new-document-version"
+  ]
+ },
+ {
+  "id": "people-restrict-document-to-hr",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Make a document visible to HR only",
+  "aliases": [
+   "hide a file from employee",
+   "confidential document",
+   "restrict access to a file",
+   "private paperwork"
+  ],
+  "body": "1. Open the **Documents** tab on the employee's profile.\n2. Select the three dots beside the file, then **Edit details**.\n3. Change **Visible to** to **HR only**.\n4. Select **Save**.\n\nThe employee and their manager will no longer see the file.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-add-document-category"
+  ]
+ },
+ {
+  "id": "people-bulk-upload-documents",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Upload several documents at once",
+  "aliases": [
+   "import many files",
+   "drag and drop multiple documents",
+   "batch upload contracts",
+   "upload in bulk"
+  ],
+  "body": "1. Go to **Documents** and select **Bulk upload**.\n2. Drag your files into the box.\n3. Match each file to an employee using the **Employee** column.\n4. Choose a **Category** and select **Upload all**.\n\nName each file with the employee's number to match automatically.",
+  "notConfusedWith": [
+   "people-upload-document-to-profile"
+  ]
+ },
+ {
+  "id": "people-share-company-policy",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Share a company policy with all employees",
+  "aliases": [
+   "publish a policy document",
+   "send handbook to staff",
+   "distribute a policy",
+   "post a company-wide document"
+  ],
+  "body": "1. Go to **Documents**, then **Company documents**.\n2. Select **Add policy** and upload the file.\n3. Choose who to share it with: **All employees** or a **Department**.\n4. Select **Publish**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-track-policy-acknowledgements"
+  ]
+ },
+ {
+  "id": "people-track-policy-acknowledgements",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Check who has acknowledged a policy",
+  "aliases": [
+   "who read the policy",
+   "policy sign-off report",
+   "see outstanding acknowledgements",
+   "chase staff to accept policy"
+  ],
+  "body": "1. Go to **Documents**, then **Company documents**.\n2. Open the policy.\n3. Select the **Acknowledgements** tab.\n4. Filter by **Not yet acknowledged**.\n5. Select **Send reminder** to nudge those employees.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-share-company-policy"
+  ]
+ },
+ {
+  "id": "people-set-expiring-document-reminders",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Set up reminders for expiring documents",
+  "aliases": [
+   "get alerts before documents expire",
+   "notify HR about renewals",
+   "visa expiry alert",
+   "licence reminder emails"
+  ],
+  "body": "1. Go to **Settings**, then **Documents**.\n2. Select **Expiry reminders**.\n3. Choose how many days before expiry to send a reminder, such as 30 and 7.\n4. Pick who receives it: **HR admins**, **Manager** or **Employee**.\n5. Select **Save**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-set-document-expiry-date"
+  ]
+ },
+ {
+  "id": "people-approve-uploaded-document",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Approve a document uploaded by an employee",
+  "aliases": [
+   "review employee upload",
+   "accept submitted file",
+   "mark document as verified",
+   "reject a document"
+  ],
+  "body": "Employee uploads wait for review before they count as complete.\n\n1. Go to **Documents**, then **Pending review**.\n2. Open the document to check it.\n3. Select **Approve**, or **Reject** and add a reason.\n4. The status changes to **Approved** and the employee is notified.",
+  "notConfusedWith": [
+   "people-request-document-from-employee"
+  ]
+ },
+ {
+  "id": "people-generate-employment-letter",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Documents",
+  "title": "Generate an employment letter",
+  "aliases": [
+   "create employment verification letter",
+   "reference letter for staff",
+   "produce a letter from template",
+   "proof of employment"
+  ],
+  "body": "1. Open the employee's profile and select the **Documents** tab.\n2. Select **Generate document**.\n3. Choose a template, such as **Employment verification**.\n4. Preview the letter and select **Save to profile**.\n\nYou can also download the letter as a PDF.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-send-document-for-esignature",
+   "people-create-document-template"
+  ]
+ },
+ {
+  "id": "people-create-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Create a department",
+  "aliases": [
+   "add a new team",
+   "set up department",
+   "new business unit",
+   "add a division"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Select **Add department**.\n3. Enter a **Name** and, if you like, a **Code**.\n4. Choose a **Department head**.\n5. Select **Save**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-create-sub-department"
+  ]
+ },
+ {
+  "id": "people-rename-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Rename a department",
+  "aliases": [
+   "change team name",
+   "edit department title",
+   "department has a new name",
+   "fix department spelling"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Select the department.\n3. Select **Edit** and change the **Name**.\n4. Select **Save**.\n\nEmployee profiles pick up the new name straight away.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-delete-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Delete a department",
+  "aliases": [
+   "remove a team",
+   "get rid of an empty department",
+   "delete a business unit",
+   "close a department"
+  ],
+  "body": "A department can only be deleted when it has no employees.\n\n1. Go to **Org chart**, then **Departments**.\n2. Open the department.\n3. Select **More actions**, then **Delete department**.\n4. Confirm by selecting **Delete**.\n\nIf it still has people, move them first or use **Deactivate department**.",
+  "notConfusedWith": [
+   "people-deactivate-department",
+   "people-merge-departments"
+  ]
+ },
+ {
+  "id": "people-assign-employee-to-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Assign an employee to a department",
+  "aliases": [
+   "move someone to another team",
+   "transfer staff",
+   "change employee's department",
+   "put person in a department"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Job** tab, then **Edit** next to **Department**.\n3. Choose the new department.\n4. Enter the **Effective date** and select **Save changes**.\n\nTo move many people at once, use **Bulk actions** in the **People** list.",
+  "notConfusedWith": [
+   "people-change-employees-manager"
+  ]
+ },
+ {
+  "id": "people-change-employees-manager",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Change an employee's manager",
+  "aliases": [
+   "new reporting line",
+   "update who someone reports to",
+   "reassign line manager",
+   "edit supervisor"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Job** tab.\n3. Select **Edit** next to **Reports to**.\n4. Search for the new manager and select their name.\n5. Set an **Effective date** and select **Save changes**.\n\nThe org chart updates for everyone straight away.",
+  "notConfusedWith": [
+   "people-assign-employee-to-department",
+   "people-set-department-head"
+  ]
+ },
+ {
+  "id": "people-set-department-head",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Set a department head",
+  "aliases": [
+   "choose team leader",
+   "change head of department",
+   "appoint department lead",
+   "who runs this department"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Open the department.\n3. Select **Edit** next to **Department head**.\n4. Search for an employee and select them.\n5. Select **Save**.\n\nDepartment heads can approve leave requests for their team.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-change-employees-manager"
+  ]
+ },
+ {
+  "id": "people-merge-departments",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Merge two departments",
+  "aliases": [
+   "combine teams",
+   "join departments",
+   "consolidate business units",
+   "fold one team into another"
+  ],
+  "body": "Merging moves all employees and sub-departments into one department.\n\n1. Go to **Org chart**, then **Departments**.\n2. Select the department you want to remove.\n3. Select **More actions**, then **Merge into**.\n4. Choose the department to keep.\n5. Select **Merge departments**.\n\nYou need the **HR admin** role to do this.",
+  "notConfusedWith": [
+   "people-delete-department"
+  ]
+ },
+ {
+  "id": "people-view-org-chart",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "View the org chart",
+  "aliases": [
+   "see company structure",
+   "who reports to whom",
+   "open the organisation chart",
+   "reporting lines diagram"
+  ],
+  "body": "1. Select **Org chart** in the main menu.\n2. Use the **Zoom** controls or drag the chart to move around.\n3. Select a person's box to see their name, title and email.\n4. Select the arrow on a box to show or hide their direct reports.",
+  "notConfusedWith": [
+   "people-search-org-chart-for-an-employee"
+  ]
+ },
+ {
+  "id": "people-export-org-chart",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Export the org chart as a PDF",
+  "aliases": [
+   "print the org chart",
+   "download company structure",
+   "save org chart as image",
+   "share the organisation chart"
+  ],
+  "body": "1. Select **Org chart** in the main menu.\n2. Use **Filters** to choose the **Department** or **Location** you want.\n3. Select **Export**, then **PDF**.\n4. Choose a **Page size** and select **Download**.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-export-department-list-csv"
+  ]
+ },
+ {
+  "id": "people-export-department-list-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Export the department list to CSV",
+  "aliases": [
+   "download departments",
+   "spreadsheet of teams",
+   "department csv",
+   "list all departments"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Select **Export**.\n3. Choose **CSV**.\n4. Tick the columns to include, such as **Name**, **Head** and **Headcount**, and select **Download**.\n\nChanges take effect straight away and are visible to people with access. Every change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-export-employee-list-csv",
+   "people-export-org-chart"
+  ]
+ },
+ {
+  "id": "people-add-cost-centre-to-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Add a cost centre to a department",
+  "aliases": [
+   "set cost code",
+   "link department to budget",
+   "department finance code",
+   "edit cost centre"
+  ],
+  "body": "Cost centres show up in payroll reports so you can see wages by team.\n\n1. Go to **Org chart**, then **Departments**.\n2. Open the department and select **Edit**.\n3. Type a code in **Cost centre**.\n4. Select **Save**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-create-sub-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Create a sub-department",
+  "aliases": [
+   "add a team under a department",
+   "nested department",
+   "child team",
+   "add a group inside a department"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Open the parent department.\n3. Select **Add sub-department**.\n4. Enter a **Name** and choose a **Department head**.\n5. Select **Save**.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-create-department",
+   "people-move-department-under-another"
+  ]
+ },
+ {
+  "id": "people-move-department-under-another",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Move a department under another department",
+  "aliases": [
+   "change parent department",
+   "re-parent a team",
+   "restructure departments",
+   "relocate a team in the hierarchy"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Open the department you want to move.\n3. Select **Edit** next to **Parent department**.\n4. Choose the new parent.\n5. Select **Save**.\n\nEmployees and sub-departments move with it.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-create-sub-department"
+  ]
+ },
+ {
+  "id": "people-add-vacant-position",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Add a vacant position to the org chart",
+  "aliases": [
+   "show an open role",
+   "create a vacancy",
+   "add empty seat",
+   "plan a new hire position"
+  ],
+  "body": "1. Go to **Org chart** and select **Add position**.\n2. Enter the **Job title** and choose a **Department**.\n3. Select who it **Reports to**.\n4. Switch **Status** to **Vacant** and select **Save**.\n\nVacant positions appear as dotted boxes on the chart.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-fill-vacant-position"
+  ]
+ },
+ {
+  "id": "people-fill-vacant-position",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Fill a vacant position",
+  "aliases": [
+   "assign person to open role",
+   "hire into a vacancy",
+   "close a vacancy",
+   "put employee in empty seat"
+  ],
+  "body": "1. Go to **Org chart** and select the vacant box.\n2. Select **Fill position**.\n3. Choose an existing employee, or select **Add employee** for a new hire.\n4. Set the **Start date** and select **Confirm**.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-add-vacant-position"
+  ]
+ },
+ {
+  "id": "people-add-note-to-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Add a note to a department",
+  "aliases": [
+   "comment on a team",
+   "write a department note",
+   "log a restructure detail",
+   "team notes"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Open the department.\n3. Select the **Notes** tab.\n4. Select **Add note**, type your message and select **Save**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-profile"
+  ]
+ },
+ {
+  "id": "people-deactivate-department",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Deactivate a department",
+  "aliases": [
+   "make a department inactive",
+   "archive a team",
+   "pause a department",
+   "change department status"
+  ],
+  "body": "Inactive departments are hidden from the org chart and can't take new employees.\n\n1. Go to **Org chart**, then **Departments**.\n2. Open the department.\n3. Select **Edit** and change **Status** to **Inactive**.\n4. Select **Save**.\n\nYou can switch it back to **Active** at any time.",
+  "notConfusedWith": [
+   "people-delete-department"
+  ]
+ },
+ {
+  "id": "people-search-org-chart-for-an-employee",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Search the org chart for an employee",
+  "aliases": [
+   "find a person on the chart",
+   "locate someone in the hierarchy",
+   "where does this person sit",
+   "jump to employee on org chart"
+  ],
+  "body": "1. Select **Org chart** in the main menu.\n2. Type a name in **Search the chart**.\n3. Select the person from the list.\n4. The chart centres on their box and highlights their reporting line.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-search-employee-directory"
+  ]
+ },
+ {
+  "id": "people-update-department-contact-email",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Update a department's contact email",
+  "aliases": [
+   "change team email address",
+   "edit shared mailbox for a department",
+   "new department email",
+   "set group email"
+  ],
+  "body": "1. Go to **Org chart**, then **Departments**.\n2. Open the department.\n3. Select **Edit** and go to **Contact email**.\n4. Type the new address.\n5. Select **Save**.\n\nYou can repeat these steps at any time to make further changes. Changes take effect straight away and are visible to people with access.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-filter-org-chart-by-location",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Departments and org chart",
+  "title": "Filter the org chart by location",
+  "aliases": [
+   "show only one office",
+   "org chart for Sydney",
+   "limit chart to a site",
+   "view a single location"
+  ],
+  "body": "1. Select **Org chart** in the main menu.\n2. Select **Filters**.\n3. Choose one or more locations in **Location**.\n4. Select **Apply**.\n\nSelect **Clear filters** to see the whole company again.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-add-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Add an emergency contact",
+  "aliases": [
+   "new emergency contact",
+   "who to call if something happens",
+   "add next of kin",
+   "enter contact person for an employee"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select **Add contact**.\n4. Enter the **Name**, **Relationship** and **Mobile phone**.\n5. Select **Save**.\n\nYou can add up to five contacts for each employee.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-employee-updates-own-emergency-contacts"
+  ]
+ },
+ {
+  "id": "people-update-emergency-contact-phone",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Update an emergency contact's phone number",
+  "aliases": [
+   "change next of kin phone",
+   "edit emergency contact mobile",
+   "wrong number for emergency contact",
+   "new number for contact person"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select **Edit** beside the contact.\n4. Type the new number in **Mobile phone**.\n5. Select **Save**.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-update-employee-phone-number",
+   "people-add-alternate-phone-to-emergency-contact"
+  ]
+ },
+ {
+  "id": "people-update-emergency-contact-email",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Update an emergency contact's email address",
+  "aliases": [
+   "change next of kin email",
+   "edit contact's email",
+   "fix emergency contact email",
+   "new email for contact person"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select **Edit** beside the contact.\n4. Enter the new address in **Email**.\n5. Select **Save**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-update-employee-email",
+   "people-update-emergency-contact-phone"
+  ]
+ },
+ {
+  "id": "people-delete-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Delete an emergency contact",
+  "aliases": [
+   "remove next of kin",
+   "take contact off a profile",
+   "erase emergency contact",
+   "get rid of old contact"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select the three dots beside the contact.\n4. Choose **Delete** and confirm.\n\nAn employee must keep at least one contact if emergency contacts are mandatory.\n\nYou can repeat these steps at any time to make further changes.",
+  "notConfusedWith": [
+   "people-mark-emergency-contact-invalid"
+  ]
+ },
+ {
+  "id": "people-set-primary-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Set a primary emergency contact",
+  "aliases": [
+   "choose who to call first",
+   "main emergency contact",
+   "make contact number one",
+   "change preferred contact"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select the three dots beside the contact you want.\n4. Choose **Make primary**.\n\nThe primary contact is shown first on printed sheets.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-reorder-emergency-contacts"
+  ]
+ },
+ {
+  "id": "people-edit-emergency-contact-relationship",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Change an emergency contact's relationship",
+  "aliases": [
+   "fix relationship field",
+   "partner not spouse",
+   "edit relationship to employee",
+   "update relationship type"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab, then **Edit** beside the contact.\n3. Choose a new option in **Relationship**, such as **Partner**, **Parent** or **Friend**.\n4. Select **Save**.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-employee-updates-own-emergency-contacts",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Update your own emergency contacts",
+  "aliases": [
+   "change my emergency contact",
+   "I need to edit my next of kin",
+   "self-service emergency contacts",
+   "add contact on my profile"
+  ],
+  "body": "Employees can keep their own details up to date from **My profile**.\n\n1. Select your name at the top right, then **My profile**.\n2. Open the **Emergency contacts** tab.\n3. Select **Add contact** or **Edit** beside an existing one.\n4. Enter the details and select **Save**.\n\nHR is notified if you remove your last contact.",
+  "notConfusedWith": [
+   "people-add-emergency-contact"
+  ]
+ },
+ {
+  "id": "people-request-contact-confirmation",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Ask employees to confirm their emergency contacts",
+  "aliases": [
+   "send a contact check",
+   "annual contact review",
+   "get staff to verify next of kin",
+   "chase emergency details"
+  ],
+  "body": "1. Go to **People**, then **Emergency contacts**.\n2. Select **Request confirmation**.\n3. Choose who to include, such as a **Department** or **All employees**.\n4. Set a **Due date** and select **Send request**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-find-employees-with-no-emergency-contact"
+  ]
+ },
+ {
+  "id": "people-export-emergency-contacts-csv",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Export emergency contacts to CSV",
+  "aliases": [
+   "download next of kin list",
+   "spreadsheet of emergency contacts",
+   "emergency contact report",
+   "csv of contacts"
+  ],
+  "body": "1. Go to **People**, then **Emergency contacts**.\n2. Filter by **Department** or **Location** if needed.\n3. Select **Export**, then **CSV**.\n4. Select **Download**.\n\nYou can repeat these steps at any time to make further changes. Changes take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-export-employee-list-csv",
+   "people-print-emergency-contact-sheet"
+  ]
+ },
+ {
+  "id": "people-add-note-to-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Add a note to an emergency contact",
+  "aliases": [
+   "comment on a contact",
+   "write a note about next of kin",
+   "best time to call",
+   "record contact instructions"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab, then **Edit** beside the contact.\n3. Type your message in **Notes**, such as \"Call after 5 pm\".\n4. Select **Save**.\n\nChanges take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-add-note-to-employee-profile"
+  ]
+ },
+ {
+  "id": "people-view-department-emergency-contacts",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "View emergency contacts for a department",
+  "aliases": [
+   "see contacts for a team",
+   "who are the contacts in this department",
+   "department emergency list",
+   "contacts by team"
+  ],
+  "body": "1. Go to **People**, then **Emergency contacts**.\n2. Select **Filters** and choose a **Department**.\n3. Select an employee row to expand their contacts.\n\nManagers can see this list for their own team only.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-print-emergency-contact-sheet"
+  ]
+ },
+ {
+  "id": "people-print-emergency-contact-sheet",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Print an emergency contact sheet",
+  "aliases": [
+   "evacuation list",
+   "make a printable contact list",
+   "fire warden contact page",
+   "paper copy of contacts"
+  ],
+  "body": "A printed sheet is handy for fire wardens and site managers.\n\n1. Go to **People**, then **Emergency contacts**.\n2. Choose a **Department** or **Location**.\n3. Select **Print sheet**.\n4. Pick **Primary contact only** or **All contacts**.\n5. Select **Print** or **Save as PDF**.",
+  "notConfusedWith": [
+   "people-export-emergency-contacts-csv",
+   "people-view-department-emergency-contacts"
+  ]
+ },
+ {
+  "id": "people-add-alternate-phone-to-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Add an alternate phone number to an emergency contact",
+  "aliases": [
+   "second phone number for contact",
+   "home number for next of kin",
+   "backup number",
+   "extra contact number"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab, then **Edit** beside the contact.\n3. Select **Add another phone**.\n4. Choose **Home** or **Work** and enter the number.\n5. Select **Save**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-update-emergency-contact-phone"
+  ]
+ },
+ {
+  "id": "people-mark-emergency-contact-invalid",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Mark an emergency contact as no longer valid",
+  "aliases": [
+   "contact can't be reached",
+   "number disconnected",
+   "flag out of date contact",
+   "set contact status to inactive"
+  ],
+  "body": "Keep the record for reference but stop it showing on contact sheets.\n\n1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select the three dots beside the contact, then **Mark as invalid**.\n4. Choose a reason and select **Save**.\n\nHR will see the employee in the **Needs attention** list.",
+  "notConfusedWith": [
+   "people-delete-emergency-contact"
+  ]
+ },
+ {
+  "id": "people-record-medical-alerts",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Record an employee's medical alerts",
+  "aliases": [
+   "add allergies",
+   "note health condition for emergencies",
+   "medical information on profile",
+   "first aid details"
+  ],
+  "body": "Only add information the employee has agreed to share.\n\n1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Select **Edit** under **Medical alerts**.\n4. Enter details such as allergies or medication.\n5. Select **Save**.\n\nThis section is visible to HR admins and first aid officers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "people-set-minimum-emergency-contacts",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Set the minimum number of emergency contacts",
+  "aliases": [
+   "require two contacts",
+   "change contact requirement",
+   "how many contacts are needed",
+   "contact rules"
+  ],
+  "body": "1. Go to **Settings**, then **Emergency contacts**.\n2. Under **Minimum contacts**, choose 1, 2 or 3.\n3. Select **Save changes**.\n\nEmployees below the minimum will see a prompt next time they sign in.\n\nEvery change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-make-emergency-contacts-required-in-onboarding"
+  ]
+ },
+ {
+  "id": "people-make-emergency-contacts-required-in-onboarding",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Require emergency contacts during onboarding",
+  "aliases": [
+   "new starters must add a contact",
+   "onboarding task for emergency details",
+   "mandatory contact at onboarding",
+   "add contact step to checklist"
+  ],
+  "body": "1. Go to **Onboarding**, then **Templates**.\n2. Open the template you want to change.\n3. Select **Add task** and choose **Add emergency contact**.\n4. Tick **Required** and select **Save template**.\n\nYou need the **HR admin** role to do this. If the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-set-minimum-emergency-contacts"
+  ]
+ },
+ {
+  "id": "people-add-emergency-contact-address",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Add an address to an emergency contact",
+  "aliases": [
+   "next of kin address",
+   "where does the contact live",
+   "edit contact's postal address",
+   "enter street address for contact"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab, then **Edit** beside the contact.\n3. Select **Add address**.\n4. Fill in the street, suburb, state and postcode.\n5. Select **Save**.\n\nIf the option is greyed out, ask your account owner to check your permissions.",
+  "notConfusedWith": [
+   "people-update-home-address"
+  ]
+ },
+ {
+  "id": "people-find-employees-with-no-emergency-contact",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Find employees with no emergency contact",
+  "aliases": [
+   "missing next of kin",
+   "who hasn't added a contact",
+   "incomplete profiles",
+   "gaps in emergency details"
+  ],
+  "body": "1. Go to **People**, then **Emergency contacts**.\n2. Select **Filters**.\n3. Choose **No contacts on file**.\n4. Select **Send reminder** to ask them to add one.\n\nYou can repeat these steps at any time to make further changes. Changes take effect straight away and are visible to people with access.",
+  "notConfusedWith": [
+   "people-request-contact-confirmation"
+  ]
+ },
+ {
+  "id": "people-reorder-emergency-contacts",
+  "product": "Harbour People (HR and payroll)",
+  "status": "public",
+  "category": "Emergency contacts",
+  "title": "Change the order of emergency contacts",
+  "aliases": [
+   "move contact up the list",
+   "who to call second",
+   "rearrange contacts",
+   "sort emergency contacts"
+  ],
+  "body": "1. Go to **People** and open the employee.\n2. Select the **Emergency contacts** tab.\n3. Drag the handle beside a contact to a new position.\n4. Select **Save order**.\n\nChanges take effect straight away and are visible to people with access. Every change is saved to the audit log, so you can see who made it and when.",
+  "notConfusedWith": [
+   "people-set-primary-emergency-contact"
+  ]
+ }
+]

@@ -1,4 +1,5 @@
 import { buildPrompt, buildRoutingPrompt } from './prompt.js';
+import { CRM, assertPublic } from './suite.js';
 import { ExtractiveGenerator } from './generators.js';
 import { costUsd, MODELS } from './pricing.js';
 import { stem } from './text.js';
@@ -56,8 +57,11 @@ export class HelpDesk {
    * @param {{ retriever: import('./retriever.js').Retriever, generator: object, embedder?: (texts: string[]) => Promise<number[][]> }} deps
    *        With an embedder and a retriever that has a semantic index, retrieval is hybrid.
    */
-  constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS }) {
+  constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS, suite = null, allowInternal = false }) {
+    // allowInternal exists only so the evaluation can measure what the filter prevents.
+    if (!allowInternal) assertPublic(retriever.articles, CRM.name);
     this.retriever = retriever;
+    this.suite = suite;
     this.generator = generator;
     this.embedder = embedder;
     this.modelUse = modelUse;
@@ -80,11 +84,38 @@ export class HelpDesk {
       return { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'blocked', citations: [] } };
     }
 
-    let queryVector = null;
-    if (this.embedder && this.retriever.semantic) {
-      [queryVector] = await this.embedder([queryText(this.retriever.analyse(question))]);
+    // A question that names another Harbour product is answered from that
+    // product's help centre; anything else is about the CRM (see suite.js).
+    const named = chosenArticleId ? this.#productOf(chosenArticleId) : this.suite?.named(question);
+    if (named) {
+      const result = await this.#ask(question, named.text ?? question, named.product.retriever, named.product.name, { chosenArticleId });
+      return result;
     }
-    const retrieval = this.retriever.retrieve(question, { queryVector });
+    const result = await this.#ask(question, question, this.retriever, CRM.name, { chosenArticleId });
+    if (!this.suite || chosenArticleId || ['blocked', 'assistant'].includes(result.outcome.type)) return result;
+
+    // Other products that cover the same task. Next to a CRM answer they are
+    // "also in" links; if the CRM would hand off, they become suggestions.
+    const alsoIn = this.suite.alsoIn(question);
+    if (result.outcome.type === 'escalate' && alsoIn.length) {
+      return { ...result, alsoIn: [], outcome: { type: 'suggest', options: alsoIn.map(({ id, title, product }) => ({ id, title, product })), citations: [], otherProducts: true } };
+    }
+    return { ...result, alsoIn };
+  }
+
+  /** The product whose help centre holds an article, for a clarification choice. */
+  #productOf(articleId) {
+    const product = this.suite?.products.find((p) => p.retriever.byId.has(articleId));
+    return product ? { product } : null;
+  }
+
+  /** The pipeline for one product: retrieve, decide, then generate. */
+  async #ask(question, searchText, r, product, { chosenArticleId }) {
+    let queryVector = null;
+    if (this.embedder && r.semantic) {
+      [queryVector] = await this.embedder([queryText(r.analyse(searchText))]);
+    }
+    const retrieval = r.retrieve(searchText, { queryVector });
     let decision = retrieval.decision;
 
     if (chosenArticleId) {
@@ -96,7 +127,7 @@ export class HelpDesk {
       };
     }
 
-    const base = { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0 };
+    const base = { question, product, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0 };
 
     if ((decision.type === 'escalate' || decision.type === 'suggest') && !chosenArticleId && isAboutAssistant(retrieval.analysis.terms)) {
       return { ...base, outcome: { type: 'assistant', citations: [] } };
@@ -109,16 +140,16 @@ export class HelpDesk {
       const threshold = this.tiers.skipModelAtCoverage;
       const pctOf = (x) => `${Math.round(x * 100)}%`;
       if (this.modelUse === 'decides') {
-        return this.#modelDecides(question, retrieval, base, 'Full model: the model makes every decision.');
+        return this.#modelDecides(r, question, retrieval, base, 'Full model: the model makes every decision.');
       }
       if (confidence < threshold) {
-        return this.#modelDecides(question, retrieval, base, `Search is ${pctOf(confidence)} confident, below ${pctOf(threshold)}, so the model decides.`);
+        return this.#modelDecides(r, question, retrieval, base, `Search is ${pctOf(confidence)} confident, below ${pctOf(threshold)}, so the model decides.`);
       }
       if (decision.type === 'answer' && this.modelUse === 'prose') {
         base.tier = { name: 'prose', reason: `Search is ${pctOf(confidence)} confident (at least ${pctOf(threshold)}), so its decision stands and the model only writes the answer.` };
       } else {
         const tier = { name: 'no-model', reason: `Search is ${pctOf(confidence)} confident (at least ${pctOf(threshold)}), so the offline result is returned without a model call.` };
-        if (decision.type === 'answer') return this.#answer(question, retrieval, decision, { ...base, tier }, new ExtractiveGenerator());
+        if (decision.type === 'answer') return this.#answer(r, question, retrieval, decision, { ...base, tier }, new ExtractiveGenerator());
         base.tier = tier;
       }
     }
@@ -132,14 +163,14 @@ export class HelpDesk {
         ...base,
         outcome: {
           type: 'suggest',
-          options: decision.articleIds.map((id) => ({ id, title: this.retriever.byId.get(id).title })),
+          options: decision.articleIds.map((id) => ({ id, title: r.byId.get(id).title })),
           citations: [],
         },
       };
     }
 
     if (decision.type === 'clarify') {
-      const options = decision.articleIds.map((id) => this.retriever.byId.get(id));
+      const options = decision.articleIds.map((id) => r.byId.get(id));
       return {
         ...base,
         outcome: {
@@ -151,33 +182,33 @@ export class HelpDesk {
       };
     }
 
-    return this.#answer(question, retrieval, decision, base, this.generator);
+    return this.#answer(r, question, retrieval, decision, base, this.generator);
   }
 
   /** Answer path. The decided article always comes first in the context. */
-  async #answer(question, retrieval, decision, base, generator) {
+  async #answer(r, question, retrieval, decision, base, generator) {
     const contextIds = [decision.articleId, ...decision.contextIds.filter((id) => id !== decision.articleId)];
-    const articles = contextIds.map((id) => this.retriever.byId.get(id));
-    const prompt = buildPrompt(question, articles, retrieval.analysis);
-    return this.#generate(prompt, articles, retrieval, base, generator);
+    const articles = contextIds.map((id) => r.byId.get(id));
+    const prompt = buildPrompt(question, articles, retrieval.analysis, { product: base.product });
+    return this.#generate(r, prompt, articles, retrieval, base, generator);
   }
 
   /** The model gets the candidates and decides: answer, ask which one, or hand off. */
-  async #modelDecides(question, retrieval, base, reason) {
-    const articles = this.retriever.candidatesFor(retrieval).map((id) => this.retriever.byId.get(id));
+  async #modelDecides(r, question, retrieval, base, reason) {
+    const articles = r.candidatesFor(retrieval).map((id) => r.byId.get(id));
     if (!articles.length) {
       return { ...base, tier: { name: 'no-model', reason: 'Search found no candidates, so there is nothing for a model to read.' }, outcome: { type: 'escalate', citations: [] } };
     }
-    const prompt = buildRoutingPrompt(question, articles, retrieval.analysis);
-    return this.#generate(prompt, articles, retrieval, { ...base, tier: { name: 'model-decides', reason } }, this.generator);
+    const prompt = buildRoutingPrompt(question, articles, retrieval.analysis, { product: base.product });
+    return this.#generate(r, prompt, articles, retrieval, { ...base, tier: { name: 'model-decides', reason } }, this.generator);
   }
 
-  async #generate(prompt, articles, retrieval, base, generator) {
+  async #generate(r, prompt, articles, retrieval, base, generator) {
     const started = now();
     const reply = await generator.generate({ prompt, articles, analysis: retrieval.analysis });
     const generationMs = now() - started;
 
-    const { outcome, guardrail } = validateReply(reply, prompt.contextIds, this.retriever.byId);
+    const { outcome, guardrail } = validateReply(reply, prompt.contextIds, r.byId);
     const pricedModel = MODELS[reply.model] ? reply.model : generator.model;
     const cost = reply.usage && pricedModel ? costUsd(pricedModel, reply.usage) : 0;
 

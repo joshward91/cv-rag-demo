@@ -1,0 +1,1719 @@
+[
+ {
+  "id": "inv-record-manual-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Record a payment against an invoice",
+  "aliases": [
+   "mark invoice as paid",
+   "log a payment I received",
+   "enter a bank transfer payment",
+   "customer paid me, how do I record it"
+  ],
+  "body": "Use this when a customer pays by bank transfer, cash or cheque outside Harbour.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **Record payment**.\n3. Enter the **Amount**, **Payment date** and **Method**.\n4. Add a reference such as the transfer number in **Notes** if you like.\n5. Select **Save payment**.\n\nThe invoice status updates to **Paid** or **Part paid**.",
+  "notConfusedWith": [
+   "inv-record-part-payment",
+   "inv-delete-payment"
+  ]
+ },
+ {
+  "id": "inv-record-part-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Record a part payment",
+  "aliases": [
+   "customer paid only some of the invoice",
+   "partial payment",
+   "enter a deposit payment",
+   "invoice half paid"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **Record payment**.\n3. Change the **Amount** to the portion received. Harbour fills in the full balance by default.\n4. Choose the **Payment date** and **Method**.\n5. Select **Save payment**.\n\nThe invoice shows **Part paid** and the remaining **Balance due** is updated.",
+  "notConfusedWith": [
+   "inv-record-manual-payment"
+  ]
+ },
+ {
+  "id": "inv-delete-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Delete a payment entered by mistake",
+  "aliases": [
+   "remove a payment",
+   "undo a recorded payment",
+   "I logged the wrong payment",
+   "cancel a payment record"
+  ],
+  "body": "Only payments recorded manually can be deleted. Card payments must be refunded instead.\n\n1. Open the invoice and scroll to **Payment history**.\n2. Select the three dots next to the payment.\n3. Choose **Delete payment**.\n4. Confirm by selecting **Delete**.\n\nThe invoice balance and status are recalculated straight away.",
+  "notConfusedWith": [
+   "inv-refund-card-payment",
+   "inv-edit-payment-date"
+  ]
+ },
+ {
+  "id": "inv-edit-payment-date",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Change the date of a payment",
+  "aliases": [
+   "fix payment date",
+   "wrong date on payment",
+   "edit when the payment was received",
+   "backdate a payment"
+  ],
+  "body": "1. Go to **Payments** and find the payment using the search box.\n2. Select the payment to open it.\n3. Select **Edit**.\n4. Change the **Payment date**.\n5. Select **Save changes**.\n\nChanging the date can move the payment into a different reporting period, so check your reports afterwards.",
+  "notConfusedWith": [
+   "inv-delete-payment"
+  ]
+ },
+ {
+  "id": "inv-connect-card-gateway",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Connect a card payment gateway",
+  "aliases": [
+   "accept credit cards",
+   "set up online payments",
+   "link Stripe to my account",
+   "turn on card payments"
+  ],
+  "body": "You need to be an account **Owner** or **Admin** to do this.\n\n1. Go to **Settings** and select **Payment gateways**.\n2. Select **Connect** next to your gateway.\n3. Sign in to the gateway and approve the connection.\n4. Choose which currencies to accept.\n5. Select **Save**.\n\nYour invoices now show a **Pay now** button to customers.",
+  "notConfusedWith": [
+   "inv-turn-off-online-payments"
+  ]
+ },
+ {
+  "id": "inv-turn-off-online-payments",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Turn off online payments for one invoice",
+  "aliases": [
+   "hide the pay now button",
+   "stop customer paying online",
+   "disable card payment on an invoice",
+   "bank transfer only invoice"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **Edit**.\n3. Under **Payment options**, clear **Allow online payment**.\n4. Select **Save**.\n\nThe customer will see your bank details only. Other invoices are not affected.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-connect-card-gateway"
+  ]
+ },
+ {
+  "id": "inv-add-bank-details",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Add bank details to your invoices",
+  "aliases": [
+   "put my BSB and account number on invoices",
+   "where do customers pay me",
+   "show bank account on invoice",
+   "update payment instructions"
+  ],
+  "body": "1. Go to **Settings** and select **Payment details**.\n2. Enter your **Account name**, **BSB** and **Account number**.\n3. Add any extra wording, such as a payment reference, in **Instructions**.\n4. Select **Save**.\n\nThe details appear in the footer of every new invoice that uses your default template.",
+  "notConfusedWith": [
+   "inv-add-payment-terms"
+  ]
+ },
+ {
+  "id": "inv-add-payment-terms",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Set default payment terms",
+  "aliases": [
+   "change due date default",
+   "net 14 or net 30",
+   "how long customers have to pay",
+   "set invoice due days"
+  ],
+  "body": "1. Go to **Settings** and select **Invoice defaults**.\n2. Under **Payment terms**, choose an option such as **Net 14** or **Net 30**.\n3. Select **Save**.\n\nNew invoices use these terms. Existing invoices keep their current due date, and you can still change the due date on any single invoice.",
+  "notConfusedWith": [
+   "inv-add-bank-details"
+  ]
+ },
+ {
+  "id": "inv-refund-card-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Refund a card payment",
+  "aliases": [
+   "give the money back to customer's card",
+   "reverse a card charge",
+   "return card payment",
+   "issue a card refund"
+  ],
+  "body": "Refunds go back to the original card and usually take 5 to 10 business days to appear.\n\n1. Go to **Payments** and open the card payment.\n2. Select **Refund**.\n3. Enter the amount to return. You can refund less than the full payment.\n4. Choose a **Reason**.\n5. Select **Confirm refund**.",
+  "notConfusedWith": [
+   "inv-create-credit-note",
+   "inv-refund-by-bank-transfer"
+  ]
+ },
+ {
+  "id": "inv-import-bank-statement",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Import a bank statement to match payments",
+  "aliases": [
+   "upload bank feed CSV",
+   "reconcile payments from my bank",
+   "match deposits to invoices",
+   "bulk payment import"
+  ],
+  "body": "1. Go to **Payments** and select **Import**.\n2. Choose **Bank statement (CSV)** and upload your file.\n3. Match the columns for **Date**, **Amount** and **Description**.\n4. Review the suggested matches and untick any that are wrong.\n5. Select **Apply payments**.\n\nUnmatched lines stay in **Needs review** so you can match them by hand.",
+  "notConfusedWith": [
+   "inv-export-payments-csv"
+  ]
+ },
+ {
+  "id": "inv-export-payments-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Export payments to CSV",
+  "aliases": [
+   "download payment list",
+   "payments spreadsheet",
+   "get all payments into Excel",
+   "save payments as csv"
+  ],
+  "body": "1. Go to **Payments**.\n2. Use the **Date range** and **Method** filters to narrow the list.\n3. Select **Export** and choose **CSV**.\n4. Open the file from your downloads when it is ready.\n\nThe export includes the customer name, invoice number, amount, method and reference.",
+  "notConfusedWith": [
+   "inv-import-bank-statement",
+   "inv-export-invoice-list-csv"
+  ]
+ },
+ {
+  "id": "inv-add-payment-method-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Save a card on a customer's profile",
+  "aliases": [
+   "store customer's card details",
+   "keep card on file",
+   "add payment method to customer",
+   "autopay card"
+  ],
+  "body": "The customer must have approved card storage, either at checkout or by an emailed request.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Payments** tab.\n3. Select **Request card**.\n4. Choose the billing contact to email.\n\nOnce the customer completes the form, the card appears under **Saved cards**.",
+  "notConfusedWith": [
+   "inv-remove-saved-card"
+  ]
+ },
+ {
+  "id": "inv-remove-saved-card",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Remove a saved card from a customer",
+  "aliases": [
+   "delete card on file",
+   "stop charging customer's card",
+   "forget stored card",
+   "take off a payment method"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Payments** tab.\n3. Next to the card under **Saved cards**, select **Remove**.\n4. Confirm by selecting **Remove card**.\n\nAny recurring invoices set to charge this card will switch to emailing the invoice instead.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-add-payment-method-customer"
+  ]
+ },
+ {
+  "id": "inv-apply-customer-prepayment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Apply a customer's prepayment to an invoice",
+  "aliases": [
+   "use deposit against invoice",
+   "customer paid in advance",
+   "allocate an overpayment",
+   "apply credit on account to invoice"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **Apply credit**.\n3. Pick the prepayment or overpayment from the list.\n4. Enter the amount to apply.\n5. Select **Apply**.\n\nAny unused amount stays on the customer's account.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-apply-credit-note-to-invoice"
+  ]
+ },
+ {
+  "id": "inv-set-payment-surcharge",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Add a card surcharge to invoices",
+  "aliases": [
+   "charge customers a card fee",
+   "pass on processing fees",
+   "add a surcharge for credit card",
+   "payment fee on invoices"
+  ],
+  "body": "Check your local rules on surcharging before turning this on.\n\n1. Go to **Settings** and select **Payment gateways**.\n2. Select **Surcharge settings**.\n3. Turn on **Add surcharge** and enter a percentage.\n4. Select **Save**.\n\nThe surcharge appears as a separate line when the customer chooses to pay by card.",
+  "notConfusedWith": [
+   "inv-connect-card-gateway"
+  ]
+ },
+ {
+  "id": "inv-send-payment-receipt",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Payments",
+  "title": "Send a payment receipt",
+  "aliases": [
+   "email receipt to customer",
+   "resend proof of payment",
+   "receipt for a paid invoice",
+   "customer wants a receipt"
+  ],
+  "body": "1. Go to **Payments** and open the payment.\n2. Select **Send receipt**.\n3. Check the billing contact's email address, or add another.\n4. Select **Send**.\n\nHarbour attaches a PDF receipt. Card payments also send one automatically.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-record-manual-payment"
+  ]
+ },
+ {
+  "id": "inv-send-payment-reminder",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Send a payment reminder",
+  "aliases": [
+   "chase an unpaid invoice",
+   "email customer about overdue invoice",
+   "nudge a customer to pay",
+   "send reminder now"
+  ],
+  "body": "1. Go to **Invoices** and open the unpaid invoice.\n2. Select **Send reminder**.\n3. Pick a reminder template, such as **Friendly nudge** or **Final notice**.\n4. Review the message and edit it if needed.\n5. Select **Send**.\n\nThe reminder is logged in the invoice **Activity** list.",
+  "notConfusedWith": [
+   "inv-set-up-automatic-reminders"
+  ]
+ },
+ {
+  "id": "inv-set-up-automatic-reminders",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Set up automatic payment reminders",
+  "aliases": [
+   "auto chase overdue invoices",
+   "schedule reminder emails",
+   "remind customers automatically",
+   "turn on reminders"
+  ],
+  "body": "1. Go to **Settings** and select **Reminders**.\n2. Turn on **Automatic reminders**.\n3. Select **Add reminder** and choose when it is sent, for example **3 days before due** or **7 days after due**.\n4. Choose a template for each reminder.\n5. Select **Save**.\n\nReminders stop as soon as an invoice is paid.",
+  "notConfusedWith": [
+   "inv-send-payment-reminder",
+   "inv-pause-reminders-invoice"
+  ]
+ },
+ {
+  "id": "inv-pause-reminders-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Pause reminders on one invoice",
+  "aliases": [
+   "stop chasing this invoice",
+   "don't remind customer about this one",
+   "hold reminders",
+   "disable reminders for an invoice"
+  ],
+  "body": "Use this when you have agreed a payment date with the customer.\n\n1. Open the invoice from **Invoices**.\n2. Select **More**, then **Reminder settings**.\n3. Turn off **Send automatic reminders**.\n4. Select **Save**.\n\nYou can turn them back on at any time.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-set-up-automatic-reminders",
+   "inv-pause-reminders-customer"
+  ]
+ },
+ {
+  "id": "inv-pause-reminders-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Pause reminders for a customer",
+  "aliases": [
+   "stop all reminders to a client",
+   "do not chase this customer",
+   "mute reminders for customer",
+   "exclude customer from dunning"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select **Edit**.\n3. Under **Preferences**, clear **Send payment reminders**.\n4. Select **Save**.\n\nThis applies to all of the customer's invoices, including future ones.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-pause-reminders-invoice"
+  ]
+ },
+ {
+  "id": "inv-edit-reminder-template",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Edit a reminder email template",
+  "aliases": [
+   "change wording of reminder",
+   "customise overdue email",
+   "rewrite chase message",
+   "update reminder text"
+  ],
+  "body": "1. Go to **Settings** and select **Reminders**.\n2. Open the **Templates** tab.\n3. Select the template you want to change.\n4. Edit the **Subject** and **Message**. Use fields such as **{customer_name}** and **{amount_due}**.\n5. Select **Save template**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-edit-invoice-email-template"
+  ]
+ },
+ {
+  "id": "inv-view-overdue-invoices",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "View all overdue invoices",
+  "aliases": [
+   "who owes me money",
+   "list late invoices",
+   "find unpaid past due",
+   "overdue list"
+  ],
+  "body": "1. Go to **Invoices**.\n2. Select the **Overdue** tab.\n3. Sort by **Days overdue** to see the oldest first.\n\nUse the search box to narrow the list to one customer.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-export-aged-receivables"
+  ]
+ },
+ {
+  "id": "inv-change-invoice-due-date",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Change an invoice's due date",
+  "aliases": [
+   "extend due date",
+   "give customer more time",
+   "push back the due date",
+   "edit due date"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **Edit**.\n3. Change the **Due date**.\n4. Select **Save**.\n\nIf the new date is in the future, an overdue invoice goes back to **Awaiting payment** and reminders restart from the new date.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-set-up-payment-plan"
+  ]
+ },
+ {
+  "id": "inv-set-up-payment-plan",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Set up a payment plan on an overdue invoice",
+  "aliases": [
+   "split invoice into instalments",
+   "let customer pay in parts",
+   "instalment plan",
+   "arrange payment schedule"
+  ],
+  "body": "1. Open the overdue invoice.\n2. Select **More**, then **Payment plan**.\n3. Choose the number of instalments and the first due date.\n4. Review the schedule.\n5. Select **Create plan**.\n\nEach instalment gets its own due date and reminder.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-change-invoice-due-date"
+  ]
+ },
+ {
+  "id": "inv-add-late-fee",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Add a late fee to an overdue invoice",
+  "aliases": [
+   "charge interest on late payment",
+   "apply penalty fee",
+   "late payment charge",
+   "add overdue fee"
+  ],
+  "body": "1. Open the overdue invoice.\n2. Select **Edit**.\n3. Select **Add line item** and enter your late fee description and amount.\n4. Select **Save**.\n\nTo add the fee automatically, go to **Settings**, select **Reminders**, and turn on **Late fees**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-send-payment-reminder"
+  ]
+ },
+ {
+  "id": "inv-log-collection-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Add a note after calling about an overdue invoice",
+  "aliases": [
+   "record a phone call with customer",
+   "leave a note on invoice",
+   "write down what the customer said",
+   "add internal note"
+  ],
+  "body": "Notes are internal and are never shown to the customer.\n\n1. Open the invoice from **Invoices**.\n2. Select the **Notes** tab.\n3. Type your note, such as the date the customer promised to pay.\n4. Select **Add note**.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-add-customer-note"
+  ]
+ },
+ {
+  "id": "inv-mark-invoice-written-off",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Write off an unpayable invoice",
+  "aliases": [
+   "bad debt",
+   "mark invoice as uncollectable",
+   "give up on an invoice",
+   "close out a debt"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **More**, then **Write off**.\n3. Enter a **Reason**.\n4. Select **Confirm write-off**.\n\nThe invoice status changes to **Written off** and reminders stop. The amount appears in your **Bad debts** report.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-void-invoice"
+  ]
+ },
+ {
+  "id": "inv-set-reminder-sender",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Change who reminders are sent from",
+  "aliases": [
+   "reminder email sender name",
+   "change reply-to on reminders",
+   "reminders come from wrong address",
+   "set from email"
+  ],
+  "body": "1. Go to **Settings** and select **Reminders**.\n2. Select **Sender details**.\n3. Enter the **From name** and **Reply-to email**.\n4. Select **Save**.\n5. Check the confirmation email sent to the new address.\n\nThe new reply-to address is used once it is confirmed.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-edit-reminder-template"
+  ]
+ },
+ {
+  "id": "inv-update-billing-contact-email",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Update a billing contact's email address",
+  "aliases": [
+   "change customer's email",
+   "wrong email on invoice",
+   "fix email for sending invoices",
+   "edit contact email"
+  ],
+  "body": "Reminders and invoices are sent to the customer's billing contacts.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select the billing contact.\n4. Change the **Email** and select **Save**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-update-customer-phone",
+   "inv-add-billing-contact"
+  ]
+ },
+ {
+  "id": "inv-add-billing-contact",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Add a billing contact to a customer",
+  "aliases": [
+   "add another person to receive invoices",
+   "cc accounts payable",
+   "second email for customer",
+   "new contact on customer"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select **Add contact**.\n4. Enter the name and **Email**, and tick **Receives invoices**.\n5. Select **Save**.\n\nEvery billing contact receives invoices and reminders.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-update-billing-contact-email"
+  ]
+ },
+ {
+  "id": "inv-update-customer-phone",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "Update a customer's phone number",
+  "aliases": [
+   "change client phone",
+   "edit phone on customer",
+   "new mobile number for customer",
+   "fix contact number"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select **Edit**.\n3. Change the number in the **Phone** field.\n4. Select **Save**.\n\nTo change a billing contact's number instead, open the **Contacts** tab and edit the contact.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-update-billing-contact-email"
+  ]
+ },
+ {
+  "id": "inv-create-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Create a recurring invoice",
+  "aliases": [
+   "set up repeat invoice",
+   "bill customer every month",
+   "subscription invoice",
+   "automatic repeating invoice"
+  ],
+  "body": "1. Go to **Recurring** and select **New recurring invoice**.\n2. Choose the customer.\n3. Add your line items.\n4. Under **Schedule**, choose how often to invoice and the **Start date**.\n5. Select **Save**.\n\nHarbour creates each invoice on the schedule you set.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-repeat-existing-invoice"
+  ]
+ },
+ {
+  "id": "inv-repeat-existing-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Turn an existing invoice into a recurring one",
+  "aliases": [
+   "repeat this invoice",
+   "copy invoice on a schedule",
+   "make invoice repeat",
+   "convert invoice to subscription"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **More**, then **Make recurring**.\n3. Choose the frequency and the **Next invoice date**.\n4. Select **Create recurring invoice**.\n\nThe original invoice stays as it is.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-create-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-pause-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Pause a recurring invoice",
+  "aliases": [
+   "temporarily stop billing",
+   "hold subscription",
+   "skip billing for a while",
+   "suspend repeat invoice"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Pause**.\n3. Choose a **Resume date**, or leave it blank to resume manually.\n4. Select **Confirm**.\n\nNo invoices are created while it is paused, and missed invoices are not back-filled.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-cancel-recurring-invoice",
+   "inv-skip-next-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-cancel-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Cancel a recurring invoice",
+  "aliases": [
+   "end subscription",
+   "stop repeating invoice for good",
+   "customer cancelled service",
+   "delete schedule"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **More**, then **End schedule**.\n3. Pick the **End date** and select **Confirm**.\n\nInvoices already created are not changed. An ended schedule can be viewed under **Ended**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-pause-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-skip-next-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Skip the next recurring invoice",
+  "aliases": [
+   "miss one billing run",
+   "don't bill this month",
+   "skip one cycle",
+   "bypass next invoice"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Under **Upcoming invoices**, find the next one.\n3. Select **Skip**.\n4. Confirm by selecting **Skip invoice**.\n\nThe schedule continues as normal after the skipped date.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-pause-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-change-recurring-frequency",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Change how often a recurring invoice is sent",
+  "aliases": [
+   "switch from monthly to quarterly",
+   "edit billing frequency",
+   "change repeat interval",
+   "bill weekly instead"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Under **Schedule**, choose a new **Frequency**.\n4. Check the **Next invoice date**.\n5. Select **Save**.\n\nThe change applies from the next invoice.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-change-recurring-amount"
+  ]
+ },
+ {
+  "id": "inv-change-recurring-amount",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Change the amount on a recurring invoice",
+  "aliases": [
+   "update subscription price",
+   "price increase on repeat invoice",
+   "edit line items on schedule",
+   "new rate for recurring"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Change the **Unit price** or **Quantity** on the line items.\n4. Select **Save**.\n\nOnly future invoices use the new amount. Invoices already sent keep the old one.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-change-recurring-frequency"
+  ]
+ },
+ {
+  "id": "inv-set-recurring-end-date",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Set an end date for a recurring invoice",
+  "aliases": [
+   "stop after a number of invoices",
+   "fixed term contract billing",
+   "finish schedule automatically",
+   "end after 12 invoices"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Under **Ends**, choose **On a date** or **After a number of invoices**.\n4. Enter the date or number.\n5. Select **Save**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-cancel-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-auto-send-recurring",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Send recurring invoices automatically",
+  "aliases": [
+   "email invoice without approval",
+   "auto email repeat invoices",
+   "skip the draft step",
+   "stop drafts piling up"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Under **When created**, choose **Approve and email**.\n4. Select **Save**.\n\nIf you prefer to check each invoice, choose **Save as draft** instead.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-review-draft-recurring"
+  ]
+ },
+ {
+  "id": "inv-review-draft-recurring",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Review recurring invoices saved as drafts",
+  "aliases": [
+   "approve draft repeat invoices",
+   "where do draft recurring invoices go",
+   "check before sending subscription invoice",
+   "approve generated invoices"
+  ],
+  "body": "1. Go to **Invoices** and select the **Drafts** tab.\n2. Filter by **Source**, then choose **Recurring**.\n3. Open a draft and check the details.\n4. Select **Approve and send**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-auto-send-recurring"
+  ]
+ },
+ {
+  "id": "inv-charge-saved-card-recurring",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Charge a saved card on a recurring invoice",
+  "aliases": [
+   "autopay subscription",
+   "take payment automatically",
+   "bill card on file each month",
+   "automatic card charge"
+  ],
+  "body": "The customer must already have a saved card.\n\n1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Under **Payment**, turn on **Charge saved card**.\n4. Choose the card.\n5. Select **Save**.\n\nIf the charge fails, Harbour emails the invoice and tells you under **Notifications**.",
+  "notConfusedWith": [
+   "inv-add-payment-method-customer"
+  ]
+ },
+ {
+  "id": "inv-view-upcoming-recurring",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "See upcoming recurring invoices",
+  "aliases": [
+   "what will be billed next month",
+   "forecast subscription invoices",
+   "list future invoices",
+   "scheduled billing calendar"
+  ],
+  "body": "1. Go to **Recurring**.\n2. Select the **Upcoming** tab.\n3. Pick a date range using the **Next 30 days** menu.\n\nEach row shows the customer, the date and the expected amount.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-export-recurring-revenue"
+  ]
+ },
+ {
+  "id": "inv-edit-recurring-customer-details",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Change the customer on a recurring invoice",
+  "aliases": [
+   "move schedule to another customer",
+   "wrong client on subscription",
+   "reassign repeat invoice",
+   "switch customer"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Select the current customer name and choose a different **Customer**.\n4. Select **Save**.\n\nFuture invoices go to the new customer's billing contacts.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-change-recurring-amount"
+  ]
+ },
+ {
+  "id": "inv-add-recurring-reference",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Add a purchase order number to a recurring invoice",
+  "aliases": [
+   "PO number on repeat invoices",
+   "reference on every invoice",
+   "add custom reference",
+   "put job number on subscription"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **Edit**.\n3. Enter the number in **Reference**.\n4. Select **Save**.\n\nThe reference is printed on each new invoice.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-change-recurring-amount"
+  ]
+ },
+ {
+  "id": "inv-delete-recurring-draft",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Delete a recurring invoice schedule",
+  "aliases": [
+   "remove a schedule completely",
+   "erase repeat invoice",
+   "get rid of recurring record",
+   "clean up old schedules"
+  ],
+  "body": "Deleting removes the schedule only. Invoices it created are kept.\n\n1. Go to **Recurring** and open the schedule.\n2. Select **More**, then **Delete**.\n3. Select **Delete schedule** to confirm.\n\nIf you may need it later, end the schedule instead so you can still view it.",
+  "notConfusedWith": [
+   "inv-cancel-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-duplicate-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Recurring invoices",
+  "title": "Copy a recurring invoice for another customer",
+  "aliases": [
+   "clone schedule",
+   "reuse a recurring setup",
+   "duplicate subscription",
+   "copy repeating invoice"
+  ],
+  "body": "1. Go to **Recurring** and open the schedule.\n2. Select **More**, then **Duplicate**.\n3. Choose the new **Customer**.\n4. Adjust the dates if needed and select **Save**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-repeat-existing-invoice",
+   "inv-edit-recurring-customer-details"
+  ]
+ },
+ {
+  "id": "inv-create-credit-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Create a credit note",
+  "aliases": [
+   "issue a credit",
+   "reduce what customer owes",
+   "credit a customer",
+   "make a credit memo"
+  ],
+  "body": "1. Go to **Credit notes** and select **New credit note**.\n2. Choose the customer.\n3. Add line items and amounts to credit.\n4. Select **Approve**.\n\nThe credit note appears on the customer's account and can be applied to an invoice or refunded.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-create-credit-note-from-invoice",
+   "inv-void-invoice"
+  ]
+ },
+ {
+  "id": "inv-create-credit-note-from-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Create a credit note from an invoice",
+  "aliases": [
+   "credit part of an invoice",
+   "copy invoice into credit note",
+   "quick credit for an invoice",
+   "credit an invoice line"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select **More**, then **Create credit note**.\n3. Remove any lines you do not want to credit, or change the quantities.\n4. Select **Approve**.\n\nThe credit note is linked to the invoice.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-create-credit-note"
+  ]
+ },
+ {
+  "id": "inv-apply-credit-note-to-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Apply a credit note to an invoice",
+  "aliases": [
+   "use credit against invoice",
+   "allocate credit",
+   "offset invoice with credit note",
+   "knock off invoice using credit"
+  ],
+  "body": "1. Go to **Credit notes** and open the credit note.\n2. Select **Apply to invoice**.\n3. Tick the invoice and enter the amount.\n4. Select **Apply**.\n\nAny leftover amount stays available on the credit note.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-apply-customer-prepayment"
+  ]
+ },
+ {
+  "id": "inv-refund-by-bank-transfer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Record a refund paid by bank transfer",
+  "aliases": [
+   "I paid the customer back",
+   "log a manual refund",
+   "refund outside Harbour",
+   "mark credit as refunded"
+  ],
+  "body": "Use this after you have sent the money yourself.\n\n1. Go to **Credit notes** and open the credit note.\n2. Select **Record refund**.\n3. Enter the **Amount**, **Date** and **Method**.\n4. Select **Save refund**.\n\nThe credit note balance is reduced by the amount refunded.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-refund-card-payment"
+  ]
+ },
+ {
+  "id": "inv-void-credit-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Void a credit note",
+  "aliases": [
+   "cancel a credit note",
+   "credit note issued by mistake",
+   "delete approved credit",
+   "reverse a credit"
+  ],
+  "body": "A credit note can only be voided if nothing has been applied or refunded against it.\n\n1. Open the credit note from **Credit notes**.\n2. Select **More**, then **Void**.\n3. Select **Confirm**.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-void-invoice"
+  ]
+ },
+ {
+  "id": "inv-void-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Void an invoice",
+  "aliases": [
+   "cancel an invoice",
+   "invoice sent in error",
+   "cancel a sent invoice",
+   "remove invoice from reports"
+  ],
+  "body": "Voiding keeps the invoice number on record but sets the balance to zero.\n\n1. Open the invoice from **Invoices**.\n2. Select **More**, then **Void**.\n3. Enter a **Reason**.\n4. Select **Void invoice**.\n\nIf the customer has paid, create a credit note and refund instead.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-void-credit-note",
+   "inv-mark-invoice-written-off"
+  ]
+ },
+ {
+  "id": "inv-delete-draft-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Delete a draft invoice",
+  "aliases": [
+   "remove an invoice that was never sent",
+   "discard draft",
+   "get rid of draft invoice",
+   "erase unsent invoice"
+  ],
+  "body": "1. Go to **Invoices** and select the **Drafts** tab.\n2. Open the draft.\n3. Select **More**, then **Delete**.\n4. Confirm by selecting **Delete draft**.\n\nOnly drafts can be deleted. Sent invoices must be voided.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-void-invoice"
+  ]
+ },
+ {
+  "id": "inv-email-credit-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Email a credit note to a customer",
+  "aliases": [
+   "send credit note",
+   "share credit with customer",
+   "customer wants a copy of credit note",
+   "resend credit note"
+  ],
+  "body": "1. Go to **Credit notes** and open the credit note.\n2. Select **Send**.\n3. Check the recipients and edit the message.\n4. Select **Send credit note**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-send-payment-receipt"
+  ]
+ },
+ {
+  "id": "inv-edit-credit-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Edit a credit note before it is approved",
+  "aliases": [
+   "change draft credit",
+   "fix amount on a credit",
+   "amend credit note",
+   "update credit note lines"
+  ],
+  "body": "1. Go to **Credit notes** and select the **Drafts** tab.\n2. Open the credit note.\n3. Make your changes to the lines, dates or reference.\n4. Select **Save**.\n\nApproved credit notes cannot be edited. Void it and create a new one.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-void-credit-note"
+  ]
+ },
+ {
+  "id": "inv-issue-refund-overpayment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Refund an overpayment",
+  "aliases": [
+   "customer paid too much",
+   "return extra money",
+   "refund the difference",
+   "overpaid invoice"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Account** tab and find the **Overpayment** line.\n3. Select **Refund**.\n4. Enter the amount and choose **Card** or **Bank transfer**.\n5. Select **Confirm**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-apply-customer-prepayment",
+   "inv-refund-card-payment"
+  ]
+ },
+ {
+  "id": "inv-list-open-credit-notes",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "See credit notes that have not been used",
+  "aliases": [
+   "unallocated credits",
+   "customers with credit balance",
+   "outstanding credit list",
+   "find unused credit"
+  ],
+  "body": "1. Go to **Credit notes**.\n2. Select the **Open** tab.\n3. Sort by **Remaining credit** to see the largest balances first.\n\nSelect any row to apply or refund it.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-export-credit-notes-csv"
+  ]
+ },
+ {
+  "id": "inv-export-credit-notes-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Export credit notes to CSV",
+  "aliases": [
+   "download credit notes",
+   "credit note spreadsheet",
+   "get credits into Excel",
+   "save credit notes as csv"
+  ],
+  "body": "1. Go to **Credit notes**.\n2. Filter by date or status.\n3. Select **Export**, then **CSV**.\n\nThe file lists the number, customer, date, total and remaining credit.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-list-open-credit-notes",
+   "inv-export-payments-csv"
+  ]
+ },
+ {
+  "id": "inv-set-credit-note-numbering",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Change the credit note numbering",
+  "aliases": [
+   "credit note prefix",
+   "start numbering at a different number",
+   "rename CN numbers",
+   "next credit note number"
+  ],
+  "body": "1. Go to **Settings** and select **Numbering**.\n2. Under **Credit notes**, change the **Prefix** or **Next number**.\n3. Select **Save**.\n\nNumbers already issued do not change.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-set-invoice-numbering"
+  ]
+ },
+ {
+  "id": "inv-add-credit-reason",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Add a reason to a credit note",
+  "aliases": [
+   "note why credit was issued",
+   "reason code for credit",
+   "explain the credit to customer",
+   "credit note message"
+  ],
+  "body": "1. Open the credit note from **Credit notes**.\n2. Select **Edit**.\n3. Choose a **Reason**, or select **Custom** to type your own.\n4. Select **Save**.\n\nThe reason is printed on the credit note PDF.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-add-credit-reason-internal"
+  ]
+ },
+ {
+  "id": "inv-add-credit-reason-internal",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Add an internal note to a credit note",
+  "aliases": [
+   "private note on credit",
+   "staff only comment",
+   "remember why we credited",
+   "comment not visible to customer"
+  ],
+  "body": "1. Open the credit note from **Credit notes**.\n2. Select the **Notes** tab.\n3. Type your note.\n4. Select **Add note**.\n\nCustomers never see internal notes.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-add-credit-reason"
+  ]
+ },
+ {
+  "id": "inv-cancel-pending-refund",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Credit notes and refunds",
+  "title": "Cancel a pending card refund",
+  "aliases": [
+   "stop a refund",
+   "refund started by mistake",
+   "undo refund request",
+   "abort card refund"
+  ],
+  "body": "You can only cancel a refund while its status is **Pending**.\n\n1. Go to **Payments** and select the **Refunds** tab.\n2. Open the pending refund.\n3. Select **Cancel refund**.\n4. Select **Confirm**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-refund-card-payment"
+  ]
+ },
+ {
+  "id": "inv-run-sales-report",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a sales report",
+  "aliases": [
+   "how much did I invoice",
+   "revenue report",
+   "total sales for a period",
+   "invoiced amounts by month"
+  ],
+  "body": "1. Go to **Reports** and select **Sales**.\n2. Choose a **Date range**.\n3. Group by **Month**, **Customer** or **Item** using the **Group by** menu.\n4. Select **Run report**.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-export-aged-receivables"
+  ]
+ },
+ {
+  "id": "inv-export-aged-receivables",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export the aged receivables report",
+  "aliases": [
+   "who owes me and for how long",
+   "debtor ageing",
+   "ageing report to Excel",
+   "outstanding invoices by age"
+  ],
+  "body": "1. Go to **Reports** and select **Aged receivables**.\n2. Pick an **As at** date.\n3. Select **Run report**.\n4. Select **Export** and choose **CSV** or **PDF**.\n\nBalances are grouped as current, 1-30, 31-60, 61-90 and over 90 days.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-view-overdue-invoices"
+  ]
+ },
+ {
+  "id": "inv-export-invoice-list-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export your invoice list to CSV",
+  "aliases": [
+   "download all invoices",
+   "invoices spreadsheet",
+   "save invoice data to Excel",
+   "bulk export invoices"
+  ],
+  "body": "1. Go to **Invoices**.\n2. Apply any filters, such as **Status** or **Date range**.\n3. Select **Export** and choose **CSV**.\n4. Open the file when your download finishes.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-export-payments-csv",
+   "inv-export-customer-list-csv"
+  ]
+ },
+ {
+  "id": "inv-export-customer-list-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export your customer list to CSV",
+  "aliases": [
+   "download customers",
+   "get client list into a spreadsheet",
+   "customer contact export",
+   "save customers as csv"
+  ],
+  "body": "1. Go to **Customers**.\n2. Select **Export**.\n3. Choose **CSV** and tick the fields to include, such as **Phone** and **Billing contacts**.\n4. Select **Download**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-export-invoice-list-csv"
+  ]
+ },
+ {
+  "id": "inv-import-customers-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Import customers from a CSV file",
+  "aliases": [
+   "upload client list",
+   "bulk add customers",
+   "migrate customers into Harbour",
+   "add many customers at once"
+  ],
+  "body": "1. Go to **Customers** and select **Import**.\n2. Download the sample file if you need the format.\n3. Upload your CSV and match each column to a Harbour field.\n4. Review the preview and select **Import customers**.\n\nRows with an existing customer name are updated rather than duplicated.",
+  "notConfusedWith": [
+   "inv-export-customer-list-csv"
+  ]
+ },
+ {
+  "id": "inv-view-tax-summary",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "View a tax summary report",
+  "aliases": [
+   "GST report",
+   "VAT return figures",
+   "sales tax collected",
+   "BAS figures"
+  ],
+  "body": "1. Go to **Reports** and select **Tax summary**.\n2. Choose the tax period and the **Basis**, either **Accrual** or **Cash**.\n3. Select **Run report**.\n\nUse **Export** to save a copy for your accountant.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-run-sales-report"
+  ]
+ },
+ {
+  "id": "inv-view-customer-statement",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a statement for one customer",
+  "aliases": [
+   "account statement",
+   "what does customer owe in total",
+   "send statement to client",
+   "customer balance history"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select **Statement**.\n3. Choose the date range.\n4. Select **Send** to email it, or **Download PDF**.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when. Need to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-export-aged-receivables"
+  ]
+ },
+ {
+  "id": "inv-schedule-report-email",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Schedule a report to be emailed",
+  "aliases": [
+   "receive report weekly",
+   "automatic report emails",
+   "email me the aged receivables each Monday",
+   "recurring report"
+  ],
+  "body": "1. Go to **Reports** and run the report you want.\n2. Select **Schedule**.\n3. Choose the frequency, time and recipients.\n4. Select **Save schedule**.\n\nManage scheduled reports under **Reports**, then **Scheduled**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-run-sales-report"
+  ]
+ },
+ {
+  "id": "inv-save-report-favourite",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Save a report with your filters",
+  "aliases": [
+   "bookmark a report",
+   "remember my report settings",
+   "favourite report",
+   "reuse report filters"
+  ],
+  "body": "1. Run the report with the filters you want.\n2. Select **Save view**.\n3. Name the view and select **Save**.\n\nYour saved views appear under **Reports**, then **My views**.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-schedule-report-email"
+  ]
+ },
+ {
+  "id": "inv-view-payments-received-report",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a payments received report",
+  "aliases": [
+   "cash in report",
+   "what money came in",
+   "income by payment method",
+   "takings summary"
+  ],
+  "body": "1. Go to **Reports** and select **Payments received**.\n2. Choose a **Date range**.\n3. Group by **Method** or **Customer**.\n4. Select **Run report**.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**. Your changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-export-payments-csv",
+   "inv-run-sales-report"
+  ]
+ },
+ {
+  "id": "inv-view-invoice-activity",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "See the history of an invoice",
+  "aliases": [
+   "who changed this invoice",
+   "audit trail",
+   "check when invoice was opened",
+   "invoice activity log"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select the **Activity** tab.\n3. Scroll to view each email, view, payment and edit with its date and user.\n\nUse this to confirm a customer has viewed an invoice.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-log-collection-note"
+  ]
+ },
+ {
+  "id": "inv-export-recurring-revenue",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Export a recurring revenue report",
+  "aliases": [
+   "monthly recurring revenue",
+   "MRR report",
+   "subscription income",
+   "forecast of repeat billing"
+  ],
+  "body": "1. Go to **Reports** and select **Recurring revenue**.\n2. Choose the number of months to forecast.\n3. Select **Run report**.\n4. Select **Export** to download a CSV.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-view-upcoming-recurring"
+  ]
+ },
+ {
+  "id": "inv-view-bad-debts-report",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a bad debts report",
+  "aliases": [
+   "written off invoices list",
+   "uncollectable report",
+   "total of write-offs",
+   "see what I wrote off"
+  ],
+  "body": "1. Go to **Reports** and select **Bad debts**.\n2. Choose a **Date range**.\n3. Select **Run report**.\n\nThe report lists each written-off invoice with the date, customer and reason.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-mark-invoice-written-off"
+  ]
+ },
+ {
+  "id": "inv-change-report-currency",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Run a report in another currency",
+  "aliases": [
+   "foreign currency report",
+   "convert report to USD",
+   "see totals in my base currency",
+   "multi currency reporting"
+  ],
+  "body": "1. Go to **Reports** and open the report.\n2. Open the **Currency** menu.\n3. Choose **Base currency** to convert everything, or pick a single currency.\n4. Select **Run report**.\n\nAmounts are converted using the rate on each invoice.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-run-sales-report"
+  ]
+ },
+ {
+  "id": "inv-print-report-pdf",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "Download a report as a PDF",
+  "aliases": [
+   "print a report",
+   "save report as pdf",
+   "make report printable",
+   "pdf of sales report"
+  ],
+  "body": "1. Run the report you need.\n2. Select **Export**.\n3. Choose **PDF**.\n4. Save the file or print it from your browser.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when. Need to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-export-aged-receivables"
+  ]
+ },
+ {
+  "id": "inv-view-top-customers",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reports",
+  "title": "See your top customers by revenue",
+  "aliases": [
+   "biggest clients",
+   "best paying customers",
+   "who spends the most",
+   "customer ranking"
+  ],
+  "body": "1. Go to **Reports** and select **Sales**.\n2. Set **Group by** to **Customer**.\n3. Choose a **Date range**.\n4. Select **Run report**, then sort by **Total**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-run-sales-report"
+  ]
+ },
+ {
+  "id": "inv-change-business-details",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Update your business name and address",
+  "aliases": [
+   "change company details",
+   "edit ABN or business number",
+   "new address on invoices",
+   "update business info"
+  ],
+  "body": "1. Go to **Settings** and select **Business details**.\n2. Edit the **Business name**, **Address** or **Tax number**.\n3. Select **Save**.\n\nChanges appear on new invoices. Existing invoices keep the details they were sent with.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-upload-logo"
+  ]
+ },
+ {
+  "id": "inv-upload-logo",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Upload your logo to invoices",
+  "aliases": [
+   "add company logo",
+   "change logo on invoice",
+   "brand my invoices",
+   "put my logo on documents"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Open your default template.\n3. Under **Logo**, select **Upload** and choose a PNG or JPG file.\n4. Select **Save**.\n\nA logo at least 400 pixels wide gives the sharpest result.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-change-invoice-colours"
+  ]
+ },
+ {
+  "id": "inv-change-invoice-colours",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Change the colours on your invoice template",
+  "aliases": [
+   "brand colour on invoice",
+   "edit template theme",
+   "new accent colour",
+   "recolour invoices"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Open the template.\n3. Under **Style**, choose an **Accent colour** or enter a hex code.\n4. Select **Save**.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-upload-logo"
+  ]
+ },
+ {
+  "id": "inv-create-invoice-template",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Create a new invoice template",
+  "aliases": [
+   "make another invoice design",
+   "new template for a different brand",
+   "add a template",
+   "build a custom invoice layout"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Select **New template**.\n3. Name the template and choose a starting layout.\n4. Adjust the sections, colours and footer.\n5. Select **Save**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-duplicate-invoice-template"
+  ]
+ },
+ {
+  "id": "inv-duplicate-invoice-template",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Duplicate an invoice template",
+  "aliases": [
+   "copy a template",
+   "clone existing invoice layout",
+   "base a template on another",
+   "template copy"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Select the three dots next to the template.\n3. Choose **Duplicate**.\n4. Rename the copy and select **Save**.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-create-invoice-template"
+  ]
+ },
+ {
+  "id": "inv-set-default-template",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Set the default invoice template",
+  "aliases": [
+   "choose which template new invoices use",
+   "change default layout",
+   "make template the default",
+   "template for all invoices"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Select the three dots next to the template you want.\n3. Choose **Set as default**.\n\nYou can still pick another template on any individual invoice.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-assign-template-customer"
+  ]
+ },
+ {
+  "id": "inv-assign-template-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Use a different template for one customer",
+  "aliases": [
+   "customer specific invoice layout",
+   "custom template per client",
+   "assign template to customer",
+   "different branding for a client"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select **Edit**.\n3. Under **Invoice template**, choose the template.\n4. Select **Save**.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when. Need to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-set-default-template"
+  ]
+ },
+ {
+  "id": "inv-edit-invoice-email-template",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Edit the email that sends with an invoice",
+  "aliases": [
+   "change invoice email wording",
+   "customise the message customers get",
+   "update email subject for invoices",
+   "rewrite invoice cover email"
+  ],
+  "body": "1. Go to **Settings** and select **Email templates**.\n2. Select **Invoice**.\n3. Edit the **Subject** and **Message**.\n4. Select **Save**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time. If something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-edit-reminder-template"
+  ]
+ },
+ {
+  "id": "inv-add-invoice-footer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Add a footer message to invoices",
+  "aliases": [
+   "thank you note on invoices",
+   "terms and conditions on invoice",
+   "legal text at the bottom",
+   "default invoice notes"
+  ],
+  "body": "1. Go to **Settings** and select **Templates**.\n2. Open the template.\n3. Type your text in **Footer**.\n4. Select **Save**.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-add-bank-details"
+  ]
+ },
+ {
+  "id": "inv-set-invoice-numbering",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Change the invoice numbering",
+  "aliases": [
+   "invoice prefix",
+   "start invoice numbers at 1000",
+   "rename INV numbers",
+   "set next invoice number"
+  ],
+  "body": "1. Go to **Settings** and select **Numbering**.\n2. Under **Invoices**, change the **Prefix** or **Next number**.\n3. Select **Save**.\n\nHarbour will not let you reuse a number that already exists.\n\nIf you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-set-credit-note-numbering"
+  ]
+ },
+ {
+  "id": "inv-add-team-member",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Invite a team member",
+  "aliases": [
+   "add a user",
+   "give my bookkeeper access",
+   "new staff login",
+   "add an employee to the account"
+  ],
+  "body": "Only an **Owner** or **Admin** can invite users.\n\n1. Go to **Settings** and select **Users**.\n2. Select **Invite user**.\n3. Enter their email and choose a **Role**.\n4. Select **Send invite**.\n\nThe invite link is valid for 7 days.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-change-user-role",
+   "inv-remove-team-member"
+  ]
+ },
+ {
+  "id": "inv-change-user-role",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Change a team member's role",
+  "aliases": [
+   "give someone admin access",
+   "restrict user permissions",
+   "make user read only",
+   "edit role"
+  ],
+  "body": "1. Go to **Settings** and select **Users**.\n2. Select the user.\n3. Choose a new **Role**, such as **Admin**, **Standard** or **Read only**.\n4. Select **Save**.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-add-team-member"
+  ]
+ },
+ {
+  "id": "inv-remove-team-member",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Remove a team member",
+  "aliases": [
+   "delete a user",
+   "revoke access for former employee",
+   "staff member left",
+   "take someone off account"
+  ],
+  "body": "1. Go to **Settings** and select **Users**.\n2. Select the user.\n3. Select **Remove user**.\n4. Confirm by selecting **Remove**.\n\nTheir past activity stays in the invoice history.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-change-user-role"
+  ]
+ },
+ {
+  "id": "inv-update-account-email",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Change your login email",
+  "aliases": [
+   "new email for sign in",
+   "update my email address",
+   "change username",
+   "I changed jobs and need a new login"
+  ],
+  "body": "1. Select your name at the bottom of the left menu, then **My profile**.\n2. Enter your new **Email**.\n3. Select **Save**.\n4. Open the confirmation email and select the button inside it.\n\nYou will keep signing in with the old address until you confirm.",
+  "notConfusedWith": [
+   "inv-reset-password"
+  ]
+ },
+ {
+  "id": "inv-reset-password",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Reset your password",
+  "aliases": [
+   "forgot password",
+   "can't sign in",
+   "change my password",
+   "password reset email"
+  ],
+  "body": "1. On the sign-in page, select **Forgot password**.\n2. Enter your email and select **Send reset link**.\n3. Open the email and select **Choose new password**.\n4. Enter and confirm your new password.\n\nIf you are already signed in, go to **My profile** and select **Change password**.",
+  "notConfusedWith": [
+   "inv-update-account-email"
+  ]
+ },
+ {
+  "id": "inv-export-account-data",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Download a backup of your account data",
+  "aliases": [
+   "export everything",
+   "take my data with me",
+   "full data export",
+   "back up invoices"
+  ],
+  "body": "1. Go to **Settings** and select **Account**.\n2. Select **Export all data**.\n3. Choose the data to include, then select **Request export**.\n\nWe email a download link when it is ready. It expires after 48 hours.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-export-invoice-list-csv"
+  ]
+ },
+ {
+  "id": "inv-add-customer-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Add a note to a customer",
+  "aliases": [
+   "write a comment on a client",
+   "leave note on customer record",
+   "remember something about a customer",
+   "internal customer note"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Notes** tab.\n3. Type your note.\n4. Select **Add note**.\n\nNotes are visible to your team only.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot. If you cannot see this option, ask an account Owner or Admin to check your role under **Settings**, then **Users**.",
+  "notConfusedWith": [
+   "inv-log-collection-note"
+  ]
+ },
+ {
+  "id": "inv-archive-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Archive a customer",
+  "aliases": [
+   "delete a customer",
+   "hide a client I no longer bill",
+   "remove customer",
+   "deactivate customer"
+  ],
+  "body": "Customers with invoices cannot be deleted, but they can be archived.\n\n1. Go to **Customers** and open the customer.\n2. Select **More**, then **Archive**.\n3. Select **Archive customer**.\n\nArchived customers are hidden from lists. Find them with the **Archived** filter and select **Restore** to bring them back.",
+  "notConfusedWith": [
+   "inv-merge-customers"
+  ]
+ },
+ {
+  "id": "inv-merge-customers",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Merge duplicate customers",
+  "aliases": [
+   "combine two clients",
+   "same customer entered twice",
+   "join duplicate records",
+   "fix duplicate customer"
+  ],
+  "body": "1. Go to **Customers** and open the customer to keep.\n2. Select **More**, then **Merge**.\n3. Choose the duplicate customer.\n4. Select **Merge customers**.\n\nThe duplicate's invoices, contacts and notes move to the customer you kept.\n\nYour changes are recorded in the account **Audit log**, so your team can see who made them and when.",
+  "notConfusedWith": [
+   "inv-archive-customer"
+  ]
+ },
+ {
+  "id": "inv-set-currency-default",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Account and invoice templates",
+  "title": "Change your default currency",
+  "aliases": [
+   "base currency",
+   "switch to NZD",
+   "set currency for new invoices",
+   "default invoice currency"
+  ],
+  "body": "1. Go to **Settings** and select **Invoice defaults**.\n2. Choose a **Default currency**.\n3. Select **Save**.\n\nThis applies to new invoices only. Existing invoices keep their currency.\n\nNeed to undo this later? You can come back to the same screen and change it again at any time.",
+  "notConfusedWith": [
+   "inv-change-report-currency"
+  ]
+ },
+ {
+  "id": "inv-view-reminder-history",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Reminders and overdue invoices",
+  "title": "See which reminders were sent for an invoice",
+  "aliases": [
+   "did the customer get a reminder",
+   "reminder log",
+   "check chase emails sent",
+   "when was customer last reminded"
+  ],
+  "body": "1. Open the invoice from **Invoices**.\n2. Select the **Activity** tab.\n3. Select the **Reminders** filter to see each reminder with its date and recipient.\n\nA reminder that bounced is marked **Failed**, so you can fix the billing contact's email and resend it.\n\nIf something looks wrong afterwards, contact Harbour Support from **Help** and include a screenshot.",
+  "notConfusedWith": [
+   "inv-send-payment-reminder",
+   "inv-view-invoice-activity"
+  ]
+ }
+]

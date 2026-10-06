@@ -7,6 +7,8 @@
  *
  * Fields:
  *   id               Stable identifier, used for citations.
+ *   status           draft, public, internal or archived. Only 'public' articles
+ *                    reach the assistant (see isPublic in src/rag/suite.js).
  *   category         Help centre section.
  *   title            Task-shaped title.
  *   aliases          "Also called": other ways people describe the task.
@@ -26,6 +28,7 @@ export const articles = [
   // ---------------------------------------------------------------- Contacts
   {
     id: 'contact-create',
+    status: 'public',
     category: 'Contacts',
     title: 'Add a contact',
     aliases: ['create a contact', 'new contact', 'add a customer', 'add a person', 'add a lead'],
@@ -43,6 +46,7 @@ The new contact opens straight away so you can add notes or deals.`,
   },
   {
     id: 'contact-edit-phone',
+    status: 'public',
     category: 'Contacts',
     title: "Update a contact's phone number",
     aliases: [
@@ -63,6 +67,7 @@ Each contact has one **Phone** field. If you need to store a second number, crea
   },
   {
     id: 'contact-edit-email',
+    status: 'public',
     category: 'Contacts',
     title: "Change a contact's email address",
     aliases: ["update a contact's email", "edit a customer's email address", 'fix a typo in an email address'],
@@ -77,6 +82,7 @@ The email address must contain an **@** and a domain, for example sam@example.co
   },
   {
     id: 'contact-change-status',
+    status: 'public',
     category: 'Contacts',
     title: "Change a contact's status",
     aliases: ['convert a lead to a customer', 'mark a contact as inactive', 'lifecycle stage', 'set a contact as a customer'],
@@ -93,6 +99,7 @@ A contact's status is separate from deal stages. Winning a deal doesn't change t
   },
   {
     id: 'contact-link-company',
+    status: 'public',
     category: 'Contacts',
     title: 'Link a contact to a company',
     aliases: ["set a contact's company", 'assign a contact to an organisation', 'move a contact to another company', "change a contact's employer"],
@@ -109,6 +116,7 @@ The contact now appears under **Contacts at this company** on the company's page
   },
   {
     id: 'contact-delete',
+    status: 'public',
     category: 'Contacts',
     title: 'Delete a contact',
     aliases: ['remove a contact', 'remove a customer', 'get rid of a contact'],
@@ -122,6 +130,7 @@ Deleting a contact also deletes their notes. Deals linked to the contact are kep
   },
   {
     id: 'contact-search',
+    status: 'public',
     category: 'Contacts',
     title: 'Find a contact',
     aliases: ['search contacts', 'look up a customer', 'filter contacts by company', 'filter contacts by status'],
@@ -135,6 +144,7 @@ Select **Clear filters** to show every contact again.`,
   },
   {
     id: 'contact-export',
+    status: 'public',
     category: 'Contacts',
     title: 'Export contacts to a CSV file',
     aliases: ['download contacts', 'download my contact list', 'contacts spreadsheet', 'back up contacts'],
@@ -148,6 +158,7 @@ The file includes each contact's name, email, phone, job title, company, status 
   },
   {
     id: 'contact-add-note',
+    status: 'public',
     category: 'Contacts',
     title: 'Add a note to a contact',
     aliases: ['log a call', 'record a conversation', 'write up meeting notes', 'comment on a contact', 'contact activity'],
@@ -163,6 +174,7 @@ Notes appear newest first with the date they were added. Notes can't be edited a
   // --------------------------------------------------------------- Companies
   {
     id: 'company-create',
+    status: 'public',
     category: 'Companies',
     title: 'Add a company',
     aliases: ['create a company', 'new organisation', 'add a business', 'add an organisation'],
@@ -178,6 +190,7 @@ To add people to the company, link each contact to it.`,
   },
   {
     id: 'company-edit-details',
+    status: 'public',
     category: 'Companies',
     title: "Edit a company's phone number, website or address",
     aliases: ["update a company's details", "change an organisation's phone number", "update a business's address", 'new office address for a company', "rename a company"],
@@ -192,6 +205,7 @@ This changes the company's main details only.`,
   },
   {
     id: 'company-delete',
+    status: 'public',
     category: 'Companies',
     title: 'Delete a company',
     aliases: ['remove a company', 'remove an organisation'],
@@ -207,6 +221,7 @@ Contacts and deals linked to the company are kept, and their company changes to 
   // ------------------------------------------------------------------- Deals
   {
     id: 'deal-create',
+    status: 'public',
     category: 'Deals',
     title: 'Create a deal',
     aliases: ['add a deal', 'new opportunity', 'add a sale', 'log a sale', 'track a sale'],
@@ -222,6 +237,7 @@ Values use the currency set in **Settings** > **Client profile**.`,
   },
   {
     id: 'deal-change-stage',
+    status: 'public',
     category: 'Deals',
     title: 'Move a deal to a different stage',
     aliases: ['change a deal stage', 'move a deal along the pipeline', 'progress an opportunity', 'drag a deal to another column'],
@@ -238,6 +254,7 @@ To close a deal, use **Mark as won** or **Mark as lost** instead.`,
   },
   {
     id: 'deal-mark-won',
+    status: 'public',
     category: 'Deals',
     title: 'Mark a deal as won',
     aliases: ['close a deal as won', 'win a deal', 'record a sale as closed'],
@@ -250,6 +267,7 @@ The deal moves to the **Won** column and its close date is set to today. To undo
   },
   {
     id: 'deal-mark-lost',
+    status: 'public',
     category: 'Deals',
     title: 'Mark a deal as lost',
     aliases: ['close a deal as lost', 'lose a deal', 'record a lost reason', 'they chose a competitor', 'kill a deal'],
@@ -264,6 +282,7 @@ The deal moves to the **Lost** column and keeps its value for reporting. To undo
   },
   {
     id: 'deal-reopen',
+    status: 'public',
     category: 'Deals',
     title: 'Reopen a won or lost deal',
     aliases: ['undo mark as won', 'undo mark as lost', 'reopen a closed deal'],
@@ -276,6 +295,7 @@ The deal returns to the **Negotiation** stage, and its close date and lost reaso
   },
   {
     id: 'deal-edit-value',
+    status: 'public',
     category: 'Deals',
     title: "Change a deal's value",
     aliases: ["update a deal amount", "edit the price of an opportunity", "change how much a deal is worth"],
@@ -290,6 +310,7 @@ The column totals on the board update straight away.`,
   },
   {
     id: 'deal-delete',
+    status: 'public',
     category: 'Deals',
     title: 'Delete a deal',
     aliases: ['remove a deal', 'remove an opportunity'],
@@ -305,6 +326,7 @@ Deleting can't be undone. If the deal fell through, consider **Mark as lost** in
   // ----------------------------------------------------------- Custom fields
   {
     id: 'custom-field-create',
+    status: 'public',
     category: 'Custom fields',
     title: 'Create a custom field',
     aliases: ['add a custom field', 'add an extra field', 'add my own field to contacts', 'track extra information'],
@@ -323,6 +345,7 @@ The field appears on every record of that type, in the edit form and on the reco
   },
   {
     id: 'custom-field-fill',
+    status: 'public',
     category: 'Custom fields',
     title: 'Fill in a custom field on a record',
     aliases: ['enter a value in a custom field', 'set a custom field value', 'update a custom field on a contact'],
@@ -337,6 +360,7 @@ A field only appears on the record type it applies to. In this account, for exam
   },
   {
     id: 'custom-field-edit',
+    status: 'public',
     category: 'Custom fields',
     title: 'Rename a custom field or edit its options',
     aliases: ['change a custom field label', 'more options for a dropdown field', 'edit a custom field'],
@@ -351,6 +375,7 @@ You can't change a field's **Type** or **Applies to** after it's created. To cha
   },
   {
     id: 'custom-field-delete',
+    status: 'public',
     category: 'Custom fields',
     title: 'Delete a custom field',
     aliases: ['remove a custom field', 'get rid of an extra field'],
@@ -366,6 +391,7 @@ Deleting a field removes its values from every record. This can't be undone.`,
   // ---------------------------------------------------------------- Settings
   {
     id: 'account-client-contact-number',
+    status: 'public',
     category: 'Client profile',
     title: 'Change your client contact number',
     aliases: ['client phone number', 'the number Harbour CRM support calls', 'account phone number'],
@@ -379,6 +405,7 @@ Deleting a field removes its values from every record. This can't be undone.`,
   },
   {
     id: 'account-business-name',
+    status: 'public',
     category: 'Client profile',
     title: 'Change your client name',
     aliases: ['business name', 'trading name', 'rename your client profile'],
@@ -392,6 +419,7 @@ Deleting a field removes its values from every record. This can't be undone.`,
   },
   {
     id: 'account-billing-email',
+    status: 'public',
     category: 'Client profile',
     title: 'Change your billing email',
     aliases: ['where invoices are sent', 'client email address', 'accounts email'],
@@ -405,6 +433,7 @@ Deleting a field removes its values from every record. This can't be undone.`,
   },
   {
     id: 'account-currency',
+    status: 'public',
     category: 'Client profile',
     title: 'Change your currency',
     aliases: ['default currency', 'switch to US dollars', 'show deal values in another currency'],
@@ -420,6 +449,7 @@ Changing the currency changes the symbol shown on every deal. It doesn't convert
   // ------------------------------------------------------------ Getting started
   {
     id: 'glossary-clients-contacts',
+    status: 'public',
     category: 'Getting started',
     title: 'Clients, contacts and companies: what the terms mean',
     aliases: ['terminology', 'glossary', 'what is the difference between a client and a contact'],
@@ -433,6 +463,7 @@ Changing the currency changes the symbol shown on every deal. It doesn't convert
   },
   {
     id: 'demo-data-reset',
+    status: 'public',
     category: 'Getting started',
     title: 'Why your changes disappear when you reload',
     aliases: ['my changes were lost', 'reset the demo data', 'data not saved after refresh'],

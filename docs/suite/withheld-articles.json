@@ -1,0 +1,2652 @@
+[
+ {
+  "id": "archived-crm-add-contact-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Add a contact in the classic interface",
+  "aliases": [
+   "create a contact in the old Contacts tab",
+   "add a customer, classic view",
+   "new contact classic"
+  ],
+  "body": "Archived: this article describes the classic interface, retired in March 2025. See the current article for the new layout.\n\nIn classic Harbour CRM, contacts were added from the old Contacts tab.\n\n1. Click the **Contacts** tab on the left-hand menu.\n2. Click the green **Add Contact** button above the list.\n3. Fill in **First Name**, **Last Name** and **Email** in the pop-up window.\n4. Click **Save & Close**, or **Save & Add Another** to enter several people in a row.\n\nIn the classic version the **Company** field was a plain text box, so linked companies had to be matched later by an administrator.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-update-contact-phone-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Update a contact's phone number (classic)",
+  "aliases": [
+   "edit phone in old contact page",
+   "change customer phone, classic editor",
+   "classic contact edit"
+  ],
+  "body": "Archived: describes the classic editor, retired in March 2025.\n\nTo change a contact's phone number in the classic editor:\n\n1. Open the old **Contacts** tab and click the contact's name.\n2. Click **Edit Contact** in the grey toolbar.\n3. Find the **Phone (Primary)** box and type the new number. Classic did not add country codes automatically, so include the + sign.\n4. Click **Update**.\n\nA second number could be stored in **Phone (Alt)**. Changes were not logged in the contact's history in the classic version, which is why some older accounts have no record of who edited a number.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-change-contact-email-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Change a contact's email (classic)",
+  "aliases": [
+   "edit contact email old interface",
+   "update customer email classic",
+   "old contacts tab email"
+  ],
+  "body": "Archived: this article describes the classic interface, retired in March 2025.\n\n1. Open the old **Contacts** tab.\n2. Click the contact, then **Edit Contact**.\n3. Type the new address into the **Email** box. Classic accepted only one address per contact.\n4. Click **Update**.\n\nIf the old address was on a mailing list, you also needed to open **Lists** and remove it by hand, because classic did not sync the two. Duplicate email warnings did not exist, so two contacts could share the same address without any message.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-delete-contact-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Delete a contact (classic)",
+  "aliases": [
+   "remove contact old Contacts tab",
+   "classic delete customer",
+   "permanently delete a contact"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\nDeleting a contact in the classic version was immediate and could not be reversed.\n\n1. Open the old **Contacts** tab.\n2. Tick the box beside one or more contacts.\n3. Click **Actions** > **Delete Selected**.\n4. Click **OK** on the grey warning box.\n\nNo recycle bin existed. Any open deals showed the contact name in plain text but were no longer linked. Classic accounts needed to contact support within 7 days to ask for a backup restore, a policy that no longer applies.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-export-contacts-csv-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Export contacts to CSV (classic)",
+  "aliases": [
+   "download contact list old version",
+   "classic export",
+   "export customers legacy"
+  ],
+  "body": "Archived: describes the classic export, retired in March 2025.\n\n1. Click the **Contacts** tab.\n2. Click **Tools** in the top right and choose **Export to CSV**.\n3. Classic always exported every contact and every column; there was no filter.\n4. Click **Generate File**. A link appeared under **Tools** > **My Downloads** after a few minutes and stayed for 48 hours.\n\nCustom fields were placed at the end of the file with their internal names, such as cf_1042, rather than their labels. Exports were limited to 10,000 rows.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-link-contact-company-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Companies",
+  "title": "Link a contact to a company (classic)",
+  "aliases": [
+   "connect contact to company old interface",
+   "classic company link",
+   "old Contacts tab company"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\nIn classic, the link between a contact and a company was set from the company side.\n\n1. Open the **Accounts** tab (the old name for Companies).\n2. Click the company name.\n3. Scroll to **Related Contacts** and click **Link Existing**.\n4. Tick one or more contacts and click **Add**.\n\nThe **Company** box on the contact page was only a text label and did not create a link. Today you can link directly from the contact's page.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-add-company-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Companies",
+  "title": "Add a company (classic Accounts tab)",
+  "aliases": [
+   "create account in old CRM",
+   "new company classic",
+   "add an organisation old UI"
+  ],
+  "body": "Archived: this article describes the classic interface, retired in March 2025.\n\nCompanies were called Accounts in the classic version.\n\n1. Click the **Accounts** tab.\n2. Click **New Account**.\n3. Type the **Account Name**. Also fill in **Phone**, **Web** and **Billing Street** if you have them.\n4. Choose an **Account Owner** from the drop-down.\n5. Click **Save**.\n\nClassic had no website lookup. Logos could only be uploaded manually on the edit page.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-edit-company-details-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Companies",
+  "title": "Edit a company's phone, website or address (classic)",
+  "aliases": [
+   "change account phone old",
+   "update company address classic",
+   "edit Accounts tab"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\n1. Open the **Accounts** tab and click the company.\n2. Click **Edit** in the grey toolbar.\n3. Change **Phone**, **Web** or the address fields **Street**, **City**, **State** and **Postcode**. Each part of the address was a separate box.\n4. Click **Save**.\n\nThe website was not checked, so entries like www.example needed the full http:// to be clickable. Contacts linked to the account did not pick up the new address; they had their own address fields.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-create-deal-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Deals",
+  "title": "Create a deal (classic pipeline)",
+  "aliases": [
+   "add opportunity old CRM",
+   "new deal classic",
+   "create sales deal old interface"
+  ],
+  "body": "Archived: describes the classic pipeline, retired in March 2025.\n\n1. Click the **Pipeline** tab.\n2. Click **+ Add Opportunity** at the top of the first column.\n3. Enter the **Opportunity Name** and **Value**.\n4. Search for the **Contact**. The company is filled in from the contact.\n5. Click **Save**.\n\nClassic called deals opportunities and only supported one pipeline. The **Close Date** was optional, which meant reports often showed gaps.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-mark-deal-won-lost-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Deals",
+  "title": "Mark a deal as won or lost (classic)",
+  "aliases": [
+   "close opportunity old CRM",
+   "classic deal status",
+   "set opportunity to lost"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\n1. In the **Pipeline** tab, click the opportunity card.\n2. Click **Change Status**.\n3. Choose **Closed Won** or **Closed Lost**.\n4. For **Closed Lost**, type a reason in the free-text **Notes** box. Classic had no reason list.\n5. Click **OK**.\n\nClosed cards disappeared from the board and could only be found by filtering the list view with **Show Closed**. There was no Reopen button; support had to reopen them.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-move-deal-stage-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Deals",
+  "title": "Move a deal to another stage (classic Kanban)",
+  "aliases": [
+   "drag opportunity old pipeline",
+   "change stage classic",
+   "advance opportunity"
+  ],
+  "body": "Archived: this article describes the classic Kanban board, retired in March 2025.\n\n1. Open the **Pipeline** tab.\n2. Click and hold the opportunity card.\n3. Drag it onto the next column header and release.\n4. A box asks for a **Stage Note**. Click **Skip** if not needed.\n\nOn laptops without a mouse, open the card, click **Edit** and use the **Stage** drop-down instead. Classic could not skip over locked stages, and there was no keyboard method. The board showed a maximum of 50 cards per column.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-create-custom-field-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Settings",
+  "title": "Create a custom field (Settings > Legacy)",
+  "aliases": [
+   "add custom field old settings",
+   "classic custom fields",
+   "Legacy settings fields"
+  ],
+  "body": "Archived: describes Settings > Legacy, retired in March 2025.\n\n1. Click the cog icon, then **Settings** > **Legacy** > **Field Manager**.\n2. Choose the module: **Contacts**, **Accounts** or **Opportunities**.\n3. Click **Create Field**.\n4. Enter a **Field Name** and choose a **Data Type**: Text, Number, Date or Pick List.\n5. Click **Save**.\n\nClassic allowed up to 25 custom fields per module. New fields only showed on records after the user refreshed the browser.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-rename-custom-field-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Settings",
+  "title": "Rename a custom field (classic Field Manager)",
+  "aliases": [
+   "edit custom field name old",
+   "change field label legacy",
+   "classic Field Manager"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\n1. Go to **Settings** > **Legacy** > **Field Manager**.\n2. Select the module and find the field.\n3. Click the **Edit** link at the end of the row.\n4. Change the **Field Name**.\n5. Click **Save**.\n\nRenaming in classic did not update saved reports or filters that used the old name; they showed an empty column until someone rebuilt them. This limitation is the reason many clients kept the old name and added a description instead.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-delete-custom-field-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Settings",
+  "title": "Delete a custom field (classic)",
+  "aliases": [
+   "remove field Settings Legacy",
+   "classic delete field",
+   "old Field Manager delete"
+  ],
+  "body": "Archived: describes Settings > Legacy, retired in March 2025.\n\n1. Open **Settings** > **Legacy** > **Field Manager**.\n2. Find the field for the right module.\n3. Click **Delete** at the end of the row.\n4. Click **Yes, delete** on the warning.\n\nValues were wiped immediately from every record and could not be restored. Deleting a field used by a saved report caused that report to show an error until it was edited. Only users with the **Super Admin** role could delete fields in classic.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-client-contact-number-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Change your client contact number (classic account page)",
+  "aliases": [
+   "update our business phone old settings",
+   "classic My Account phone",
+   "company phone legacy account"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\nIn classic Harbour CRM, the client is the business using the CRM, and its number was kept on the old My Account page.\n\n1. Click your name at the top right and choose **My Account**.\n2. Open the **Company Profile** section.\n3. Edit **Primary Phone**.\n4. Click **Update Profile**.\n\nChanges needed a support ticket if the account had more than one **Super Admin**. No verification code was sent. This number is different from any contact's phone number.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-change-billing-email-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Change the billing email (classic)",
+  "aliases": [
+   "update invoice email for subscription old",
+   "classic billing contact",
+   "old My Account billing"
+  ],
+  "body": "Archived: describes the classic interface, retired in March 2025.\n\n1. Click your name and choose **My Account**.\n2. Open **Plan & Billing**.\n3. Click **Change** next to **Invoice Email**.\n4. Enter the new address and click **Save**.\n\nIn classic the receipts for the whole account went to this single address, and there was no confirmation link. Because of that, some accounts discovered missed receipts months later. The newer Billing page supports additional recipients and a verification email.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-change-currency-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Change currency (classic Settings > Legacy)",
+  "aliases": [
+   "switch currency old CRM",
+   "legacy currency setting",
+   "default currency classic"
+  ],
+  "body": "Archived: classic interface, retired in March 2025.\n\n1. Go to **Settings** > **Legacy** > **Localisation**.\n2. Choose a value from **Base Currency**.\n3. Click **Apply**.\n\nChanging the base currency in classic recalculated every opportunity value using that day's exchange rate, which surprised many clients. This is no longer the behaviour: amounts are left unchanged. Classic also required you to log out and back in before the new currency symbol appeared.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-reset-password-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Reset your password (classic sign-in page)",
+  "aliases": [
+   "forgot password old login",
+   "classic password reset",
+   "can't sign in old"
+  ],
+  "body": "Archived: describes the classic sign-in page, retired in March 2025.\n\n1. On the old sign-in page, click **Trouble signing in?** under the password box.\n2. Type your username. In classic this was often not your email address.\n3. Click **Email Me**.\n4. Follow the link, which expired after 24 hours, and enter a password of at least 8 characters.\n\nPasswords from classic were accepted without symbols or numbers. Everyone has since been asked to update to the newer 12-character rule.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-lead-scoring-retired",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Lead scoring (retired feature)",
+  "aliases": [
+   "score my leads",
+   "lead score points",
+   "rate contacts automatically"
+  ],
+  "body": "Archived: this feature was retired in March 2025 along with the classic interface.\n\nLead scoring gave each contact a number of points based on activity.\n\n1. Go to **Settings** > **Legacy** > **Scoring Rules**.\n2. Click **New Rule**.\n3. Choose an event such as **Email opened** (+2) or **Form submitted** (+10).\n4. Click **Save Rule**.\n\nScores appeared in a **Score** column on the old Contacts tab. Existing scores were not carried over to the new interface. Use deal stages and tags to prioritise contacts instead.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-data-retention-policy-old",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Data retention policy for deleted records (pre-2025)",
+  "aliases": [
+   "how long are deleted contacts kept",
+   "old retention period",
+   "deleted data backups"
+  ],
+  "body": "Archived: superseded policy. Retention changed after March 2025.\n\nUnder the previous policy, records deleted from your Harbour CRM were kept in system backups for 7 days and then removed. During that period, the client's account owner could ask support to restore them.\n\nRequests had to be made from the client's registered billing email, and restoration was a full-account restore, not a single contact. Because of that, anything created after the backup time was lost.\n\nThis policy does not apply to accounts migrated to the new interface. Please see the current article on deleting contacts for the timeframes that apply today.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-import-contacts-classic",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Contacts",
+  "title": "Import contacts (classic importer)",
+  "aliases": [
+   "upload CSV to old CRM",
+   "classic import wizard",
+   "import customers legacy"
+  ],
+  "body": "Archived: classic importer, retired in March 2025.\n\n1. Click **Tools** > **Import Contacts**.\n2. Click **Choose File** and select a CSV. XLSX files were not supported.\n3. Click **Next** and match each column header to a field. Headers had to match exactly or be mapped by hand.\n4. Click **Run Import**.\n\nClassic created a duplicate whenever an email already existed, and there was no undo. The recommended trick was to export first, then import into a test account. Imports over 5,000 rows were split by support.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-tasks-tab-retired",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Activities",
+  "title": "Using the Tasks tab (retired)",
+  "aliases": [
+   "to-do list in old CRM",
+   "follow-up reminders classic",
+   "Tasks tab"
+  ],
+  "body": "Archived: the Tasks tab was retired in March 2025.\n\nIn the classic interface, follow-ups were kept in a separate Tasks tab.\n\n1. Click **Tasks** in the left menu.\n2. Click **New Task**.\n3. Type a **Subject**, choose a **Due Date** and link the task to a contact with **Related To**.\n4. Click **Save**.\n\nOverdue tasks were shown in red. Tasks are now created from the contact or deal itself under **Activities**, and existing tasks were migrated automatically. Recurring tasks were not supported in classic.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-api-key-legacy",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Generate a legacy API key",
+  "aliases": [
+   "old API token",
+   "classic API access",
+   "create API key old settings"
+  ],
+  "body": "Archived: legacy API keys stopped working in June 2025.\n\n1. Click the cog icon and choose **Settings** > **Legacy** > **API Access**.\n2. Click **Generate Key**.\n3. Copy the key immediately. It was shown only once.\n4. Use it as the **X-Harbour-Key** header on your requests.\n\nLegacy keys had full access to everything in the client's account and could not be limited. They have been replaced by scoped tokens. Anyone still using an old key must create a new token and update their connected tools.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-crm-sms-two-step",
+  "product": "Harbour CRM",
+  "status": "archived",
+  "category": "Account",
+  "title": "Two-step sign-in by text message (retired)",
+  "aliases": [
+   "SMS verification code",
+   "text message login code",
+   "old two factor"
+  ],
+  "body": "Archived: SMS codes were retired in March 2025 for security reasons.\n\nClassic accounts could receive a six-digit code by text message.\n\n1. Open **My Account** > **Security**.\n2. Click **Enable Text Verification**.\n3. Enter your mobile number and click **Send Code**.\n4. Type the code and click **Confirm**.\n\nThe number used was the sign-in user's own mobile, not the client contact number in company settings. If you still see this setting, switch to an authenticator app as described in the current security articles.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-people-update-employee-phone-classic",
+  "product": "Harbour People",
+  "status": "archived",
+  "category": "Employees",
+  "title": "Update an employee's phone number (classic)",
+  "aliases": [
+   "change staff phone old People",
+   "edit employee mobile classic",
+   "legacy staff directory"
+  ],
+  "body": "Archived: describes the classic People directory, retired in 2025.\n\n1. Click **Staff Directory** in the left menu.\n2. Click the employee's name.\n3. Click the **Edit** pencil on the **Contact Info** card.\n4. Change **Mobile** or **Work Phone**.\n5. Click **Save**.\n\nIn the classic version only the **HR Admin** role could change numbers; employees saw their own details as read-only. Numbers were shown in the staff directory to everyone, a setting that is now optional.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-people-leave-request-classic",
+  "product": "Harbour People",
+  "status": "archived",
+  "category": "Leave",
+  "title": "Request leave (classic form)",
+  "aliases": [
+   "book time off old People",
+   "apply for annual leave classic",
+   "old leave form"
+  ],
+  "body": "Archived: classic leave form, retired in 2025.\n\n1. Click **My Leave** and then **Request Leave**.\n2. Pick a **Leave Type** from the list.\n3. Type the **From** and **To** dates in DD/MM/YYYY format.\n4. Add a reason in the **Comments** box.\n5. Click **Submit Request**.\n\nYour manager received an email with Approve and Decline links. Half days could only be entered by writing 0.5 in the **Days** box. The calendar view did not exist in classic.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-people-add-employee-classic",
+  "product": "Harbour People",
+  "status": "archived",
+  "category": "Employees",
+  "title": "Add an employee (classic wizard)",
+  "aliases": [
+   "new starter old People",
+   "create staff record legacy",
+   "onboard employee classic"
+  ],
+  "body": "Archived: the three-step wizard was retired in 2025.\n\n1. Click **Staff Directory** then **Add Employee**.\n2. Step 1: enter **Name**, **Email** and **Start Date**.\n3. Step 2: choose **Department** and **Manager**.\n4. Step 3: tick the **Welcome email** box if you want the invitation sent.\n5. Click **Finish**.\n\nBank details and tax numbers could not be entered at this point; they were added later by a second administrator. The new onboarding checklist replaces this process.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-invoicing-send-reminder-classic",
+  "product": "Harbour Invoicing",
+  "status": "archived",
+  "category": "Invoices",
+  "title": "Send an invoice reminder (classic)",
+  "aliases": [
+   "chase unpaid invoice old",
+   "overdue notice classic",
+   "payment reminder legacy"
+  ],
+  "body": "Archived: describes the classic invoice list, retired in 2025.\n\n1. Click **Sales** > **Invoice List**.\n2. Tick the overdue invoices, shown with a red date.\n3. Click **Send Reminder**.\n4. A fixed message is shown. The text could only be edited by an administrator in **Settings** > **Legacy** > **Email Text**.\n5. Click **Send**.\n\nReminders could not be scheduled in advance. Customers saw a plain email with the invoice attached as a PDF and no online payment link.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-invoicing-create-invoice-classic",
+  "product": "Harbour Invoicing",
+  "status": "archived",
+  "category": "Invoices",
+  "title": "Create an invoice (classic editor)",
+  "aliases": [
+   "make a new invoice old editor",
+   "classic invoice form",
+   "raise invoice legacy"
+  ],
+  "body": "Archived: classic invoice editor, retired in 2025.\n\n1. Click **Sales** > **New Invoice**.\n2. Choose the customer from the **Bill To** drop-down.\n3. Click **Add Line** for each product or service and enter **Description**, **Qty** and **Price**.\n4. Tick **Tax Inclusive** if prices already include tax.\n5. Click **Save Draft** or **Approve & Send**.\n\nThe classic editor had no autosave, so closing the window lost your work. Invoice numbers could not be changed after approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-invoicing-refund-policy-old",
+  "product": "Harbour Invoicing",
+  "status": "archived",
+  "category": "Payments",
+  "title": "Refund policy for Harbour Invoicing payments (old)",
+  "aliases": [
+   "refund customer payment old",
+   "how long do refunds take previously",
+   "payment refunds policy"
+  ],
+  "body": "Archived: superseded policy, replaced January 2025.\n\nUnder the earlier policy, refunds of card payments taken through Harbour Invoicing had to be requested by raising a ticket with support, and only the full amount could be returned.\n\nRefunds took up to 10 working days and the processing fee on the original payment was not returned.\n\nClients can now issue full or partial refunds themselves from the payment record, and the fee treatment is described in the current pricing terms. This article is kept for audit purposes and should not be used to answer current questions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-invoicing-change-currency-classic",
+  "product": "Harbour Invoicing",
+  "status": "archived",
+  "category": "Settings",
+  "title": "Change invoice currency (classic)",
+  "aliases": [
+   "old invoice currency setting",
+   "switch currency legacy invoicing",
+   "default currency classic invoice"
+  ],
+  "body": "Archived: describes Settings > Legacy, retired in 2025.\n\n1. Click the cog icon and choose **Settings** > **Legacy** > **Business**.\n2. Open the **Currency** drop-down.\n3. Pick the currency and click **Save**.\n\nClassic only allowed one currency per account, so every invoice, quote and statement changed at once. Invoices that were already approved kept their old symbol on the PDF but showed the new one on screen, which caused confusion. Create a separate account if you needed to bill in two currencies.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-mail-create-campaign-classic",
+  "product": "Harbour Mail",
+  "status": "archived",
+  "category": "Campaigns",
+  "title": "Create an email campaign (Classic editor)",
+  "aliases": [
+   "send a newsletter old editor",
+   "classic campaign builder",
+   "make mass email legacy"
+  ],
+  "body": "Archived: describes the Classic editor, retired in March 2025.\n\n1. Click **Campaigns** > **Create** and choose **Classic Editor**.\n2. Type a **Campaign Name** and **Subject**.\n3. Select a list under **Send To**.\n4. In the editor, use the toolbar to add text, images and buttons. Layouts were chosen from six fixed templates.\n5. Click **Send Test**, then **Schedule** or **Send Now**.\n\nThe classic editor did not preview on mobile screens. Segments were not available; you had to build a separate list.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-mail-add-subscriber-classic",
+  "product": "Harbour Mail",
+  "status": "archived",
+  "category": "Lists",
+  "title": "Add a subscriber (classic lists)",
+  "aliases": [
+   "add someone to mailing list old",
+   "subscribe contact manually legacy",
+   "classic list members"
+  ],
+  "body": "Archived: classic Lists screen, retired in March 2025.\n\n1. Click **Lists** and then the name of your list.\n2. Click **Add Subscriber**.\n3. Type the **Email Address** and, if you like, **First Name**.\n4. Tick **They have given permission** to continue.\n5. Click **Add**.\n\nSubscribers added by hand were marked as **Manual**. Classic could not import from Harbour CRM contacts; you had to export and upload a CSV. The sync introduced in the new version removes that step.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-mail-sender-domain-legacy",
+  "product": "Harbour Mail",
+  "status": "archived",
+  "category": "Settings",
+  "title": "Set up a sender domain (legacy DNS wizard)",
+  "aliases": [
+   "authenticate email domain old",
+   "SPF DKIM setup classic",
+   "verify domain Mail"
+  ],
+  "body": "Archived: legacy wizard retired in 2025.\n\n1. Go to **Settings** > **Legacy** > **Sender Domains**.\n2. Click **Add Domain** and type yours.\n3. Copy the two **TXT** records shown and add them in your DNS host.\n4. Click **Check Records**. Verification could take up to 48 hours.\n\nThe wizard used a shared signing key, so reputation was shared with other clients. The current setup provides a unique key for each domain and lists the records with copy buttons.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-desk-assign-ticket-classic",
+  "product": "Harbour Desk",
+  "status": "archived",
+  "category": "Tickets",
+  "title": "Assign a ticket (classic Desk)",
+  "aliases": [
+   "give ticket to agent old",
+   "reassign ticket classic",
+   "legacy ticket owner"
+  ],
+  "body": "Archived: describes the classic Desk inbox, retired in 2025.\n\n1. Click **Inbox** and open the ticket.\n2. In the header click the **Owner** name.\n3. Choose an agent from the list. Teams were not available as owners.\n4. Click **Set Owner**.\n\nThe agent was not told unless you ticked **Notify by email**. Assigning several tickets at once was done from the list with **Select All** and **Change Owner**, which applied to every ticket on the page, including ones you did not mean to select.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-desk-create-ticket-classic",
+  "product": "Harbour Desk",
+  "status": "archived",
+  "category": "Tickets",
+  "title": "Create a ticket on behalf of a customer (classic)",
+  "aliases": [
+   "log a support request old Desk",
+   "new ticket classic",
+   "open case manually"
+  ],
+  "body": "Archived: classic Desk, retired in 2025.\n\n1. Click **New Case** at the top of the **Inbox**.\n2. Type the customer's email under **Requester**.\n3. Enter a **Subject** and describe the issue.\n4. Choose a **Priority** (Low, Normal or Urgent).\n5. Click **Create & Close** or **Create & Open**.\n\nCases were the classic name for tickets. Attachments were limited to 5 MB. Customers did not receive a copy unless **Email requester** was ticked.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-desk-sla-policy-old",
+  "product": "Harbour Desk",
+  "status": "archived",
+  "category": "Automation",
+  "title": "Service level targets (old policy)",
+  "aliases": [
+   "response time targets",
+   "SLA timers previously",
+   "first reply time old"
+  ],
+  "body": "Archived: superseded, replaced in 2025.\n\nUnder the previous setup, Harbour Desk used one account-wide first-reply target. Go to **Settings** > **Legacy** > **Targets** and enter a number of hours.\n\nThe clock ran 24 hours a day, including weekends, and was not paused when a ticket was waiting for the customer. Breached cases turned red in the **Inbox**.\n\nBusiness hours and separate targets by priority are now supported, so this article should not be used to describe how timers work today.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-projects-create-project-classic",
+  "product": "Harbour Projects",
+  "status": "archived",
+  "category": "Projects",
+  "title": "Create a project (classic)",
+  "aliases": [
+   "start new project old interface",
+   "classic project setup",
+   "legacy project creation"
+  ],
+  "body": "Archived: describes the classic Projects screen, retired in 2025.\n\n1. Click **Projects** then **Start Project**.\n2. Enter a **Title** and **Description**.\n3. Pick a **Project Type**: Standard or Template-based.\n4. Select members from the **Team** list.\n5. Click **Create**.\n\nClassic opened the project on the **List** tab; boards were added later. Colours and icons did not exist. The **Client Access** option shown in some older screenshots has been removed.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-projects-add-task-classic",
+  "product": "Harbour Projects",
+  "status": "archived",
+  "category": "Tasks",
+  "title": "Add a task (classic task list)",
+  "aliases": [
+   "new task old Projects",
+   "create to-do classic",
+   "legacy task form"
+  ],
+  "body": "Archived: classic task list, retired in 2025.\n\n1. Open the project and click the **Tasks** tab.\n2. Click **+ Task** at the bottom of the list.\n3. Type the **Task Name** and press **Enter**.\n4. Click the row to open the side panel and set **Assignee** and **Due**.\n\nClassic did not allow sub-tasks, and an assignee could only be one person. To split work, users created several tasks with similar names, which made reports hard to read.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "archived-projects-archive-project-classic",
+  "product": "Harbour Projects",
+  "status": "archived",
+  "category": "Projects",
+  "title": "Archive a finished project (classic)",
+  "aliases": [
+   "close completed project old",
+   "hide project legacy",
+   "archive project classic"
+  ],
+  "body": "Archived: classic behaviour, retired in 2025.\n\n1. Open **Projects** and find the project.\n2. Click **Actions** > **Close Project**.\n3. Choose whether to **Keep tasks visible** or **Hide tasks**.\n4. Click **Confirm**.\n\nClosed projects were moved to the **Closed** tab. They could be reopened only by a **Project Admin**. Time entries could not be added after closing, so unbilled hours had to be logged first.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-bulk-edit-contact-phone",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Bulk edit contact phone numbers",
+  "aliases": [
+   "change many contact phone numbers at once",
+   "mass update phone numbers",
+   "bulk phone number edit"
+  ],
+  "body": "Draft: waiting on final UI labels from design. Feature not released yet.\n\nIf your client list has changed phone providers or area codes, you will be able to update several contacts' phone numbers in one go.\n\n1. Open **Contacts** and tick the boxes beside the contacts you want to change.\n2. Choose **[bulk action menu name TBC]** then **Edit phone**.\n3. Pick a rule: **Replace prefix**, **Reformat numbers** or **Set a single number**.\n4. Review the preview table and select **[confirm button TBC]**.\n\nTODO: confirm the maximum batch size (currently 500 in testing) and whether the change shows in the activity timeline.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-contact-merge-tool",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Merge duplicate contacts with the new merge tool",
+  "aliases": [
+   "combine two contacts into one",
+   "duplicate contact merge",
+   "fix duplicate contacts"
+  ],
+  "body": "Draft: not for publication until the merge tool leaves beta.\n\nWhen the same customer of yours appears twice, the merge tool combines both records into one and keeps the history.\n\n1. Open **Contacts** > **[Duplicates tab, name TBC]**.\n2. Select a suggested pair, or tick two contacts and choose **Merge**.\n3. For each field that differs, choose which value to keep.\n4. Select **[Merge contacts button TBC]**.\n\nNotes and deals from both records are attached to the surviving contact. TODO: screenshots, and decide whether merges can be undone within 30 days. Legal still to review the wording about data retention.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-ai-suggested-deal-stages",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Deals",
+  "title": "AI-suggested deal stages",
+  "aliases": [
+   "automatic deal stage suggestions",
+   "let Harbour suggest the next stage",
+   "smart pipeline suggestions"
+  ],
+  "body": "Draft: EDITOR NOTE - feature name may change before launch.\n\nHarbour can look at recent emails, calls and notes on a deal and suggest which pipeline stage it belongs in. Suggestions never move a deal on their own.\n\n1. Open a deal from **Deals**.\n2. Look for the **[Suggested stage badge TBC]** beside the current stage.\n3. Select **Accept** to move the deal, or **Dismiss** to hide the suggestion.\n\nTo switch suggestions off for your whole account, a client administrator can go to **Settings** > **[AI features, label TBC]**.\n\nTODO: add accuracy disclaimer from legal and the list of supported languages.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-add-contact-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "How to add a contact (rewrite)",
+  "aliases": [
+   "create a new contact",
+   "add a customer to my CRM",
+   "new contact record"
+  ],
+  "body": "Draft rewrite - do not publish until the new contact form ships in the October release.\n\nA contact is one of your own customers or prospects stored in your Harbour CRM.\n\n1. Select **+ New** at the top of the screen and choose **Contact**.\n2. Enter a **First name** and **Email**. Everything else is optional.\n3. Add a **Phone** number with its country code.\n4. Start typing in **Company** to link an existing business, or select **[Create company, label TBC]**.\n5. Select **Save**.\n\nTODO: replace screenshot 2, new form has a Source field. Check whether duplicate warning text is final.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-update-contact-phone-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Update a contact's phone number (rewrite)",
+  "aliases": [
+   "change a contact's phone",
+   "edit customer phone number",
+   "contact phone number wrong"
+  ],
+  "body": "Draft: needs review by support before going live.\n\nNeed to correct the phone number stored for one of your contacts? You can edit it inline from the contact's page.\n\n1. Open **Contacts** and search for the person.\n2. Hover over the **Phone** field and select the pencil icon.\n3. Type the new number including the country code.\n4. Press **Enter** or select **[tick icon, name TBC]** to save.\n\nIf a contact has more than one number, use **Add another phone** and mark one as **Primary**.\n\nTODO: confirm the validation message wording. This is separate from the client contact number in account settings.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-change-contact-email-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Change a contact's email address (rewrite)",
+  "aliases": [
+   "edit contact email",
+   "update customer email in CRM",
+   "fix contact email typo"
+  ],
+  "body": "Draft: rewrite in progress, waiting on screenshots.\n\nTo change the email address of one of your contacts:\n\n1. Go to **Contacts** and open the contact record.\n2. Select **Edit** in the top right corner.\n3. Replace the address in the **Email** field.\n4. Select **Save changes**.\n\nHarbour checks the format of the new address and warns you if another contact already uses it. Previous addresses are kept in the **History** tab so past email threads stay linked.\n\nTODO: explain what happens to mailing list subscriptions when the address changes [wording TBC with Mail team].",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-delete-contact-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Delete a contact (rewrite)",
+  "aliases": [
+   "remove a contact from CRM",
+   "erase customer record",
+   "delete a customer"
+  ],
+  "body": "Draft: policy wording on recovery period still being confirmed.\n\nDeleting a contact removes the person from your lists, but you may be able to recover them for a short time.\n\n1. Open **Contacts** and select the contact.\n2. Choose the **...** menu then **Delete contact**.\n3. Read the confirmation message and select **[Delete button label TBC]**.\n\nLinked deals stay in your pipeline but show **Contact removed**. Linked companies are not affected.\n\nTODO: confirm whether the recovery period is 14 or 30 days. Need a separate paragraph for client administrators who must delete data on request.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-export-contacts-csv-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Export contacts to CSV (rewrite)",
+  "aliases": [
+   "download my contacts",
+   "export customer list",
+   "contacts to spreadsheet"
+  ],
+  "body": "Draft: the export wizard is being redesigned, labels will change.\n\nYou can download your contacts as a CSV file to open in a spreadsheet.\n\n1. Open **Contacts**.\n2. Apply a filter if you only need some contacts, or leave it blank for everyone.\n3. Select **Export** then **[CSV option, name TBC]**.\n4. Choose the columns to include.\n5. Select **Download**. Large lists are emailed to the client's account owner as a link.\n\nTODO: state the row limit (50,000?) and which roles can export. Add a note on how custom fields appear as columns.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-link-contact-to-company-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Companies",
+  "title": "Link a contact to a company (rewrite)",
+  "aliases": [
+   "associate a contact with a business",
+   "attach contact to company",
+   "set a contact's company"
+  ],
+  "body": "Draft: editor note, check terms with design (is it Company or Organisation in the new UI?).\n\n1. Open the contact from **Contacts**.\n2. In the **Company** field, start typing the business name.\n3. Select the match from the list, or choose **[Create new company TBC]** if it does not exist yet.\n4. Select **Save**.\n\nA contact can be linked to one primary company and several secondary ones. The contact then appears on the company's **People** panel.\n\nTo unlink, clear the field and save.\n\nTODO: new screenshot for the secondary company picker.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-add-company-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Companies",
+  "title": "Add a company (rewrite)",
+  "aliases": [
+   "create a company record",
+   "new business in CRM",
+   "add an organisation"
+  ],
+  "body": "Draft: rewrite waiting on final UI labels from design.\n\nCompanies are the businesses your contacts work for.\n\n1. Select **+ New** then **Company**.\n2. Enter the **Company name**. This is the only required field.\n3. Add the **Website**, **Phone** and **Address** if you have them.\n4. Choose an **Owner** from your team.\n5. Select **Save company**.\n\nOnce saved, use **Add contact** on the company page to link people straight away.\n\nTODO: describe the website lookup that auto-fills the logo [feature flag, not live yet].",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-edit-company-details-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Companies",
+  "title": "Edit a company's phone, website or address (rewrite)",
+  "aliases": [
+   "change company phone number",
+   "update company website",
+   "change business address in CRM"
+  ],
+  "body": "Draft: pending review. Address autocomplete is not available to every client yet.\n\n1. Go to **Companies** and open the company.\n2. Select **Edit details**.\n3. Update the **Phone**, **Website** or **Address** fields. For the address, start typing and pick a suggestion, or use **Enter manually**.\n4. Select **Save**.\n\nChanges apply immediately and are shown on every linked contact.\n\nTODO: add the [Billing address checkbox, label TBC] explanation and mention that website URLs are checked for https:// automatically.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-create-deal-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Deals",
+  "title": "Create a deal (rewrite)",
+  "aliases": [
+   "add a new deal",
+   "start a sales opportunity",
+   "new deal in pipeline"
+  ],
+  "body": "Draft rewrite, do not publish. The stage picker is changing.\n\nA deal tracks a possible sale to one of your contacts.\n\n1. Open **Deals** and select **+ New deal**.\n2. Give the deal a **Name** and an **Amount**.\n3. Choose the **Contact** and, if relevant, the **Company**.\n4. Pick a **Pipeline** and starting **Stage**.\n5. Set an **Expected close date**.\n6. Select **Create**.\n\nThe amount uses the currency chosen for your account.\n\nTODO: screenshot of [Stage picker, name TBC]. Check whether Expected close date will become required.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-mark-deal-won-lost-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Deals",
+  "title": "Mark a deal as won or lost (rewrite)",
+  "aliases": [
+   "close a deal",
+   "deal lost reason",
+   "set deal to won"
+  ],
+  "body": "Draft: the lost-reason list is not final.\n\nWhen a sale is decided, close the deal so your reports stay accurate.\n\n1. Open the deal.\n2. Select **Won** or **Lost** at the top of the page.\n3. If you chose **Lost**, pick a **Reason** from the list [reason names TBC].\n4. Select **Confirm**.\n\nWon deals count toward your revenue report on the close date you set. You can reopen a closed deal from the **...** menu using **Reopen deal**.\n\nTODO: describe how Invoicing can create an invoice from a won deal, once that link is announced.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-move-deal-stage-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Deals",
+  "title": "Move a deal to another stage (rewrite)",
+  "aliases": [
+   "change deal stage",
+   "drag deal in pipeline",
+   "advance a deal"
+  ],
+  "body": "Draft: keyboard shortcuts section is a placeholder.\n\nThere are two ways to move a deal along your pipeline.\n\nFrom the board view:\n1. Open **Deals** and choose **Board**.\n2. Drag the deal card into the next column.\n\nFrom the deal page:\n1. Open the deal.\n2. Select the stage name at the top, then pick a new stage from the list.\n\nMoving a deal records the change in its timeline. Some stages may ask for extra details, such as a **Next step**.\n\nTODO: [keyboard shortcut table] and a note about stages that require approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-create-custom-field-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Settings",
+  "title": "Create a custom field (rewrite)",
+  "aliases": [
+   "add a custom field to contacts",
+   "new field in CRM",
+   "extra contact field"
+  ],
+  "body": "Draft: field types list will grow before launch.\n\nCustom fields store details that Harbour does not track out of the box, such as a customer's account manager or renewal month.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select the record type: **Contacts**, **Companies** or **Deals**.\n3. Choose **Add field**.\n4. Enter a **Label** and pick a **Field type** such as Text, Number, Date or Dropdown.\n5. Select **Save**.\n\nThe field appears at the bottom of the record straight away.\n\nTODO: add [Required toggle, label TBC] and the limit of fields per record type.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-rename-custom-field-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Settings",
+  "title": "Rename a custom field (rewrite)",
+  "aliases": [
+   "change custom field label",
+   "edit custom field name",
+   "relabel a field"
+  ],
+  "body": "Draft: confirm with engineering that renaming keeps report filters working.\n\n1. Go to **Settings** > **Custom fields**.\n2. Find the field in the list for Contacts, Companies or Deals.\n3. Select the pencil icon beside it.\n4. Type the new **Label**.\n5. Select **Save**.\n\nThe field type cannot be changed once data has been entered. Existing values and report filters keep working under the new name.\n\nTODO: the internal field key never changes, so API users are unaffected [check wording]. Add screenshot with the new [Rename dialog, label TBC].",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-delete-custom-field-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Settings",
+  "title": "Delete a custom field (rewrite)",
+  "aliases": [
+   "remove a custom field",
+   "get rid of a field in CRM",
+   "custom field deletion warning"
+  ],
+  "body": "Draft: wording of the warning is still with legal.\n\nDeleting a custom field removes its values from every record, so export your data first if you may need it.\n\n1. Go to **Settings** > **Custom fields**.\n2. Open the correct tab: **Contacts**, **Companies** or **Deals**.\n3. Select the **...** menu beside the field and choose **Delete**.\n4. Type the field label to confirm, then select **[Delete field button TBC]**.\n\nOnly client administrators can delete fields.\n\nTODO: document the 30-day recovery option if it makes the release. Link to the export article.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-client-contact-number-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Account",
+  "title": "Change your client contact number (rewrite)",
+  "aliases": [
+   "update our business phone in account settings",
+   "change account phone number",
+   "our company contact number"
+  ],
+  "body": "Draft: terminology check - keep 'client' for the business that uses Harbour.\n\nThe client contact number is the phone number Harbour uses to reach your business about your account. It is not the phone number of one of your contacts.\n\n1. Select your profile picture then **Account settings**.\n2. Open the **Business details** tab.\n3. Edit **Client contact number**.\n4. Select **Save**. [Verification step with SMS code - TBC]\n\nOnly client administrators can change this number.\n\nTODO: say whether support calls are redirected immediately.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-change-billing-email-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Account",
+  "title": "Change the billing email (rewrite)",
+  "aliases": [
+   "update billing contact email",
+   "where invoices for Harbour are sent",
+   "change subscription invoice email"
+  ],
+  "body": "Draft: rewrite pending, billing page is moving.\n\nHarbour sends your subscription receipts to the billing email on your account.\n\n1. Select your profile picture then **Account settings**.\n2. Open **Billing** > **[Billing contacts, tab name TBC]**.\n3. Select **Edit** beside **Billing email**.\n4. Enter the new address and select **Save**.\n\nA confirmation link is sent to the new address and the change takes effect once it is clicked. You can add a second address under **Additional recipients**.\n\nTODO: check that this is only available to the account owner.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-change-currency-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Account",
+  "title": "Change your account currency (rewrite)",
+  "aliases": [
+   "switch currency in CRM",
+   "deal amounts show wrong currency",
+   "set default currency"
+  ],
+  "body": "Draft: multi-currency support is unreleased. This article covers the single default currency only for now.\n\n1. Go to **Settings** > **Account** > **Regional**.\n2. Open the **Currency** drop-down.\n3. Choose the new currency.\n4. Select **Save**.\n\nExisting deal amounts keep their numbers; they are not converted. Reports show a notice for any deals created in a previous currency.\n\nTODO: [per-deal currency toggle, label TBC] and how exchange rates will be sourced. Warn about changing currency mid-quarter.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-reset-password-rewrite",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Account",
+  "title": "Reset your password (rewrite)",
+  "aliases": [
+   "forgot my password",
+   "can't log in to Harbour",
+   "change password"
+  ],
+  "body": "Draft: security team reviewing the reset email wording.\n\nIf you cannot sign in:\n\n1. On the sign-in page select **Forgot password?**\n2. Enter the email address you use for Harbour and select **Send reset link**.\n3. Open the email and select **Choose a new password**. The link works for 60 minutes.\n4. Enter a new password of at least 12 characters and select **[Set password button TBC]**.\n\nIf you are already signed in, go to **Account settings** > **Security** > **Change password**.\n\nTODO: add the passkey option once it is released. Clarify what happens if the email never arrives.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-restore-deleted-contacts",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Restore deleted contacts from the recycle bin",
+  "aliases": [
+   "undo contact delete",
+   "recover a deleted customer",
+   "contact recycle bin"
+  ],
+  "body": "Draft: unreleased feature, targeted for the next quarterly release.\n\nDeleted contacts will be held in a recycle bin so you can bring them back.\n\n1. Open **Contacts** and select **[Recycle bin icon TBC]**.\n2. Tick the contacts you want to bring back.\n3. Select **Restore**.\n\nRestored contacts return with their notes, linked companies and deal history. Contacts are removed permanently after the retention period.\n\nTODO: retention period (30 days?), who can see the bin, and a note that bulk deletes by import rollback are handled separately.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-import-contacts-v2",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Contacts",
+  "title": "Import contacts from a spreadsheet (new importer)",
+  "aliases": [
+   "upload contacts CSV",
+   "bring in customer list",
+   "import contacts to Harbour"
+  ],
+  "body": "Draft: new importer is in internal testing, so labels are provisional.\n\n1. Open **Contacts** and select **Import**.\n2. Drop in a CSV or XLSX file.\n3. On the mapping screen, match each column to a Harbour field. Unmatched columns can create a new **Custom field**.\n4. Choose what to do with duplicates: **Skip**, **Update** or **[Merge, option TBC]**.\n5. Select **Start import**.\n\nYou will receive an email summary when the import finishes.\n\nTODO: file size limit, supported encodings and an error report example.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-crm-multiple-pipelines",
+  "product": "Harbour CRM",
+  "status": "draft",
+  "category": "Deals",
+  "title": "Set up more than one sales pipeline",
+  "aliases": [
+   "add a second pipeline",
+   "separate pipelines for products",
+   "create pipeline in CRM"
+  ],
+  "body": "Draft: EDITOR NOTE - multiple pipelines launch to Plus plans first.\n\nIf you sell more than one kind of thing, give each its own pipeline with separate stages.\n\n1. Go to **Settings** > **Pipelines**.\n2. Select **Add pipeline**.\n3. Name it and add your **Stages** in order.\n4. For each stage set a **Win probability**.\n5. Select **Save pipeline**.\n\nUse the pipeline switcher at the top of **Deals** to move between them.\n\nTODO: explain moving existing deals between pipelines [UI not ready] and the plan comparison table.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-invoicing-recurring-templates-v2",
+  "product": "Harbour Invoicing",
+  "status": "draft",
+  "category": "Recurring invoices",
+  "title": "Recurring invoice templates v2",
+  "aliases": [
+   "repeat invoices automatically",
+   "set up monthly invoice template",
+   "recurring billing schedule"
+  ],
+  "body": "Draft: templates v2 is not released. Do not link from the live help centre.\n\nRecurring templates let you bill the same customer on a schedule without recreating the invoice.\n\n1. Open **Invoices** > **Recurring**.\n2. Select **New template**.\n3. Choose the customer and add line items.\n4. Under **Schedule** pick **Weekly**, **Monthly** or **[Custom, name TBC]**.\n5. Decide whether to **Send automatically** or **Save as draft**.\n6. Select **Activate**.\n\nTODO: add pause and skip behaviour, and what happens when prices change.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-invoicing-send-reminder-rewrite",
+  "product": "Harbour Invoicing",
+  "status": "draft",
+  "category": "Invoices",
+  "title": "Send an invoice reminder (rewrite)",
+  "aliases": [
+   "chase an overdue invoice",
+   "remind customer to pay",
+   "payment reminder email"
+  ],
+  "body": "Draft rewrite: reminder templates are being renamed.\n\n1. Open **Invoices** and filter by **Overdue**.\n2. Select the invoice.\n3. Choose **Send reminder**.\n4. Pick a template such as **Friendly nudge** or **[Final notice, name TBC]**.\n5. Edit the message if you wish and select **Send**.\n\nThe reminder is logged under **Activity** on the invoice, and the customer sees a pay-now link.\n\nTo send reminders automatically, go to **Settings** > **Reminders**.\n\nTODO: confirm number of days before and after the due date available in the schedule.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-invoicing-partial-payments",
+  "product": "Harbour Invoicing",
+  "status": "draft",
+  "category": "Payments",
+  "title": "Record a partial payment",
+  "aliases": [
+   "customer paid part of an invoice",
+   "part payment",
+   "deposit received on invoice"
+  ],
+  "body": "Draft: not yet released, behind a feature flag.\n\nWhen a customer pays only part of an invoice you can record what arrived and keep the rest open.\n\n1. Open the invoice.\n2. Select **Record payment**.\n3. Enter the **Amount received**. If it is lower than the total, the **[Partial payment banner TBC]** appears.\n4. Choose the **Payment date** and method.\n5. Select **Save**.\n\nThe invoice status changes to **Part paid** and shows the balance due.\n\nTODO: how reminders treat the remaining balance, and how this appears on statements.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-invoicing-change-currency",
+  "product": "Harbour Invoicing",
+  "status": "draft",
+  "category": "Settings",
+  "title": "Change the invoice currency",
+  "aliases": [
+   "bill in a different currency",
+   "set currency on invoice",
+   "switch invoice currency"
+  ],
+  "body": "Draft: waiting on final UI labels from design.\n\nYou can invoice in a currency other than your default one.\n\n1. Create or open a draft invoice.\n2. Select the **Currency** drop-down above the line items.\n3. Choose the currency. The exchange rate is shown beside it.\n4. Review the totals and select **Save**.\n\nTo change your default for all new invoices, go to **Settings** > **Defaults** > **[Default currency, label TBC]**.\n\nTODO: sent invoices cannot change currency - add the workaround of voiding and reissuing, pending policy sign-off.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-mail-create-email-campaign-rewrite",
+  "product": "Harbour Mail",
+  "status": "draft",
+  "category": "Campaigns",
+  "title": "Create an email campaign (rewrite)",
+  "aliases": [
+   "send a newsletter",
+   "make a marketing email",
+   "new mass email"
+  ],
+  "body": "Draft: the new campaign builder replaces three screens with one. Labels will change.\n\n1. Open **Campaigns** and select **New campaign**.\n2. Enter a **Campaign name** and **Subject line**.\n3. Choose your **Audience**, either a list or a saved segment.\n4. Pick a layout and edit the content.\n5. Select **Preview and test** and send yourself a test.\n6. Choose **[Schedule or send button TBC]**.\n\nTODO: add the A/B subject test option and a note about sending limits for new accounts.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-mail-ai-subject-lines",
+  "product": "Harbour Mail",
+  "status": "draft",
+  "category": "Campaigns",
+  "title": "AI subject line suggestions",
+  "aliases": [
+   "generate subject lines",
+   "improve email open rates",
+   "suggested subject"
+  ],
+  "body": "Draft: unreleased. Do not publish until legal approves the AI wording.\n\nWhile writing a campaign, Harbour Mail can suggest subject lines based on your content.\n\n1. In the campaign editor, select the **Subject line** field.\n2. Choose **Suggest subjects**.\n3. Review the three options and select one to use, or **Regenerate**.\n4. Edit the text as needed.\n\nSuggestions are never sent without your approval. The **[Tone selector, label TBC]** lets you pick formal or casual.\n\nTODO: supported languages, and whether content is stored.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-mail-unsubscribe-page",
+  "product": "Harbour Mail",
+  "status": "draft",
+  "category": "Lists",
+  "title": "Customise your unsubscribe page",
+  "aliases": [
+   "edit unsubscribe message",
+   "unsubscribe link wording",
+   "opt-out page"
+  ],
+  "body": "Draft: editor note - screenshots from the staging site only.\n\nEvery campaign includes an unsubscribe link. You can change what people see after they click it.\n\n1. Go to **Settings** > **Compliance**.\n2. Select **Unsubscribe page**.\n3. Edit the **Heading** and **Message**.\n4. Turn on **Ask for a reason** if you want feedback.\n5. Select **Save**.\n\nThe page always keeps the required confirmation button.\n\nTODO: add a [Resubscribe link toggle, name TBC] and the legal note for each region.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-desk-assign-ticket-rewrite",
+  "product": "Harbour Desk",
+  "status": "draft",
+  "category": "Tickets",
+  "title": "Assign a ticket to a team member (rewrite)",
+  "aliases": [
+   "give ticket to an agent",
+   "change ticket owner",
+   "reassign a support ticket"
+  ],
+  "body": "Draft: rewrite pending, new ticket sidebar not live.\n\n1. Open **Tickets** and select the ticket.\n2. In the right-hand panel find **Assignee**.\n3. Select the name and choose an agent or a **Team**.\n4. Add an optional **Internal note** and select **Assign**.\n\nThe agent is notified by email and in the Harbour app. To assign several tickets, tick them in the list and use **[Bulk assign, label TBC]**.\n\nTODO: describe what happens when the chosen agent is marked away.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-desk-auto-assign-rules",
+  "product": "Harbour Desk",
+  "status": "draft",
+  "category": "Automation",
+  "title": "Auto-assign tickets by rule",
+  "aliases": [
+   "round robin ticket assignment",
+   "automatic ticket routing",
+   "assign tickets by keyword"
+  ],
+  "body": "Draft: automation rules are unreleased.\n\n1. Go to **Settings** > **Automation** > **Assignment rules**.\n2. Select **New rule**.\n3. Set conditions, for example **Subject contains** or **Channel is**.\n4. Choose an action: **Assign to agent**, **Assign to team** or **[Round robin, name TBC]**.\n5. Drag the rule to set its priority and select **Save**.\n\nRules run when a ticket is created and never override a manual assignment.\n\nTODO: rule limit per account and a troubleshooting section.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-desk-merge-tickets",
+  "product": "Harbour Desk",
+  "status": "draft",
+  "category": "Tickets",
+  "title": "Merge duplicate tickets",
+  "aliases": [
+   "combine two tickets",
+   "same customer opened two tickets",
+   "join support tickets"
+  ],
+  "body": "Draft: waiting on final UI labels from design.\n\nIf a customer writes in twice about the same issue, merge the tickets so replies stay in one place.\n\n1. Open the ticket you want to keep.\n2. Select **...** > **Merge**.\n3. Search for the duplicate by number or subject.\n4. Confirm with **[Merge button TBC]**.\n\nThe duplicate is closed and its messages appear in the main ticket's history, marked as merged.\n\nTODO: merges cannot be undone [confirm], and attachments over 25 MB need a separate note.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-people-update-employee-phone-rewrite",
+  "product": "Harbour People",
+  "status": "draft",
+  "category": "Employees",
+  "title": "Update an employee's phone number (rewrite)",
+  "aliases": [
+   "change staff phone number",
+   "edit employee contact details",
+   "employee mobile number"
+  ],
+  "body": "Draft: field permissions are changing, check with the product team.\n\n1. Open **People** and search for the employee.\n2. Select the **Contact** tab.\n3. Select **Edit** beside **Mobile phone** or **Work phone**.\n4. Enter the new number and select **Save**.\n\nEmployees can also update their own numbers from **My profile**. HR managers decide in **Settings** > **Permissions** whether staff may do this.\n\nTODO: [Emergency contact section, name TBC], and say whether payroll is notified of changes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-people-bulk-leave-import",
+  "product": "Harbour People",
+  "status": "draft",
+  "category": "Leave",
+  "title": "Import leave balances in bulk",
+  "aliases": [
+   "upload leave balances",
+   "set leave for all staff",
+   "leave entitlement CSV"
+  ],
+  "body": "Draft: unreleased, due in the next People update.\n\n1. Go to **Leave** > **Balances**.\n2. Select **Import**.\n3. Download the **template file** and fill in one row per employee.\n4. Upload the file and review the preview.\n5. Select **[Apply balances, button TBC]**.\n\nBalances replace the current figure for each leave type listed in the file.\n\nTODO: explain how carry-over days are handled, how errors are reported, and whether this works for part-year employees.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-people-emergency-contact",
+  "product": "Harbour People",
+  "status": "draft",
+  "category": "Employees",
+  "title": "Add an employee emergency contact",
+  "aliases": [
+   "emergency contact details",
+   "next of kin",
+   "who to call for staff"
+  ],
+  "body": "Draft: editor note - sensitive data article, privacy review required.\n\n1. Open the employee's record in **People**.\n2. Select the **Personal** tab.\n3. Under **Emergency contacts**, choose **Add contact**.\n4. Enter the **Name**, **Relationship** and **Phone**.\n5. Select **Save**.\n\nOnly HR managers and the employee can see these details.\n\nTODO: maximum number of contacts, [consent checkbox, label TBC], and retention wording after an employee leaves.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-projects-create-project-rewrite",
+  "product": "Harbour Projects",
+  "status": "draft",
+  "category": "Projects",
+  "title": "Create a project (rewrite)",
+  "aliases": [
+   "start a new project",
+   "set up a project",
+   "new project in Harbour"
+  ],
+  "body": "Draft: new project wizard in progress.\n\n1. Select **+ New** and choose **Project**.\n2. Enter a **Project name** and choose a **Colour**.\n3. Pick **Start from scratch** or a **Template**.\n4. Invite teammates under **Members**.\n5. Set a **Start date** and **Due date**.\n6. Select **Create project**.\n\nYour new project opens on the **Board** view.\n\nTODO: update the template picker screenshot, mention [Client access toggle, label TBC], and describe the privacy options once they are final.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-projects-gantt-view",
+  "product": "Harbour Projects",
+  "status": "draft",
+  "category": "Views",
+  "title": "Use the timeline (Gantt) view",
+  "aliases": [
+   "see project schedule",
+   "task dependencies chart",
+   "gantt chart"
+  ],
+  "body": "Draft: timeline view is unreleased. Screenshots are mock-ups.\n\n1. Open a project and select **Timeline** from the view switcher.\n2. Drag the ends of a bar to change the start or due date.\n3. To link tasks, drag from the dot on one bar to another.\n4. Use **Zoom** to switch between days, weeks and months.\n\nDependent tasks move automatically if you turn on **[Auto-shift, name TBC]**.\n\nTODO: milestone markers, critical path highlight and a note on how the view works on phones.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "draft-projects-project-templates",
+  "product": "Harbour Projects",
+  "status": "draft",
+  "category": "Projects",
+  "title": "Save a project as a template",
+  "aliases": [
+   "reuse a project setup",
+   "project template",
+   "duplicate project structure"
+  ],
+  "body": "Draft: waiting on final UI labels from design.\n\n1. Open the project you want to reuse.\n2. Select **...** > **Save as template**.\n3. Name the template and choose what to keep: **Tasks**, **Sections**, **Members**, **Due date offsets**.\n4. Select **Save template**.\n\nYour template appears in **New project** > **Templates**. Edit or delete it later from **Settings** > **Templates**.\n\nTODO: sharing templates between workspaces [not decided], and the limit on tasks per template.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-walking-a-customer-through-adding-a-contact",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through adding a contact",
+  "aliases": [
+   "train add contact",
+   "new agent contact walkthrough",
+   "how to coach add contact"
+  ],
+  "body": "Internal training for Tier 1 agents. Do not share this with customers.\n\nWhen a customer asks how to add a contact, confirm first whether they have the Contacts permission. If the Add button is missing, check their role in the admin console before anything else.\n\n1. Ask the customer to open Contacts and select **Add contact**.\n2. Have them enter first name, last name and at least one of email or phone.\n3. Remind them that duplicates are flagged by email match only.\n4. Save, then confirm the contact appears in the list.\n\nTag your ticket with the CRM-Basics macro. Aim to resolve in one reply; reopen rates above 8 percent are reviewed in your monthly coaching session.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-restoring-a-deleted-contact-from-the-admin-console",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring a deleted contact from the admin console",
+  "aliases": [
+   "undelete contact",
+   "recover deleted contact admin",
+   "restore contact runbook"
+  ],
+  "body": "Internal runbook. Customers cannot see the Recycle Bin screen and must not be told it exists.\n\n1. Confirm the requester is an account owner and verify identity using the standard checklist.\n2. In the admin console open Tenant, then Data Recovery, then Contacts.\n3. Search by tenant ID and the contact's original email.\n4. Select **Restore** and choose \"Restore with history\".\n5. Add an internal note with the ticket number.\n\nDeleted contacts are kept for 30 days. After that, escalate to the Data Services queue; recovery from backup needs Tier 3 approval and takes two business days. Do not promise recovery before you have confirmed the record exists.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-explaining-duplicate-contact-warnings",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining duplicate contact warnings",
+  "aliases": [
+   "duplicate warning coaching",
+   "dedupe training agents",
+   "duplicate contact explained internal"
+  ],
+  "body": "Staff only. Customers regularly ask why Harbour flagged a duplicate when the names differ.\n\nInternally, the matcher compares normalised email first, then phone digits. Name is never used. This is intentionally not documented publicly because customers try to game it.\n\nWhat to say: \"Harbour flagged another contact with the same email or phone.\"\n\nWhat not to say: anything about the matching order or the 0.92 phone similarity threshold.\n\nIf a customer insists the flag is wrong, check for a trailing space in the stored email, a known cause. Raise a ticket in the CRM-Data queue only if the stored values genuinely differ.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-merging-two-contacts-when-the-customer-cannot",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: merging two contacts when the customer cannot",
+  "aliases": [
+   "merge contacts admin",
+   "force merge contact",
+   "manual contact merge"
+  ],
+  "body": "Internal only. The customer-facing merge fails when both records have different owners on active deals.\n\n1. Get written confirmation from the account owner of which record survives.\n2. Open the admin console, then Contacts, then Merge tool.\n3. Enter both record IDs; the first is the survivor.\n4. Tick \"Reassign deals to survivor\" and review the preview.\n5. Run the merge and note the audit ID on the ticket.\n\nMerges cannot be undone. Do not share this procedure with customers, and never run it on a customer's request alone without the owner's confirmation. Large merges over 500 linked activities go to the Data Services queue.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-using-the-internal-admin-console-to-change-a-client-s-contact-number",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Using the internal admin console to change a client's contact number",
+  "aliases": [
+   "change client phone admin",
+   "edit phone number admin console",
+   "update contact number internal"
+  ],
+  "body": "Staff only. Customers can edit their own contacts; this procedure is for locked or imported records.\n\n1. Verify the caller with two identity questions from the verification checklist.\n2. Open the admin console and select the tenant.\n3. Go to Records, then Contacts, and search by contact ID.\n4. Click **Override edit** and enter the new number in international format.\n5. Record the reason code \"Customer request\" and the ticket number.\n\nOverride edits are audited weekly by Support Quality. Never change a number based on an email alone; a call-back to the existing number on file is required. Do not tell customers about the Override edit option.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-contacts-missing-after-an-import",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: contacts missing after an import",
+  "aliases": [
+   "missing contacts after import escalate",
+   "import lost records escalation",
+   "data loss import ticket"
+  ],
+  "body": "Internal escalation guide. Do not share this with customers.\n\nIf a customer reports contacts missing after an import, first check the import log in the admin console for rejected rows. Most cases are rejected rows due to invalid email format.\n\nEscalate to the Data Services queue when:\n- the log shows success but the count is lower than the file\n- more than 1,000 rows are affected\n- the customer is on the Enterprise plan\n\nInclude the tenant ID, import job ID and the original file if supplied. Mark severity S2 for Enterprise and S3 otherwise. Data Services responds within four business hours for S2. Tell customers only that the issue is under investigation.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-imports-timing-out",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): imports timing out",
+  "aliases": [
+   "import timeout workaround",
+   "csv import fails large file",
+   "stuck import internal"
+  ],
+  "body": "Internal only until engineering publishes a fix note. Tracked as a known issue in the Engineering board.\n\nSymptom: imports of more than 20,000 rows sit at \"Processing\" and fail after 15 minutes.\n\nWorkaround to offer:\n1. Ask the customer to split the file into parts of 10,000 rows or fewer.\n2. Import the parts one at a time, waiting for each to finish.\n3. If a job is stuck, request a manual unstick from the Data Services queue.\n\nDo not mention the root cause, which is a queue worker memory limit. Do not promise a fix date. Link the ticket to the known-issue parent so we can measure impact.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-how-to-explain-custom-fields-to-a-new-customer",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: how to explain custom fields to a new customer",
+  "aliases": [
+   "custom fields coaching",
+   "train custom field setup",
+   "explain custom fields agents"
+  ],
+  "body": "Staff training. Use plain language; many customers confuse custom fields with tags.\n\n1. Explain that a custom field stores one extra piece of information, such as a renewal date.\n2. Ask what they want to record and pick the right type: text, number, date or dropdown.\n3. Point them to Settings, then Custom fields, then **New field**.\n4. Remind them that changing a field type later can lose data.\n\nInternally, each tenant is capped at 100 custom fields per object on Standard and 250 on Premium. Do not quote these caps proactively; only mention them if the customer hits the limit. Offer a temporary uplift only with Team Lead approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-raising-the-custom-field-limit-for-a-tenant",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: raising the custom field limit for a tenant",
+  "aliases": [
+   "custom field cap increase",
+   "uplift field limit",
+   "more custom fields approval"
+  ],
+  "body": "Internal policy. Do not share this with customers.\n\nThe default cap is 100 custom fields per object. Support may request a temporary uplift to 150 when the customer can show a genuine business need.\n\n1. Confirm the tenant is in good standing with no overdue invoice.\n2. Ask which fields are needed and why standard fields do not work.\n3. Get Team Lead approval and record it on the ticket.\n4. Submit the uplift in the admin console under Tenant limits.\n\nUplifts above 150 need Product Operations sign-off and are reviewed after 90 days. Never describe the cap as negotiable in writing; say \"we can look at your setup\".",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-recovering-a-deleted-custom-field",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: recovering a deleted custom field",
+  "aliases": [
+   "restore custom field",
+   "undelete field values",
+   "custom field data recovery"
+  ],
+  "body": "Staff only. Deleting a custom field removes its values, but they remain recoverable for 14 days.\n\n1. Confirm the account owner is requesting the restore.\n2. In the admin console go to Tenant, then Data Recovery, then Fields.\n3. Search for the field name and select the deletion event.\n4. Choose **Restore field and values**.\n5. Add the ticket number to the audit note.\n\nIf the field name has since been reused, restore fails. Rename the new field first with the customer's consent. After 14 days, escalate to Data Services; this needs Tier 3 approval. Do not tell customers about the 14 day window unless they ask directly.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-internal-custom-date-fields-display-one-day-off",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue (internal): custom date fields display one day off",
+  "aliases": [
+   "date field off by one",
+   "timezone custom date bug",
+   "custom date wrong day"
+  ],
+  "body": "Internal only. Engineering ticket is open and a fix is scheduled for a later release.\n\nSymptom: date custom fields show a day earlier for customers in timezones ahead of UTC when the value was set through import.\n\nWorkaround:\n1. Confirm the stored value in the admin console record viewer; it will show the correct date.\n2. Ask the customer to re-enter affected dates manually, or\n3. Re-import with the time set to 12:00 midday.\n\nDo not describe this as a data corruption issue. The stored data is correct; only the display is wrong. Do not give a release date. Link tickets to the parent issue so we can track volume.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-explaining-the-client-profile-page",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining the client profile page",
+  "aliases": [
+   "client profile coaching",
+   "client profile walkthrough staff",
+   "train client profile"
+  ],
+  "body": "Staff training. Do not share this with customers.\n\nThe client profile is the single page that shows a contact or company, its deals, activity and custom fields. New agents often mix it up with the contact list.\n\n1. Have the customer open any contact and click the name.\n2. Walk through the tabs: Overview, Deals, Activity and Files.\n3. Show how to pin fields to the header using **Customise**.\n\nInternally, the Activity tab is loaded lazily, which is why it sometimes appears empty for a few seconds. Do not raise a ticket for that unless it stays empty after a refresh. Practise this walkthrough in the sandbox tenant before taking live chats.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-client-profile-activity-tab-blank",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): client profile activity tab blank",
+  "aliases": [
+   "profile activity empty",
+   "blank activity tab",
+   "client profile not loading activity"
+  ],
+  "body": "Internal only.\n\nSymptom: the Activity tab on the client profile shows a spinner or no entries for contacts with more than 5,000 activities.\n\nWorkaround:\n1. Ask the customer to filter by date range using the filter at the top of the tab.\n2. If that fails, check the tenant in the admin console for the \"heavy profile\" flag.\n3. If flagged, escalate to the Platform queue for a cache rebuild; allow one business day.\n\nDo not tell customers the cause is cache related. Say \"we are looking into slow loading on large profiles\". Attach the contact ID and tenant ID to the ticket. Close it only when the customer confirms activity is visible again.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-changing-the-owner-of-a-company-when-the-owner-has-left",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: changing the owner of a company when the owner has left",
+  "aliases": [
+   "reassign company owner admin",
+   "owner left company reassign",
+   "bulk owner change"
+  ],
+  "body": "Staff only. Customers with no available owner often contact us in a hurry.\n\n1. Verify the requester is an account owner or admin.\n2. In the admin console select the tenant, then Records, then Companies.\n3. Filter by the departed user and select all.\n4. Choose **Bulk reassign** and pick the new owner.\n5. Tick \"Include open deals\" only if the customer confirms.\n\nBulk reassign is limited to 2,000 records per run. Larger changes go to the Data Services queue. Reassignments are logged and visible to the tenant admin audit view, so never run one without written confirmation. Do not share this procedure with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-explaining-how-company-records-link-to-contacts",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining how company records link to contacts",
+  "aliases": [
+   "company contact link coaching",
+   "train companies and contacts",
+   "explain company association"
+  ],
+  "body": "Staff training only.\n\nCustomers often think a company and a contact are the same thing. A company is an organisation; a contact is a person who can be linked to one or more companies.\n\n1. Ask whether they are looking at a person or an organisation.\n2. Show how to link a contact from the contact record using **Add company**.\n3. Explain that deleting a company does not delete its contacts.\n\nInternally, a contact can be linked to a maximum of 10 companies. The limit is not in the public help articles, so only mention it if a customer hits the error. Use the macro CRM-Company-Link for the standard reply and tag the ticket Companies.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-recovering-a-deleted-company-and-its-links",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: recovering a deleted company and its links",
+  "aliases": [
+   "restore company record",
+   "undelete company",
+   "company recovery admin"
+  ],
+  "body": "Internal runbook. Do not share this with customers.\n\n1. Confirm the requester is the account owner and verify identity.\n2. In the admin console open Tenant, then Data Recovery, then Companies.\n3. Search by company name and deletion date.\n4. Select **Restore** and choose \"Restore with contact links\".\n5. Confirm the linked contacts reappear on the company record.\n\nCompanies are recoverable for 30 days. If a contact was also deleted, restore it first, otherwise the link is dropped silently. After 30 days the request goes to Data Services and needs Tier 3 approval. Always add the audit ID to the ticket before closing.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-company-data-shown-to-the-wrong-tenant",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: company data shown to the wrong tenant",
+  "aliases": [
+   "cross tenant data exposure",
+   "company data leak escalation",
+   "privacy incident crm"
+  ],
+  "body": "Internal. Treat as a potential security incident. Do not share this with customers beyond the approved holding statement.\n\nIf a customer reports seeing another organisation's companies or contacts:\n1. Do not ask them to send screenshots by email.\n2. Collect only the tenant ID, record ID and time seen.\n3. Page the on-call Security Duty Manager immediately.\n4. Open a P1 ticket in the Security queue.\n\nThe holding statement is: \"We are investigating and will update you shortly.\" Never confirm or deny exposure. Privacy Officer decides on any customer notification. Log everything in the incident channel, not in the ticket body.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-coaching-a-customer-through-creating-a-deal",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: coaching a customer through creating a deal",
+  "aliases": [
+   "create deal walkthrough staff",
+   "train new deal",
+   "deal creation coaching"
+  ],
+  "body": "Staff training. Do not share this with customers.\n\n1. Ask which pipeline the customer wants; new accounts have a single default pipeline.\n2. Have them open Deals and choose **New deal**.\n3. Enter a deal name, value, linked contact or company and expected close date.\n4. Confirm the stage; new deals start in the first stage unless changed.\n\nCommon problems: the deal value field is hidden when the pipeline uses weighted values, and the customer lacks permission to create deals. Check the role in the admin console first. Do not discuss forecasting internals. Use the CRM-Deals-Create macro and tag the ticket Deals.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-restoring-a-deleted-deal",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring a deleted deal",
+  "aliases": [
+   "undelete deal",
+   "recover deleted deal",
+   "deal restore admin"
+  ],
+  "body": "Internal only.\n\n1. Verify the requester is an account owner or the deal owner.\n2. In the admin console go to Tenant, then Data Recovery, then Deals.\n3. Search by deal name or ID and select the deletion event.\n4. Choose **Restore deal and notes**.\n5. Note the audit ID on the ticket.\n\nDeals are recoverable for 30 days. Restored deals return to their original stage, but forecast snapshots are not recalculated until the following night. Warn the customer that reports may look different until then. Do not tell customers about the Recycle Bin screen. After 30 days, escalate to Data Services for backup recovery with Tier 3 approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-deals-stuck-in-a-closed-stage",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): deals stuck in a closed stage",
+  "aliases": [
+   "deal stuck closed won",
+   "cannot reopen closed deal",
+   "closed deal bug workaround"
+  ],
+  "body": "Internal only. Do not share this with customers.\n\nSymptom: a deal moved to Closed Won cannot be dragged back to an open stage; the board snaps it back.\n\nWorkaround:\n1. Ask the customer to open the deal and use **Reopen deal** from the actions menu.\n2. If the menu option is missing, check for a required custom field that is empty.\n3. If neither applies, ask Platform support to clear the stage lock in the admin console.\n\nThe cause is a validation race on pipelines with required stage fields. Do not explain this to customers; say \"a validation check is blocking the move\". Attach the deal ID to your ticket.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-pipeline-stage-limits-and-when-to-make-exceptions",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: pipeline stage limits and when to make exceptions",
+  "aliases": [
+   "pipeline stage cap",
+   "stage limit exception",
+   "more pipeline stages"
+  ],
+  "body": "Internal policy, not for customers.\n\nEach pipeline is limited to 12 stages on Standard and 20 on Premium. Customers rarely hit the limit, but when they do they ask for more.\n\n- Suggest merging low-use stages first.\n- Suggest a second pipeline for a different sales process.\n- Exceptions require Team Lead approval and are capped at 4 extra stages.\n\nRaise the exception in the admin console under Tenant limits and record the business reason. Exceptions expire after 90 days and are reviewed. Never state the exception process in writing; say \"we can review your setup with you\". Enterprise customers go to their Customer Success Manager first.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-forecast-numbers-that-disagree-with-the-pipeline",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: forecast numbers that disagree with the pipeline",
+  "aliases": [
+   "forecast mismatch escalate",
+   "pipeline total wrong",
+   "deal value sum disagrees"
+  ],
+  "body": "Internal escalation guide.\n\nCustomers sometimes report the forecast total differs from the pipeline board total. In most cases this is currency conversion or weighted values.\n\n1. Confirm the pipeline is not using weighted values.\n2. Check whether deals are in multiple currencies.\n3. Compare totals in the admin console reports view.\n\nEscalate to the Reporting queue only if the console total also disagrees with the board. Include tenant ID, pipeline ID and screenshots. Severity is S3 unless a customer is making a financial decision that week, in which case use S2 with Team Lead approval. Do not share the console report view with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-data-export-requests-for-crm-contacts",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: data export requests for CRM contacts",
+  "aliases": [
+   "export all contacts request",
+   "customer data export policy",
+   "bulk export approval"
+  ],
+  "body": "Internal policy. Do not share this with customers.\n\nCustomers can export from the product themselves. Support only runs a manual export when the customer is locked out or the file exceeds the in-product limit of 50,000 rows.\n\n1. Verify the requester is the account owner.\n2. Obtain written confirmation of what is being exported.\n3. Submit a request to the Data Services queue; allow two business days.\n4. Deliver through the secure transfer link only.\n\nNever attach an export to a ticket or email it. Exports for departing customers follow the Offboarding policy and must be completed within 30 days of cancellation. Record the request in the audit log.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-suspected-unauthorised-access-to-a-client-profile",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: suspected unauthorised access to a client profile",
+  "aliases": [
+   "account compromise escalation",
+   "unauthorised profile access",
+   "suspicious login crm"
+  ],
+  "body": "Internal. Handle quietly and quickly.\n\n1. Verify the reporter through the standard checklist.\n2. In the admin console open Tenant, then Security, then Sessions, and review recent logins by location.\n3. If unfamiliar sessions exist, use **Force sign-out** with the reporter's consent.\n4. Advise the customer to reset passwords and enable two-step sign-in.\n\nIf data was viewed or exported, page the Security Duty Manager and open a P1 in the Security queue. Do not tell the customer what the audit log shows beyond confirming the sign-outs. Do not share this document with customers. The Privacy Officer decides on notification.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-verifying-identity-before-changing-any-crm-record",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: verifying identity before changing any CRM record",
+  "aliases": [
+   "identity verification checklist",
+   "verify caller before edit",
+   "id check policy"
+  ],
+  "body": "Internal policy. Mandatory for all agents.\n\nBefore you change, restore or export any customer record, you must verify the requester.\n\n1. Confirm they are listed as an admin or account owner in the admin console.\n2. Ask two questions from the verification list, such as the plan name and the last four digits of the card.\n3. For phone requests, call back on the number on file.\n\nNever accept a request from an email address that is not on the account. Never reveal what the correct answers are. If verification fails twice, stop and escalate to the Team Lead. Failure to follow this policy is a conduct matter and is audited monthly.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-contact-search-missing-recent-records",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): contact search missing recent records",
+  "aliases": [
+   "search index lag",
+   "new contact not in search",
+   "search not finding contact"
+  ],
+  "body": "Internal only.\n\nSymptom: contacts created in the last few minutes do not appear in search, although they show in the contact list.\n\nThe search index can lag by up to 10 minutes during peak load.\n\nWorkaround:\n1. Ask the customer to open the contact from the list or via a recent activity link.\n2. If more than 30 minutes have passed, check the tenant's index status in the admin console.\n3. If it shows \"stalled\", escalate to the Platform queue for a reindex.\n\nDo not mention the index to customers; say \"search can take a few minutes to catch up\". Do not promise exact timings.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-answering-why-can-i-not-see-this-contact",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: answering \"why can I not see this contact\"",
+  "aliases": [
+   "contact visibility coaching",
+   "hidden contact training",
+   "permissions contact not visible"
+  ],
+  "body": "Staff training. Do not share this with customers.\n\nMost visibility complaints come from team-based sharing rules, not missing data.\n\n1. Ask who created the contact and which team they are on.\n2. In the admin console open the tenant, then Users, and view the customer's role and team.\n3. Check the sharing rule for Contacts: Private, Team or Everyone.\n\nExplain simply that the contact is shared with a different team. Only account owners can change sharing rules. Do not look up the contact itself for a non-admin user; confirm only that it exists once they are verified. Use the CRM-Visibility macro and tag Permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-fixing-a-contact-stuck-in-a-bad-sync-state",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: fixing a contact stuck in a bad sync state",
+  "aliases": [
+   "sync error contact fix",
+   "contact not syncing mail",
+   "resolve sync conflict internal"
+  ],
+  "body": "Internal runbook.\n\nContacts synced with Harbour Mail can enter a \"conflict\" state when edited on both sides within the same minute.\n\n1. Open the admin console and find the contact under Sync, then Conflicts.\n2. Compare the two versions shown side by side.\n3. Choose **Keep CRM version** unless the customer says otherwise.\n4. Click **Force resync** and wait two minutes.\n\nNever pick Keep Mail version without customer confirmation; it overwrites CRM history. If the conflict returns, escalate to the Integrations queue with the contact ID. Do not share the Conflicts screen or this procedure with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-retention-and-deletion-of-contact-data-on-request",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: retention and deletion of contact data on request",
+  "aliases": [
+   "right to erasure contact",
+   "privacy deletion request",
+   "permanent delete contact policy"
+  ],
+  "body": "Internal policy. Do not share this with customers.\n\nWhen a customer asks for a contact to be permanently erased, treat it as a privacy request.\n\n1. Verify the requester as an account owner.\n2. Confirm the contact is not on legal hold in the admin console.\n3. Open a ticket in the Privacy queue; do not delete it yourself.\n\nThe Privacy team completes erasure within 10 business days and also removes the record from backups at the next rotation. Customers can delete contacts themselves, but that only soft-deletes for 30 days. Never describe soft deletion as permanent. Record the request ID on the ticket.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-sales-playbook-positioning-custom-fields-for-larger-teams",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: positioning custom fields for larger teams",
+  "aliases": [
+   "sell custom fields",
+   "custom field upsell",
+   "premium plan field limits pitch"
+  ],
+  "body": "Internal sales guidance. Do not share this with customers.\n\nProspects in services and finance care about capturing details unique to their process. Lead with custom fields in the demo.\n\n- Ask what they track in spreadsheets today.\n- Show three typed fields on a client profile in under two minutes.\n- Mention that Premium raises the field cap, but only if they ask about scale.\n\nIf they object that other tools have unlimited fields, steer to the outcome: reporting on those fields and required fields on deals. Do not promise future field types. Offer a trial extension of up to 7 days with manager approval only.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-sales-playbook-handling-we-already-use-spreadsheets-objections",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling \"we already use spreadsheets\" objections",
+  "aliases": [
+   "spreadsheet objection",
+   "excel replacement pitch",
+   "sales objection handling crm"
+  ],
+  "body": "Internal sales playbook. Not for customers.\n\nThe most common objection is that spreadsheets are free and familiar.\n\n1. Acknowledge it: spreadsheets are a fine start.\n2. Ask what happens when two people edit the same file.\n3. Show the client profile, with deals and activity in one place.\n4. Offer to import their sheet during the call.\n\nThe import demo wins the room most of the time, so keep a clean sample file ready. Avoid saying competitors are worse. Do not quote discounts; anything beyond the standard 10 percent annual saving needs Sales Manager approval. Log the objection tag in the demo notes so we can track conversion.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-sales-playbook-when-a-customer-asks-for-a-discount-on-renewal",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: when a customer asks for a discount on renewal",
+  "aliases": [
+   "renewal discount rules",
+   "discount approval crm",
+   "retention discount policy"
+  ],
+  "body": "Internal only. Do not share this with customers.\n\nSupport must not offer discounts. Pass requests to the account team.\n\nFor reference, the approval ladder is:\n- up to 10 percent for annual prepay: Account Executive\n- 11 to 20 percent: Sales Manager\n- above 20 percent: Head of Sales and Finance\n\nBefore escalating, note the plan, seat count, tenure and the stated reason. Discounts are offered once per renewal cycle and never retroactively. If the customer threatens to cancel, route to the Retention queue immediately with the tag \"save\". Say only: \"I will ask the right team to review this for you\".",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-customer-reports-mass-accidental-deletion",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: customer reports mass accidental deletion",
+  "aliases": [
+   "bulk delete escalate",
+   "deleted everything crm",
+   "mass deletion recovery"
+  ],
+  "body": "Internal. Time matters; act within the hour.\n\n1. Ask the customer to stop making changes and not to re-import.\n2. Verify the account owner.\n3. In the admin console open Tenant, then Data Recovery and check the deletion events.\n4. If fewer than 500 records, restore them yourself.\n5. If more, open an S2 ticket in the Data Services queue and page the on-call engineer.\n\nBackups are taken nightly, so restores can lose up to 24 hours of changes; do not say this unless asked. Do not share this procedure with customers. Record all steps in the ticket for the post-incident review.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-handling-a-customer-who-wants-to-merge-two-companies",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: handling a customer who wants to merge two companies",
+  "aliases": [
+   "merge companies coaching",
+   "duplicate company training",
+   "combine company records"
+  ],
+  "body": "Staff only.\n\nCustomers can merge companies from the company record when both have the same owner. Train agents to check that first.\n\n1. Ask which company should remain.\n2. Open the survivor and choose **Merge**.\n3. Pick the second company and review the preview of contacts and deals.\n4. Confirm.\n\nIf the merge button is greyed out, the owners differ. Use the owner change procedure in the admin console only after written confirmation from the account owner. Merges are permanent; say so clearly before the customer confirms. Do not offer to merge on the customer's behalf without verification.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-imported-contacts-lose-phone-formattin",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): imported contacts lose phone formatting",
+  "aliases": [
+   "phone numbers lose plus sign",
+   "import strips leading zero",
+   "phone format bug import"
+  ],
+  "body": "Internal only.\n\nSymptom: after CSV import, numbers lose the leading zero or plus sign, for example 0412 becomes 412.\n\nCause: spreadsheet software converts the column to numbers before Harbour sees it.\n\nWorkaround:\n1. Ask the customer to format the phone column as text before saving.\n2. Re-import with \"Update existing\" selected, which matches on email.\n3. If the file cannot be fixed, offer a manual correction through Data Services.\n\nDo not blame the customer's software in writing. Say \"some spreadsheet programs change number formats on save\". Tag the ticket Import-Phone so we can measure how common this is.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-sandbox-and-demo-tenants-for-support-and-sales",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: sandbox and demo tenants for support and sales",
+  "aliases": [
+   "demo tenant rules",
+   "sandbox account policy",
+   "test tenant use"
+  ],
+  "body": "Internal policy.\n\nStaff may use sandbox tenants to reproduce customer issues and demo the product. Never use a live customer tenant for training or testing.\n\n- Request a sandbox from the Internal Tools queue; ready in one hour.\n- Sandboxes are wiped every 30 days.\n- Never load real customer data into a sandbox.\n- Use the standard sample dataset of 200 contacts.\n\nReproduce issues in the sandbox before escalating to engineering. Do not give customers sandbox login details, and do not mention that sandboxes exist. Breaches are raised with the Support Quality lead.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-api-integration-returning-errors-for-contacts",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: API integration returning errors for contacts",
+  "aliases": [
+   "api errors escalate",
+   "integration 429 contacts",
+   "developer api contact failures"
+  ],
+  "body": "Internal escalation guide.\n\nCustomers with integrations sometimes report failed contact updates.\n\n1. Ask for the request time, endpoint and response code.\n2. For 429 responses, check the tenant rate limit in the admin console. The default is 300 requests a minute.\n3. For 5xx responses, check the status board before anything else.\n\nEscalate to the Developer Support queue with a sample failed request, tenant ID and API key suffix (last four characters only). Never ask the customer for a full key. Rate limit increases need Product Operations approval. Do not share the rate limit figure with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-bulk-updating-a-custom-field-value-across-contacts",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: bulk updating a custom field value across contacts",
+  "aliases": [
+   "bulk edit custom field",
+   "mass update field value",
+   "bulk field change admin"
+  ],
+  "body": "Internal runbook. Do not share this with customers.\n\nCustomers can bulk edit up to 250 records in the product. Larger changes need Support.\n\n1. Verify the account owner and get the field name and new value in writing.\n2. In the admin console open Records, then Bulk jobs, then **New update**.\n3. Filter the contacts and preview the first 20 rows.\n4. Run the job and note the job ID on the ticket.\n\nBulk jobs can be rolled back for 24 hours using the Undo button on the job page. After that, they are final. Limit runs to 10,000 records; larger jobs go to Data Services. Never run one without a preview confirmed by the customer.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-handling-a-customer-who-cannot-find-the-deal-pipeline",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: handling a customer who cannot find the deal pipeline view",
+  "aliases": [
+   "pipeline view missing coaching",
+   "kanban board not showing",
+   "deals board training"
+  ],
+  "body": "Staff training. Do not share this with customers.\n\nThe board view is a user preference, not a missing feature, which confuses new customers.\n\n1. Ask the customer to open Deals and look for the view switcher at the top right.\n2. Have them choose **Board** instead of **List**.\n3. If the switcher is missing, check their role in the admin console; read-only users see the list only.\n\nOn small screens the switcher collapses into a menu, which is a frequent cause. Do not raise a bug for it. Use the CRM-Deals-Board macro, tag the ticket Deals and close it once the customer confirms the board is visible.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-response-times-and-priorities-for-crm-tickets",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: response times and priorities for CRM tickets",
+  "aliases": [
+   "sla internal crm",
+   "ticket priority rules",
+   "first response targets"
+  ],
+  "body": "Internal policy. Do not share these targets with customers.\n\n- S1, service down or data exposure: respond within 15 minutes, page the on-call manager.\n- S2, major feature broken for many users: respond within 1 hour.\n- S3, single user problem: respond within 4 business hours.\n- S4, how-to questions: respond within 1 business day.\n\nEnterprise customers are bumped up one level. Always set the priority before sending the first reply. If a ticket breaches its target, the Team Lead is notified automatically and must record a reason. Never quote these times to customers; say \"we aim to reply as soon as we can\".",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-customer-cannot-log-in-to-crm-at-all",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: customer cannot log in to CRM at all",
+  "aliases": [
+   "login failure escalation",
+   "locked out account crm",
+   "cannot sign in internal"
+  ],
+  "body": "Internal escalation guide.\n\n1. Verify the customer using the standard checklist.\n2. In the admin console open Users and check whether the account is locked, suspended or has an expired invitation.\n3. For lockouts, use **Unlock** and ask the customer to reset their password.\n4. For suspended accounts, check for overdue invoices before doing anything else.\n\nIf several users in one tenant cannot sign in, check the status board and open an S2 in the Identity queue. Do not tell customers why an account is suspended beyond \"there is a billing matter\"; direct them to their account owner. Do not share the console screens with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-company-logo-not-saving",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): company logo not saving",
+  "aliases": [
+   "logo upload fails",
+   "company image not updating",
+   "company logo bug"
+  ],
+  "body": "Internal only.\n\nSymptom: uploading a logo on a company record appears to succeed but the old image returns after refresh.\n\nThe cause is an image cache that is not purged for files over 2 MB.\n\nWorkaround:\n1. Ask the customer to resize the image below 1 MB and upload again.\n2. Ask them to refresh using a hard reload.\n3. If it persists, request a cache purge from the Platform queue with the company ID.\n\nDo not tell customers about the cache. Say \"large images can take a while to update\". Tag the ticket Company-Logo so we can report on how often it occurs.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-sales-playbook-moving-a-prospect-from-harbour-crm-to-the-wider-harbour",
+  "product": "Harbour CRM",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: moving a prospect from Harbour CRM to the wider Harbour suite",
+  "aliases": [
+   "cross sell harbour suite",
+   "bundle invoicing mail crm",
+   "suite upsell talking points"
+  ],
+  "body": "Internal sales guidance. Do not share this with customers.\n\nExisting CRM customers are the warmest leads for Invoicing, Mail and Desk.\n\n1. Ask what they do after a deal is won. Most say they invoice from another tool.\n2. Show a won deal creating an invoice in two clicks.\n3. Mention that Mail syncs contacts both ways.\n\nSupport agents may flag a lead by tagging the ticket \"suite-interest\" but must not pitch or quote prices. The bundle discount is 15 percent for three or more products and must be approved by the Sales Manager. Never promise integrations on the roadmap.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-support-training-explaining-how-to-create-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining how to create an invoice",
+  "aliases": [
+   "create invoice walkthrough staff",
+   "train new invoice",
+   "invoice creation coaching"
+  ],
+  "body": "Staff training. Do not share this with customers.\n\n1. Ask whether the customer wants a one-off or recurring invoice.\n2. Have them open Invoices and choose **New invoice**.\n3. Select the customer, add line items and set the due date.\n4. Review tax and click **Send**.\n\nCommon blockers are a missing tax setting and an unverified sender email. Check both in the admin console under Tenant, then Billing profile. Do not give tax advice; refer customers to their accountant. Tag tickets Invoicing-Create and use the macro of the same name. Aim for resolution on first reply.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-policy-when-to-refund-a-cancelled-subscription",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: when to refund a cancelled subscription",
+  "aliases": [
+   "refund cancelled plan",
+   "cancellation refund rules",
+   "subscription refund limit"
+  ],
+  "body": "Internal policy. Do not share this with customers.\n\nRefund decisions are based on timing.\n\n- Within 14 days of first purchase: full refund, Tier 1 may approve.\n- Annual plan within 30 days: pro rata refund, Team Lead approves.\n- After that: no refund, except for a documented service failure.\n\nAgents may approve up to 200 dollars. Anything above goes to Finance Operations. Always record the reason code on the ticket. Never promise a refund before approval and never state the refund limits to customers; say \"I will review your request against our terms\". Refunds take 5 to 10 business days.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-for-billing-disputes",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for billing disputes",
+  "aliases": [
+   "billing dispute escalate",
+   "chargeback escalation",
+   "disputed invoice internal"
+  ],
+  "body": "Internal escalation guide.\n\nBilling disputes include chargebacks, duplicate charges and charges after cancellation.\n\n1. Verify the account owner and capture the invoice number.\n2. Check the payment history in the admin console under Billing.\n3. If the charge is a clear duplicate, refund within your limit and log it.\n4. For chargebacks or amounts over 200 dollars, open a ticket in the Finance Operations queue.\n\nFinance responds within two business days. Do not argue the dispute with the customer or comment on the card issuer. Do not share the Billing screen details with customers. Escalate to the Billing Team Lead if the customer mentions legal action.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-runbook-reissuing-a-lost-or-voided-invoice",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: reissuing a lost or voided invoice",
+  "aliases": [
+   "void invoice reissue",
+   "recover invoice admin",
+   "invoice number gap fix"
+  ],
+  "body": "Staff only.\n\n1. Verify the requester is an account owner.\n2. In the admin console open Tenant, then Invoicing, then Voided documents.\n3. Locate the invoice by number and select **Reissue as new**.\n4. Confirm the new number sequence and send.\n\nInvoice numbers cannot be reused; a gap in the sequence is normal after a void. Some customers' accountants dislike gaps, so be ready to explain gently. Never edit an issued invoice amount for a customer; create a credit note instead. Do not share this procedure with customers. Record the reason code on the ticket for the monthly audit.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-known-issue-workaround-internal-invoice-pdfs-not-attaching-to-email",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): invoice PDFs not attaching to email",
+  "aliases": [
+   "invoice pdf missing email",
+   "attachment fails send invoice",
+   "invoice send bug"
+  ],
+  "body": "Internal only.\n\nSymptom: invoices send but the PDF is missing, mostly for invoices with more than 50 line items.\n\nWorkaround:\n1. Ask the customer to open the invoice and choose **Download PDF**.\n2. Have them send it from their own mail, or\n3. Split the invoice into two.\n\nIf the PDF will not generate at all, escalate to the Platform queue with the invoice ID. Do not mention the document renderer timeout. Say \"very large invoices can fail to attach\". Do not give a fix date. Link tickets to the parent known issue so engineering can track volume.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-sales-playbook-handling-objections-to-the-projects-price-rise",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to the Projects price rise",
+  "aliases": [
+   "projects price increase objection",
+   "price rise talking points",
+   "harbour projects pricing pushback"
+  ],
+  "body": "Internal sales playbook. Do not share this with customers.\n\nThe Harbour Projects price rise has caused pushback, mainly from small teams.\n\n1. Acknowledge the concern before explaining anything.\n2. Explain the added features the rise funds; keep to approved messaging.\n3. Offer annual prepay, which holds the previous price for the first 12 months.\n4. Suggest a plan review if their team has shrunk.\n\nDo not offer exceptions or grandfathering. Requests for either go to the Retention queue with the tag \"price\". Never speculate about future prices. Support agents should not negotiate; pass the customer to their account contact.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-a-escalation-path-failed-payments-on-an-invoicing-subscription",
+  "product": "Harbour Invoicing",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path: failed payments on an Invoicing subscription",
+  "aliases": [
+   "payment failed escalate",
+   "card declined internal",
+   "dunning escalation"
+  ],
+  "body": "Internal guide. Do not share this with customers.\n\nFailed subscription payments are retried on day 3, 7 and 14, after which the account moves to read-only.\n\n1. Check the retry state in the admin console under Billing.\n2. Ask the customer to update the card from their billing settings.\n3. If they have updated it but it still fails, open a Finance Operations ticket with the payment reference.\n\nAgents may pause the next retry once for up to 7 days with Team Lead approval. Never extend beyond day 14 without Finance sign-off. Do not reveal the retry schedule to customers; say \"we will try the payment again shortly\".",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-connecting-a-mailbox",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through connecting a mailbox",
+  "aliases": [
+   "connect mailbox training",
+   "mailbox setup coaching",
+   "new agent mail onboarding"
+  ],
+  "body": "Use this when coaching new agents on mailbox connection calls. Do not share this with customers.\n\n1. Confirm the customer's provider and whether their admin has blocked third-party apps.\n2. Ask them to open Settings, then Mailboxes, then Connect mailbox.\n3. Have them sign in and approve the permission screen. Stay on the line until the status reads Connected.\n4. Check the first sync in the admin console under Mail, Sync Monitor.\n\nMost failures are expired app passwords or a blocked consent screen. Never ask for the customer's mailbox password. If sync stays stuck for more than 30 minutes, open a ticket in the Mail-Tier2 queue with the mailbox ID.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-deleted-emails-from-the-mail-admin-console",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring deleted emails from the Mail admin console",
+  "aliases": [
+   "recover deleted mail internal",
+   "undelete email admin console",
+   "mail restore runbook"
+  ],
+  "body": "Deleted mail is kept in a hidden recovery store for 30 days. Customers cannot see this store, so do not describe it as a feature.\n\n1. Verify the requester is an account owner or admin.\n2. In the admin console open Mail, Recovery Store and search by mailbox ID.\n3. Select the date range and click Queue restore.\n4. Wait for the job to show Complete, normally under 20 minutes.\n5. Tell the customer the messages are back in a folder named Recovered.\n\nRestores older than 30 days need Mail-Tier2 approval and a ticket tagged RECOVERY-LATE. Always log the restore in the audit field of the case.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-scheduled-sends-delayed-after-daylight-saving-change",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): scheduled sends delayed after daylight saving change",
+  "aliases": [
+   "scheduled send late workaround",
+   "send later wrong time internal",
+   "mail timezone bug"
+  ],
+  "body": "Engineering has confirmed that scheduled emails shift by one hour for accounts whose timezone was saved before the daylight saving change. The fix is expected in a later release, and the date is not public. Do not share this with customers.\n\nWorkaround:\n1. Ask the customer to open Settings, then Profile, and re-save their timezone.\n2. In the admin console, open Mail, Scheduled Queue and confirm the new send times.\n3. If messages are already late, use Send now on each item.\n\nLink every case to the internal issue tag MAIL-TZ-DST. Do not promise compensation without approval from a team lead.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-when-to-disable-a-mailbox-for-suspected-spam",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: when to disable a mailbox for suspected spam",
+  "aliases": [
+   "spam suspension policy",
+   "disable mailbox abuse",
+   "outbound spam rule"
+  ],
+  "body": "Suspend sending only when the abuse monitor flags a mailbox for sending more than 500 messages in an hour or when the bounce rate passes 15 percent. This is internal only, and the thresholds must not be quoted to customers.\n\n- Use the Pause outbound toggle in the admin console, never delete the mailbox.\n- Add a note with the monitor alert ID.\n- Tell the customer their sending was paused for a security review.\n- Hand off to the Trust and Safety queue within one hour.\n\nOnly Trust and Safety can lift a pause that lasted more than 24 hours. If the customer disputes it, follow the escalation path for account disputes.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-mail-delivery-failures",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for Mail delivery failures",
+  "aliases": [
+   "mail bounce escalation",
+   "delivery problem escalate",
+   "email not arriving internal"
+  ],
+  "body": "Handle delivery cases in three stages. Do not share queue names with customers.\n\n1. Tier 1 checks the customer's domain records in the admin console under Mail, Domain Health. Fix anything marked red.\n2. If records are healthy and messages still bounce, create a ticket in the Mail-Tier2 queue with two sample bounce messages.\n3. If more than ten accounts report the same failure, page the on-call deliverability engineer through the incident channel and raise severity to major.\n\nSet customer expectations at one business day for Tier 2 replies. Never promise that a message will be delivered, only that we are investigating.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-shared-inbox-permissions",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining shared inbox permissions",
+  "aliases": [
+   "shared inbox coaching",
+   "team inbox access training",
+   "mail permissions script"
+  ],
+  "body": "New agents often confuse shared inbox access with mailbox delegation. Use this guide before taking calls.\n\nA shared inbox has three roles: Viewer, Responder and Manager. Only Managers can add members. Delegation is a separate feature and gives full mailbox access, so do not suggest it as a substitute.\n\n1. Ask which role the person needs.\n2. Confirm the requester is a Manager or admin.\n3. In the admin console open Mail, Shared Inboxes, select the inbox and edit members.\n\nNever add yourself to a customer inbox to troubleshoot. Use the read-only Support View, which logs each access. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-rebuilding-a-broken-mail-sync-using-the-admin-console",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: rebuilding a broken mail sync using the admin console",
+  "aliases": [
+   "reset mailbox sync internal",
+   "resync mail runbook",
+   "mail sync repair"
+  ],
+  "body": "Use this only after the customer has tried disconnecting and reconnecting.\n\n1. Open the admin console, then Mail, Sync Monitor, and find the mailbox ID.\n2. Note the last successful sync time in the case.\n3. Click Force rebuild. This clears the local index and re-downloads headers.\n4. Wait for the state to move from Rebuilding to Healthy. Large mailboxes can take up to two hours.\n5. Confirm with the customer that search works again.\n\nDo not run a rebuild more than twice in 24 hours. A third attempt must go to the Mail-Tier2 queue. This button is internal, so never refer to it by name when speaking to customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-mail-storage-limits",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to Mail storage limits",
+  "aliases": [
+   "mail storage objection",
+   "storage upsell script",
+   "mail plan upgrade pitch"
+  ],
+  "body": "Customers hitting storage limits are often frustrated. Use the playbook below and keep the discounting rules private.\n\n- Acknowledge first. Do not defend the limit.\n- Ask what is filling the mailbox. Attachments are usually the cause.\n- Offer cleanup help before an upgrade.\n- If they want more space, present the next tier and the annual saving.\n\nSupport agents may offer one month of the next tier free once per account. Anything beyond that needs sales approval via the Revenue queue. Do not share this with customers, and never mention that other customers received larger credits.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-attachments-over-20-mb-failing-to-send",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): attachments over 20 MB failing to send",
+  "aliases": [
+   "large attachment bug internal",
+   "mail attachment too big",
+   "attachment upload fails workaround"
+  ],
+  "body": "A gateway fault rejects some large attachments even though the visible limit is 25 MB. This is internal only until the release notes are published.\n\nWorkaround steps:\n1. Ask the customer to compress the file or send it through Harbour Projects file sharing.\n2. If the file must be sent, ask an engineer to raise the gateway threshold for that mailbox using the admin console Mail, Limits tab. This needs team lead approval.\n3. Tag the case MAIL-ATT-GW.\n\nDo not tell the customer that the 25 MB limit is incorrect. Say we are investigating a delay and offer the workaround.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-customer-requests-to-read-another-user-email",
+  "product": "Harbour Mail",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: handling customer requests to read another user email",
+  "aliases": [
+   "access to employee mailbox policy",
+   "mailbox access request rule",
+   "read someone else mail"
+  ],
+  "body": "Support never opens or reads a customer's mail content on request from a third party. This is non-negotiable.\n\n- Only an account owner can approve access to another user's mailbox, and they must do it in writing from their verified address.\n- Support may then enable delegation. Never export mail content ourselves.\n- If a staff member has left and the owner needs their mail, use the offboarding procedure and log it in the Mail-Tier2 queue.\n- Legal requests go straight to the Legal queue.\n\nRecord who approved, when and why in the case. Do not share this with customers beyond saying the owner must approve.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-creating-a-ticket-queue",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through creating a ticket queue",
+  "aliases": [
+   "desk queue setup training",
+   "new queue coaching",
+   "create helpdesk queue internal"
+  ],
+  "body": "Use this guide for calls about setting up queues in Harbour Desk. Do not share this with customers.\n\n1. Ask what the customer wants to route, for example billing or sales enquiries.\n2. Have them open Settings, then Queues, then New queue.\n3. Name the queue and choose a default assignee or team.\n4. Add routing rules by email address or form field.\n5. Send a test ticket and confirm it lands.\n\nCommon errors are overlapping rules where the older rule wins. Check ordering first. Our own internal queues use the prefix INT, which customers must never create, so remove it if a customer copies the pattern.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-merging-duplicate-tickets-in-the-desk-admin-console",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: merging duplicate tickets in the Desk admin console",
+  "aliases": [
+   "merge tickets internal",
+   "duplicate ticket cleanup",
+   "desk merge runbook"
+  ],
+  "body": "Customers can merge tickets themselves in the product, but only within one queue. Cross-queue merges are an admin console action.\n\n1. Confirm both ticket IDs and the requester's account.\n2. Open the admin console, then Desk, Ticket Tools, Merge.\n3. Choose the primary ticket. Its history is kept.\n4. Click Merge and wait for confirmation.\n\nMerges cannot be undone, so take a screenshot of both tickets first and add it to the case. Closed tickets older than 90 days need Desk-Tier2 approval. Do not share the admin console screen names with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-email-replies-creating-duplicate-tickets",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): email replies creating duplicate tickets",
+  "aliases": [
+   "duplicate tickets from email",
+   "desk reply creates new ticket",
+   "email threading bug workaround"
+  ],
+  "body": "Some replies lose their reference code because of a mail client quirk, so Desk opens a new ticket instead of updating the old one. Engineering tracks this as DESK-THR-14. Do not share this with customers.\n\nWorkaround:\n1. Merge the new ticket into the original using the admin console.\n2. Ask the customer to reply above the dashed line without editing the subject.\n3. For repeat cases, enable Match by sender and subject under Queue Settings, Advanced.\n\nIf more than 50 duplicates appear in an hour for one account, raise it to Desk-Tier2 right away.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-sla-credits-for-missed-response-targets",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: SLA credits for missed response targets",
+  "aliases": [
+   "SLA credit rules",
+   "service credit policy desk",
+   "missed SLA compensation"
+  ],
+  "body": "Customers on the Business and Enterprise plans have response targets. Credits are internal policy and must not be advertised.\n\n- Confirm the miss in the SLA report under Desk, Reports, Breaches.\n- A single miss gets an apology only.\n- Three misses in a month allow a credit of up to 10 percent of the monthly fee, approved by a team lead.\n- Anything above 10 percent goes to the Revenue queue.\n\nNever offer a credit before the customer raises it. Record the breach IDs and the approved amount in the case. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-desk-outages-affecting-many-customers",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for Desk outages affecting many customers",
+  "aliases": [
+   "desk incident escalation",
+   "helpdesk outage escalate",
+   "major incident desk"
+  ],
+  "body": "Declare a major incident when more than five customers report the same Desk failure within 30 minutes.\n\n1. Check the internal status board first.\n2. Post in the incident channel with a summary and three example case numbers.\n3. The incident manager role will assign a severity.\n4. Tag every related case INC and link it to the master ticket.\n5. Use only the approved status wording when replying.\n\nDo not speculate on causes or timelines with customers. Do not share this with customers. Updates go out every 30 minutes until the incident manager closes it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-automation-rules-without-over-promising",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining automation rules without over-promising",
+  "aliases": [
+   "desk automation coaching",
+   "ticket rules training",
+   "automation call script"
+  ],
+  "body": "Automation rules are popular and easy to break. Coach new agents using this outline.\n\n- Rules run in order, top to bottom, and stop at the first Stop processing action.\n- Rules run on ticket creation and update, not on historic tickets.\n- A bulk change needs a macro instead.\n\n1. Ask the customer to describe the outcome they want.\n2. Open Settings, then Automations and review the order.\n3. Test with a sample ticket.\n\nNever edit a customer's automations ourselves unless they ask in writing. Use the Support View in the admin console to look, not to change. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-exporting-ticket-history-for-a-customer-who-is-leaving",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: exporting ticket history for a customer who is leaving",
+  "aliases": [
+   "desk data export internal",
+   "ticket export for offboarding",
+   "helpdesk export runbook"
+  ],
+  "body": "Customers can request a full export when closing their account. Follow these steps in order.\n\n1. Verify the requester is an account owner.\n2. Open the admin console, then Desk, Data Export, and choose Full history.\n3. Select CSV and include attachments only if the customer asks. Attachments can make the file very large.\n4. Start the job and note the job ID in the case.\n5. Send the download link by the secure message tool, never as a plain email attachment.\n\nLinks expire after seven days. Exports over 5 GB must go to Desk-Tier2. Do not share the console path with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-desk-per-agent-pricing",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to Desk per-agent pricing",
+  "aliases": [
+   "desk pricing objection",
+   "per agent price pushback",
+   "helpdesk upsell playbook"
+  ],
+  "body": "Per-seat pricing is the most common reason a Desk trial stalls. Keep these talking points internal.\n\n- Ask how many people actually answer tickets. Light users can use the cheaper collaborator seat.\n- Compare against the cost of missed tickets, not against free tools.\n- Offer the annual option, which saves two months.\n\nAgents may extend a trial by seven days once. Discounts of any size need approval from the Revenue queue. Do not share this with customers, and never quote the internal discount ceiling.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-imports-timing-out-for-large-ticket-files",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): imports timing out for large ticket files",
+  "aliases": [
+   "desk import timeout",
+   "ticket import failing internal",
+   "large import workaround"
+  ],
+  "body": "Imports of more than 20,000 tickets can time out at the gateway, leaving a half-finished job. This is internal only.\n\nWorkaround:\n1. Check the import in the admin console, Desk, Import Jobs. Note how many rows were completed.\n2. Ask the customer to split the file into batches of 10,000 rows, removing rows already imported.\n3. Run each batch separately.\n4. If the job is stuck in Running for over an hour, cancel it from the console.\n\nTag the case DESK-IMP-TO. Do not promise a fix date. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-closing-tickets-on-behalf-of-a-customer",
+  "product": "Harbour Desk",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: closing tickets on behalf of a customer",
+  "aliases": [
+   "close ticket for customer policy",
+   "agent closing tickets rule",
+   "support ticket closure"
+  ],
+  "body": "Agents may close a Desk ticket on a customer's behalf only if the customer has confirmed in writing, or the ticket has had no reply for 14 days after two reminders.\n\n- Use the Resolved status, not Closed, so the customer can reopen.\n- Add an internal note with the reason.\n- Never close tickets to improve our own response metrics. This is audited monthly.\n\nSpam tickets can be deleted by a team lead only. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-adding-an-employee",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through adding an employee",
+  "aliases": [
+   "people add employee training",
+   "new hire record coaching",
+   "employee setup script"
+  ],
+  "body": "Harbour People holds sensitive data, so confirm identity before any change. Do not share this with customers.\n\n1. Verify the caller is an HR admin using the account verification checklist.\n2. Ask them to open People, then Add employee.\n3. Required fields are name, start date, role and employment type. Pay details are optional and can be added later.\n4. Have them save and check the profile appears in the directory.\n\nNever ask for tax file numbers or bank details over chat. If the customer pastes them into a ticket, mask them and tell the customer. Duplicate records go to People-Tier2.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-an-archived-employee-record-in-the-admin-console",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring an archived employee record in the admin console",
+  "aliases": [
+   "unarchive employee internal",
+   "restore terminated employee record",
+   "people archive runbook"
+  ],
+  "body": "Archived records are retained for seven years in a locked store. Customers only see that the employee is archived.\n\n1. Confirm the requester is an HR admin and note the reason.\n2. In the admin console open People, Archive Store and search by employee ID.\n3. Click Restore and choose whether to restore leave balances.\n4. Confirm the status returns to Active.\n\nRestoring a record that was archived over 12 months ago needs People-Tier2 approval. Never restore at the request of the archived employee. Log the ticket reference in the audit note. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-payroll-data-access-requests",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: handling payroll data access requests",
+  "aliases": [
+   "payroll data policy",
+   "who can see salary support",
+   "pay details access rule"
+  ],
+  "body": "Support agents must never view salary or bank fields. The Support View masks them, and any unmasking requires written approval from the Privacy queue.\n\n- Salary questions are answered from the customer's own screens, with the customer sharing their screen.\n- Bank detail changes can only be made by an HR admin in the product.\n- If an employee, not an admin, asks about someone else's pay, decline and do not explain what we hold.\n\nReport any suspected misuse to the Privacy queue at once. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-leave-balance-errors",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for leave balance errors",
+  "aliases": [
+   "leave balance wrong escalation",
+   "annual leave discrepancy internal",
+   "people leave bug escalate"
+  ],
+  "body": "Wrong leave balances are time sensitive near payroll cut-off.\n\n1. Check the leave policy assigned to the employee and the accrual start date.\n2. Compare with the Leave Ledger in the admin console, People, Ledger.\n3. If the ledger disagrees with the policy, open a People-Tier2 ticket with employee ID and screenshots.\n4. If more than 20 employees are affected, mark it high priority and notify the on-call engineer role.\n\nDo not manually edit ledger entries. Corrections are made only by Tier 2. Do not share this with customers. Tell customers we will update them within one business day.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-onboarding-checklist-not-sending-to-new-starters",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): onboarding checklist not sending to new starters",
+  "aliases": [
+   "onboarding email not sent internal",
+   "new starter checklist bug",
+   "people onboarding workaround"
+  ],
+  "body": "New starters whose start date is set in the past do not receive the onboarding checklist email. Engineering tracks this as PPL-ONB-07.\n\nWorkaround:\n1. Ask the HR admin to set the start date to today or later.\n2. Re-save the employee, which re-triggers the email.\n3. If it still fails, use Resend onboarding in the admin console, People, Onboarding Jobs.\n\nDo not tell the customer this is a defect. Say the checklist only sends for current or future start dates. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-performance-review-cycles",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining performance review cycles",
+  "aliases": [
+   "review cycle coaching",
+   "people performance training",
+   "appraisal setup script"
+  ],
+  "body": "Review cycles confuse new agents. Use this summary.\n\n- A cycle has stages: Setup, Self review, Manager review, Calibration and Release.\n- Moving to the next stage is one way. A stage cannot be reopened by the customer.\n- Only Support Tier 2 can reopen a stage, and only with a request from the HR admin.\n\n1. Open the cycle in the Support View to see its current stage.\n2. Confirm the customer's goal.\n3. Offer a new cycle if reopening is not suitable.\n\nNever read review comments aloud or paste them in a ticket. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-correcting-a-wrong-start-date-after-payroll-sync",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: correcting a wrong start date after payroll sync",
+  "aliases": [
+   "fix start date payroll sync",
+   "start date change internal",
+   "people payroll mismatch"
+  ],
+  "body": "When a start date is changed after the payroll sync, the payroll connector keeps the old date.\n\n1. Ask the HR admin to correct the date in the employee profile.\n2. In the admin console open People, Connectors, Payroll and find the employee's sync row.\n3. Click Re-sync employee.\n4. Wait for the status Matched.\n5. Ask the customer to confirm in their payroll system.\n\nIf the pay period is already closed, stop and send to People-Tier2. Do not share this with customers, and do not suggest they edit the payroll system directly unless the HR admin chooses to.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-people-per-employee-pricing",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to People per-employee pricing",
+  "aliases": [
+   "people pricing objection",
+   "per employee price script",
+   "hr upsell playbook"
+  ],
+  "body": "Small teams often say per-employee pricing is high. Keep this internal.\n\n- Ask how they manage leave, onboarding and documents today and what it costs in hours.\n- Highlight the inactive employee rule: archived staff are not billed.\n- Offer the annual plan.\n\nAgents can offer a 14 day trial extension once. Price concessions require approval from the Revenue queue, and the maximum authorised discount must never be quoted to customers. Do not share this with customers or mention competitor comparisons made in internal docs.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-deleting-an-employee-record-on-request",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: deleting an employee record on request",
+  "aliases": [
+   "delete employee data policy",
+   "employee erasure request",
+   "people deletion rule"
+  ],
+  "body": "An employee's request to delete their data is handled through the customer, who is the data controller.\n\n- Do not delete anything at the request of an individual employee.\n- Refer the employee to their HR admin.\n- If the HR admin confirms in writing, raise a Privacy queue ticket.\n- The Privacy team checks legal retention rules, such as payroll records, before approving.\n\nDeletion cannot be undone and takes up to 30 days. Do not share the retention periods with customers beyond saying some records must be kept. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-walking-a-customer-through-creating-a-project",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: walking a customer through creating a project",
+  "aliases": [
+   "projects create training",
+   "new project coaching",
+   "project setup script"
+  ],
+  "body": "Use this when coaching new agents on Harbour Projects calls. Do not share this with customers.\n\n1. Ask what they want to track, for example a client job or an internal launch.\n2. Have them select Projects, then New project.\n3. Choose a template or start blank. Templates save time for first-time users.\n4. Add members and set the visibility.\n5. Create the first task together.\n\nCommon confusion is between private and team projects. Private projects cannot be seen by admins in the product, though we can see them through the admin console Support View, which must only be used with consent. Do not mention this to customers unless asked.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-restoring-a-deleted-project-from-the-admin-console",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: restoring a deleted project from the admin console",
+  "aliases": [
+   "recover deleted project internal",
+   "undelete project runbook",
+   "projects restore"
+  ],
+  "body": "Deleted projects stay in a recovery store for 60 days. Customers are told 30 days, so do not share the longer period.\n\n1. Verify the requester is a workspace admin.\n2. Open the admin console, then Projects, Recovery, and search by project name or ID.\n3. Click Restore and select the original workspace.\n4. Confirm tasks and files appear.\n\nBetween 30 and 60 days, add the tag RESTORE-EXT and get team lead approval before restoring. After 60 days nothing can be recovered. Log all restores in the case audit field.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-gantt-view-loading-slowly-on-large-projects",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): Gantt view loading slowly on large projects",
+  "aliases": [
+   "gantt slow internal",
+   "timeline performance workaround",
+   "projects large project lag"
+  ],
+  "body": "Projects with more than 2,000 tasks load the timeline slowly because of a query fault. Engineering tracks it as PRJ-GNT-21. Do not share this with customers.\n\nWorkaround:\n1. Ask the customer to filter the timeline by assignee or milestone.\n2. Suggest archiving completed tasks, which removes them from the view without deleting them.\n3. If the page times out, increase the project's timeline cache in the admin console, Projects, Performance. This needs team lead approval.\n\nDo not give a fix date. Tell customers we are working on performance improvements.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-objections-to-the-projects-price-rise",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Sales",
+  "title": "Sales playbook: handling objections to the Projects price rise",
+  "aliases": [
+   "projects price increase objection",
+   "price rise script",
+   "projects renewal pushback"
+  ],
+  "body": "The Projects price rise has caused churn risk at renewal. This script is internal only.\n\n- Acknowledge the increase and thank them for staying.\n- Ask which features they use most, and tie value to those.\n- Offer to lock the current price for 12 months if they move to annual billing.\n- Do not discuss internal cost reasons.\n\nAgents can apply the price lock once per account without approval. Larger concessions go to the Revenue queue. Customers asking to cancel must be given the cancellation steps without delay. Never quote other customers' arrangements. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-guest-access-and-external-sharing-requests",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: guest access and external sharing requests",
+  "aliases": [
+   "external sharing policy projects",
+   "guest user rules",
+   "client guest access internal"
+  ],
+  "body": "Guests can view projects but not billing or members. Support never adds a guest on a customer's behalf.\n\n- The workspace admin must make the request.\n- If a former client or contractor asks for access, send them to the workspace admin and do not confirm the project exists.\n- If sharing was done in error, remove the guest in the admin console, Projects, Access, and log it.\n\nMass invites over 25 guests are reviewed by the Trust and Safety queue first. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-missing-files-in-projects",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for missing files in Projects",
+  "aliases": [
+   "lost files escalation projects",
+   "attachment missing internal",
+   "project files gone"
+  ],
+  "body": "Missing files are high priority because customers may blame us for data loss.\n\n1. Check the project activity log for a delete event and the user.\n2. Search the recovery store in the admin console, Projects, Recovery, Files.\n3. If the file was deleted by a user within 30 days, restore it.\n4. If there is no delete event, open a Projects-Tier2 ticket marked possible data loss.\n5. Notify the on-call storage engineer role if more than one customer is affected.\n\nNever say a file is lost permanently until Tier 2 confirms. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-explaining-task-dependencies-and-why-dates-shift",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: explaining task dependencies and why dates shift",
+  "aliases": [
+   "dependencies coaching projects",
+   "task dates move training",
+   "gantt dependency script"
+  ],
+  "body": "Customers regularly report that dates move on their own. Teach agents this explanation.\n\n- Finish to start dependencies move successor tasks when the predecessor date changes.\n- Auto scheduling can be switched off for a project by the admin.\n- Weekend and holiday calendars affect the result.\n\n1. Ask which task moved and what changed before it.\n2. Open the activity log to see the trigger.\n3. Offer to turn off auto scheduling in Project Settings.\n\nDo not edit task dates through the admin console. Doing so breaks the audit trail. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-transferring-project-ownership-when-the-owner-has-left",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: transferring project ownership when the owner has left",
+  "aliases": [
+   "change project owner internal",
+   "ownership transfer runbook",
+   "orphaned project fix"
+  ],
+  "body": "Use when a project owner has left and nobody can manage it.\n\n1. Confirm the request comes from a workspace admin in writing.\n2. Check the workspace in the admin console, Projects, Ownership, and note the current owner.\n3. Click Reassign, choose the new owner, and add the ticket number.\n4. Notify the new owner by the product notification, not by email.\n\nIf the former owner is still active and has not agreed, do not transfer. Escalate to the Privacy queue. Do not share this with customers beyond the admin steps.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-csv-import-of-tasks-dropping-assignees",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Known issue",
+  "title": "Known issue workaround (internal): CSV import of tasks dropping assignees",
+  "aliases": [
+   "task import assignee missing",
+   "projects csv import bug",
+   "import loses owners workaround"
+  ],
+  "body": "Imports silently drop assignees when the email column has a trailing space. Engineering tracks this as PRJ-IMP-09. This is internal until fixed.\n\nWorkaround:\n1. Ask the customer to trim spaces in the email column and import again.\n2. If the task already exists, bulk assign using the filter and Assign action.\n3. For files over 5,000 tasks, offer to run the import for them using the admin console, Projects, Import Tools.\n\nAdd the tag PRJ-IMP-09. Do not share this with customers or call it a bug.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-when-to-refund-a-cancelled-subscription",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: when to refund a cancelled subscription",
+  "aliases": [
+   "refund policy cancelled plan",
+   "cancellation refund rules",
+   "when to give a refund"
+  ],
+  "body": "Customers can request a refund after cancelling. Apply these internal limits and do not share this with customers.\n\n- Within 14 days of the first payment: full refund, no approval needed.\n- Annual plans cancelled within 30 days: refund the unused portion.\n- Monthly plans after 14 days: no refund, but offer a service credit up to one month.\n- Anything above 250 dollars needs team lead approval, and above 1,000 needs the Revenue queue.\n\nAlways process refunds in the billing console, add the reason code and never promise a refund before approval.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-billing-disputes-and-chargebacks",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for billing disputes and chargebacks",
+  "aliases": [
+   "billing dispute escalation",
+   "chargeback handling internal",
+   "disputed charge escalate"
+  ],
+  "body": "Billing disputes can lead to chargebacks, which cost us fees. Move quickly.\n\n1. Verify the account owner and find the charge in the billing console.\n2. If the charge is correct, explain it and offer a statement.\n3. If the customer insists, open a ticket in the Billing-Tier2 queue.\n4. If a chargeback notice arrives, do not contact the customer. Send it to the Finance Disputes role.\n5. Pause renewal emails but do not close the account without approval.\n\nNever admit liability in writing. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-account-access-recovery-and-identity-checks",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: account access recovery and identity checks",
+  "aliases": [
+   "locked out account policy",
+   "account recovery verification",
+   "reset access identity check"
+  ],
+  "body": "We must never give account access to the wrong person.\n\n1. Ask for the account owner's name, the account email and the last four digits of the card on file.\n2. Confirm two of the three match the billing console.\n3. Send the reset link only to the email on file, even if the customer says they no longer use it.\n4. If the email is unavailable, escalate to the Account Security queue for manual checks.\n\nDo not explain which checks failed. Do not reset multi-factor authentication without Account Security approval. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-processing-a-data-deletion-request",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: processing a data deletion request",
+  "aliases": [
+   "delete my data internal",
+   "data erasure runbook",
+   "privacy deletion procedure"
+  ],
+  "body": "Deletion requests are handled by the Privacy team, not by Tier 1.\n\n1. Verify the account owner using the identity check policy.\n2. Create a ticket in the Privacy queue using the Deletion template.\n3. Tell the customer to expect confirmation within 30 days.\n4. Privacy checks legal holds and billing records that must be retained.\n5. Privacy runs the Delete account job in the admin console.\n\nDeletion cannot be reversed. Warn the customer to export data first. Backups are purged on a 35 day cycle, which should not be quoted to customers. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-handling-an-angry-customer-who-wants-a-refund",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: handling an angry customer who wants a refund",
+  "aliases": [
+   "refund call de-escalation",
+   "upset customer script",
+   "difficult refund conversation"
+  ],
+  "body": "Stay calm and follow this order.\n\n1. Let the customer finish without interrupting.\n2. Summarise the problem back to them.\n3. Check the refund policy and your authority limit in the internal guide.\n4. Offer what you can do, starting with the fix, then a credit, then a refund where eligible.\n5. If you cannot approve, say you will ask a team lead and give a time.\n\nDo not argue, blame another team or say the policy is silly. Do not mention approval limits. If abuse starts, give one warning and then end the call, logging it. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-escalation-path-for-suspected-account-takeover",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Escalation",
+  "title": "Escalation path for suspected account takeover",
+  "aliases": [
+   "hacked account escalation",
+   "compromised account internal",
+   "account takeover procedure"
+  ],
+  "body": "Treat every report of a compromised account as urgent.\n\n1. Do not discuss details until the identity check is complete.\n2. Open a ticket in the Account Security queue marked priority.\n3. Ask Security to lock the account using the admin console, Security, Lock account.\n4. Tell the customer that we have secured the account and will contact the owner.\n5. Preserve logs by not editing any case notes.\n\nDo not reveal login history or IP addresses to the caller. Do not share this with customers, and never speculate about how the breach occurred.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-free-trial-extensions-and-goodwill-credits",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: free trial extensions and goodwill credits",
+  "aliases": [
+   "trial extension rules",
+   "goodwill credit limits",
+   "how much credit can I give"
+  ],
+  "body": "Use goodwill sparingly and record each use. This table is for staff only.\n\n- Trial extensions: seven days, once per account, no approval needed.\n- Goodwill credits: up to 25 dollars for Tier 1 and up to 100 dollars for team leads.\n- Anything above that needs the Revenue queue.\n\nCredits must be tied to a real problem and a case number. Never offer credits in exchange for a positive review. Do not share this with customers, and do not disclose credit amounts given to others.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-changing-an-account-owner-or-primary-contact",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Runbook",
+  "title": "Runbook: changing an account owner or primary contact",
+  "aliases": [
+   "transfer account ownership internal",
+   "change billing contact runbook",
+   "owner change procedure"
+  ],
+  "body": "Ownership changes are high risk and need documents.\n\n1. Ask the current owner to confirm in writing from the email on file.\n2. If the owner has left, ask the company for a signed letter on letterhead and check the business registration.\n3. Send the case to the Account Security queue.\n4. Security uses the admin console, Accounts, Ownership, to apply the change.\n5. Notify both old and new owner.\n\nNever change the owner on a verbal request. Allow up to two business days. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-using-the-internal-admin-console-safely",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Support training",
+  "title": "Support training: using the internal admin console safely",
+  "aliases": [
+   "admin console basics",
+   "support tools orientation",
+   "new agent console guide"
+  ],
+  "body": "The admin console gives powerful access, so follow these rules.\n\n- Use Support View first. It is read-only and logged.\n- Edit mode needs a case number and a reason, both of which are audited.\n- Never screenshot customer data into a chat or a personal device.\n- Never describe console screens or buttons to customers.\n\n1. Sign in with your staff account and security key.\n2. Search by account ID, never by name alone.\n3. Confirm you have the right account by checking the billing email.\n\nMisuse is a disciplinary matter. Report mistakes to your team lead immediately. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-sharing-internal-documents-and-roadmaps-with-customers",
+  "product": "Harbour (all products)",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: sharing internal documents and roadmaps with customers",
+  "aliases": [
+   "confidential roadmap rule",
+   "what not to tell customers",
+   "internal information policy"
+  ],
+  "body": "Internal articles, queue names, thresholds and release plans are confidential.\n\n- Do not paste or paraphrase internal documents in replies.\n- Do not confirm or deny roadmap dates. Say you will pass the feedback on.\n- Do not name engineers or internal tools.\n- Use only the published help centre for how-to answers.\n\nIf a customer asks about a known issue, share only the approved wording from the incident channel. If you are unsure whether something is public, treat it as internal and ask your team lead. Breaches must be reported to the Privacy queue.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-reissuing-employee-documents-and-contracts-to-a-former-employee",
+  "product": "Harbour People",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: reissuing employee documents and contracts to a former employee",
+  "aliases": [
+   "former employee document request",
+   "ex-staff contract copy internal",
+   "people document access policy"
+  ],
+  "body": "Former employees sometimes contact us directly for contracts or payslips. We hold these on behalf of the employer, so Support does not release them.\n\n1. Do not confirm what documents exist.\n2. Direct the person to their former employer's HR admin.\n3. If the HR admin asks us for help, they can share a document from the employee profile themselves, or raise a Privacy queue ticket for a bulk export.\n\nLog every contact from a former employee in the case notes with the date. Do not share this with customers beyond the referral to their employer.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "internal-b-time-tracking-corrections-after-an-invoice-has-been-sent",
+  "product": "Harbour Projects",
+  "status": "internal",
+  "category": "Policy",
+  "title": "Policy: time tracking corrections after an invoice has been sent",
+  "aliases": [
+   "edit timesheet after invoice",
+   "locked time entries internal",
+   "time entry correction rule"
+  ],
+  "body": "Time entries are locked once they are billed through Harbour Invoicing. Customers see the lock but not the reason.\n\n- Only a workspace admin can request an unlock, in writing.\n- Support unlocks entries in the admin console, Projects, Time, Unlock, and the invoice must first be voided or credited by the customer.\n- Never unlock entries if the invoice has been paid.\n\nRecord the entry IDs and the invoice number in the case. Unlocks of more than 50 entries need team lead approval. Do not share this with customers.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-crm-change-contact-phone",
+  "product": "Harbour CRM",
+  "category": "Contacts",
+  "title": "Changing a contact phone number",
+  "aliases": [
+   "edit phone number of a customer",
+   "update contact telephone",
+   "fix wrong phone"
+  ],
+  "body": "Imported from wiki page 'contacts_howto_v3'.\n\nTo change a contact's phone number, find the person in Contacts and open them. Press Edit, type the new number in the Phone field and press Save. If the number has an extension, put it after the main number with an x.\n\nIf you have a lot of numbers to change, ask your admin to use the importer with the Update existing option. Make sure the email column is filled in, otherwise the importer cannot match people. Don't confuse this with the company phone, which is edited on the Company page.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-crm-staff-note-export-limits",
+  "product": "Harbour CRM",
+  "category": "Contacts",
+  "title": "Staff note: contact export limits",
+  "aliases": [
+   "why export stops at 10000 contacts",
+   "CSV export row limit",
+   "export is missing contacts"
+  ],
+  "body": "STAFF ONLY - do not paste to customers.\n\nExport to CSV fails silently for clients with more than about 10k contacts when the job runs during the nightly backup (01:00 to 03:00 server time). Workaround: ask the client to export in two halves using a filter on Created date, or have engineering run the export for them and attach it to the ticket.\n\nSee ticket HB-2291. Some clients on the oldest plan still hit the 48 hour link expiry. Remember the client is the account holder; their contacts are their customers, so check consent before sending any file.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-crm-delete-company",
+  "product": "Harbour CRM",
+  "category": "Companies",
+  "title": "Deleting a company record",
+  "aliases": [
+   "remove a company from CRM",
+   "delete business",
+   "get rid of company"
+  ],
+  "body": "Wiki import, author unknown.\n\nOpen Companies and click the company name. Click the three dots and choose Delete. You will be asked whether to keep the people linked to it. Choose Keep contacts unless you really want them gone as well.\n\nDeals linked to the company stay in the pipeline, but the company name turns grey. If the Delete option is missing you are probably not an administrator. Ask the owner of the client account to either give you the role or do the delete themselves. Deleted companies cannot be brought back, so export first if unsure.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-crm-change-billing-email-note",
+  "product": "Harbour CRM",
+  "category": "Account",
+  "title": "Billing email changes (support cheat sheet)",
+  "aliases": [
+   "who can change the billing email",
+   "update email for receipts",
+   "billing contact change"
+  ],
+  "body": "Cheat sheet copied from the support wiki.\n\nCustomer asks to change the billing email: the request must come from the account owner. Check the sender address matches the owner on file. Then in the admin console open the client, go to Billing, edit Billing email and save.\n\nA confirmation email goes to the new address. If they say they never got it, check spam, then resend. Do not change it on a request from a contact of the client, since that is the client's customer, not the account holder. Log everything in the ticket notes before closing.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-crm-mark-deal-lost",
+  "product": "Harbour CRM",
+  "category": "Deals",
+  "title": "Closing a lost deal",
+  "aliases": [
+   "deal lost",
+   "set a deal as lost",
+   "mark opportunity lost"
+  ],
+  "body": "Open the deal and click Lost near the top right. A small window asks for a reason. Pick the closest one, or choose Other and write a few words. Click Confirm.\n\nThe deal moves out of your open pipeline and into the Lost report, so your forecast numbers change straight away. If you clicked the wrong button, use Reopen from the three dots menu. People often ask whether lost deals count towards revenue. They do not.\n\n(Old wiki text, last edited 2023, screenshots missing.)",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-people-update-employee-phone",
+  "product": "Harbour People",
+  "category": "Employees",
+  "title": "Changing an employee's phone number",
+  "aliases": [
+   "staff phone number change",
+   "edit employee mobile",
+   "update contact details for a team member"
+  ],
+  "body": "From the old HR wiki.\n\nGo to People, search for the name and open the profile. On the Contact tab press Edit and update Mobile or Work phone. Press Save.\n\nIf you are an employee and the Edit button is greyed out, your HR manager has turned off self-service for contact details. Please ask them to do it. Phone changes do not alter payroll records. If someone's emergency contact changes too, use the Personal tab, which is a separate section.\n\nTODO move this to the new help centre.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-invoicing-send-reminder",
+  "product": "Harbour Invoicing",
+  "category": "Invoices",
+  "title": "Sending a payment reminder",
+  "aliases": [
+   "remind customer about unpaid invoice",
+   "overdue invoice email",
+   "chase payment"
+  ],
+  "body": "Wiki import.\n\nOpen the invoice that is overdue and click Send reminder. Choose a message from the list or write your own, then click Send. The customer gets an email with a link to view and pay the invoice.\n\nYou can see when reminders went out in the Activity panel. To stop getting asked about this, set up automatic reminders in Settings under Reminders, where you can send one 3 days before the due date and another 7 days after.\n\nNote: the wording of the default templates was last updated by finance in 2022.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-mail-create-campaign",
+  "product": "Harbour Mail",
+  "category": "Campaigns",
+  "title": "Making a campaign step by step",
+  "aliases": [
+   "create newsletter",
+   "email blast setup",
+   "new campaign"
+  ],
+  "body": "Imported from marketing wiki, no metadata.\n\nClick Campaigns, then New. Give it a name that only you will see, then a subject line your readers will see. Choose a list to send to. Write your message, adding images if you like. Always click Send test and look at it on your phone before sending to everyone.\n\nPick Send now or choose a date and time. If your list is over 2,000 people, schedule the send for off-peak hours so delivery is smooth. Check the Reports tab the next day for opens and clicks.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-desk-staff-note-assign",
+  "product": "Harbour Desk",
+  "category": "Tickets",
+  "title": "Internal: ticket assignment etiquette",
+  "aliases": [
+   "assign ticket to a colleague",
+   "reassigning tickets rules",
+   "who owns a ticket"
+  ],
+  "body": "INTERNAL - team leads only.\n\nWhen you assign a ticket to a colleague, add an internal note explaining what has been tried. Do not assign to someone who is marked Away without checking with the team lead first. Urgent tickets must always be assigned to a named person, not a team, so someone is accountable.\n\nTo assign: open the ticket, select Assignee in the side panel, choose the person, then Assign. Customers never see assignee names unless the signature setting is on. Review this page in Q3.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "legacy-projects-create-project",
+  "product": "Harbour Projects",
+  "category": "Projects",
+  "title": "Creating a new project",
+  "aliases": [
+   "start a project",
+   "new project setup",
+   "make a project and invite team"
+  ],
+  "body": "Old wiki article, author left the company.\n\nClick New and pick Project. Type a name, choose whether it is Private or visible to everyone, and add the people who will work on it. You can start empty or copy the layout of a previous project. Click Create.\n\nAfter creating it, add your first tasks and set a due date for each. Members get an email when they are added. If a person does not receive it, check that their address is correct in People. Projects can be renamed at any time from Settings inside the project.",
+  "notConfusedWith": []
+ }
+]

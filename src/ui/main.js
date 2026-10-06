@@ -11,7 +11,7 @@ const store = new Store();
 // static site ships them; the single-file claude.ai build can't, so it is
 // built with __SEMANTIC__ false and stays lexical.
 const semanticEnabled = globalThis.__SEMANTIC__ ?? true;
-const retriever = new Retriever(articles, {}, { semantic: semanticEnabled ? new SemanticIndex(articleVectors.passages) : null });
+const retriever = new Retriever(articles, {}, { semantic: semanticEnabled ? new SemanticIndex(articleVectors.passages, { graph: articleVectors.graph }) : null });
 
 const app = new CrmApp({
   root: document.getElementById('app'),
@@ -27,6 +27,7 @@ const chat = new ChatWidget({
   retriever,
   sample: null,
   loadEmbedder: semanticEnabled ? () => import('./embedder.browser.js').then((m) => m.createBrowserEmbedder(document.baseURI)) : null,
+  loadSuite: semanticEnabled ? () => import('./suite.browser.js').then((m) => m.loadSuite(document.baseURI)) : null,
 });
 
 app.start();

@@ -1,0 +1,1577 @@
+[
+ {
+  "id": "desk-create-ticket-manually",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Create a ticket manually",
+  "aliases": [
+   "log a ticket for a phone call",
+   "raise a new ticket",
+   "open a ticket on behalf of a customer",
+   "add a ticket"
+  ],
+  "body": "Use this when a customer contacts you by phone or in person.\n1. Select **New ticket** at the top of the screen.\n2. In **Requester**, start typing the customer's name or email and select them from the list.\n3. Enter a **Subject** and a description of the issue.\n4. Set the **Priority** and **Assignee** if needed.\n5. Select **Submit as Open**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-reply-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Reply to a customer on a ticket",
+  "aliases": [
+   "respond to a customer",
+   "send an email reply",
+   "answer a ticket",
+   "write back to the requester"
+  ],
+  "body": "1. Open the ticket from **Tickets** or a view.\n2. Select **Reply** below the conversation.\n3. Type your message. The reply goes to the requester and any CC recipients.\n4. Choose a status from the **Submit as** menu.\n5. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-internal-note-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Add an internal note to a ticket",
+  "aliases": [
+   "leave a private note",
+   "write a note only agents can see",
+   "add a comment for my team",
+   "note on ticket"
+  ],
+  "body": "Internal notes are never sent to the requester.\n1. Open the ticket.\n2. Select **Add note** below the conversation.\n3. Type your note. Use @ followed by a name to mention a colleague.\n4. Select **Add note** to save it.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-add-note-to-requester"
+  ]
+ },
+ {
+  "id": "desk-assign-ticket-to-agent",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Assign a ticket to an agent",
+  "aliases": [
+   "give a ticket to someone",
+   "change the ticket owner",
+   "reassign a ticket",
+   "hand over a ticket to a colleague"
+  ],
+  "body": "1. Open the ticket.\n2. In the **Properties** panel, select the **Assignee** field.\n3. Choose the agent from the list, or select **Take it** to assign the ticket to yourself.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-assign-ticket-to-group"
+  ]
+ },
+ {
+  "id": "desk-assign-ticket-to-group",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Assign a ticket to a group",
+  "aliases": [
+   "send a ticket to a team",
+   "move ticket to billing team",
+   "change the group on a ticket",
+   "route a ticket to another queue"
+  ],
+  "body": "1. Open the ticket.\n2. In the **Properties** panel, select the **Group** field.\n3. Choose the group, such as **Billing** or **Technical Support**.\n4. Leave **Assignee** blank to let the group pick it up, or choose an agent.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-assign-ticket-to-agent"
+  ]
+ },
+ {
+  "id": "desk-merge-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Merge two tickets",
+  "aliases": [
+   "combine duplicate tickets",
+   "join tickets together",
+   "merge a duplicate ticket into another",
+   "consolidate tickets from the same customer"
+  ],
+  "body": "The duplicate ticket is closed after the merge.\n1. Open the ticket you want to keep as the main ticket.\n2. Select the **More actions** menu, then **Merge**.\n3. Search for the duplicate ticket by number or subject and select it.\n4. Choose whether to add the duplicate's comments as a public reply or an internal note.\n5. Select **Merge tickets**.",
+  "notConfusedWith": [
+   "desk-link-ticket-to-problem",
+   "desk-create-ticket-from-message"
+  ]
+ },
+ {
+  "id": "desk-create-ticket-from-message",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Split a message into a new ticket",
+  "aliases": [
+   "break out a reply into its own ticket",
+   "separate a second issue from a ticket",
+   "create a new ticket from a comment",
+   "spin off a ticket"
+  ],
+  "body": "The original ticket stays as it is and links to the new one.\n1. Open the ticket and find the message that raises the separate issue.\n2. Select the **More** menu on that message, then **Create ticket from message**.\n3. Review the subject and requester on the new ticket.\n4. Select **Create ticket**.",
+  "notConfusedWith": [
+   "desk-merge-tickets"
+  ]
+ },
+ {
+  "id": "desk-close-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Close a ticket",
+  "aliases": [
+   "finish a ticket",
+   "shut a ticket",
+   "mark a ticket as closed",
+   "complete a ticket"
+  ],
+  "body": "Closed tickets are locked. Use a follow-up ticket if the customer writes in again.\n1. Open the ticket.\n2. Select **Reply** or **Add note** if you want to leave a final message.\n3. Open the **Submit as** menu and select **Closed**.\n4. Select **Send** or **Add note**.",
+  "notConfusedWith": [
+   "desk-mark-ticket-solved"
+  ]
+ },
+ {
+  "id": "desk-reopen-closed-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Reopen a closed ticket",
+  "aliases": [
+   "bring a ticket back",
+   "unclose a ticket",
+   "customer wrote back on a closed ticket",
+   "reactivate a ticket"
+  ],
+  "body": "Tickets that have been closed for more than 60 days cannot be reopened. Create a follow-up ticket instead.\n1. Search for the ticket and open it.\n2. Select **Reopen ticket** at the top of the page.\n3. Choose **Open** or **Pending** as the new status.\n4. Select **Confirm**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Delete a ticket",
+  "aliases": [
+   "remove a ticket",
+   "get rid of a ticket",
+   "trash a ticket",
+   "erase a ticket"
+  ],
+  "body": "Deleted tickets stay in **Deleted tickets** for 30 days, then are removed permanently.\n1. Open the ticket.\n2. Select the **More actions** menu.\n3. Select **Delete**.\n4. Select **Delete ticket** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-restore-deleted-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Restore a deleted ticket",
+  "aliases": [
+   "undelete a ticket",
+   "recover a deleted ticket",
+   "get a ticket back from the bin",
+   "I deleted a ticket by mistake"
+  ],
+  "body": "You can restore a ticket within 30 days of deleting it. After that it is gone permanently.\n1. Go to **Tickets**, then select **Deleted tickets**.\n2. Find the ticket in the list.\n3. Select **Restore** next to it.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-export-tickets-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Export tickets to CSV",
+  "aliases": [
+   "download tickets as a spreadsheet",
+   "export ticket data",
+   "get a CSV of all tickets",
+   "download ticket report"
+  ],
+  "body": "Only admins can export ticket data.\n1. Go to **Admin**, then **Data export**.\n2. Select **Tickets**.\n3. Choose a date range and the fields to include.\n4. Select **Export to CSV**.\n5. Open the email we send you and download the file within 48 hours.",
+  "notConfusedWith": [
+   "desk-export-view-to-csv"
+  ]
+ },
+ {
+  "id": "desk-attach-file-to-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Attach a file to a reply",
+  "aliases": [
+   "add an attachment to a ticket",
+   "send a document to the customer",
+   "upload a file on a ticket",
+   "include a screenshot in a reply"
+  ],
+  "body": "Each reply can include files up to 20 MB in total.\n1. Open the ticket and select **Reply**.\n2. Select the paperclip icon, or drag the file into the reply box.\n3. Wait for the upload to finish.\n4. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-cc-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Add a CC recipient to a ticket",
+  "aliases": [
+   "copy someone in on a ticket",
+   "include another person in the email",
+   "cc a colleague of the customer",
+   "add a follower from outside"
+  ],
+  "body": "CC recipients receive all public replies on the ticket until you remove them.\n1. Open the ticket and select **Reply**.\n2. Select **CC** above the message box.\n3. Enter the email address of the person to copy in.\n4. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-follow-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Follow a ticket",
+  "aliases": [
+   "watch a ticket",
+   "get notified about a ticket",
+   "subscribe to ticket updates",
+   "keep an eye on a ticket"
+  ],
+  "body": "Followers receive an email each time the ticket is updated.\n1. Open the ticket.\n2. In the **Properties** panel, select **Followers**.\n3. Select **Add me**, or search for a colleague's name to add them.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-bulk-update-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Update several tickets at once",
+  "aliases": [
+   "bulk edit tickets",
+   "change many tickets together",
+   "mass update tickets",
+   "edit multiple tickets"
+  ],
+  "body": "You can update up to 100 tickets at a time.\n1. Open a view from **Views** and tick the checkbox next to each ticket you want to change.\n2. Select **Bulk edit** at the top of the list.\n3. Change the **Status**, **Priority**, **Group** or **Assignee**.\n4. Select **Submit**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-ticket-due-date",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Set a due date on a ticket",
+  "aliases": [
+   "add a deadline to a ticket",
+   "schedule a ticket for later",
+   "set a follow-up date",
+   "change the due date"
+  ],
+  "body": "Tickets past their due date show a red clock in views.\n1. Open the ticket.\n2. In the **Properties** panel, select **Due date**.\n3. Pick a date from the calendar.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-forward-ticket-by-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Forward a ticket by email",
+  "aliases": [
+   "send a ticket to someone outside Harbour Desk",
+   "email a ticket to a supplier",
+   "forward a conversation",
+   "share a ticket with a third party"
+  ],
+  "body": "A note is added to the ticket recording who it was forwarded to.\n1. Open the ticket.\n2. Select the **More actions** menu, then **Forward by email**.\n3. Enter the recipient's address and edit the message if needed.\n4. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-link-ticket-to-problem",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Link a ticket to a problem ticket",
+  "aliases": [
+   "connect tickets to a known issue",
+   "group tickets under one incident",
+   "mark ticket as related",
+   "attach to a parent ticket"
+  ],
+  "body": "When you solve the problem ticket you can solve all linked tickets in one step.\n1. Open the ticket.\n2. In the **Properties** panel, select **Link to problem**.\n3. Search for the problem ticket by number or subject.\n4. Select it, then select **Save**.",
+  "notConfusedWith": [
+   "desk-merge-tickets"
+  ]
+ },
+ {
+  "id": "desk-change-ticket-requester",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tickets",
+  "title": "Change the requester on a ticket",
+  "aliases": [
+   "wrong customer on ticket",
+   "switch who the ticket is from",
+   "edit the requester",
+   "fix the ticket sender"
+  ],
+  "body": "Future replies go to the new requester.\n1. Open the ticket.\n2. In the **Properties** panel, select the name under **Requester**.\n3. Select **Change requester** and search for the correct customer.\n4. Select them, then select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-requester",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Add a new requester",
+  "aliases": [
+   "create a customer",
+   "add a customer record",
+   "new contact",
+   "register a requester"
+  ],
+  "body": "1. Go to **Requesters** in the left menu.\n2. Select **Add requester**.\n3. Enter the **Name** and **Email**.\n4. Add a **Phone** number and **Organisation** if you have them.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-update-requester-phone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Update a requester's phone number",
+  "aliases": [
+   "change a customer's phone",
+   "edit contact number",
+   "fix a mobile number",
+   "new phone number for a customer"
+  ],
+  "body": "1. Go to **Requesters** and search for the person.\n2. Open their profile.\n3. Select **Edit** beside **Phone**.\n4. Enter the new number, including the area code.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-search-requester-by-phone"
+  ]
+ },
+ {
+  "id": "desk-update-requester-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Change a requester's primary email address",
+  "aliases": [
+   "update a customer's email",
+   "edit email address",
+   "customer has a new email",
+   "replace the main email"
+  ],
+  "body": "The old address is kept as a secondary identity so existing tickets stay linked.\n1. Go to **Requesters** and open the person's profile.\n2. Select **Edit** in the **Contact details** panel.\n3. Enter the new address in **Email**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-add-secondary-email"
+  ]
+ },
+ {
+  "id": "desk-add-secondary-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Add a secondary email address to a requester",
+  "aliases": [
+   "add another email for a customer",
+   "customer has two emails",
+   "extra email address",
+   "alternate email"
+  ],
+  "body": "Tickets sent from any of the person's addresses will be linked to this profile.\n1. Open the requester's profile from **Requesters**.\n2. Select **Add email** under **Contact details**.\n3. Enter the additional address.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-update-requester-email"
+  ]
+ },
+ {
+  "id": "desk-delete-requester",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Delete a requester",
+  "aliases": [
+   "remove a customer",
+   "erase a customer record",
+   "delete a contact",
+   "get rid of a requester"
+  ],
+  "body": "Their tickets are kept, but the requester name is shown as **Deleted user**.\n1. Go to **Requesters** and open the person's profile.\n2. Select the **More actions** menu.\n3. Select **Delete requester**.\n4. Select **Delete** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-block-requester"
+  ]
+ },
+ {
+  "id": "desk-merge-requesters",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Merge duplicate requesters",
+  "aliases": [
+   "combine duplicate customers",
+   "join two customer profiles",
+   "fix duplicate contacts",
+   "merge two people"
+  ],
+  "body": "Tickets and email addresses from the duplicate move to the profile you keep. This cannot be undone.\n1. Open the profile you want to keep.\n2. Select the **More actions** menu, then **Merge**.\n3. Search for the duplicate requester and select them.\n4. Select **Merge requesters**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-import-requesters-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Import requesters from a CSV file",
+  "aliases": [
+   "upload a list of customers",
+   "bulk add contacts",
+   "load customers from a spreadsheet",
+   "import contacts"
+  ],
+  "body": "The file must include an **Email** column. You will be emailed a summary when the import finishes.\n1. Go to **Requesters**, then select **Import**.\n2. Select **Choose file** and pick your CSV.\n3. Match each column to a field, such as **Name** and **Email**.\n4. Select **Start import**.",
+  "notConfusedWith": [
+   "desk-export-requesters-csv"
+  ]
+ },
+ {
+  "id": "desk-export-requesters-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Export requesters to CSV",
+  "aliases": [
+   "download customer list",
+   "get all contacts in a spreadsheet",
+   "export customers",
+   "download requester data"
+  ],
+  "body": "Only admins can export requesters.\n1. Go to **Requesters**.\n2. Select **Export**.\n3. Choose the fields to include.\n4. Select **Export to CSV**, then download the file from the email we send you.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-import-requesters-csv"
+  ]
+ },
+ {
+  "id": "desk-add-note-to-requester",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Add a note to a requester's profile",
+  "aliases": [
+   "write a note on a customer",
+   "save info about a customer",
+   "add a comment to a contact",
+   "customer background note"
+  ],
+  "body": "Notes appear next to every ticket from this person, and only agents can see them.\n1. Open the requester's profile.\n2. Select the **Notes** box in the side panel.\n3. Type your note.\n4. Select outside the box to save it.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-add-internal-note-to-ticket"
+  ]
+ },
+ {
+  "id": "desk-create-organisation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Create an organisation",
+  "aliases": [
+   "add a company",
+   "new client company",
+   "set up an organisation",
+   "add a business"
+  ],
+  "body": "1. Go to **Organisations** in the left menu.\n2. Select **Add organisation**.\n3. Enter the **Name**.\n4. Add a **Domain**, **Address** and **Notes** if needed.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-requester-to-organisation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Add a requester to an organisation",
+  "aliases": [
+   "put a customer in a company",
+   "assign a contact to an organisation",
+   "link a person to a client",
+   "move someone into an organisation"
+  ],
+  "body": "A requester can belong to one organisation at a time.\n1. Open the requester's profile.\n2. Select **Edit** beside **Organisation**.\n3. Search for the organisation and select it.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-remove-requester-from-organisation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Remove a requester from an organisation",
+  "aliases": [
+   "take a customer out of a company",
+   "unlink a person from an organisation",
+   "contact left the company",
+   "detach a requester"
+  ],
+  "body": "1. Open the requester's profile.\n2. Select **Edit** beside **Organisation**.\n3. Select the **x** next to the organisation name.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it. If you cannot see this option, ask an admin to check your role permissions.",
+  "notConfusedWith": [
+   "desk-delete-organisation"
+  ]
+ },
+ {
+  "id": "desk-rename-organisation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Rename an organisation",
+  "aliases": [
+   "change a company name",
+   "edit organisation name",
+   "client changed their name",
+   "update business name"
+  ],
+  "body": "Existing tickets show the new name straight away.\n1. Go to **Organisations** and open the organisation.\n2. Select **Edit** at the top of the profile.\n3. Change the **Name**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-organisation",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Delete an organisation",
+  "aliases": [
+   "remove a company",
+   "delete a client",
+   "get rid of an organisation",
+   "erase an organisation record"
+  ],
+  "body": "Its requesters are kept but no longer belong to an organisation.\n1. Go to **Organisations** and open the organisation.\n2. Select the **More actions** menu.\n3. Select **Delete organisation**.\n4. Select **Delete** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-remove-requester-from-organisation"
+  ]
+ },
+ {
+  "id": "desk-auto-assign-organisation-by-domain",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Assign requesters to an organisation by email domain",
+  "aliases": [
+   "automatically group customers by company",
+   "match contacts to companies by email",
+   "domain matching",
+   "auto-add people to organisation"
+  ],
+  "body": "Only new requesters are matched. Existing requesters stay as they are.\n1. Open the organisation from **Organisations**.\n2. Select **Edit**.\n3. Enter the email domain, for example **example.com.au**, in **Domains**.\n4. Tick **Add new requesters automatically**.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-block-requester",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Block a requester",
+  "aliases": [
+   "stop a customer emailing us",
+   "ban a contact",
+   "prevent tickets from a sender",
+   "suspend a requester"
+  ],
+  "body": "Emails from blocked requesters do not create tickets. To undo this, select **Unblock requester** from the same menu.\n1. Open the requester's profile.\n2. Select the **More actions** menu.\n3. Select **Block requester**.\n4. Select **Block** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-delete-requester"
+  ]
+ },
+ {
+  "id": "desk-view-requester-ticket-history",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "View a requester's ticket history",
+  "aliases": [
+   "see all tickets from a customer",
+   "past tickets for a contact",
+   "customer's previous requests",
+   "look up earlier conversations"
+  ],
+  "body": "1. Go to **Requesters** and open the person's profile.\n2. Select the **Tickets** tab.\n3. Use the **Status** filter to show open, solved or all tickets.\n4. Select a ticket to open it.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-requester-language-timezone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Set a requester's language and time zone",
+  "aliases": [
+   "change customer time zone",
+   "edit contact language",
+   "set locale for a customer",
+   "wrong timezone on a requester"
+  ],
+  "body": "Automatic replies and due dates use these settings.\n1. Open the requester's profile.\n2. Select **Edit** in the **Contact details** panel.\n3. Choose a **Language** and **Time zone** from the lists.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-organisation-billing-contact",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Set an organisation's billing contact",
+  "aliases": [
+   "choose who receives invoices",
+   "add a billing contact",
+   "main contact for a client",
+   "change the primary contact for a company"
+  ],
+  "body": "The billing contact is shown at the top of the organisation profile.\n1. Open the organisation from **Organisations**.\n2. Select the **Requesters** tab.\n3. Select the **More** menu beside the person.\n4. Select **Set as billing contact**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-update-organisation-address",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Requesters and organisations",
+  "title": "Update an organisation's address",
+  "aliases": [
+   "change a company's address",
+   "edit business location",
+   "client moved offices",
+   "new postal address for organisation"
+  ],
+  "body": "1. Go to **Organisations** and open the organisation.\n2. Select **Edit**.\n3. Update the **Address** field.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it. If you cannot see this option, ask an admin to check your role permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-create-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Create a view",
+  "aliases": [
+   "make a custom ticket list",
+   "set up a new view",
+   "build a filter for tickets",
+   "add a view"
+  ],
+  "body": "Your new view appears in the **Views** list straight away.\n1. Go to **Views** and select **Add view**.\n2. Enter a **Title**.\n3. Under **Conditions**, add the rules, such as **Status is Open** and **Group is Billing**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-save-search-as-view"
+  ]
+ },
+ {
+  "id": "desk-edit-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Edit a view",
+  "aliases": [
+   "change view conditions",
+   "update a saved view",
+   "modify a ticket list",
+   "fix a view"
+  ],
+  "body": "1. Go to **Views** and hover over the view.\n2. Select the pencil icon.\n3. Change the **Title**, **Conditions** or **Columns**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Delete a view",
+  "aliases": [
+   "remove a view",
+   "get rid of a saved list",
+   "trash a view",
+   "stop showing a view"
+  ],
+  "body": "Deleting a view does not delete any of the tickets in it.\n1. Go to **Views** and hover over the view.\n2. Select the pencil icon.\n3. Select **Delete view**.\n4. Select **Delete** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-share-view-with-team",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Share a view with a group",
+  "aliases": [
+   "make a view available to my team",
+   "let others use my view",
+   "publish a personal view",
+   "share ticket list"
+  ],
+  "body": "Choose **All agents** to share the view with everyone. Only admins can share views with all agents.\n1. Go to **Views** and open the view's edit page.\n2. Under **Available to**, choose **Group** and select the group.\n3. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-reorder-views",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Change the order of views",
+  "aliases": [
+   "move views around",
+   "rearrange my views",
+   "put a view at the top",
+   "sort the views list"
+  ],
+  "body": "1. Go to **Views** and select **Manage views**.\n2. Drag a view by the handle on its left.\n3. Drop it where you want it.\n4. Select **Save order**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-column-to-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Add a column to a view",
+  "aliases": [
+   "show another field in a ticket list",
+   "change view columns",
+   "display organisation in a view",
+   "add priority column"
+  ],
+  "body": "Drag columns to change their order.\n1. Go to **Views** and open the view's edit page.\n2. Under **Columns**, select **Add column**.\n3. Choose the field, such as **Organisation** or **Priority**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-sort-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Change how a view is sorted",
+  "aliases": [
+   "order tickets by date",
+   "sort by priority",
+   "change sort order",
+   "oldest first"
+  ],
+  "body": "To keep a sort order every time, set **Order by** on the view's edit page.\n1. Go to **Views** and open the view.\n2. Select a column heading, such as **Updated**, to sort by it.\n3. Select the heading again to switch between ascending and descending.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-export-view-to-csv",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Export a view to CSV",
+  "aliases": [
+   "download tickets in a view",
+   "save a ticket list as a spreadsheet",
+   "export my view",
+   "get view results in Excel"
+  ],
+  "body": "The file includes the columns shown in the view, up to 5,000 tickets.\n1. Go to **Views** and open the view.\n2. Select the **More actions** menu.\n3. Select **Export to CSV**.\n4. Download the file from the email we send you.",
+  "notConfusedWith": [
+   "desk-export-tickets-csv"
+  ]
+ },
+ {
+  "id": "desk-search-tickets-by-keyword",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search tickets by keyword",
+  "aliases": [
+   "find a ticket by word",
+   "look for a ticket",
+   "search for text in tickets",
+   "find a conversation"
+  ],
+  "body": "1. Select the **Search** box at the top of the screen.\n2. Type a word or phrase from the subject or message.\n3. Press **Enter**.\n4. Select **Tickets** to see ticket results only.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-tickets-by-requester-email",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search for tickets from an email address",
+  "aliases": [
+   "find tickets by sender",
+   "tickets from a customer's email",
+   "look up a customer's emails",
+   "search by email"
+  ],
+  "body": "1. Select the **Search** box.\n2. Type **requester:** followed by the email address, for example **requester:sam@example.com.au**.\n3. Press **Enter**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it. If you cannot see this option, ask an admin to check your role permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-tickets-by-date-range",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search tickets by date range",
+  "aliases": [
+   "find tickets from last month",
+   "tickets created between two dates",
+   "filter tickets by date",
+   "search by creation date"
+  ],
+  "body": "1. Select the **Search** box and enter your keywords, if any.\n2. Select **Filters** on the results page.\n3. Choose **Created** or **Updated**, then pick **From** and **To** dates.\n4. Select **Apply**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-save-search-as-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Save a search as a view",
+  "aliases": [
+   "turn a search into a view",
+   "keep a search for later",
+   "store search filters",
+   "make a search permanent"
+  ],
+  "body": "The new view appears under **My views** and updates as tickets change.\n1. Run your search and set any filters.\n2. Select **Save as view** above the results.\n3. Enter a **Title**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-create-view"
+  ]
+ },
+ {
+  "id": "desk-search-tickets-by-tag",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search tickets by tag",
+  "aliases": [
+   "find tickets with a tag",
+   "filter by tag",
+   "tickets tagged refund",
+   "look up tags"
+  ],
+  "body": "Add a minus sign before the word, such as **-tags:refund**, to leave those tickets out.\n1. Select the **Search** box.\n2. Type **tags:** followed by the tag, for example **tags:refund**.\n3. Press **Enter**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-tickets-by-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search tickets by status",
+  "aliases": [
+   "find open tickets",
+   "find solved tickets",
+   "filter by ticket status",
+   "show pending tickets only"
+  ],
+  "body": "Use **status<solved** to find tickets that are not yet solved.\n1. Select the **Search** box.\n2. Type **status:** followed by the status, for example **status:pending**.\n3. Press **Enter**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-exact-phrase",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search for an exact phrase",
+  "aliases": [
+   "find exact words",
+   "quote search",
+   "match a whole phrase",
+   "search with quotation marks"
+  ],
+  "body": "Without quotation marks, results include tickets containing any of the words.\n1. Select the **Search** box.\n2. Type your phrase inside double quotation marks, for example **\"refund request\"**.\n3. Press **Enter**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-organisations",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search for an organisation",
+  "aliases": [
+   "find a company",
+   "look up a client",
+   "locate an organisation",
+   "search companies"
+  ],
+  "body": "1. Select the **Search** box at the top of the screen.\n2. Type the organisation's name or domain.\n3. Press **Enter**, then select **Organisations**.\n4. Select the organisation to open it.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-requester-by-phone",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Search for a requester by phone number",
+  "aliases": [
+   "find a customer by phone",
+   "look up a caller",
+   "who owns this phone number",
+   "search contacts by number"
+  ],
+  "body": "Phone numbers must match exactly, so try the number with and without the leading zero if you get no results.\n1. Go to **Requesters**.\n2. Select the search box above the list.\n3. Enter the phone number without spaces.\n4. Press **Enter**.",
+  "notConfusedWith": [
+   "desk-update-requester-phone"
+  ]
+ },
+ {
+  "id": "desk-clear-recent-searches",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Clear your recent searches",
+  "aliases": [
+   "delete search history",
+   "remove past searches",
+   "wipe recent searches",
+   "hide what I searched for"
+  ],
+  "body": "This only affects your own search history.\n1. Select the **Search** box.\n2. Select **Clear recent searches** below the list.\n3. Select **Clear** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-default-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Set your default view",
+  "aliases": [
+   "choose which view opens first",
+   "change my home view",
+   "pick a start view",
+   "default ticket list"
+  ],
+  "body": "1. Select your profile picture, then **Preferences**.\n2. Under **Agent workspace**, find **Default view**.\n3. Choose a view from the list.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-duplicate-view",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Views and search",
+  "title": "Duplicate a view",
+  "aliases": [
+   "copy a view",
+   "clone a view",
+   "make a copy of a view",
+   "base a new view on an existing one"
+  ],
+  "body": "1. Go to **Views** and hover over the view.\n2. Select the pencil icon.\n3. Select **Clone**.\n4. Rename the copy, adjust the conditions if needed, then select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-edit-view"
+  ]
+ },
+ {
+  "id": "desk-add-tag-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Add a tag to a ticket",
+  "aliases": [
+   "tag a ticket",
+   "label a ticket",
+   "add a label",
+   "put a keyword on a ticket"
+  ],
+  "body": "Tags are lower case and cannot contain spaces. Use hyphens instead.\n1. Open the ticket.\n2. In the **Properties** panel, select the **Tags** field.\n3. Type a tag and press **Enter**. Repeat for more tags.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-remove-tag-from-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Remove a tag from a ticket",
+  "aliases": [
+   "untag a ticket",
+   "take a label off",
+   "delete a tag from one ticket",
+   "clear a tag"
+  ],
+  "body": "1. Open the ticket.\n2. In the **Properties** panel, find the **Tags** field.\n3. Select the **x** next to the tag.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-delete-tag"
+  ]
+ },
+ {
+  "id": "desk-rename-tag",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Rename a tag",
+  "aliases": [
+   "change a tag name",
+   "fix a misspelt tag",
+   "edit a label",
+   "update tag text"
+  ],
+  "body": "Every ticket with the old tag is updated.\n1. Go to **Admin**, then **Tags**.\n2. Find the tag in the list.\n3. Select **Rename**.\n4. Enter the new name and select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-tag",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Delete a tag",
+  "aliases": [
+   "remove a tag everywhere",
+   "get rid of a tag",
+   "erase a label from all tickets",
+   "clean up tags"
+  ],
+  "body": "The tag is removed from all tickets that use it.\n1. Go to **Admin**, then **Tags**.\n2. Find the tag in the list.\n3. Select **Delete**.\n4. Select **Delete tag** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-remove-tag-from-ticket"
+  ]
+ },
+ {
+  "id": "desk-bulk-add-tag",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Add a tag to many tickets at once",
+  "aliases": [
+   "tag several tickets",
+   "bulk tag tickets",
+   "label multiple tickets",
+   "mass add a tag"
+  ],
+  "body": "1. Open a view or search results.\n2. Tick the checkbox next to each ticket.\n3. Select **Bulk edit**, then **Add tags**.\n4. Enter the tag and select **Submit**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-view-tag-usage",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "See how often each tag is used",
+  "aliases": [
+   "tag list with counts",
+   "which tags are popular",
+   "tag report",
+   "count tickets per tag"
+  ],
+  "body": "1. Go to **Admin**, then **Tags**.\n2. Read the **Tickets** column to see how many tickets use each tag.\n3. Select a column heading to sort the list.\n4. Select a tag name to open a search for its tickets.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-ticket-priority",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Set the priority on a ticket",
+  "aliases": [
+   "change ticket priority",
+   "mark a ticket as high priority",
+   "raise urgency",
+   "lower the priority"
+  ],
+  "body": "1. Open the ticket.\n2. In the **Properties** panel, select the **Priority** field.\n3. Choose **Low**, **Normal**, **High** or **Urgent**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-escalate-ticket-to-urgent"
+  ]
+ },
+ {
+  "id": "desk-escalate-ticket-to-urgent",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Escalate a ticket to urgent",
+  "aliases": [
+   "make a ticket urgent",
+   "flag a critical ticket",
+   "raise ticket to top priority",
+   "escalate an issue"
+  ],
+  "body": "Urgent tickets appear at the top of the **Urgent now** view.\n1. Open the ticket.\n2. Set **Priority** to **Urgent** in the **Properties** panel.\n3. Select **Add note** and explain why the ticket is urgent.\n4. Mention your team lead with @ and their name.\n5. Select **Add note**.",
+  "notConfusedWith": [
+   "desk-set-ticket-priority"
+  ]
+ },
+ {
+  "id": "desk-change-default-priority",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Change the default priority for new tickets",
+  "aliases": [
+   "set starting priority",
+   "default ticket urgency",
+   "new tickets should be normal",
+   "change initial priority"
+  ],
+  "body": "This applies to new tickets created by email or the web form.\n1. Go to **Admin**, then **Settings**, then **Tickets**.\n2. Find **Default priority**.\n3. Choose **Low** or **Normal**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-rename-priority-level",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Rename a priority level",
+  "aliases": [
+   "change priority labels",
+   "call Urgent something else",
+   "edit priority name",
+   "customise priorities"
+  ],
+  "body": "Only the display name changes. Search still uses the original name.\n1. Go to **Admin**, then **Settings**, then **Priorities**.\n2. Select **Edit** beside the priority.\n3. Enter the new **Display name**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-change-ticket-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Change a ticket's status",
+  "aliases": [
+   "update the status",
+   "set ticket to open",
+   "move a ticket to another status",
+   "switch status"
+  ],
+  "body": "1. Open the ticket.\n2. Select the arrow beside the **Submit** button.\n3. Choose the status, such as **Open** or **Pending**.\n4. Select **Submit**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-mark-ticket-solved"
+  ]
+ },
+ {
+  "id": "desk-create-custom-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Create a custom status",
+  "aliases": [
+   "add a new status",
+   "make my own ticket status",
+   "new status like waiting on supplier",
+   "add status option"
+  ],
+  "body": "The category decides how the status behaves in reports and automations.\n1. Go to **Admin**, then **Settings**, then **Statuses**.\n2. Select **Add status**.\n3. Enter a **Name** and choose a **Category**, such as **Pending** or **On hold**.\n4. Pick a colour.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-edit-custom-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Edit a custom status",
+  "aliases": [
+   "rename a status",
+   "change a status description",
+   "update status settings",
+   "modify a status"
+  ],
+  "body": "Standard statuses such as **Open** and **Closed** cannot be renamed.\n1. Go to **Admin**, then **Settings**, then **Statuses**.\n2. Select **Edit** beside the status.\n3. Change the **Name** or **Description**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-custom-status",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Delete a custom status",
+  "aliases": [
+   "remove a status",
+   "get rid of a status",
+   "retire a status",
+   "stop using a status"
+  ],
+  "body": "1. Go to **Admin**, then **Settings**, then **Statuses**.\n2. Select **Delete** beside the custom status.\n3. Choose a replacement status for tickets that currently use it.\n4. Select **Delete status**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-put-ticket-on-hold",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Put a ticket on hold",
+  "aliases": [
+   "pause a ticket",
+   "set a ticket to on-hold",
+   "wait on a third party",
+   "park a ticket"
+  ],
+  "body": "Use on hold when you are waiting on someone inside your organisation. Use **Pending** when you are waiting on the customer.\n1. Open the ticket.\n2. Select the arrow beside the **Submit** button.\n3. Choose **On hold**.\n4. Select **Submit**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-mark-ticket-pending"
+  ]
+ },
+ {
+  "id": "desk-mark-ticket-pending",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Set a ticket to pending",
+  "aliases": [
+   "waiting on customer",
+   "wait for requester reply",
+   "change to pending",
+   "mark as awaiting response"
+  ],
+  "body": "If the customer replies, the ticket changes back to **Open** automatically.\n1. Open the ticket and select **Reply**.\n2. Write your message asking for more information.\n3. Select the arrow beside **Submit** and choose **Pending**.\n4. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-put-ticket-on-hold"
+  ]
+ },
+ {
+  "id": "desk-mark-ticket-solved",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Mark a ticket as solved",
+  "aliases": [
+   "resolve a ticket",
+   "set ticket to solved",
+   "issue fixed",
+   "finish helping a customer"
+  ],
+  "body": "Solved tickets close automatically after the period set in **Settings**.\n1. Open the ticket.\n2. Write a final reply if needed.\n3. Select the arrow beside **Submit** and choose **Solved**.\n4. Select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-close-ticket"
+  ]
+ },
+ {
+  "id": "desk-auto-close-solved-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Change when solved tickets close automatically",
+  "aliases": [
+   "set auto-close time",
+   "how long before tickets close",
+   "adjust closing delay",
+   "stop tickets closing too soon"
+  ],
+  "body": "1. Go to **Admin**, then **Settings**, then **Tickets**.\n2. Find **Close solved tickets after**.\n3. Enter a number of days between 1 and 28.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-auto-tag-tickets-by-keyword",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Add tags automatically based on keywords",
+  "aliases": [
+   "automatic tagging",
+   "tag tickets that mention refund",
+   "set up a rule to label tickets",
+   "auto-label incoming tickets"
+  ],
+  "body": "1. Go to **Admin**, then **Automations**, then **Triggers**.\n2. Select **Add trigger** and enter a name.\n3. Under **Conditions**, choose **Subject or description contains** and enter the keyword.\n4. Under **Actions**, choose **Add tags** and enter the tag.\n5. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-change-status-colour",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Tags, priorities and statuses",
+  "title": "Change the colour of a status",
+  "aliases": [
+   "recolour a status",
+   "pick a different status colour",
+   "make statuses easier to tell apart",
+   "edit status badge colour"
+  ],
+  "body": "1. Go to **Admin**, then **Settings**, then **Statuses**.\n2. Select **Edit** beside the status.\n3. Select the **Colour** swatch and choose a new colour.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-create-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Create a macro",
+  "aliases": [
+   "make a macro",
+   "set up a reusable response",
+   "build a macro",
+   "add a new macro"
+  ],
+  "body": "A macro applies several changes to a ticket in one click.\n1. Go to **Admin**, then **Macros**.\n2. Select **Add macro**.\n3. Enter a **Title** that agents will recognise.\n4. Under **Actions**, add the actions you want, such as **Comment text** or **Set status**.\n5. Select **Create**.",
+  "notConfusedWith": [
+   "desk-create-canned-reply"
+  ]
+ },
+ {
+  "id": "desk-edit-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Edit a macro",
+  "aliases": [
+   "change a macro",
+   "update a macro's text",
+   "modify macro actions",
+   "fix a macro"
+  ],
+  "body": "1. Go to **Admin**, then **Macros**.\n2. Find the macro and select **Edit**.\n3. Change the **Title** or **Actions**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it. If you cannot see this option, ask an admin to check your role permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Delete a macro",
+  "aliases": [
+   "remove a macro",
+   "get rid of a macro",
+   "erase a macro",
+   "trash a macro"
+  ],
+  "body": "Tickets already updated by the macro are not affected.\n1. Go to **Admin**, then **Macros**.\n2. Select the **More** menu beside the macro.\n3. Select **Delete**.\n4. Select **Delete macro** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-deactivate-macro"
+  ]
+ },
+ {
+  "id": "desk-apply-macro-to-ticket",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Apply a macro to a ticket",
+  "aliases": [
+   "use a macro",
+   "run a macro",
+   "insert macro on a ticket",
+   "respond with a macro"
+  ],
+  "body": "1. Open the ticket.\n2. Select **Apply macro** below the reply box.\n3. Search for the macro or pick it from the list.\n4. Check the reply and properties it fills in, edit as needed, then select **Submit**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-insert-canned-reply"
+  ]
+ },
+ {
+  "id": "desk-apply-macro-to-many-tickets",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Apply a macro to several tickets",
+  "aliases": [
+   "run a macro in bulk",
+   "use a macro on multiple tickets",
+   "bulk macro",
+   "mass reply with a macro"
+  ],
+  "body": "Macros that add a public reply send it to every requester.\n1. Open a view and tick the checkbox next to each ticket.\n2. Select **Bulk edit**, then **Apply macro**.\n3. Choose the macro.\n4. Select **Submit**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-share-macro-with-all-agents",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Make a macro available to all agents",
+  "aliases": [
+   "share a macro",
+   "publish macro to the team",
+   "let everyone use a macro",
+   "company-wide macro"
+  ],
+  "body": "To share with one team only, choose **Group** instead.\n1. Go to **Admin**, then **Macros**.\n2. Select **Edit** beside the macro.\n3. Under **Available for**, choose **All agents**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-create-personal-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Create a personal macro",
+  "aliases": [
+   "make a macro just for me",
+   "private macro",
+   "my own macro",
+   "macro only I can see"
+  ],
+  "body": "Only you can see and use a personal macro.\n1. Select your profile picture, then **My macros**.\n2. Select **Add macro**.\n3. Enter a **Title** and add your actions.\n4. Select **Create**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-placeholder-to-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Add the requester's name to a macro",
+  "aliases": [
+   "personalise a macro",
+   "use a placeholder",
+   "insert customer name automatically",
+   "merge fields in a macro"
+  ],
+  "body": "The placeholder is replaced with the customer's first name when the macro is applied.\n1. Open the macro from **Admin**, then **Macros**.\n2. In the **Comment text** action, place your cursor where the name should appear.\n3. Type **{{ticket.requester.first_name}}**.\n4. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-set-status-in-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Set a status in a macro",
+  "aliases": [
+   "macro that solves a ticket",
+   "change status with a macro",
+   "add a status action",
+   "automatically solve using a macro"
+  ],
+  "body": "1. Open the macro from **Admin**, then **Macros**.\n2. Under **Actions**, select **Add action**.\n3. Choose **Set status** and pick the status, such as **Solved**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-tag-in-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Add a tag in a macro",
+  "aliases": [
+   "tag tickets with a macro",
+   "macro applies a label",
+   "put a tag action in a macro",
+   "automatic tag from macro"
+  ],
+  "body": "1. Open the macro from **Admin**, then **Macros**.\n2. Select **Add action**.\n3. Choose **Add tags** and enter the tag.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-deactivate-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Deactivate a macro",
+  "aliases": [
+   "turn off a macro",
+   "hide a macro without deleting",
+   "disable a macro",
+   "pause a macro"
+  ],
+  "body": "Deactivated macros are kept under **Inactive** and can be turned back on with **Activate**.\n1. Go to **Admin**, then **Macros**.\n2. Select the **More** menu beside the macro.\n3. Select **Deactivate**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-delete-macro"
+  ]
+ },
+ {
+  "id": "desk-duplicate-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Duplicate a macro",
+  "aliases": [
+   "copy a macro",
+   "clone a macro",
+   "make a similar macro",
+   "reuse a macro as a template"
+  ],
+  "body": "1. Go to **Admin**, then **Macros**.\n2. Select the **More** menu beside the macro.\n3. Select **Clone**.\n4. Rename the copy and select **Create**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-organise-macros-in-categories",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Organise macros into categories",
+  "aliases": [
+   "group macros",
+   "put macros in folders",
+   "tidy up macros",
+   "macro categories"
+  ],
+  "body": "Macros with the same category name appear together in the **Apply macro** list.\n1. Open the macro from **Admin**, then **Macros**.\n2. In the **Title** field, type a category name followed by two colons, then the macro name, for example **Billing::Refund approved**.\n3. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-search-macros",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Find a macro",
+  "aliases": [
+   "look up a macro",
+   "search for a saved action",
+   "locate a macro by name",
+   "which macro do I use"
+  ],
+  "body": "Inside a ticket, select **Apply macro** and type in the search box to find it.\n1. Go to **Admin**, then **Macros**.\n2. Type part of the macro's title in the search box.\n3. Select **Edit** to view its actions.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-create-canned-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Save a canned reply",
+  "aliases": [
+   "make a saved reply",
+   "create a text snippet",
+   "store a standard response",
+   "add a quick reply"
+  ],
+  "body": "Unlike macros, canned replies only insert text and do not change ticket properties.\n1. Go to **Admin**, then **Canned replies**.\n2. Select **Add canned reply**.\n3. Enter a **Name** and the **Message**.\n4. Choose who it is **Available to**.\n5. Select **Save**.",
+  "notConfusedWith": [
+   "desk-create-macro"
+  ]
+ },
+ {
+  "id": "desk-insert-canned-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Insert a canned reply into a ticket",
+  "aliases": [
+   "use a saved reply",
+   "paste a snippet",
+   "quick reply on a ticket",
+   "add standard text"
+  ],
+  "body": "1. Open the ticket and select **Reply**.\n2. Select the **Canned replies** icon above the message box, or type **/** in the box.\n3. Search for the reply and select it.\n4. Edit the text if needed, then select **Send**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": [
+   "desk-apply-macro-to-ticket"
+  ]
+ },
+ {
+  "id": "desk-edit-canned-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Edit a canned reply",
+  "aliases": [
+   "change a saved reply",
+   "update snippet text",
+   "fix a quick reply",
+   "modify a standard response"
+  ],
+  "body": "1. Go to **Admin**, then **Canned replies**.\n2. Select the reply's name.\n3. Change the **Name** or **Message**.\n4. Select **Save**.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it. If you cannot see this option, ask an admin to check your role permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-delete-canned-reply",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Delete a canned reply",
+  "aliases": [
+   "remove a saved reply",
+   "get rid of a snippet",
+   "erase a quick reply",
+   "trash a standard response"
+  ],
+  "body": "1. Go to **Admin**, then **Canned replies**.\n2. Select the **More** menu beside the reply.\n3. Select **Delete**.\n4. Select **Delete reply** to confirm.\nYour change takes effect immediately and is recorded in the audit log, so admins can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-add-attachment-to-macro",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "Add an attachment to a macro",
+  "aliases": [
+   "send a file with a macro",
+   "attach a document to a macro",
+   "include a PDF in a macro",
+   "macro with attachment"
+  ],
+  "body": "Files can be up to 7 MB. The file is attached to the public reply when the macro is applied.\n1. Open the macro from **Admin**, then **Macros**.\n2. Under **Actions**, select **Add action**, then **Attachment**.\n3. Select **Upload file** and choose the file.\n4. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "desk-view-macro-usage",
+  "product": "Harbour Desk (customer support ticketing)",
+  "status": "public",
+  "category": "Macros and canned replies",
+  "title": "See how often a macro is used",
+  "aliases": [
+   "macro statistics",
+   "which macros are popular",
+   "macro usage report",
+   "count macro uses"
+  ],
+  "body": "Macros that are never used are good candidates for deactivating.\n1. Go to **Admin**, then **Macros**.\n2. Select **Usage** at the top of the list.\n3. Choose a period, such as **Last 30 days**.\n4. Sort by **Times used** to see the most popular macros.",
+  "notConfusedWith": []
+ }
+]

@@ -1,0 +1,1676 @@
+[
+ {
+  "id": "inv-add-a-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Add a customer",
+  "aliases": [
+   "create a new customer",
+   "new client record",
+   "add a client",
+   "set up a customer"
+  ],
+  "body": "Create a customer record before you invoice or quote them.\n\n1. Go to **Customers**.\n2. Select **New customer**.\n3. Enter the **Customer name** and **Email**.\n4. Add a **Billing address** and any **Payment terms** if needed.\n5. Select **Save customer**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-add-a-billing-contact"
+  ]
+ },
+ {
+  "id": "inv-add-a-billing-contact",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Add a billing contact to a customer",
+  "aliases": [
+   "add another person to receive invoices",
+   "new contact on a customer",
+   "add a second email for invoices",
+   "add accounts payable contact"
+  ],
+  "body": "Billing contacts receive invoices, quotes and reminders for a customer.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select **Add billing contact**.\n4. Enter the contact's **Name**, **Email** and **Phone**.\n5. Select **Save contact**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-add-a-customer",
+   "inv-set-a-primary-billing-contact"
+  ]
+ },
+ {
+  "id": "inv-update-a-billing-contact-phone-number",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Update a billing contact's phone number",
+  "aliases": [
+   "change phone number",
+   "edit contact phone",
+   "new mobile number for a contact",
+   "fix a wrong phone number"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select the contact's name.\n4. Edit the **Phone** field.\n5. Select **Save contact**.\n6. The new number appears on the customer's statements straight away.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-update-a-billing-contact-email"
+  ]
+ },
+ {
+  "id": "inv-update-a-billing-contact-email",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Update a billing contact's email address",
+  "aliases": [
+   "change contact email",
+   "edit email address",
+   "invoices going to the wrong email",
+   "new email for a billing contact"
+  ],
+  "body": "Future invoices and reminders will go to the new address. Emails already sent are not changed.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select the contact's name.\n4. Replace the address in the **Email** field.\n5. Select **Save contact**.",
+  "notConfusedWith": [
+   "inv-update-a-billing-contact-phone-number"
+  ]
+ },
+ {
+  "id": "inv-delete-a-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Delete a customer",
+  "aliases": [
+   "remove a customer",
+   "delete a client",
+   "get rid of a customer record",
+   "erase a customer"
+  ],
+  "body": "You can only delete a customer who has no invoices or quotes. Otherwise, archive them instead.\n\n1. Go to **Customers** and open the customer.\n2. Select **More actions**.\n3. Select **Delete customer**.\n4. Select **Delete** to confirm.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-restore-an-archived-customer",
+   "inv-delete-a-billing-contact"
+  ]
+ },
+ {
+  "id": "inv-delete-a-billing-contact",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Delete a billing contact",
+  "aliases": [
+   "remove a contact",
+   "remove someone from a customer",
+   "delete an old contact",
+   "stop emailing a contact"
+  ],
+  "body": "A customer must always keep at least one billing contact, so add a replacement first if you are removing the last one.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Select the contact's name.\n4. Select **Delete contact**.\n5. Select **Delete** to confirm.",
+  "notConfusedWith": [
+   "inv-delete-a-customer"
+  ]
+ },
+ {
+  "id": "inv-export-customers-to-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Export customers to CSV",
+  "aliases": [
+   "download customer list",
+   "export clients to a spreadsheet",
+   "customer list as csv",
+   "download all customers"
+  ],
+  "body": "The export includes names, billing contacts, addresses and payment terms.\n\n1. Go to **Customers**.\n2. Use **Filter** to narrow the list, or leave it as is to export everyone.\n3. Select **Export**.\n4. Choose **CSV**.\n5. Select **Download**. The file saves to your device.",
+  "notConfusedWith": [
+   "inv-import-customers-from-csv"
+  ]
+ },
+ {
+  "id": "inv-import-customers-from-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Import customers from CSV",
+  "aliases": [
+   "upload a customer list",
+   "bulk add customers",
+   "import clients from a spreadsheet",
+   "load customers from a file"
+  ],
+  "body": "Use this to add many customers at once.\n\n1. Go to **Customers**.\n2. Select **Import**.\n3. Select **Download template** and fill it in.\n4. Select **Choose file** and upload your CSV.\n5. Match your columns to Harbour fields, then select **Import customers**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-export-customers-to-csv"
+  ]
+ },
+ {
+  "id": "inv-add-a-note-to-a-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Add a note to a customer",
+  "aliases": [
+   "write a note on a customer",
+   "leave a comment on a client",
+   "record a call with a customer",
+   "customer notes"
+  ],
+  "body": "Notes are internal. Customers never see them.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note.\n5. Select **Save note**. Your name and the date are added automatically.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-add-a-note-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-change-a-customer-status",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Change a customer's status",
+  "aliases": [
+   "mark a customer inactive",
+   "put a customer on hold",
+   "set customer to active",
+   "change client status"
+  ],
+  "body": "A customer can be **Active**, **On hold** or **Inactive**. You cannot create new invoices for customers on hold or inactive.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Status** drop-down at the top of the page.\n3. Choose the new status.\n4. Select **Update status**.",
+  "notConfusedWith": [
+   "inv-restore-an-archived-customer"
+  ]
+ },
+ {
+  "id": "inv-set-a-primary-billing-contact",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Set a primary billing contact",
+  "aliases": [
+   "choose main contact",
+   "change who gets invoices first",
+   "make a contact the main one",
+   "default contact for a customer"
+  ],
+  "body": "The primary contact is the default recipient when you send an invoice or quote.\n\n1. Go to **Customers** and open the customer.\n2. Select the **Contacts** tab.\n3. Find the contact you want.\n4. Select the three dots, then **Make primary**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-add-a-billing-contact"
+  ]
+ },
+ {
+  "id": "inv-update-a-customer-billing-address",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Update a customer's billing address",
+  "aliases": [
+   "change customer address",
+   "new address for a client",
+   "edit billing address",
+   "customer moved"
+  ],
+  "body": "Draft invoices pick up the new address. Issued invoices keep the address they were sent with.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Update the fields under **Billing address**.\n4. Select **Save customer**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-merge-duplicate-customers",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Merge duplicate customers",
+  "aliases": [
+   "combine two customers",
+   "duplicate client records",
+   "join customer records",
+   "same customer listed twice"
+  ],
+  "body": "Merging moves all invoices, quotes and contacts into one record. This cannot be undone.\n\n1. Go to **Customers**.\n2. Tick the two duplicate customers.\n3. Select **Merge**.\n4. Choose which record to **Keep**.\n5. Select **Merge customers**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-delete-a-customer"
+  ]
+ },
+ {
+  "id": "inv-set-customer-payment-terms",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Set payment terms for a customer",
+  "aliases": [
+   "change how many days a customer has to pay",
+   "net 30 for a customer",
+   "default due date for a client",
+   "customer payment terms"
+  ],
+  "body": "New invoices for this customer will use these terms unless you change them.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Under **Payment terms**, choose an option such as **Net 14** or **Net 30**.\n4. Select **Save customer**.",
+  "notConfusedWith": [
+   "inv-change-an-invoice-due-date"
+  ]
+ },
+ {
+  "id": "inv-add-a-customer-abn",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Add a customer's ABN",
+  "aliases": [
+   "customer tax number",
+   "enter a client ABN",
+   "business number for a customer",
+   "add ABN to customer"
+  ],
+  "body": "The ABN appears on invoices and quotes you send to this customer.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Enter the number in the **ABN** field. We check it as you type.\n4. Select **Save customer**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-enter-your-abn"
+  ]
+ },
+ {
+  "id": "inv-set-a-customer-default-currency",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Set a customer's default currency",
+  "aliases": [
+   "invoice a customer in another currency",
+   "change customer currency",
+   "foreign currency client",
+   "default currency for customer"
+  ],
+  "body": "You can only change the currency before the customer has any invoices.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Choose a currency from the **Currency** list.\n4. Select **Save customer**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-view-a-customer-statement",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "View a customer statement",
+  "aliases": [
+   "see what a customer owes",
+   "customer balance",
+   "account statement for a client",
+   "outstanding amount for a customer"
+  ],
+  "body": "1. Go to **Customers** and open the customer.\n2. Select the **Statement** tab.\n3. Choose a **Date range**.\n4. Review invoices, payments, credits and the closing balance.\n5. Select **Download PDF** to share it.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-turn-on-automatic-reminders-for-a-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Turn on automatic reminders for a customer",
+  "aliases": [
+   "auto chase overdue invoices",
+   "automatic payment reminders",
+   "schedule reminders for one client",
+   "stop chasing manually"
+  ],
+  "body": "Harbour will email the customer's billing contacts when an invoice becomes overdue.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Switch on **Automatic reminders**.\n4. Choose when to send them, such as **3 days after due date**.\n5. Select **Save customer**.",
+  "notConfusedWith": [
+   "inv-send-a-payment-reminder"
+  ]
+ },
+ {
+  "id": "inv-tag-a-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Add a tag to a customer",
+  "aliases": [
+   "label a customer",
+   "group customers",
+   "categorise clients",
+   "customer labels"
+  ],
+  "body": "Tags help you filter your customer list and reports.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Click in the **Tags** box.\n4. Type a tag or pick an existing one, then press Enter.\n5. Select **Save customer**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-restore-an-archived-customer",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Customers and billing contacts",
+  "title": "Restore an archived customer",
+  "aliases": [
+   "unarchive a customer",
+   "bring back an old client",
+   "reactivate customer",
+   "find an archived customer"
+  ],
+  "body": "Archived customers are hidden from your list but keep their history.\n\n1. Go to **Customers**.\n2. Select **Filter**, then **Archived**.\n3. Open the customer.\n4. Select **Restore customer**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-delete-a-customer",
+   "inv-change-a-customer-status"
+  ]
+ },
+ {
+  "id": "inv-create-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Create an invoice",
+  "aliases": [
+   "make a new invoice",
+   "bill a customer",
+   "raise an invoice",
+   "new invoice"
+  ],
+  "body": "1. Go to **Invoices**.\n2. Select **New invoice**.\n3. Choose a **Customer**.\n4. Select **Add line item** and pick a product, or type a description.\n5. Check the **Due date** and tax.\n6. Select **Save as draft** or **Approve and send**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-create-a-quote"
+  ]
+ },
+ {
+  "id": "inv-send-an-invoice-by-email",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Send an invoice by email",
+  "aliases": [
+   "email an invoice to a customer",
+   "send invoice",
+   "email invoice pdf",
+   "deliver an invoice"
+  ],
+  "body": "The invoice is sent to the customer's primary billing contact unless you choose others.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **Send**.\n3. Check the **To** addresses and edit the message if you like.\n4. Select **Send invoice**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-send-a-payment-reminder"
+  ]
+ },
+ {
+  "id": "inv-send-a-payment-reminder",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Send a payment reminder",
+  "aliases": [
+   "chase an overdue invoice",
+   "remind a customer to pay",
+   "nudge a late payer",
+   "email a reminder"
+  ],
+  "body": "Reminders are only available for invoices that have been sent and are not yet paid.\n\n1. Go to **Invoices** and select the **Overdue** tab.\n2. Open the invoice.\n3. Select **Send reminder**.\n4. Edit the message if needed.\n5. Select **Send**. The reminder is logged in the invoice history.",
+  "notConfusedWith": [
+   "inv-turn-on-automatic-reminders-for-a-customer",
+   "inv-send-an-invoice-by-email"
+  ]
+ },
+ {
+  "id": "inv-record-a-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Record a payment on an invoice",
+  "aliases": [
+   "mark an invoice as paid",
+   "customer paid by bank transfer",
+   "enter a payment",
+   "apply a payment"
+  ],
+  "body": "Use this when a customer pays you outside Harbour, such as by bank transfer or cash.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **Record payment**.\n3. Enter the **Amount**, **Date** and **Payment method**.\n4. Select **Save payment**. The status changes to **Paid** once the balance is zero.",
+  "notConfusedWith": [
+   "inv-refund-a-payment"
+  ]
+ },
+ {
+  "id": "inv-edit-a-draft-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Edit a draft invoice",
+  "aliases": [
+   "change an unsent invoice",
+   "fix a draft invoice",
+   "update invoice before sending",
+   "modify a draft"
+  ],
+  "body": "You can only edit invoices with a **Draft** status. For sent invoices, void and reissue or issue a credit note.\n\n1. Go to **Invoices** and select the **Drafts** tab.\n2. Open the invoice.\n3. Select **Edit**.\n4. Make your changes.\n5. Select **Save as draft**.",
+  "notConfusedWith": [
+   "inv-void-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-void-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Void an invoice",
+  "aliases": [
+   "cancel an invoice",
+   "invoice sent by mistake",
+   "cancel a sent invoice",
+   "void a bill"
+  ],
+  "body": "Voiding cancels the invoice but keeps it on record. It cannot be voided if it has payments.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **More actions**.\n3. Select **Void invoice**.\n4. Enter a reason if you want one.\n5. Select **Void** to confirm.",
+  "notConfusedWith": [
+   "inv-delete-a-draft-invoice",
+   "inv-issue-a-credit-note"
+  ]
+ },
+ {
+  "id": "inv-delete-a-draft-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Delete a draft invoice",
+  "aliases": [
+   "remove an unsent invoice",
+   "get rid of a draft",
+   "delete invoice",
+   "throw away a draft"
+  ],
+  "body": "Only drafts can be deleted. Deleted invoices cannot be recovered.\n\n1. Go to **Invoices** and select the **Drafts** tab.\n2. Open the invoice.\n3. Select **More actions**.\n4. Select **Delete draft**.\n5. Select **Delete** to confirm.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-void-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-duplicate-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Duplicate an invoice",
+  "aliases": [
+   "copy an invoice",
+   "clone an invoice",
+   "repeat a previous invoice",
+   "reuse an invoice"
+  ],
+  "body": "The copy is saved as a new draft with today's date.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **More actions**.\n3. Select **Duplicate**.\n4. Change the customer or line items if needed.\n5. Select **Save as draft**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-set-up-a-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-download-an-invoice-as-pdf",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Download an invoice as a PDF",
+  "aliases": [
+   "save invoice as pdf",
+   "print an invoice",
+   "get a pdf copy",
+   "download invoice"
+  ],
+  "body": "1. Go to **Invoices** and open the invoice.\n2. Select **Download**.\n3. Choose **PDF**.\n4. The file saves to your device, ready to print or attach to an email.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-export-invoices-to-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Export invoices to CSV",
+  "aliases": [
+   "download invoice list",
+   "invoices to spreadsheet",
+   "export all invoices",
+   "csv of invoices"
+  ],
+  "body": "You can export all invoices or only those matching your filters.\n\n1. Go to **Invoices**.\n2. Use **Filter** to choose a date range or status.\n3. Select **Export**.\n4. Choose **CSV**.\n5. Select **Download**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-export-customers-to-csv"
+  ]
+ },
+ {
+  "id": "inv-add-a-note-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Add a note to an invoice",
+  "aliases": [
+   "write an internal note on an invoice",
+   "comment on an invoice",
+   "invoice notes",
+   "add a memo to an invoice"
+  ],
+  "body": "Internal notes are only visible to your team. To add a message the customer sees, use the **Notes to customer** box instead.\n\n1. Go to **Invoices** and open the invoice.\n2. Select the **History** tab.\n3. Select **Add note**.\n4. Type your note.\n5. Select **Save note**.",
+  "notConfusedWith": [
+   "inv-add-a-note-to-a-customer"
+  ]
+ },
+ {
+  "id": "inv-change-an-invoice-due-date",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Change an invoice's due date",
+  "aliases": [
+   "extend payment deadline",
+   "give a customer more time",
+   "edit due date",
+   "new due date"
+  ],
+  "body": "You can change the due date on draft and sent invoices.\n\n1. Go to **Invoices** and open the invoice.\n2. Select **Edit**.\n3. Pick a new **Due date**.\n4. Select **Save changes**. If the invoice was sent, choose whether to notify the customer.",
+  "notConfusedWith": [
+   "inv-set-customer-payment-terms"
+  ]
+ },
+ {
+  "id": "inv-apply-a-discount-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Apply a discount to an invoice",
+  "aliases": [
+   "give a customer a discount",
+   "take a percentage off",
+   "discount the whole invoice",
+   "add a discount"
+  ],
+  "body": "This discounts the invoice total. To discount a single item, see line item discounts.\n\n1. Go to **Invoices** and open the draft invoice.\n2. Select **Edit**.\n3. Select **Add discount** under the line items.\n4. Choose **Percentage** or **Amount** and enter the value.\n5. Select **Save as draft**.",
+  "notConfusedWith": [
+   "inv-apply-a-line-item-discount"
+  ]
+ },
+ {
+  "id": "inv-issue-a-credit-note",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Issue a credit note",
+  "aliases": [
+   "credit a customer",
+   "reduce an invoice after sending",
+   "correct a sent invoice",
+   "create a credit"
+  ],
+  "body": "A credit note reduces what the customer owes.\n\n1. Go to **Invoices** and open the sent invoice.\n2. Select **More actions**.\n3. Select **Issue credit note**.\n4. Enter the **Amount** or select the items to credit.\n5. Select **Approve credit note**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-void-an-invoice",
+   "inv-refund-a-payment"
+  ]
+ },
+ {
+  "id": "inv-set-up-a-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Set up a recurring invoice",
+  "aliases": [
+   "bill a customer every month",
+   "repeat invoice automatically",
+   "subscription invoice",
+   "schedule repeating invoices"
+  ],
+  "body": "Harbour will create the invoice on your schedule.\n\n1. Go to **Invoices** and select **Recurring**.\n2. Select **New recurring invoice**.\n3. Choose the **Customer** and add line items.\n4. Set the **Frequency** and **Start date**.\n5. Choose **Send automatically** or **Save as draft**, then select **Save schedule**.",
+  "notConfusedWith": [
+   "inv-duplicate-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-pause-a-recurring-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Pause a recurring invoice",
+  "aliases": [
+   "stop recurring billing temporarily",
+   "hold a repeating invoice",
+   "suspend subscription billing",
+   "skip recurring invoices"
+  ],
+  "body": "Pausing stops new invoices from being created. Existing invoices are not affected.\n\n1. Go to **Invoices** and select **Recurring**.\n2. Open the schedule.\n3. Select **Pause**.\n4. Select **Resume** whenever you want to start again.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-set-up-a-recurring-invoice"
+  ]
+ },
+ {
+  "id": "inv-add-a-late-fee",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Add a late fee to an invoice",
+  "aliases": [
+   "charge interest on overdue invoice",
+   "late payment charge",
+   "penalty fee",
+   "add overdue fee"
+  ],
+  "body": "1. Go to **Invoices** and open the overdue invoice.\n2. Select **More actions**.\n3. Select **Add late fee**.\n4. Enter a **Percentage** or **Fixed amount**.\n5. Select **Apply fee**. It is added as a new line item.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-send-a-payment-reminder"
+  ]
+ },
+ {
+  "id": "inv-change-the-invoice-number-format",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Change the invoice number format",
+  "aliases": [
+   "edit invoice numbering",
+   "change invoice prefix",
+   "set next invoice number",
+   "invoice numbers"
+  ],
+  "body": "Changes apply to new invoices only.\n\n1. Go to **Settings** and select **Invoice settings**.\n2. Under **Numbering**, edit the **Prefix**, such as INV-.\n3. Enter the **Next number**.\n4. Select **Save**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-set-the-quote-number-format"
+  ]
+ },
+ {
+  "id": "inv-refund-a-payment",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Refund a payment",
+  "aliases": [
+   "give money back to a customer",
+   "reverse a payment",
+   "return a payment",
+   "customer overpaid"
+  ],
+  "body": "Recording a refund in Harbour does not move money. You will still need to send it through your bank or card provider.\n\n1. Go to **Invoices** and open the paid invoice.\n2. Find the payment under **Payments**.\n3. Select **Refund**.\n4. Enter the **Amount** and **Date**.\n5. Select **Record refund**.",
+  "notConfusedWith": [
+   "inv-issue-a-credit-note",
+   "inv-record-a-payment"
+  ]
+ },
+ {
+  "id": "inv-attach-a-file-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Invoices",
+  "title": "Attach a file to an invoice",
+  "aliases": [
+   "add a document to an invoice",
+   "upload a pdf to an invoice",
+   "include a timesheet",
+   "attachments on invoices"
+  ],
+  "body": "Attachments are sent with the invoice email. Each file can be up to 10 MB.\n\n1. Go to **Invoices** and open the draft invoice.\n2. Select **Edit**.\n3. Scroll to **Attachments** and select **Add file**.\n4. Choose a file from your device.\n5. Select **Save as draft**.",
+  "notConfusedWith": [
+   "inv-attach-a-file-to-a-quote"
+  ]
+ },
+ {
+  "id": "inv-create-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Create a quote",
+  "aliases": [
+   "make an estimate",
+   "new quote",
+   "write a quote for a customer",
+   "prepare a proposal"
+  ],
+  "body": "1. Go to **Quotes**.\n2. Select **New quote**.\n3. Choose a **Customer**.\n4. Add line items using **Add line item**.\n5. Check the **Expiry date**.\n6. Select **Save as draft** or **Approve and send**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-create-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-send-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Send a quote by email",
+  "aliases": [
+   "email a quote",
+   "send an estimate",
+   "send quote to customer",
+   "deliver a proposal"
+  ],
+  "body": "The customer gets a link to view the quote online and can accept it with one click.\n\n1. Go to **Quotes** and open the quote.\n2. Select **Send**.\n3. Check the **To** addresses and message.\n4. Select **Send quote**. The status changes to **Sent**.",
+  "notConfusedWith": [
+   "inv-send-a-quote-follow-up"
+  ]
+ },
+ {
+  "id": "inv-convert-a-quote-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Convert a quote to an invoice",
+  "aliases": [
+   "turn a quote into an invoice",
+   "bill an accepted quote",
+   "quote to invoice",
+   "invoice from a quote"
+  ],
+  "body": "All line items, discounts and tax carry across to a new draft invoice.\n\n1. Go to **Quotes** and open an accepted quote.\n2. Select **Convert to invoice**.\n3. Review the draft invoice.\n4. Select **Approve and send**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-duplicate-a-quote"
+  ]
+ },
+ {
+  "id": "inv-edit-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Edit a quote",
+  "aliases": [
+   "change a quote",
+   "update an estimate",
+   "fix a quote",
+   "modify quote details"
+  ],
+  "body": "If the quote has already been sent, the customer will see the updated version.\n\n1. Go to **Quotes** and open the quote.\n2. Select **Edit**.\n3. Change the line items, dates or notes.\n4. Select **Save changes**.\n5. Select **Resend** if you want to notify the customer.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-duplicate-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Duplicate a quote",
+  "aliases": [
+   "copy a quote",
+   "clone an estimate",
+   "reuse a quote",
+   "make a similar quote"
+  ],
+  "body": "The copy is saved as a draft with a new quote number.\n\n1. Go to **Quotes** and open the quote.\n2. Select **More actions**.\n3. Select **Duplicate**.\n4. Change the customer or items.\n5. Select **Save as draft**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-convert-a-quote-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-mark-a-quote-as-accepted",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Mark a quote as accepted",
+  "aliases": [
+   "customer said yes by phone",
+   "accept a quote manually",
+   "approve quote on behalf of customer",
+   "set quote to accepted"
+  ],
+  "body": "Use this when the customer agrees outside of Harbour, for example by phone.\n\n1. Go to **Quotes** and open the quote.\n2. Select **Mark as accepted**.\n3. Choose the **Date accepted**.\n4. Select **Confirm**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-mark-a-quote-as-declined"
+  ]
+ },
+ {
+  "id": "inv-mark-a-quote-as-declined",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Mark a quote as declined",
+  "aliases": [
+   "customer said no",
+   "reject a quote",
+   "quote not accepted",
+   "close a lost quote"
+  ],
+  "body": "1. Go to **Quotes** and open the quote.\n2. Select **Mark as declined**.\n3. Choose a **Reason**, such as **Price** or **Went elsewhere**.\n4. Select **Confirm**.\n\nIf you can't see an option, check that your role has the right permissions. Select **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-mark-a-quote-as-accepted",
+   "inv-reopen-a-declined-quote"
+  ]
+ },
+ {
+  "id": "inv-change-a-quote-expiry-date",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Change a quote's expiry date",
+  "aliases": [
+   "extend a quote",
+   "quote expired",
+   "give customer longer to accept",
+   "new expiry date"
+  ],
+  "body": "Expired quotes cannot be accepted by the customer until you extend them.\n\n1. Go to **Quotes** and open the quote.\n2. Select **Edit**.\n3. Pick a new **Expiry date**.\n4. Select **Save changes**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-set-the-default-quote-expiry"
+  ]
+ },
+ {
+  "id": "inv-delete-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Delete a quote",
+  "aliases": [
+   "remove a quote",
+   "get rid of an estimate",
+   "delete a draft quote",
+   "erase a quote"
+  ],
+  "body": "You can delete quotes that are in **Draft** status or have been declined. Sent or accepted quotes must be declined or archived first.\n\n1. Go to **Quotes** and open the quote.\n2. Select **More actions**.\n3. Select **Delete quote**.\n4. Select **Delete** to confirm.",
+  "notConfusedWith": [
+   "inv-delete-a-draft-invoice"
+  ]
+ },
+ {
+  "id": "inv-export-quotes-to-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Export quotes to CSV",
+  "aliases": [
+   "download quotes list",
+   "quotes to spreadsheet",
+   "csv of estimates",
+   "export all quotes"
+  ],
+  "body": "1. Go to **Quotes**.\n2. Use **Filter** to choose a status or date range.\n3. Select **Export**.\n4. Choose **CSV**.\n5. Select **Download**.\n\nHarbour records the change in the activity history so your team can see who made it. If you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-export-invoices-to-csv"
+  ]
+ },
+ {
+  "id": "inv-add-a-note-to-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Add a note to a quote",
+  "aliases": [
+   "internal note on a quote",
+   "comment on an estimate",
+   "write a note about a quote",
+   "quote memo"
+  ],
+  "body": "Notes are internal and are never shown to the customer.\n\n1. Go to **Quotes** and open the quote.\n2. Select the **History** tab.\n3. Select **Add note**.\n4. Type your note and select **Save note**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-add-a-note-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-download-a-quote-as-pdf",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Download a quote as a PDF",
+  "aliases": [
+   "save quote as pdf",
+   "print a quote",
+   "pdf of an estimate",
+   "download estimate"
+  ],
+  "body": "1. Go to **Quotes** and open the quote.\n2. Select **Download**.\n3. Choose **PDF**.\n4. The file saves to your device.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-download-an-invoice-as-pdf"
+  ]
+ },
+ {
+  "id": "inv-add-a-discount-to-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Add a discount to a quote",
+  "aliases": [
+   "offer a discount on an estimate",
+   "take a percentage off a quote",
+   "quote discount",
+   "reduce quote price"
+  ],
+  "body": "1. Go to **Quotes** and open the quote.\n2. Select **Edit**.\n3. Select **Add discount** under the line items.\n4. Choose **Percentage** or **Amount** and enter a value.\n5. Select **Save changes**.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-apply-a-discount-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-set-the-default-quote-expiry",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Set the default quote expiry",
+  "aliases": [
+   "change how long quotes last",
+   "default validity period",
+   "standard expiry for estimates",
+   "quote validity"
+  ],
+  "body": "New quotes will expire after this many days unless you change the date.\n\n1. Go to **Settings** and select **Quote settings**.\n2. Enter the number of days under **Default expiry**.\n3. Select **Save**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-change-a-quote-expiry-date"
+  ]
+ },
+ {
+  "id": "inv-set-the-quote-number-format",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Set the quote number format",
+  "aliases": [
+   "change quote prefix",
+   "edit quote numbering",
+   "next quote number",
+   "quote numbers"
+  ],
+  "body": "1. Go to **Settings** and select **Quote settings**.\n2. Under **Numbering**, edit the **Prefix**, such as QUO-.\n3. Enter the **Next number**.\n4. Select **Save**.\n\nIf you can't see an option, check that your role has the right permissions. Select **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-change-the-invoice-number-format"
+  ]
+ },
+ {
+  "id": "inv-add-terms-and-conditions-to-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Add terms and conditions to a quote",
+  "aliases": [
+   "include terms on an estimate",
+   "add t&cs to a quote",
+   "quote terms",
+   "set standard terms"
+  ],
+  "body": "Terms appear at the bottom of the quote. You can save them as a default for future quotes.\n\n1. Go to **Quotes** and open the draft quote.\n2. Select **Edit**.\n3. Type your wording in the **Terms** box.\n4. Tick **Use as default** if you want to reuse it.\n5. Select **Save changes**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-request-a-deposit-on-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Request a deposit on a quote",
+  "aliases": [
+   "ask for upfront payment",
+   "deposit on an estimate",
+   "part payment before starting",
+   "require a deposit"
+  ],
+  "body": "When the customer accepts, Harbour creates a deposit invoice automatically.\n\n1. Go to **Quotes** and open the draft quote.\n2. Select **Edit**.\n3. Switch on **Request deposit**.\n4. Enter a **Percentage** or **Fixed amount**.\n5. Select **Save changes**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-reopen-a-declined-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Reopen a declined quote",
+  "aliases": [
+   "revive a lost quote",
+   "undo declined",
+   "customer changed their mind",
+   "put a quote back to sent"
+  ],
+  "body": "1. Go to **Quotes** and select the **Declined** tab.\n2. Open the quote.\n3. Select **Reopen**.\n4. The quote returns to **Draft** so you can edit and resend it.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-mark-a-quote-as-declined"
+  ]
+ },
+ {
+  "id": "inv-send-a-quote-follow-up",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Send a quote follow-up",
+  "aliases": [
+   "chase a quote",
+   "remind a customer about an estimate",
+   "nudge on a proposal",
+   "follow up on a quote"
+  ],
+  "body": "Follow-ups are available while a quote is **Sent** and has not expired.\n\n1. Go to **Quotes** and open the quote.\n2. Select **Send follow-up**.\n3. Edit the message if needed.\n4. Select **Send**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-send-a-quote",
+   "inv-send-a-payment-reminder"
+  ]
+ },
+ {
+  "id": "inv-attach-a-file-to-a-quote",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Quotes",
+  "title": "Attach a file to a quote",
+  "aliases": [
+   "add a document to an estimate",
+   "upload a drawing to a quote",
+   "include a brochure",
+   "quote attachments"
+  ],
+  "body": "Each file can be up to 10 MB.\n\n1. Go to **Quotes** and open the draft quote.\n2. Select **Edit**.\n3. Under **Attachments**, select **Add file**.\n4. Choose a file from your device.\n5. Select **Save changes**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-attach-a-file-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-add-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a product",
+  "aliases": [
+   "create a new product",
+   "new item for sale",
+   "add an item",
+   "set up a product"
+  ],
+  "body": "Saved products can be added to invoices and quotes in one click.\n\n1. Go to **Products**.\n2. Select **New product**.\n3. Enter a **Name** and **Price**.\n4. Choose a **Tax rate**.\n5. Select **Save product**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-add-a-service"
+  ]
+ },
+ {
+  "id": "inv-add-a-service",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a service",
+  "aliases": [
+   "create an hourly service",
+   "new labour item",
+   "set up a service rate",
+   "add a service item"
+  ],
+  "body": "Services are billed by time or job rather than by item count.\n\n1. Go to **Products**.\n2. Select **New product**.\n3. Set **Type** to **Service**.\n4. Enter a **Name** and **Price**, and choose **Hour** or **Job** under **Unit**.\n5. Select **Save product**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-add-a-product"
+  ]
+ },
+ {
+  "id": "inv-edit-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Edit a product",
+  "aliases": [
+   "change product details",
+   "update an item",
+   "rename a product",
+   "modify a product"
+  ],
+  "body": "Edits do not change invoices or quotes you have already created.\n\n1. Go to **Products**.\n2. Select the product.\n3. Select **Edit**.\n4. Update the details.\n5. Select **Save product**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-change-a-product-price"
+  ]
+ },
+ {
+  "id": "inv-change-a-product-price",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Change a product's price",
+  "aliases": [
+   "update price",
+   "new price for an item",
+   "price increase",
+   "edit unit price"
+  ],
+  "body": "Existing drafts keep their original price. New line items use the new price.\n\n1. Go to **Products**.\n2. Select the product.\n3. Select **Edit**.\n4. Enter the new **Price**.\n5. Select **Save product**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-edit-a-product"
+  ]
+ },
+ {
+  "id": "inv-delete-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Delete a product",
+  "aliases": [
+   "remove a product",
+   "erase an item",
+   "delete a service",
+   "get rid of a product"
+  ],
+  "body": "You can only delete a product that has never been used on an invoice or quote. Otherwise, archive it.\n\n1. Go to **Products**.\n2. Select the product.\n3. Select **More actions**.\n4. Select **Delete product**.\n5. Select **Delete** to confirm.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-archive-a-product"
+  ]
+ },
+ {
+  "id": "inv-archive-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Archive a product",
+  "aliases": [
+   "hide a product",
+   "stop selling an item",
+   "retire a product",
+   "deactivate a product"
+  ],
+  "body": "Archived products no longer appear when adding line items, but stay on past documents.\n\n1. Go to **Products**.\n2. Select the product.\n3. Select **More actions**.\n4. Select **Archive product**.\n5. Select **Archived** in the filter to find it again.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-delete-a-product"
+  ]
+ },
+ {
+  "id": "inv-import-products-from-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Import products from CSV",
+  "aliases": [
+   "upload a price list",
+   "bulk add products",
+   "import items from a spreadsheet",
+   "load products from a file"
+  ],
+  "body": "1. Go to **Products**.\n2. Select **Import**.\n3. Select **Download template** and fill it in.\n4. Upload your CSV with **Choose file**.\n5. Match the columns, then select **Import products**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-export-products-to-csv"
+  ]
+ },
+ {
+  "id": "inv-export-products-to-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Export products to CSV",
+  "aliases": [
+   "download product list",
+   "price list to spreadsheet",
+   "csv of items",
+   "export all products"
+  ],
+  "body": "1. Go to **Products**.\n2. Select **Export**.\n3. Choose **CSV**.\n4. Select **Download**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-import-products-from-csv"
+  ]
+ },
+ {
+  "id": "inv-add-a-product-category",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a product category",
+  "aliases": [
+   "group products",
+   "create a category",
+   "organise items",
+   "new product group"
+  ],
+  "body": "Categories help you filter products and report on sales.\n\n1. Go to **Products** and select **Categories**.\n2. Select **New category**.\n3. Enter a **Name**.\n4. Select **Save**.\n5. Open a product and choose the category under **Category**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-add-a-line-item-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a line item to an invoice",
+  "aliases": [
+   "add a product to an invoice",
+   "add another row",
+   "put an item on an invoice",
+   "add a charge"
+  ],
+  "body": "1. Go to **Invoices** and open the draft invoice.\n2. Select **Edit**.\n3. Select **Add line item**.\n4. Search for a product, or type a description.\n5. Check the **Quantity** and **Price**.\n6. Select **Save as draft**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-add-a-custom-line-item"
+  ]
+ },
+ {
+  "id": "inv-remove-a-line-item",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Remove a line item",
+  "aliases": [
+   "delete a row from an invoice",
+   "take an item off",
+   "remove a charge",
+   "delete a line"
+  ],
+  "body": "You can remove line items from drafts only.\n\n1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**.\n3. Select the bin icon at the end of the row.\n4. Select **Save as draft**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-delete-a-draft-invoice"
+  ]
+ },
+ {
+  "id": "inv-reorder-line-items",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Reorder line items",
+  "aliases": [
+   "change the order of items",
+   "move a row up",
+   "rearrange invoice lines",
+   "sort line items"
+  ],
+  "body": "1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**.\n3. Drag the handle at the start of a row to a new position.\n4. Select **Save as draft**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-add-a-custom-line-item",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a one-off line item",
+  "aliases": [
+   "bill something not in my product list",
+   "type a custom charge",
+   "add a line without a product",
+   "ad hoc charge"
+  ],
+  "body": "The item is only used on this document and is not saved to **Products**.\n\n1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**, then **Add line item**.\n3. Type a description instead of choosing a product.\n4. Enter a **Quantity**, **Price** and **Tax rate**.\n5. Select **Save as draft**.",
+  "notConfusedWith": [
+   "inv-add-a-line-item-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-change-a-line-item-quantity",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Change a line item's quantity",
+  "aliases": [
+   "update the number of units",
+   "edit hours billed",
+   "change qty",
+   "fix quantity"
+  ],
+  "body": "1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**.\n3. Change the number in the **Quantity** column.\n4. The total updates automatically.\n5. Select **Save as draft**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-set-a-product-sku",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Set a product code",
+  "aliases": [
+   "add a sku",
+   "item code",
+   "product number",
+   "part number"
+  ],
+  "body": "Product codes appear on invoices and can be searched.\n\n1. Go to **Products**.\n2. Select the product, then **Edit**.\n3. Enter a code in the **SKU** field.\n4. Select **Save product**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-set-a-default-tax-rate-for-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Set a default tax rate for a product",
+  "aliases": [
+   "choose tax on an item",
+   "product is gst free",
+   "change tax on a product",
+   "default tax for an item"
+  ],
+  "body": "This rate is used whenever you add the product to an invoice or quote.\n\n1. Go to **Products**.\n2. Select the product, then **Edit**.\n3. Choose a rate from the **Tax rate** list.\n4. Select **Save product**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-apply-a-tax-rate-to-a-line-item"
+  ]
+ },
+ {
+  "id": "inv-apply-a-line-item-discount",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Apply a discount to a line item",
+  "aliases": [
+   "discount one item",
+   "percentage off a row",
+   "reduce the price of one line",
+   "item discount"
+  ],
+  "body": "1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**.\n3. Enter a percentage in the **Disc %** column of the row.\n4. Select **Save as draft**.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-apply-a-discount-to-an-invoice"
+  ]
+ },
+ {
+  "id": "inv-set-a-unit-of-measure",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Set a unit of measure",
+  "aliases": [
+   "bill per hour or per kilo",
+   "change unit type",
+   "add unit label",
+   "units for a product"
+  ],
+  "body": "The unit shows beside the quantity on invoices, such as 3 hours or 10 kg.\n\n1. Go to **Products**.\n2. Select the product, then **Edit**.\n3. Choose a value from **Unit**, or select **Add unit** to create one.\n4. Select **Save product**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-add-a-note-to-a-product",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Add a note to a product",
+  "aliases": [
+   "internal comment on an item",
+   "product notes",
+   "write a note about a product",
+   "record supplier details"
+  ],
+  "body": "Internal notes are never shown to customers.\n\n1. Go to **Products** and select the product.\n2. Select the **Notes** tab.\n3. Select **Add note**.\n4. Type your note and select **Save note**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-add-a-note-to-a-customer"
+  ]
+ },
+ {
+  "id": "inv-set-a-customer-specific-price",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Products and line items",
+  "title": "Set a customer-specific price",
+  "aliases": [
+   "special price for one client",
+   "custom pricing",
+   "price list for a customer",
+   "contract rate"
+  ],
+  "body": "The special price is used automatically when you add this product to that customer's invoices and quotes.\n\n1. Go to **Products** and select the product.\n2. Select the **Pricing** tab.\n3. Select **Add customer price**.\n4. Choose the **Customer** and enter the **Price**.\n5. Select **Save**.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-add-a-tax-rate",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Add a tax rate",
+  "aliases": [
+   "create a new tax",
+   "new gst rate",
+   "set up a tax type",
+   "add vat"
+  ],
+  "body": "1. Go to **Settings** and select **Tax**.\n2. Select **New tax rate**.\n3. Enter a **Name**, such as GST.\n4. Enter the **Rate** as a percentage.\n5. Select **Save**.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-create-a-tax-group"
+  ]
+ },
+ {
+  "id": "inv-edit-a-tax-rate",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Edit a tax rate",
+  "aliases": [
+   "change a tax percentage",
+   "update tax rate",
+   "rename tax",
+   "modify tax"
+  ],
+  "body": "Changes apply to new drafts only. Issued invoices keep the rate they were created with.\n\n1. Go to **Settings** and select **Tax**.\n2. Select the tax rate.\n3. Update the **Name** or **Rate**.\n4. Select **Save**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-change-the-tax-rate-on-a-draft-invoice"
+  ]
+ },
+ {
+  "id": "inv-delete-a-tax-rate",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Delete a tax rate",
+  "aliases": [
+   "remove a tax",
+   "get rid of a tax rate",
+   "delete gst rate",
+   "erase tax type"
+  ],
+  "body": "You can only delete rates that have never been used. Otherwise, select **Archive** instead.\n\n1. Go to **Settings** and select **Tax**.\n2. Select the tax rate.\n3. Select **Delete**.\n4. Select **Delete** to confirm.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-edit-a-tax-rate"
+  ]
+ },
+ {
+  "id": "inv-set-the-default-tax-rate",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Set the default tax rate",
+  "aliases": [
+   "choose standard tax",
+   "default gst",
+   "change default tax",
+   "pre-select tax on new items"
+  ],
+  "body": "New line items use the default unless the product has its own rate.\n\n1. Go to **Settings** and select **Tax**.\n2. Find the rate you want.\n3. Select the three dots, then **Make default**.\n\nSelect **Cancel** at any point to leave without saving. You need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-set-a-default-tax-rate-for-a-product"
+  ]
+ },
+ {
+  "id": "inv-enter-your-abn",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Enter your business ABN",
+  "aliases": [
+   "add my abn",
+   "set business tax number",
+   "abn on invoices",
+   "register my abn"
+  ],
+  "body": "Your ABN is required to issue tax invoices in Australia.\n\n1. Go to **Settings** and select **Business details**.\n2. Enter your number in the **ABN** field.\n3. Select **Verify**.\n4. Select **Save**.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-add-a-customer-abn"
+  ]
+ },
+ {
+  "id": "inv-turn-on-gst",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Turn on GST",
+  "aliases": [
+   "start charging gst",
+   "enable tax",
+   "register for gst",
+   "gst setup"
+  ],
+  "body": "Turn this on once you are registered for GST.\n\n1. Go to **Settings** and select **Tax**.\n2. Switch on **Charge GST**.\n3. Enter the **Effective date**.\n4. Select **Save**. A 10% GST rate is added.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-add-a-tax-rate"
+  ]
+ },
+ {
+  "id": "inv-set-prices-as-tax-inclusive",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Switch between tax inclusive and exclusive prices",
+  "aliases": [
+   "prices include gst",
+   "show prices with tax",
+   "change tax inclusive setting",
+   "gst inclusive pricing"
+  ],
+  "body": "This setting only affects new invoices and quotes.\n\n1. Go to **Settings** and select **Tax**.\n2. Under **Prices**, choose **Tax inclusive** or **Tax exclusive**.\n3. Select **Save**.\n\nIf you can't see an option, check that your role has the right permissions. Select **Cancel** at any point to leave without saving.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-make-a-customer-tax-exempt",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Make a customer tax exempt",
+  "aliases": [
+   "no gst for a customer",
+   "exempt a client from tax",
+   "stop charging tax",
+   "tax free customer"
+  ],
+  "body": "New invoices for this customer will have no tax applied.\n\n1. Go to **Customers** and open the customer.\n2. Select **Edit details**.\n3. Switch on **Tax exempt**.\n4. Enter an **Exemption reason**.\n5. Select **Save customer**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-add-a-tax-exemption-reason"
+  ]
+ },
+ {
+  "id": "inv-create-a-tax-group",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Create a tax group",
+  "aliases": [
+   "combine two taxes",
+   "compound tax",
+   "state and federal tax together",
+   "bundle tax rates"
+  ],
+  "body": "A tax group adds several rates together and shows one combined rate on documents.\n\n1. Go to **Settings** and select **Tax**.\n2. Select **New tax group**.\n3. Enter a **Name**.\n4. Select the rates to include.\n5. Select **Save**.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-add-a-tax-rate"
+  ]
+ },
+ {
+  "id": "inv-apply-a-tax-rate-to-a-line-item",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Apply a tax rate to a line item",
+  "aliases": [
+   "change tax on one row",
+   "set gst free for one item",
+   "pick a tax for a line",
+   "tax per line"
+  ],
+  "body": "1. Go to **Invoices** or **Quotes** and open the draft.\n2. Select **Edit**.\n3. Choose a rate from the **Tax** column of the row.\n4. Select **Save as draft**.\n\nHarbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": [
+   "inv-set-a-default-tax-rate-for-a-product"
+  ]
+ },
+ {
+  "id": "inv-export-the-tax-report-to-csv",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Export the tax report to CSV",
+  "aliases": [
+   "download tax report",
+   "tax report for my accountant",
+   "gst report to spreadsheet",
+   "csv of tax collected"
+  ],
+  "body": "1. Go to **Reports** and select **Tax summary**.\n2. Choose a **Date range**.\n3. Select **Export**.\n4. Choose **CSV**.\n5. Select **Download**.\n\nIf you can't see an option, check that your role has the right permissions. Select **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-run-a-tax-summary-report"
+  ]
+ },
+ {
+  "id": "inv-run-a-tax-summary-report",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Run a tax summary report",
+  "aliases": [
+   "see how much gst I collected",
+   "tax owing",
+   "view tax totals",
+   "bas figures"
+  ],
+  "body": "The report shows tax collected on sales for the period you choose.\n\n1. Go to **Reports** and select **Tax summary**.\n2. Choose a **Date range**, or select a quarter.\n3. Select **Run report**.\n4. Review totals by tax rate.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-export-the-tax-report-to-csv"
+  ]
+ },
+ {
+  "id": "inv-set-the-tax-reporting-period",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Set your tax reporting period",
+  "aliases": [
+   "quarterly or monthly gst",
+   "change bas period",
+   "reporting cycle",
+   "set financial year"
+  ],
+  "body": "This sets the default periods in your tax reports.\n\n1. Go to **Settings** and select **Tax**.\n2. Under **Reporting period**, choose **Monthly**, **Quarterly** or **Annually**.\n3. Select **Save**.\n\nYou need the **Admin** or **Billing** role to do this. Harbour records the change in the activity history so your team can see who made it.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-change-tax-rounding",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Change how tax is rounded",
+  "aliases": [
+   "rounding differences",
+   "tax rounding method",
+   "round per line or total",
+   "fix cents mismatch"
+  ],
+  "body": "1. Go to **Settings** and select **Tax**.\n2. Under **Rounding**, choose **Per line** or **On total**.\n3. Select **Save**. New documents will use this method.\n\nHarbour records the change in the activity history so your team can see who made it. If you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-add-a-tax-exemption-reason",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Add a tax exemption reason",
+  "aliases": [
+   "explain why no gst",
+   "reason for tax free",
+   "exemption wording on invoice",
+   "tax note for an exempt line"
+  ],
+  "body": "The reason prints on invoices where no tax is charged.\n\n1. Go to **Settings** and select **Tax**.\n2. Select the tax rate, such as **GST free**.\n3. Type your wording in **Reason on invoice**.\n4. Select **Save**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-make-a-customer-tax-exempt"
+  ]
+ },
+ {
+  "id": "inv-show-your-tax-number-on-invoices",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Show your tax number on invoices",
+  "aliases": [
+   "display abn on invoice",
+   "put gst number on documents",
+   "tax invoice label",
+   "hide abn"
+  ],
+  "body": "Invoices with GST must show your ABN and the words Tax invoice.\n\n1. Go to **Settings** and select **Invoice settings**.\n2. Under **Layout**, switch on **Show tax number**.\n3. Switch on **Use \"Tax invoice\" heading**.\n4. Select **Save**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-enter-your-abn"
+  ]
+ },
+ {
+  "id": "inv-apply-reverse-charge-to-an-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Apply reverse charge to an invoice",
+  "aliases": [
+   "customer pays the tax",
+   "reverse charge vat",
+   "no tax reverse charge",
+   "zero tax reverse charge"
+  ],
+  "body": "Use this when the customer accounts for the tax.\n\n1. Go to **Invoices** and open the draft invoice.\n2. Select **Edit**.\n3. Switch on **Reverse charge**.\n4. Select **Save as draft**. Tax is removed and a notice is added.\n\nYou need the **Admin** or **Billing** role to do this.",
+  "notConfusedWith": [
+   "inv-make-a-customer-tax-exempt"
+  ]
+ },
+ {
+  "id": "inv-mark-a-product-as-gst-free",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Mark a product as GST free",
+  "aliases": [
+   "no gst on item",
+   "tax free product",
+   "zero rated item",
+   "exempt product"
+  ],
+  "body": "1. Go to **Products** and select the product.\n2. Select **Edit**.\n3. Choose **GST free** from **Tax rate**.\n4. Select **Save product**.\n\nHarbour records the change in the activity history so your team can see who made it. If you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": [
+   "inv-set-a-default-tax-rate-for-a-product"
+  ]
+ },
+ {
+  "id": "inv-set-a-tax-rate-for-a-region",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Set a tax rate for a region",
+  "aliases": [
+   "different tax by state",
+   "tax by country",
+   "region based tax",
+   "location tax"
+  ],
+  "body": "Customers in the region will use this rate automatically.\n\n1. Go to **Settings** and select **Tax**.\n2. Select **Regional rates**.\n3. Select **Add region** and choose a country or state.\n4. Pick the **Tax rate**.\n5. Select **Save**.\n\nIf you can't see an option, check that your role has the right permissions.",
+  "notConfusedWith": []
+ },
+ {
+  "id": "inv-change-the-tax-rate-on-a-draft-invoice",
+  "product": "Harbour Invoicing",
+  "status": "public",
+  "category": "Tax",
+  "title": "Change the tax rate on a draft invoice",
+  "aliases": [
+   "wrong tax on invoice",
+   "switch gst on a draft",
+   "fix tax before sending",
+   "edit tax on whole invoice"
+  ],
+  "body": "Sent invoices cannot be changed. Void them or issue a credit note.\n\n1. Go to **Invoices** and open the draft.\n2. Select **Edit**.\n3. Select **Change tax** above the line items.\n4. Choose the new rate.\n5. Select **Save as draft**.\n\nSelect **Cancel** at any point to leave without saving.",
+  "notConfusedWith": [
+   "inv-apply-a-tax-rate-to-a-line-item",
+   "inv-edit-a-tax-rate"
+  ]
+ }
+]
