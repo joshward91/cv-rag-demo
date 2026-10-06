@@ -5,7 +5,7 @@
  * eval/count-tokens.mjs, this includes thinking tokens, and the answers are
  * what each model really writes. It spends money, so it stops at a budget.
  *
- *   ANTHROPIC_API_KEY=sk-ant-... node eval/measure-usage.mjs --budget 12
+ *   ANTHROPIC_API_KEY=sk-ant-... node eval/measure-usage.mjs --budget 24
  *   npm run eval && node eval/compare/score.mjs && node eval/compare/tiers.mjs && npm run build
  *
  * It measures, for each of Haiku 4.5, Sonnet 5.5 and Opus 5.5:
