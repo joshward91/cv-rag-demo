@@ -2,10 +2,12 @@
 
 A grounded retrieval-augmented help-desk assistant, built around a small CRM that exists only to give it something real to be accurate about.
 
+It answers only from the CRM's own help centre, never from the model's general knowledge or the web, and cites the article behind every answer. Retrieval is hybrid: **keyword search** (BM25F with a coverage-based decision policy) plus **semantic search** (all-MiniLM-L6-v2 sentence embeddings, run in the visitor's browser). A deterministic policy then answers, asks a clarifying question, suggests close matches or hands over to support, before any model is called.
+
 - **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 single-task articles. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every article describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
 - **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
-- **The evaluation suite** has 304 realistic phrasings across seven sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
+- **The evaluation suite** has 304 realistic phrasings across seven sets, four of them scored blind. The report shows retrieval hit rate, citation validity, refusal correctness, keyword vs hybrid retrieval, and cost per question. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
 
@@ -19,11 +21,12 @@ Requires Node 20 or later. There is no backend.
 
 ```bash
 npm install              # add --ignore-scripts if onnxruntime-node's postinstall can't download; its CPU binaries ship in the package
-npm test                 # unit tests: retrieval, guardrail, generator contract, grading
+npm test                 # unit tests: retrieval, semantic search, tokenizer parity, guardrail, generator contract
 npm run eval             # runs all 304 cases offline, keyword-only and hybrid, writes eval/results.json
 npm run check:docs       # browser check: docs labels exist in the UI, plus five walkthroughs
 npm run build            # self-contained pages in dist/, plus the GitHub Pages site in docs/
-npm run serve            # then open http://localhost:8080 to run from source
+npm run serve            # open http://localhost:8080 to run from source (keyword search only;
+                         # for semantic search, build and serve docs/)
 ```
 
 `node scripts/embed-articles.mjs` re-embeds the help centre after an article changes; `npm test` fails while the vectors are stale.
@@ -113,7 +116,7 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 
 ## Evaluation
 
-`eval/cases.js` holds 304 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split seven ways:
+`eval/cases.js` holds 304 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection, everyday voice, long) and split seven ways:
 
 | Set | Cases | Role |
 |---|---|---|
@@ -125,20 +128,18 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 | voice (everyday voice) | 48 | Rambling, non-expert and deliberately ambiguous questions, written by a separate agent that saw only the articles. Scored blind in round 10, never tuned on. |
 | holdout3 (hard hold-out) | 36 | Paraphrases that avoid the articles' wording. Committed before any semantic code was written, scored blind in round 9, never tuned on. |
 
-| Round | Dev | Test | Hold-out | Perspective |
-|---|---|---|---|---|
-| Baseline | 80.8% (blind) | | | |
-| Round 1 | 98.1% | 73.5% (blind) | | |
-| Round 2 | 100% | 95.9% | **84.2% (blind)** | |
-| Round 3 | 100% | 95.9% | 84.2% (not tuned on) | **75.0% (blind)** |
-| Round 4 | 100% | 95.9% | 84.2% (not tuned on) | 83.3% |
-| Round 5 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
-| Round 6 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
-| Round 7 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
-| Round 8 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
-| Round 9 | 85.5%* | 95.9% | 84.2% (not tuned on) | 91.7% |
+| Round | Dev | Test | Hold-out | Perspective | Hard hold-out | Everyday voice |
+|---|---|---|---|---|---|---|
+| Baseline | 80.8% (blind) | | | | | |
+| Round 1 | 98.1% | 73.5% (blind) | | | | |
+| Round 2 | 100% | 95.9% | **84.2% (blind)** | | | |
+| Round 3 | 100% | 95.9% | 84.2% | **75.0% (blind)** | | |
+| Round 4 | 100% | 95.9% | 84.2% | 83.3% | | |
+| Rounds 5–8 | 100% | 95.9% | 84.2% | 91.7% | | |
+| Round 9 | 85.5%\* | 95.9% | 84.2% | 91.7% | **33.3% (blind)** | |
+| Round 10 | 85.5% | 95.9% | 84.2% | 91.7% | 33.3% | **27.1% (blind)** |
 
-| Round 10 | 85.5% | 95.9% | 84.2% (not tuned on) | 91.7% |
+The hold-out, hard hold-out and everyday voice sets have never been tuned on.
 
 \* Dev gained 15 hard paraphrases in round 9; the original 68 dev cases still all pass.
 
@@ -153,9 +154,11 @@ Round 9 added semantic suggestions. The strict pass rate doesn't move, because a
 
 The cost: suggestions also appear for 20 of 49 out-of-scope questions, where the right action is Contact support, which sits under the suggestions.
 
-Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes. Round 7 added the prompt-injection defences above, with twelve cases, two of which check that ordinary questions are not blocked.
+Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes. Round 7 added the prompt-injection defences above, with twelve cases, two of which check that ordinary questions are not blocked. Round 8 was a cursory pen test (the `redteam` set). Round 9 added semantic suggestions, scored on a hard hold-out written before the code. Round 10 added the everyday voice set and changed no code.
 
-The hold-out figure is the honest estimate. Five of its six failures are questions escalated to support that the help centre could have answered; none got a wrong article. The core client/contact example passed 11 of 12 phrasings, and the forbidden article was never ranked first, offered, put in a prompt or cited. `npm run eval` exits non-zero if that ever changes, so it can gate CI.
+**The blind sets are the honest estimate, and they show where the design stops.** The original hold-out passes 84.2%: five of its six failures now get the right article as a suggestion rather than an answer, and none gets a wrong article. On the hard hold-out (33.3% strict) and the everyday voice set (27.1% strict), keyword search ranks the right article first 70% and 83% of the time, but paraphrases and conversational filler pull coverage under the answer threshold. Semantic suggestions recover most of these (70.0% and 76.7% useful), and a model making the decision recovers most of them as answers (see the model comparison below).
+
+The core client/contact example passed 15 of 24 phrasings. All but one of the failures fail safe, with a suggestion or a clarifying question instead of an answer. The exception, a perspective phrasing, is answered from the company article, a wrong article but not the forbidden one. The forbidden article was never ranked first, offered, put in a prompt or cited. `npm run eval` exits non-zero if that ever changes, so it can gate CI.
 
 **Articles are not edited to pass.** The help centre is written the way the vendor would write it, with "client" meaning the user's own business (**Settings > Client profile**). Retrieval problems are fixed in the query rewriting, the decision policy or the prompt. `eval/run.js` fingerprints the articles and flags any run against changed ones.
 
@@ -197,7 +200,7 @@ node eval/compare/score.mjs            # writes eval/compare/results.json for th
 
 ## Known limitations
 
-- Unknown but harmless words ("typo", "keep", "paying") lower coverage and cause false refusals. This is the main hold-out failure mode, and it fails safe.
+- Unknown but harmless words ("typo", "keep", "paying") lower coverage. Long, conversational questions have many of them, so keyword search alone rarely answers them even when it ranks the right article first. Semantic suggestions turn most of these into suggestions instead of hand-offs, and the model comparison shows a model making the decision answers about 90% correctly.
 - Lexical retrieval can't tell "send an invoice to a contact" (unsupported) from "where invoices are sent" (billing email). In Claude mode the model is instructed to escalate when the article doesn't answer the question.
 - "We have a new office number" gets the company article. Without "our" or "account", nothing marks the number as the user's own.
 - Semantic suggestions appear for some out-of-scope questions (20 of 49), because similarity can't tell a near miss from a match. They are suggestions, never answers, with Contact support underneath.
@@ -213,6 +216,8 @@ src/rag/                  rewrite, retrieval, semantic index, decision policy, p
 models/                   vendored embedding model (q8 ONNX) with checksum
 src/ui/                   CRM screens, chat widget, retrieval panel, styles
 eval/                     cases, runner, metrics, tuning history, results
+eval/compare/             model comparison: prompts, replies, anonymised judging, scoring
+scripts/embed-articles.mjs re-embeds the help centre into src/kb/article-vectors.js
 report/template.html      the evaluation report page
 scripts/build.js          single-file builds for publishing
 docs/                     the built GitHub Pages site (regenerate with npm run eval && npm run build)
