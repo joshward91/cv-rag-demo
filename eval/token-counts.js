@@ -36,6 +36,8 @@ export function loadMeasured() {
   const file = JSON.parse(readFileSync(MEASURED_FILE, 'utf8'));
   return {
     measuredAt: file.measuredAt,
+    /** True when every prompt of this part ('eval' or 'compare') was measured for this model. */
+    complete: (model, part) => Boolean(file.complete?.[model]?.[part]),
     /** { inputTokens, outputTokens } for this prompt on this model, or null. */
     usage: (model, prompt) => {
       const u = file.usage?.[model]?.[promptKey(prompt)];

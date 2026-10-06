@@ -84,7 +84,7 @@ for (const run of RUNS) {
     // An answer the judge found unfaithful to its article is not a pass.
     const pass = g.pass && (reply.type !== 'answer' || !judged || judged.faithful);
     // Real usage from eval/measure-usage.mjs first (thinking included), then exact counts, then the estimate.
-    const real = measured?.usage(run.model, prompt);
+    const real = measured?.complete(run.model, 'compare') ? measured.usage(run.model, prompt) : null;
     const exact = { inputTokens: counted?.input(run.model, prompt), outputTokens: counted?.output(run.model, replyText) };
     const tokens = real ?? (exact.inputTokens != null && exact.outputTokens != null
       ? exact
@@ -126,6 +126,8 @@ for (const run of RUNS) {
 
 // Measured only when every model's replies were.
 results.measuredAt = results.models.length && results.models.every((m) => m.tokens.measured) ? measured.measuredAt : null;
+results.measuredModels = results.models.filter((m) => m.tokens.measured).map((m) => m.label);
+if (results.measuredModels.length) results.partlyMeasuredAt = measured.measuredAt;
 writeFileSync(new URL('results.json', dir), `${JSON.stringify(results, null, 1)}\n`);
 console.log(`Baseline: ${results.baseline.passed}/${results.baseline.cases} pass, ${results.baseline.useful} useful, ${results.baseline.wrongAnswers} wrong answers`);
 for (const m of results.models) {

@@ -21,8 +21,14 @@
  * skips what is already measured, so an interrupted run can resume.
  *
  * The budget is in US dollars at list prices, counted from measured usage, and
- * is checked before every request. The cheapest work runs first (Haiku, then
- * Sonnet, then Opus), so if the budget runs out, what is missing is Opus.
+ * is checked before every request. Work runs most important first, so if the money
+ * runs out, what is missing matters least:
+ *   1. Sonnet 5.5, the recommended model: the comparison, then the evaluation;
+ *   2. Haiku 4.5 and Opus 5.5 on the comparison, completing the model table;
+ *   3. Haiku 4.5 and Opus 5.5 on the evaluation's cost table.
+ * Results are saved after every request. A model's measured figures are used
+ * only once its whole part (comparison or evaluation) is measured, so no table
+ * mixes measured and counted tokens for one model.
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import Anthropic from '@anthropic-ai/sdk';
@@ -43,9 +49,11 @@ const arg = (name, fallback) => {
   const i = process.argv.indexOf(`--${name}`);
   return i > -1 ? process.argv[i + 1] : fallback;
 };
-const budget = Number(arg('budget', '12'));
-const MODEL_ORDER = ['claude-haiku-4-5', 'claude-sonnet-5-5', 'claude-opus-5-5'];
-const models = (arg('models', MODEL_ORDER.join(','))).split(',');
+const budget = Number(arg('budget', '24'));
+const SONNET = 'claude-sonnet-5-5';
+const HAIKU = 'claude-haiku-4-5';
+const OPUS = 'claude-opus-5-5';
+const models = (arg('models', [SONNET, HAIKU, OPUS].join(','))).split(',');
 
 if (!process.env.ANTHROPIC_API_KEY) {
   console.error('Set ANTHROPIC_API_KEY. It is read from the environment only and never saved.');
@@ -73,11 +81,12 @@ for (const c of cases) {
 // 2. The model comparison's routing prompts.
 const { prompts: routing } = JSON.parse(readFileSync(new URL('./compare/prompts.json', import.meta.url), 'utf8'));
 
-// Cheapest first, so a budget stop leaves out the most expensive model.
+// Most important first (see the top of this file).
+const ORDER = [[SONNET, 'compare'], [SONNET, 'eval'], [HAIKU, 'compare'], [OPUS, 'compare'], [HAIKU, 'eval'], [OPUS, 'eval']];
+const parts = { eval: evalPrompts, compare: routing.map((prompt) => ({ id: prompt.id, prompt })) };
 const jobs = [];
-for (const model of MODEL_ORDER.filter((m) => models.includes(m))) {
-  for (const { id, prompt } of evalPrompts) jobs.push({ model, id, prompt, part: 'eval' });
-  for (const prompt of routing) jobs.push({ model, id: prompt.id, prompt, part: 'compare' });
+for (const [model, part] of ORDER.filter(([m]) => models.includes(m))) {
+  for (const { id, prompt } of parts[part]) jobs.push({ model, id, prompt, part });
 }
 const seen = new Set();
 const todo = jobs.filter((j) => {
@@ -95,7 +104,10 @@ function save(stopped = null) {
     const all = Object.values(byKey);
     return [model, { calls: all.length, input: all.reduce((s, u) => s + u.input, 0), output: all.reduce((s, u) => s + u.output, 0) }];
   }));
-  writeFileSync(MEASURED_FILE, `${JSON.stringify({ measuredAt: new Date().toISOString(), method: 'Messages API usage (input_tokens, output_tokens including thinking), requests as AnthropicGenerator makes them', spentUsd: Number(spent.toFixed(4)), stopped, totals, usage }, null, 1)}\n`);
+  // Which parts are fully measured for each model; only those are used.
+  const complete = {};
+  for (const [model, part] of ORDER) (complete[model] ??= {})[part] = parts[part].every(({ prompt }) => Boolean(usage[model]?.[promptKey(prompt)]));
+  writeFileSync(MEASURED_FILE, `${JSON.stringify({ measuredAt: new Date().toISOString(), method: 'Messages API usage (input_tokens, output_tokens including thinking), requests as AnthropicGenerator makes them', spentUsd: Number(spent.toFixed(4)), stopped, complete, totals, usage }, null, 1)}\n`);
 }
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -152,10 +164,8 @@ async function worker() {
       writeFileSync(new URL(`${job.id}.json`, dir), `${JSON.stringify(rest)}\n`);
     }
     done += 1;
-    if (done % 20 === 0) {
-      save();
-      console.log(`${done} of ${todo.length}, $${spent.toFixed(2)} spent`);
-    }
+    save();
+    if (done % 20 === 0) console.log(`${done} of ${todo.length}, $${spent.toFixed(2)} spent`);
   }
 }
 try {
@@ -164,6 +174,7 @@ try {
   save(`error: ${error.message}`);
   if (error instanceof Anthropic.AuthenticationError) console.error('The API key was rejected.');
   else if (error instanceof Anthropic.PermissionDeniedError) console.error(`Not allowed: ${error.message}`);
+  else if (/credit|billing|limit/i.test(error.message)) console.error(`The account stopped the run: ${error.message}`);
   else console.error(error);
   console.error(`Saved what was measured ($${spent.toFixed(2)}). Run it again to resume.`);
   process.exit(1);

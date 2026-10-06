@@ -134,7 +134,7 @@ async function runCases(knowledgeBase, selectedCases, { semantic }) {
         const estimate = { inputTokens: estimateTokens(promptAsText(result.prompt)), outputTokens: estimateTokens(answerText), measured: false };
         // Counted per model, since models don't all share a tokenizer.
         tokensByModel = Object.fromEntries(Object.keys(MODELS).map((m) => {
-          const real = measured?.usage(m, result.prompt);
+          const real = measured?.complete(m, 'eval') ? measured.usage(m, result.prompt) : null;
           if (real) return [m, real];
           const input = counted?.input(m, result.prompt);
           const output = counted?.output(m, answerText);
@@ -185,7 +185,7 @@ if (history.knowledgeBaseFingerprint && history.knowledgeBaseFingerprint !== fin
 const kbIds = new Set(articles.map((a) => a.id));
 const report = {
   generatedAt: new Date().toISOString(),
-  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false, countedTokens: Boolean(counted) && rows.every((r) => !r.tokens.inputTokens || r.tokens.counted || r.tokens.measured), countedAt: counted?.countedAt ?? null, measuredTokens: Boolean(measured) && rows.every((r) => !r.tokens.inputTokens || r.tokens.measured), measuredAt: measured?.measuredAt ?? null },
+  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false, countedTokens: Boolean(counted) && rows.every((r) => !r.tokens.inputTokens || r.tokens.counted || r.tokens.measured), countedAt: counted?.countedAt ?? null, measuredTokens: Boolean(measured) && Object.keys(MODELS).every((m) => measured.complete(m, 'eval')), measuredModels: Object.keys(MODELS).filter((m) => measured?.complete(m, 'eval')), measuredAt: measured?.measuredAt ?? null },
   knowledgeBase: { articles: articles.length, fingerprint },
   policy: DEFAULT_POLICY,
   pricing: MODELS,
