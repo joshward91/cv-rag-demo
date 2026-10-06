@@ -46,7 +46,8 @@ if (!process.env.ANTHROPIC_API_KEY) {
   console.error('Set ANTHROPIC_API_KEY to count tokens. It is read from the environment only and never saved.');
   process.exit(1);
 }
-const client = new Anthropic();
+// Retries are handled below, so a rate limit waits instead of failing the run.
+const client = new Anthropic({ maxRetries: 0 });
 
 const saved = existsSync(COUNTS_FILE) ? JSON.parse(readFileSync(COUNTS_FILE, 'utf8')) : {};
 const counts = { input: saved.input ?? {}, output: saved.output ?? {} };
@@ -105,7 +106,7 @@ async function countInput(model, prompt) {
   return (await client.messages.countTokens({ ...request, messages: [{ role: 'user', content: `${prompt.user}\n\n${JSON.stringify(prompt.schema)}` }] })).input_tokens;
 }
 async function countOutput(model, text) {
-  baseline[model] ??= (await client.messages.countTokens({ model, messages: [{ role: 'user', content: '.' }] })).input_tokens - 1;
+  baseline[model] ??= (await withRetry(() => client.messages.countTokens({ model, messages: [{ role: 'user', content: '.' }] }))).input_tokens - 1;
   return (await client.messages.countTokens({ model, messages: [{ role: 'user', content: text }] })).input_tokens - baseline[model];
 }
 
@@ -119,13 +120,35 @@ function save() {
   writeFileSync(COUNTS_FILE, `${JSON.stringify({ countedAt: new Date().toISOString(), method, input: counts.input, output: counts.output }, null, 1)}\n`);
 }
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+let pausedUntil = 0;
+
+/** Runs a count, waiting out rate limits (new accounts allow few requests a minute). */
+async function withRetry(fn) {
+  for (let attempt = 1; ; attempt += 1) {
+    const wait = pausedUntil - Date.now();
+    if (wait > 0) await sleep(wait);
+    try {
+      return await fn();
+    } catch (error) {
+      const retryable = error instanceof Anthropic.RateLimitError || error instanceof Anthropic.InternalServerError || error instanceof Anthropic.APIConnectionError;
+      if (!retryable || attempt > 20) throw error;
+      const seconds = Number(error.headers?.get?.('retry-after')) || Math.min(60, 5 * attempt);
+      if (Date.now() + seconds * 1000 > pausedUntil) {
+        pausedUntil = Date.now() + seconds * 1000;
+        console.log(`Rate limited after ${done} counts; waiting ${seconds}s and carrying on.`);
+      }
+    }
+  }
+}
+
 // A few at a time, saving as it goes so an interrupted run can resume.
 let done = 0;
 const queue = [...unique];
 async function worker() {
   while (queue.length) {
     const job = queue.shift();
-    const n = job.kind === 'input' ? await countInput(job.model, job.prompt) : await countOutput(job.model, job.text);
+    const n = await withRetry(() => (job.kind === 'input' ? countInput(job.model, job.prompt) : countOutput(job.model, job.text)));
     (counts[job.kind][job.model] ??= {})[job.key] = n;
     done += 1;
     if (done % 50 === 0) {
@@ -140,7 +163,7 @@ try {
   save();
   if (error instanceof Anthropic.AuthenticationError) console.error('The API key was rejected.');
   else if (error instanceof Anthropic.PermissionDeniedError) console.error(`The key isn't allowed to count tokens: ${error.message}`);
-  else if (error instanceof Anthropic.RateLimitError) console.error('Rate limited. Run it again later; saved counts are kept.');
+  else if (error instanceof Anthropic.RateLimitError) console.error('Still rate limited after 20 tries. Run it again later; saved counts are kept.');
   else console.error(error);
   process.exit(1);
 }
