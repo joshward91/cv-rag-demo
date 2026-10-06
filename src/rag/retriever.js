@@ -64,8 +64,11 @@ export class Retriever {
    *        signed-in customer) that is consulted only when this one would
    *        hand off. Each keeps its own term statistics, so
    *        adding overview pages can't change how the task help is ranked.
+   *        With `fallbackWeight`, the fallback is also consulted when this
+   *        one answers, asks or suggests, and its answer wins if its weighted
+   *        coverage is higher. The evaluation measures it; nothing ships it.
    */
-  constructor(articles, policy = {}, { semantic = null, plain = false, product = null, weight = null, fallback = null } = {}) {
+  constructor(articles, policy = {}, { semantic = null, plain = false, product = null, weight = null, fallback = null, fallbackWeight = null } = {}) {
     this.policy = { ...DEFAULT_POLICY, ...policy };
     this.semantic = semantic;
     this.plain = plain;
@@ -75,6 +78,7 @@ export class Retriever {
     this.byId = new Map(articles.map((a) => [a.id, a]));
     this.weightOf = weight ? new Map(articles.map((a) => [a.id, weight(a)])) : null;
     this.fallback = fallback;
+    this.fallbackWeight = fallbackWeight;
     // Ids this retriever searches itself; byId also resolves the fallback's.
     this.ownIds = new Set(this.byId.keys());
     for (const [id, a] of fallback?.byId ?? []) this.byId.set(id, a);
@@ -219,9 +223,18 @@ export class Retriever {
     // the task help; letting the overview pages answer instead turned "Can I
     // import contacts from a spreadsheet?" (dev set) into a confident answer
     // from the export overview.
-    if (!this.fallback || decision.type !== 'escalate') return own;
+    if (!this.fallback) return own;
+    if (this.fallbackWeight === null && decision.type !== 'escalate') return own;
     const other = this.fallback.retrieve(query, { queryVector });
     if (other.decision.type !== 'answer') return own;
+    // Blended: each set is scored with its own statistics, so the task help
+    // ranks exactly as it would alone. The fallback's answer wins only if its
+    // coverage, weighted down, beats the best task article's.
+    if (decision.type !== 'escalate') {
+      const ownCoverage = ranked[0]?.coverage ?? 0;
+      const otherCoverage = other.results.find((r) => r.id === other.decision.articleId).coverage;
+      if (otherCoverage * this.fallbackWeight <= ownCoverage) return own;
+    }
     return {
       ...own,
       results: [...other.results, ...own.results].slice(0, this.policy.topK),

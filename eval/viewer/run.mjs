@@ -10,6 +10,8 @@
  *   before        task articles only (the help centre before overview pages)
  *   in-unweighted signed in, both sets, no weighting
  *   in-weighted   signed in, both sets, overview pages' scores halved
+ *   in-blended    signed in, each set scored on its own, an overview answer wins
+ *                 when its coverage × 0.5 beats the best task article's
  *   in-tiered     signed in, task help first, overview pages as a fallback (shipped)
  *   out           signed out, overview pages only (shipped)
  *
@@ -28,7 +30,7 @@ import { Retriever } from '../../src/rag/retriever.js';
 import { HelpDesk } from '../../src/rag/pipeline.js';
 import { ExtractiveGenerator } from '../../src/rag/generators.js';
 import { SemanticIndex } from '../../src/rag/semantic.js';
-import { canSee, viewerWeight, viewerRetriever } from '../../src/rag/suite.js';
+import { canSee, viewerWeight, viewerRetriever, OVERVIEW_POLICY } from '../../src/rag/suite.js';
 import { createNodeEmbedder } from '../../src/rag/embedder.node.js';
 import { cases as originalCases } from '../cases.js';
 import { grade, summarise } from '../metrics.js';
@@ -45,6 +47,7 @@ const CONFIGS = {
   before: () => new Retriever(articles, {}, { semantic }),
   'in-unweighted': () => new Retriever(all.filter((a) => canSee(a, { loggedIn: true })), {}, { semantic }),
   'in-weighted': () => new Retriever(all.filter((a) => canSee(a, { loggedIn: true })), {}, { semantic, weight: viewerWeight({ loggedIn: true }) }),
+  'in-blended': () => new Retriever(articles, {}, { semantic, fallback: new Retriever(overviewArticles, OVERVIEW_POLICY, { semantic }), fallbackWeight: 0.5 }),
   'in-tiered': () => viewerRetriever(all, { loggedIn: true }, { semantic }),
   out: () => viewerRetriever(all, { loggedIn: false }, { semantic }),
 };
