@@ -128,6 +128,7 @@
     </div>
     <div class="pipeline">
       <div class="step"><strong>Screen</strong>An input guard blocks obvious prompt injection (“ignore previous instructions”, role changes, prompt extraction, tag smuggling) before anything else runs.</div>
+      <div class="step"><strong>Look up</strong>Signed in, a question about the account’s own records (“show me Priya’s phone number”, “open Deals worth more than 10k”) is answered straight from the data by a small deterministic parser, with no model call. Everything else goes on to help search.</div>
       <div class="step"><strong>Rewrite</strong>The question is normalised and rewritten with domain rules. The articles say "client" for the user's own business, so "a client's phone number" is read as a Contact's phone. Synonyms are mapped and typos corrected.</div>
       <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and its nearest article passages (titles, aliases and sentences, with sentences weighted ×0.9) are read from an HNSW index, filtered to the documents this viewer may see.</div>
       <div class="step"><strong>Decide</strong>A deterministic policy, so the decision is free and explainable. Answer when coverage is high. Ask when two look-alike articles are equally likely. Suggest up to three articles when only semantic search finds a close match. Otherwise hand over to support.</div>
@@ -197,6 +198,13 @@
     <div class="prose" id="viewer-intro"></div>
     <div class="table-wrap"><table id="viewer-table"></table></div>
     <div class="prose" id="viewer-notes"></div>
+  </section>
+
+  <section aria-labelledby="records-h" id="records-section" hidden>
+    <h2 id="records-h">Record lookups: questions about the account's own data</h2>
+    <div class="prose" id="records-intro"></div>
+    <div class="table-wrap"><table id="records-table"></table></div>
+    <div class="prose" id="records-notes"></div>
   </section>
 
   <section aria-labelledby="history-h">
@@ -283,6 +291,7 @@
 <script type="application/json" id="suite-data">__SUITE__</script>
 <script type="application/json" id="documents-data">__DOCUMENTS__</script>
 <script type="application/json" id="viewer-data">__VIEWER__</script>
+<script type="application/json" id="records-data">__RECORDS__</script>
 <script type="application/json" id="withheld-data">__WITHHELD__</script>
 <script>
   const data = JSON.parse(document.getElementById('results-data').textContent);
@@ -440,6 +449,20 @@
     }
   }
   // Signed in vs visitor -------------------------------------------------------
+  const recordsData = JSON.parse(document.getElementById('records-data').textContent);
+  if (recordsData) {
+    const rc = recordsData.current;
+    const rb = recordsData.blind;
+    const typeName = { field: 'One field of one record', list: 'Lists of records', none: 'A record or field the account lacks', help: 'Not a data question: left to help search' };
+    document.getElementById('records-section').hidden = false;
+    document.getElementById('records-intro').innerHTML = `<p>Signed in, people also ask about their own data: "show me Priya's phone number", "show me open Deals worth more than 10k", "the top 5 most profitable Deals", "all Contacts from Kestrel". These are answered by <code>src/crm/query.js</code>, a small deterministic parser, after the input guard and before help search. It recognises a field of a named Contact or Company (allowing a one-letter typo), and lists of Deals, Contacts or Companies filtered by stage, value, Company, Contact, industry or close date, sorted or cut to a top N. The answer links to each record, and the chat shows how the question was read.</p><p><strong>Why a parser and not a model with tools.</strong> Record data never goes into a prompt, so a Contact's notes can't carry a prompt injection, nothing is sent anywhere, and every answer is free and repeatable. In production this would be a read-only API call made with the signed-in user's permissions. Anything the parser doesn't recognise returns nothing, and the help assistant answers as before; how-to questions that name a record ("how do I change Priya's phone number") get the help answer plus an "Open" link to the record. Visitors are told to sign in.</p><p>A separate agent that read only the seed data wrote ${rc.cases} questions, with the expected records and values computed from the data (<code>eval/records/cases.json</code>). Scored once, blind: ${rb.passed} of ${rb.cases}. The parser was then widened for the phrasings the failures showed it missed, so the last column counts as tuned. An independent review then fixed curly apostrophes, a Contact named together with their Company, and statements such as "Priya has a new phone number", which had been answered as lookups.</p>`;
+    document.getElementById('records-table').innerHTML = `<thead><tr><th>Expected</th><th class="num">Blind</th><th class="num">Tuned</th></tr></thead><tbody>${Object.keys(typeName)
+      .map((t) => `<tr><td><span class="metric-name">${esc(typeName[t])}</span></td><td class="num">${rb.byType[t].passed} of ${rb.byType[t].cases}</td><td class="num">${rc.byType[t].passed} of ${rc.byType[t].cases}</td></tr>`)
+      .join('')}<tr><td><span class="metric-name">All</span></td><td class="num">${rb.passed} of ${rb.cases}</td><td class="num">${rc.passed} of ${rc.cases}</td></tr></tbody>`;
+    const fails = rc.rows.filter((r) => !r.pass);
+    document.getElementById('records-notes').innerHTML = `<p><strong>What was widened.</strong> "Can you give me the phone number for Northshore Physio" and "where is Tidewater Brewing located" were read as how-to questions; "what deals do we have with Kestrel", "any deals under $10,000" and "who works at Tidewater" weren't recognised as lists (the last one produced a nonsense answer). Widening made "what deals do we have with Harbourview Hotels", a Company the account doesn't have, list every Deal, so a list for a name the parser can't match now says so and lists nothing. ${rc.intercepted.length ? rc.intercepted.length : 'None'} of the ${rc.helpQuestions} help, viewer and suite questions is answered as data.</p><p><strong>Still missed</strong> (${fails.length}): ${fails.map((r) => `"${esc(r.query)}"`).join(', ')}. A name typed in lower case that matches no record ("jonno") isn't recognised as a name, so the question goes to help search rather than getting "no match". A misspelt field name ("emial") is beyond a parser this small, and the Hannah question asks for her status without saying "status". "Most profitable" is ranked by value, and the answer says so: the CRM records a Deal's value, not its profit.</p>`;
+  }
+
   const viewerData = JSON.parse(document.getElementById('viewer-data').textContent);
   if (viewerData) {
     const v = viewerData.configs;
@@ -533,7 +556,7 @@
   // Bars -------------------------------------------------------------------
   const bar = (label, ratio, value, tuned = false, title = '') =>
     `<div class="bar-row" title="${esc(title || `${label}: ${value}`)}"><span class="bar-label">${esc(label)}</span><span class="bar-track"><span class="bar-fill${tuned ? ' tuned' : ''}" style="width:${(ratio * 100).toFixed(1)}%"></span></span><span class="bar-value">${value}</span></div>`;
-  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out', voice: 'Everyday voice', suite: 'Harbour suite', 'viewer-in': 'Signed in', 'viewer-out': 'Visitor' };
+  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out', voice: 'Everyday voice', suite: 'Harbour suite', 'viewer-in': 'Signed in', 'viewer-out': 'Visitor', records: 'Record lookups' };
   document.getElementById('history').innerHTML = history.rounds
     .map(
       (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores

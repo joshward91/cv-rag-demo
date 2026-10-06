@@ -26,6 +26,7 @@ const app = new CrmApp({
   onDownload: download,
   // Set at build time by scripts/build.js; absent when running from source.
   reportUrl: typeof __REPORT_URL__ !== 'undefined' ? __REPORT_URL__ : '',
+  fullSite: semanticEnabled,
 });
 const chat = new ChatWidget({
   root: document.getElementById('chat'),
@@ -38,6 +39,12 @@ const chat = new ChatWidget({
 
 app.start();
 chat.render();
+
+// "How to use this demo" questions open the assistant and ask them.
+document.getElementById('app').addEventListener('click', (e) => {
+  const button = e.target.closest('[data-try]');
+  if (button) chat.tryQuestion(button.dataset.try, { signedIn: button.dataset.tryVisitor !== 'true' });
+});
 
 // Inside a claude.ai viewer, Claude can write answers through the page runtime.
 if (window.claude?.use) {

@@ -5,6 +5,7 @@ import { ExtractiveGenerator, AnthropicGenerator, ClaudeAiGenerator } from '../r
 import { promptAsText } from '../rag/prompt.js';
 import { MODELS, DEFAULT_MODEL, formatUsd } from '../rag/pricing.js';
 import { isPublic, withheldReason } from '../rag/suite.js';
+import { RecordQuery } from '../crm/query.js';
 
 const WITHHELD_LABELS = { internal: 'Internal staff document', draft: 'Unpublished draft', archived: 'Archived article', 'no status': 'Document with no status' };
 
@@ -14,6 +15,8 @@ const SUGGESTIONS = [
   'How do I change the phone number?',
   'Can I import Contacts from a spreadsheet?',
   'Mark a Deal as lost',
+  "Show me Priya's phone number",
+  'Show me open Deals worth more than 10k',
 ];
 
 const MODEL_USE_LABELS = { decides: 'Full model', prose: 'Prose only when confident', offline: 'Offline when confident' };
@@ -41,6 +44,9 @@ export class ChatWidget {
     // visitor gets the overview pages only. The demo starts signed in.
     this.retrievers = retrievers;
     this.signedIn = true;
+    // Questions about the account's own records ("show me open deals") are
+    // answered from the CRM's store, and only when signed in.
+    this.records = app?.store ? new RecordQuery(app.store) : null;
     this.allArticles = new Map([...retrievers.signedIn.byId, ...retrievers.signedOut.byId]);
     // Harbour's other products load with the semantic model. Until then the
     // assistant knows only the CRM's help centre.
@@ -138,7 +144,7 @@ export class ChatWidget {
 
   #welcome() {
     return html`<div class="chat-welcome">
-      <p>Ask how to do something in Harbour CRM. Every answer cites the help article it came from, and <strong>Show retrieval</strong> reveals how it was found.</p>
+      <p>Ask how to do something in Harbour CRM. Every answer cites the help article it came from, and <strong>Show retrieval</strong> reveals how it was found. Signed in, you can also ask about your own records, such as a Contact’s phone number or your open Deals.</p>
       <p class="panel-note">${this.signedIn ? 'Signed in: task help first, overview pages only when no task article fits.' : 'Visitor: overview pages only. Task help is for signed-in customers.'} Switch with <strong>Signed in</strong> / <strong>Visitor</strong> above.</p>
       <p class="suggest-label">Try one of these:</p>
       <div class="suggestions">${SUGGESTIONS.map((s) => html`<button type="button" class="suggestion" data-ask="${s}">${s}</button>`)}</div>
@@ -193,13 +199,14 @@ export class ChatWidget {
     if (m.pending) return html`<div class="msg bot pending"><p>${m.pending}</p></div>`;
     if (m.error) return html`<div class="msg bot error"><p>${m.error}</p>${m.result ? this.#retrievalPanel(m.result, index) : ''}</div>`;
 
+    if (m.result.outcome.type === 'data') return this.#dataMessage(m);
     const { outcome } = m.result;
     let body;
     if (outcome.type === 'answer') {
       body = html`${m.result.product && m.result.product !== 'Harbour CRM' ? html`<p class="product-note">From the ${m.result.product} help centre.</p>` : ''}<div class="answer">${markdown(outcome.text)}</div>
         <div class="sources"><span class="sources-label">Source${outcome.citations.length > 1 ? 's' : ''}</span>
           ${outcome.citations.map((id, i) => html`<button type="button" class="citation" data-open-article="${id}"><span class="cite-num">${i + 1}</span>${this.#article(id).title}</button>`)}
-        </div>${this.#alsoIn(m.result)}`;
+        </div>${this.#alsoIn(m.result)}${this.#recordLinks(m.result)}`;
     } else if (outcome.type === 'clarify') {
       body = html`<p>${outcome.question}</p>
         <div class="options">${outcome.options.map((o) => html`<button type="button" class="option" data-choose="${o.id}" data-for="${index}">${o.title}</button>`)}</div>`;
@@ -338,12 +345,44 @@ export class ChatWidget {
     return this.allArticles.get(id) ?? this.suiteArticles.get(id);
   }
 
+  /** Records a help question named, so the user can jump straight to them. */
+  #recordLinks(result) {
+    if (!result.records?.length) return '';
+    return html`<div class="also-in"><span class="sources-label">In your account</span>
+      ${result.records.map((r) => html`<a class="citation" href="${r.href}">Open ${r.label}</a>`)}
+    </div>`;
+  }
+
+  /** An answer from the account's own records, with how the question was read. */
+  #dataMessage(m) {
+    const { outcome } = m.result;
+    return html`<div class="msg bot">
+      <p class="product-note">${m.signedIn === false ? 'About your Harbour CRM records.' : 'From your Harbour CRM records, not the help centre.'}</p>
+      <p>${outcome.text}</p>
+      ${outcome.items.length
+        ? html`<ul class="record-list">${outcome.items.map((i) => html`<li><a href="${i.href}">${i.label}</a>${i.detail ? html`<span class="record-detail">${i.detail}</span>` : ''}</li>`)}</ul>`
+        : ''}
+      ${m.signedIn === false ? '' : html`<p class="panel-note">Read as: ${outcome.read} Answered directly from the data, with no model call; record data is never put in a prompt.</p>`}
+    </div>`;
+  }
+
   /** "You can also do this in ..." under a CRM answer. */
   #alsoIn(result) {
     if (!result.alsoIn?.length) return '';
     return html`<div class="also-in"><span class="sources-label">Also in other Harbour products</span>
       ${result.alsoIn.map((a) => html`<button type="button" class="citation" data-open-article="${a.id}"><span class="option-product">${a.product}</span>${a.title}</button>`)}
     </div>`;
+  }
+
+  /** A question from the "How to use this demo" panel: open the chat as that viewer and ask it. */
+  tryQuestion(question, { signedIn = true } = {}) {
+    if (this.busy) return;
+    this.signedIn = signedIn;
+    if (!this.open) {
+      this.open = true;
+      this.#startSemantic();
+    }
+    this.ask(question);
   }
 
   async ask(question, { chosenArticleId } = {}) {
@@ -357,7 +396,14 @@ export class ChatWidget {
     this.render();
 
     const suite = this.suites ? this.suites[this.signedIn ? 'signedIn' : 'signedOut'] : null;
-    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse, suite });
+    // A visitor has no account, so a question about records gets a sign-in
+    // prompt instead of an answer from the overview pages.
+    const records = this.signedIn ? this.records : this.records && {
+      answer: (q) => this.records.answer(q) && { kind: 'none', text: 'Sign in to see your Contacts, Companies and Deals. As a visitor, I can only answer from the overview pages.', items: [], read: 'A question about account records, asked as a visitor.' },
+      withRecordTypes: (q) => q,
+      linksFor: () => [],
+    };
+    const desk = new HelpDesk({ retriever: this.retriever, generator, embedder: this.embedder, modelUse: this.modelUse, suite, records });
     let message;
     try {
       const result = await desk.ask(question, { chosenArticleId });
@@ -422,6 +468,13 @@ export class ChatWidget {
       this.render();
       if (this.open) $('#chat-question', this.root)?.focus();
       if (this.open) this.#startSemantic();
+    } else if (el.tagName === 'A' && el.getAttribute('href')?.startsWith('#/')) {
+      // A record link: the app follows the hash. On a phone the chat covers
+      // the screen, so close it to show the record.
+      if (window.matchMedia?.('(max-width: 640px)').matches) {
+        this.open = false;
+        this.render();
+      }
     } else if (el.dataset.chat === 'viewer') {
       this.signedIn = el.dataset.signedIn === 'true';
       this.render();

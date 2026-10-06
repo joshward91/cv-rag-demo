@@ -6,7 +6,9 @@ It answers only from the CRM's own help centre, never from the model's general k
 
 - **The CRM** is a static web app with Contacts, Companies, Deals, custom fields and a Client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 short articles for signed-in customers (27 single-task how-tos, a glossary and a note about the demo data) and 15 overview pages for visitors. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every how-to describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
-- **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
+- **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every help reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt; record answers show how the question was read.
+- **Record lookups** answer questions about the account's own data when signed in ("show me Priya's phone number", "open Deals worth more than 10k") straight from the records, using a small deterministic parser with no model call.
+- **The demo page** has a "How to use this demo" panel with questions to try, including known fails and why they fail.
 - **The evaluation suite** has 304 realistic phrasings across seven sets. Four are held out from the code they test, and three of those have never been tuned on. The report shows retrieval hit rate, citation validity, refusal correctness, keyword vs hybrid retrieval, and cost per question. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
@@ -169,6 +171,17 @@ The first design weighted the overview pages down inside one shared index. `eval
 
 48 new questions (`eval/viewer/cases.json`), half asked as a visitor and half signed in, were written by a separate agent that read only the articles. Signed in, 10 of 24 pass (15 useful). Visitors pass 13 of 24 (21 useful): the right overview page is usually offered, but often as a suggestion, because the coverage threshold was set for short task articles. Signed-in "what is it for" questions still get the task help, because nothing yet tells a "why" question from a "how" question. Two changes followed the first scoring, so this set is no longer blind: overview answers no longer replace suggestions (a dev-set failure), and on the overview pages an exact title or alias match counts for more (the example this feature was designed around, "how do I add a contact" as a visitor, picked the custom fields overview without it).
 
+## Record lookups
+
+Signed in, people also ask about their own data: "show me Priya's phone number", "show me open Deals worth more than 10k", "the top 5 most profitable Deals", "all Contacts from Kestrel". `src/crm/query.js` answers these straight from the CRM's records, after the input guard and before help search. It is a small deterministic parser, not a model with tools: it recognises a field of a named Contact or Company (allowing a one-letter typo), and lists of Deals, Contacts or Companies filtered by stage, value, Company, Contact, industry or close date, sorted or cut to a top N. Each answer links to the records and shows how the question was read.
+
+- Record data never goes into a prompt, so a Contact's notes can't carry a prompt injection, and every answer is free and repeatable. In production this would be a read-only API call made with the signed-in user's permissions.
+- Anything the parser doesn't recognise goes to the help assistant as before. How-to questions that name a record ("how do I change Priya's phone number") get the help answer plus an **Open** link to the record, and names are replaced by their record type for help search.
+- "Most profitable" is ranked by value, and the answer says so: the CRM records a Deal's value, not its profit.
+- Visitors are told to sign in.
+
+40 questions (`eval/records/cases.json`) were written by a separate agent that read only the seed data, with expected records and values computed from it. Scored once, blind: 29 of 40 (`eval/records/results.blind.json`). The parser was then widened for phrasings the failures showed it missed ("can you give me…", "where is X located", "what deals do we have with X", "who works at X"), and a list for a Company the account doesn't have, which the widening made list every Deal, now says it couldn't match the name: 37 of 40, tuned. None of the 416 help, viewer and suite questions is answered as data (`node eval/records/run.mjs` checks both). Replacing names with record types for help search changed 2 of the original 304 outcomes, both from a hand-off to a suggestion, so strict pass rates are unchanged.
+
 ## Evaluation
 
 `eval/cases.js` holds 304 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection, everyday voice, long) and split seven ways:
@@ -206,6 +219,8 @@ Round 9 added semantic suggestions. The strict pass rate doesn't move, because a
 | Hard hold-out (30 answerable, blind) | 20.0% | **70.0%** |
 | Hold-out (28 answerable) | 82.1% | 100% |
 | All answerable (192) | 63.5% | 88.0% |
+
+These are the Round 9 figures. Since Round 13, record names in a question are replaced by their record type before help search ("Grace now works at…" searches as "contact now works at…"), which raised the hard hold-out to 73.3% and all answerable questions to 89.1%.
 
 The cost: suggestions also appear for 20 of 49 out-of-scope questions, where the right action is Contact support, which sits under the suggestions.
 
@@ -282,11 +297,11 @@ The 70% figure is not meaningful on its own. Coverage is keyword overlap, not a 
 
 ```
 src/kb/articles.js        the help centre
-src/crm/                  sample data and the in-memory store
+src/crm/                  sample data, the in-memory store and record lookups (query.js)
 src/kb/article-vectors.js precomputed article embeddings (generated)
 src/rag/                  rewrite, retrieval, semantic index and HNSW graph, decision policy, prompt, generators, guardrail, pricing
 models/                   vendored embedding model (q8 ONNX) with checksum
-src/ui/                   CRM screens, chat widget, retrieval panel, styles
+src/ui/                   CRM screens, demo guide, chat widget, retrieval panel, styles
 eval/                     cases, runner, metrics, tuning history, results
 eval/compare/             model comparison: prompts, replies, anonymised judging, scoring, model-use tiers
 eval/scale/               vector index benchmark: flat scan vs HNSW up to 100,000 passages
@@ -294,6 +309,7 @@ eval/suite/               sister-product and withheld documents, blind suite que
 src/kb/suite-articles.json sister-product help articles (generated by scripts/build-suite.mjs)
 src/kb/overview-articles.js overview pages for visitors (audience: everyone)
 eval/viewer/              signed-in vs visitor questions and runner
+eval/records/             record lookup questions and runner
 scripts/build-suite.mjs   cleans the suite drafts and builds its vector index
 scripts/embed-articles.mjs re-embeds the help centre into src/kb/article-vectors.js
 report/template.html      the evaluation report page

@@ -23,6 +23,8 @@ import { articles } from '../src/kb/articles.js';
 import { overviewArticles } from '../src/kb/overview-articles.js';
 import { Retriever, DEFAULT_POLICY } from '../src/rag/retriever.js';
 import { HelpDesk } from '../src/rag/pipeline.js';
+import { RecordQuery } from '../src/crm/query.js';
+import { Store } from '../src/crm/store.js';
 import { ExtractiveGenerator, AnthropicGenerator } from '../src/rag/generators.js';
 import { promptAsText, interpretationNotes } from '../src/rag/prompt.js';
 import { SemanticIndex, queryText, INDEX_CANDIDATES } from '../src/rag/semantic.js';
@@ -106,7 +108,8 @@ async function compareIndex(selectedCases) {
 
 async function runCases(knowledgeBase, selectedCases, { semantic }) {
   const retriever = new Retriever(knowledgeBase, {}, { semantic });
-  const desk = new HelpDesk({ retriever, generator, embedder: semantic ? embedder : null });
+  // The demo's record lookups run too (src/crm/query.js), over the sample data.
+  const desk = new HelpDesk({ retriever, generator, embedder: semantic ? embedder : null, records: new RecordQuery(new Store()) });
   const rows = [];
   for (const testCase of selectedCases) {
     const result = await desk.ask(testCase.query);

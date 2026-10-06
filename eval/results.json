@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T03:03:19.935Z",
+  "generatedAt": "2026-10-06T03:51:36.638Z",
   "mode": {
     "generator": "extractive",
     "model": null,
@@ -49,8 +49,8 @@
       "passRate": 0.7368421052631579,
       "retrieval": {
         "cases": 192,
-        "hitAt1": 0.875,
-        "hitAt3": 0.9010416666666666
+        "hitAt1": 0.8802083333333334,
+        "hitAt3": 0.9114583333333334
       },
       "citations": {
         "answers": 130,
@@ -70,8 +70,8 @@
         "unnecessaryRate": 0
       },
       "suggestions": {
-        "rightArticleSuggested": 47,
-        "usefulRate": 0.8802083333333334,
+        "rightArticleSuggested": 49,
+        "usefulRate": 0.890625,
         "shownForOutOfScope": 20
       },
       "injection": {
@@ -110,8 +110,8 @@
         }
       },
       "latencyMs": {
-        "p50": 1.0108559999999898,
-        "p95": 2.248580000000004
+        "p50": 1.0669169999999895,
+        "p95": 2.4700960000000123
       },
       "byTag": {
         "ambiguity": {
@@ -178,8 +178,8 @@
       "passRate": 0.8554216867469879,
       "retrieval": {
         "cases": 55,
-        "hitAt1": 0.8545454545454545,
-        "hitAt3": 0.8909090909090909
+        "hitAt1": 0.8727272727272727,
+        "hitAt3": 0.9090909090909091
       },
       "citations": {
         "answers": 43,
@@ -199,8 +199,8 @@
         "unnecessaryRate": 0
       },
       "suggestions": {
-        "rightArticleSuggested": 6,
-        "usefulRate": 0.8909090909090909,
+        "rightArticleSuggested": 7,
+        "usefulRate": 0.9090909090909091,
         "shownForOutOfScope": 4
       },
       "injection": {
@@ -239,8 +239,8 @@
         }
       },
       "latencyMs": {
-        "p50": 1.1556309999999712,
-        "p95": 5.086342999999999
+        "p50": 1.1868219999998928,
+        "p95": 3.764023000000009
       },
       "byTag": {
         "ambiguity": {
@@ -352,8 +352,8 @@
         }
       },
       "latencyMs": {
-        "p50": 0.9312439999999924,
-        "p95": 1.8631200000000376
+        "p50": 1.0411129999999957,
+        "p95": 1.8926229999999578
       },
       "byTag": {
         "ambiguity": {
@@ -457,8 +457,8 @@
         }
       },
       "latencyMs": {
-        "p50": 0.8785179999999855,
-        "p95": 4.932471000000078
+        "p50": 0.9205330000000913,
+        "p95": 2.880979000000025
       },
       "byTag": {
         "ambiguity": {
@@ -562,8 +562,8 @@
         }
       },
       "latencyMs": {
-        "p50": 0.847351000000117,
-        "p95": 1.1440170000000762
+        "p50": 0.8599450000001525,
+        "p95": 1.1967239999999038
       },
       "byTag": {
         "core": {
@@ -648,7 +648,7 @@
       },
       "latencyMs": {
         "p50": 0,
-        "p95": 2.097291000000041
+        "p95": 1.9345299999999952
       },
       "byTag": {
         "assistant": {
@@ -680,7 +680,7 @@
       "retrieval": {
         "cases": 30,
         "hitAt1": 0.7,
-        "hitAt3": 0.7666666666666667
+        "hitAt3": 0.8
       },
       "citations": {
         "answers": 6,
@@ -700,8 +700,8 @@
         "unnecessaryRate": 0
       },
       "suggestions": {
-        "rightArticleSuggested": 15,
-        "usefulRate": 0.7,
+        "rightArticleSuggested": 16,
+        "usefulRate": 0.7333333333333333,
         "shownForOutOfScope": 3
       },
       "injection": {
@@ -740,8 +740,8 @@
         }
       },
       "latencyMs": {
-        "p50": 1.1227510000001075,
-        "p95": 2.394863999999984
+        "p50": 1.2177010000000337,
+        "p95": 2.8237609999998767
       },
       "byTag": {
         "core": {
@@ -837,8 +837,8 @@
         }
       },
       "latencyMs": {
-        "p50": 1.316248000000087,
-        "p95": 1.9337520000001405
+        "p50": 1.3956359999999677,
+        "p95": 2.079095999999936
       },
       "byTag": {
         "ambiguity": {
@@ -893,8 +893,8 @@
         "passRate": 0.8554216867469879,
         "retrieval": {
           "cases": 55,
-          "hitAt1": 0.8545454545454545,
-          "hitAt3": 0.8909090909090909
+          "hitAt1": 0.8727272727272727,
+          "hitAt3": 0.9090909090909091
         },
         "citations": {
           "answers": 43,
@@ -954,8 +954,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.052097000000230764,
-          "p95": 0.6054579999999987
+          "p50": 0.07922000000007756,
+          "p95": 0.6118630000000849
         },
         "byTag": {
           "ambiguity": {
@@ -1006,8 +1006,8 @@
         "passRate": 0.8554216867469879,
         "retrieval": {
           "cases": 55,
-          "hitAt1": 0.8545454545454545,
-          "hitAt3": 0.8909090909090909
+          "hitAt1": 0.8727272727272727,
+          "hitAt3": 0.9090909090909091
         },
         "citations": {
           "answers": 43,
@@ -1027,8 +1027,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 6,
-          "usefulRate": 0.8909090909090909,
+          "rightArticleSuggested": 7,
+          "usefulRate": 0.9090909090909091,
           "shownForOutOfScope": 4
         },
         "injection": {
@@ -1067,8 +1067,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.4478440000000319,
-          "p95": 2.187355000000025
+          "p50": 0.43634000000020023,
+          "p95": 1.8670959999999468
         },
         "byTag": {
           "ambiguity": {
@@ -1119,8 +1119,8 @@
         "passRate": 0.8554216867469879,
         "retrieval": {
           "cases": 55,
-          "hitAt1": 0.8545454545454545,
-          "hitAt3": 0.8909090909090909
+          "hitAt1": 0.8727272727272727,
+          "hitAt3": 0.9090909090909091
         },
         "citations": {
           "answers": 43,
@@ -1140,8 +1140,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 6,
-          "usefulRate": 0.8909090909090909,
+          "rightArticleSuggested": 7,
+          "usefulRate": 0.9090909090909091,
           "shownForOutOfScope": 4
         },
         "injection": {
@@ -1180,8 +1180,8 @@
           }
         },
         "latencyMs": {
-          "p50": 1.1556309999999712,
-          "p95": 5.086342999999999
+          "p50": 1.1868219999998928,
+          "p95": 3.764023000000009
         },
         "byTag": {
           "ambiguity": {
@@ -1295,8 +1295,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.053330999999616324,
-          "p95": 0.8513800000000629
+          "p50": 0.0813319999997475,
+          "p95": 0.7637720000002446
         },
         "byTag": {
           "ambiguity": {
@@ -1400,8 +1400,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.4114680000000135,
-          "p95": 1.2249470000001565
+          "p50": 0.38025400000014997,
+          "p95": 1.1362910000002557
         },
         "byTag": {
           "ambiguity": {
@@ -1505,8 +1505,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.9312439999999924,
-          "p95": 1.8631200000000376
+          "p50": 1.0411129999999957,
+          "p95": 1.8926229999999578
         },
         "byTag": {
           "ambiguity": {
@@ -1612,8 +1612,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.06049600000005739,
-          "p95": 0.5314269999998942
+          "p50": 0.07459900000003472,
+          "p95": 0.5818860000003951
         },
         "byTag": {
           "ambiguity": {
@@ -1717,8 +1717,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.4084900000000289,
-          "p95": 0.9454430000000684
+          "p50": 0.5729250000003958,
+          "p95": 1.1077139999997598
         },
         "byTag": {
           "ambiguity": {
@@ -1822,8 +1822,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.8785179999999855,
-          "p95": 4.932471000000078
+          "p50": 0.9205330000000913,
+          "p95": 2.880979000000025
         },
         "byTag": {
           "ambiguity": {
@@ -1929,8 +1929,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.05445000000008804,
-          "p95": 0.2863200000001598
+          "p50": 0.13268299999981537,
+          "p95": 0.6819300000001931
         },
         "byTag": {
           "core": {
@@ -2014,8 +2014,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.4657760000000053,
-          "p95": 0.7305830000000242
+          "p50": 0.6297989999998208,
+          "p95": 0.9637189999998554
         },
         "byTag": {
           "core": {
@@ -2099,8 +2099,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.847351000000117,
-          "p95": 1.1440170000000762
+          "p50": 0.8599450000001525,
+          "p95": 1.1967239999999038
         },
         "byTag": {
           "core": {
@@ -2187,7 +2187,7 @@
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 0.9420630000004167
+          "p95": 1.1944540000004054
         },
         "byTag": {
           "assistant": {
@@ -2280,7 +2280,7 @@
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 1.6393070000001444
+          "p95": 1.7298580000001493
         },
         "byTag": {
           "assistant": {
@@ -2373,7 +2373,7 @@
         },
         "latencyMs": {
           "p50": 0,
-          "p95": 2.097291000000041
+          "p95": 1.9345299999999952
         },
         "byTag": {
           "assistant": {
@@ -2407,7 +2407,7 @@
         "retrieval": {
           "cases": 30,
           "hitAt1": 0.7,
-          "hitAt3": 0.7666666666666667
+          "hitAt3": 0.8
         },
         "citations": {
           "answers": 6,
@@ -2467,8 +2467,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.2895809999999983,
-          "p95": 0.7185020000001714
+          "p50": 0.3270870000001196,
+          "p95": 1.2110800000000381
         },
         "byTag": {
           "core": {
@@ -2504,7 +2504,7 @@
         "retrieval": {
           "cases": 30,
           "hitAt1": 0.7,
-          "hitAt3": 0.7666666666666667
+          "hitAt3": 0.8
         },
         "citations": {
           "answers": 6,
@@ -2524,8 +2524,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 15,
-          "usefulRate": 0.7,
+          "rightArticleSuggested": 16,
+          "usefulRate": 0.7333333333333333,
           "shownForOutOfScope": 3
         },
         "injection": {
@@ -2564,8 +2564,8 @@
           }
         },
         "latencyMs": {
-          "p50": 1.0408919999999853,
-          "p95": 1.6316190000000006
+          "p50": 0.6679079999998976,
+          "p95": 0.9587740000001759
         },
         "byTag": {
           "core": {
@@ -2601,7 +2601,7 @@
         "retrieval": {
           "cases": 30,
           "hitAt1": 0.7,
-          "hitAt3": 0.7666666666666667
+          "hitAt3": 0.8
         },
         "citations": {
           "answers": 6,
@@ -2621,8 +2621,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 15,
-          "usefulRate": 0.7,
+          "rightArticleSuggested": 16,
+          "usefulRate": 0.7333333333333333,
           "shownForOutOfScope": 3
         },
         "injection": {
@@ -2661,8 +2661,8 @@
           }
         },
         "latencyMs": {
-          "p50": 1.1227510000001075,
-          "p95": 2.394863999999984
+          "p50": 1.2177010000000337,
+          "p95": 2.8237609999998767
         },
         "byTag": {
           "core": {
@@ -2760,8 +2760,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.5450780000001032,
-          "p95": 1.8309500000000298
+          "p50": 0.5165300000003299,
+          "p95": 1.383947000000262
         },
         "byTag": {
           "ambiguity": {
@@ -2873,8 +2873,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.919119000000137,
-          "p95": 1.7641130000001795
+          "p50": 1.1869069999997919,
+          "p95": 2.251009999999951
         },
         "byTag": {
           "ambiguity": {
@@ -2986,8 +2986,8 @@
           }
         },
         "latencyMs": {
-          "p50": 1.316248000000087,
-          "p95": 1.9337520000001405
+          "p50": 1.3956359999999677,
+          "p95": 2.079095999999936
         },
         "byTag": {
           "ambiguity": {
@@ -3040,8 +3040,8 @@
         "passRate": 0.7368421052631579,
         "retrieval": {
           "cases": 192,
-          "hitAt1": 0.875,
-          "hitAt3": 0.9010416666666666
+          "hitAt1": 0.8802083333333334,
+          "hitAt3": 0.9114583333333334
         },
         "citations": {
           "answers": 130,
@@ -3101,8 +3101,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.06041499999992084,
-          "p95": 0.9128509999995913
+          "p50": 0.09337599999980739,
+          "p95": 1.0450599999999213
         },
         "byTag": {
           "ambiguity": {
@@ -3169,8 +3169,8 @@
         "passRate": 0.7368421052631579,
         "retrieval": {
           "cases": 192,
-          "hitAt1": 0.875,
-          "hitAt3": 0.9010416666666666
+          "hitAt1": 0.8802083333333334,
+          "hitAt3": 0.9114583333333334
         },
         "citations": {
           "answers": 130,
@@ -3190,8 +3190,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 47,
-          "usefulRate": 0.8802083333333334,
+          "rightArticleSuggested": 49,
+          "usefulRate": 0.890625,
           "shownForOutOfScope": 20
         },
         "injection": {
@@ -3230,8 +3230,8 @@
           }
         },
         "latencyMs": {
-          "p50": 0.46224800000004507,
-          "p95": 1.6393070000001444
+          "p50": 0.5372079999997368,
+          "p95": 1.551904999999806
         },
         "byTag": {
           "ambiguity": {
@@ -3298,8 +3298,8 @@
         "passRate": 0.7368421052631579,
         "retrieval": {
           "cases": 192,
-          "hitAt1": 0.875,
-          "hitAt3": 0.9010416666666666
+          "hitAt1": 0.8802083333333334,
+          "hitAt3": 0.9114583333333334
         },
         "citations": {
           "answers": 130,
@@ -3319,8 +3319,8 @@
           "unnecessaryRate": 0
         },
         "suggestions": {
-          "rightArticleSuggested": 47,
-          "usefulRate": 0.8802083333333334,
+          "rightArticleSuggested": 49,
+          "usefulRate": 0.890625,
           "shownForOutOfScope": 20
         },
         "injection": {
@@ -3359,8 +3359,8 @@
           }
         },
         "latencyMs": {
-          "p50": 1.0108559999999898,
-          "p95": 2.248580000000004
+          "p50": 1.0669169999999895,
+          "p95": 2.4700960000000123
         },
         "byTag": {
           "ambiguity": {
@@ -3435,8 +3435,8 @@
     "sameTop1": 304,
     "sameTop3": 304,
     "microsecondsPerQuestion": {
-      "flat": 537.956,
-      "hnsw": 521.876
+      "flat": 538.381,
+      "hnsw": 523.958
     },
     "sameOutcome": 304
   },
@@ -3508,7 +3508,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 17.836619999999982,
+      "retrievalMs": 21.06352800000002,
       "tokens": {
         "inputTokens": 628,
         "outputTokens": 99,
@@ -3590,7 +3590,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 3.5607180000000085,
+      "retrievalMs": 2.046057000000019,
       "tokens": {
         "inputTokens": 625,
         "outputTokens": 99,
@@ -3672,7 +3672,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 5.376162000000022,
+      "retrievalMs": 3.2726920000000064,
       "tokens": {
         "inputTokens": 631,
         "outputTokens": 99,
@@ -3752,7 +3752,7 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 1.662621999999999,
+      "retrievalMs": 1.3906440000000089,
       "tokens": {
         "inputTokens": 610,
         "outputTokens": 77,
@@ -3837,7 +3837,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.8631200000000376,
+      "retrievalMs": 1.6246490000000335,
       "tokens": {
         "inputTokens": 830,
         "outputTokens": 99,
@@ -3918,7 +3918,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.7383629999999926,
+      "retrievalMs": 1.7607849999999985,
       "tokens": {
         "inputTokens": 625,
         "outputTokens": 99,
@@ -3999,7 +3999,7 @@
         "\"client contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 2.248580000000004,
+      "retrievalMs": 1.4385970000000157,
       "tokens": {
         "inputTokens": 753,
         "outputTokens": 77,
@@ -4079,7 +4079,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.5326949999999897,
+      "retrievalMs": 1.9342469999999707,
       "tokens": {
         "inputTokens": 623,
         "outputTokens": 99,
@@ -4153,7 +4153,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1882420000000025,
+      "retrievalMs": 1.1524049999999875,
       "tokens": {
         "inputTokens": 671,
         "outputTokens": 105,
@@ -4231,7 +4231,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0798859999999877,
+      "retrievalMs": 1.242003000000011,
       "tokens": {
         "inputTokens": 701,
         "outputTokens": 105,
@@ -4306,7 +4306,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.6376599999999826,
+      "retrievalMs": 1.9180790000000343,
       "tokens": {
         "inputTokens": 619,
         "outputTokens": 93,
@@ -4380,7 +4380,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 5.086342999999999,
+      "retrievalMs": 1.040346999999997,
       "tokens": {
         "inputTokens": 623,
         "outputTokens": 97,
@@ -4452,7 +4452,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.325995999999975,
+      "retrievalMs": 1.253138999999976,
       "tokens": {
         "inputTokens": 613,
         "outputTokens": 113,
@@ -4527,7 +4527,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 3.3409019999999714,
+      "retrievalMs": 0.9869649999999979,
       "tokens": {
         "inputTokens": 602,
         "outputTokens": 80,
@@ -4602,7 +4602,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 5.880492000000004,
+      "retrievalMs": 3.764023000000009,
       "tokens": {
         "inputTokens": 603,
         "outputTokens": 82,
@@ -4675,7 +4675,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.359702000000027,
+      "retrievalMs": 1.2127160000000003,
       "tokens": {
         "inputTokens": 584,
         "outputTokens": 89,
@@ -4750,7 +4750,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0978599999999687,
+      "retrievalMs": 3.208847999999989,
       "tokens": {
         "inputTokens": 596,
         "outputTokens": 73,
@@ -4824,7 +4824,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.701592000000005,
+      "retrievalMs": 1.9055930000000103,
       "tokens": {
         "inputTokens": 568,
         "outputTokens": 80,
@@ -4894,7 +4894,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2234770000000026,
+      "retrievalMs": 5.048825999999963,
       "tokens": {
         "inputTokens": 589,
         "outputTokens": 97,
@@ -4969,7 +4969,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.340900999999974,
+      "retrievalMs": 1.1065560000000119,
       "tokens": {
         "inputTokens": 660,
         "outputTokens": 85,
@@ -5041,7 +5041,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6346209999999814,
+      "retrievalMs": 1.0379769999999553,
       "tokens": {
         "inputTokens": 572,
         "outputTokens": 74,
@@ -5114,7 +5114,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7020609999999579,
+      "retrievalMs": 0.9753000000000043,
       "tokens": {
         "inputTokens": 641,
         "outputTokens": 77,
@@ -5188,7 +5188,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.872158000000013,
+      "retrievalMs": 5.076714000000038,
       "tokens": {
         "inputTokens": 663,
         "outputTokens": 74,
@@ -5264,7 +5264,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1855589999999552,
+      "retrievalMs": 2.920812000000069,
       "tokens": {
         "inputTokens": 781,
         "outputTokens": 100,
@@ -5335,7 +5335,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8096630000000005,
+      "retrievalMs": 0.8922769999999218,
       "tokens": {
         "inputTokens": 647,
         "outputTokens": 93,
@@ -5408,7 +5408,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.919539000000043,
+      "retrievalMs": 1.2461510000000544,
       "tokens": {
         "inputTokens": 613,
         "outputTokens": 59,
@@ -5481,7 +5481,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9811429999999746,
+      "retrievalMs": 0.9144740000000411,
       "tokens": {
         "inputTokens": 608,
         "outputTokens": 111,
@@ -5555,7 +5555,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8195509999999899,
+      "retrievalMs": 0.8399779999999737,
       "tokens": {
         "inputTokens": 615,
         "outputTokens": 58,
@@ -5629,7 +5629,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8997569999999655,
+      "retrievalMs": 0.913065999999958,
       "tokens": {
         "inputTokens": 697,
         "outputTokens": 72,
@@ -5701,7 +5701,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2870730000000208,
+      "retrievalMs": 1.3516979999999421,
       "tokens": {
         "inputTokens": 605,
         "outputTokens": 111,
@@ -5775,7 +5775,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8419569999999794,
+      "retrievalMs": 0.807260000000042,
       "tokens": {
         "inputTokens": 641,
         "outputTokens": 74,
@@ -5849,7 +5849,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8589340000000334,
+      "retrievalMs": 0.8658500000000231,
       "tokens": {
         "inputTokens": 715,
         "outputTokens": 146,
@@ -5921,7 +5921,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.841226000000006,
+      "retrievalMs": 0.8519959999999855,
       "tokens": {
         "inputTokens": 595,
         "outputTokens": 97,
@@ -5996,7 +5996,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7706059999999866,
+      "retrievalMs": 0.8113959999999452,
       "tokens": {
         "inputTokens": 848,
         "outputTokens": 71,
@@ -6066,7 +6066,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0487299999999777,
+      "retrievalMs": 0.92617400000006,
       "tokens": {
         "inputTokens": 623,
         "outputTokens": 125,
@@ -6139,7 +6139,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8643050000000017,
+      "retrievalMs": 0.8668819999999187,
       "tokens": {
         "inputTokens": 555,
         "outputTokens": 63,
@@ -6201,7 +6201,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8138400000000274,
+      "retrievalMs": 0.8076409999999896,
       "tokens": {
         "inputTokens": 571,
         "outputTokens": 79,
@@ -6274,7 +6274,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0675190000000043,
+      "retrievalMs": 1.0219280000000026,
       "tokens": {
         "inputTokens": 563,
         "outputTokens": 69,
@@ -6347,7 +6347,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9869919999999865,
+      "retrievalMs": 1.0098399999999401,
       "tokens": {
         "inputTokens": 576,
         "outputTokens": 77,
@@ -6423,7 +6423,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.0667169999999828,
+      "retrievalMs": 2.679079999999999,
       "tokens": {
         "inputTokens": 661,
         "outputTokens": 122,
@@ -6496,7 +6496,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6624699999999848,
+      "retrievalMs": 1.805765000000065,
       "tokens": {
         "inputTokens": 579,
         "outputTokens": 78,
@@ -6570,7 +6570,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.974550000000022,
+      "retrievalMs": 1.1729119999999966,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6643,7 +6643,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7731759999999781,
+      "retrievalMs": 0.9329160000000911,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6713,7 +6713,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8961699999999837,
+      "retrievalMs": 0.9170319999999492,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6789,7 +6789,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8440009999999916,
+      "retrievalMs": 0.9087160000000267,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6852,7 +6852,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.717376999999999,
+      "retrievalMs": 0.7431880000000319,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6920,7 +6920,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2108139999999707,
+      "retrievalMs": 1.4953029999999217,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -6965,7 +6965,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.104200999999989,
+      "retrievalMs": 1.2046260000000757,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7006,7 +7006,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1705090000000382,
+      "retrievalMs": 1.3136950000000525,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7072,7 +7072,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 6.857619,
+      "retrievalMs": 1.2017520000000559,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7109,7 +7109,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6796439999999393,
+      "retrievalMs": 6.986855999999989,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7177,7 +7177,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4192279999999755,
+      "retrievalMs": 1.383780999999999,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7243,7 +7243,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0549949999999626,
+      "retrievalMs": 1.0288040000000365,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7310,7 +7310,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5430790000000343,
+      "retrievalMs": 1.3125159999999596,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7374,7 +7374,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.863373999999908,
+      "retrievalMs": 1.5221099999999979,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7411,7 +7411,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0054010000000062,
+      "retrievalMs": 1.1952079999999796,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -7484,7 +7484,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9155029999999442,
+      "retrievalMs": 1.0429360000000543,
       "tokens": {
         "inputTokens": 676,
         "outputTokens": 105,
@@ -7561,7 +7561,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8991989999999532,
+      "retrievalMs": 1.0917040000000497,
       "tokens": {
         "inputTokens": 624,
         "outputTokens": 93,
@@ -7636,7 +7636,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9213459999999714,
+      "retrievalMs": 0.9442589999999882,
       "tokens": {
         "inputTokens": 730,
         "outputTokens": 97,
@@ -7709,7 +7709,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9470839999999043,
+      "retrievalMs": 1.0669169999999895,
       "tokens": {
         "inputTokens": 607,
         "outputTokens": 113,
@@ -7785,7 +7785,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8301569999999856,
+      "retrievalMs": 0.8503119999999171,
       "tokens": {
         "inputTokens": 600,
         "outputTokens": 80,
@@ -7857,7 +7857,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8581230000000915,
+      "retrievalMs": 0.9257799999999179,
       "tokens": {
         "inputTokens": 571,
         "outputTokens": 82,
@@ -7932,7 +7932,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9389830000000075,
+      "retrievalMs": 0.9958910000000287,
       "tokens": {
         "inputTokens": 613,
         "outputTokens": 89,
@@ -8002,7 +8002,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9763470000000325,
+      "retrievalMs": 0.993163000000095,
       "tokens": {
         "inputTokens": 568,
         "outputTokens": 73,
@@ -8076,7 +8076,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.493473999999992,
+      "retrievalMs": 1.828471000000036,
       "tokens": {
         "inputTokens": 586,
         "outputTokens": 93,
@@ -8149,7 +8149,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0108559999999898,
+      "retrievalMs": 1.1631989999999632,
       "tokens": {
         "inputTokens": 727,
         "outputTokens": 113,
@@ -8223,7 +8223,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9158260000000382,
+      "retrievalMs": 1.01246900000001,
       "tokens": {
         "inputTokens": 657,
         "outputTokens": 85,
@@ -8296,7 +8296,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.231461999999965,
+      "retrievalMs": 1.278577999999925,
       "tokens": {
         "inputTokens": 577,
         "outputTokens": 74,
@@ -8370,7 +8370,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7551760000000058,
+      "retrievalMs": 0.8808340000000499,
       "tokens": {
         "inputTokens": 642,
         "outputTokens": 77,
@@ -8442,7 +8442,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2938720000000785,
+      "retrievalMs": 1.368060000000014,
       "tokens": {
         "inputTokens": 572,
         "outputTokens": 77,
@@ -8516,7 +8516,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9060779999999795,
+      "retrievalMs": 1.0902299999999059,
       "tokens": {
         "inputTokens": 663,
         "outputTokens": 100,
@@ -8590,7 +8590,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9189639999999599,
+      "retrievalMs": 1.1923120000000154,
       "tokens": {
         "inputTokens": 621,
         "outputTokens": 93,
@@ -8661,7 +8661,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.6729820000000473,
+      "retrievalMs": 0.9490499999999429,
       "tokens": {
         "inputTokens": 611,
         "outputTokens": 59,
@@ -8736,7 +8736,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9037600000000339,
+      "retrievalMs": 0.9923680000000559,
       "tokens": {
         "inputTokens": 683,
         "outputTokens": 111,
@@ -8807,7 +8807,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7803740000000516,
+      "retrievalMs": 0.7930049999999937,
       "tokens": {
         "inputTokens": 644,
         "outputTokens": 58,
@@ -8883,7 +8883,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.882930999999985,
+      "retrievalMs": 0.9209870000000819,
       "tokens": {
         "inputTokens": 698,
         "outputTokens": 72,
@@ -8958,7 +8958,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.14401799999996,
+      "retrievalMs": 1.2544800000000578,
       "tokens": {
         "inputTokens": 641,
         "outputTokens": 74,
@@ -9032,7 +9032,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0133620000000292,
+      "retrievalMs": 0.9783350000000155,
       "tokens": {
         "inputTokens": 715,
         "outputTokens": 146,
@@ -9104,7 +9104,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.5959810000000516,
+      "retrievalMs": 0.7159659999999803,
       "tokens": {
         "inputTokens": 591,
         "outputTokens": 97,
@@ -9179,7 +9179,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1641029999999546,
+      "retrievalMs": 0.8046309999999721,
       "tokens": {
         "inputTokens": 853,
         "outputTokens": 71,
@@ -9252,7 +9252,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8958730000000514,
+      "retrievalMs": 0.9304590000000417,
       "tokens": {
         "inputTokens": 599,
         "outputTokens": 97,
@@ -9322,7 +9322,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.129905000000008,
+      "retrievalMs": 0.9336160000000291,
       "tokens": {
         "inputTokens": 620,
         "outputTokens": 125,
@@ -9395,7 +9395,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7991230000000087,
+      "retrievalMs": 0.9180430000000115,
       "tokens": {
         "inputTokens": 554,
         "outputTokens": 63,
@@ -9469,7 +9469,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8895669999999427,
+      "retrievalMs": 1.0411129999999957,
       "tokens": {
         "inputTokens": 672,
         "outputTokens": 79,
@@ -9541,7 +9541,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9210120000000188,
+      "retrievalMs": 0.9380489999999782,
       "tokens": {
         "inputTokens": 566,
         "outputTokens": 69,
@@ -9622,7 +9622,7 @@
         "\"number you have on file for us\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.7896040000000539,
+      "retrievalMs": 0.8297309999999243,
       "tokens": {
         "inputTokens": 614,
         "outputTokens": 77,
@@ -9698,7 +9698,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9312439999999924,
+      "retrievalMs": 0.8578130000000783,
       "tokens": {
         "inputTokens": 657,
         "outputTokens": 122,
@@ -9750,7 +9750,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8389959999999519,
+      "retrievalMs": 0.9136099999999487,
       "tokens": {
         "inputTokens": 576,
         "outputTokens": 78,
@@ -9824,7 +9824,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.861487000000011,
+      "retrievalMs": 0.8520780000000059,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -9899,7 +9899,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6574990000000298,
+      "retrievalMs": 1.4844700000001012,
       "tokens": {
         "inputTokens": 709,
         "outputTokens": 58,
@@ -9969,7 +9969,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9281179999999267,
+      "retrievalMs": 0.820030000000088,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10042,7 +10042,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8462729999999965,
+      "retrievalMs": 0.8094109999999546,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10108,7 +10108,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3101159999999936,
+      "retrievalMs": 1.141978999999992,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10145,7 +10145,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4961980000000494,
+      "retrievalMs": 1.6336049999999886,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10214,7 +10214,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6130660000000034,
+      "retrievalMs": 1.7214769999999362,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10284,7 +10284,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.873976999999968,
+      "retrievalMs": 1.8926229999999578,
       "tokens": {
         "inputTokens": 562,
         "outputTokens": 69,
@@ -10349,7 +10349,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.973461000000043,
+      "retrievalMs": 1.1396149999999352,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10417,7 +10417,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.792175000000043,
+      "retrievalMs": 2.0020050000000538,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10460,7 +10460,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.299003999999968,
+      "retrievalMs": 1.2957199999999602,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10528,7 +10528,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6411299999999756,
+      "retrievalMs": 1.8315360000000283,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10595,7 +10595,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9140009999999847,
+      "retrievalMs": 1.2731059999999843,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10677,7 +10677,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9441289999999753,
+      "retrievalMs": 1.0208079999999882,
       "tokens": {
         "inputTokens": 629,
         "outputTokens": 99,
@@ -10760,7 +10760,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8906709999999975,
+      "retrievalMs": 0.9378219999999828,
       "tokens": {
         "inputTokens": 820,
         "outputTokens": 99,
@@ -10840,7 +10840,7 @@
         "\"our own contact number\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 2.696386999999959,
+      "retrievalMs": 2.880979000000025,
       "tokens": {
         "inputTokens": 613,
         "outputTokens": 77,
@@ -10916,7 +10916,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8263430000000653,
+      "retrievalMs": 1.4531309999999849,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -10990,7 +10990,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9034540000000106,
+      "retrievalMs": 0.9714910000000145,
       "tokens": {
         "inputTokens": 674,
         "outputTokens": 105,
@@ -11058,7 +11058,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.083112999999912,
+      "retrievalMs": 1.192735999999968,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11128,7 +11128,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 4.932471000000078,
+      "retrievalMs": 1.5543089999999893,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11198,7 +11198,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8075599999999667,
+      "retrievalMs": 0.8391320000000633,
       "tokens": {
         "inputTokens": 607,
         "outputTokens": 113,
@@ -11274,7 +11274,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8924389999999676,
+      "retrievalMs": 0.6798989999999776,
       "tokens": {
         "inputTokens": 599,
         "outputTokens": 80,
@@ -11348,7 +11348,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7967549999999619,
+      "retrievalMs": 0.8749410000000353,
       "tokens": {
         "inputTokens": 572,
         "outputTokens": 82,
@@ -11418,7 +11418,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8236839999999575,
+      "retrievalMs": 0.8274659999999585,
       "tokens": {
         "inputTokens": 580,
         "outputTokens": 89,
@@ -11486,7 +11486,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.909650000000056,
+      "retrievalMs": 0.8915190000000166,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11559,7 +11559,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8726649999999836,
+      "retrievalMs": 0.8594739999999774,
       "tokens": {
         "inputTokens": 660,
         "outputTokens": 85,
@@ -11632,7 +11632,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.821982999999932,
+      "retrievalMs": 0.853431999999998,
       "tokens": {
         "inputTokens": 576,
         "outputTokens": 74,
@@ -11706,7 +11706,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1410850000000892,
+      "retrievalMs": 1.085113999999976,
       "tokens": {
         "inputTokens": 641,
         "outputTokens": 77,
@@ -11778,7 +11778,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8723860000000059,
+      "retrievalMs": 0.9669109999999819,
       "tokens": {
         "inputTokens": 586,
         "outputTokens": 100,
@@ -11845,7 +11845,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.437236999999982,
+      "retrievalMs": 1.364708999999948,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -11918,7 +11918,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8485640000000103,
+      "retrievalMs": 0.9473779999999579,
       "tokens": {
         "inputTokens": 613,
         "outputTokens": 59,
@@ -11988,7 +11988,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8785720000000765,
+      "retrievalMs": 0.901173999999969,
       "tokens": {
         "inputTokens": 608,
         "outputTokens": 111,
@@ -12061,7 +12061,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7303060000000414,
+      "retrievalMs": 0.7423259999999345,
       "tokens": {
         "inputTokens": 644,
         "outputTokens": 58,
@@ -12135,7 +12135,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8564440000000104,
+      "retrievalMs": 0.7812509999999975,
       "tokens": {
         "inputTokens": 696,
         "outputTokens": 72,
@@ -12207,7 +12207,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7727260000000342,
+      "retrievalMs": 0.8143090000000939,
       "tokens": {
         "inputTokens": 638,
         "outputTokens": 146,
@@ -12277,7 +12277,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8695900000000165,
+      "retrievalMs": 0.9380550000000767,
       "tokens": {
         "inputTokens": 624,
         "outputTokens": 125,
@@ -12350,7 +12350,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7578439999999773,
+      "retrievalMs": 0.7882519999999431,
       "tokens": {
         "inputTokens": 594,
         "outputTokens": 97,
@@ -12412,7 +12412,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7462050000000318,
+      "retrievalMs": 0.7677499999999782,
       "tokens": {
         "inputTokens": 568,
         "outputTokens": 79,
@@ -12485,7 +12485,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8785179999999855,
+      "retrievalMs": 0.9548409999999876,
       "tokens": {
         "inputTokens": 644,
         "outputTokens": 63,
@@ -12555,7 +12555,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7497169999999187,
+      "retrievalMs": 0.9205330000000913,
       "tokens": {
         "inputTokens": 563,
         "outputTokens": 69,
@@ -12630,7 +12630,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8956670000000031,
+      "retrievalMs": 0.8979030000000421,
       "tokens": {
         "inputTokens": 657,
         "outputTokens": 122,
@@ -12702,7 +12702,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.74966500000005,
+      "retrievalMs": 0.8073469999999361,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12770,7 +12770,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7430960000000368,
+      "retrievalMs": 0.8763139999999794,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12847,7 +12847,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7444189999999935,
+      "retrievalMs": 0.7870979999999008,
       "tokens": {
         "inputTokens": 750,
         "outputTokens": 74,
@@ -12913,7 +12913,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2394520000000284,
+      "retrievalMs": 1.3838049999999384,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -12978,7 +12978,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 6.32197599999995,
+      "retrievalMs": 6.615649000000076,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13045,7 +13045,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.184170999999992,
+      "retrievalMs": 1.1690250000000333,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13114,7 +13114,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8925089999999045,
+      "retrievalMs": 0.873328000000015,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13164,7 +13164,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3427609999999959,
+      "retrievalMs": 1.3538270000000239,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13231,7 +13231,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3562050000000454,
+      "retrievalMs": 1.3645689999999604,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13336,7 +13336,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.1627429999999777,
+      "retrievalMs": 1.2625450000000455,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13373,7 +13373,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5344660000000658,
+      "retrievalMs": 1.8029919999999038,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13416,7 +13416,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6791490000000522,
+      "retrievalMs": 1.5687599999998838,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13491,7 +13491,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.052846000000045,
+      "retrievalMs": 0.9917299999999614,
       "tokens": {
         "inputTokens": 680,
         "outputTokens": 111,
@@ -13848,7 +13848,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3779590000000326,
+      "retrievalMs": 1.3698799999999665,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13914,7 +13914,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.180601000000024,
+      "retrievalMs": 1.6775159999999687,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -13988,7 +13988,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.032827999999995,
+      "retrievalMs": 1.0666269999999258,
       "tokens": {
         "inputTokens": 607,
         "outputTokens": 111,
@@ -14063,7 +14063,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7912340000000313,
+      "retrievalMs": 1.0355039999999462,
       "tokens": {
         "inputTokens": 665,
         "outputTokens": 74,
@@ -15177,7 +15177,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6575060000000121,
+      "retrievalMs": 1.6442919999999503,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15243,7 +15243,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.04362500000002,
+      "retrievalMs": 1.1589349999999286,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15311,7 +15311,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9917059999999083,
+      "retrievalMs": 0.9668520000000171,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15380,7 +15380,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9499090000000479,
+      "retrievalMs": 0.9983680000000277,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15418,7 +15418,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.779800000000023,
+      "retrievalMs": 1.9345299999999952,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15456,7 +15456,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3912970000000087,
+      "retrievalMs": 1.7679400000001806,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15494,7 +15494,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5993909999999687,
+      "retrievalMs": 1.7399800000000596,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15532,7 +15532,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.097346000000016,
+      "retrievalMs": 1.872773000000052,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15570,7 +15570,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.097291000000041,
+      "retrievalMs": 2.4700960000000123,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15608,7 +15608,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2814780000001065,
+      "retrievalMs": 1.3085269999999127,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15682,7 +15682,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8323319999999512,
+      "retrievalMs": 0.8853659999999763,
       "tokens": {
         "inputTokens": 678,
         "outputTokens": 105,
@@ -15756,7 +15756,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8421019999999544,
+      "retrievalMs": 0.8881930000000011,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15832,7 +15832,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1879749999999376,
+      "retrievalMs": 1.2338380000001052,
       "tokens": {
         "inputTokens": 713,
         "outputTokens": 105,
@@ -15898,7 +15898,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1556309999999712,
+      "retrievalMs": 1.393827999999985,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15924,17 +15924,37 @@
         "type": "answer",
         "article": "contact-search"
       },
-      "rewritten": "blok kestrel spok last week",
+      "rewritten": "blok company spok last week",
       "trace": [],
       "ranked": [
         {
+          "id": "company-create",
+          "score": 7.618,
+          "coverage": 0.068
+        },
+        {
+          "id": "company-delete",
+          "score": 7.533,
+          "coverage": 0.068
+        },
+        {
+          "id": "contact-link-company",
+          "score": 7.05,
+          "coverage": 0.068
+        },
+        {
+          "id": "company-edit-details",
+          "score": 6.497,
+          "coverage": 0.068
+        },
+        {
           "id": "contact-create",
-          "score": 2.665,
-          "coverage": 0.1
+          "score": 3.774,
+          "coverage": 0.151
         }
       ],
       "decision": "escalate",
-      "decisionReason": "Best match \"contact-create\" covers 10% of the query, below the 55% threshold. Closest semantic match \"contact-search\" is 0.26, below 0.45.",
+      "decisionReason": "Best match \"company-create\" covers 7% of the query, below the 55% threshold. Closest semantic match \"contact-search\" is 0.34, below 0.45.",
       "outcome": "escalate",
       "options": [],
       "rawCitations": [],
@@ -15942,7 +15962,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7324160000000575,
+      "retrievalMs": 1.4610309999998208,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -15990,7 +16010,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3257340000000113,
+      "retrievalMs": 1.1868219999998928,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16016,25 +16036,47 @@
         "type": "answer",
         "article": "contact-link-company"
       },
-      "rewritten": "grac work marlow finch connect",
+      "rewritten": "contact work company connect",
       "trace": [],
       "ranked": [
         {
+          "id": "contact-link-company",
+          "score": 11.841,
+          "coverage": 0.197
+        },
+        {
           "id": "glossary-clients-contacts",
-          "score": 2.665,
-          "coverage": 0.1
+          "score": 10.181,
+          "coverage": 0.398
+        },
+        {
+          "id": "company-create",
+          "score": 8.452,
+          "coverage": 0.157
+        },
+        {
+          "id": "company-delete",
+          "score": 8.187,
+          "coverage": 0.157
+        },
+        {
+          "id": "contact-search",
+          "score": 7.625,
+          "coverage": 0.197
         }
       ],
-      "decision": "escalate",
-      "decisionReason": "Best match \"glossary-clients-contacts\" covers 10% of the query, below the 55% threshold. Closest semantic match \"contact-add-note\" is 0.30, below 0.45.",
-      "outcome": "escalate",
-      "options": [],
+      "decision": "suggest",
+      "decisionReason": "Best match \"contact-link-company\" covers 20% of the query, below the 55% threshold. Semantic search found a close match (best \"contact-link-company\" at 0.66, via \"set a contact's company\"), so they are suggested rather than answered.",
+      "outcome": "suggest",
+      "options": [
+        "contact-link-company"
+      ],
       "rawCitations": [],
       "citations": [],
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.184802999999988,
+      "retrievalMs": 1.1450820000000022,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16108,7 +16150,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9686419999999316,
+      "retrievalMs": 1.118992000000162,
       "tokens": {
         "inputTokens": 662,
         "outputTokens": 85,
@@ -16175,7 +16217,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1337619999999333,
+      "retrievalMs": 1.282354999999825,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16242,7 +16284,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3498309999999947,
+      "retrievalMs": 1.4806570000000647,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16311,7 +16353,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.134644000000094,
+      "retrievalMs": 1.2308020000000397,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16360,7 +16402,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4128970000000436,
+      "retrievalMs": 1.6065849999999955,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16427,7 +16469,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1804779999999937,
+      "retrievalMs": 1.492370999999821,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16473,7 +16515,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4885769999999638,
+      "retrievalMs": 1.5515580000001137,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16546,7 +16588,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7912690000000566,
+      "retrievalMs": 0.8289740000000165,
       "tokens": {
         "inputTokens": 568,
         "outputTokens": 79,
@@ -16615,7 +16657,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8931629999999586,
+      "retrievalMs": 0.942075000000159,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16692,7 +16734,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8188350000000355,
+      "retrievalMs": 0.9017389999999068,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16767,7 +16809,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0861139999999523,
+      "retrievalMs": 1.2106159999998454,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16840,7 +16882,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.160662000000002,
+      "retrievalMs": 1.7895670000000337,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16908,7 +16950,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5649589999999307,
+      "retrievalMs": 1.8872610000000805,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16946,7 +16988,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2214839999999185,
+      "retrievalMs": 1.3787159999999403,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -16986,7 +17028,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1000530000000026,
+      "retrievalMs": 1.2177010000000337,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17056,7 +17098,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9150759999999991,
+      "retrievalMs": 1.0591640000000098,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17125,7 +17167,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.024396999999908,
+      "retrievalMs": 1.091036000000031,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17151,45 +17193,49 @@
         "type": "answer",
         "article": "contact-search"
       },
-      "rewritten": "priya anywher list",
+      "rewritten": "contact anywher list",
       "trace": [],
       "ranked": [
         {
           "id": "contact-export",
-          "score": 4.975,
-          "coverage": 0.221
-        },
-        {
-          "id": "demo-data-reset",
-          "score": 3.165,
-          "coverage": 0.195
+          "score": 9.473,
+          "coverage": 0.434
         },
         {
           "id": "contact-link-company",
-          "score": 2.171,
-          "coverage": 0.11
+          "score": 6.962,
+          "coverage": 0.273
         },
         {
           "id": "contact-search",
-          "score": 1.792,
-          "coverage": 0.11
+          "score": 6.815,
+          "coverage": 0.273
         },
         {
           "id": "contact-change-status",
-          "score": 1.577,
-          "coverage": 0.11
+          "score": 6.412,
+          "coverage": 0.273
+        },
+        {
+          "id": "contact-delete",
+          "score": 5.214,
+          "coverage": 0.113
         }
       ],
-      "decision": "escalate",
-      "decisionReason": "Best match \"contact-export\" covers 22% of the query, below the 55% threshold. Closest semantic match \"contact-search\" is 0.25, below 0.45.",
-      "outcome": "escalate",
-      "options": [],
+      "decision": "suggest",
+      "decisionReason": "Best match \"contact-export\" covers 43% of the query, below the 55% threshold. Semantic search found close matches (best \"contact-search\" at 0.63, via \"Find a Contact\"), so they are suggested rather than answered.",
+      "outcome": "suggest",
+      "options": [
+        "contact-search",
+        "contact-create",
+        "contact-add-note"
+      ],
       "rawCitations": [],
       "citations": [],
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 3.8430680000000166,
+      "retrievalMs": 4.691759999999931,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17264,7 +17310,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.9818559999999934,
+      "retrievalMs": 1.0500509999999394,
       "tokens": {
         "inputTokens": 619,
         "outputTokens": 89,
@@ -17335,7 +17381,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1227510000001075,
+      "retrievalMs": 1.2909629999999197,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17404,7 +17450,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9869980000000851,
+      "retrievalMs": 1.0480810000001384,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17474,7 +17520,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3547969999999623,
+      "retrievalMs": 1.5649610000000393,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17543,7 +17589,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8081840000000966,
+      "retrievalMs": 0.8719530000000759,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17618,7 +17664,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8416479999999638,
+      "retrievalMs": 0.9289120000000821,
       "tokens": {
         "inputTokens": 666,
         "outputTokens": 100,
@@ -17687,7 +17733,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.9675809999999956,
+      "retrievalMs": 2.2550320000000283,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17757,7 +17803,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2776340000000346,
+      "retrievalMs": 1.485104999999976,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17831,7 +17877,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8324929999999995,
+      "retrievalMs": 0.9732639999999719,
       "tokens": {
         "inputTokens": 615,
         "outputTokens": 93,
@@ -17897,7 +17943,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.394863999999984,
+      "retrievalMs": 1.240340999999944,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -17971,7 +18017,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4265020000000277,
+      "retrievalMs": 1.2579849999999624,
       "tokens": {
         "inputTokens": 704,
         "outputTokens": 72,
@@ -18044,7 +18090,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.141603000000032,
+      "retrievalMs": 1.0201119999999264,
       "tokens": {
         "inputTokens": 561,
         "outputTokens": 74,
@@ -18110,7 +18156,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.244333999999867,
+      "retrievalMs": 1.4819829999999001,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18176,7 +18222,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.088848999999982,
+      "retrievalMs": 0.9390039999998407,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18245,7 +18291,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2121130000000448,
+      "retrievalMs": 1.1404300000001513,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18313,7 +18359,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8605310000000372,
+      "retrievalMs": 0.9404539999998178,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18382,7 +18428,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1040110000001278,
+      "retrievalMs": 1.1935539999999492,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18436,7 +18482,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.0969069999998737,
+      "retrievalMs": 1.1683949999999186,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18507,7 +18553,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6989710000000287,
+      "retrievalMs": 1.3427859999999328,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18579,7 +18625,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8520979999998417,
+      "retrievalMs": 0.8873449999998684,
       "tokens": {
         "inputTokens": 631,
         "outputTokens": 122,
@@ -18647,7 +18693,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.271024000000125,
+      "retrievalMs": 1.096367999999984,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18714,7 +18760,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.844335000000001,
+      "retrievalMs": 1.327017000000069,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18784,7 +18830,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2595750000000407,
+      "retrievalMs": 1.5008580000001075,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18847,7 +18893,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.383008000000018,
+      "retrievalMs": 1.4298890000000029,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18915,7 +18961,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.093166999999994,
+      "retrievalMs": 1.342045999999982,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -18952,7 +18998,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4011809999999514,
+      "retrievalMs": 2.8237609999998767,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -19069,7 +19115,7 @@
         "\"phone number on our client profile\" is the user's own client contact number, not a contact's phone number."
       ],
       "guardrail": null,
-      "retrievalMs": 0.7489630000000034,
+      "retrievalMs": 0.8599450000001525,
       "tokens": {
         "inputTokens": 617,
         "outputTokens": 77,
@@ -19151,7 +19197,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8524380000001202,
+      "retrievalMs": 0.9601979999999912,
       "tokens": {
         "inputTokens": 629,
         "outputTokens": 99,
@@ -19236,7 +19282,7 @@
         "\"customer\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.003264000000172,
+      "retrievalMs": 1.159708000000137,
       "tokens": {
         "inputTokens": 753,
         "outputTokens": 99,
@@ -19317,7 +19363,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 1.1440170000000762,
+      "retrievalMs": 1.1967239999999038,
       "tokens": {
         "inputTokens": 626,
         "outputTokens": 99,
@@ -19396,7 +19442,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8713979999999992,
+      "retrievalMs": 0.920180000000073,
       "tokens": {
         "inputTokens": 582,
         "outputTokens": 74,
@@ -19474,7 +19520,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8130459999999857,
+      "retrievalMs": 0.8189220000001569,
       "tokens": {
         "inputTokens": 622,
         "outputTokens": 93,
@@ -19553,7 +19599,7 @@
         "\"our client account\" is about the user's own client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8860180000001492,
+      "retrievalMs": 0.8660390000000007,
       "tokens": {
         "inputTokens": 591,
         "outputTokens": 69,
@@ -19629,7 +19675,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7844090000000961,
+      "retrievalMs": 0.8338360000000193,
       "tokens": {
         "inputTokens": 557,
         "outputTokens": 63,
@@ -19705,7 +19751,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.833802999999989,
+      "retrievalMs": 0.8158109999999397,
       "tokens": {
         "inputTokens": 656,
         "outputTokens": 122,
@@ -19780,7 +19826,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.847351000000117,
+      "retrievalMs": 0.7696599999999307,
       "tokens": {
         "inputTokens": 601,
         "outputTokens": 80,
@@ -19856,7 +19902,7 @@
         "\"client\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8189010000000962,
+      "retrievalMs": 0.8384190000001581,
       "tokens": {
         "inputTokens": 702,
         "outputTokens": 73,
@@ -19930,7 +19976,7 @@
         "\"clients\" means a contact: one of the user's own customers, not the user's client profile."
       ],
       "guardrail": null,
-      "retrievalMs": 0.8107899999999972,
+      "retrievalMs": 0.8369789999999284,
       "tokens": {
         "inputTokens": 614,
         "outputTokens": 89,
@@ -20009,7 +20055,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7011609999999564,
+      "retrievalMs": 1.6633509999999205,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20084,7 +20130,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2568089999999756,
+      "retrievalMs": 1.1880499999999756,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20155,7 +20201,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2515020000000732,
+      "retrievalMs": 1.3550299999999424,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20233,7 +20279,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2252109999999448,
+      "retrievalMs": 1.2127330000000711,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20308,7 +20354,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9216209999999592,
+      "retrievalMs": 1.984958000000006,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20382,7 +20428,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8611889999999676,
+      "retrievalMs": 0.9147579999998925,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20457,7 +20503,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.877281000000039,
+      "retrievalMs": 2.073989999999867,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20532,7 +20578,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.198951999999963,
+      "retrievalMs": 1.1720090000001164,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20605,7 +20651,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.6054940000001352,
+      "retrievalMs": 1.482048000000077,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20681,7 +20727,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.4436060000000452,
+      "retrievalMs": 1.3703839999998308,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20753,7 +20799,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5110749999998916,
+      "retrievalMs": 1.5103710000000774,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20825,7 +20871,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1811139999999796,
+      "retrievalMs": 1.261637999999948,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20896,7 +20942,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1378850000000966,
+      "retrievalMs": 1.2991179999999076,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -20971,7 +21017,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3727090000002136,
+      "retrievalMs": 1.6431370000000243,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21047,7 +21093,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8939419999999245,
+      "retrievalMs": 1.0069479999999658,
       "tokens": {
         "inputTokens": 594,
         "outputTokens": 100,
@@ -21118,7 +21164,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.031074000000217,
+      "retrievalMs": 1.4696670000000722,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21188,7 +21234,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.1222250000000713,
+      "retrievalMs": 1.1560769999998683,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21263,7 +21309,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5841599999998834,
+      "retrievalMs": 1.5955939999998918,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21334,7 +21380,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2728799999999865,
+      "retrievalMs": 1.6043560000000525,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21409,7 +21455,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2137719999998353,
+      "retrievalMs": 1.4375229999998282,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21478,7 +21524,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.413477999999941,
+      "retrievalMs": 1.7527199999999539,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21549,7 +21595,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.546940000000177,
+      "retrievalMs": 1.8251840000000357,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21616,7 +21662,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8623330000000351,
+      "retrievalMs": 1.0549099999998361,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21691,7 +21737,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7838619999999992,
+      "retrievalMs": 2.7724490000000515,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21761,7 +21807,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3097159999999803,
+      "retrievalMs": 1.2694159999998647,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21834,7 +21880,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9337520000001405,
+      "retrievalMs": 1.9931369999999333,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21906,7 +21952,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3845919999998841,
+      "retrievalMs": 1.769854000000123,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -21985,7 +22031,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.3762919999999212,
+      "retrievalMs": 1.4571909999999662,
       "tokens": {
         "inputTokens": 586,
         "outputTokens": 74,
@@ -22063,7 +22109,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.918282999999974,
+      "retrievalMs": 1.1347650000000158,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22138,7 +22184,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.40027699999996,
+      "retrievalMs": 1.3956359999999677,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22214,7 +22260,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7805769999999939,
+      "retrievalMs": 0.8642230000000382,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22287,7 +22333,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.47859799999992,
+      "retrievalMs": 1.2154229999998734,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22364,7 +22410,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7688620000001265,
+      "retrievalMs": 0.7640240000000631,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22440,7 +22486,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.198474000000033,
+      "retrievalMs": 1.1438740000000962,
       "tokens": {
         "inputTokens": 558,
         "outputTokens": 63,
@@ -22517,7 +22563,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8062020000002121,
+      "retrievalMs": 0.7655670000001464,
       "tokens": {
         "inputTokens": 675,
         "outputTokens": 97,
@@ -22588,7 +22634,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7886479999999665,
+      "retrievalMs": 0.7748229999999694,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22668,7 +22714,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.8428990000002159,
+      "retrievalMs": 0.8834839999999531,
       "tokens": {
         "inputTokens": 651,
         "outputTokens": 146,
@@ -22746,7 +22792,7 @@
       ],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 0.7025800000001254,
+      "retrievalMs": 0.7791560000000572,
       "tokens": {
         "inputTokens": 566,
         "outputTokens": 74,
@@ -22815,7 +22861,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9035440000000108,
+      "retrievalMs": 1.78846499999986,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22885,7 +22931,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.7766830000000482,
+      "retrievalMs": 1.4635010000001785,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -22953,7 +22999,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9037670000000162,
+      "retrievalMs": 1.8160870000001523,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23025,7 +23071,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.316248000000087,
+      "retrievalMs": 1.3810120000000552,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23072,7 +23118,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.2281330000000708,
+      "retrievalMs": 1.4028430000000753,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23143,7 +23189,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.9144380000000183,
+      "retrievalMs": 2.079095999999936,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23207,7 +23253,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 1.5276519999999891,
+      "retrievalMs": 1.5963819999999487,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,
@@ -23252,7 +23298,7 @@
       "contextIds": [],
       "interpretation": [],
       "guardrail": null,
-      "retrievalMs": 2.307939999999917,
+      "retrievalMs": 2.5330810000000383,
       "tokens": {
         "inputTokens": 0,
         "outputTokens": 0,

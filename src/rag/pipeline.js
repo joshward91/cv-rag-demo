@@ -57,11 +57,14 @@ export class HelpDesk {
    * @param {{ retriever: import('./retriever.js').Retriever, generator: object, embedder?: (texts: string[]) => Promise<number[][]> }} deps
    *        With an embedder and a retriever that has a semantic index, retrieval is hybrid.
    */
-  constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS, suite = null, allowInternal = false }) {
+  constructor({ retriever, generator, embedder = null, modelUse = DEFAULT_MODEL_USE, tiers = MODEL_TIERS, suite = null, allowInternal = false, records = null }) {
     // allowInternal exists only so the evaluation can measure what the filter prevents.
     if (!allowInternal) assertPublic([...retriever.articles, ...(retriever.fallback?.articles ?? [])], CRM.name);
     this.retriever = retriever;
     this.suite = suite;
+    // The account's own records (src/crm/query.js), for questions such as
+    // "show me open deals". Answered from data, never by a model.
+    this.records = records;
     this.generator = generator;
     this.embedder = embedder;
     this.modelUse = modelUse;
@@ -84,6 +87,18 @@ export class HelpDesk {
       return { question, retrieval, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'blocked', citations: [] } };
     }
 
+    // Questions about the account's own records are answered from the store,
+    // deterministically, before the help centre is searched.
+    // A question that names another product ("contacts in Harbour Mail") is
+    // that product's, not a lookup in the CRM.
+    if (this.records && !chosenArticleId && !this.suite?.named(question)) {
+      const data = this.records.answer(question);
+      if (data) {
+        const decision = { type: 'data', reason: data.read };
+        return { question, retrieval: null, decision, prompt: null, reply: null, guardrail: null, costUsd: 0, outcome: { type: 'data', ...data, citations: [] } };
+      }
+    }
+
     // A question that names another Harbour product is answered from that
     // product's help centre; anything else is about the CRM (see suite.js).
     const named = chosenArticleId ? this.#productOf(chosenArticleId) : this.suite?.named(question);
@@ -91,7 +106,11 @@ export class HelpDesk {
       const result = await this.#ask(question, named.text ?? question, named.product.retriever, named.product.name, { chosenArticleId });
       return result;
     }
-    const result = await this.#ask(question, question, this.retriever, CRM.name, { chosenArticleId });
+    const searchText = this.records && !chosenArticleId ? this.records.withRecordTypes(question) : question;
+    const asked = await this.#ask(question, searchText, this.retriever, CRM.name, { chosenArticleId });
+    // A help question that names a record also gets a link to open it.
+    const records = this.records && !chosenArticleId && asked.outcome.type !== 'blocked' ? this.records.linksFor(question) : [];
+    const result = records.length ? { ...asked, records } : asked;
     if (!this.suite || chosenArticleId || ['blocked', 'assistant'].includes(result.outcome.type)) return result;
 
     // Other products that cover the same task. Next to a CRM answer they are

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T02:59:44.559Z",
+ "generatedAt": "2026-10-06T03:51:45.034Z",
  "articles": {
   "crm": 29,
   "sister": 969,
@@ -250,7 +250,7 @@
     "changedFromBefore": [],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 3.449500717105267
+    "msPerQuestion": 3.5796517598684248
    },
    "suite": null
   },
@@ -457,7 +457,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 7.209866710526304
+    "msPerQuestion": 6.927393309210517
    },
    "suite": {
     "cases": 64,
@@ -700,7 +700,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 14.666528980263111
+    "msPerQuestion": 15.035186878289357
    },
    "suite": {
     "cases": 64,
@@ -943,7 +943,7 @@
     ],
     "leaks": 0,
     "leaksByStatus": {},
-    "msPerQuestion": 17.27050975657905
+    "msPerQuestion": 16.69557773026317
    },
    "suite": {
     "cases": 64,
@@ -3770,7 +3770,7 @@
      "archived": 24,
      "internal": 60
     },
-    "msPerQuestion": 11.588633773026507
+    "msPerQuestion": 11.37253372368412
    },
    "suite": {
     "cases": 64,

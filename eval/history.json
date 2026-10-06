@@ -505,6 +505,82 @@
           "tuned": true
         }
       ]
+    },
+    {
+      "round": "Round 13",
+      "change": "Record lookups. Signed in, questions about the account's own data (\"show me Priya's phone number\", \"open Deals worth more than 10k\", \"Contacts at Kestrel\") are answered straight from the records by a small deterministic parser, after the input guard and before help search, with no model call; record data never goes into a prompt. Everything it doesn't recognise goes to the help assistant as before. How-to questions that name a record get an \"Open\" link to it, and the name is replaced by its record type for help search. 40 lookup questions were written blind by a separate agent that read only the seed data. First scoring: 29 of 40. The parser was then widened for phrasings the failures showed it missed (\"can you give me\", \"where is X located\", \"what deals do we have with X\", \"who works at X\"). Widening made a list for a Company the account doesn't have list every Deal, so such a list now says it couldn't match the name. An independent review then fixed curly apostrophes, a Contact named with their Company, and statements such as \"Priya has a new phone number\". The lookup score below counts as tuned. None of the 416 help, viewer and suite questions is answered as data. Replacing names with record types changed 2 of the original 304 outcomes, both from a hand-off to a suggestion: strict pass rates are unchanged, and the useful rate on the never-tuned hard hold-out rose from 70.0% to 73.3%.",
+      "scores": [
+        {
+          "split": "dev",
+          "passed": 71,
+          "cases": 83,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "test",
+          "passed": 47,
+          "cases": 49,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout",
+          "passed": 32,
+          "cases": 38,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "perspective",
+          "passed": 11,
+          "cases": 12,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "redteam",
+          "passed": 38,
+          "cases": 38,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "holdout3",
+          "passed": 12,
+          "cases": 36,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "voice",
+          "passed": 13,
+          "cases": 48,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "viewer-in",
+          "passed": 10,
+          "cases": 24,
+          "blind": false,
+          "tuned": false
+        },
+        {
+          "split": "viewer-out",
+          "passed": 13,
+          "cases": 24,
+          "blind": false,
+          "tuned": true
+        },
+        {
+          "split": "records",
+          "passed": 37,
+          "cases": 40,
+          "blind": false,
+          "tuned": true
+        }
+      ]
     }
   ],
   "knownIssues": [
