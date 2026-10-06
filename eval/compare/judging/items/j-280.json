@@ -1,0 +1,12 @@
+{
+ "id": "j-280",
+ "question": "add another choice to the lead source dropdown",
+ "articles": [
+  {
+   "id": "custom-field-edit",
+   "title": "Rename a custom field or edit its options",
+   "body": "1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**, or for a dropdown, edit the **Options** (one per line).\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created. To change them, delete the field and create a new one."
+  }
+ ],
+ "answer": "Edit the field's **Options**:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the lead source field.\n3. In **Options**, add the new choice on its own line.\n4. Select **Save field**."
+}

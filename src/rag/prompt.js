@@ -80,3 +80,22 @@ export function buildPrompt(question, articles, analysis = null) {
 export function promptAsText(prompt) {
   return `[system]\n${prompt.system}\n\n[user]\n${prompt.user}\n\n[response format: JSON]\n${JSON.stringify(prompt.schema)}`;
 }
+
+/**
+ * Model-routed variant, used by the model comparison (eval/compare/): the
+ * model sees the top candidates for every question and makes the
+ * answer / clarify / escalate decision itself, instead of the retriever's
+ * coverage policy making it first.
+ */
+export const ROUTING_PROMPT = SYSTEM_PROMPT.replace(
+  '- If the articles don\'t answer the question,',
+  `- If two or more articles could each be what the user means and the question doesn't say which, set "type" to "clarify", put those article ids in "citations" and ask one short question in "answer". Only clarify when a careful support agent would genuinely need to ask.
+- If the articles don't answer the question,`,
+).replace('Answer the user\'s question using only the help articles inside <articles>.', 'Answer the user\'s question using only the help articles inside <articles>. They are the closest matches from search and may include articles that are not relevant.');
+
+export function buildRoutingPrompt(question, articles, analysis = null) {
+  const contextIds = articles.map((a) => a.id);
+  const schema = responseSchema(contextIds);
+  schema.properties.type.enum = ['answer', 'clarify', 'escalate'];
+  return { system: ROUTING_PROMPT, user: buildUserMessage(question, articles, interpretationNotes(analysis)), schema, contextIds };
+}

@@ -1,0 +1,15 @@
+{
+ "id": "h2-22",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-business-name",
+  "company-edit-details",
+  "company-create",
+  "company-delete"
+ ],
+ "user": "<articles>\n<article id=\"account-business-name\" title=\"Change your client name\">\nYour **Client name** appears at the top of every page in Harbour CRM.\n\n1. Go to **Settings** > **Client profile**.\n2. Change the **Client name**.\n3. Select **Save client profile**.\n</article>\n<article id=\"company-edit-details\" title=\"Edit a company's phone number, website or address\">\n1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only.\n</article>\n<article id=\"company-create\" title=\"Add a company\">\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.\n</article>\n<article id=\"company-delete\" title=\"Delete a company\">\n1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone.\n</article>\n</articles>\n\n<question>our company changed its name</question>"
+}

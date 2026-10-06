@@ -1,0 +1,12 @@
+{
+ "id": "j-089",
+ "question": "where do I change our client name",
+ "articles": [
+  {
+   "id": "account-business-name",
+   "title": "Change your client name",
+   "body": "Your **Client name** appears at the top of every page in Harbour CRM.\n\n1. Go to **Settings** > **Client profile**.\n2. Change the **Client name**.\n3. Select **Save client profile**."
+  }
+ ],
+ "answer": "To change your client name:\n\n1. Go to **Settings** > **Client profile**.\n2. Change the **Client name**.\n3. Select **Save client profile**.\n\nYour **Client name** appears at the top of every page in Harbour CRM."
+}

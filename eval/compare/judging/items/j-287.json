@@ -1,0 +1,12 @@
+{
+ "id": "j-287",
+ "question": "We set up some custom fields a while back. I need to change what's in one of them. How?",
+ "articles": [
+  {
+   "id": "custom-field-fill",
+   "title": "Fill in a custom field on a record",
+   "body": "1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a value.\n4. Save the record.\n\nA field only appears on the record type it applies to. In this account, for example, contacts have **Preferred contact method**, companies have **ABN** and deals have **Lead source**. To change which fields exist, go to **Settings** > **Custom fields**."
+  }
+ ],
+ "answer": "1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a new value.\n4. Save the record."
+}

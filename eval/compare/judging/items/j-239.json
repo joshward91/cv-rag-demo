@@ -1,0 +1,12 @@
+{
+ "id": "j-239",
+ "question": "a business we deal with moved to a new street address",
+ "articles": [
+  {
+   "id": "company-edit-details",
+   "title": "Edit a company's phone number, website or address",
+   "body": "1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only."
+  }
+ ],
+ "answer": "1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Address**.\n4. Select **Save company**."
+}

@@ -1,0 +1,17 @@
+{
+ "id": "j-226",
+ "question": "accidently clicked won on a deal that isnt actually done yet, can i undo that",
+ "articles": [
+  {
+   "id": "deal-reopen",
+   "title": "Reopen a won or lost deal",
+   "body": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+  },
+  {
+   "id": "deal-mark-won",
+   "title": "Mark a deal as won",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**."
+  }
+ ],
+ "answer": "Yes, you can undo it by reopening the deal:\n\n1. Go to **Deals** and open the won deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date is cleared."
+}

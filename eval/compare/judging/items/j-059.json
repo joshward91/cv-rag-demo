@@ -1,0 +1,12 @@
+{
+ "id": "j-059",
+ "question": "gutted, the client went with a competitor in the end. whats the right way to close this deal off so it shows we lost it",
+ "articles": [
+  {
+   "id": "deal-mark-lost",
+   "title": "Mark a deal as lost",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**."
+  }
+ ],
+ "answer": "1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: select **Chose a competitor**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting."
+}

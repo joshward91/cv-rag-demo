@@ -1,0 +1,12 @@
+{
+ "id": "j-171",
+ "question": "one of my clients changed jobs and now works at Bayside Plumbing. how do i put her under that business instead of her old one",
+ "articles": [
+  {
+   "id": "contact-link-company",
+   "title": "Link a contact to a company",
+   "body": "A contact can belong to one company.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the company in the **Company** list. Choose **No company** to unlink the contact.\n4. Select **Save contact**.\n\nThe contact now appears under **Contacts at this company** on the company's page. If the company isn't in the list yet, add it first under **Companies**."
+  }
+ ],
+ "answer": "Change the company on her contact record:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose Bayside Plumbing in the **Company** list.\n4. Select **Save contact**.\n\nA contact can belong to one company, so this replaces her old one. If Bayside Plumbing isn't in the list yet, add it first under **Companies**."
+}

@@ -1,0 +1,16 @@
+{
+ "id": "v-41",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-create",
+  "contact-create",
+  "company-create",
+  "contact-edit-email",
+  "account-billing-email"
+ ],
+ "user": "<articles>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"company-create\" title=\"Add a company\">\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.\n</article>\n<article id=\"contact-edit-email\" title=\"Change a contact's email address\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save.\n</article>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n</articles>\n\n<question>My new admin starts Monday. How do I give her her own login to this?</question>"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "v-35",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-change-status",
+  "contact-search",
+  "deal-edit-value",
+  "custom-field-edit"
+ ],
+ "user": "<articles>\n<article id=\"contact-change-status\" title=\"Change a contact's status\">\nEvery contact has a **Status**: **Lead**, **Customer** or **Inactive**.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the new value in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages. Winning a deal doesn't change the contact's status.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n<article id=\"deal-edit-value\" title=\"Change a deal's value\">\n1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away.\n</article>\n<article id=\"custom-field-edit\" title=\"Rename a custom field or edit its options\">\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**, or for a dropdown, edit the **Options** (one per line).\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created. To change them, delete the field and create a new one.\n</article>\n</articles>\n\n<question>how do i change the status</question>"
+}

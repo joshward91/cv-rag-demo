@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "The board doesn't support drag and drop. Instead:\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nYour deal moves from **Proposal sent** to the next stage (**Negotiation**). The change saves straight away and the deal moves to that column on the board.", "citations": ["deal-change-stage"]}

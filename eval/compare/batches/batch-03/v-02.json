@@ -1,0 +1,16 @@
+{
+ "id": "v-02",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-edit-email",
+  "account-billing-email",
+  "glossary-clients-contacts",
+  "contact-add-note",
+  "contact-change-status"
+ ],
+ "user": "<articles>\n<article id=\"contact-edit-email\" title=\"Change a contact's email address\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save.\n</article>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n<article id=\"glossary-clients-contacts\" title=\"Clients, contacts and companies: what the terms mean\">\nHarbour CRM uses three terms with specific meanings:\n\n- **Client**: your business, the account that uses Harbour CRM. Your **Client profile** holds your client name, client contact number and billing details.\n- **Contact**: a person your business deals with, such as a customer or a lead. Contacts live under **Contacts**.\n- **Company**: an organisation your contacts work for. Companies live under **Companies**.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n<article id=\"contact-change-status\" title=\"Change a contact's status\">\nEvery contact has a **Status**: **Lead**, **Customer** or **Inactive**.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the new value in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages. Winning a deal doesn't change the contact's status.\n</article>\n</articles>\n\n<interpretation>\n- \"customers\" means a contact: one of the user's own customers, not the user's client profile.\n</interpretation>\n\n<question>one of my customers just rang to say her work email got shut down and she uses gmail now. how do i swap it over in her details?</question>"
+}

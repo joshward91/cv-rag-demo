@@ -1,0 +1,12 @@
+{
+ "id": "j-147",
+ "question": "add a company to the CRM",
+ "articles": [
+  {
+   "id": "company-create",
+   "title": "Add a company",
+   "body": "1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it."
+  }
+ ],
+ "answer": "To add a company:\n\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it."
+}

@@ -1,0 +1,15 @@
+{
+ "id": "v-15",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-create",
+  "deal-edit-value",
+  "contact-add-note",
+  "deal-mark-won"
+ ],
+ "user": "<articles>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n<article id=\"deal-edit-value\" title=\"Change a deal's value\">\n1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n<article id=\"deal-mark-won\" title=\"Mark a deal as won\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**.\n</article>\n</articles>\n\n<question>how do i log a new sales opportunity, its worth about 5k</question>"
+}

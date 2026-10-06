@@ -1,0 +1,487 @@
+{
+ "v-04": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-07": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-01": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-14": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-21": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-11": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-14": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-29": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-13": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-30": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-12": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-23": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-05": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-06": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-20": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-06": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-10": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-21": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-21": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-15": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-14": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-29": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-17": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-core-01": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-38": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-05": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-03": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-15": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-09": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-16": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-24": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-03": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-03": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-01": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-19": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-08": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-20": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-28": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-15": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-27": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-04": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-13": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-24": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-20": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-02": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-06": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-04": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-12": {
+  "faithful": false,
+  "complete": true,
+  "note": "Invents a 'Clear filters' button not mentioned in the article."
+ },
+ "h3-08": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-18": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-10": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-16": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-25": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-16": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-28": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-18": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-22": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-09": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-27": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-core-04": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-09": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-07": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-11": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-02": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-core-02": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-35": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-02": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-12": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-07": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-19": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-07": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-04": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-core-03": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-10": {
+  "faithful": false,
+  "complete": true,
+  "note": "Mentions a Status filter, which the cited article does not describe."
+ },
+ "h3-02": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-18": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-32": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-17": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-10": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-06": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-08": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-19": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-24": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-08": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-30": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-11": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-09": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-25": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "p-05": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-05": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-03": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h2-01": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-11": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-26": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "h3-26": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-01": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ },
+ "v-12": {
+  "faithful": true,
+  "complete": true,
+  "note": ""
+ }
+}

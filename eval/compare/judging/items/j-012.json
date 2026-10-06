@@ -1,0 +1,12 @@
+{
+ "id": "j-012",
+ "question": "undo a lost deal",
+ "articles": [
+  {
+   "id": "deal-reopen",
+   "title": "Reopen a won or lost deal",
+   "body": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+  }
+ ],
+ "answer": "To reopen a lost deal:\n\n1. Go to **Deals** and open the lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+}

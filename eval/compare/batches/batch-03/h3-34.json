@@ -1,0 +1,15 @@
+{
+ "id": "h3-34",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-delete",
+  "contact-create",
+  "contact-search",
+  "contact-export"
+ ],
+ "user": "<articles>\n<article id=\"contact-delete\" title=\"Delete a contact\">\n1. Go to **Contacts** and open the contact.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete contact**.\n\nDeleting a contact also deletes their notes. Deals linked to the contact are kept and show **No contact**. Deleting can't be undone.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n<article id=\"contact-export\" title=\"Export contacts to a CSV file\">\n1. Go to **Contacts**.\n2. Optionally search or filter the list. The export includes only the contacts currently shown.\n3. Select **Export CSV**.\n\nThe file includes each contact's name, email, phone, job title, company, status and custom fields. It opens in Excel, Numbers and Google Sheets.\n</article>\n</articles>\n\n<question>merge two duplicate contacts into one</question>"
+}

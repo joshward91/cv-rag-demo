@@ -1,0 +1,16 @@
+{
+ "id": "h2-15",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-change-stage",
+  "deal-mark-won",
+  "deal-mark-lost",
+  "deal-create",
+  "deal-delete"
+ ],
+ "user": "<articles>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n<article id=\"deal-mark-won\" title=\"Mark a deal as won\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**.\n</article>\n<article id=\"deal-mark-lost\" title=\"Mark a deal as lost\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**.\n</article>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n<article id=\"deal-delete\" title=\"Delete a deal\">\n1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone. If the deal fell through, consider **Mark as lost** instead so it still counts in your history.\n</article>\n</articles>\n\n<question>move a deal from qualified to proposal sent</question>"
+}

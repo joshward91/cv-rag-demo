@@ -1,0 +1,12 @@
+{
+ "id": "j-271",
+ "question": "spent 20 mins entering contacts and when i hit refresh EVERYTHING vanished?? what happened",
+ "articles": [
+  {
+   "id": "demo-data-reset",
+   "title": "Why your changes disappear when you reload",
+   "body": "This is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere."
+  }
+ ],
+ "answer": "Sorry about that. This is a demonstration copy of Harbour CRM, and it stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data, so the contacts you entered were cleared when you refreshed. Nothing you enter is sent anywhere."
+}

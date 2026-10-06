@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "The board doesn't support drag and drop, so you'll need to change the stage from the deal itself:\n\n1. Go to **Deals** and open the deal.\n2. Choose **Proposal sent** in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board.", "citations": ["deal-change-stage"]}

@@ -1,0 +1,12 @@
+{
+ "id": "j-003",
+ "question": "how do i log a new sales opportunity, its worth about 5k",
+ "articles": [
+  {
+   "id": "deal-create",
+   "title": "Create a deal",
+   "body": "1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**."
+  }
+ ],
+ "answer": "To log a new sales opportunity, create a deal:\n\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value** (for example 5000, numbers only).\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**."
+}

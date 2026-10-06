@@ -1,0 +1,15 @@
+{
+ "id": "h3-33",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "glossary-clients-contacts",
+  "account-billing-email",
+  "account-business-name",
+  "contact-create"
+ ],
+ "user": "<articles>\n<article id=\"glossary-clients-contacts\" title=\"Clients, contacts and companies: what the terms mean\">\nHarbour CRM uses three terms with specific meanings:\n\n- **Client**: your business, the account that uses Harbour CRM. Your **Client profile** holds your client name, client contact number and billing details.\n- **Contact**: a person your business deals with, such as a customer or a lead. Contacts live under **Contacts**.\n- **Company**: an organisation your contacts work for. Companies live under **Companies**.\n</article>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n<article id=\"account-business-name\" title=\"Change your client name\">\nYour **Client name** appears at the top of every page in Harbour CRM.\n\n1. Go to **Settings** > **Client profile**.\n2. Change the **Client name**.\n3. Select **Save client profile**.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n</articles>\n\n<question>how do I invite a colleague to our account</question>"
+}

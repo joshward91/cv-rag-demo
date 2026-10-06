@@ -1,0 +1,15 @@
+{
+ "id": "h2-amb-01",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-edit-phone",
+  "company-edit-details",
+  "account-client-contact-number",
+  "deal-edit-value"
+ ],
+ "user": "<articles>\n<article id=\"contact-edit-phone\" title=\"Update a contact's phone number\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the number in the **Phone** field. You can use digits, spaces, brackets and a leading +, for example +61 491 570 156.\n4. Select **Save contact**.\n\nEach contact has one **Phone** field. If you need to store a second number, create a custom field for it.\n</article>\n<article id=\"company-edit-details\" title=\"Edit a company's phone number, website or address\">\n1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only.\n</article>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"deal-edit-value\" title=\"Change a deal's value\">\n1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away.\n</article>\n</articles>\n\n<question>update the number</question>"
+}

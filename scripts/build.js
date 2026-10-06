@@ -19,7 +19,7 @@
  *   docs/report.html   the evaluation report
  */
 import { build } from 'esbuild';
-import { copyFileSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -67,6 +67,7 @@ function reportPage(demoUrl) {
   return read('report/template.html')
     .replace('__RESULTS__', () => inlineJson(JSON.parse(read('eval/results.json'))))
     .replace('__HISTORY__', () => inlineJson(JSON.parse(read('eval/history.json'))))
+    .replace('__COMPARISON__', () => (existsSync(`${root}eval/compare/results.json`) ? inlineJson(JSON.parse(read('eval/compare/results.json'))) : 'null'))
     .replace('__DEMO_URL__', () => demoUrl);
 }
 

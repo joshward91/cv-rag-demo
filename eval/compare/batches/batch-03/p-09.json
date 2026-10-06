@@ -1,0 +1,15 @@
+{
+ "id": "p-09",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "glossary-clients-contacts",
+  "contact-delete",
+  "contact-create",
+  "contact-add-note"
+ ],
+ "user": "<articles>\n<article id=\"glossary-clients-contacts\" title=\"Clients, contacts and companies: what the terms mean\">\nHarbour CRM uses three terms with specific meanings:\n\n- **Client**: your business, the account that uses Harbour CRM. Your **Client profile** holds your client name, client contact number and billing details.\n- **Contact**: a person your business deals with, such as a customer or a lead. Contacts live under **Contacts**.\n- **Company**: an organisation your contacts work for. Companies live under **Companies**.\n</article>\n<article id=\"contact-delete\" title=\"Delete a contact\">\n1. Go to **Contacts** and open the contact.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete contact**.\n\nDeleting a contact also deletes their notes. Deals linked to the contact are kept and show **No contact**. Deleting can't be undone.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n</articles>\n\n<interpretation>\n- \"client\" means a contact: one of the user's own customers, not the user's client profile.\n</interpretation>\n\n<question>is a client the same as a contact</question>"
+}

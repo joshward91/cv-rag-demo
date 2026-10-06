@@ -1,0 +1,12 @@
+{
+ "id": "j-274",
+ "question": "I closed a deal too early and need it back in progress",
+ "articles": [
+  {
+   "id": "deal-reopen",
+   "title": "Reopen a won or lost deal",
+   "body": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+  }
+ ],
+ "answer": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+}

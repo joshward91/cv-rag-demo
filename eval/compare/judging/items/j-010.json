@@ -1,0 +1,12 @@
+{
+ "id": "j-010",
+ "question": "your support people keep ringing our old landline which we got rid of. where do i update the number you have for us",
+ "articles": [
+  {
+   "id": "account-client-contact-number",
+   "title": "Change your client contact number",
+   "body": "Your **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**."
+  }
+ ],
+ "answer": "Harbour CRM support and billing use your **Client contact number** to reach you. To update it:\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**."
+}

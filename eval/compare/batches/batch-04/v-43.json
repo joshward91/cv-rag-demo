@@ -1,0 +1,14 @@
+{
+ "id": "v-43",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "demo-data-reset",
+  "account-client-contact-number",
+  "account-billing-email"
+ ],
+ "user": "<articles>\n<article id=\"demo-data-reset\" title=\"Why your changes disappear when you reload\">\nThis is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere.\n</article>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n</articles>\n\n<question>forgot my password, how do i reset it</question>"
+}

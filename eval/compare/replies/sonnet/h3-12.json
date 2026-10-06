@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "Add the organisation as a company:\n\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.", "citations": ["company-create"]}

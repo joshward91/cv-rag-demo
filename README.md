@@ -5,7 +5,7 @@ A grounded retrieval-augmented help-desk assistant, built around a small CRM tha
 - **The CRM** is a static web app with contacts, companies, deals, custom fields and a client profile (the account's own settings). It loads sample data on every page load, so a reload resets it.
 - **The help centre** is 29 single-task articles. Each has an id, title, aliases ("also called"), a body and "not to be confused with" links. Every article describes a screen you can click through, and a browser check verifies that every bold UI label in the docs exists in the app.
 - **The assistant** answers only from those articles, cites the article it used, asks a clarifying question when two articles are equally likely, suggests the closest articles when keyword search can't decide but the meaning matches, and offers "Contact support" when nothing matches. Every reply has a **Show retrieval** panel with the rewritten query, scored articles, the decision and the exact prompt.
-- **The evaluation suite** has 256 realistic phrasings across six sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
+- **The evaluation suite** has 304 realistic phrasings across seven sets, and the report shows retrieval hit rate, citation validity, refusal correctness and cost per question.
 
 **Live demo:** https://joshward91.github.io/cv-rag-demo/ · **Evaluation report:** https://joshward91.github.io/cv-rag-demo/report.html
 
@@ -20,7 +20,7 @@ Requires Node 20 or later. There is no backend.
 ```bash
 npm install              # add --ignore-scripts if onnxruntime-node's postinstall can't download; its CPU binaries ship in the package
 npm test                 # unit tests: retrieval, guardrail, generator contract, grading
-npm run eval             # runs all 256 cases offline, keyword-only and hybrid, writes eval/results.json
+npm run eval             # runs all 304 cases offline, keyword-only and hybrid, writes eval/results.json
 npm run check:docs       # browser check: docs labels exist in the UI, plus five walkthroughs
 npm run build            # self-contained pages in dist/, plus the GitHub Pages site in docs/
 npm run serve            # then open http://localhost:8080 to run from source
@@ -113,7 +113,7 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 
 ## Evaluation
 
-`eval/cases.js` holds 256 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split six ways:
+`eval/cases.js` holds 304 questions with an expected outcome: answer from a given article, clarify between given articles, escalate, block as prompt injection, or explain the assistant's own settings. Cases are tagged (core example, terminology, synonym, paraphrase, typo, ambiguity, out of scope, near miss, prompt injection) and split seven ways:
 
 | Set | Cases | Role |
 |---|---|---|
@@ -122,6 +122,7 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 | holdout | 38 | Written after round 1 and before round 2 changed anything. Never tuned on. |
 | redteam | 38 | A cursory pen test, added in round 8. |
 | perspective | 12 | "Client" from both sides. Written after round 3, scored blind once, then one failure was tuned on in round 4. |
+| voice (everyday voice) | 48 | Rambling, non-expert and deliberately ambiguous questions, written by a separate agent that saw only the articles. Scored blind in round 10, never tuned on. |
 | holdout3 (hard hold-out) | 36 | Paraphrases that avoid the articles' wording. Committed before any semantic code was written, scored blind in round 9, never tuned on. |
 
 | Round | Dev | Test | Hold-out | Perspective |
@@ -137,17 +138,20 @@ The guard is pattern-based and only catches the obvious cases. The later layers 
 | Round 8 | 100% | 95.9% | 84.2% (not tuned on) | 91.7% |
 | Round 9 | 85.5%* | 95.9% | 84.2% (not tuned on) | 91.7% |
 
+| Round 10 | 85.5% | 95.9% | 84.2% (not tuned on) | 91.7% |
+
 \* Dev gained 15 hard paraphrases in round 9; the original 68 dev cases still all pass.
 
 Round 9 added semantic suggestions. The strict pass rate doesn't move, because a suggestion is not counted as an answer. The **useful rate** (answered correctly, or the right article suggested) does:
 
 | Set | Keyword only | Keyword + semantic |
 |---|---|---|
+| Everyday voice (blind) | 6.7% | **76.7%** |
 | Hard hold-out (blind) | 20.0% | **70.0%** |
 | Hold-out | 82.1% | 100% |
-| All 256 | 74.1% | 90.1% |
+| All 304 | 63.5% | 88.0% |
 
-The cost: suggestions also appear for 17 of 41 out-of-scope questions, where the right action is Contact support, which sits under the suggestions.
+The cost: suggestions also appear for 20 of 49 out-of-scope questions, where the right action is Contact support, which sits under the suggestions.
 
 Round 5 switched the shipped help centre to the vendor's voice and added the prompt check, without changing any retrieval rule. Round 6 fixed a user-reported wrong answer: "change mode to online" got the deal stage article because spelling correction turned "mode" into "move". Short words are no longer corrected, and questions about the assistant itself now explain its answer modes. Round 7 added the prompt-injection defences above, with twelve cases, two of which check that ordinary questions are not blocked.
 
@@ -166,12 +170,37 @@ Metrics are defined in `eval/metrics.js`:
 
 The history and known issues are in `eval/history.json`, and the report page renders both.
 
+## Which model is most cost-effective?
+
+`eval/compare/` asks a different question: what if the model makes the answer / clarify / escalate decision itself? Every question from the four blind sets (131, after blocked and assistant questions are removed) gets the top five candidates from keyword and semantic search, look-alikes included. The prompt is `ROUTING_PROMPT` in `src/rag/prompt.js`.
+
+| | No model (shipped) | Haiku 4.5 | Sonnet 5.5 | Opus 5.5 |
+|---|---|---|---|---|
+| Pass rate | 49.6% | 86.3% | **91.6%** | 90.8% |
+| Pass rate where search found the article | | 91.1% | **96.8%** | 96.0% |
+| Wrong answers | 6 | 5 | 4 | 4 |
+| Answers not faithful to the article (judged) | | 4 of 95 | 1 of 97 | 2 of 97 |
+| Cost per 1,000 questions | $0 | $1.29 | $2.68 | $5.41 |
+| Cost per correct answer | $0 | **$0.0015** | $0.0029 | $0.0060 |
+
+**Sonnet is the pick for this job.** It ties or beats Opus at half the price. Haiku has the lowest cost per correct answer, but it gets there with nearly twice as many bad answers (wrong article or invented detail). A bad answer costs a support ticket, which is worth far more than the $1.39 per thousand questions saved. Every model beats the shipped keyword policy on everyday questions, which is the case for putting a model in the decision once there is a budget for it.
+
+How it was run, without API credits: each model ran as a Claude Code subagent, given the routing prompt and one question per file (`eval/compare/batches/`), and wrote one JSON reply per question (`eval/compare/replies/`). The decisions are real model output. Tokens are estimated from the prompt and reply text and priced at API list prices, so Opus's thinking tokens are left out and its real cost is higher. A separate Opus judge graded all 289 answers against their cited articles, pooled and shuffled with model names removed (`eval/compare/judging.mjs`). Opus grading Opus could favour it slightly, and Sonnet still came out ahead.
+
+```bash
+node eval/compare/prepare.mjs          # build prompts and batches
+# ...each model writes eval/compare/replies/<model>/<case>.json
+node eval/compare/judging.mjs prepare  # anonymise answers for the judge
+node eval/compare/judging.mjs merge    # after grading
+node eval/compare/score.mjs            # writes eval/compare/results.json for the report
+```
+
 ## Known limitations
 
 - Unknown but harmless words ("typo", "keep", "paying") lower coverage and cause false refusals. This is the main hold-out failure mode, and it fails safe.
 - Lexical retrieval can't tell "send an invoice to a contact" (unsupported) from "where invoices are sent" (billing email). In Claude mode the model is instructed to escalate when the article doesn't answer the question.
 - "We have a new office number" gets the company article. Without "our" or "account", nothing marks the number as the user's own.
-- Semantic suggestions appear for some out-of-scope questions (17 of 41), because similarity can't tell a near miss from a match. They are suggestions, never answers, with Contact support underneath.
+- Semantic suggestions appear for some out-of-scope questions (20 of 49), because similarity can't tell a near miss from a match. They are suggestions, never answers, with Contact support underneath.
 - At 29 short articles the whole help centre would fit in one cached prompt. Retrieval is still the right design here because it scales, makes every decision inspectable and keeps clarification and escalation deterministic and free.
 
 ## Layout

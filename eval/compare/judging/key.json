@@ -1,0 +1,1158 @@
+{
+ "j-001": {
+  "model": "haiku",
+  "caseId": "v-27"
+ },
+ "j-002": {
+  "model": "haiku",
+  "caseId": "h2-10"
+ },
+ "j-003": {
+  "model": "sonnet",
+  "caseId": "v-15"
+ },
+ "j-004": {
+  "model": "haiku",
+  "caseId": "p-08"
+ },
+ "j-005": {
+  "model": "haiku",
+  "caseId": "h3-10"
+ },
+ "j-006": {
+  "model": "haiku",
+  "caseId": "h2-20"
+ },
+ "j-007": {
+  "model": "haiku",
+  "caseId": "h2-14"
+ },
+ "j-008": {
+  "model": "haiku",
+  "caseId": "h3-02"
+ },
+ "j-009": {
+  "model": "haiku",
+  "caseId": "h2-03"
+ },
+ "j-010": {
+  "model": "opus",
+  "caseId": "v-04"
+ },
+ "j-011": {
+  "model": "haiku",
+  "caseId": "h2-12"
+ },
+ "j-012": {
+  "model": "haiku",
+  "caseId": "h2-16"
+ },
+ "j-013": {
+  "model": "opus",
+  "caseId": "v-07"
+ },
+ "j-014": {
+  "model": "sonnet",
+  "caseId": "v-18"
+ },
+ "j-015": {
+  "model": "haiku",
+  "caseId": "h3-08"
+ },
+ "j-016": {
+  "model": "haiku",
+  "caseId": "h2-amb-03"
+ },
+ "j-017": {
+  "model": "haiku",
+  "caseId": "h2-19"
+ },
+ "j-018": {
+  "model": "haiku",
+  "caseId": "h2-core-04"
+ },
+ "j-019": {
+  "model": "haiku",
+  "caseId": "h2-15"
+ },
+ "j-020": {
+  "model": "opus",
+  "caseId": "p-01"
+ },
+ "j-021": {
+  "model": "opus",
+  "caseId": "h2-14"
+ },
+ "j-022": {
+  "model": "haiku",
+  "caseId": "v-08"
+ },
+ "j-023": {
+  "model": "opus",
+  "caseId": "h3-21"
+ },
+ "j-024": {
+  "model": "opus",
+  "caseId": "p-11"
+ },
+ "j-025": {
+  "model": "opus",
+  "caseId": "v-14"
+ },
+ "j-026": {
+  "model": "opus",
+  "caseId": "h3-29"
+ },
+ "j-027": {
+  "model": "sonnet",
+  "caseId": "h3-10"
+ },
+ "j-028": {
+  "model": "sonnet",
+  "caseId": "h3-15"
+ },
+ "j-029": {
+  "model": "haiku",
+  "caseId": "h2-24"
+ },
+ "j-030": {
+  "model": "opus",
+  "caseId": "h2-13"
+ },
+ "j-031": {
+  "model": "opus",
+  "caseId": "v-30"
+ },
+ "j-032": {
+  "model": "haiku",
+  "caseId": "p-09"
+ },
+ "j-033": {
+  "model": "opus",
+  "caseId": "h2-12"
+ },
+ "j-034": {
+  "model": "haiku",
+  "caseId": "v-11"
+ },
+ "j-035": {
+  "model": "haiku",
+  "caseId": "h3-20"
+ },
+ "j-036": {
+  "model": "opus",
+  "caseId": "h2-23"
+ },
+ "j-037": {
+  "model": "sonnet",
+  "caseId": "h3-04"
+ },
+ "j-038": {
+  "model": "opus",
+  "caseId": "v-05"
+ },
+ "j-039": {
+  "model": "haiku",
+  "caseId": "h2-02"
+ },
+ "j-040": {
+  "model": "opus",
+  "caseId": "v-06"
+ },
+ "j-041": {
+  "model": "haiku",
+  "caseId": "h2-08"
+ },
+ "j-042": {
+  "model": "opus",
+  "caseId": "v-20"
+ },
+ "j-043": {
+  "model": "opus",
+  "caseId": "h2-06"
+ },
+ "j-044": {
+  "model": "sonnet",
+  "caseId": "v-27"
+ },
+ "j-045": {
+  "model": "haiku",
+  "caseId": "p-02"
+ },
+ "j-046": {
+  "model": "opus",
+  "caseId": "h2-10"
+ },
+ "j-047": {
+  "model": "sonnet",
+  "caseId": "h2-core-04"
+ },
+ "j-048": {
+  "model": "haiku",
+  "caseId": "h3-26"
+ },
+ "j-049": {
+  "model": "opus",
+  "caseId": "h2-21"
+ },
+ "j-050": {
+  "model": "sonnet",
+  "caseId": "p-09"
+ },
+ "j-051": {
+  "model": "sonnet",
+  "caseId": "h2-05"
+ },
+ "j-052": {
+  "model": "haiku",
+  "caseId": "v-02"
+ },
+ "j-053": {
+  "model": "haiku",
+  "caseId": "h3-04"
+ },
+ "j-054": {
+  "model": "sonnet",
+  "caseId": "p-06"
+ },
+ "j-055": {
+  "model": "haiku",
+  "caseId": "h2-23"
+ },
+ "j-056": {
+  "model": "sonnet",
+  "caseId": "v-02"
+ },
+ "j-057": {
+  "model": "haiku",
+  "caseId": "p-12"
+ },
+ "j-058": {
+  "model": "opus",
+  "caseId": "v-21"
+ },
+ "j-059": {
+  "model": "haiku",
+  "caseId": "v-18"
+ },
+ "j-060": {
+  "model": "sonnet",
+  "caseId": "h2-17"
+ },
+ "j-061": {
+  "model": "sonnet",
+  "caseId": "h3-01"
+ },
+ "j-062": {
+  "model": "haiku",
+  "caseId": "h2-core-01"
+ },
+ "j-063": {
+  "model": "haiku",
+  "caseId": "h3-24"
+ },
+ "j-064": {
+  "model": "opus",
+  "caseId": "h3-15"
+ },
+ "j-065": {
+  "model": "sonnet",
+  "caseId": "h3-09"
+ },
+ "j-066": {
+  "model": "haiku",
+  "caseId": "v-24"
+ },
+ "j-067": {
+  "model": "opus",
+  "caseId": "h3-14"
+ },
+ "j-068": {
+  "model": "sonnet",
+  "caseId": "h2-03"
+ },
+ "j-069": {
+  "model": "sonnet",
+  "caseId": "h3-19"
+ },
+ "j-070": {
+  "model": "opus",
+  "caseId": "v-29"
+ },
+ "j-071": {
+  "model": "haiku",
+  "caseId": "h2-core-02"
+ },
+ "j-072": {
+  "model": "haiku",
+  "caseId": "h2-17"
+ },
+ "j-073": {
+  "model": "opus",
+  "caseId": "h2-17"
+ },
+ "j-074": {
+  "model": "sonnet",
+  "caseId": "h2-16"
+ },
+ "j-075": {
+  "model": "opus",
+  "caseId": "h2-core-01"
+ },
+ "j-076": {
+  "model": "sonnet",
+  "caseId": "h3-18"
+ },
+ "j-077": {
+  "model": "sonnet",
+  "caseId": "h2-23"
+ },
+ "j-078": {
+  "model": "sonnet",
+  "caseId": "h2-15"
+ },
+ "j-079": {
+  "model": "sonnet",
+  "caseId": "h3-25"
+ },
+ "j-080": {
+  "model": "haiku",
+  "caseId": "h3-21"
+ },
+ "j-081": {
+  "model": "opus",
+  "caseId": "v-38"
+ },
+ "j-082": {
+  "model": "sonnet",
+  "caseId": "h2-21"
+ },
+ "j-083": {
+  "model": "haiku",
+  "caseId": "v-06"
+ },
+ "j-084": {
+  "model": "opus",
+  "caseId": "h3-05"
+ },
+ "j-085": {
+  "model": "haiku",
+  "caseId": "h2-06"
+ },
+ "j-086": {
+  "model": "sonnet",
+  "caseId": "h2-13"
+ },
+ "j-087": {
+  "model": "sonnet",
+  "caseId": "v-01"
+ },
+ "j-088": {
+  "model": "sonnet",
+  "caseId": "h2-01"
+ },
+ "j-089": {
+  "model": "sonnet",
+  "caseId": "p-08"
+ },
+ "j-090": {
+  "model": "sonnet",
+  "caseId": "h3-03"
+ },
+ "j-091": {
+  "model": "haiku",
+  "caseId": "p-04"
+ },
+ "j-092": {
+  "model": "opus",
+  "caseId": "h2-03"
+ },
+ "j-093": {
+  "model": "opus",
+  "caseId": "v-15"
+ },
+ "j-094": {
+  "model": "haiku",
+  "caseId": "p-03"
+ },
+ "j-095": {
+  "model": "haiku",
+  "caseId": "v-20"
+ },
+ "j-096": {
+  "model": "opus",
+  "caseId": "p-09"
+ },
+ "j-097": {
+  "model": "opus",
+  "caseId": "v-16"
+ },
+ "j-098": {
+  "model": "sonnet",
+  "caseId": "h2-20"
+ },
+ "j-099": {
+  "model": "sonnet",
+  "caseId": "h2-06"
+ },
+ "j-100": {
+  "model": "sonnet",
+  "caseId": "p-04"
+ },
+ "j-101": {
+  "model": "sonnet",
+  "caseId": "h2-14"
+ },
+ "j-102": {
+  "model": "sonnet",
+  "caseId": "v-19"
+ },
+ "j-103": {
+  "model": "haiku",
+  "caseId": "h3-30"
+ },
+ "j-104": {
+  "model": "sonnet",
+  "caseId": "h2-core-01"
+ },
+ "j-105": {
+  "model": "opus",
+  "caseId": "h3-24"
+ },
+ "j-106": {
+  "model": "sonnet",
+  "caseId": "h3-07"
+ },
+ "j-107": {
+  "model": "haiku",
+  "caseId": "h3-12"
+ },
+ "j-108": {
+  "model": "opus",
+  "caseId": "v-03"
+ },
+ "j-109": {
+  "model": "sonnet",
+  "caseId": "h3-21"
+ },
+ "j-110": {
+  "model": "sonnet",
+  "caseId": "h2-19"
+ },
+ "j-111": {
+  "model": "opus",
+  "caseId": "p-03"
+ },
+ "j-112": {
+  "model": "opus",
+  "caseId": "h3-01"
+ },
+ "j-113": {
+  "model": "sonnet",
+  "caseId": "h2-04"
+ },
+ "j-114": {
+  "model": "opus",
+  "caseId": "h2-19"
+ },
+ "j-115": {
+  "model": "haiku",
+  "caseId": "v-19"
+ },
+ "j-116": {
+  "model": "haiku",
+  "caseId": "v-03"
+ },
+ "j-117": {
+  "model": "opus",
+  "caseId": "h2-08"
+ },
+ "j-118": {
+  "model": "haiku",
+  "caseId": "h3-07"
+ },
+ "j-119": {
+  "model": "haiku",
+  "caseId": "h2-04"
+ },
+ "j-120": {
+  "model": "sonnet",
+  "caseId": "h3-08"
+ },
+ "j-121": {
+  "model": "sonnet",
+  "caseId": "p-03"
+ },
+ "j-122": {
+  "model": "opus",
+  "caseId": "h3-20"
+ },
+ "j-123": {
+  "model": "haiku",
+  "caseId": "v-15"
+ },
+ "j-124": {
+  "model": "opus",
+  "caseId": "v-28"
+ },
+ "j-125": {
+  "model": "sonnet",
+  "caseId": "h2-12"
+ },
+ "j-126": {
+  "model": "opus",
+  "caseId": "h2-15"
+ },
+ "j-127": {
+  "model": "opus",
+  "caseId": "h3-27"
+ },
+ "j-128": {
+  "model": "opus",
+  "caseId": "h3-04"
+ },
+ "j-129": {
+  "model": "haiku",
+  "caseId": "h3-25"
+ },
+ "j-130": {
+  "model": "haiku",
+  "caseId": "h2-07"
+ },
+ "j-131": {
+  "model": "opus",
+  "caseId": "h3-13"
+ },
+ "j-132": {
+  "model": "haiku",
+  "caseId": "p-06"
+ },
+ "j-133": {
+  "model": "sonnet",
+  "caseId": "h2-24"
+ },
+ "j-134": {
+  "model": "haiku",
+  "caseId": "h3-27"
+ },
+ "j-135": {
+  "model": "sonnet",
+  "caseId": "v-25"
+ },
+ "j-136": {
+  "model": "opus",
+  "caseId": "h2-24"
+ },
+ "j-137": {
+  "model": "sonnet",
+  "caseId": "v-05"
+ },
+ "j-138": {
+  "model": "haiku",
+  "caseId": "h3-09"
+ },
+ "j-139": {
+  "model": "opus",
+  "caseId": "h2-20"
+ },
+ "j-140": {
+  "model": "sonnet",
+  "caseId": "h2-10"
+ },
+ "j-141": {
+  "model": "haiku",
+  "caseId": "h3-17"
+ },
+ "j-142": {
+  "model": "opus",
+  "caseId": "h2-02"
+ },
+ "j-143": {
+  "model": "opus",
+  "caseId": "p-06"
+ },
+ "j-144": {
+  "model": "opus",
+  "caseId": "h2-04"
+ },
+ "j-145": {
+  "model": "opus",
+  "caseId": "p-12"
+ },
+ "j-146": {
+  "model": "haiku",
+  "caseId": "h2-11"
+ },
+ "j-147": {
+  "model": "sonnet",
+  "caseId": "h2-09"
+ },
+ "j-148": {
+  "model": "opus",
+  "caseId": "h3-08"
+ },
+ "j-149": {
+  "model": "haiku",
+  "caseId": "h3-18"
+ },
+ "j-150": {
+  "model": "opus",
+  "caseId": "v-18"
+ },
+ "j-151": {
+  "model": "haiku",
+  "caseId": "v-25"
+ },
+ "j-152": {
+  "model": "sonnet",
+  "caseId": "p-05"
+ },
+ "j-153": {
+  "model": "opus",
+  "caseId": "p-10"
+ },
+ "j-154": {
+  "model": "sonnet",
+  "caseId": "v-30"
+ },
+ "j-155": {
+  "model": "opus",
+  "caseId": "h2-16"
+ },
+ "j-156": {
+  "model": "sonnet",
+  "caseId": "h2-core-02"
+ },
+ "j-157": {
+  "model": "opus",
+  "caseId": "h3-25"
+ },
+ "j-158": {
+  "model": "opus",
+  "caseId": "h3-16"
+ },
+ "j-159": {
+  "model": "opus",
+  "caseId": "h3-28"
+ },
+ "j-160": {
+  "model": "sonnet",
+  "caseId": "v-38"
+ },
+ "j-161": {
+  "model": "sonnet",
+  "caseId": "h3-11"
+ },
+ "j-162": {
+  "model": "haiku",
+  "caseId": "v-01"
+ },
+ "j-163": {
+  "model": "opus",
+  "caseId": "h2-18"
+ },
+ "j-164": {
+  "model": "sonnet",
+  "caseId": "p-02"
+ },
+ "j-165": {
+  "model": "sonnet",
+  "caseId": "h2-07"
+ },
+ "j-166": {
+  "model": "opus",
+  "caseId": "h2-22"
+ },
+ "j-167": {
+  "model": "sonnet",
+  "caseId": "v-29"
+ },
+ "j-168": {
+  "model": "sonnet",
+  "caseId": "v-14"
+ },
+ "j-169": {
+  "model": "opus",
+  "caseId": "h2-09"
+ },
+ "j-170": {
+  "model": "opus",
+  "caseId": "v-27"
+ },
+ "j-171": {
+  "model": "sonnet",
+  "caseId": "v-09"
+ },
+ "j-172": {
+  "model": "sonnet",
+  "caseId": "v-06"
+ },
+ "j-173": {
+  "model": "haiku",
+  "caseId": "h3-28"
+ },
+ "j-174": {
+  "model": "opus",
+  "caseId": "h2-core-04"
+ },
+ "j-175": {
+  "model": "sonnet",
+  "caseId": "v-26"
+ },
+ "j-176": {
+  "model": "opus",
+  "caseId": "v-09"
+ },
+ "j-177": {
+  "model": "sonnet",
+  "caseId": "p-11"
+ },
+ "j-178": {
+  "model": "sonnet",
+  "caseId": "h3-16"
+ },
+ "j-179": {
+  "model": "opus",
+  "caseId": "p-07"
+ },
+ "j-180": {
+  "model": "opus",
+  "caseId": "v-11"
+ },
+ "j-181": {
+  "model": "haiku",
+  "caseId": "p-07"
+ },
+ "j-182": {
+  "model": "haiku",
+  "caseId": "h2-13"
+ },
+ "j-183": {
+  "model": "haiku",
+  "caseId": "v-09"
+ },
+ "j-184": {
+  "model": "sonnet",
+  "caseId": "v-35"
+ },
+ "j-185": {
+  "model": "sonnet",
+  "caseId": "h3-29"
+ },
+ "j-186": {
+  "model": "haiku",
+  "caseId": "v-29"
+ },
+ "j-187": {
+  "model": "opus",
+  "caseId": "p-02"
+ },
+ "j-188": {
+  "model": "opus",
+  "caseId": "h2-core-02"
+ },
+ "j-189": {
+  "model": "sonnet",
+  "caseId": "h3-20"
+ },
+ "j-190": {
+  "model": "sonnet",
+  "caseId": "h3-06"
+ },
+ "j-191": {
+  "model": "haiku",
+  "caseId": "h3-15"
+ },
+ "j-192": {
+  "model": "opus",
+  "caseId": "v-35"
+ },
+ "j-193": {
+  "model": "haiku",
+  "caseId": "v-10"
+ },
+ "j-194": {
+  "model": "sonnet",
+  "caseId": "v-28"
+ },
+ "j-195": {
+  "model": "opus",
+  "caseId": "v-02"
+ },
+ "j-196": {
+  "model": "opus",
+  "caseId": "h3-12"
+ },
+ "j-197": {
+  "model": "haiku",
+  "caseId": "h2-05"
+ },
+ "j-198": {
+  "model": "sonnet",
+  "caseId": "h3-26"
+ },
+ "j-199": {
+  "model": "opus",
+  "caseId": "h3-07"
+ },
+ "j-200": {
+  "model": "opus",
+  "caseId": "h3-19"
+ },
+ "j-201": {
+  "model": "opus",
+  "caseId": "h2-07"
+ },
+ "j-202": {
+  "model": "haiku",
+  "caseId": "v-14"
+ },
+ "j-203": {
+  "model": "haiku",
+  "caseId": "v-30"
+ },
+ "j-204": {
+  "model": "opus",
+  "caseId": "p-04"
+ },
+ "j-205": {
+  "model": "opus",
+  "caseId": "h2-core-03"
+ },
+ "j-206": {
+  "model": "opus",
+  "caseId": "h3-10"
+ },
+ "j-207": {
+  "model": "opus",
+  "caseId": "h3-02"
+ },
+ "j-208": {
+  "model": "opus",
+  "caseId": "h3-18"
+ },
+ "j-209": {
+  "model": "sonnet",
+  "caseId": "h3-27"
+ },
+ "j-210": {
+  "model": "sonnet",
+  "caseId": "v-37"
+ },
+ "j-211": {
+  "model": "sonnet",
+  "caseId": "v-24"
+ },
+ "j-212": {
+  "model": "sonnet",
+  "caseId": "h3-02"
+ },
+ "j-213": {
+  "model": "opus",
+  "caseId": "v-32"
+ },
+ "j-214": {
+  "model": "haiku",
+  "caseId": "v-16"
+ },
+ "j-215": {
+  "model": "opus",
+  "caseId": "h3-17"
+ },
+ "j-216": {
+  "model": "haiku",
+  "caseId": "h2-09"
+ },
+ "j-217": {
+  "model": "haiku",
+  "caseId": "h3-14"
+ },
+ "j-218": {
+  "model": "haiku",
+  "caseId": "v-07"
+ },
+ "j-219": {
+  "model": "opus",
+  "caseId": "v-10"
+ },
+ "j-220": {
+  "model": "haiku",
+  "caseId": "h2-21"
+ },
+ "j-221": {
+  "model": "sonnet",
+  "caseId": "h2-core-03"
+ },
+ "j-222": {
+  "model": "opus",
+  "caseId": "h3-06"
+ },
+ "j-223": {
+  "model": "sonnet",
+  "caseId": "p-01"
+ },
+ "j-224": {
+  "model": "opus",
+  "caseId": "p-08"
+ },
+ "j-225": {
+  "model": "sonnet",
+  "caseId": "h3-13"
+ },
+ "j-226": {
+  "model": "opus",
+  "caseId": "v-19"
+ },
+ "j-227": {
+  "model": "haiku",
+  "caseId": "v-28"
+ },
+ "j-228": {
+  "model": "opus",
+  "caseId": "v-24"
+ },
+ "j-229": {
+  "model": "sonnet",
+  "caseId": "h3-17"
+ },
+ "j-230": {
+  "model": "haiku",
+  "caseId": "p-01"
+ },
+ "j-231": {
+  "model": "haiku",
+  "caseId": "v-12"
+ },
+ "j-232": {
+  "model": "opus",
+  "caseId": "v-08"
+ },
+ "j-233": {
+  "model": "sonnet",
+  "caseId": "v-12"
+ },
+ "j-234": {
+  "model": "haiku",
+  "caseId": "v-21"
+ },
+ "j-235": {
+  "model": "haiku",
+  "caseId": "v-26"
+ },
+ "j-236": {
+  "model": "haiku",
+  "caseId": "v-35"
+ },
+ "j-237": {
+  "model": "sonnet",
+  "caseId": "v-11"
+ },
+ "j-238": {
+  "model": "sonnet",
+  "caseId": "p-10"
+ },
+ "j-239": {
+  "model": "haiku",
+  "caseId": "h3-13"
+ },
+ "j-240": {
+  "model": "opus",
+  "caseId": "h3-30"
+ },
+ "j-241": {
+  "model": "sonnet",
+  "caseId": "v-07"
+ },
+ "j-242": {
+  "model": "opus",
+  "caseId": "h2-11"
+ },
+ "j-243": {
+  "model": "sonnet",
+  "caseId": "v-08"
+ },
+ "j-244": {
+  "model": "opus",
+  "caseId": "h3-09"
+ },
+ "j-245": {
+  "model": "haiku",
+  "caseId": "h3-06"
+ },
+ "j-246": {
+  "model": "haiku",
+  "caseId": "h3-11"
+ },
+ "j-247": {
+  "model": "haiku",
+  "caseId": "h3-16"
+ },
+ "j-248": {
+  "model": "opus",
+  "caseId": "v-25"
+ },
+ "j-249": {
+  "model": "haiku",
+  "caseId": "v-04"
+ },
+ "j-250": {
+  "model": "opus",
+  "caseId": "p-05"
+ },
+ "j-251": {
+  "model": "sonnet",
+  "caseId": "h2-11"
+ },
+ "j-252": {
+  "model": "sonnet",
+  "caseId": "v-20"
+ },
+ "j-253": {
+  "model": "haiku",
+  "caseId": "h2-core-03"
+ },
+ "j-254": {
+  "model": "haiku",
+  "caseId": "h3-01"
+ },
+ "j-255": {
+  "model": "haiku",
+  "caseId": "h2-18"
+ },
+ "j-256": {
+  "model": "haiku",
+  "caseId": "h2-01"
+ },
+ "j-257": {
+  "model": "sonnet",
+  "caseId": "h3-05"
+ },
+ "j-258": {
+  "model": "opus",
+  "caseId": "h2-05"
+ },
+ "j-259": {
+  "model": "haiku",
+  "caseId": "h3-03"
+ },
+ "j-260": {
+  "model": "sonnet",
+  "caseId": "v-10"
+ },
+ "j-261": {
+  "model": "sonnet",
+  "caseId": "h2-08"
+ },
+ "j-262": {
+  "model": "opus",
+  "caseId": "h3-03"
+ },
+ "j-263": {
+  "model": "sonnet",
+  "caseId": "v-21"
+ },
+ "j-264": {
+  "model": "opus",
+  "caseId": "h2-01"
+ },
+ "j-265": {
+  "model": "sonnet",
+  "caseId": "p-07"
+ },
+ "j-266": {
+  "model": "opus",
+  "caseId": "h3-11"
+ },
+ "j-267": {
+  "model": "sonnet",
+  "caseId": "h3-30"
+ },
+ "j-268": {
+  "model": "haiku",
+  "caseId": "h3-05"
+ },
+ "j-269": {
+  "model": "sonnet",
+  "caseId": "h2-18"
+ },
+ "j-270": {
+  "model": "sonnet",
+  "caseId": "h3-28"
+ },
+ "j-271": {
+  "model": "opus",
+  "caseId": "v-26"
+ },
+ "j-272": {
+  "model": "sonnet",
+  "caseId": "h2-02"
+ },
+ "j-273": {
+  "model": "sonnet",
+  "caseId": "v-04"
+ },
+ "j-274": {
+  "model": "haiku",
+  "caseId": "h3-19"
+ },
+ "j-275": {
+  "model": "opus",
+  "caseId": "h3-26"
+ },
+ "j-276": {
+  "model": "sonnet",
+  "caseId": "v-03"
+ },
+ "j-277": {
+  "model": "sonnet",
+  "caseId": "p-12"
+ },
+ "j-278": {
+  "model": "opus",
+  "caseId": "v-01"
+ },
+ "j-279": {
+  "model": "haiku",
+  "caseId": "h3-29"
+ },
+ "j-280": {
+  "model": "sonnet",
+  "caseId": "h3-24"
+ },
+ "j-281": {
+  "model": "opus",
+  "caseId": "v-12"
+ },
+ "j-282": {
+  "model": "sonnet",
+  "caseId": "h3-14"
+ },
+ "j-283": {
+  "model": "haiku",
+  "caseId": "v-05"
+ },
+ "j-284": {
+  "model": "sonnet",
+  "caseId": "h2-22"
+ },
+ "j-285": {
+  "model": "haiku",
+  "caseId": "v-38"
+ },
+ "j-286": {
+  "model": "sonnet",
+  "caseId": "h3-12"
+ },
+ "j-287": {
+  "model": "haiku",
+  "caseId": "v-37"
+ },
+ "j-288": {
+  "model": "haiku",
+  "caseId": "p-11"
+ },
+ "j-289": {
+  "model": "sonnet",
+  "caseId": "v-16"
+ }
+}

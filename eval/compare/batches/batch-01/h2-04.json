@@ -1,0 +1,15 @@
+{
+ "id": "h2-04",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-link-company",
+  "company-create",
+  "company-delete",
+  "contact-delete"
+ ],
+ "user": "<articles>\n<article id=\"contact-link-company\" title=\"Link a contact to a company\">\nA contact can belong to one company.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the company in the **Company** list. Choose **No company** to unlink the contact.\n4. Select **Save contact**.\n\nThe contact now appears under **Contacts at this company** on the company's page. If the company isn't in the list yet, add it first under **Companies**.\n</article>\n<article id=\"company-create\" title=\"Add a company\">\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.\n</article>\n<article id=\"company-delete\" title=\"Delete a company\">\n1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone.\n</article>\n<article id=\"contact-delete\" title=\"Delete a contact\">\n1. Go to **Contacts** and open the contact.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete contact**.\n\nDeleting a contact also deletes their notes. Deals linked to the contact are kept and show **No contact**. Deleting can't be undone.\n</article>\n</articles>\n\n<question>unlink a contact from their company</question>"
+}

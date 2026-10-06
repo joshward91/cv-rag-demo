@@ -1,0 +1,17 @@
+{
+ "id": "j-081",
+ "question": "this deal fell through how do i get rid of it",
+ "articles": [
+  {
+   "id": "deal-mark-lost",
+   "title": "Mark a deal as lost",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**."
+  },
+  {
+   "id": "deal-delete",
+   "title": "Delete a deal",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone. If the deal fell through, consider **Mark as lost** instead so it still counts in your history."
+  }
+ ],
+ "answer": "For a deal that fell through, consider marking it as lost so it still counts in your history:\n\n1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting.\n\nIf you'd rather remove it completely:\n\n1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone."
+}

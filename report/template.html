@@ -35,7 +35,7 @@
   a { color: var(--accent); }
   code { font-family: var(--font-mono); font-size: 0.85em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
   section { display: flex; flex-direction: column; gap: 14px; }
-  .prose { max-width: 70ch; color: var(--ink-soft); display: flex; flex-direction: column; gap: 10px; }
+  .prose {  color: var(--ink-soft); display: flex; flex-direction: column; gap: 10px; }
   .prose strong { color: var(--ink); }
   .eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
   .meta { font-size: 0.85rem; color: var(--ink-faint); }
@@ -87,17 +87,19 @@
   .filters input, .filters select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; min-width: 0; }
   .filters input { flex: 1 1 220px; }
   .count { font-size: 0.85rem; color: var(--ink-faint); }
-  ul.issues { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); max-width: 75ch; }
-  .pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; counter-reset: step; }
+  ul.issues { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); }
+  .pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; counter-reset: step; }
   .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; font-size: 0.86rem; color: var(--ink-soft); }
   .step strong { color: var(--ink); font-size: 0.95rem; }
   .step strong::before { counter-increment: step; content: counter(step) '. '; color: var(--accent); }
+  @media (max-width: 860px) { .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 640px) {
     .page { padding-block: 24px 60px; padding-inline: 16px; }
     h1 { font-size: 1.7rem; }
     .bar-row { grid-template-columns: 1fr 90px; }
     .bar-row .bar-track { grid-column: 1 / -1; grid-row: 2; }
     .callout { grid-template-columns: 1fr; }
+    .pipeline { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -106,11 +108,21 @@
     <p class="eyebrow">Harbour CRM · help assistant</p>
     <h1>Harbour Help evaluation</h1>
     <div class="prose">
-      <p>Harbour Help answers questions about a small demo CRM using only its help centre: 29 single-task articles that match the app screen for screen. This report measures how often it finds the right article, cites it, asks when two articles are equally likely, suggests close matches when keyword search can't decide, and hands over to support when the help centre doesn't cover the question.</p>
-      <p>The assistant is designed to fail safe. When retrieval isn't confident it asks or escalates rather than answering, and an answer that can't be traced to an article it was given is withheld.</p>
+      <p><strong>Harbour Help is a grounded, retrieval-augmented help assistant for a small demo CRM.</strong> It answers only from the CRM's help centre: 29 single-task articles that match the app screen for screen. It doesn't use the model's general knowledge, has no tools or web access, and cites the article behind every answer. Retrieval is hybrid: <strong>keyword search</strong> (BM25F) with a coverage-based decision policy, plus <strong>semantic search</strong> (sentence embeddings from all-MiniLM-L6-v2, run in the visitor's browser). It is designed to fail safe: when it isn't confident it asks or hands over to support instead of guessing.</p>
+    </div>
+    <div class="pipeline">
+      <div class="step"><strong>Screen</strong>An input guard blocks obvious prompt injection (“ignore previous instructions”, role changes, prompt extraction, tag smuggling) before anything else runs.</div>
+      <div class="step"><strong>Rewrite</strong>The question is normalised and rewritten with domain rules. The articles say "client" for the user's own business, so "a client's phone number" is read as a contact's phone. Synonyms are mapped and typos corrected.</div>
+      <div class="step"><strong>Retrieve (hybrid)</strong><em>Keyword:</em> BM25F over title, aliases and body, weighted 3 : 2 : 1, plus a coverage score for how much of the question each article explains. <em>Semantic:</em> the rewritten question is embedded and compared with 292 precomputed article passages (titles, aliases and sentences).</div>
+      <div class="step"><strong>Decide</strong>A deterministic policy, so the decision is free and explainable. Answer when coverage is high. Ask when two look-alike articles are equally likely. Suggest up to three articles when only semantic search finds a close match. Otherwise hand over to support.</div>
+      <div class="step"><strong>Generate</strong>Offline, the article's own steps. With Claude, a schema-constrained reply that may cite only the articles in the prompt, with a note saying which "client" the user meant.</div>
+      <div class="step"><strong>Verify</strong>Any answer that cites nothing, cites an article it wasn't given, or contains a link is withheld.</div>
+    </div>
+    <div class="prose">
+      <p>This report measures every step on <span data-fill="cases"></span> questions in seven sets, four of them scored blind. It shows how often the assistant finds and cites the right article, asks when it should, and hands off what the help centre doesn't cover. It also compares Claude Haiku, Sonnet and Opus on cost per correct answer.</p>
     </div>
     <p class="meta" id="meta"></p>
-    <p class="links"><a id="demo-link" href="#">Open the CRM demo</a></p>
+    <p class="links"><a id="demo-link" href="#">Open the CRM demo</a><a href="https://github.com/joshward91/cv-rag-demo" target="_blank" rel="noopener">Source code on GitHub</a></p>
   </header>
 
   <section aria-labelledby="headline">
@@ -134,21 +146,9 @@
     </div>
   </section>
 
-  <section aria-labelledby="pipeline-h">
-    <h2 id="pipeline-h">How an answer is produced</h2>
-    <div class="pipeline">
-      <div class="step"><strong>Screen</strong>An input guard blocks obvious prompt injection (“ignore previous instructions”, role changes, prompt extraction, tag smuggling) before anything else runs.</div>
-      <div class="step"><strong>Rewrite</strong>Normalise, apply domain phrase rules ("a client's phone" becomes a contact's phone), map synonyms, fix typos.</div>
-      <div class="step"><strong>Retrieve</strong>Field-weighted BM25 over title, aliases and body, with coverage measuring how much of the question each article explains. Alongside it, a small embedding model running in the browser compares the question's meaning with every article sentence.</div>
-      <div class="step"><strong>Decide</strong>Escalate below 55% coverage. Clarify when a look-alike scores close and covers the same terms. Otherwise answer. If keyword search would escalate but the meaning matches an article closely, suggest up to three articles instead.</div>
-      <div class="step"><strong>Generate</strong>Offline: the article's own steps. Claude: a schema-constrained reply that may cite only the articles in the prompt.</div>
-      <div class="step"><strong>Verify</strong>The output guardrail withholds any answer that cites nothing, cites only articles it wasn't given, or contains a link. The model has no tools and no web access.</div>
-    </div>
-  </section>
-
   <section aria-labelledby="splits-h">
     <h2 id="splits-h">Metrics by question set</h2>
-    <div class="prose"><p>The <strong>dev</strong> set was used to tune the retriever. The <strong>test</strong> set was scored blind once, then used for a second round of tuning. The <strong>hold-out</strong> set was written before that second round and never tuned on, so it is the honest estimate for questions the system hasn't seen. The <strong>perspective</strong> set tests "client" from both sides and was scored blind once before a final one-rule fix. The <strong>hard hold-out</strong> was written before semantic search was built: paraphrases that avoid the articles' wording, scored blind and never tuned on.</p></div>
+    <div class="prose"><p>The <strong>dev</strong> set was used to tune the retriever. The <strong>test</strong> set was scored blind once, then used for a second round of tuning. The <strong>hold-out</strong> set was written before that second round and never tuned on, so it is the honest estimate for questions the system hasn't seen. The <strong>perspective</strong> set tests "client" from both sides and was scored blind once before a final one-rule fix. The <strong>hard hold-out</strong> was written before semantic search was built: paraphrases that avoid the articles' wording, scored blind and never tuned on. The <strong>everyday voice</strong> set was written by a separate agent that saw only the articles: rambling, non-expert and deliberately ambiguous questions such as "I'm just on hold with a client and I can't figure out how to change their number". It was scored blind and never tuned on.</p></div>
     <div class="table-wrap"><table id="split-table"></table></div>
   </section>
 
@@ -169,6 +169,13 @@
     <div class="bars" id="tags"></div>
   </section>
 
+  <section aria-labelledby="models-h" id="models-section" hidden>
+    <h2 id="models-h">Which model is most cost-effective?</h2>
+    <div class="prose" id="models-intro"></div>
+    <div class="table-wrap"><table id="models-table"></table></div>
+    <div class="prose" id="models-notes"></div>
+  </section>
+
   <section aria-labelledby="cost-h">
     <h2 id="cost-h">Cost per question</h2>
     <div class="prose" id="cost-text"></div>
@@ -185,7 +192,7 @@
     <div class="filters">
       <label for="case-search" class="count">Search</label>
       <input id="case-search" type="search" placeholder="Filter by question or article id" />
-      <select id="case-split" aria-label="Question set"><option value="">All sets</option><option value="dev">Dev</option><option value="test">Test</option><option value="holdout">Hold-out</option><option value="perspective">Perspective hold-out</option><option value="redteam">Pen test</option><option value="holdout3">Hard hold-out</option></select>
+      <select id="case-split" aria-label="Question set"><option value="">All sets</option><option value="dev">Dev</option><option value="test">Test</option><option value="holdout">Hold-out</option><option value="perspective">Perspective hold-out</option><option value="redteam">Pen test</option><option value="holdout3">Hard hold-out</option><option value="voice">Everyday voice</option></select>
       <select id="case-result" aria-label="Result"><option value="">Passed and failed</option><option value="fail">Failed only</option><option value="pass">Passed only</option></select>
       <span class="count" id="case-count"></span>
     </div>
@@ -198,6 +205,7 @@
 
 <script type="application/json" id="results-data">__RESULTS__</script>
 <script type="application/json" id="history-data">__HISTORY__</script>
+<script type="application/json" id="comparison-data">__COMPARISON__</script>
 <script>
   const data = JSON.parse(document.getElementById('results-data').textContent);
   const history = JSON.parse(document.getElementById('history-data').textContent);
@@ -257,8 +265,8 @@
   if (cmp) {
     const h3 = cmp.holdout3;
     document.getElementById('hybrid-big').textContent = `${pct(h3.lexical.suggestions.usefulRate)} → ${pct(h3.hybrid.suggestions.usefulRate)}`;
-    document.getElementById('hybrid-text').innerHTML = `<p><strong>Semantic search on the hard hold-out.</strong> These ${h3.hybrid.cases} questions were written before semantic search was built and avoid the articles' wording. Keyword search alone helped with ${pct(h3.lexical.suggestions.usefulRate)} of them. With semantic suggestions, ${pct(h3.hybrid.suggestions.usefulRate)} either got the right answer or were offered the right article. The strict pass rate stays at ${pct(h3.hybrid.passRate)}, because a suggestion is not counted as an answer.</p>`;
-    const cmpSplits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['holdout3', 'Hard hold-out'], ['all', 'All']];
+    document.getElementById('hybrid-text').innerHTML = `<p><strong>Semantic search on the hard hold-out.</strong> These ${h3.hybrid.cases} questions were written before semantic search was built and avoid the articles' wording. Keyword search alone helped with ${pct(h3.lexical.suggestions.usefulRate)} of them. With semantic suggestions, ${pct(h3.hybrid.suggestions.usefulRate)} either got the right answer or were offered the right article. The strict pass rate stays at ${pct(h3.hybrid.passRate)}, because a suggestion is not counted as an answer.</p>${cmp.voice ? `<p>On the everyday voice set, written blind in a non-expert voice, keyword search alone helped with ${pct(cmp.voice.lexical.suggestions.usefulRate)}. It usually ranked the right article first, but rambling words pushed coverage under the threshold. With semantic suggestions that rises to ${pct(cmp.voice.hybrid.suggestions.usefulRate)}. The model comparison below shows what a model in the decision adds on top.</p>` : ''}`;
+    const cmpSplits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['holdout3', 'Hard hold-out'], ['voice', 'Everyday voice'], ['all', 'All']];
     const cmpRows = [
       ['Pass rate', (s) => pct(s.passRate)],
       ['Useful rate', (s) => pct(s.suggestions.usefulRate)],
@@ -271,7 +279,7 @@
   }
 
   // Split table --------------------------------------------------------------
-  const splits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['perspective', 'Perspective'], ['redteam', 'Pen test'], ['holdout3', 'Hard hold-out'], ['all', 'All']];
+  const splits = [['dev', 'Dev'], ['test', 'Test'], ['holdout', 'Hold-out'], ['perspective', 'Perspective'], ['redteam', 'Pen test'], ['holdout3', 'Hard hold-out'], ['voice', 'Everyday voice'], ['all', 'All']];
   const metrics = [
     ['Questions', (s) => s.cases, ''],
     ['Pass rate', (s) => pct(s.passRate), 'Outcome and cited article both as expected'],
@@ -293,7 +301,7 @@
   // Bars -------------------------------------------------------------------
   const bar = (label, ratio, value, tuned = false, title = '') =>
     `<div class="bar-row" title="${esc(title || `${label}: ${value}`)}"><span class="bar-label">${esc(label)}</span><span class="bar-track"><span class="bar-fill${tuned ? ' tuned' : ''}" style="width:${(ratio * 100).toFixed(1)}%"></span></span><span class="bar-value">${value}</span></div>`;
-  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out' };
+  const splitName = { dev: 'Dev', test: 'Test', holdout: 'Hold-out', perspective: 'Perspective', redteam: 'Pen test', holdout3: 'Hard hold-out', voice: 'Everyday voice' };
   document.getElementById('history').innerHTML = history.rounds
     .map(
       (round) => `<div class="bar-group"><span class="bar-group-title">${esc(round.round)}</span><span class="bar-group-note">${esc(round.change)}</span>${round.scores
@@ -302,7 +310,7 @@
     )
     .join('');
 
-  const tagNames = { redteam: 'Pen test probes', injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
+  const tagNames = { 'human-voice': 'Everyday, non-expert wording', long: 'Two sentences or more', redteam: 'Pen test probes', injection: 'Prompt injection and off-topic requests', assistant: 'Questions about the assistant', perspective: 'Client from both perspectives', core: 'Core example', terminology: 'Client vs contact terminology', synonym: 'Synonyms', paraphrase: 'Paraphrases', typo: 'Typos', ambiguity: 'Ambiguous questions', 'out-of-scope': 'Out of scope', 'near-miss': 'Near misses (unsupported but similar)' };
   document.getElementById('tags').innerHTML = Object.entries(all.byTag)
     .sort((a, b) => b[1].passed / b[1].cases - a[1].passed / a[1].cases)
     .map(([tag, t]) => bar(tagNames[tag] ?? tag, t.passed / t.cases, `${t.passed}/${t.cases} · ${pct(t.passed / t.cases)}`))
@@ -318,6 +326,42 @@
   document.getElementById('cost-table').innerHTML = `<thead><tr><th>Model</th><th class="num">Price per MTok (in / out)</th><th class="num">Per question</th><th class="num">Per model call</th><th class="num">All ${all.cases} questions</th></tr></thead><tbody>${Object.entries(all.cost)
     .map(([id, c]) => `<tr><td><span class="metric-name">${esc(data.pricing[id].label)}</span>${id === 'claude-opus-5-5' ? '<span class="metric-def">Default model</span>' : ''}</td><td class="num">$${data.pricing[id].input} / $${data.pricing[id].output}</td><td class="num">${usd(c.perQuestion)}</td><td class="num">${usd(c.perModelCall)}</td><td class="num">${usd(c.total)}</td></tr>`)
     .join('')}</tbody>`;
+
+  // Model comparison ---------------------------------------------------------
+  const comparison = JSON.parse(document.getElementById('comparison-data').textContent);
+  if (comparison && comparison.models.length) {
+    document.getElementById('models-section').hidden = false;
+    const models = comparison.models;
+    const base = comparison.baseline;
+    const best = [...models].sort((a, b) => a.costPerCorrect - b.costPerCorrect)[0];
+    const top = [...models].sort((a, b) => b.passRate - a.passRate)[0];
+    document.getElementById('models-intro').innerHTML = `<p>For this comparison each model makes the decision itself. For every one of ${comparison.questions} questions from the four blind sets (${comparison.splits.map((k) => (splitName[k] ?? k).toLowerCase()).join(', ')}), it gets the top five candidate articles from keyword and semantic search, look-alikes included, and must answer, ask which one the user means, or hand off to support. A pass needs the right decision and the right article. An answer the judge found unfaithful to its article is not a pass. For ${comparison.unreachable.length} questions, search didn't put the right article in front of the model at all, so no model can pass them. Handing those off is the right call, and every model mostly did.</p><p>Without a model in the decision, the shipped pipeline passes ${base.passed} of ${base.cases} (${pct(base.passed / base.cases)}) and is useful on ${pct(base.useful / base.cases)}. It is free, but gives ${base.wrongAnswers} wrong answers.</p>`;
+    const cell = (m, v) => `<td class="num">${v}</td>`;
+    const rows = [
+      ['Pass rate', (m) => `${pct(m.passRate)} <span class="metric-def">${m.passed}/${m.cases}</span>`],
+      ['Pass rate where search found the article', (m) => pct(m.passRateReachable)],
+      ['Answerable questions answered correctly', (m) => `${m.byExpected.answer.passed}/${m.byExpected.answer.cases}`],
+      ['Ambiguous questions asked about', (m) => `${m.byExpected.clarify.passed}/${m.byExpected.clarify.cases}`],
+      ['Out-of-scope questions handed off', (m) => `${m.byExpected.escalate.passed}/${m.byExpected.escalate.cases}`],
+      ['Wrong answers', (m) => m.wrongAnswers],
+      ['Answers faithful to the article (judged)', (m) => (m.faithfulness ? `${m.faithfulness.faithful}/${m.faithfulness.judged}` : 'n/a')],
+      ['Price per MTok (in / out)', (m) => `$${m.price.input} / $${m.price.output}`],
+      ['Cost per 1,000 questions', (m) => `$${m.costPer1000Questions.toFixed(2)}`],
+      ['Cost per correct answer', (m) => `${usd(m.costPerCorrect)}${m === best ? ' <span class="pill pass">lowest</span>' : ''}`],
+    ];
+    document.getElementById('models-table').innerHTML = `<thead><tr><th>Metric</th>${models.map((m) => `<th class="num">${esc(m.label)}</th>`).join('')}</tr></thead><tbody>${rows
+      .map(([name, fn]) => `<tr><td><span class="metric-name">${name}</span></td>${models.map((m) => cell(m, fn(m))).join('')}</tr>`)
+      .join('')}</tbody>`;
+    // Recommend the cheapest model within a point of the most accurate one.
+    const pick = models.filter((m) => m.passRate >= top.passRate - 0.01).sort((a, b) => a.costPer1000Questions - b.costPer1000Questions)[0];
+    const bad = (m) => m.wrongAnswers + (m.faithfulness ? m.faithfulness.judged - m.faithfulness.faithful : 0);
+    const gap = top.passRate - best.passRate;
+    document.getElementById('models-notes').innerHTML = `<p><strong>Recommendation: ${esc(pick.label)}.</strong> ${pick === top ? `It is the most accurate model here, and ${models.filter((m) => m !== pick && m.passRate >= pick.passRate - 0.01).map((m) => `${esc(m.label)}, within a point of it, costs ${(m.costPer1000Questions / pick.costPer1000Questions).toFixed(1)}× as much`).join('; ') || 'nothing within a point of it is cheaper'}.` : 'It is within a point of the most accurate model, at a lower price.'} It gave ${bad(pick)} bad answers (wrong article or invented detail), against ${models.filter((m) => m !== pick).map((m) => `${bad(m)} for ${esc(m.label)}`).join(' and ')}.</p><p><strong>${esc(best.label)} has the lowest cost per correct answer.</strong> ${
+      best === top
+        ? 'It is also the most accurate, so there is no trade-off to make.'
+        : `${esc(top.label)} is ${(gap * 100).toFixed(1)} points more accurate for ${(top.costPer1000Questions / best.costPer1000Questions).toFixed(1)}× the price. Whether that is worth paying depends on what a wrong or missing answer costs the business. A ticket to a human costs far more than either model, so the deciding number is wrong answers, not price.`
+    }</p><p>How this was run: there were no API credits, so each model ran as a Claude Code subagent given the same system prompt and one question at a time. That means the decisions are real model output, but the token counts are estimated from the prompt and reply text at four characters per token and priced at API list prices, leaving out Opus's adaptive thinking. A separate Opus judge graded every answer against its article without knowing which model wrote it. Opus grading Opus may favour it slightly.</p>`;
+  }
 
   // Issues ------------------------------------------------------------------
   document.getElementById('issues').innerHTML = [...history.knownIssues, history.afterHoldout].filter(Boolean).map((i) => `<li>${esc(i)}</li>`).join('');

@@ -1,0 +1,16 @@
+{
+ "id": "h3-13",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "company-edit-details",
+  "deal-change-stage",
+  "company-create",
+  "contact-link-company",
+  "account-business-name"
+ ],
+ "user": "<articles>\n<article id=\"company-edit-details\" title=\"Edit a company's phone number, website or address\">\n1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only.\n</article>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n<article id=\"company-create\" title=\"Add a company\">\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.\n</article>\n<article id=\"contact-link-company\" title=\"Link a contact to a company\">\nA contact can belong to one company.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the company in the **Company** list. Choose **No company** to unlink the contact.\n4. Select **Save contact**.\n\nThe contact now appears under **Contacts at this company** on the company's page. If the company isn't in the list yet, add it first under **Companies**.\n</article>\n<article id=\"account-business-name\" title=\"Change your client name\">\nYour **Client name** appears at the top of every page in Harbour CRM.\n\n1. Go to **Settings** > **Client profile**.\n2. Change the **Client name**.\n3. Select **Save client profile**.\n</article>\n</articles>\n\n<question>a business we deal with moved to a new street address</question>"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "v-18",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-mark-lost",
+  "deal-reopen",
+  "deal-mark-won",
+  "custom-field-fill"
+ ],
+ "user": "<articles>\n<article id=\"deal-mark-lost\" title=\"Mark a deal as lost\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**.\n</article>\n<article id=\"deal-reopen\" title=\"Reopen a won or lost deal\">\n1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared.\n</article>\n<article id=\"deal-mark-won\" title=\"Mark a deal as won\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**.\n</article>\n<article id=\"custom-field-fill\" title=\"Fill in a custom field on a record\">\n1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a value.\n4. Save the record.\n\nA field only appears on the record type it applies to. In this account, for example, contacts have **Preferred contact method**, companies have **ABN** and deals have **Lead source**. To change which fields exist, go to **Settings** > **Custom fields**.\n</article>\n</articles>\n\n<interpretation>\n- \"client\" means a contact: one of the user's own customers, not the user's client profile.\n</interpretation>\n\n<question>gutted, the client went with a competitor in the end. whats the right way to close this deal off so it shows we lost it</question>"
+}

@@ -1,0 +1,12 @@
+{
+ "id": "j-095",
+ "question": "Client haggled us down from 12k to 10k. Need to change the amount on the deal, where's that?",
+ "articles": [
+  {
+   "id": "deal-edit-value",
+   "title": "Change a deal's value",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away."
+  }
+ ],
+ "answer": "1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**: 10000 (numbers only, without a currency symbol).\n4. Select **Save deal**.\n\nThe column totals on the board update straight away."
+}

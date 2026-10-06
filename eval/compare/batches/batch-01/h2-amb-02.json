@@ -1,0 +1,16 @@
+{
+ "id": "h2-amb-02",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-edit-value",
+  "contact-edit-email",
+  "contact-edit-phone",
+  "custom-field-edit",
+  "deal-create"
+ ],
+ "user": "<articles>\n<article id=\"deal-edit-value\" title=\"Change a deal's value\">\n1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away.\n</article>\n<article id=\"contact-edit-email\" title=\"Change a contact's email address\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save.\n</article>\n<article id=\"contact-edit-phone\" title=\"Update a contact's phone number\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the number in the **Phone** field. You can use digits, spaces, brackets and a leading +, for example +61 491 570 156.\n4. Select **Save contact**.\n\nEach contact has one **Phone** field. If you need to store a second number, create a custom field for it.\n</article>\n<article id=\"custom-field-edit\" title=\"Rename a custom field or edit its options\">\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**, or for a dropdown, edit the **Options** (one per line).\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created. To change them, delete the field and create a new one.\n</article>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n</articles>\n\n<question>edit</question>"
+}

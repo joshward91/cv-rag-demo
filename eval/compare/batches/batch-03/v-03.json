@@ -1,0 +1,16 @@
+{
+ "id": "v-03",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-billing-email",
+  "deal-change-stage",
+  "deal-mark-lost",
+  "account-client-contact-number",
+  "company-delete"
+ ],
+ "user": "<articles>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n<article id=\"deal-mark-lost\" title=\"Mark a deal as lost\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**.\n</article>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"company-delete\" title=\"Delete a company\">\n1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone.\n</article>\n</articles>\n\n<question>Our receipts for this CRM subscription keep going to my old manager who left in July. How do I get them sent to me instead?</question>"
+}

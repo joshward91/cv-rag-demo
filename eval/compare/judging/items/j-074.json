@@ -1,0 +1,17 @@
+{
+ "id": "j-074",
+ "question": "undo a lost deal",
+ "articles": [
+  {
+   "id": "deal-reopen",
+   "title": "Reopen a won or lost deal",
+   "body": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+  },
+  {
+   "id": "deal-mark-lost",
+   "title": "Mark a deal as lost",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**."
+  }
+ ],
+ "answer": "To undo a lost deal, reopen it:\n\n1. Go to **Deals** and open the lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+}

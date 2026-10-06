@@ -1,0 +1,16 @@
+{
+ "id": "h2-oos-04",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-link-company",
+  "deal-create",
+  "deal-delete",
+  "deal-edit-value",
+  "deal-change-stage"
+ ],
+ "user": "<articles>\n<article id=\"contact-link-company\" title=\"Link a contact to a company\">\nA contact can belong to one company.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the company in the **Company** list. Choose **No company** to unlink the contact.\n4. Select **Save contact**.\n\nThe contact now appears under **Contacts at this company** on the company's page. If the company isn't in the list yet, add it first under **Companies**.\n</article>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n<article id=\"deal-delete\" title=\"Delete a deal\">\n1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone. If the deal fell through, consider **Mark as lost** instead so it still counts in your history.\n</article>\n<article id=\"deal-edit-value\" title=\"Change a deal's value\">\n1. Go to **Deals** and open the deal.\n2. Select **Edit**.\n3. Enter the new amount in **Value**. Use numbers only, without a currency symbol.\n4. Select **Save deal**.\n\nThe column totals on the board update straight away.\n</article>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n</articles>\n\n<question>assign a deal to a sales rep</question>"
+}

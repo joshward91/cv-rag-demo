@@ -1,0 +1,16 @@
+{
+ "id": "h3-15",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-create",
+  "contact-add-note",
+  "contact-create",
+  "deal-mark-won",
+  "deal-change-stage"
+ ],
+ "user": "<articles>\n<article id=\"deal-create\" title=\"Create a deal\">\n1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value**.\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**. New deals start in the **New** stage unless you choose another.\n5. Select **Save deal**.\n\nValues use the currency set in **Settings** > **Client profile**.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"deal-mark-won\" title=\"Mark a deal as won\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**.\n</article>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n</articles>\n\n<question>log a new sales opportunity</question>"
+}

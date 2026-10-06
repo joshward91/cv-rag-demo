@@ -1,0 +1,14 @@
+{
+ "id": "v-08",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "company-create",
+  "contact-create",
+  "contact-link-company"
+ ],
+ "user": "<articles>\n<article id=\"company-create\" title=\"Add a company\">\n1. Go to **Companies**.\n2. Select **New company**.\n3. Enter the **Company name**. All other fields are optional.\n4. Optionally add the **Industry**, **Phone**, **Website** and **Address**.\n5. Select **Save company**.\n\nTo add people to the company, link each contact to it.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"contact-link-company\" title=\"Link a contact to a company\">\nA contact can belong to one company.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the company in the **Company** list. Choose **No company** to unlink the contact.\n4. Select **Save contact**.\n\nThe contact now appears under **Contacts at this company** on the company's page. If the company isn't in the list yet, add it first under **Companies**.\n</article>\n</articles>\n\n<question>how do i add a whole business, like the organisation itself not a person</question>"
+}

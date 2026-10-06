@@ -1,0 +1,16 @@
+{
+ "id": "v-17",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-delete",
+  "contact-create",
+  "contact-search",
+  "contact-add-note",
+  "custom-field-fill"
+ ],
+ "user": "<articles>\n<article id=\"contact-delete\" title=\"Delete a contact\">\n1. Go to **Contacts** and open the contact.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete contact**.\n\nDeleting a contact also deletes their notes. Deals linked to the contact are kept and show **No contact**. Deleting can't be undone.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n<article id=\"custom-field-fill\" title=\"Fill in a custom field on a record\">\n1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a value.\n4. Save the record.\n\nA field only appears on the record type it applies to. In this account, for example, contacts have **Preferred contact method**, companies have **ABN** and deals have **Lead source**. To change which fields exist, go to **Settings** > **Custom fields**.\n</article>\n</articles>\n\n<question>WE GOT THE CONTRACT!!! how do i record that in here lol</question>"
+}

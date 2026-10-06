@@ -1,0 +1,16 @@
+{
+ "id": "h3-21",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "deal-delete",
+  "contact-delete",
+  "company-delete",
+  "deal-mark-lost",
+  "deal-reopen"
+ ],
+ "user": "<articles>\n<article id=\"deal-delete\" title=\"Delete a deal\">\n1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone. If the deal fell through, consider **Mark as lost** instead so it still counts in your history.\n</article>\n<article id=\"contact-delete\" title=\"Delete a contact\">\n1. Go to **Contacts** and open the contact.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete contact**.\n\nDeleting a contact also deletes their notes. Deals linked to the contact are kept and show **No contact**. Deleting can't be undone.\n</article>\n<article id=\"company-delete\" title=\"Delete a company\">\n1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone.\n</article>\n<article id=\"deal-mark-lost\" title=\"Mark a deal as lost\">\n1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting. To undo it, select **Reopen deal**.\n</article>\n<article id=\"deal-reopen\" title=\"Reopen a won or lost deal\">\n1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared.\n</article>\n</articles>\n\n<question>get rid of a duplicate deal</question>"
+}

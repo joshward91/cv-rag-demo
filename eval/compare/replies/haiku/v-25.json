@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the **Fax** field.\n3. In the confirmation box, select **Delete field**.\n\nDeleting the field removes its values from every record. This can't be undone.", "citations": ["custom-field-delete"]}

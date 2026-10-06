@@ -1,0 +1,12 @@
+{
+ "id": "j-135",
+ "question": "Someone made an extra field ages ago called 'Fax' and nobody uses it. I want it gone from everything.",
+ "articles": [
+  {
+   "id": "custom-field-delete",
+   "title": "Delete a custom field",
+   "body": "1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the field.\n3. In the confirmation box, select **Delete field**.\n\nDeleting a field removes its values from every record. This can't be undone."
+  }
+ ],
+ "answer": "You can delete the custom field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the **Fax** field.\n3. In the confirmation box, select **Delete field**.\n\nDeleting a field removes its values from every record. This can't be undone."
+}

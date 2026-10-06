@@ -1,0 +1,12 @@
+{
+ "id": "j-040",
+ "question": "everything shows in US dollars but we're a kiwi business, can i switch it to NZD",
+ "articles": [
+  {
+   "id": "account-currency",
+   "title": "Change your currency",
+   "body": "1. Go to **Settings** > **Client profile**.\n2. Choose a **Currency**: **AUD**, **NZD**, **USD**, **GBP** or **EUR**.\n3. Select **Save client profile**.\n\nChanging the currency changes the symbol shown on every deal. It doesn't convert existing values."
+  }
+ ],
+ "answer": "Yes. To switch to NZD:\n\n1. Go to **Settings** > **Client profile**.\n2. Choose **NZD** in **Currency**.\n3. Select **Save client profile**.\n\nChanging the currency changes the symbol shown on every deal. It doesn't convert existing values, so update any deal values that need adjusting."
+}

@@ -1,0 +1,14 @@
+{
+ "id": "h3-35",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-currency",
+  "account-client-contact-number",
+  "demo-data-reset"
+ ],
+ "user": "<articles>\n<article id=\"account-currency\" title=\"Change your currency\">\n1. Go to **Settings** > **Client profile**.\n2. Choose a **Currency**: **AUD**, **NZD**, **USD**, **GBP** or **EUR**.\n3. Select **Save client profile**.\n\nChanging the currency changes the symbol shown on every deal. It doesn't convert existing values.\n</article>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"demo-data-reset\" title=\"Why your changes disappear when you reload\">\nThis is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere.\n</article>\n</articles>\n\n<question>what's the weather in Sydney</question>"
+}

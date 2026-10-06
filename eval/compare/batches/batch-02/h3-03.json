@@ -1,0 +1,16 @@
+{
+ "id": "h3-03",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-client-contact-number",
+  "custom-field-create",
+  "contact-create",
+  "company-edit-details",
+  "contact-edit-phone"
+ ],
+ "user": "<articles>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"custom-field-create\" title=\"Create a custom field\">\nCustom fields let you store information Harbour CRM doesn't have a field for.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Add custom field**.\n3. Enter a **Label**.\n4. Choose where it appears in **Applies to**: **Contacts**, **Companies** or **Deals**.\n5. Choose a **Type**: **Text**, **Number**, **Date** or **Dropdown**. For a dropdown, enter one option per line in **Options**.\n6. Select **Save field**.\n\nThe field appears on every record of that type, in the edit form and on the record's page.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"company-edit-details\" title=\"Edit a company's phone number, website or address\">\n1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only.\n</article>\n<article id=\"contact-edit-phone\" title=\"Update a contact's phone number\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the number in the **Phone** field. You can use digits, spaces, brackets and a leading +, for example +61 491 570 156.\n4. Select **Save contact**.\n\nEach contact has one **Phone** field. If you need to store a second number, create a custom field for it.\n</article>\n</articles>\n\n<question>support keeps ringing our old office line, how do we give you the new one</question>"
+}

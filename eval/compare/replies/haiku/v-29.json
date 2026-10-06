@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "Each contact has one **Phone** field. To keep both numbers, create a custom field for the second number in **Settings** > **Custom fields**.", "citations": ["contact-edit-phone"]}

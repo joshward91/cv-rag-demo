@@ -1,0 +1,15 @@
+{
+ "id": "h2-23",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-billing-email",
+  "contact-edit-email",
+  "contact-search",
+  "contact-add-note"
+ ],
+ "user": "<articles>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n<article id=\"contact-edit-email\" title=\"Change a contact's email address\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n<article id=\"contact-add-note\" title=\"Add a note to a contact\">\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving.\n</article>\n</articles>\n\n<question>send receipts to a different email</question>"
+}

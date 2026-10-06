@@ -1,0 +1,12 @@
+{
+ "id": "j-267",
+ "question": "everything I entered vanished after refreshing the page",
+ "articles": [
+  {
+   "id": "demo-data-reset",
+   "title": "Why your changes disappear when you reload",
+   "body": "This is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere."
+  }
+ ],
+ "answer": "This is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only, so reloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere, so the data you entered can't be recovered after a reload."
+}

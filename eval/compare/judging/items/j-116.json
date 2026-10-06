@@ -1,0 +1,12 @@
+{
+ "id": "j-116",
+ "question": "Our receipts for this CRM subscription keep going to my old manager who left in July. How do I get them sent to me instead?",
+ "articles": [
+  {
+   "id": "account-billing-email",
+   "title": "Change your billing email",
+   "body": "Your **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**."
+  }
+ ],
+ "answer": "Your **Billing email** is where Harbour CRM sends your subscription receipts. To change it: 1. Go to **Settings** > **Client profile**. 2. Replace the address in **Billing email**. 3. Select **Save client profile**."
+}

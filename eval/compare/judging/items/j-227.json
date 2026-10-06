@@ -1,0 +1,12 @@
+{
+ "id": "j-227",
+ "question": "one of the businesses we supply moved to a new office, need to update their address",
+ "articles": [
+  {
+   "id": "company-edit-details",
+   "title": "Edit a company's phone number, website or address",
+   "body": "1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only."
+  }
+ ],
+ "answer": "1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Address** to the new office location.\n4. Select **Save company**.\n\nThe new address is saved straight away."
+}

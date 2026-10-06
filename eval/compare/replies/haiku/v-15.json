@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "1. Go to **Deals**.\n2. Select **New deal**.\n3. Enter a **Deal name** and a **Value** of 5000 (numbers only).\n4. Optionally choose a **Company**, a **Contact**, a **Stage** and an **Expected close date**.\n5. Select **Save deal**.\n\nNew deals start in the **New** stage unless you choose another.", "citations": ["deal-create"]}

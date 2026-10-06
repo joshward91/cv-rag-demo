@@ -1,0 +1,12 @@
+{
+ "id": "j-211",
+ "question": "spelt one of the choices wrong in a dropdown field we set up, how do i fix the option",
+ "articles": [
+  {
+   "id": "custom-field-edit",
+   "title": "Rename a custom field or edit its options",
+   "body": "1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**, or for a dropdown, edit the **Options** (one per line).\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created. To change them, delete the field and create a new one."
+  }
+ ],
+ "answer": "You can edit the dropdown's options:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. In **Options**, correct the misspelt choice (one option per line).\n4. Select **Save field**."
+}

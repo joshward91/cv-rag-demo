@@ -1,0 +1,12 @@
+{
+ "id": "j-002",
+ "question": "change an organisation's website address",
+ "articles": [
+  {
+   "id": "company-edit-details",
+   "title": "Edit a company's phone number, website or address",
+   "body": "1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Company name**, **Industry**, **Phone**, **Website** or **Address**.\n4. Select **Save company**.\n\nThis changes the company's main details only."
+  }
+ ],
+ "answer": "To change a company's website:\n\n1. Go to **Companies** and open the company.\n2. Select **Edit**.\n3. Change the **Website**.\n4. Select **Save company**.\n\nThis changes the company's main details only."
+}

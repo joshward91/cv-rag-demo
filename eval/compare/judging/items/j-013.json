@@ -1,0 +1,12 @@
+{
+ "id": "j-013",
+ "question": "Met a guy at the trade show this morning who wants a quote. How do I add him as a new client in here?",
+ "articles": [
+  {
+   "id": "contact-create",
+   "title": "Add a contact",
+   "body": "Contacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals."
+  }
+ ],
+ "answer": "In Harbour CRM, the people you do business with are contacts. To add him:\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals."
+}

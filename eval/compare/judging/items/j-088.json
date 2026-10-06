@@ -1,0 +1,12 @@
+{
+ "id": "j-088",
+ "question": "how to put a new person into the CRM",
+ "articles": [
+  {
+   "id": "contact-create",
+   "title": "Add a contact",
+   "body": "Contacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals."
+  }
+ ],
+ "answer": "To add a new person, create a contact:\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals."
+}

@@ -1,0 +1,12 @@
+{
+ "id": "j-282",
+ "question": "remove an organisation we no longer work with",
+ "articles": [
+  {
+   "id": "company-delete",
+   "title": "Delete a company",
+   "body": "1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone."
+  }
+ ],
+ "answer": "Delete the company:\n\n1. Go to **Companies** and open the company.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete company**.\n\nContacts and deals linked to the company are kept, and their company changes to **No company**. Deleting can't be undone."
+}

@@ -1,0 +1,14 @@
+{
+ "id": "h3-24",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-create",
+  "custom-field-create",
+  "custom-field-edit"
+ ],
+ "user": "<articles>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n<article id=\"custom-field-create\" title=\"Create a custom field\">\nCustom fields let you store information Harbour CRM doesn't have a field for.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Add custom field**.\n3. Enter a **Label**.\n4. Choose where it appears in **Applies to**: **Contacts**, **Companies** or **Deals**.\n5. Choose a **Type**: **Text**, **Number**, **Date** or **Dropdown**. For a dropdown, enter one option per line in **Options**.\n6. Select **Save field**.\n\nThe field appears on every record of that type, in the edit form and on the record's page.\n</article>\n<article id=\"custom-field-edit\" title=\"Rename a custom field or edit its options\">\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**, or for a dropdown, edit the **Options** (one per line).\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created. To change them, delete the field and create a new one.\n</article>\n</articles>\n\n<question>add another choice to the lead source dropdown</question>"
+}

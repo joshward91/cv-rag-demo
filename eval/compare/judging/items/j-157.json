@@ -1,0 +1,12 @@
+{
+ "id": "j-157",
+ "question": "we don't use the preferred contact method field any more, remove it",
+ "articles": [
+  {
+   "id": "custom-field-delete",
+   "title": "Delete a custom field",
+   "body": "1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to the field.\n3. In the confirmation box, select **Delete field**.\n\nDeleting a field removes its values from every record. This can't be undone."
+  }
+ ],
+ "answer": "Delete the custom field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Delete** next to **Preferred contact method**.\n3. In the confirmation box, select **Delete field**.\n\nDeleting a field removes its values from every record. This can't be undone."
+}

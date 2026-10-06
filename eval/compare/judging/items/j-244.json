@@ -1,0 +1,17 @@
+{
+ "id": "j-244",
+ "question": "I can't see Priya anywhere in the list",
+ "articles": [
+  {
+   "id": "contact-search",
+   "title": "Find a contact",
+   "body": "1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again."
+  },
+  {
+   "id": "demo-data-reset",
+   "title": "Why your changes disappear when you reload",
+   "body": "This is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere."
+  }
+ ],
+ "answer": "Try searching for her and clearing any filters:\n\n1. Go to **Contacts**.\n2. Type her name in the search box. It matches a contact's name, email address and phone number.\n3. If the **Company** or **Status** filters are set, select **Clear filters** to show every contact again.\n\nIf you added Priya yourself, note that this is a demonstration copy of Harbour CRM: reloading the page resets all contacts to the original sample data, so anything you entered before reloading is gone."
+}

@@ -1,0 +1,12 @@
+{
+ "id": "j-214",
+ "question": "We've sent the proposal so I want to move the deal along to the next column. I tried dragging it on the board and nothing happens??",
+ "articles": [
+  {
+   "id": "deal-change-stage",
+   "title": "Move a deal to a different stage",
+   "body": "Open deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead."
+  }
+ ],
+ "answer": "The board doesn't support drag and drop. Instead:\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nYour deal moves from **Proposal sent** to the next stage (**Negotiation**). The change saves straight away and the deal moves to that column on the board."
+}

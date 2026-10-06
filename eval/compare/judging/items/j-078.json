@@ -1,0 +1,12 @@
+{
+ "id": "j-078",
+ "question": "move a deal from qualified to proposal sent",
+ "articles": [
+  {
+   "id": "deal-change-stage",
+   "title": "Move a deal to a different stage",
+   "body": "Open deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead."
+  }
+ ],
+ "answer": "To move a deal to a different stage:\n\n1. Go to **Deals** and open the deal.\n2. Choose **Proposal sent** in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop."
+}

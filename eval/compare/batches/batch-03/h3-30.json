@@ -1,0 +1,16 @@
+{
+ "id": "h3-30",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "demo-data-reset",
+  "custom-field-fill",
+  "custom-field-create",
+  "contact-change-status",
+  "contact-create"
+ ],
+ "user": "<articles>\n<article id=\"demo-data-reset\" title=\"Why your changes disappear when you reload\">\nThis is a demonstration copy of Harbour CRM. It stores everything in your browser's memory only.\n\nReloading the page resets all contacts, companies, deals, custom fields and settings to the original sample data. Nothing you enter is sent anywhere.\n</article>\n<article id=\"custom-field-fill\" title=\"Fill in a custom field on a record\">\n1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a value.\n4. Save the record.\n\nA field only appears on the record type it applies to. In this account, for example, contacts have **Preferred contact method**, companies have **ABN** and deals have **Lead source**. To change which fields exist, go to **Settings** > **Custom fields**.\n</article>\n<article id=\"custom-field-create\" title=\"Create a custom field\">\nCustom fields let you store information Harbour CRM doesn't have a field for.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Add custom field**.\n3. Enter a **Label**.\n4. Choose where it appears in **Applies to**: **Contacts**, **Companies** or **Deals**.\n5. Choose a **Type**: **Text**, **Number**, **Date** or **Dropdown**. For a dropdown, enter one option per line in **Options**.\n6. Select **Save field**.\n\nThe field appears on every record of that type, in the edit form and on the record's page.\n</article>\n<article id=\"contact-change-status\" title=\"Change a contact's status\">\nEvery contact has a **Status**: **Lead**, **Customer** or **Inactive**.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the new value in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages. Winning a deal doesn't change the contact's status.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n</articles>\n\n<question>everything I entered vanished after refreshing the page</question>"
+}

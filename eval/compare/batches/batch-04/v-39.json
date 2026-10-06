@@ -1,0 +1,15 @@
+{
+ "id": "v-39",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "contact-edit-email",
+  "account-billing-email",
+  "contact-search",
+  "contact-create"
+ ],
+ "user": "<articles>\n<article id=\"contact-edit-email\" title=\"Change a contact's email address\">\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save.\n</article>\n<article id=\"account-billing-email\" title=\"Change your billing email\">\nYour **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n<article id=\"contact-create\" title=\"Add a contact\">\nContacts are the people you do business with.\n\n1. Go to **Contacts**.\n2. Select **New contact**.\n3. Enter a **First name**. All other fields are optional.\n4. Optionally add a **Last name**, **Email**, **Phone**, **Job title**, **Company** and **Status**.\n5. Select **Save contact**.\n\nThe new contact opens straight away so you can add notes or deals.\n</article>\n</articles>\n\n<interpretation>\n- \"customers\" means a contact: one of the user's own customers, not the user's client profile.\n</interpretation>\n\n<question>Can I send one email to all my customers at once? Want to let everyone know about our Christmas hours.</question>"
+}

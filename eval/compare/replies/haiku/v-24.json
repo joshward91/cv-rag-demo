@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the dropdown field.\n3. Edit the **Options** (one per line) and fix the misspelled choice.\n4. Select **Save field**.\n\nThe corrected option appears in all records using that field.", "citations": ["custom-field-edit"]}

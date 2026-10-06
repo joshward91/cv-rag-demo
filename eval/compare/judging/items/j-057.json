@@ -1,0 +1,12 @@
+{
+ "id": "j-057",
+ "question": "export all our clients' details",
+ "articles": [
+  {
+   "id": "contact-export",
+   "title": "Export contacts to a CSV file",
+   "body": "1. Go to **Contacts**.\n2. Optionally search or filter the list. The export includes only the contacts currently shown.\n3. Select **Export CSV**.\n\nThe file includes each contact's name, email, phone, job title, company, status and custom fields. It opens in Excel, Numbers and Google Sheets."
+  }
+ ],
+ "answer": "1. Go to **Contacts**.\n2. Optionally search or filter the list. The export includes only the contacts currently shown.\n3. Select **Export CSV**.\n\nThe file includes each contact's name, email, phone, job title, company, status and custom fields. It opens in Excel, Numbers and Google Sheets."
+}

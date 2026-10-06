@@ -1,0 +1,17 @@
+{
+ "id": "j-200",
+ "question": "I closed a deal too early and need it back in progress",
+ "articles": [
+  {
+   "id": "deal-reopen",
+   "title": "Reopen a won or lost deal",
+   "body": "1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared."
+  },
+  {
+   "id": "deal-change-stage",
+   "title": "Move a deal to a different stage",
+   "body": "Open deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead."
+  }
+ ],
+ "answer": "Reopen the deal:\n\n1. Go to **Deals** and open the won or lost deal.\n2. Select **Reopen deal**.\n\nThe deal returns to the **Negotiation** stage, and its close date and lost reason are cleared. If it belongs in an earlier stage, choose that stage in the **Stage** list."
+}

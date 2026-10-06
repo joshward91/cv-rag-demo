@@ -1,0 +1,12 @@
+{
+ "id": "j-154",
+ "question": "we've moved the business to London so want deals showing in pounds now. how do i do that",
+ "articles": [
+  {
+   "id": "account-currency",
+   "title": "Change your currency",
+   "body": "1. Go to **Settings** > **Client profile**.\n2. Choose a **Currency**: **AUD**, **NZD**, **USD**, **GBP** or **EUR**.\n3. Select **Save client profile**.\n\nChanging the currency changes the symbol shown on every deal. It doesn't convert existing values."
+  }
+ ],
+ "answer": "Change your currency in your client profile:\n\n1. Go to **Settings** > **Client profile**.\n2. Choose **GBP** in **Currency**.\n3. Select **Save client profile**.\n\nThis changes the symbol shown on every deal, but it doesn't convert existing values."
+}

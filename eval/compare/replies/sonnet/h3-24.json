@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "Edit the field's **Options**:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the lead source field.\n3. In **Options**, add the new choice on its own line.\n4. Select **Save field**.", "citations": ["custom-field-edit"]}

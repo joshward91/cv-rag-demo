@@ -1,0 +1,12 @@
+{
+ "id": "j-049",
+ "question": "switch currency to NZD",
+ "articles": [
+  {
+   "id": "account-currency",
+   "title": "Change your currency",
+   "body": "1. Go to **Settings** > **Client profile**.\n2. Choose a **Currency**: **AUD**, **NZD**, **USD**, **GBP** or **EUR**.\n3. Select **Save client profile**.\n\nChanging the currency changes the symbol shown on every deal. It doesn't convert existing values."
+  }
+ ],
+ "answer": "To switch your currency to NZD:\n\n1. Go to **Settings** > **Client profile**.\n2. Choose **NZD** as the **Currency**.\n3. Select **Save client profile**.\n\nThis changes the symbol shown on every deal. It doesn't convert existing values."
+}

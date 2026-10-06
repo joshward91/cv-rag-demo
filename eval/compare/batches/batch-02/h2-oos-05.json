@@ -1,0 +1,15 @@
+{
+ "id": "h2-oos-05",
+ "allowedTypes": [
+  "answer",
+  "clarify",
+  "escalate"
+ ],
+ "allowedCitations": [
+  "account-client-contact-number",
+  "deal-change-stage",
+  "contact-change-status",
+  "contact-search"
+ ],
+ "user": "<articles>\n<article id=\"account-client-contact-number\" title=\"Change your client contact number\">\nYour **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n</article>\n<article id=\"deal-change-stage\" title=\"Move a deal to a different stage\">\nOpen deals move through four stages: **New**, **Qualified**, **Proposal sent** and **Negotiation**.\n\n1. Go to **Deals** and open the deal.\n2. Choose the new stage in the **Stage** list.\n\nThe change saves straight away and the deal moves to that column on the board. The board doesn't support drag and drop.\n\nTo close a deal, use **Mark as won** or **Mark as lost** instead.\n</article>\n<article id=\"contact-change-status\" title=\"Change a contact's status\">\nEvery contact has a **Status**: **Lead**, **Customer** or **Inactive**.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the new value in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages. Winning a deal doesn't change the contact's status.\n</article>\n<article id=\"contact-search\" title=\"Find a contact\">\n1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again.\n</article>\n</articles>\n\n<question>what are your support hours</question>"
+}

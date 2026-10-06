@@ -1,0 +1,12 @@
+{
+ "id": "j-114",
+ "question": "set the preferred contact method for a contact",
+ "articles": [
+  {
+   "id": "custom-field-fill",
+   "title": "Fill in a custom field on a record",
+   "body": "1. Open the contact, company or deal.\n2. Select **Edit**.\n3. Custom fields appear below the standard fields under **Custom fields**. Enter or choose a value.\n4. Save the record.\n\nA field only appears on the record type it applies to. In this account, for example, contacts have **Preferred contact method**, companies have **ABN** and deals have **Lead source**. To change which fields exist, go to **Settings** > **Custom fields**."
+  }
+ ],
+ "answer": "**Preferred contact method** is a custom field on contacts. To fill it in:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Under **Custom fields**, below the standard fields, enter or choose a value for **Preferred contact method**.\n4. Save the record."
+}

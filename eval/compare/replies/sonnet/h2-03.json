@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "To mark the contact as a customer, change their status:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose **Customer** in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages, so winning a deal doesn't change it automatically.", "citations": ["contact-change-status"]}

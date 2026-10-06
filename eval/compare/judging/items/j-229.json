@@ -1,0 +1,12 @@
+{
+ "id": "j-229",
+ "question": "they signed the contract",
+ "articles": [
+  {
+   "id": "deal-mark-won",
+   "title": "Mark a deal as won",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**."
+  }
+ ],
+ "answer": "Mark the deal as won:\n\n1. Go to **Deals** and open the deal.\n2. Select **Mark as won**.\n\nThe deal moves to the **Won** column and its close date is set to today. To undo it, select **Reopen deal**."
+}

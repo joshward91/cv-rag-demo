@@ -1,0 +1,12 @@
+{
+ "id": "j-204",
+ "question": "client wants their number changed",
+ "articles": [
+  {
+   "id": "contact-edit-phone",
+   "title": "Update a contact's phone number",
+   "body": "1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the number in the **Phone** field. You can use digits, spaces, brackets and a leading +, for example +61 491 570 156.\n4. Select **Save contact**.\n\nEach contact has one **Phone** field. If you need to store a second number, create a custom field for it."
+  }
+ ],
+ "answer": "To change a contact's phone number:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the number in the **Phone** field. You can use digits, spaces, brackets and a leading +, for example +61 491 570 156.\n4. Select **Save contact**.\n\nEach contact has one **Phone** field. If you need to store a second number, create a custom field for it."
+}

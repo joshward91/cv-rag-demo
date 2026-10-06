@@ -1,0 +1,12 @@
+{
+ "id": "j-025",
+ "question": "Someone who was just a lead has now actually signed up with us. How do I mark them as a proper customer?",
+ "articles": [
+  {
+   "id": "contact-change-status",
+   "title": "Change a contact's status",
+   "body": "Every contact has a **Status**: **Lead**, **Customer** or **Inactive**.\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose the new value in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages. Winning a deal doesn't change the contact's status."
+  }
+ ],
+ "answer": "Change the contact's status from **Lead** to **Customer**:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Choose **Customer** in the **Status** list.\n4. Select **Save contact**.\n\nA contact's status is separate from deal stages, so winning a deal doesn't change it automatically."
+}

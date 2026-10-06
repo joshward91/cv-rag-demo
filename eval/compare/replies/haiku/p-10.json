@@ -1,0 +1,1 @@
+{"type": "clarify", "answer": "Do you want to delete the contact completely (which also deletes their notes and can't be undone), or change their status to Inactive?", "citations": ["contact-delete", "contact-change-status"]}

@@ -1,0 +1,12 @@
+{
+ "id": "j-142",
+ "question": "wrong email address saved for a contact",
+ "articles": [
+  {
+   "id": "contact-edit-email",
+   "title": "Change a contact's email address",
+   "body": "1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe email address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save."
+  }
+ ],
+ "answer": "You can correct a contact's email address:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Replace the address in the **Email** field.\n4. Select **Save contact**.\n\nThe address must contain an **@** and a domain, for example sam@example.com. If it doesn't, the form shows **Enter a valid email address** and doesn't save."
+}

@@ -1,0 +1,12 @@
+{
+ "id": "j-024",
+ "question": "add a note to a client",
+ "articles": [
+  {
+   "id": "contact-add-note",
+   "title": "Add a note to a contact",
+   "body": "1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving."
+  }
+ ],
+ "answer": "To add a note to a contact:\n\n1. Go to **Contacts** and open the contact.\n2. In the **Notes** section, type in the **Add a note** box.\n3. Select **Save note**.\n\nNotes appear newest first with the date they were added. Notes can't be edited after saving."
+}

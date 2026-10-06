@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "To rename a custom field:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Edit** next to the field.\n3. Change the **Label**.\n4. Select **Save field**.\n\nYou can't change a field's **Type** or **Applies to** after it's created.", "citations": ["custom-field-edit"]}

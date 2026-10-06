@@ -1,0 +1,12 @@
+{
+ "id": "j-163",
+ "question": "add a dropdown field to companies",
+ "articles": [
+  {
+   "id": "custom-field-create",
+   "title": "Create a custom field",
+   "body": "Custom fields let you store information Harbour CRM doesn't have a field for.\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Add custom field**.\n3. Enter a **Label**.\n4. Choose where it appears in **Applies to**: **Contacts**, **Companies** or **Deals**.\n5. Choose a **Type**: **Text**, **Number**, **Date** or **Dropdown**. For a dropdown, enter one option per line in **Options**.\n6. Select **Save field**.\n\nThe field appears on every record of that type, in the edit form and on the record's page."
+  }
+ ],
+ "answer": "Create a custom field for companies:\n\n1. Go to **Settings** > **Custom fields**.\n2. Select **Add custom field**.\n3. Enter a **Label**.\n4. In **Applies to**, choose **Companies**.\n5. For **Type**, choose **Dropdown**, then enter one option per line in **Options**.\n6. Select **Save field**.\n\nThe field appears on every company, in the edit form and on the company's page."
+}

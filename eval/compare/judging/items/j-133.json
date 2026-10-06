@@ -1,0 +1,12 @@
+{
+ "id": "j-133",
+ "question": "what does client mean in Harbour CRM",
+ "articles": [
+  {
+   "id": "glossary-clients-contacts",
+   "title": "Clients, contacts and companies: what the terms mean",
+   "body": "Harbour CRM uses three terms with specific meanings:\n\n- **Client**: your business, the account that uses Harbour CRM. Your **Client profile** holds your client name, client contact number and billing details.\n- **Contact**: a person your business deals with, such as a customer or a lead. Contacts live under **Contacts**.\n- **Company**: an organisation your contacts work for. Companies live under **Companies**."
+  }
+ ],
+ "answer": "In Harbour CRM, a **Client** is your own business, the account that uses Harbour CRM. Your **Client profile** holds your client name, client contact number and billing details.\n\nThe people your business deals with, such as customers or leads, are called **contacts** and live under **Contacts**. The organisations they work for are **companies** and live under **Companies**."
+}

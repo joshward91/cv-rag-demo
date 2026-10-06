@@ -1,0 +1,12 @@
+{
+ "id": "j-223",
+ "question": "how do I change the phone number on our client profile",
+ "articles": [
+  {
+   "id": "account-client-contact-number",
+   "title": "Change your client contact number",
+   "body": "Your **Client contact number** is the number Harbour CRM support and billing use to reach you.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**."
+  }
+ ],
+ "answer": "To change your client contact number:\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the number in **Client contact number**.\n3. Select **Save client profile**.\n\nThis is the number Harbour CRM support and billing use to reach you."
+}

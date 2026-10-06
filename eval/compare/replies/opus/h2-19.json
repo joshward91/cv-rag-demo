@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "**Preferred contact method** is a custom field on contacts. To fill it in:\n\n1. Go to **Contacts** and open the contact.\n2. Select **Edit**.\n3. Under **Custom fields**, below the standard fields, enter or choose a value for **Preferred contact method**.\n4. Save the record.", "citations": ["custom-field-fill"]}

@@ -1,0 +1,12 @@
+{
+ "id": "j-134",
+ "question": "receipts should go to our accountant instead",
+ "articles": [
+  {
+   "id": "account-billing-email",
+   "title": "Change your billing email",
+   "body": "Your **Billing email** is where Harbour CRM sends your subscription receipts.\n\n1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**."
+  }
+ ],
+ "answer": "1. Go to **Settings** > **Client profile**.\n2. Replace the address in **Billing email**.\n3. Select **Save client profile**.\n\nYour **Billing email** is where Harbour CRM sends your subscription receipts."
+}

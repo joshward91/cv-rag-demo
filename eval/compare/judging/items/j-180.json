@@ -1,0 +1,12 @@
+{
+ "id": "j-180",
+ "question": "cant find a cleint, all i have is his phone number from a missed call. can i search by that??",
+ "articles": [
+  {
+   "id": "contact-search",
+   "title": "Find a contact",
+   "body": "1. Go to **Contacts**.\n2. Type in the search box. It matches a contact's name, email address and phone number.\n3. To narrow the list further, use the **Company** and **Status** filters next to the search box.\n\nSelect **Clear filters** to show every contact again."
+  }
+ ],
+ "answer": "Yes. The contact search matches phone numbers:\n\n1. Go to **Contacts**.\n2. Type the phone number in the search box. It matches a contact's name, email address and phone number.\n3. If you have other filters applied, select **Clear filters** first so every contact is searched."
+}

@@ -1,0 +1,12 @@
+{
+ "id": "j-234",
+ "question": "made a test deal while i was playing around, how do i delete it",
+ "articles": [
+  {
+   "id": "deal-delete",
+   "title": "Delete a deal",
+   "body": "1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone. If the deal fell through, consider **Mark as lost** instead so it still counts in your history."
+  }
+ ],
+ "answer": "1. Go to **Deals** and open the deal.\n2. Select **Delete**.\n3. In the confirmation box, select **Delete deal**.\n\nDeleting can't be undone."
+}

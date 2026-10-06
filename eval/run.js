@@ -142,10 +142,11 @@ const report = {
     perspective: summarise(rows.filter((r) => r.split === 'perspective'), kbIds),
     redteam: summarise(rows.filter((r) => r.split === 'redteam'), kbIds),
     holdout3: summarise(rows.filter((r) => r.split === 'holdout3'), kbIds),
+    voice: summarise(rows.filter((r) => r.split === 'voice'), kbIds),
   },
   retrieval: hybrid ? 'hybrid' : 'lexical',
   comparison: Object.fromEntries(
-    ['dev', 'test', 'holdout', 'perspective', 'redteam', 'holdout3', 'all'].map((k) => {
+    ['dev', 'test', 'holdout', 'perspective', 'redteam', 'holdout3', 'voice', 'all'].map((k) => {
       const pick = (rs) => (k === 'all' ? rs : rs.filter((r) => r.split === k));
       return [k, { lexical: summarise(pick(lexicalRows), kbIds), hybrid: summarise(pick(rows), kbIds) }];
     }),

@@ -1,0 +1,1 @@
+{"type": "answer", "answer": "1. Go to **Deals** and open the deal.\n2. Select **Mark as lost**.\n3. Choose a **Lost reason**: **Price**, **Timing**, **Chose a competitor**, **No response** or **Other**.\n4. Select **Confirm**.\n\nThe deal moves to the **Lost** column and keeps its value for reporting.", "citations": ["deal-mark-lost"]}

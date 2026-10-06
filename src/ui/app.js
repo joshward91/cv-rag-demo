@@ -74,6 +74,7 @@ export class CrmApp {
           <div class="demo-note">
             <p>Demo account. Changes reset when you reload.</p>
             ${this.reportUrl ? html`<a href="${this.reportUrl}" target="_blank" rel="noopener">Evaluation report ↗</a>` : ''}
+            <a href="https://github.com/joshward91/cv-rag-demo" target="_blank" rel="noopener">Source code on GitHub ↗</a>
           </div>
         </aside>
         <div class="workspace">
