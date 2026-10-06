@@ -99,7 +99,9 @@
   .doc-list summary .doc-meta { font-size: 0.8rem; color: var(--ink-faint); }
   .doc-body { padding: 0 12px 12px 28px; color: var(--ink-soft); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.9rem; }
   .doc-body .doc-id { display: block; margin-top: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); }
-  .doc-more { margin: 10px 12px; font: inherit; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+  .pager { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; font-size: 0.85rem; color: var(--ink-faint); }
+  .pager button { font: inherit; color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+  .pager button:disabled { color: var(--ink-faint); cursor: default; opacity: 0.6; }
   ul.issues { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); }
   .pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; counter-reset: step; }
   .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; font-size: 0.86rem; color: var(--ink-soft); }
@@ -245,6 +247,7 @@
       <thead><tr><th>Result</th><th>Question</th><th>Expected</th><th>Got</th><th>Set</th></tr></thead>
       <tbody></tbody>
     </table></div>
+    <div class="pager" id="case-pager"></div>
   </section>
 
   <section aria-labelledby="docs-h" id="docs-section" hidden>
@@ -460,24 +463,37 @@
     document.getElementById('viewer-notes').innerHTML = `<p><strong>Why not just weight the overview pages down?</strong> That was the first design, and the table shows why it was dropped. Putting both sets in one keyword index changes the term statistics every article is scored against (which words are rare, which are unknown, how long an average article is), so the same task article scores differently for the same question. Halving the overview pages' scores still changed ${v['in-weighted'].original.changed.length} of the original answers, mostly confident answers becoming suggestions, without one overview page being cited. Unweighted, ${v['in-unweighted'].original.changed.length} changed.</p><p><strong>A blended weight, scored separately.</strong> Scoring each set with its own statistics fixes the problem above: the task help ranks exactly as it would alone. The overview page's answer then wins when its coverage, weighted down, beats the best task article's. At a weight of 0.5 this gained ${v['in-blended'].viewer.passed - v['in-tiered'].viewer.passed} new question, and it wasn't a "what is it for" question. It also turned ${v['in-blended'].original.changed.length} hold-out suggestions into confident wrong answers from an overview page. Higher weights changed more original answers (11 at 1.0), none of them for the better. Coverage measures how much of the question an article mentions, not whether the question asks why or how, so a weight can't separate the two. It was not shipped.</p><p><strong>What ships.</strong> Signed in, the task help is searched on its own, exactly as before, and the overview pages are a separate fallback consulted only when the task help would hand off. The original questions are unchanged (${v['in-tiered'].original.changed.length} changed). The fallback first replaced suggestions too, but on the dev set that turned "Can I import contacts from a spreadsheet?" into a confident answer from the export overview, so suggestions now stand. The pitch never replaces the steps. On the overview pages only, an exact title or alias match counts for more: they are long prose that repeats the common words, and without it "how do I add a contact" as a visitor got the custom fields overview. (On the task help the same rule cost dev-set answers, so it stays off there.)</p><p><strong>What it doesn't do yet.</strong> Signed-in "what is it for" questions still get the task help (${wiPass} of ${wiAll} went to the overview page, though most were offered the related task article), because nothing tells a "why" question from a "how" question. Visitors' how-to questions often get the right overview page as a suggestion rather than an answer (${v.out.viewer.useful} of ${v.out.viewer.cases} useful, ${v.out.viewer.passed} answered): the coverage threshold was set for short task articles, and the overview pages are longer prose. Both would need a fresh blind set to tune against; these ${v.out.viewer.cases * 2} questions have been looked at.</p>`;
   }
 
+  // Paging --------------------------------------------------------------------
+  // The long lists show ten rows at a time.
+  const PAGE_SIZE = 10;
+  function pager(el, total, page, go) {
+    const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    el.hidden = total <= PAGE_SIZE;
+    el.innerHTML = `<button type="button" data-page="${page - 1}" ${page === 0 ? 'disabled' : ''}>‹ Previous</button><span>Page ${page + 1} of ${pages}</span><button type="button" data-page="${page + 1}" ${page >= pages - 1 ? 'disabled' : ''}>Next ›</button>`;
+    el.querySelectorAll('button[data-page]').forEach((b) => b.addEventListener('click', () => go(Number(b.dataset.page))));
+  }
+
   // Document browsers --------------------------------------------------------
   // Shows the first matches and renders more on request: ~1,000 articles is
   // too many to put in the page at once.
   function documentBrowser({ list, search, product, field = 'product', count, docs, noun }) {
-    const PAGE = 60;
-    let shown = PAGE;
+    let page = 0;
+    const pagerEl = document.createElement('div');
+    pagerEl.className = 'pager';
+    list.after(pagerEl);
     const body = (text) => esc(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     const render = () => {
       const q = search.value.trim().toLowerCase();
       const p = product?.value ?? '';
       const hits = docs.filter((d) => (!p || d[field] === p) && (!q || `${d.id} ${d.title} ${d.body}`.toLowerCase().includes(q)));
       count.textContent = `${hits.length.toLocaleString('en')} of ${docs.length.toLocaleString('en')} ${noun}`;
-      list.innerHTML = hits.slice(0, shown)
+      page = Math.min(page, Math.max(0, Math.ceil(hits.length / PAGE_SIZE) - 1));
+      list.innerHTML = hits.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
         .map((d) => `<details><summary><span class="doc-title">${esc(d.title)}</span><span class="doc-meta">${d.status ? `<span class="eval-tag">${esc(d.status)}</span> ` : ''}${d.audience === 'everyone' ? '<span class="eval-tag">everyone</span> ' : ''}${esc(d.product)} · ${esc(d.category)}</span></summary><div class="doc-body">${body(d.body)}<span class="doc-id">${esc(d.id)}</span></div></details>`)
-        .join('') + (hits.length > shown ? `<button type="button" class="doc-more">Show ${Math.min(PAGE, hits.length - shown)} more</button>` : '');
-      list.querySelector('.doc-more')?.addEventListener('click', () => { shown += PAGE; render(); });
+        .join('');
+      pager(pagerEl, hits.length, page, (p) => { page = p; render(); });
     };
-    const reset = () => { shown = PAGE; render(); };
+    const reset = () => { page = 0; render(); };
     search.addEventListener('input', reset);
     product?.addEventListener('change', reset);
     if (product) product.innerHTML += [...new Set(docs.map((d) => d[field]))].map((x) => `<option>${esc(x)}</option>`).join('');
@@ -625,6 +641,7 @@
   const search = document.getElementById('case-search');
   const splitSel = document.getElementById('case-split');
   const resultSel = document.getElementById('case-result');
+  let casePage = 0;
   function renderCases() {
     const q = search.value.trim().toLowerCase();
     const rows = data.rows.filter(
@@ -633,13 +650,16 @@
         (!resultSel.value || (resultSel.value === 'pass') === r.pass) &&
         (!q || `${r.query} ${JSON.stringify(r.expect)} ${r.citations.join(' ')} ${r.options.join(' ')}`.toLowerCase().includes(q)),
     );
+    casePage = Math.min(casePage, Math.max(0, Math.ceil(rows.length / PAGE_SIZE) - 1));
     tbody.innerHTML = rows
+      .slice(casePage * PAGE_SIZE, (casePage + 1) * PAGE_SIZE)
       .map(
         (r) => `<tr><td><span class="pill ${r.pass ? 'pass' : 'fail'}">${r.pass ? '✓ Pass' : '✗ Fail'}</span></td><td>${esc(r.query)}<span class="terms">${esc(r.rewritten || '(no terms)')}</span></td><td class="outcome">${describeExpect(r.expect)}</td><td class="outcome">${describeGot(r)}</td><td><span class="pill split">${splitName[r.split]}</span></td></tr>`,
       )
       .join('');
-    document.getElementById('case-count').textContent = `${rows.length} shown`;
+    document.getElementById('case-count').textContent = `${rows.length} of ${data.rows.length}`;
+    pager(document.getElementById('case-pager'), rows.length, casePage, (p) => { casePage = p; renderCases(); });
   }
-  [search, splitSel, resultSel].forEach((el) => el.addEventListener('input', renderCases));
+  [search, splitSel, resultSel].forEach((el) => el.addEventListener('input', () => { casePage = 0; renderCases(); }));
   renderCases();
 </script>
