@@ -9,7 +9,8 @@
   "v-23"
  ],
  "countedAt": "2026-10-06T05:02:36.944Z",
- "generatedAt": "2026-10-06T05:03:09.691Z",
+ "measuredAt": null,
+ "generatedAt": "2026-10-06T05:28:54.685Z",
  "splits": [
   "voice",
   "holdout3",
@@ -73,7 +74,8 @@
    "tokens": {
     "input": 155723,
     "output": 9437,
-    "counted": true
+    "counted": true,
+    "measured": false
    },
    "cost": 0.202908,
    "costPerQuestion": 0.001548916030534351,
@@ -135,7 +137,8 @@
    "tokens": {
     "input": 199799,
     "output": 14556,
-    "counted": true
+    "counted": true,
+    "measured": false
    },
    "cost": 0.545158,
    "costPerQuestion": 0.0041615114503816795,
@@ -197,7 +200,8 @@
    "tokens": {
     "input": 199799,
     "output": 15109,
-    "counted": true
+    "counted": true,
+    "measured": false
    },
    "cost": 1.101376,
    "costPerQuestion": 0.008407450381679388,

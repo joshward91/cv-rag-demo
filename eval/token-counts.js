@@ -8,6 +8,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 
 export const COUNTS_FILE = new URL('./token-counts.json', import.meta.url);
+export const MEASURED_FILE = new URL('./measured-usage.json', import.meta.url);
 
 /** A short, stable key for a piece of text, so the counts file holds no prompt text. */
 export const hashText = (text) => createHash('sha256').update(text).digest('hex').slice(0, 24);
@@ -26,5 +27,19 @@ export function loadCounts() {
     input: (model, prompt) => file.input?.[model]?.[promptKey(prompt)] ?? null,
     /** Tokens in this reply text on this model, or null if it wasn't counted. */
     output: (model, text) => file.output?.[model]?.[hashText(text)] ?? null,
+  };
+}
+
+/** Usage measured from real API calls by eval/measure-usage.mjs, or null. Thinking is included in output. */
+export function loadMeasured() {
+  if (!existsSync(MEASURED_FILE)) return null;
+  const file = JSON.parse(readFileSync(MEASURED_FILE, 'utf8'));
+  return {
+    measuredAt: file.measuredAt,
+    /** { inputTokens, outputTokens } for this prompt on this model, or null. */
+    usage: (model, prompt) => {
+      const u = file.usage?.[model]?.[promptKey(prompt)];
+      return u ? { inputTokens: u.input, outputTokens: u.output, measured: true } : null;
+    },
   };
 }

@@ -33,7 +33,7 @@ import { articleVectors } from '../src/kb/article-vectors.js';
 import { fingerprintArticles } from '../scripts/fingerprint.mjs';
 import { MODELS, DEFAULT_MODEL, PRICES_CHECKED, estimateTokens, costUsd } from '../src/rag/pricing.js';
 import { cases } from './cases.js';
-import { loadCounts } from './token-counts.js';
+import { loadCounts, loadMeasured } from './token-counts.js';
 import { grade, summarise } from './metrics.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -71,6 +71,8 @@ const hybrid = !flag('lexical');
 
 // Exact token counts, when eval/count-tokens.mjs has been run with an API key.
 const counted = live ? null : loadCounts();
+// Real usage, thinking included, when eval/measure-usage.mjs has been run. Preferred over counts.
+const measured = live ? null : loadMeasured();
 
 const selected = cases.filter((c) => split === 'all' || c.split === split);
 const rows = await runCases(articles, selected, { semantic: hybrid ? indexed : null });
@@ -132,6 +134,8 @@ async function runCases(knowledgeBase, selectedCases, { semantic }) {
         const estimate = { inputTokens: estimateTokens(promptAsText(result.prompt)), outputTokens: estimateTokens(answerText), measured: false };
         // Counted per model, since models don't all share a tokenizer.
         tokensByModel = Object.fromEntries(Object.keys(MODELS).map((m) => {
+          const real = measured?.usage(m, result.prompt);
+          if (real) return [m, real];
           const input = counted?.input(m, result.prompt);
           const output = counted?.output(m, answerText);
           if (input == null || output == null) return [m, estimate];
@@ -181,7 +185,7 @@ if (history.knowledgeBaseFingerprint && history.knowledgeBaseFingerprint !== fin
 const kbIds = new Set(articles.map((a) => a.id));
 const report = {
   generatedAt: new Date().toISOString(),
-  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false, countedTokens: Boolean(counted) && rows.every((r) => !r.tokens.inputTokens || r.tokens.counted), countedAt: counted?.countedAt ?? null },
+  mode: live ? { generator: 'anthropic', model, measuredUsage: true } : { generator: 'extractive', model: null, measuredUsage: false, countedTokens: Boolean(counted) && rows.every((r) => !r.tokens.inputTokens || r.tokens.counted || r.tokens.measured), countedAt: counted?.countedAt ?? null, measuredTokens: Boolean(measured) && rows.every((r) => !r.tokens.inputTokens || r.tokens.measured), measuredAt: measured?.measuredAt ?? null },
   knowledgeBase: { articles: articles.length, fingerprint },
   policy: DEFAULT_POLICY,
   pricing: MODELS,
